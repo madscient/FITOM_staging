@@ -1,11 +1,17 @@
 {
-  "_comment": "FITOM_X システム設定。ランタイムディレクトリからの相対パスで記述する。",
+  "_comment": [
+    "FITOM_X システム設定。ランタイムディレクトリからの相対パスで記述する。",
+    "hw_plugin.dll は後方互換用（単一 DLL 構成）。",
+    "複数 DLL を使う場合は profile.json の devices[].dll で指定する。",
+    "profile 側で dll を指定した場合、hw_plugin.dll の設定は無視される。"
+  ],
   "log": {
     "level": "info",
     "file":  "logs/fitom.log"
   },
   "plugins": {
     "hw_plugin": {
+      "_comment": "単一 DLL 構成時のみ使用。複数 DLL 混在は profile の devices[].dll で指定。",
       "dll": "fitom_fmhwif.dll"
     }
   },
