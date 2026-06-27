@@ -1,0 +1,15 @@
+# ── バイナリ (cmake --install で配置、Git管理対象外) ──
+*.dll
+*.so
+*.dylib
+*.lib
+*.exp
+*.pdb
+
+# ── ログ ──
+logs/
+*.log
+
+# ── OS ──
+.DS_Store
+Thumbs.db
