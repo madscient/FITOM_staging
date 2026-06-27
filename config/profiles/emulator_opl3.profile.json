@@ -1,0 +1,32 @@
+{
+  "_comment": "FMエンジンエミュレーター OPL3 構成。fitom_fmhwif.dll + YMEngine.dll が必要。",
+  "devices": [
+    {
+      "if":    "HW",
+      "label": "OPL3",
+      "type":  "FMHWIF",
+      "engine": "YMEngine",
+      "chip":   "OPL3",
+      "clock":  14318180,
+      "sample_rate":   44100,
+      "buffer_frames": 512,
+      "audio_api":     "auto"
+    }
+  ],
+  "midi_input": { "port": 0 },
+  "channel_map": [
+    { "midi_ch":  1, "device_index": 0, "poly": 14 },
+    { "midi_ch": 10, "device_index": 0, "poly":  1, "is_drum": true }
+  ],
+  "banks": {
+    "hw_banks": [
+      { "group": "OPL3", "bank": 0, "file": "banks/OPL3/alsa/std_opl3.hwbank.json" },
+      { "group": "OPL3", "bank": 1, "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json" },
+      { "group": "OPL2", "bank": 0, "file": "banks/OPL2/alsa/std_opl2.hwbank.json" }
+    ],
+    "patch_banks": [],
+    "drum_banks": [
+      { "group": "OPL3", "bank": 0, "file": "banks/drums/OPL3/alsa_drums.hwbank.json" }
+    ]
+  }
+}

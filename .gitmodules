@@ -1,0 +1,5 @@
+[submodule "banks"]
+	path = banks
+	url = https://github.com/madscient/FITOM_X
+	branch = main
+	sparse = true

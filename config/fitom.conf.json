@@ -1,0 +1,20 @@
+{
+  "_comment": "FITOM_X システム設定。ランタイムディレクトリからの相対パスで記述する。",
+  "log": {
+    "level": "info",
+    "file":  "logs/fitom.log"
+  },
+  "plugins": {
+    "hw_plugin": {
+      "dll": "fitom_fmhwif.dll"
+    }
+  },
+  "audio": {
+    "api":           "auto",
+    "buffer_frames": 512
+  },
+  "timing": {
+    "timer_ms": 1
+  },
+  "banks_dir": "banks"
+}
