@@ -5,6 +5,7 @@
 *.lib
 *.exp
 *.pdb
+*.exe
 
 # ── ログ ──
 logs/
@@ -13,3 +14,5 @@ logs/
 # ── OS ──
 .DS_Store
 Thumbs.db
+
+stage/

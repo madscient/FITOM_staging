@@ -1,0 +1,122 @@
+{
+  "profile_name": "エミュレーター OPN ファミリー (OPN/OPN2/OPNA/OPNB/OPNBB)",
+  "fm_engines": [
+    {
+      "name": "YMEngine",
+      "dll": "YMEngine.dll",
+      "sample_rate": 44100
+    }
+  ],
+  "audio_output": {
+    "sample_rate": 44100
+  },
+  "devices": [
+    {
+      "if": "FMENGINE",
+      "label": "OPN",
+      "engine": "YMEngine",
+      "chip": "OPN",
+      "clock": 3993600
+    },
+    {
+      "if": "FMENGINE",
+      "label": "OPN2",
+      "engine": "YMEngine",
+      "chip": "OPN2",
+      "clock": 7670454
+    },
+    {
+      "if": "FMENGINE",
+      "label": "OPNA",
+      "engine": "YMEngine",
+      "chip": "OPNA",
+      "clock": 7987200
+    },
+    {
+      "if": "FMENGINE",
+      "label": "OPNB",
+      "engine": "YMEngine",
+      "chip": "OPNB",
+      "clock": 8000000
+    },
+    {
+      "if": "FMENGINE",
+      "label": "OPNBB",
+      "engine": "YMEngine",
+      "chip": "OPNBB",
+      "clock": 8000000
+    }
+  ],
+  "midi_inputs": [
+    "loopMIDI Port 1"
+  ],
+  "channel_map": [
+    {
+      "midi_ch": 1,
+      "device_index": 0,
+      "poly": 3
+    },
+    {
+      "midi_ch": 2,
+      "device_index": 1,
+      "poly": 6
+    },
+    {
+      "midi_ch": 3,
+      "device_index": 1,
+      "poly": 6
+    },
+    {
+      "midi_ch": 4,
+      "device_index": 2,
+      "poly": 6
+    },
+    {
+      "midi_ch": 5,
+      "device_index": 2,
+      "poly": 6
+    },
+    {
+      "midi_ch": 6,
+      "device_index": 3,
+      "poly": 6
+    },
+    {
+      "midi_ch": 7,
+      "device_index": 3,
+      "poly": 6
+    },
+    {
+      "midi_ch": 8,
+      "device_index": 4,
+      "poly": 6
+    },
+    {
+      "midi_ch": 9,
+      "device_index": 4,
+      "poly": 6
+    }
+  ],
+  "banks": {
+    "hw_banks": [
+      {
+        "group": "OPN",
+        "bank": 0,
+        "file": "banks/OPN/gm/necopn_gm.hwbank.json"
+      }
+    ],
+    "sw_banks": [
+      {
+        "bank": 0,
+        "file": "banks/sw/necopn_gm.swbank.json"
+      }
+    ],
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "banks/patches/necopn_gm.patchbank.json"
+      }
+    ],
+    "drum_banks": []
+  }
+}
