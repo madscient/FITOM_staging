@@ -1,0 +1,2311 @@
+{
+  "name": "necopn GM (OPN single-layer)",
+  "bank": 0,
+  "note": "necopn_gm.hwbank.json の全128音色を OPN (voice_patch_type=0x10) 単一レイヤーで参照。 OPN2/OPNA/OPNB/OPNBB (0x11) には別途レイヤーを追加すること。 sw_bank=0 は banks/sw/necopn_gm.swbank.json に対応。",
+  "patches": [
+    {
+      "prog": 0,
+      "name": "Acoustic Grand Piano",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 0,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 0,
+      "poly": 3
+    },
+    {
+      "prog": 1,
+      "name": "Bright Acoustic Piano",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 1,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 1,
+      "poly": 3
+    },
+    {
+      "prog": 2,
+      "name": "Electric Grand Piano",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 2,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 2,
+      "poly": 3
+    },
+    {
+      "prog": 3,
+      "name": "Honky-tonk Piano",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 3,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 3,
+      "poly": 3
+    },
+    {
+      "prog": 4,
+      "name": "Electric Piano 1",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 4,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 4,
+      "poly": 3
+    },
+    {
+      "prog": 5,
+      "name": "Electric Piano 2",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 5,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 5,
+      "poly": 3
+    },
+    {
+      "prog": 6,
+      "name": "Harpsichord",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 6,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 6,
+      "poly": 3
+    },
+    {
+      "prog": 7,
+      "name": "Clavi",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 7,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 7,
+      "poly": 3
+    },
+    {
+      "prog": 8,
+      "name": "Celesta",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 8,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 8,
+      "poly": 3
+    },
+    {
+      "prog": 9,
+      "name": "Glockenspiel",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 9,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 9,
+      "poly": 3
+    },
+    {
+      "prog": 10,
+      "name": "Music Box",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 10,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 10,
+      "poly": 3
+    },
+    {
+      "prog": 11,
+      "name": "Vibraphone",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 11,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 11,
+      "poly": 3
+    },
+    {
+      "prog": 12,
+      "name": "Marimba",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 12,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 12,
+      "poly": 3
+    },
+    {
+      "prog": 13,
+      "name": "Xylophone",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 13,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 13,
+      "poly": 3
+    },
+    {
+      "prog": 14,
+      "name": "Tubular Bells",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 14,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 14,
+      "poly": 3
+    },
+    {
+      "prog": 15,
+      "name": "Dulcimer",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 15,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 15,
+      "poly": 3
+    },
+    {
+      "prog": 16,
+      "name": "Drawbar Organ",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 16,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 16,
+      "poly": 3
+    },
+    {
+      "prog": 17,
+      "name": "Percussive Organ",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 17,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 17,
+      "poly": 3
+    },
+    {
+      "prog": 18,
+      "name": "Rock Organ",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 18,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 18,
+      "poly": 3
+    },
+    {
+      "prog": 19,
+      "name": "Church Organ",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 19,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 19,
+      "poly": 3
+    },
+    {
+      "prog": 20,
+      "name": "Reed Organ",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 20,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 20,
+      "poly": 3
+    },
+    {
+      "prog": 21,
+      "name": "Accordion",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 21,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 21,
+      "poly": 3
+    },
+    {
+      "prog": 22,
+      "name": "Harmonica",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 22,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 22,
+      "poly": 3
+    },
+    {
+      "prog": 23,
+      "name": "Tango Accordion",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 23,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 23,
+      "poly": 3
+    },
+    {
+      "prog": 24,
+      "name": "Acoustic Guitar (nylon)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 24,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 24,
+      "poly": 3
+    },
+    {
+      "prog": 25,
+      "name": "Acoustic Guitar (steel)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 25,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 25,
+      "poly": 3
+    },
+    {
+      "prog": 26,
+      "name": "Electric Guitar (jazz)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 26,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 26,
+      "poly": 3
+    },
+    {
+      "prog": 27,
+      "name": "Electric Guitar (clean)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 27,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 27,
+      "poly": 3
+    },
+    {
+      "prog": 28,
+      "name": "Electric Guitar (muted)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 28,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 28,
+      "poly": 3
+    },
+    {
+      "prog": 29,
+      "name": "Overdriven Guitar",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 29,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 29,
+      "poly": 3
+    },
+    {
+      "prog": 30,
+      "name": "Distortion Guitar",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 30,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 30,
+      "poly": 3
+    },
+    {
+      "prog": 31,
+      "name": "Guitar harmonics",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 31,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 31,
+      "poly": 3
+    },
+    {
+      "prog": 32,
+      "name": "Acoustic Bass",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 32,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 32,
+      "poly": 3
+    },
+    {
+      "prog": 33,
+      "name": "Electric Bass (finger)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 33,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 33,
+      "poly": 3
+    },
+    {
+      "prog": 34,
+      "name": "Electric Bass (pick)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 34,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 34,
+      "poly": 3
+    },
+    {
+      "prog": 35,
+      "name": "Fretless Bass",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 35,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 35,
+      "poly": 3
+    },
+    {
+      "prog": 36,
+      "name": "Slap Bass 1",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 36,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 36,
+      "poly": 3
+    },
+    {
+      "prog": 37,
+      "name": "Slap Bass 2",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 37,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 37,
+      "poly": 3
+    },
+    {
+      "prog": 38,
+      "name": "Synth Bass 1",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 38,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 38,
+      "poly": 3
+    },
+    {
+      "prog": 39,
+      "name": "Synth Bass 2",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 39,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 39,
+      "poly": 3
+    },
+    {
+      "prog": 40,
+      "name": "Violin",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 40,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 40,
+      "poly": 3
+    },
+    {
+      "prog": 41,
+      "name": "Viola",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 41,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 41,
+      "poly": 3
+    },
+    {
+      "prog": 42,
+      "name": "Cello",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 42,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 42,
+      "poly": 3
+    },
+    {
+      "prog": 43,
+      "name": "Contrabass",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 43,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 43,
+      "poly": 3
+    },
+    {
+      "prog": 44,
+      "name": "Tremolo Strings",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 44,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 44,
+      "poly": 3
+    },
+    {
+      "prog": 45,
+      "name": "Pizzicato Strings",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 45,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 45,
+      "poly": 3
+    },
+    {
+      "prog": 46,
+      "name": "Orchestral Harp",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 46,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 46,
+      "poly": 3
+    },
+    {
+      "prog": 47,
+      "name": "Timpani",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 47,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 47,
+      "poly": 3
+    },
+    {
+      "prog": 48,
+      "name": "String Ensemble 1",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 48,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 48,
+      "poly": 3
+    },
+    {
+      "prog": 49,
+      "name": "String Ensemble 2",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 49,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 49,
+      "poly": 3
+    },
+    {
+      "prog": 50,
+      "name": "SynthStrings 1",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 50,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 50,
+      "poly": 3
+    },
+    {
+      "prog": 51,
+      "name": "SynthStrings 2",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 51,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 51,
+      "poly": 3
+    },
+    {
+      "prog": 52,
+      "name": "Choir Aahs",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 52,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 52,
+      "poly": 3
+    },
+    {
+      "prog": 53,
+      "name": "Voice Oohs",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 53,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 53,
+      "poly": 3
+    },
+    {
+      "prog": 54,
+      "name": "Synth Voice",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 54,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 54,
+      "poly": 3
+    },
+    {
+      "prog": 55,
+      "name": "Orchestra Hit",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 55,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 55,
+      "poly": 3
+    },
+    {
+      "prog": 56,
+      "name": "Trumpet",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 56,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 56,
+      "poly": 3
+    },
+    {
+      "prog": 57,
+      "name": "Trombone",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 57,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 57,
+      "poly": 3
+    },
+    {
+      "prog": 58,
+      "name": "Tuba",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 58,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 58,
+      "poly": 3
+    },
+    {
+      "prog": 59,
+      "name": "Muted Trumpet",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 59,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 59,
+      "poly": 3
+    },
+    {
+      "prog": 60,
+      "name": "French Horn",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 60,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 60,
+      "poly": 3
+    },
+    {
+      "prog": 61,
+      "name": "Brass Section",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 61,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 61,
+      "poly": 3
+    },
+    {
+      "prog": 62,
+      "name": "SynthBrass 1",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 62,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 62,
+      "poly": 3
+    },
+    {
+      "prog": 63,
+      "name": "SynthBrass 2",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 63,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 63,
+      "poly": 3
+    },
+    {
+      "prog": 64,
+      "name": "Soprano Sax",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 64,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 64,
+      "poly": 3
+    },
+    {
+      "prog": 65,
+      "name": "Alto Sax",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 65,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 65,
+      "poly": 3
+    },
+    {
+      "prog": 66,
+      "name": "Tenor Sax",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 66,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 66,
+      "poly": 3
+    },
+    {
+      "prog": 67,
+      "name": "Baritone Sax",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 67,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 67,
+      "poly": 3
+    },
+    {
+      "prog": 68,
+      "name": "Oboe",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 68,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 68,
+      "poly": 3
+    },
+    {
+      "prog": 69,
+      "name": "English Horn",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 69,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 69,
+      "poly": 3
+    },
+    {
+      "prog": 70,
+      "name": "Bassoon",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 70,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 70,
+      "poly": 3
+    },
+    {
+      "prog": 71,
+      "name": "Clarinet",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 71,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 71,
+      "poly": 3
+    },
+    {
+      "prog": 72,
+      "name": "Piccolo",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 72,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 72,
+      "poly": 3
+    },
+    {
+      "prog": 73,
+      "name": "Flute",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 73,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 73,
+      "poly": 3
+    },
+    {
+      "prog": 74,
+      "name": "Recorder",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 74,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 74,
+      "poly": 3
+    },
+    {
+      "prog": 75,
+      "name": "Pan Flute",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 75,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 75,
+      "poly": 3
+    },
+    {
+      "prog": 76,
+      "name": "Blown Bottle",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 76,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 76,
+      "poly": 3
+    },
+    {
+      "prog": 77,
+      "name": "Shakuhachi",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 77,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 77,
+      "poly": 3
+    },
+    {
+      "prog": 78,
+      "name": "Whistle",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 78,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 78,
+      "poly": 3
+    },
+    {
+      "prog": 79,
+      "name": "Ocarina",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 79,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 79,
+      "poly": 3
+    },
+    {
+      "prog": 80,
+      "name": "Lead 1 (square)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 80,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 80,
+      "poly": 3
+    },
+    {
+      "prog": 81,
+      "name": "Lead 2 (sawtooth)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 81,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 81,
+      "poly": 3
+    },
+    {
+      "prog": 82,
+      "name": "Lead 3 (calliope)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 82,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 82,
+      "poly": 3
+    },
+    {
+      "prog": 83,
+      "name": "Lead 4 (chiff)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 83,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 83,
+      "poly": 3
+    },
+    {
+      "prog": 84,
+      "name": "Lead 5 (charang)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 84,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 84,
+      "poly": 3
+    },
+    {
+      "prog": 85,
+      "name": "Lead 6 (voice)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 85,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 85,
+      "poly": 3
+    },
+    {
+      "prog": 86,
+      "name": "Lead 7 (fifths)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 86,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 86,
+      "poly": 3
+    },
+    {
+      "prog": 87,
+      "name": "Lead 8 (bass + lead)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 87,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 87,
+      "poly": 3
+    },
+    {
+      "prog": 88,
+      "name": "Pad 1 (new age)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 88,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 88,
+      "poly": 3
+    },
+    {
+      "prog": 89,
+      "name": "Pad 2 (warm)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 89,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 89,
+      "poly": 3
+    },
+    {
+      "prog": 90,
+      "name": "Pad 3 (polysynth)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 90,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 90,
+      "poly": 3
+    },
+    {
+      "prog": 91,
+      "name": "Pad 4 (choir)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 91,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 91,
+      "poly": 3
+    },
+    {
+      "prog": 92,
+      "name": "Pad 5 (bowed)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 92,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 92,
+      "poly": 3
+    },
+    {
+      "prog": 93,
+      "name": "Pad 6 (metallic)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 93,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 93,
+      "poly": 3
+    },
+    {
+      "prog": 94,
+      "name": "Pad 7 (halo)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 94,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 94,
+      "poly": 3
+    },
+    {
+      "prog": 95,
+      "name": "Pad 8 (sweep)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 95,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 95,
+      "poly": 3
+    },
+    {
+      "prog": 96,
+      "name": "FX 1 (rain)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 96,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 96,
+      "poly": 3
+    },
+    {
+      "prog": 97,
+      "name": "FX 2 (soundtrack)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 97,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 97,
+      "poly": 3
+    },
+    {
+      "prog": 98,
+      "name": "FX 3 (crystal)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 98,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 98,
+      "poly": 3
+    },
+    {
+      "prog": 99,
+      "name": "FX 4 (atmosphere)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 99,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 99,
+      "poly": 3
+    },
+    {
+      "prog": 100,
+      "name": "FX 5 (brightness)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 100,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 100,
+      "poly": 3
+    },
+    {
+      "prog": 101,
+      "name": "FX 6 (goblins)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 101,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 101,
+      "poly": 3
+    },
+    {
+      "prog": 102,
+      "name": "FX 7 (echoes)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 102,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 102,
+      "poly": 3
+    },
+    {
+      "prog": 103,
+      "name": "FX 8 (sci-fi)",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 103,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 103,
+      "poly": 3
+    },
+    {
+      "prog": 104,
+      "name": "Sitar",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 104,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 104,
+      "poly": 3
+    },
+    {
+      "prog": 105,
+      "name": "Banjo",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 105,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 105,
+      "poly": 3
+    },
+    {
+      "prog": 106,
+      "name": "Shamisen",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 106,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 106,
+      "poly": 3
+    },
+    {
+      "prog": 107,
+      "name": "Koto",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 107,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 107,
+      "poly": 3
+    },
+    {
+      "prog": 108,
+      "name": "Kalimba",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 108,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 108,
+      "poly": 3
+    },
+    {
+      "prog": 109,
+      "name": "Bag pipe",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 109,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 109,
+      "poly": 3
+    },
+    {
+      "prog": 110,
+      "name": "Fiddle",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 110,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 110,
+      "poly": 3
+    },
+    {
+      "prog": 111,
+      "name": "Shanai",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 111,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 111,
+      "poly": 3
+    },
+    {
+      "prog": 112,
+      "name": "Tinkle Bell",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 112,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 112,
+      "poly": 3
+    },
+    {
+      "prog": 113,
+      "name": "Agogo",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 113,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 113,
+      "poly": 3
+    },
+    {
+      "prog": 114,
+      "name": "Steel Drums",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 114,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 114,
+      "poly": 3
+    },
+    {
+      "prog": 115,
+      "name": "Woodblock",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 115,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 115,
+      "poly": 3
+    },
+    {
+      "prog": 116,
+      "name": "Taiko Drum",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 116,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 116,
+      "poly": 3
+    },
+    {
+      "prog": 117,
+      "name": "Melodic Tom",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 117,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 117,
+      "poly": 3
+    },
+    {
+      "prog": 118,
+      "name": "Synth Drum",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 118,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 118,
+      "poly": 3
+    },
+    {
+      "prog": 119,
+      "name": "Reverse Cymbal",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 119,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 119,
+      "poly": 3
+    },
+    {
+      "prog": 120,
+      "name": "Guitar Fret Noise",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 120,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 120,
+      "poly": 3
+    },
+    {
+      "prog": 121,
+      "name": "Breath Noise",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 121,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 121,
+      "poly": 3
+    },
+    {
+      "prog": 122,
+      "name": "Seashore",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 122,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 122,
+      "poly": 3
+    },
+    {
+      "prog": 123,
+      "name": "Bird Tweet",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 123,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 123,
+      "poly": 3
+    },
+    {
+      "prog": 124,
+      "name": "Telephone Ring",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 124,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 124,
+      "poly": 3
+    },
+    {
+      "prog": 125,
+      "name": "Helicopter",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 125,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 125,
+      "poly": 3
+    },
+    {
+      "prog": 126,
+      "name": "Applause",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 126,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 126,
+      "poly": 3
+    },
+    {
+      "prog": 127,
+      "name": "Gunshot",
+      "layers": [
+        {
+          "voice_patch_type": 16,
+          "hw_bank": 0,
+          "hw_prog": 127,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 127,
+      "poly": 3
+    }
+  ]
+}
