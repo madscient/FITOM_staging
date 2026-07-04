@@ -16,86 +16,43 @@
       "label": "OPN",
       "engine": "YMEngine",
       "chip": "OPN",
-      "clock": 3993600
+      "clock": 3579545
     },
     {
       "if": "FMENGINE",
       "label": "OPN2",
       "engine": "YMEngine",
       "chip": "OPN2",
-      "clock": 7670454
+      "clock": 7159090
     },
     {
       "if": "FMENGINE",
       "label": "OPNA",
       "engine": "YMEngine",
       "chip": "OPNA",
-      "clock": 7987200
+      "clock": 7159090
     },
     {
       "if": "FMENGINE",
       "label": "OPNB",
       "engine": "YMEngine",
       "chip": "OPNB",
-      "clock": 8000000
+      "clock": 7159090
     },
     {
       "if": "FMENGINE",
       "label": "OPNBB",
       "engine": "YMEngine",
       "chip": "OPNBB",
-      "clock": 8000000
+      "clock": 7159090
     }
   ],
+  "midi_backend": {
+    "dll": "fitom_midi_winmm.dll"
+  },
   "midi_inputs": [
+    "microKEY-25",
     "loopMIDI Port 1"
-  ],
-  "channel_map": [
-    {
-      "midi_ch": 1,
-      "device_index": 0,
-      "poly": 3
-    },
-    {
-      "midi_ch": 2,
-      "device_index": 1,
-      "poly": 6
-    },
-    {
-      "midi_ch": 3,
-      "device_index": 1,
-      "poly": 6
-    },
-    {
-      "midi_ch": 4,
-      "device_index": 2,
-      "poly": 6
-    },
-    {
-      "midi_ch": 5,
-      "device_index": 2,
-      "poly": 6
-    },
-    {
-      "midi_ch": 6,
-      "device_index": 3,
-      "poly": 6
-    },
-    {
-      "midi_ch": 7,
-      "device_index": 3,
-      "poly": 6
-    },
-    {
-      "midi_ch": 8,
-      "device_index": 4,
-      "poly": 6
-    },
-    {
-      "midi_ch": 9,
-      "device_index": 4,
-      "poly": 6
-    }
   ],
   "banks": {
     "hw_banks": [
