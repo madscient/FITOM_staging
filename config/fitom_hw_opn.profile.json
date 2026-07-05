@@ -1,0 +1,13 @@
+{
+  "//": "SPFM 実機 OPN 構成 (混在用)。portを環境に合わせて変更してください。",
+  "interfaces": [
+    {
+      "type": "SPFM_LIGHT",
+      "port": "COM3",
+      "sample_rate": 44100,
+      "slots": [
+        { "slot": 0, "chip": "OPN", "clock": 3993600, "pan": 0 }
+      ]
+    }
+  ]
+}

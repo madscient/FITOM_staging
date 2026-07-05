@@ -1,25 +1,15 @@
 {
-  "_comment": "FMエンジンエミュレーター OPM 構成。fitom_fmhwif.dll + YMEngine.dll が必要。",
-  "devices": [
+  "profile_name": "エミュレーター OPM - FitomEmuIF経由",
+  "hw_plugins": [
     {
-      "if":    "HW",
-      "label": "OPM",
-      "type":  "FMHWIF",
-      "engine": "YMEngine",
-      "chip":   "OPM",
-      "clock":  3579545,
-      "sample_rate":   44100,
-      "buffer_frames": 512,
-      "audio_api":     "auto"
+      "name":        "FitomEmuIF",
+      "dll":         "FitomEmuIF.dll",
+      "profile":     "fmhwif_opm.profile.json",
+      "profile_env": "FMHWIF_PROFILE",
+      "auto_devices": true
     }
   ],
-  "midi_input": { "port": 0 },
-  "channel_map": [
-    { "midi_ch": 1, "device_index": 0, "poly": 8 },
-    { "midi_ch": 2, "device_index": 0, "poly": 8 },
-    { "midi_ch": 3, "device_index": 0, "poly": 8 },
-    { "midi_ch": 4, "device_index": 0, "poly": 8 }
-  ],
+  "midi_inputs": [],
   "banks": {
     "hw_banks": [
       { "group": "OPM", "bank": 0, "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json" },
@@ -27,6 +17,7 @@
       { "group": "OPM", "bank": 2, "file": "banks/OPM/fb01/rom1.hwbank.json" },
       { "group": "OPZ", "bank": 0, "file": "banks/OPZ/tx81z/tx81z_1.hwbank.json" }
     ],
+    "sw_banks":    [],
     "patch_banks": [],
     "drum_banks":  []
   }
