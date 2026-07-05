@@ -28,9 +28,7 @@ $Stage = $PSScriptRoot
 
 # ── プロジェクトのビルドディレクトリ (環境に合わせて変更) ──────────────────
 $Projects = @{
-  FITOM_test  = "..\FITOM_X\build\tests\$BuildType"
-  FITOM_cli   = "..\FITOM_X\build\apps\fitom_cli\$BuildType"
-  FITOM_midi  = "..\FITOM_X\build\backends\midi_winmm\$BuildType"
+  FITOM_bin   = "..\FITOM_X\build\bin\$BuildType"
   FitomHwIF  = "..\FitomHwIF\build\$BuildType"
   FitomEmuIF = "..\FitomEmuIF\build\$BuildType"
   YMFMEngine   = "..\YMEngine\build\bin\$BuildType"
@@ -47,16 +45,9 @@ function Copy-IfExists($src, $dst) {
 
 Write-Host "=== FITOM_staging setup ($BuildType) ==="
 
-# FITOM_test
-Copy-IfExists "$($Projects.FITOM_test)\fitom_tests.exe" "$Stage\fitom_tests.exe"
-Copy-IfExists "$($Projects.FITOM_test)\*.dll" "$Stage\"
-
-# FITOM_cli
-Copy-IfExists "$($Projects.FITOM_cli)\fitom_cli.exe" "$Stage\fitom_cli.exe"
-Copy-IfExists "$($Projects.FITOM_cli)\*.dll" "$Stage\"
-
-# midi_winmm.dll (WinMM版MIDI IN)
-Copy-IfExists "$($Projects.FITOM_midi)\fitom_midi_winmm.dll" "$Stage\fitom_midi_winmm.dll"
+# FITOM app
+Copy-IfExists "$($Projects.FITOM_bin)\*.exe" "$Stage\"
+Copy-IfExists "$($Projects.FITOM_bin)\*.dll" "$Stage\"
 
 # fitom_hw.dll (物理チップ用)
 Copy-IfExists "$($Projects.FitomHwIF)\fitom_hw.dll" "$Stage\fitom_hw.dll"
