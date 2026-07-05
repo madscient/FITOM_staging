@@ -2,8 +2,8 @@
   "profile_name": "エミュレーター OPN ファミリー (OPN/OPN2/OPNA/OPNB/OPNBB)",
   "fm_engines": [
     {
-      "name": "YMEngine",
-      "dll": "YMEngine.dll",
+      "name": "YMFMEngine",
+      "dll": "FitomEmuIf.dll",
       "sample_rate": 44100
     }
   ],
@@ -14,35 +14,35 @@
     {
       "if": "FMENGINE",
       "label": "OPN",
-      "engine": "YMEngine",
+      "engine": "YMFMEngine",
       "chip": "OPN",
       "clock": 3579545
     },
     {
       "if": "FMENGINE",
       "label": "OPN2",
-      "engine": "YMEngine",
+      "engine": "YMFMEngine",
       "chip": "OPN2",
       "clock": 7159090
     },
     {
       "if": "FMENGINE",
       "label": "OPNA",
-      "engine": "YMEngine",
+      "engine": "YMFMEngine",
       "chip": "OPNA",
       "clock": 7159090
     },
     {
       "if": "FMENGINE",
       "label": "OPNB",
-      "engine": "YMEngine",
+      "engine": "YMFMEngine",
       "chip": "OPNB",
       "clock": 7159090
     },
     {
       "if": "FMENGINE",
       "label": "OPNBB",
-      "engine": "YMEngine",
+      "engine": "YMFMEngine",
       "chip": "OPNBB",
       "clock": 7159090
     }
