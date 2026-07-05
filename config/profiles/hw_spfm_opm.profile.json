@@ -1,25 +1,21 @@
 {
-  "_comment": "SPFM Light/Tower + OPM 実機構成。fitom_hw.dll が必要。COMポートを環境に合わせて変更。",
-  "devices": [
+  "profile_name": "SPFM 実機 OPM - FitomHwIF経由",
+  "hw_plugins": [
     {
-      "if":    "HW",
-      "label": "OPM",
-      "type":  "SPFM_LIGHT",
-      "port":  "COM3",
-      "slot":  0,
-      "clock": 3579545
+      "name":        "FitomHwIF",
+      "dll":         "fitom_hw.dll",
+      "profile":     "fitom_hw_spfm_opm.profile.json",
+      "profile_env": "FITOM_HW_PROFILE",
+      "auto_devices": true
     }
   ],
-  "midi_input": { "port": 0 },
-  "channel_map": [
-    { "midi_ch": 1, "device_index": 0, "poly": 8 },
-    { "midi_ch": 2, "device_index": 0, "poly": 8 }
-  ],
+  "midi_inputs": [],
   "banks": {
     "hw_banks": [
       { "group": "OPM", "bank": 0, "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json" },
       { "group": "OPM", "bank": 1, "file": "banks/OPM/fb01/rom1.hwbank.json" }
     ],
+    "sw_banks":    [],
     "patch_banks": [],
     "drum_banks":  []
   }

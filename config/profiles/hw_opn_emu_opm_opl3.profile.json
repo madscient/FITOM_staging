@@ -1,66 +1,22 @@
 {
-  "_comment": [
-    "フルスタック混在構成: SPFM Light OPN 実機 + OPM エミュ + OPL3 エミュ。",
-    "fitom_hw.dll と fitom_fmhwif.dll の両方が必要。",
-    "OPN 側: COMポートを環境に合わせて変更すること。",
-    "YMEngine.dll が engines/ に配置されていること。"
-  ],
-  "fm_engines": [
+  "profile_name": "OPN 実機 + OPM/OPL3 エミュ混在 - FitomHwIF + FitomEmuIF",
+  "hw_plugins": [
     {
-      "name":        "YMEngine",
-      "dll":         "engines/YMEngine.dll",
-      "sample_rate": 44100
-    }
-  ],
-  "audio_output": {
-    "sample_rate": 44100
-  },
-  "devices": [
-    {
-      "if":       "HW",
-      "dll":      "fitom_hw.dll",
-      "label":    "OPN_HW",
-      "type":     "SPFM_LIGHT",
-      "port":     "COM3",
-      "slot":     0,
-      "hw_clock": 3993600,
-      "chip":     "OPN"
+      "name":        "FitomHwIF",
+      "dll":         "fitom_hw.dll",
+      "profile":     "fitom_hw_opn.profile.json",
+      "profile_env": "FITOM_HW_PROFILE",
+      "auto_devices": true
     },
     {
-      "if":            "HW",
-      "dll":           "fitom_fmhwif.dll",
-      "label":         "OPM_EMU",
-      "type":          "FMHWIF",
-      "engine":        "YMEngine",
-      "chip":          "OPM",
-      "clock":         3579545,
-      "sample_rate":   44100,
-      "buffer_frames": 512,
-      "audio_api":     "auto"
-    },
-    {
-      "if":            "HW",
-      "dll":           "fitom_fmhwif.dll",
-      "label":         "OPL3_EMU",
-      "type":          "FMHWIF",
-      "engine":        "YMEngine",
-      "chip":          "OPL3",
-      "clock":         14318180,
-      "sample_rate":   44100,
-      "buffer_frames": 512,
-      "audio_api":     "auto"
+      "name":        "FitomEmuIF",
+      "dll":         "FitomEmuIF.dll",
+      "profile":     "fmhwif_opm_opl3.profile.json",
+      "profile_env": "FMHWIF_PROFILE",
+      "auto_devices": true
     }
   ],
   "midi_inputs": [],
-  "channel_map": [
-    { "midi_ch": 1,  "device_index": 0, "poly": 6 },
-    { "midi_ch": 2,  "device_index": 0, "poly": 6 },
-    { "midi_ch": 3,  "device_index": 1, "poly": 8 },
-    { "midi_ch": 4,  "device_index": 1, "poly": 8 },
-    { "midi_ch": 5,  "device_index": 2, "poly": 6 },
-    { "midi_ch": 6,  "device_index": 2, "poly": 6 },
-    { "midi_ch": 10, "device_index": 2, "poly": 6 }
-  ],
   "banks": {
     "hw_banks": [
       { "group": "OPN",  "bank": 0, "file": "banks/OPN/gm/necopn_gm.hwbank.json" },
@@ -69,9 +25,8 @@
       { "group": "OPL3", "bank": 0, "file": "banks/OPL3/alsa/std_opl3.hwbank.json" },
       { "group": "OPL3", "bank": 1, "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json" }
     ],
+    "sw_banks":    [],
     "patch_banks": [],
-    "drum_banks":  [
-      { "bank": 0, "file": "banks/OPL3/alsa/std_opl3.hwbank.json" }
-    ]
+    "drum_banks":  []
   }
 }

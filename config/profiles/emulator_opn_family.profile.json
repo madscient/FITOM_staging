@@ -1,57 +1,22 @@
 {
-  "profile_name": "エミュレーター OPN ファミリー (OPN/OPN2/OPNA/OPNB/OPNBB)",
-  "fm_engines": [
+  "_comment": [
+    "OPN/OPN2/OPNA/OPNB/OPNBB 5チップ同時使用構成。FitomEmuIF 経由。",
+    "チップ構成・クロック・オーディオ設定は fmhwif_profile.json で管理する。",
+    "hw_plugins[].profile のパスは FITOM_X 実行ファイルからの相対パスで解決される。",
+    "fmhwif_profile.json を FITOM_staging ルートに置くか、",
+    "FMHWIF_PROFILE 環境変数でフルパスを指定すること。"
+  ],
+  "profile_name": "エミュレーター OPN ファミリー (OPN/OPN2/OPNA/OPNB/OPNBB) - FitomEmuIF経由",
+  "hw_plugins": [
     {
-      "name": "YMFMEngine",
-      "dll": "FitomEmuIf.dll",
-      "sample_rate": 44100
+      "name": "FitomEmuIF",
+      "dll": "FitomEmuIF.dll",
+      "profile": "fmhwif_profile.json",
+      "profile_env": "FMHWIF_PROFILE",
+      "auto_devices": true
     }
   ],
-  "audio_output": {
-    "sample_rate": 44100
-  },
-  "devices": [
-    {
-      "if": "FMENGINE",
-      "label": "OPN",
-      "engine": "YMFMEngine",
-      "chip": "OPN",
-      "clock": 3579545
-    },
-    {
-      "if": "FMENGINE",
-      "label": "OPN2",
-      "engine": "YMFMEngine",
-      "chip": "OPN2",
-      "clock": 7159090
-    },
-    {
-      "if": "FMENGINE",
-      "label": "OPNA",
-      "engine": "YMFMEngine",
-      "chip": "OPNA",
-      "clock": 7159090
-    },
-    {
-      "if": "FMENGINE",
-      "label": "OPNB",
-      "engine": "YMFMEngine",
-      "chip": "OPNB",
-      "clock": 7159090
-    },
-    {
-      "if": "FMENGINE",
-      "label": "OPNBB",
-      "engine": "YMFMEngine",
-      "chip": "OPNBB",
-      "clock": 7159090
-    }
-  ],
-  "midi_backend": {
-    "dll": "fitom_midi_winmm.dll"
-  },
   "midi_inputs": [
-    "microKEY-25",
     "loopMIDI Port 1"
   ],
   "banks": {
