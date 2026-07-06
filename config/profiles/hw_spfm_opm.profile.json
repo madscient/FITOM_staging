@@ -2,21 +2,28 @@
   "profile_name": "SPFM 実機 OPM - FitomHwIF経由",
   "hw_plugins": [
     {
-      "name":        "FitomHwIF",
-      "dll":         "fitom_hw.dll",
-      "profile":     "fitom_hw_spfm_opm.profile.json",
-      "profile_env": "FITOM_HW_PROFILE",
+      "name": "FitomHwIF",
+      "dll": "fitom_hw.dll",
+      "profile": "fitom_hw_spfm_opm.profile.json",
       "auto_devices": true
     }
   ],
   "midi_inputs": [],
   "banks": {
     "hw_banks": [
-      { "group": "OPM", "bank": 0, "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json" },
-      { "group": "OPM", "bank": 1, "file": "banks/OPM/fb01/rom1.hwbank.json" }
+      {
+        "group": "OPM",
+        "bank": 0,
+        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json"
+      },
+      {
+        "group": "OPM",
+        "bank": 1,
+        "file": "banks/OPM/fb01/rom1.hwbank.json"
+      }
     ],
-    "sw_banks":    [],
+    "sw_banks": [],
     "patch_banks": [],
-    "drum_banks":  []
+    "drum_banks": []
   }
 }
