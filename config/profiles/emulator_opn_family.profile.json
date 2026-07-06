@@ -11,7 +11,7 @@
     {
       "name": "FitomEmuIF",
       "dll": "FitomEmuIF.dll",
-      "profile": "fmhwif_profile.json",
+      "profile": "config/fmemuif_opn_profile.json",
       "auto_devices": true
     }
   ],
