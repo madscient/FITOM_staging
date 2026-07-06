@@ -2,22 +2,33 @@
   "profile_name": "エミュレーター OPL3 - FitomEmuIF経由",
   "hw_plugins": [
     {
-      "name":        "FitomEmuIF",
-      "dll":         "FitomEmuIF.dll",
-      "profile":     "fmhwif_opl3.profile.json",
-      "profile_env": "FMHWIF_PROFILE",
+      "name": "FitomEmuIF",
+      "dll": "FitomEmuIF.dll",
+      "profile": "fmhwif_opl3.profile.json",
       "auto_devices": true
     }
   ],
   "midi_inputs": [],
   "banks": {
     "hw_banks": [
-      { "group": "OPL3", "bank": 0, "file": "banks/OPL3/alsa/std_opl3.hwbank.json" },
-      { "group": "OPL3", "bank": 1, "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json" },
-      { "group": "OPL2", "bank": 0, "file": "banks/OPL2/alsa/std_opl2.hwbank.json" }
+      {
+        "group": "OPL3",
+        "bank": 0,
+        "file": "banks/OPL3/alsa/std_opl3.hwbank.json"
+      },
+      {
+        "group": "OPL3",
+        "bank": 1,
+        "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json"
+      },
+      {
+        "group": "OPL2",
+        "bank": 0,
+        "file": "banks/OPL2/alsa/std_opl2.hwbank.json"
+      }
     ],
-    "sw_banks":    [],
+    "sw_banks": [],
     "patch_banks": [],
-    "drum_banks":  []
+    "drum_banks": []
   }
 }

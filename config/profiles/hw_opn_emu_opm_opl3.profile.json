@@ -2,31 +2,49 @@
   "profile_name": "OPN 実機 + OPM/OPL3 エミュ混在 - FitomHwIF + FitomEmuIF",
   "hw_plugins": [
     {
-      "name":        "FitomHwIF",
-      "dll":         "fitom_hw.dll",
-      "profile":     "fitom_hw_opn.profile.json",
-      "profile_env": "FITOM_HW_PROFILE",
+      "name": "FitomHwIF",
+      "dll": "fitom_hw.dll",
+      "profile": "fitom_hw_opn.profile.json",
       "auto_devices": true
     },
     {
-      "name":        "FitomEmuIF",
-      "dll":         "FitomEmuIF.dll",
-      "profile":     "fmhwif_opm_opl3.profile.json",
-      "profile_env": "FMHWIF_PROFILE",
+      "name": "FitomEmuIF",
+      "dll": "FitomEmuIF.dll",
+      "profile": "fmhwif_opm_opl3.profile.json",
       "auto_devices": true
     }
   ],
   "midi_inputs": [],
   "banks": {
     "hw_banks": [
-      { "group": "OPN",  "bank": 0, "file": "banks/OPN/gm/necopn_gm.hwbank.json" },
-      { "group": "OPM",  "bank": 0, "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json" },
-      { "group": "OPM",  "bank": 1, "file": "banks/OPM/fb01/rom1.hwbank.json" },
-      { "group": "OPL3", "bank": 0, "file": "banks/OPL3/alsa/std_opl3.hwbank.json" },
-      { "group": "OPL3", "bank": 1, "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json" }
+      {
+        "group": "OPN",
+        "bank": 0,
+        "file": "banks/OPN/gm/necopn_gm.hwbank.json"
+      },
+      {
+        "group": "OPM",
+        "bank": 0,
+        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json"
+      },
+      {
+        "group": "OPM",
+        "bank": 1,
+        "file": "banks/OPM/fb01/rom1.hwbank.json"
+      },
+      {
+        "group": "OPL3",
+        "bank": 0,
+        "file": "banks/OPL3/alsa/std_opl3.hwbank.json"
+      },
+      {
+        "group": "OPL3",
+        "bank": 1,
+        "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json"
+      }
     ],
-    "sw_banks":    [],
+    "sw_banks": [],
     "patch_banks": [],
-    "drum_banks":  []
+    "drum_banks": []
   }
 }
