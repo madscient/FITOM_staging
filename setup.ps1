@@ -38,10 +38,10 @@ $Stage = $PSScriptRoot
 
 # ── プロジェクトのビルドディレクトリ (環境に合わせて変更) ──────────────────
 $Projects = @{
-    FitomX     = "..\FITOM_X\build\windows-vs2022-x64\$BuildType"
-    FitomEmuIF = "..\FitomEmuIF\build\windows-vs2022-x64\$BuildType"
-    FitomHwIF  = "..\FitomHwIF\build\windows-vs2022-x64\$BuildType"
-    YMEngine   = "..\YMEngine\build\windows-vs2022-x64\$BuildType"
+    FitomX     = "..\FITOM_X\build\bin\$BuildType"
+    FitomEmuIF = "..\FitomEmuIF\build\$BuildType"
+    FitomHwIF  = "..\FitomHwIF\build\$BuildType"
+    YMEngine   = "..\YMEngine\build\bin\$BuildType"
 }
 
 function Copy-IfExists($src, $dst) {
@@ -61,14 +61,15 @@ New-Item -ItemType Directory -Force -Path $Bin | Out-Null
 New-Item -ItemType Directory -Force -Path "$Bin\engines" | Out-Null
 
 # FITOM_X 本体
-Copy-IfExists "$($Projects.FitomX)\fitom_core.exe" "$Bin\fitom_core.exe"
+Copy-IfExists "$($Projects.FitomX)\*.exe" "$Bin\"
+Copy-IfExists "$($Projects.FitomX)\*.dll" "$Bin\"
 
 # プラグイン DLL
-Copy-IfExists "$($Projects.FitomEmuIF)\FitomEmuIF.dll" "$Bin\FitomEmuIF.dll"
-Copy-IfExists "$($Projects.FitomHwIF)\fitom_hw.dll"    "$Bin\fitom_hw.dll"
+Copy-IfExists "$($Projects.FitomEmuIF)\*.dll" "$Bin\"
+Copy-IfExists "$($Projects.FitomHwIF)\*.dll"    "$Bin\"
 
 # FM エンジン DLL
-Copy-IfExists "$($Projects.YMEngine)\YMEngine.dll" "$Bin\engines\YMEngine.dll"
+Copy-IfExists "$($Projects.YMEngine)\YMFMEngine.dll" "$Bin\engines\"
 
 # ── その他 ───────────────────────────────────────────────────────────────────
 New-Item -ItemType Directory -Force -Path "$Stage\dist" | Out-Null
