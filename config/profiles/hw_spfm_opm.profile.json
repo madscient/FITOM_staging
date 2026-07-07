@@ -12,24 +12,24 @@
   "banks": {
     "hw_banks": [
       {
-        "group": "OPM",
         "bank": 0,
-        "file": "banks/OPM/dx27_dx100/dx21.hwbank.json"
+        "file": "banks/OPM/dx27_dx100/dx21.hwbank.json",
+        "voice_patch_type": "OPZ2"
       },
       {
-        "group": "OPM",
         "bank": 1,
-        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json"
+        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json",
+        "voice_patch_type": "OPZ2"
       },
       {
-        "group": "OPM",
         "bank": 2,
-        "file": "banks/OPM/dx27_dx100/dx100_2.hwbank.json"
+        "file": "banks/OPM/dx27_dx100/dx100_2.hwbank.json",
+        "voice_patch_type": "OPZ2"
       },
       {
-        "group": "OPM",
         "bank": 3,
-        "file": "banks/OPM/fb01/fb01.hwbank.json"
+        "file": "banks/OPM/fb01/fb01.hwbank.json",
+        "voice_patch_type": "OPZ2"
       }
     ],
     "sw_banks": [],

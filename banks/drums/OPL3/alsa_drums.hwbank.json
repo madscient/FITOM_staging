@@ -1,7 +1,6 @@
 {
   "name": "drums",
-  "group": "OPL3",
-  "bank": 0,
+  "voice_patch_type": "OPL3",
   "op_count": 4,
   "source": "drums.o3 (ALSA sbiload format)",
   "patches": [

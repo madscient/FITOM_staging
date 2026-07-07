@@ -1,7 +1,6 @@
 {
   "name": "fb01",
-  "group": "OPM",
-  "bank": 0,
+  "voice_patch_type": "OPZ2",
   "op_count": 4,
   "source": [
     "rom1.dmp (Yamaha FB-01 ROM dump)",

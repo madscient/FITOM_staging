@@ -1,7 +1,6 @@
 {
   "name": "Preset4OP",
-  "group": "OPL3",
-  "bank": 0,
+  "voice_patch_type": "OPL3",
   "op_count": 4,
   "source": "Preset4OP.vma (MA-2 VMA FM format)",
   "patches": [

@@ -1,14 +1,14 @@
 {
   "name": "necopn GM (OPN single-layer)",
   "bank": 0,
-  "note": "necopn_gm.hwbank.json の全128音色を OPN (voice_patch_type=0x10) 単一レイヤーで参照。 OPN2/OPNA/OPNB/OPNBB (0x11) には別途レイヤーを追加すること。 sw_bank=0 は banks/sw/necopn_gm.swbank.json に対応。",
+  "note": "necopn_gm.hwbank.json の全128音色を OPN2 (voice_patch_type=0x11) 単一レイヤーで参照。 OPN系最上位チップとして宣言し、OPN/OPN2/OPNA/OPNB/OPNBBすべてでフォールバック再生される。sw_bank=0 は banks/sw/necopn_gm.swbank.json に対応。",
   "patches": [
     {
       "prog": 0,
       "name": "Acoustic Grand Piano",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 0,
           "note_range_lo": 0,
@@ -26,7 +26,7 @@
       "name": "Bright Acoustic Piano",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 1,
           "note_range_lo": 0,
@@ -44,7 +44,7 @@
       "name": "Electric Grand Piano",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 2,
           "note_range_lo": 0,
@@ -62,7 +62,7 @@
       "name": "Honky-tonk Piano",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 3,
           "note_range_lo": 0,
@@ -80,7 +80,7 @@
       "name": "Electric Piano 1",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 4,
           "note_range_lo": 0,
@@ -98,7 +98,7 @@
       "name": "Electric Piano 2",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 5,
           "note_range_lo": 0,
@@ -116,7 +116,7 @@
       "name": "Harpsichord",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 6,
           "note_range_lo": 0,
@@ -134,7 +134,7 @@
       "name": "Clavi",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 7,
           "note_range_lo": 0,
@@ -152,7 +152,7 @@
       "name": "Celesta",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 8,
           "note_range_lo": 0,
@@ -170,7 +170,7 @@
       "name": "Glockenspiel",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 9,
           "note_range_lo": 0,
@@ -188,7 +188,7 @@
       "name": "Music Box",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 10,
           "note_range_lo": 0,
@@ -206,7 +206,7 @@
       "name": "Vibraphone",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 11,
           "note_range_lo": 0,
@@ -224,7 +224,7 @@
       "name": "Marimba",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 12,
           "note_range_lo": 0,
@@ -242,7 +242,7 @@
       "name": "Xylophone",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 13,
           "note_range_lo": 0,
@@ -260,7 +260,7 @@
       "name": "Tubular Bells",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 14,
           "note_range_lo": 0,
@@ -278,7 +278,7 @@
       "name": "Dulcimer",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 15,
           "note_range_lo": 0,
@@ -296,7 +296,7 @@
       "name": "Drawbar Organ",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 16,
           "note_range_lo": 0,
@@ -314,7 +314,7 @@
       "name": "Percussive Organ",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 17,
           "note_range_lo": 0,
@@ -332,7 +332,7 @@
       "name": "Rock Organ",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 18,
           "note_range_lo": 0,
@@ -350,7 +350,7 @@
       "name": "Church Organ",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 19,
           "note_range_lo": 0,
@@ -368,7 +368,7 @@
       "name": "Reed Organ",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 20,
           "note_range_lo": 0,
@@ -386,7 +386,7 @@
       "name": "Accordion",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 21,
           "note_range_lo": 0,
@@ -404,7 +404,7 @@
       "name": "Harmonica",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 22,
           "note_range_lo": 0,
@@ -422,7 +422,7 @@
       "name": "Tango Accordion",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 23,
           "note_range_lo": 0,
@@ -440,7 +440,7 @@
       "name": "Acoustic Guitar (nylon)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 24,
           "note_range_lo": 0,
@@ -458,7 +458,7 @@
       "name": "Acoustic Guitar (steel)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 25,
           "note_range_lo": 0,
@@ -476,7 +476,7 @@
       "name": "Electric Guitar (jazz)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 26,
           "note_range_lo": 0,
@@ -494,7 +494,7 @@
       "name": "Electric Guitar (clean)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 27,
           "note_range_lo": 0,
@@ -512,7 +512,7 @@
       "name": "Electric Guitar (muted)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 28,
           "note_range_lo": 0,
@@ -530,7 +530,7 @@
       "name": "Overdriven Guitar",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 29,
           "note_range_lo": 0,
@@ -548,7 +548,7 @@
       "name": "Distortion Guitar",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 30,
           "note_range_lo": 0,
@@ -566,7 +566,7 @@
       "name": "Guitar harmonics",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 31,
           "note_range_lo": 0,
@@ -584,7 +584,7 @@
       "name": "Acoustic Bass",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 32,
           "note_range_lo": 0,
@@ -602,7 +602,7 @@
       "name": "Electric Bass (finger)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 33,
           "note_range_lo": 0,
@@ -620,7 +620,7 @@
       "name": "Electric Bass (pick)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 34,
           "note_range_lo": 0,
@@ -638,7 +638,7 @@
       "name": "Fretless Bass",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 35,
           "note_range_lo": 0,
@@ -656,7 +656,7 @@
       "name": "Slap Bass 1",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 36,
           "note_range_lo": 0,
@@ -674,7 +674,7 @@
       "name": "Slap Bass 2",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 37,
           "note_range_lo": 0,
@@ -692,7 +692,7 @@
       "name": "Synth Bass 1",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 38,
           "note_range_lo": 0,
@@ -710,7 +710,7 @@
       "name": "Synth Bass 2",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 39,
           "note_range_lo": 0,
@@ -728,7 +728,7 @@
       "name": "Violin",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 40,
           "note_range_lo": 0,
@@ -746,7 +746,7 @@
       "name": "Viola",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 41,
           "note_range_lo": 0,
@@ -764,7 +764,7 @@
       "name": "Cello",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 42,
           "note_range_lo": 0,
@@ -782,7 +782,7 @@
       "name": "Contrabass",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 43,
           "note_range_lo": 0,
@@ -800,7 +800,7 @@
       "name": "Tremolo Strings",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 44,
           "note_range_lo": 0,
@@ -818,7 +818,7 @@
       "name": "Pizzicato Strings",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 45,
           "note_range_lo": 0,
@@ -836,7 +836,7 @@
       "name": "Orchestral Harp",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 46,
           "note_range_lo": 0,
@@ -854,7 +854,7 @@
       "name": "Timpani",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 47,
           "note_range_lo": 0,
@@ -872,7 +872,7 @@
       "name": "String Ensemble 1",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 48,
           "note_range_lo": 0,
@@ -890,7 +890,7 @@
       "name": "String Ensemble 2",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 49,
           "note_range_lo": 0,
@@ -908,7 +908,7 @@
       "name": "SynthStrings 1",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 50,
           "note_range_lo": 0,
@@ -926,7 +926,7 @@
       "name": "SynthStrings 2",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 51,
           "note_range_lo": 0,
@@ -944,7 +944,7 @@
       "name": "Choir Aahs",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 52,
           "note_range_lo": 0,
@@ -962,7 +962,7 @@
       "name": "Voice Oohs",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 53,
           "note_range_lo": 0,
@@ -980,7 +980,7 @@
       "name": "Synth Voice",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 54,
           "note_range_lo": 0,
@@ -998,7 +998,7 @@
       "name": "Orchestra Hit",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 55,
           "note_range_lo": 0,
@@ -1016,7 +1016,7 @@
       "name": "Trumpet",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 56,
           "note_range_lo": 0,
@@ -1034,7 +1034,7 @@
       "name": "Trombone",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 57,
           "note_range_lo": 0,
@@ -1052,7 +1052,7 @@
       "name": "Tuba",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 58,
           "note_range_lo": 0,
@@ -1070,7 +1070,7 @@
       "name": "Muted Trumpet",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 59,
           "note_range_lo": 0,
@@ -1088,7 +1088,7 @@
       "name": "French Horn",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 60,
           "note_range_lo": 0,
@@ -1106,7 +1106,7 @@
       "name": "Brass Section",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 61,
           "note_range_lo": 0,
@@ -1124,7 +1124,7 @@
       "name": "SynthBrass 1",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 62,
           "note_range_lo": 0,
@@ -1142,7 +1142,7 @@
       "name": "SynthBrass 2",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 63,
           "note_range_lo": 0,
@@ -1160,7 +1160,7 @@
       "name": "Soprano Sax",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 64,
           "note_range_lo": 0,
@@ -1178,7 +1178,7 @@
       "name": "Alto Sax",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 65,
           "note_range_lo": 0,
@@ -1196,7 +1196,7 @@
       "name": "Tenor Sax",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 66,
           "note_range_lo": 0,
@@ -1214,7 +1214,7 @@
       "name": "Baritone Sax",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 67,
           "note_range_lo": 0,
@@ -1232,7 +1232,7 @@
       "name": "Oboe",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 68,
           "note_range_lo": 0,
@@ -1250,7 +1250,7 @@
       "name": "English Horn",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 69,
           "note_range_lo": 0,
@@ -1268,7 +1268,7 @@
       "name": "Bassoon",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 70,
           "note_range_lo": 0,
@@ -1286,7 +1286,7 @@
       "name": "Clarinet",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 71,
           "note_range_lo": 0,
@@ -1304,7 +1304,7 @@
       "name": "Piccolo",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 72,
           "note_range_lo": 0,
@@ -1322,7 +1322,7 @@
       "name": "Flute",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 73,
           "note_range_lo": 0,
@@ -1340,7 +1340,7 @@
       "name": "Recorder",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 74,
           "note_range_lo": 0,
@@ -1358,7 +1358,7 @@
       "name": "Pan Flute",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 75,
           "note_range_lo": 0,
@@ -1376,7 +1376,7 @@
       "name": "Blown Bottle",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 76,
           "note_range_lo": 0,
@@ -1394,7 +1394,7 @@
       "name": "Shakuhachi",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 77,
           "note_range_lo": 0,
@@ -1412,7 +1412,7 @@
       "name": "Whistle",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 78,
           "note_range_lo": 0,
@@ -1430,7 +1430,7 @@
       "name": "Ocarina",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 79,
           "note_range_lo": 0,
@@ -1448,7 +1448,7 @@
       "name": "Lead 1 (square)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 80,
           "note_range_lo": 0,
@@ -1466,7 +1466,7 @@
       "name": "Lead 2 (sawtooth)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 81,
           "note_range_lo": 0,
@@ -1484,7 +1484,7 @@
       "name": "Lead 3 (calliope)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 82,
           "note_range_lo": 0,
@@ -1502,7 +1502,7 @@
       "name": "Lead 4 (chiff)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 83,
           "note_range_lo": 0,
@@ -1520,7 +1520,7 @@
       "name": "Lead 5 (charang)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 84,
           "note_range_lo": 0,
@@ -1538,7 +1538,7 @@
       "name": "Lead 6 (voice)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 85,
           "note_range_lo": 0,
@@ -1556,7 +1556,7 @@
       "name": "Lead 7 (fifths)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 86,
           "note_range_lo": 0,
@@ -1574,7 +1574,7 @@
       "name": "Lead 8 (bass + lead)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 87,
           "note_range_lo": 0,
@@ -1592,7 +1592,7 @@
       "name": "Pad 1 (new age)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 88,
           "note_range_lo": 0,
@@ -1610,7 +1610,7 @@
       "name": "Pad 2 (warm)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 89,
           "note_range_lo": 0,
@@ -1628,7 +1628,7 @@
       "name": "Pad 3 (polysynth)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 90,
           "note_range_lo": 0,
@@ -1646,7 +1646,7 @@
       "name": "Pad 4 (choir)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 91,
           "note_range_lo": 0,
@@ -1664,7 +1664,7 @@
       "name": "Pad 5 (bowed)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 92,
           "note_range_lo": 0,
@@ -1682,7 +1682,7 @@
       "name": "Pad 6 (metallic)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 93,
           "note_range_lo": 0,
@@ -1700,7 +1700,7 @@
       "name": "Pad 7 (halo)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 94,
           "note_range_lo": 0,
@@ -1718,7 +1718,7 @@
       "name": "Pad 8 (sweep)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 95,
           "note_range_lo": 0,
@@ -1736,7 +1736,7 @@
       "name": "FX 1 (rain)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 96,
           "note_range_lo": 0,
@@ -1754,7 +1754,7 @@
       "name": "FX 2 (soundtrack)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 97,
           "note_range_lo": 0,
@@ -1772,7 +1772,7 @@
       "name": "FX 3 (crystal)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 98,
           "note_range_lo": 0,
@@ -1790,7 +1790,7 @@
       "name": "FX 4 (atmosphere)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 99,
           "note_range_lo": 0,
@@ -1808,7 +1808,7 @@
       "name": "FX 5 (brightness)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 100,
           "note_range_lo": 0,
@@ -1826,7 +1826,7 @@
       "name": "FX 6 (goblins)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 101,
           "note_range_lo": 0,
@@ -1844,7 +1844,7 @@
       "name": "FX 7 (echoes)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 102,
           "note_range_lo": 0,
@@ -1862,7 +1862,7 @@
       "name": "FX 8 (sci-fi)",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 103,
           "note_range_lo": 0,
@@ -1880,7 +1880,7 @@
       "name": "Sitar",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 104,
           "note_range_lo": 0,
@@ -1898,7 +1898,7 @@
       "name": "Banjo",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 105,
           "note_range_lo": 0,
@@ -1916,7 +1916,7 @@
       "name": "Shamisen",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 106,
           "note_range_lo": 0,
@@ -1934,7 +1934,7 @@
       "name": "Koto",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 107,
           "note_range_lo": 0,
@@ -1952,7 +1952,7 @@
       "name": "Kalimba",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 108,
           "note_range_lo": 0,
@@ -1970,7 +1970,7 @@
       "name": "Bag pipe",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 109,
           "note_range_lo": 0,
@@ -1988,7 +1988,7 @@
       "name": "Fiddle",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 110,
           "note_range_lo": 0,
@@ -2006,7 +2006,7 @@
       "name": "Shanai",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 111,
           "note_range_lo": 0,
@@ -2024,7 +2024,7 @@
       "name": "Tinkle Bell",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 112,
           "note_range_lo": 0,
@@ -2042,7 +2042,7 @@
       "name": "Agogo",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 113,
           "note_range_lo": 0,
@@ -2060,7 +2060,7 @@
       "name": "Steel Drums",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 114,
           "note_range_lo": 0,
@@ -2078,7 +2078,7 @@
       "name": "Woodblock",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 115,
           "note_range_lo": 0,
@@ -2096,7 +2096,7 @@
       "name": "Taiko Drum",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 116,
           "note_range_lo": 0,
@@ -2114,7 +2114,7 @@
       "name": "Melodic Tom",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 117,
           "note_range_lo": 0,
@@ -2132,7 +2132,7 @@
       "name": "Synth Drum",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 118,
           "note_range_lo": 0,
@@ -2150,7 +2150,7 @@
       "name": "Reverse Cymbal",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 119,
           "note_range_lo": 0,
@@ -2168,7 +2168,7 @@
       "name": "Guitar Fret Noise",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 120,
           "note_range_lo": 0,
@@ -2186,7 +2186,7 @@
       "name": "Breath Noise",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 121,
           "note_range_lo": 0,
@@ -2204,7 +2204,7 @@
       "name": "Seashore",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 122,
           "note_range_lo": 0,
@@ -2222,7 +2222,7 @@
       "name": "Bird Tweet",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 123,
           "note_range_lo": 0,
@@ -2240,7 +2240,7 @@
       "name": "Telephone Ring",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 124,
           "note_range_lo": 0,
@@ -2258,7 +2258,7 @@
       "name": "Helicopter",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 125,
           "note_range_lo": 0,
@@ -2276,7 +2276,7 @@
       "name": "Applause",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 126,
           "note_range_lo": 0,
@@ -2294,7 +2294,7 @@
       "name": "Gunshot",
       "layers": [
         {
-          "voice_patch_type": 16,
+          "voice_patch_type": 17,
           "hw_bank": 0,
           "hw_prog": 127,
           "note_range_lo": 0,

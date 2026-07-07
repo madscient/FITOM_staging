@@ -10,7 +10,7 @@
     {
       "name": "FitomEmuIF",
       "dll": "FitomEmuIF.dll",
-      "profile": "fmhwif_opl3.profile.json",
+      "profile": "fmemuif_opl3.profile.json",
       "auto_devices": true
     }
   ],
@@ -18,34 +18,34 @@
   "banks": {
     "hw_banks": [
       {
-        "group": "OPM",
         "bank": 0,
-        "file": "banks/OPM/dx27_dx100/dx21.hwbank.json"
+        "file": "banks/OPM/dx27_dx100/dx21.hwbank.json",
+        "voice_patch_type": "OPZ2"
       },
       {
-        "group": "OPM",
         "bank": 1,
-        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json"
+        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json",
+        "voice_patch_type": "OPZ2"
       },
       {
-        "group": "OPM",
         "bank": 2,
-        "file": "banks/OPM/dx27_dx100/dx100_2.hwbank.json"
+        "file": "banks/OPM/dx27_dx100/dx100_2.hwbank.json",
+        "voice_patch_type": "OPZ2"
       },
       {
-        "group": "OPM",
         "bank": 3,
-        "file": "banks/OPM/fb01/fb01.hwbank.json"
+        "file": "banks/OPM/fb01/fb01.hwbank.json",
+        "voice_patch_type": "OPZ2"
       },
       {
-        "group": "OPL3",
         "bank": 0,
-        "file": "banks/OPL3/alsa/std_opl3.hwbank.json"
+        "file": "banks/OPL3/alsa/std_opl3.hwbank.json",
+        "voice_patch_type": "OPL3"
       },
       {
-        "group": "OPL3",
         "bank": 1,
-        "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json"
+        "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json",
+        "voice_patch_type": "OPL3"
       }
     ],
     "sw_banks": [],

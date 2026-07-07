@@ -4,7 +4,7 @@
     {
       "name": "FitomEmuIF",
       "dll": "FitomEmuIF.dll",
-      "profile": "fmhwif_opl3.profile.json",
+      "profile": "fmemuif_opl3.profile.json",
       "auto_devices": true
     }
   ],
@@ -12,19 +12,19 @@
   "banks": {
     "hw_banks": [
       {
-        "group": "OPL3",
         "bank": 0,
-        "file": "banks/OPL3/alsa/std_opl3.hwbank.json"
+        "file": "banks/OPL3/alsa/std_opl3.hwbank.json",
+        "voice_patch_type": "OPL3"
       },
       {
-        "group": "OPL3",
         "bank": 1,
-        "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json"
+        "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json",
+        "voice_patch_type": "OPL3"
       },
       {
-        "group": "OPL2",
         "bank": 0,
-        "file": "banks/OPL2/alsa/std_opl2.hwbank.json"
+        "file": "banks/OPL2/alsa/std_opl2.hwbank.json",
+        "voice_patch_type": "OPL3_2"
       }
     ],
     "sw_banks": [],
