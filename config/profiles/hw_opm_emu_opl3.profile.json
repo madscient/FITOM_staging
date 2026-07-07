@@ -20,12 +20,22 @@
       {
         "group": "OPM",
         "bank": 0,
-        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json"
+        "file": "banks/OPM/dx27_dx100/dx21.hwbank.json"
       },
       {
         "group": "OPM",
         "bank": 1,
-        "file": "banks/OPM/fb01/rom1.hwbank.json"
+        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json"
+      },
+      {
+        "group": "OPM",
+        "bank": 2,
+        "file": "banks/OPM/dx27_dx100/dx100_2.hwbank.json"
+      },
+      {
+        "group": "OPM",
+        "bank": 3,
+        "file": "banks/OPM/fb01/fb01.hwbank.json"
       },
       {
         "group": "OPL3",
