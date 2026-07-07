@@ -1,7 +1,6 @@
 {
   "name": "std",
-  "group": "OPL3",
-  "bank": 0,
+  "voice_patch_type": "OPL3",
   "op_count": 4,
   "source": "std.o3 (ALSA sbiload format)",
   "patches": [

@@ -1,7 +1,6 @@
 {
   "name": "MicroComputer x Digital",
-  "group": "OPL3",
-  "bank": 0,
+  "voice_patch_type": "OPL3",
   "op_count": 4,
   "source": "MicroComputerNormalBank.hwbank.json [M1/C1] + DigitalNormalBank.hwbank.json [M2/C2]",
   "note": "ALG=(conn_sel=1, cnt1=0, cnt0=0), FB=(fb_b<<3)|fb_a per patch. ops[0/1]=Bank-A(M1/C1), ops[2/3]=Bank-B(M2/C2).",

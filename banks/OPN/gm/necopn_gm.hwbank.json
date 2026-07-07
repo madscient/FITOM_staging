@@ -1,7 +1,6 @@
 {
   "name": "necopn GM Bank",
-  "group": "OPN",
-  "bank": 0,
+  "voice_patch_type": "OPN2",
   "source": "necopn.bin (Windows OPNA driver preset, N88-BASIC(86) format)",
   "patches": [
     {

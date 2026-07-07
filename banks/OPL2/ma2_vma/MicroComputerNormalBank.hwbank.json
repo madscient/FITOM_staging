@@ -1,7 +1,6 @@
 {
   "name": "MicroComputerNormalBank",
-  "group": "OPL2",
-  "bank": 0,
+  "voice_patch_type": "OPL3_2",
   "op_count": 2,
   "source": "MicroComputerNormalBank.vma (MA-2 VMA FM format)",
   "patches": [

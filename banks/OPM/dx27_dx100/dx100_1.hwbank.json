@@ -1,7 +1,6 @@
 {
   "name": "dx100_1",
-  "group": "OPM",
-  "bank": 1,
+  "voice_patch_type": "OPZ2",
   "op_count": 4,
   "source": [
     "dx100_1.syx (DX27/DX100 VMEM SysEx)",

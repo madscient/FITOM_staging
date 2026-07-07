@@ -1,8 +1,7 @@
 {
   "name": "tx81z_1",
-  "group": "OPM",
+  "voice_patch_type": "OPZ2",
   "chip": "OPZ",
-  "bank": 0,
   "op_count": 4,
   "source": "tx81z_1.syx (TX81Z 32-Voice VMEM SysEx)",
   "note": "ops[]=[M1,C1,M2,C2]順。WS=OPZ波形(0-7)、FIX/FIXRG/FINE/EGSFTはOPZ拡張。",
