@@ -1,0 +1,4511 @@
+{
+  "name": "OPLL Presets (PSS-140 + SHS-10)",
+  "voice_patch_type": "OPLL",
+  "source": [
+    "https://github.com/plgDavid/misc/blob/master/OPLL%20Synth%20Patches/pss140_patches.txt",
+    "https://github.com/plgDavid/misc/blob/master/OPLL%20Synth%20Patches/shs10_patches.txt"
+  ],
+  "note": "PSS-140 (100パッチ, prog 0-99) + SHS-10 (25パッチ, prog 100-124) を集約。計125パッチ。prog番号は0から連番に振り直し済み。Carrier TLはチャンネルレジスタ(R$30-R$38)で制御されるため0固定。",
+  "patches": [
+    {
+      "prog": 0,
+      "name": "Accordion 1",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 14,
+          "SL": 0,
+          "RR": 0,
+          "TL": 24,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 6,
+          "DR": 0,
+          "SL": 9,
+          "RR": 15,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 1,
+      "name": "Accordion 2",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 0,
+          "SL": 0,
+          "RR": 3,
+          "TL": 21,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 0,
+          "SL": 0,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 2,
+      "name": "Alpenhorn",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 3,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 34,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 5,
+          "DR": 1,
+          "SL": 0,
+          "RR": 6,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 3,
+      "name": "Alto Sax",
+      "FB": 2,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 5,
+          "DR": 0,
+          "SL": 1,
+          "RR": 0,
+          "TL": 8,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 7,
+          "DR": 3,
+          "SL": 0,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 4,
+      "name": "Bagpipe",
+      "FB": 2,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 2,
+          "RR": 0,
+          "TL": 14,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 0,
+          "SL": 2,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 5,
+      "name": "Banjo",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 9,
+          "SL": 2,
+          "RR": 0,
+          "TL": 21,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 6,
+          "SL": 2,
+          "RR": 4,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 6,
+      "name": "Bar Chimes",
+      "FB": 3,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 0,
+          "SL": 1,
+          "RR": 1,
+          "TL": 17,
+          "KSR": 1,
+          "KSL": 2,
+          "MUL": 8,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 3,
+          "SL": 15,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 7,
+      "name": "Bass Clarinet",
+      "FB": 6,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 0,
+          "SL": 0,
+          "RR": 0,
+          "TL": 29,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 0,
+          "SL": 0,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 8,
+      "name": "Bassoon",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 0,
+          "RR": 1,
+          "TL": 22,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 0,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 9,
+      "name": "Boom Piano",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 1,
+          "SL": 11,
+          "RR": 1,
+          "TL": 8,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 10,
+          "DR": 4,
+          "SL": 10,
+          "RR": 1,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 10,
+      "name": "Bowed bass",
+      "FB": 3,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 7,
+          "DR": 2,
+          "SL": 2,
+          "RR": 0,
+          "TL": 7,
+          "KSR": 1,
+          "KSL": 3,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 3,
+          "DR": 1,
+          "SL": 2,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 11,
+      "name": "Brass & Marimba",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 3,
+          "DR": 6,
+          "SL": 0,
+          "RR": 0,
+          "TL": 29,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 1
+        },
+        {
+          "AR": 15,
+          "DR": 6,
+          "SL": 2,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 12,
+      "name": "Cello",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 0,
+          "SL": 5,
+          "RR": 6,
+          "TL": 14,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 5,
+          "DR": 0,
+          "SL": 13,
+          "RR": 9,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 13,
+      "name": "Chime & Organ",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 5,
+          "SL": 15,
+          "RR": 1,
+          "TL": 21,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 15,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 15,
+          "DR": 0,
+          "SL": 2,
+          "RR": 1,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 14,
+      "name": "Chimes",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 0,
+          "SL": 1,
+          "RR": 1,
+          "TL": 17,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 3,
+          "SL": 15,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 15,
+      "name": "Clarinet",
+      "FB": 6,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 0,
+          "RR": 0,
+          "TL": 30,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 6,
+          "SL": 2,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 16,
+      "name": "Classic Guitar",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 11,
+          "DR": 2,
+          "SL": 4,
+          "RR": 0,
+          "TL": 37,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 13,
+          "DR": 2,
+          "SL": 10,
+          "RR": 10,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 17,
+      "name": "Clavi 1",
+      "FB": 6,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 8,
+          "SL": 1,
+          "RR": 0,
+          "TL": 8,
+          "KSR": 1,
+          "KSL": 3,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 3,
+          "SL": 10,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 18,
+      "name": "Clavi 2",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 3,
+          "RR": 8,
+          "TL": 17,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 9,
+          "DR": 5,
+          "SL": 10,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 19,
+      "name": "Drip",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 4,
+          "DR": 4,
+          "SL": 15,
+          "RR": 8,
+          "TL": 16,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 5,
+          "SL": 15,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 20,
+      "name": "Electric Bass",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 8,
+          "DR": 4,
+          "SL": 12,
+          "RR": 8,
+          "TL": 26,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 10,
+          "DR": 4,
+          "SL": 12,
+          "RR": 11,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 21,
+      "name": "Electric Piano 1",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 10,
+          "SL": 1,
+          "RR": 3,
+          "TL": 26,
+          "KSR": 1,
+          "KSL": 2,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 12,
+          "DR": 1,
+          "SL": 7,
+          "RR": 6,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 22,
+      "name": "Electric Piano 2",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 9,
+          "SL": 2,
+          "RR": 2,
+          "TL": 15,
+          "KSR": 1,
+          "KSL": 3,
+          "MUL": 3,
+          "AM": 1,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 3,
+          "SL": 6,
+          "RR": 4,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 23,
+      "name": "Electric Trumpet",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 8,
+          "DR": 3,
+          "SL": 1,
+          "RR": 0,
+          "TL": 26,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 1,
+          "SL": 0,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 24,
+      "name": "Electron Organ",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 8,
+          "DR": 0,
+          "SL": 0,
+          "RR": 0,
+          "TL": 41,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 0,
+          "SL": 0,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 25,
+      "name": "Fantastic Piano",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 7,
+          "SL": 3,
+          "RR": 8,
+          "TL": 37,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 15,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 15,
+          "SL": 1,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 26,
+      "name": "Fireworks",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 1,
+          "DR": 1,
+          "SL": 0,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 4,
+          "DR": 1,
+          "SL": 0,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 27,
+      "name": "Flute",
+      "FB": 3,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 11,
+          "DR": 9,
+          "SL": 10,
+          "RR": 0,
+          "TL": 11,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 4,
+          "DR": 2,
+          "SL": 2,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 28,
+      "name": "Fork Guitar 1",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 19,
+          "KSR": 1,
+          "KSL": 2,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 10,
+          "DR": 4,
+          "SL": 8,
+          "RR": 4,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 29,
+      "name": "Fork Guitar 2",
+      "FB": 3,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 1,
+          "SL": 3,
+          "RR": 8,
+          "TL": 13,
+          "KSR": 1,
+          "KSL": 2,
+          "MUL": 5,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 9,
+          "DR": 5,
+          "SL": 10,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 30,
+      "name": "Funky Marimba",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 9,
+          "SL": 15,
+          "RR": 15,
+          "TL": 31,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 8,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 14,
+          "SL": 0,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 31,
+      "name": "Glass Celesta",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 11,
+          "DR": 11,
+          "SL": 9,
+          "RR": 1,
+          "TL": 10,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 15,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 13,
+          "DR": 2,
+          "SL": 11,
+          "RR": 1,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 2,
+          "AM": 1,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 32,
+      "name": "Glockenspiel",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 12,
+          "DR": 2,
+          "SL": 15,
+          "RR": 15,
+          "TL": 40,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 11,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 14,
+          "DR": 3,
+          "SL": 14,
+          "RR": 15,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 33,
+      "name": "Gurgle",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 2,
+          "DR": 0,
+          "SL": 0,
+          "RR": 5,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 1,
+          "VIB": 1,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 4,
+          "DR": 8,
+          "SL": 1,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 34,
+      "name": "Hand Bell",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 11,
+          "DR": 0,
+          "SL": 8,
+          "RR": 0,
+          "TL": 43,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 12,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 2,
+          "DR": 5,
+          "SL": 15,
+          "RR": 15,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 35,
+      "name": "Handsaw",
+      "FB": 6,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 1,
+          "SL": 1,
+          "RR": 0,
+          "TL": 32,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 10,
+          "SL": 1,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 36,
+      "name": "Harmonica",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 6,
+          "DR": 4,
+          "SL": 0,
+          "RR": 1,
+          "TL": 24,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 4,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 37,
+      "name": "Harp",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 41,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 15,
+          "DR": 15,
+          "SL": 0,
+          "RR": 4,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 38,
+      "name": "Harpsichord 1",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 1,
+          "RR": 0,
+          "TL": 12,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 5,
+          "SL": 10,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 39,
+      "name": "Harpsichord 2",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 1,
+          "RR": 0,
+          "TL": 8,
+          "KSR": 1,
+          "KSL": 2,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 5,
+          "SL": 10,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 40,
+      "name": "Harpsichord 3",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 1,
+          "RR": 0,
+          "TL": 1,
+          "KSR": 1,
+          "KSL": 2,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 9,
+          "DR": 5,
+          "SL": 10,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 41,
+      "name": "Hawaiian Guitar",
+      "FB": 6,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 1,
+          "SL": 4,
+          "RR": 2,
+          "TL": 35,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 10,
+          "DR": 4,
+          "SL": 3,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 42,
+      "name": "Honky-Tonk Piano 1",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 1,
+          "RR": 0,
+          "TL": 12,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 1,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 9,
+          "DR": 5,
+          "SL": 10,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 43,
+      "name": "Honky-Tonk Piano 2",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 10,
+          "SL": 2,
+          "RR": 2,
+          "TL": 5,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 5,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 10,
+          "DR": 4,
+          "SL": 9,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 44,
+      "name": "Horn",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 3,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 29,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 1,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 45,
+      "name": "Human Voice 1",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 7,
+          "DR": 7,
+          "SL": 9,
+          "RR": 3,
+          "TL": 16,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 1,
+          "VIB": 1,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 5,
+          "DR": 4,
+          "SL": 15,
+          "RR": 4,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 46,
+      "name": "Human Voice 2",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 0,
+          "SL": 0,
+          "RR": 0,
+          "TL": 23,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 1,
+          "VIB": 1,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 5,
+          "DR": 4,
+          "SL": 15,
+          "RR": 4,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 47,
+      "name": "Human Voice 3",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 5,
+          "SL": 3,
+          "RR": 0,
+          "TL": 27,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 6,
+          "SL": 2,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 48,
+      "name": "Ice Block",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 11,
+          "DR": 1,
+          "SL": 9,
+          "RR": 4,
+          "TL": 24,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 12,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 11,
+          "DR": 7,
+          "SL": 8,
+          "RR": 4,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 49,
+      "name": "Jamisen",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 3,
+          "SL": 10,
+          "RR": 4,
+          "TL": 25,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 4,
+          "SL": 11,
+          "RR": 9,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 50,
+      "name": "Jazz Guitar",
+      "FB": 6,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 1,
+          "SL": 7,
+          "RR": 0,
+          "TL": 35,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 10,
+          "DR": 4,
+          "SL": 8,
+          "RR": 4,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 51,
+      "name": "Jazz Organ",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 15,
+          "SL": 6,
+          "RR": 6,
+          "TL": 20,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 1,
+          "SL": 1,
+          "RR": 10,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 52,
+      "name": "Jug",
+      "FB": 3,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 12,
+          "DR": 7,
+          "SL": 13,
+          "RR": 2,
+          "TL": 15,
+          "KSR": 0,
+          "KSL": 3,
+          "MUL": 8,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 5,
+          "DR": 4,
+          "SL": 9,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 53,
+      "name": "Koto",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 11,
+          "SL": 4,
+          "RR": 0,
+          "TL": 3,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 11,
+          "DR": 6,
+          "SL": 13,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 54,
+      "name": "Leaf Spring",
+      "FB": 3,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 1,
+          "SL": 4,
+          "RR": 0,
+          "TL": 18,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 13,
+          "DR": 4,
+          "SL": 1,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 8,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 55,
+      "name": "Marimba",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 8,
+          "SL": 15,
+          "RR": 15,
+          "TL": 31,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 13,
+          "SL": 0,
+          "RR": 6,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 56,
+      "name": "Metallic Synth",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 8,
+          "DR": 5,
+          "SL": 7,
+          "RR": 1,
+          "TL": 11,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 7,
+          "SL": 0,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 57,
+      "name": "Music Box",
+      "FB": 3,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 12,
+          "SL": 5,
+          "RR": 2,
+          "TL": 15,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 9,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 11,
+          "DR": 6,
+          "SL": 2,
+          "RR": 5,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 58,
+      "name": "Mute Bass",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 8,
+          "SL": 3,
+          "RR": 4,
+          "TL": 12,
+          "KSR": 0,
+          "KSL": 2,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 11,
+          "DR": 5,
+          "SL": 9,
+          "RR": 14,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 59,
+      "name": "Mute Trumpet",
+      "FB": 6,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 7,
+          "DR": 7,
+          "SL": 2,
+          "RR": 1,
+          "TL": 28,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 1,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 60,
+      "name": "Oboe",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 0,
+          "RR": 0,
+          "TL": 22,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 1,
+          "SL": 1,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 61,
+      "name": "Panflute",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 14,
+          "SL": 13,
+          "RR": 8,
+          "TL": 32,
+          "KSR": 0,
+          "KSL": 2,
+          "MUL": 12,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 15,
+          "SL": 0,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 62,
+      "name": "Piano 1",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 13,
+          "SL": 0,
+          "RR": 0,
+          "TL": 19,
+          "KSR": 1,
+          "KSL": 3,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 2,
+          "SL": 9,
+          "RR": 1,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 63,
+      "name": "Piano 2",
+      "FB": 6,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 1,
+          "SL": 7,
+          "RR": 0,
+          "TL": 35,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 10,
+          "DR": 4,
+          "SL": 8,
+          "RR": 4,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 64,
+      "name": "Piccolo",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 6,
+          "DR": 15,
+          "SL": 1,
+          "RR": 9,
+          "TL": 48,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 15,
+          "SL": 0,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 65,
+      "name": "Picked Bass",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 12,
+          "DR": 4,
+          "SL": 3,
+          "RR": 0,
+          "TL": 20,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 12,
+          "DR": 2,
+          "SL": 8,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 66,
+      "name": "Pipe Organ 1",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 0,
+          "DR": 15,
+          "SL": 0,
+          "RR": 0,
+          "TL": 63,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 0,
+          "SL": 0,
+          "RR": 6,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 67,
+      "name": "Pipe Organ 2",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 2,
+          "SL": 0,
+          "RR": 0,
+          "TL": 44,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 2,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 68,
+      "name": "Popcorn",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 5,
+          "DR": 0,
+          "SL": 15,
+          "RR": 8,
+          "TL": 19,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 5,
+          "SL": 15,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 69,
+      "name": "Reed Organ",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 2,
+          "SL": 0,
+          "RR": 0,
+          "TL": 44,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 2,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 70,
+      "name": "Reverse",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 0,
+          "SL": 0,
+          "RR": 0,
+          "TL": 32,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 2,
+          "DR": 8,
+          "SL": 15,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 71,
+      "name": "Rock Guitar 1",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 1,
+          "SL": 6,
+          "RR": 0,
+          "TL": 15,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 1,
+          "SL": 4,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 72,
+      "name": "Rock Guitar 2",
+      "FB": 2,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 6,
+          "SL": 1,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 11,
+          "DR": 2,
+          "SL": 15,
+          "RR": 12,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 8,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 73,
+      "name": "Shamisen",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 10,
+          "SL": 7,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 15,
+          "DR": 6,
+          "SL": 13,
+          "RR": 5,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 74,
+      "name": "Sine Wave",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 0,
+          "DR": 15,
+          "SL": 15,
+          "RR": 15,
+          "TL": 63,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 0,
+          "SL": 0,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 75,
+      "name": "Slap Bass",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 9,
+          "SL": 4,
+          "RR": 1,
+          "TL": 6,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 4,
+          "SL": 5,
+          "RR": 1,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 76,
+      "name": "Small Church",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 3,
+          "DR": 7,
+          "SL": 6,
+          "RR": 0,
+          "TL": 57,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 10,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 12,
+          "DR": 1,
+          "SL": 0,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 77,
+      "name": "Soft Trombone",
+      "FB": 6,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 4,
+          "DR": 4,
+          "SL": 1,
+          "RR": 0,
+          "TL": 25,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 1,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 78,
+      "name": "Soprano Sax",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 8,
+          "DR": 10,
+          "SL": 1,
+          "RR": 0,
+          "TL": 5,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 7,
+          "DR": 0,
+          "SL": 13,
+          "RR": 9,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 79,
+      "name": "Steel Drum 1",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 6,
+          "DR": 6,
+          "SL": 9,
+          "RR": 0,
+          "TL": 8,
+          "KSR": 0,
+          "KSL": 3,
+          "MUL": 5,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 12,
+          "DR": 4,
+          "SL": 8,
+          "RR": 4,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 80,
+      "name": "Steel Drum 2",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 6,
+          "DR": 3,
+          "SL": 4,
+          "RR": 15,
+          "TL": 42,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 7,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 3,
+          "SL": 7,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 81,
+      "name": "Street Organ",
+      "FB": 2,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 5,
+          "DR": 2,
+          "SL": 13,
+          "RR": 1,
+          "TL": 30,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 1,
+          "SL": 14,
+          "RR": 15,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 82,
+      "name": "Strings",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 0,
+          "SL": 6,
+          "RR": 6,
+          "TL": 33,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 5,
+          "DR": 0,
+          "SL": 13,
+          "RR": 9,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 83,
+      "name": "Synth Bass",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 11,
+          "DR": 6,
+          "SL": 5,
+          "RR": 0,
+          "TL": 13,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 14,
+          "DR": 1,
+          "SL": 9,
+          "RR": 6,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 84,
+      "name": "Synth Brass",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 6,
+          "DR": 3,
+          "SL": 3,
+          "RR": 0,
+          "TL": 20,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 1,
+          "SL": 4,
+          "RR": 1,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 85,
+      "name": "Tenor Sax",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 7,
+          "DR": 6,
+          "SL": 0,
+          "RR": 0,
+          "TL": 8,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 12,
+          "DR": 1,
+          "SL": 2,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 86,
+      "name": "Toy Piano",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 13,
+          "SL": 8,
+          "RR": 2,
+          "TL": 12,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 15,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 10,
+          "DR": 5,
+          "SL": 10,
+          "RR": 1,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 87,
+      "name": "Transistor Organ",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 0,
+          "SL": 3,
+          "RR": 6,
+          "TL": 62,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 0,
+          "SL": 11,
+          "RR": 15,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 88,
+      "name": "Tremolo Organ",
+      "FB": 3,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 14,
+          "SL": 1,
+          "RR": 0,
+          "TL": 42,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 14,
+          "DR": 12,
+          "SL": 0,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 89,
+      "name": "Trombone",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 4,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 25,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 1,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 90,
+      "name": "Trumpet",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 28,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 1,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 91,
+      "name": "Tuba",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 4,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 23,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 2,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 92,
+      "name": "Ukulele",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 12,
+          "DR": 5,
+          "SL": 10,
+          "RR": 5,
+          "TL": 37,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 13,
+          "DR": 7,
+          "SL": 0,
+          "RR": 5,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 93,
+      "name": "Vibraphone",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 10,
+          "SL": 2,
+          "RR": 2,
+          "TL": 36,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 7,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 10,
+          "SL": 1,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 94,
+      "name": "Violin 1",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 0,
+          "SL": 4,
+          "RR": 0,
+          "TL": 28,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 6,
+          "DR": 0,
+          "SL": 13,
+          "RR": 9,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 95,
+      "name": "Violin 2",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 11,
+          "SL": 4,
+          "RR": 0,
+          "TL": 4,
+          "KSR": 0,
+          "KSL": 3,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 0,
+          "SL": 13,
+          "RR": 9,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 96,
+      "name": "Whistle",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 14,
+          "SL": 15,
+          "RR": 8,
+          "TL": 32,
+          "KSR": 0,
+          "KSL": 2,
+          "MUL": 6,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 15,
+          "SL": 0,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 97,
+      "name": "Wide Bell",
+      "FB": 2,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 0,
+          "DR": 12,
+          "SL": 7,
+          "RR": 4,
+          "TL": 63,
+          "KSR": 0,
+          "KSL": 3,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 1,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 1,
+          "DR": 6,
+          "SL": 15,
+          "RR": 12,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 98,
+      "name": "Wood Bass 1",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 8,
+          "DR": 3,
+          "SL": 5,
+          "RR": 2,
+          "TL": 15,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 1,
+          "SL": 7,
+          "RR": 1,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 99,
+      "name": "Wood Bass 2",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 1,
+          "SL": 4,
+          "RR": 3,
+          "TL": 20,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 1,
+          "SL": 7,
+          "RR": 1,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 100,
+      "name": "Synthesizer",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 1,
+          "SL": 2,
+          "RR": 0,
+          "TL": 24,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 15,
+          "SL": 0,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 101,
+      "name": "Jazz Organ",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 15,
+          "SL": 6,
+          "RR": 6,
+          "TL": 20,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 1,
+          "SL": 1,
+          "RR": 10,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 102,
+      "name": "Pipe Organ",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 2,
+          "SL": 0,
+          "RR": 0,
+          "TL": 45,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 2,
+          "SL": 0,
+          "RR": 6,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 103,
+      "name": "Piano",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 2,
+          "SL": 1,
+          "RR": 1,
+          "TL": 37,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 12,
+          "DR": 4,
+          "SL": 2,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 104,
+      "name": "Harpsichord",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 15,
+          "SL": 0,
+          "RR": 0,
+          "TL": 3,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 10,
+          "DR": 10,
+          "SL": 2,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 105,
+      "name": "Electric Piano",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 7,
+          "SL": 3,
+          "RR": 8,
+          "TL": 37,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 15,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 15,
+          "SL": 1,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 106,
+      "name": "Celesta",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 17,
+          "KSR": 1,
+          "KSL": 2,
+          "MUL": 5,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 12,
+          "SL": 2,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 107,
+      "name": "Vibraphone",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 10,
+          "SL": 2,
+          "RR": 2,
+          "TL": 36,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 7,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 10,
+          "SL": 1,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 1,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 108,
+      "name": "Marimba",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 12,
+          "DR": 12,
+          "SL": 7,
+          "RR": 9,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 12,
+          "DR": 14,
+          "SL": 0,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 109,
+      "name": "Steel Drum",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 12,
+          "SL": 5,
+          "RR": 3,
+          "TL": 10,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 14,
+          "SL": 0,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 110,
+      "name": "Violin",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 0,
+          "SL": 0,
+          "RR": 0,
+          "TL": 26,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 5,
+          "DR": 0,
+          "SL": 0,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 111,
+      "name": "Cello",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 0,
+          "SL": 4,
+          "RR": 0,
+          "TL": 23,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 5,
+          "DR": 15,
+          "SL": 0,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 112,
+      "name": "Jazz Guitar",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 30,
+          "KSR": 1,
+          "KSL": 2,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 12,
+          "SL": 2,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 113,
+      "name": "Rock Guitar",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 1,
+          "SL": 6,
+          "RR": 0,
+          "TL": 15,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 1,
+          "SL": 4,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 114,
+      "name": "Wood Bass",
+      "FB": 4,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 20,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 15,
+          "DR": 12,
+          "SL": 2,
+          "RR": 3,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 115,
+      "name": "Trumpet",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 23,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 1,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 116,
+      "name": "Trombone",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 4,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 25,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 8,
+          "DR": 1,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 117,
+      "name": "Horn",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 3,
+          "DR": 2,
+          "SL": 1,
+          "RR": 0,
+          "TL": 29,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 1,
+          "SL": 0,
+          "RR": 7,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 118,
+      "name": "Saxophone",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 12,
+          "DR": 0,
+          "SL": 0,
+          "RR": 0,
+          "TL": 23,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 0,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 9,
+          "DR": 1,
+          "SL": 0,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 119,
+      "name": "Clarinet",
+      "FB": 6,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 0,
+          "RR": 0,
+          "TL": 30,
+          "KSR": 1,
+          "KSL": 1,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 6,
+          "SL": 2,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 120,
+      "name": "Flute",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 8,
+          "SL": 7,
+          "RR": 0,
+          "TL": 14,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 4,
+          "SL": 2,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 121,
+      "name": "Oboe",
+      "FB": 5,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 0,
+          "SL": 0,
+          "RR": 0,
+          "TL": 22,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 7,
+          "DR": 1,
+          "SL": 1,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 2,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 122,
+      "name": "Harmonica",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 9,
+          "DR": 0,
+          "SL": 0,
+          "RR": 3,
+          "TL": 21,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 3,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 0,
+          "SL": 0,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 1
+        }
+      ]
+    },
+    {
+      "prog": 123,
+      "name": "Whistle",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 14,
+          "DR": 14,
+          "SL": 15,
+          "RR": 8,
+          "TL": 32,
+          "KSR": 0,
+          "KSL": 2,
+          "MUL": 6,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        },
+        {
+          "AR": 6,
+          "DR": 15,
+          "SL": 0,
+          "RR": 8,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 1,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 1,
+          "WS": 0
+        }
+      ]
+    },
+    {
+      "prog": 124,
+      "name": "Music Box",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 14,
+          "SL": 12,
+          "RR": 11,
+          "TL": 63,
+          "KSR": 1,
+          "KSL": 0,
+          "MUL": 15,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 15,
+          "DR": 13,
+          "SL": 6,
+          "RR": 2,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 4,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ]
+    }
+  ]
+}
