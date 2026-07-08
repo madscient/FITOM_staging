@@ -102,11 +102,7 @@ def convert(src_path, dst_path, bank_no=0, group="OPN"):
         name = GM_NAMES[prog] if prog < len(GM_NAMES) else f"Program {prog}"
 
         # FITOM_X HwPatch JSON形式
-        # ops[] の順番: M1, M2, C1, C2 (OPNレジスタ順: 30h系はM1,M2,C1,C2)
-        # ただしFITOM_X の FmHwOp[4] の並びを確認
-        # VoiceData.h: hwOp[0]=op1, [1]=op2, [2]=op3, [3]=op4
-        # OPNレジスタ: op=0→M1(+0), op=1→M2(+8), op=2→C1(+4), op=3→C2(+12)
-        # → [0]=M1, [1]=M2, [2]=C1, [3]=C2 の順で格納
+        # FITOM_X ops[] 格納順: [M1, C1, M2, C2]
         patches.append({
             "prog": prog,
             "name": name,
@@ -118,8 +114,8 @@ def convert(src_path, dst_path, bank_no=0, group="OPN"):
             },
             "ops": [
                 op_m1,  # op[0] = M1
-                op_m2,  # op[1] = M2
-                op_c1,  # op[2] = C1
+                op_c1,  # op[1] = C1
+                op_m2,  # op[2] = M2
                 op_c2,  # op[3] = C2
             ]
         })

@@ -210,3 +210,17 @@ python3 opl2_merge.py \\
 (`core/src/OPL_new.cpp` の COPL3 実装に完全準拠)。
 
 `midi_note` 等のドラム固有フィールドは Bank-A から自動的に引き継がれます。
+
+## n88basic_convert.py
+
+N88-BASIC(86) OPN音色テキストファイル群を hwbank.json に変換する。
+
+```
+python3 n88basic_convert.py <src_dir> <dst.hwbank.json> [--names names.txt] [--bank-name "バンク名"]
+```
+
+- `src_dir`: 音色ファイルが入ったディレクトリ（ファイル名=16進2桁のprog番号）
+- `--names`: パッチ名一覧テキスト（1行1名、ファイル数と一致する必要あり）
+- `--bank-name`: バンク名（省略時: "N88-BASIC Preset"）
+
+参考フォーマット: https://madscient.hatenablog.jp/entry/2013/07/08/051133
