@@ -32,8 +32,13 @@
         "group": "OPM"
       },
       {
-        "bank": 0,
+        "bank": 5,
         "file": "banks/OPZ/tx81z/tx81z_1.hwbank.json",
+        "group": "OPM"
+      },
+      {
+        "bank": 4,
+        "file": "banks/OPM/dx11/dx11.hwbank.json",
         "group": "OPM"
       }
     ],
@@ -53,6 +58,10 @@
       {
         "bank": 3,
         "file": "banks/sw/dx100_2.swbank.json"
+      },
+      {
+        "bank": 4,
+        "file": "banks/sw/dx11.swbank.json"
       }
     ],
     "patch_banks": [],
