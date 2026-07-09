@@ -20,40 +20,57 @@
       {
         "bank": 0,
         "file": "banks/OPM/dx27_dx100/dx21.hwbank.json",
-        "voice_patch_type": "OPZ2"
+        "group": "OPM"
       },
       {
         "bank": 1,
         "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json",
-        "voice_patch_type": "OPZ2"
+        "group": "OPM"
       },
       {
         "bank": 2,
         "file": "banks/OPM/dx27_dx100/dx100_2.hwbank.json",
-        "voice_patch_type": "OPZ2"
+        "group": "OPM"
       },
       {
         "bank": 3,
         "file": "banks/OPM/fb01/fb01.hwbank.json",
-        "voice_patch_type": "OPZ2"
+        "group": "OPM"
       },
       {
         "bank": 0,
         "file": "banks/OPN/gm/necopn_gm.hwbank.json",
-        "voice_patch_type": "OPN2"
+        "group": "OPN"
       },
       {
         "bank": 0,
         "file": "banks/OPL3/alsa/std_opl3.hwbank.json",
-        "voice_patch_type": "OPL3"
+        "group": "OPL3"
       },
       {
         "bank": 1,
         "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json",
-        "voice_patch_type": "OPL3"
+        "group": "OPL3"
       }
     ],
-    "sw_banks": [],
+    "sw_banks": [
+      {
+        "bank": 0,
+        "file": "banks/sw/performance_presets.swbank.json"
+      },
+      {
+        "bank": 1,
+        "file": "banks/sw/dx21.swbank.json"
+      },
+      {
+        "bank": 2,
+        "file": "banks/sw/dx100_1.swbank.json"
+      },
+      {
+        "bank": 3,
+        "file": "banks/sw/dx100_2.swbank.json"
+      }
+    ],
     "patch_banks": [],
     "drum_banks": []
   }

@@ -14,20 +14,25 @@
       {
         "bank": 0,
         "file": "banks/OPL3/alsa/std_opl3.hwbank.json",
-        "voice_patch_type": "OPL3"
+        "group": "OPL3"
       },
       {
         "bank": 1,
         "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json",
-        "voice_patch_type": "OPL3"
+        "group": "OPL3"
       },
       {
         "bank": 0,
         "file": "banks/OPL2/alsa/std_opl2.hwbank.json",
-        "voice_patch_type": "OPL3_2"
+        "group": "OPL2"
       }
     ],
-    "sw_banks": [],
+    "sw_banks": [
+      {
+        "bank": 0,
+        "file": "banks/sw/performance_presets.swbank.json"
+      }
+    ],
     "patch_banks": [],
     "drum_banks": []
   }
