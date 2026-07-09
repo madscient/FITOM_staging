@@ -1,11 +1,4 @@
 {
-  "_comment": [
-    "OPN/OPN2/OPNA/OPNB/OPNBB 5チップ同時使用構成。FitomEmuIF 経由。",
-    "チップ構成・クロック・オーディオ設定は fmemuif_opn_profile.json で管理する。",
-    "hw_plugins[].profile のパスは FITOM_X 実行ファイルからの相対パスで解決される。",
-    "fmemuif_opn_profile.json を FITOM_staging ルートに置くか、",
-    "FMHWIF_PROFILE 環境変数でフルパスを指定すること。"
-  ],
   "profile_name": "エミュレーター OPN ファミリー (OPN/OPN2/OPNA/OPNB/OPNBB) - FitomEmuIF経由",
   "hw_plugins": [
     {
@@ -23,13 +16,13 @@
       {
         "bank": 0,
         "file": "banks/OPN/gm/necopn_gm.hwbank.json",
-        "voice_patch_type": "OPN2"
+        "group": "OPN"
       }
     ],
     "sw_banks": [
       {
         "bank": 0,
-        "file": "banks/sw/necopn_gm.swbank.json"
+        "file": "banks/sw/performance_presets.swbank.json"
       }
     ],
     "patch_banks": [
