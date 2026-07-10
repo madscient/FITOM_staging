@@ -22,8 +22,13 @@
         "group": "OPL3"
       },
       {
-        "bank": 0,
+        "bank": 1,
         "file": "banks/OPL2/alsa/std_opl2.hwbank.json",
+        "group": "OPL2"
+      },
+      {
+        "bank": 0,
+        "file": "banks/OPL2/rhythm/opll_rhythm.hwbank.json",
         "group": "OPL2"
       }
     ],
@@ -33,7 +38,18 @@
         "file": "banks/sw/performance_presets.swbank.json"
       }
     ],
-    "patch_banks": [],
-    "drum_banks": []
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "banks/patches/opll_rhythm.patchbank.json"
+      }
+    ],
+    "drum_banks": [
+      {
+        "prog": 0,
+        "name": "OPLL Rhythm (GM2 mapped)",
+        "file": "banks/drums/opll_rhythm.drumkit.json"
+      }
+    ]
   }
 }
