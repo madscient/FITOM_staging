@@ -46,6 +46,16 @@
         "bank": 1,
         "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json",
         "group": "OPL3"
+      },
+      {
+        "bank": 4,
+        "file": "banks/OPM/dx11/dx11.hwbank.json",
+        "group": "OPM"
+      },
+      {
+        "bank": 0,
+        "file": "banks/OPL2/rhythm/opll_rhythm.hwbank.json",
+        "group": "OPL2"
       }
     ],
     "sw_banks": [
@@ -64,9 +74,24 @@
       {
         "bank": 3,
         "file": "banks/sw/dx100_2.swbank.json"
+      },
+      {
+        "bank": 4,
+        "file": "banks/sw/dx11.swbank.json"
       }
     ],
-    "patch_banks": [],
-    "drum_banks": []
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "banks/patches/opll_rhythm.patchbank.json"
+      }
+    ],
+    "drum_banks": [
+      {
+        "prog": 0,
+        "name": "OPLL Rhythm (GM2 mapped)",
+        "file": "banks/drums/opll_rhythm.drumkit.json"
+      }
+    ]
   }
 }

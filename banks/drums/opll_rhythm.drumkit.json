@@ -1,0 +1,215 @@
+{
+  "type": "routed",
+  "name": "OPLL Rhythm (GM2 mapped)",
+  "notes": [
+    {
+      "note": 35,
+      "name": "Acoustic Bass Drum",
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 35,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 36,
+      "name": "Bass Drum 1",
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 36,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 38,
+      "name": "Acoustic Snare",
+      "patch_bank": 0,
+      "patch_prog": 2,
+      "play_note": 38,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 40,
+      "name": "Electric Snare",
+      "patch_bank": 0,
+      "patch_prog": 2,
+      "play_note": 40,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 42,
+      "name": "Closed Hi-Hat",
+      "patch_bank": 0,
+      "patch_prog": 1,
+      "play_note": 42,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": 20,
+      "gate_time": 10
+    },
+    {
+      "note": 44,
+      "name": "Pedal Hi-Hat",
+      "patch_bank": 0,
+      "patch_prog": 1,
+      "play_note": 44,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": 20,
+      "gate_time": 10
+    },
+    {
+      "note": 46,
+      "name": "Open Hi-Hat",
+      "patch_bank": 0,
+      "patch_prog": 1,
+      "play_note": 46,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": 20,
+      "gate_time": 10
+    },
+    {
+      "note": 41,
+      "name": "Low Floor Tom",
+      "patch_bank": 0,
+      "patch_prog": 3,
+      "play_note": 41,
+      "fine_tune": -300,
+      "fixed_ch": -1,
+      "pan": -15,
+      "gate_time": 0
+    },
+    {
+      "note": 43,
+      "name": "High Floor Tom",
+      "patch_bank": 0,
+      "patch_prog": 3,
+      "play_note": 43,
+      "fine_tune": -150,
+      "fixed_ch": -1,
+      "pan": -15,
+      "gate_time": 0
+    },
+    {
+      "note": 45,
+      "name": "Low Tom",
+      "patch_bank": 0,
+      "patch_prog": 3,
+      "play_note": 45,
+      "fine_tune": -100,
+      "fixed_ch": -1,
+      "pan": -10,
+      "gate_time": 0
+    },
+    {
+      "note": 47,
+      "name": "Low-Mid Tom",
+      "patch_bank": 0,
+      "patch_prog": 3,
+      "play_note": 47,
+      "fine_tune": -50,
+      "fixed_ch": -1,
+      "pan": -5,
+      "gate_time": 0
+    },
+    {
+      "note": 48,
+      "name": "Hi-Mid Tom",
+      "patch_bank": 0,
+      "patch_prog": 3,
+      "play_note": 48,
+      "fine_tune": 50,
+      "fixed_ch": -1,
+      "pan": 5,
+      "gate_time": 0
+    },
+    {
+      "note": 50,
+      "name": "High Tom",
+      "patch_bank": 0,
+      "patch_prog": 3,
+      "play_note": 50,
+      "fine_tune": 150,
+      "fixed_ch": -1,
+      "pan": 10,
+      "gate_time": 0
+    },
+    {
+      "note": 49,
+      "name": "Crash Cymbal 1",
+      "patch_bank": 0,
+      "patch_prog": 4,
+      "play_note": 49,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": -20,
+      "gate_time": 0
+    },
+    {
+      "note": 51,
+      "name": "Ride Cymbal 1",
+      "patch_bank": 0,
+      "patch_prog": 4,
+      "play_note": 51,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": 15,
+      "gate_time": 0
+    },
+    {
+      "note": 52,
+      "name": "Chinese Cymbal",
+      "patch_bank": 0,
+      "patch_prog": 4,
+      "play_note": 52,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": -25,
+      "gate_time": 0
+    },
+    {
+      "note": 55,
+      "name": "Splash Cymbal",
+      "patch_bank": 0,
+      "patch_prog": 4,
+      "play_note": 55,
+      "fine_tune": 200,
+      "fixed_ch": -1,
+      "pan": -15,
+      "gate_time": 0
+    },
+    {
+      "note": 57,
+      "name": "Crash Cymbal 2",
+      "patch_bank": 0,
+      "patch_prog": 4,
+      "play_note": 57,
+      "fine_tune": 100,
+      "fixed_ch": -1,
+      "pan": 20,
+      "gate_time": 0
+    },
+    {
+      "note": 59,
+      "name": "Ride Cymbal 2",
+      "patch_bank": 0,
+      "patch_prog": 4,
+      "play_note": 59,
+      "fine_tune": 0,
+      "fixed_ch": -1,
+      "pan": 15,
+      "gate_time": 0
+    }
+  ]
+}

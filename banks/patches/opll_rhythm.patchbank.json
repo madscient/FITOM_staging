@@ -1,0 +1,87 @@
+{
+  "name": "OPLL Rhythm Patches",
+  "bank": 0,
+  "note": "opll_rhythm.hwbank.json (voice_patch_type=OPL_RHY) の5楽器を各1レイヤーのPatchとして参照。drumkitからのルーティング用。",
+  "patches": [
+    {
+      "prog": 0,
+      "name": "Bass Drum",
+      "poly": 1,
+      "layers": [
+        {
+          "voice_patch_type": 35,
+          "hw_bank": 0,
+          "hw_prog": 0,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 1,
+      "name": "Hi-Hat",
+      "poly": 1,
+      "layers": [
+        {
+          "voice_patch_type": 35,
+          "hw_bank": 0,
+          "hw_prog": 1,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 2,
+      "name": "Snare Drum",
+      "poly": 1,
+      "layers": [
+        {
+          "voice_patch_type": 35,
+          "hw_bank": 0,
+          "hw_prog": 2,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 3,
+      "name": "Tom-tom",
+      "poly": 1,
+      "layers": [
+        {
+          "voice_patch_type": 35,
+          "hw_bank": 0,
+          "hw_prog": 3,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 4,
+      "name": "Top Cymbal",
+      "poly": 1,
+      "layers": [
+        {
+          "voice_patch_type": 35,
+          "hw_bank": 0,
+          "hw_prog": 4,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}
