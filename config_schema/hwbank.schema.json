@@ -13,19 +13,6 @@
       "type": "string",
       "description": "バンク表示名"
     },
-    "chip_group": {
-      "type": "string",
-      "enum": [
-        "OPM",
-        "OPN",
-        "OPL2",
-        "OPL3",
-        "OPLL",
-        "PSG",
-        "PCM"
-      ],
-      "description": "対象チップ族。ロード時の VoiceGroup 解決に使用。"
-    },
     "patches": {
       "type": "array",
       "items": {
@@ -153,8 +140,8 @@
                 "WS": {
                   "type": "integer",
                   "minimum": 0,
-                  "maximum": 7,
-                  "description": "Wave Select (OPL/OPZ)"
+                  "maximum": 127,
+                  "description": "Wave Select。チップにより意味・実際の値域が異なる(型は共通の7bit幅、2026年7月にmaximumを7→127へ拡大): OPL2=2bit(0-3)、OPL3/OPZ=3bit(0-7)、OPM=0固定、SCC/SCC+=7bit(0-127、波形メモリへの直接インデックス)、AY8930(EPSG)=4bit(0-15、デューティ比として転用、波形メモリとは無関係)。"
                 },
                 "FXV": {
                   "type": "integer",
@@ -205,6 +192,12 @@
                 "minimum": 0,
                 "maximum": 65535,
                 "description": "AY-3-8910/YM2149 HW Envelope Period (レジスタ0x0B Fine + 0x0C Coarse の16bit値、分割不可の単一パラメータ)。HW EG (EGT bit3) 使用時のみ有効。"
+              },
+              "target_voice_patch_type": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 255,
+                "description": "PSG系共有バンク(voice_patch_type=0x40固定でロードされるバンク)専用。このパッチが実際に対象とするVoicePatchTypeの値(0x40=SSG/0x41=EPSG/0x42=DCSG/0x43=SAA/0x48=SCC)を指定する。0(デフォルト)=未設定、プロファイルのpsg_fallback_chipで指定されたチップにフォールバックする。PSG系以外のチップでは無視される。"
               }
             }
           },
@@ -235,7 +228,6 @@
   "examples": [
     {
       "name": "OPM Strings",
-      "chip_group": "OPM",
       "patches": [
         {
           "prog": 0,
