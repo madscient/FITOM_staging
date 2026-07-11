@@ -1,0 +1,449 @@
+{
+  "boundary": 256,
+  "codec": "adpcm-a",
+  "entries": [
+    {
+      "end_hex": "0x0002FF",
+      "name": "PSS_680_bass",
+      "offset": 0,
+      "offset_hex": "0x000000",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 672
+    },
+    {
+      "end_hex": "0x0008FF",
+      "name": "PSS_680_snare",
+      "offset": 768,
+      "offset_hex": "0x000300",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1376
+    },
+    {
+      "end_hex": "0x000DFF",
+      "name": "PSS_680_snare2",
+      "offset": 2304,
+      "offset_hex": "0x000900",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1248
+    },
+    {
+      "end_hex": "0x001CFF",
+      "name": "PSS_680_lotom",
+      "offset": 3584,
+      "offset_hex": "0x000E00",
+      "padded_size": 3840,
+      "root_note": 69,
+      "size": 3648
+    },
+    {
+      "end_hex": "0x002BFF",
+      "name": "PSS_680_midtom",
+      "offset": 7424,
+      "offset_hex": "0x001D00",
+      "padded_size": 3840,
+      "root_note": 69,
+      "size": 3648
+    },
+    {
+      "end_hex": "0x0037FF",
+      "name": "PSS_680_hitom",
+      "offset": 11264,
+      "offset_hex": "0x002C00",
+      "padded_size": 3072,
+      "root_note": 69,
+      "size": 3072
+    },
+    {
+      "end_hex": "0x0046FF",
+      "name": "PSS_680_lotom2",
+      "offset": 14336,
+      "offset_hex": "0x003800",
+      "padded_size": 3840,
+      "root_note": 69,
+      "size": 3808
+    },
+    {
+      "end_hex": "0x0055FF",
+      "name": "PSS_680_midtom2",
+      "offset": 18176,
+      "offset_hex": "0x004700",
+      "padded_size": 3840,
+      "root_note": 69,
+      "size": 3840
+    },
+    {
+      "end_hex": "0x0065FF",
+      "name": "PSS_680_hitom2",
+      "offset": 22016,
+      "offset_hex": "0x005600",
+      "padded_size": 4096,
+      "root_note": 69,
+      "size": 3936
+    },
+    {
+      "end_hex": "0x006AFF",
+      "name": "PSS_680_closehh",
+      "offset": 26112,
+      "offset_hex": "0x006600",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1120
+    },
+    {
+      "end_hex": "0x007AFF",
+      "name": "PSS_680_openhh",
+      "offset": 27392,
+      "offset_hex": "0x006B00",
+      "padded_size": 4096,
+      "root_note": 69,
+      "size": 3904
+    },
+    {
+      "end_hex": "0x009AFF",
+      "name": "PSS_680_ride",
+      "offset": 31488,
+      "offset_hex": "0x007B00",
+      "padded_size": 8192,
+      "root_note": 69,
+      "size": 8128
+    },
+    {
+      "end_hex": "0x00BFFF",
+      "name": "PSS_680_crash",
+      "offset": 39680,
+      "offset_hex": "0x009B00",
+      "padded_size": 9472,
+      "root_note": 69,
+      "size": 9376
+    },
+    {
+      "end_hex": "0x00DBFF",
+      "name": "PSS_680_splash",
+      "offset": 49152,
+      "offset_hex": "0x00C000",
+      "padded_size": 7168,
+      "root_note": 69,
+      "size": 7008
+    },
+    {
+      "end_hex": "0x00E7FF",
+      "name": "PSS_680_brush",
+      "offset": 56320,
+      "offset_hex": "0x00DC00",
+      "padded_size": 3072,
+      "root_note": 69,
+      "size": 3072
+    },
+    {
+      "end_hex": "0x00EDFF",
+      "name": "PSS_680_brush_hit",
+      "offset": 59392,
+      "offset_hex": "0x00E800",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1504
+    },
+    {
+      "end_hex": "0x00F0FF",
+      "name": "PSS_680_rimshot",
+      "offset": 60928,
+      "offset_hex": "0x00EE00",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 672
+    },
+    {
+      "end_hex": "0x00F6FF",
+      "name": "PSS_680_lobongo",
+      "offset": 61696,
+      "offset_hex": "0x00F100",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1376
+    },
+    {
+      "end_hex": "0x00FCFF",
+      "name": "PSS_680_hibongo",
+      "offset": 63232,
+      "offset_hex": "0x00F700",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1408
+    },
+    {
+      "end_hex": "0x0103FF",
+      "name": "PSS_680_loagogo",
+      "offset": 64768,
+      "offset_hex": "0x00FD00",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1568
+    },
+    {
+      "end_hex": "0x0108FF",
+      "name": "PSS_680_hiagogo",
+      "offset": 66560,
+      "offset_hex": "0x010400",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1216
+    },
+    {
+      "end_hex": "0x0110FF",
+      "name": "PSS_680_lotimbaless",
+      "offset": 67840,
+      "offset_hex": "0x010900",
+      "padded_size": 2048,
+      "root_note": 69,
+      "size": 1984
+    },
+    {
+      "end_hex": "0x0115FF",
+      "name": "PSS_680_hitimbaless",
+      "offset": 69888,
+      "offset_hex": "0x011100",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1184
+    },
+    {
+      "end_hex": "0x0121FF",
+      "name": "PSS_680_loconga",
+      "offset": 71168,
+      "offset_hex": "0x011600",
+      "padded_size": 3072,
+      "root_note": 69,
+      "size": 2848
+    },
+    {
+      "end_hex": "0x012AFF",
+      "name": "PSS_680_hiconga",
+      "offset": 74240,
+      "offset_hex": "0x012200",
+      "padded_size": 2304,
+      "root_note": 69,
+      "size": 2176
+    },
+    {
+      "end_hex": "0x0131FF",
+      "name": "PSS_680_locuica",
+      "offset": 76544,
+      "offset_hex": "0x012B00",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1696
+    },
+    {
+      "end_hex": "0x0138FF",
+      "name": "PSS_680_hicuica",
+      "offset": 78336,
+      "offset_hex": "0x013200",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1568
+    },
+    {
+      "end_hex": "0x013AFF",
+      "name": "PSS_680_cavasa",
+      "offset": 80128,
+      "offset_hex": "0x013900",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 448
+    },
+    {
+      "end_hex": "0x013EFF",
+      "name": "PSS_680_cowbell",
+      "offset": 80640,
+      "offset_hex": "0x013B00",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 800
+    },
+    {
+      "end_hex": "0x0142FF",
+      "name": "PSS_680_handclap",
+      "offset": 81664,
+      "offset_hex": "0x013F00",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 1024
+    },
+    {
+      "end_hex": "0x014FFF",
+      "name": "PSS_680_whistle",
+      "offset": 82688,
+      "offset_hex": "0x014300",
+      "padded_size": 3328,
+      "root_note": 69,
+      "size": 3168
+    },
+    {
+      "end_hex": "0x0155FF",
+      "name": "PSR_38_bass",
+      "offset": 86016,
+      "offset_hex": "0x015000",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1472
+    },
+    {
+      "end_hex": "0x015AFF",
+      "name": "PSR_38_snare1",
+      "offset": 87552,
+      "offset_hex": "0x015600",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1216
+    },
+    {
+      "end_hex": "0x015EFF",
+      "name": "PSR_38_snare2",
+      "offset": 88832,
+      "offset_hex": "0x015B00",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 992
+    },
+    {
+      "end_hex": "0x0160FF",
+      "name": "PSR_38_closehh",
+      "offset": 89856,
+      "offset_hex": "0x015F00",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 480
+    },
+    {
+      "end_hex": "0x016FFF",
+      "name": "PSR_38_openhh",
+      "offset": 90368,
+      "offset_hex": "0x016100",
+      "padded_size": 3840,
+      "root_note": 69,
+      "size": 3744
+    },
+    {
+      "end_hex": "0x01A6FF",
+      "name": "PSR_38_ride",
+      "offset": 94208,
+      "offset_hex": "0x017000",
+      "padded_size": 14080,
+      "root_note": 69,
+      "size": 14080
+    },
+    {
+      "end_hex": "0x01DBFF",
+      "name": "PSR_38_crash",
+      "offset": 108288,
+      "offset_hex": "0x01A700",
+      "padded_size": 13568,
+      "root_note": 69,
+      "size": 13472
+    },
+    {
+      "end_hex": "0x01DDFF",
+      "name": "PSR_38_woodblk",
+      "offset": 121856,
+      "offset_hex": "0x01DC00",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 480
+    },
+    {
+      "end_hex": "0x01E0FF",
+      "name": "PSR_38_rimshot",
+      "offset": 122368,
+      "offset_hex": "0x01DE00",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 704
+    },
+    {
+      "end_hex": "0x020EFF",
+      "name": "PSR_38_lotom",
+      "offset": 123136,
+      "offset_hex": "0x01E100",
+      "padded_size": 11776,
+      "root_note": 69,
+      "size": 11712
+    },
+    {
+      "end_hex": "0x023BFF",
+      "name": "PSR_38_hitom",
+      "offset": 134912,
+      "offset_hex": "0x020F00",
+      "padded_size": 11520,
+      "root_note": 69,
+      "size": 11328
+    },
+    {
+      "end_hex": "0x024FFF",
+      "name": "PSR_38_loconga",
+      "offset": 146432,
+      "offset_hex": "0x023C00",
+      "padded_size": 5120,
+      "root_note": 69,
+      "size": 4928
+    },
+    {
+      "end_hex": "0x0255FF",
+      "name": "PSR_38_hiconga",
+      "offset": 151552,
+      "offset_hex": "0x025000",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1312
+    },
+    {
+      "end_hex": "0x025EFF",
+      "name": "PSR_38_loagogo",
+      "offset": 153088,
+      "offset_hex": "0x025600",
+      "padded_size": 2304,
+      "root_note": 69,
+      "size": 2272
+    },
+    {
+      "end_hex": "0x0266FF",
+      "name": "PSR_38_hiagogo",
+      "offset": 155392,
+      "offset_hex": "0x025F00",
+      "padded_size": 2048,
+      "root_note": 69,
+      "size": 1824
+    },
+    {
+      "end_hex": "0x0269FF",
+      "name": "PSR_38_handclap",
+      "offset": 157440,
+      "offset_hex": "0x026700",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 768
+    },
+    {
+      "end_hex": "0x029BFF",
+      "name": "PSR_38_timpani",
+      "offset": 158208,
+      "offset_hex": "0x026A00",
+      "padded_size": 12800,
+      "root_note": 69,
+      "size": 12640
+    },
+    {
+      "end_hex": "0x02B6FF",
+      "name": "PSR_38_ochehit",
+      "offset": 171008,
+      "offset_hex": "0x029C00",
+      "padded_size": 6912,
+      "root_note": 69,
+      "size": 6752
+    }
+  ],
+  "sample_rate": 18518,
+  "total_size": 177920
+}

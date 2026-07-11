@@ -1,19 +1,18 @@
 {
-  "name": "std",
+  "name": "ALSA std (OPL2)",
   "voice_patch_type": "OPL3_2",
   "op_count": 2,
   "source": "std.sb (ALSA sbiload format)",
+  "note": "ALSA sbiload .sb形式 2OP melody バンク。実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに正しく変換(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=0)。ops[i].EGTフィールド自体はOPL系では無関係のため常に0。未使用エントリ(マジック0x00000000)は出力から除外。",
   "patches": [
     {
       "prog": 0,
       "name": "AcouGrandPiano",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -23,11 +22,12 @@
           "AR": 12,
           "DR": 3,
           "SL": 2,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 2
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -37,22 +37,22 @@
           "AR": 9,
           "DR": 2,
           "SL": 6,
-          "RR": 2,
+          "SR": 4,
+          "RR": 0,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 1,
       "name": "BrightAcouGrand",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -62,11 +62,12 @@
           "AR": 15,
           "DR": 3,
           "SL": 15,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -76,22 +77,22 @@
           "AR": 15,
           "DR": 3,
           "SL": 15,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 2,
       "name": "ElecGrandPiano",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -101,11 +102,12 @@
           "AR": 15,
           "DR": 11,
           "SL": 15,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -115,22 +117,22 @@
           "AR": 15,
           "DR": 5,
           "SL": 15,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 3,
       "name": "Honky-tonkPiano",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -140,11 +142,12 @@
           "AR": 15,
           "DR": 3,
           "SL": 15,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -154,24 +157,24 @@
           "AR": 15,
           "DR": 2,
           "SL": 15,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 4,
       "name": "Rhodes Piano",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 5,
+          "MUL": 5,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 3,
@@ -179,11 +182,12 @@
           "AR": 9,
           "DR": 4,
           "SL": 9,
+          "SR": 0,
           "RR": 1,
           "WS": 2
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -193,22 +197,22 @@
           "AR": 9,
           "DR": 2,
           "SL": 6,
-          "RR": 2,
+          "SR": 4,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 5,
       "name": "Chorused Piano",
-      "hw": {
-        "ALG": 1,
-        "FB": 3
-      },
+      "FB": 3,
+      "ALG": 1,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -218,11 +222,12 @@
           "AR": 14,
           "DR": 1,
           "SL": 6,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 2
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -232,24 +237,24 @@
           "AR": 9,
           "DR": 2,
           "SL": 7,
-          "RR": 2,
+          "SR": 4,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 6,
       "name": "Harpsichord",
-      "hw": {
-        "ALG": 0,
-        "FB": 2
-      },
+      "FB": 2,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 2,
@@ -257,11 +262,12 @@
           "AR": 14,
           "DR": 3,
           "SL": 7,
+          "SR": 0,
           "RR": 9,
           "WS": 5
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -271,24 +277,24 @@
           "AR": 15,
           "DR": 4,
           "SL": 10,
-          "RR": 8,
+          "SR": 16,
+          "RR": 0,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 7,
       "name": "Clavinet",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 2,
@@ -296,11 +302,12 @@
           "AR": 15,
           "DR": 4,
           "SL": 1,
+          "SR": 0,
           "RR": 8,
           "WS": 5
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -310,22 +317,22 @@
           "AR": 15,
           "DR": 3,
           "SL": 5,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 5
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 8,
       "name": "Celesta",
-      "hw": {
-        "ALG": 1,
-        "FB": 2
-      },
+      "FB": 2,
+      "ALG": 1,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -335,11 +342,12 @@
           "AR": 9,
           "DR": 3,
           "SL": 7,
-          "RR": 4,
+          "SR": 8,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -349,22 +357,22 @@
           "AR": 11,
           "DR": 6,
           "SL": 4,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 9,
       "name": "Glockenspiel",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 11,
+          "MUL": 11,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -374,11 +382,12 @@
           "AR": 13,
           "DR": 6,
           "SL": 5,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 7,
+          "MUL": 7,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -388,22 +397,22 @@
           "AR": 15,
           "DR": 3,
           "SL": 5,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 10,
       "name": "Music box",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 11,
+          "MUL": 11,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -413,11 +422,12 @@
           "AR": 15,
           "DR": 6,
           "SL": 15,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -427,22 +437,22 @@
           "AR": 6,
           "DR": 3,
           "SL": 7,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 11,
       "name": "Vibraphone",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 11,
+          "MUL": 11,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -452,11 +462,12 @@
           "AR": 13,
           "DR": 8,
           "SL": 1,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -466,22 +477,22 @@
           "AR": 15,
           "DR": 4,
           "SL": 14,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 12,
       "name": "Marimba",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 8,
+          "MUL": 8,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -491,11 +502,12 @@
           "AR": 15,
           "DR": 13,
           "SL": 5,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -505,22 +517,22 @@
           "AR": 15,
           "DR": 6,
           "SL": 6,
-          "RR": 8,
+          "SR": 16,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 13,
       "name": "Xylophone",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 8,
+          "MUL": 8,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -530,11 +542,12 @@
           "AR": 15,
           "DR": 9,
           "SL": 5,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -544,24 +557,24 @@
           "AR": 15,
           "DR": 7,
           "SL": 6,
-          "RR": 8,
+          "SR": 16,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 14,
       "name": "Tubular Bells",
-      "hw": {
-        "ALG": 0,
-        "FB": 2
-      },
+      "FB": 2,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 5,
+          "MUL": 5,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 3,
@@ -569,11 +582,12 @@
           "AR": 15,
           "DR": 2,
           "SL": 15,
+          "SR": 0,
           "RR": 1,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -583,22 +597,22 @@
           "AR": 15,
           "DR": 2,
           "SL": 15,
-          "RR": 2,
+          "SR": 4,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 15,
       "name": "Dulcimer",
-      "hw": {
-        "ALG": 0,
-        "FB": 6
-      },
+      "FB": 6,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 8,
+          "MUL": 8,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -608,11 +622,12 @@
           "AR": 11,
           "DR": 3,
           "SL": 8,
-          "RR": 10,
+          "SR": 20,
+          "RR": 0,
           "WS": 1
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -622,24 +637,24 @@
           "AR": 15,
           "DR": 0,
           "SL": 13,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 16,
       "name": "Hammond Organ",
-      "hw": {
-        "ALG": 0,
-        "FB": 1
-      },
+      "FB": 1,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 3,
@@ -647,13 +662,14 @@
           "AR": 8,
           "DR": 1,
           "SL": 0,
+          "SR": 0,
           "RR": 6,
           "WS": 3
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 0,
@@ -661,24 +677,24 @@
           "AR": 6,
           "DR": 1,
           "SL": 10,
+          "SR": 0,
           "RR": 6,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 17,
       "name": "Percussive Organ",
-      "hw": {
-        "ALG": 0,
-        "FB": 1
-      },
+      "FB": 1,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 2,
@@ -686,13 +702,14 @@
           "AR": 8,
           "DR": 1,
           "SL": 15,
+          "SR": 0,
           "RR": 9,
           "WS": 1
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -700,24 +717,24 @@
           "AR": 13,
           "DR": 1,
           "SL": 0,
+          "SR": 0,
           "RR": 13,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 18,
       "name": "Rock Organ",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 5,
+          "MUL": 5,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 3,
@@ -725,13 +742,14 @@
           "AR": 8,
           "DR": 1,
           "SL": 0,
+          "SR": 0,
           "RR": 6,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 0,
@@ -739,24 +757,24 @@
           "AR": 13,
           "DR": 1,
           "SL": 3,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 19,
       "name": "Church Organ",
-      "hw": {
-        "ALG": 0,
-        "FB": 1
-      },
+      "FB": 1,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 7,
+          "MUL": 7,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -764,13 +782,14 @@
           "AR": 7,
           "DR": 4,
           "SL": 1,
+          "SR": 0,
           "RR": 1,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -778,24 +797,24 @@
           "AR": 6,
           "DR": 0,
           "SL": 0,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 20,
       "name": "Reed Organ",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -803,13 +822,14 @@
           "AR": 7,
           "DR": 6,
           "SL": 0,
+          "SR": 0,
           "RR": 6,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -817,24 +837,24 @@
           "AR": 7,
           "DR": 6,
           "SL": 0,
+          "SR": 0,
           "RR": 6,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 21,
       "name": "Accordion",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -842,13 +862,14 @@
           "AR": 6,
           "DR": 6,
           "SL": 0,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -856,24 +877,24 @@
           "AR": 6,
           "DR": 6,
           "SL": 0,
+          "SR": 0,
           "RR": 6,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 22,
       "name": "Harmonica",
-      "hw": {
-        "ALG": 0,
-        "FB": 1
-      },
+      "FB": 1,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -881,13 +902,14 @@
           "AR": 4,
           "DR": 1,
           "SL": 0,
+          "SR": 0,
           "RR": 4,
           "WS": 3
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -895,24 +917,24 @@
           "AR": 3,
           "DR": 1,
           "SL": 0,
+          "SR": 0,
           "RR": 4,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 23,
       "name": "Tango Accordion",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -920,13 +942,14 @@
           "AR": 7,
           "DR": 6,
           "SL": 0,
+          "SR": 0,
           "RR": 4,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -934,22 +957,22 @@
           "AR": 6,
           "DR": 6,
           "SL": 1,
+          "SR": 0,
           "RR": 7,
           "WS": 5
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 24,
       "name": "Acoustic Guitar1",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -959,11 +982,12 @@
           "AR": 11,
           "DR": 5,
           "SL": 5,
-          "RR": 2,
+          "SR": 4,
+          "RR": 0,
           "WS": 1
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -973,24 +997,24 @@
           "AR": 13,
           "DR": 2,
           "SL": 7,
-          "RR": 2,
+          "SR": 4,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 25,
       "name": "Acoustic Guitar2",
-      "hw": {
-        "ALG": 0,
-        "FB": 4
-      },
+      "FB": 4,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 2,
@@ -998,11 +1022,12 @@
           "AR": 8,
           "DR": 5,
           "SL": 5,
+          "SR": 0,
           "RR": 4,
           "WS": 1
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -1012,22 +1037,22 @@
           "AR": 13,
           "DR": 2,
           "SL": 7,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 26,
       "name": "Electric Guitar1",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1037,11 +1062,12 @@
           "AR": 15,
           "DR": 13,
           "SL": 4,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1051,24 +1077,24 @@
           "AR": 15,
           "DR": 2,
           "SL": 10,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 27,
       "name": "Electric Guitar2",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -1076,11 +1102,12 @@
           "AR": 15,
           "DR": 12,
           "SL": 6,
+          "SR": 0,
           "RR": 7,
           "WS": 3
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1090,22 +1117,22 @@
           "AR": 15,
           "DR": 4,
           "SL": 12,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 2
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 28,
       "name": "Electric Guitar3",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1115,11 +1142,12 @@
           "AR": 15,
           "DR": 6,
           "SL": 2,
-          "RR": 7,
+          "SR": 14,
+          "RR": 0,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1129,24 +1157,24 @@
           "AR": 15,
           "DR": 6,
           "SL": 2,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 29,
       "name": "Overdrive Guitar",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 3,
@@ -1154,13 +1182,14 @@
           "AR": 15,
           "DR": 2,
           "SL": 1,
+          "SR": 0,
           "RR": 3,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -1168,24 +1197,24 @@
           "AR": 15,
           "DR": 2,
           "SL": 1,
+          "SR": 0,
           "RR": 6,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 30,
       "name": "Distorton Guitar",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 3,
@@ -1193,13 +1222,14 @@
           "AR": 15,
           "DR": 2,
           "SL": 1,
+          "SR": 0,
           "RR": 4,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -1207,22 +1237,22 @@
           "AR": 15,
           "DR": 2,
           "SL": 1,
+          "SR": 0,
           "RR": 5,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 31,
       "name": "Guitar Harmonics",
-      "hw": {
-        "ALG": 0,
-        "FB": 6
-      },
+      "FB": 6,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 11,
+          "MUL": 11,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1232,11 +1262,12 @@
           "AR": 6,
           "DR": 5,
           "SL": 1,
-          "RR": 10,
+          "SR": 20,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1246,22 +1277,22 @@
           "AR": 15,
           "DR": 2,
           "SL": 3,
-          "RR": 14,
+          "SR": 28,
+          "RR": 0,
           "WS": 3
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 32,
       "name": "Acoustic Bass",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1271,11 +1302,12 @@
           "AR": 13,
           "DR": 8,
           "SL": 9,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1285,22 +1317,22 @@
           "AR": 8,
           "DR": 2,
           "SL": 6,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 33,
       "name": "Electric Bass 1",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1310,11 +1342,12 @@
           "AR": 15,
           "DR": 2,
           "SL": 9,
-          "RR": 7,
+          "SR": 14,
+          "RR": 0,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1324,22 +1357,22 @@
           "AR": 15,
           "DR": 6,
           "SL": 14,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 34,
       "name": "Electric Bass 2",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1349,11 +1382,12 @@
           "AR": 15,
           "DR": 2,
           "SL": 9,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1363,22 +1397,22 @@
           "AR": 15,
           "DR": 6,
           "SL": 14,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 35,
       "name": "Fretless Bass",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1388,11 +1422,12 @@
           "AR": 12,
           "DR": 7,
           "SL": 9,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1402,22 +1437,22 @@
           "AR": 9,
           "DR": 1,
           "SL": 14,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 36,
       "name": "Slap Bass 1",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 11,
+          "MUL": 11,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1427,11 +1462,12 @@
           "AR": 15,
           "DR": 10,
           "SL": 8,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 6
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1441,22 +1477,22 @@
           "AR": 15,
           "DR": 3,
           "SL": 11,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 37,
       "name": "Slap Bass 2",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 11,
+          "MUL": 11,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1466,11 +1502,12 @@
           "AR": 15,
           "DR": 10,
           "SL": 8,
-          "RR": 7,
+          "SR": 14,
+          "RR": 0,
           "WS": 2
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1480,22 +1517,22 @@
           "AR": 15,
           "DR": 3,
           "SL": 11,
-          "RR": 7,
+          "SR": 14,
+          "RR": 0,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 38,
       "name": "Synth Bass 1",
-      "hw": {
-        "ALG": 1,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 1,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 1,
@@ -1505,11 +1542,12 @@
           "AR": 14,
           "DR": 5,
           "SL": 6,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1519,22 +1557,22 @@
           "AR": 15,
           "DR": 5,
           "SL": 9,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 39,
       "name": "Synth Bass 2",
-      "hw": {
-        "ALG": 1,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 1,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 1,
@@ -1544,11 +1582,12 @@
           "AR": 15,
           "DR": 2,
           "SL": 4,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1558,24 +1597,24 @@
           "AR": 15,
           "DR": 2,
           "SL": 9,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 40,
       "name": "Violin",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 3,
@@ -1583,13 +1622,14 @@
           "AR": 11,
           "DR": 4,
           "SL": 2,
+          "SR": 0,
           "RR": 5,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 0,
@@ -1597,24 +1637,24 @@
           "AR": 4,
           "DR": 4,
           "SL": 0,
+          "SR": 0,
           "RR": 6,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 41,
       "name": "Viola",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 3,
@@ -1622,13 +1662,14 @@
           "AR": 8,
           "DR": 8,
           "SL": 2,
+          "SR": 0,
           "RR": 4,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -1636,24 +1677,24 @@
           "AR": 6,
           "DR": 6,
           "SL": 1,
+          "SR": 0,
           "RR": 5,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 42,
       "name": "Cello",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 3,
@@ -1661,13 +1702,14 @@
           "AR": 8,
           "DR": 8,
           "SL": 2,
+          "SR": 0,
           "RR": 4,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -1675,24 +1717,24 @@
           "AR": 6,
           "DR": 6,
           "SL": 1,
+          "SR": 0,
           "RR": 6,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 43,
       "name": "Contrabass",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 0,
@@ -1700,13 +1742,14 @@
           "AR": 5,
           "DR": 1,
           "SL": 4,
+          "SR": 0,
           "RR": 3,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 0,
@@ -1714,24 +1757,24 @@
           "AR": 5,
           "DR": 2,
           "SL": 1,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 44,
       "name": "Tremulo Strings",
-      "hw": {
-        "ALG": 0,
-        "FB": 5
-      },
+      "FB": 5,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 3,
@@ -1739,13 +1782,14 @@
           "AR": 8,
           "DR": 4,
           "SL": 1,
+          "SR": 0,
           "RR": 3,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -1753,24 +1797,24 @@
           "AR": 5,
           "DR": 1,
           "SL": 5,
+          "SR": 0,
           "RR": 5,
           "WS": 2
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 45,
       "name": "Pizzicato String",
-      "hw": {
-        "ALG": 1,
-        "FB": 3
-      },
+      "FB": 3,
+      "ALG": 1,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -1778,13 +1822,14 @@
           "AR": 15,
           "DR": 5,
           "SL": 10,
+          "SR": 0,
           "RR": 8,
           "WS": 0
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 2,
@@ -1792,24 +1837,24 @@
           "AR": 15,
           "DR": 13,
           "SL": 10,
+          "SR": 0,
           "RR": 12,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 46,
       "name": "Orchestral Harp",
-      "hw": {
-        "ALG": 1,
-        "FB": 4
-      },
+      "FB": 4,
+      "ALG": 1,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -1817,11 +1862,12 @@
           "AR": 13,
           "DR": 4,
           "SL": 3,
+          "SR": 0,
           "RR": 4,
           "WS": 1
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -1831,22 +1877,22 @@
           "AR": 12,
           "DR": 4,
           "SL": 2,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 47,
       "name": "Timpany",
-      "hw": {
-        "ALG": 0,
-        "FB": 5
-      },
+      "FB": 5,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -1856,11 +1902,12 @@
           "AR": 3,
           "DR": 0,
           "SL": 0,
-          "RR": 9,
+          "SR": 18,
+          "RR": 0,
           "WS": 3
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -1870,24 +1917,24 @@
           "AR": 11,
           "DR": 0,
           "SL": 0,
-          "RR": 4,
+          "SR": 8,
+          "RR": 0,
           "WS": 3
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 48,
       "name": "String Ensemble1",
-      "hw": {
-        "ALG": 0,
-        "FB": 2
-      },
+      "FB": 2,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 2,
@@ -1895,13 +1942,14 @@
           "AR": 7,
           "DR": 1,
           "SL": 3,
+          "SR": 0,
           "RR": 3,
           "WS": 1
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 1,
@@ -1909,24 +1957,24 @@
           "AR": 4,
           "DR": 3,
           "SL": 14,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 49,
       "name": "String Ensemble2",
-      "hw": {
-        "ALG": 0,
-        "FB": 2
-      },
+      "FB": 2,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 2,
@@ -1934,13 +1982,14 @@
           "AR": 7,
           "DR": 1,
           "SL": 3,
+          "SR": 0,
           "RR": 3,
           "WS": 1
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 1,
@@ -1948,24 +1997,24 @@
           "AR": 4,
           "DR": 3,
           "SL": 14,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 50,
       "name": "Synth Strings 1",
-      "hw": {
-        "ALG": 0,
-        "FB": 3
-      },
+      "FB": 3,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 2,
@@ -1973,13 +2022,14 @@
           "AR": 7,
           "DR": 1,
           "SL": 3,
+          "SR": 0,
           "RR": 3,
           "WS": 1
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 1,
@@ -1987,22 +2037,22 @@
           "AR": 4,
           "DR": 3,
           "SL": 14,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 51,
       "name": "SynthStrings 2",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2012,13 +2062,14 @@
           "AR": 5,
           "DR": 1,
           "SL": 1,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 2
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2026,24 +2077,24 @@
           "AR": 4,
           "DR": 4,
           "SL": 0,
+          "SR": 0,
           "RR": 4,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 52,
       "name": "Choir Aahs",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 2,
@@ -2051,11 +2102,12 @@
           "AR": 3,
           "DR": 2,
           "SL": 4,
+          "SR": 0,
           "RR": 0,
           "WS": 2
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 1,
@@ -2065,24 +2117,24 @@
           "AR": 4,
           "DR": 3,
           "SL": 4,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 53,
       "name": "Voice Oohs",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 1,
@@ -2090,11 +2142,12 @@
           "AR": 10,
           "DR": 2,
           "SL": 10,
+          "SR": 0,
           "RR": 4,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 1,
@@ -2104,24 +2157,24 @@
           "AR": 6,
           "DR": 2,
           "SL": 8,
-          "RR": 4,
+          "SR": 8,
+          "RR": 0,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 54,
       "name": "Synth Voice",
-      "hw": {
-        "ALG": 0,
-        "FB": 3
-      },
+      "FB": 3,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 1,
@@ -2129,13 +2182,14 @@
           "AR": 5,
           "DR": 2,
           "SL": 5,
+          "SR": 0,
           "RR": 1,
           "WS": 2
         },
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -2143,24 +2197,24 @@
           "AR": 6,
           "DR": 5,
           "SL": 3,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 55,
       "name": "Orchestra Hit",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2168,11 +2222,12 @@
           "AR": 15,
           "DR": 7,
           "SL": 11,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2182,24 +2237,24 @@
           "AR": 9,
           "DR": 6,
           "SL": 4,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 56,
       "name": "Trumpet",
-      "hw": {
-        "ALG": 0,
-        "FB": 6
-      },
+      "FB": 6,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2207,13 +2262,14 @@
           "AR": 5,
           "DR": 3,
           "SL": 1,
+          "SR": 0,
           "RR": 4,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -2221,24 +2277,24 @@
           "AR": 5,
           "DR": 2,
           "SL": 3,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 57,
       "name": "Trombone",
-      "hw": {
-        "ALG": 0,
-        "FB": 5
-      },
+      "FB": 5,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2246,13 +2302,14 @@
           "AR": 5,
           "DR": 3,
           "SL": 1,
+          "SR": 0,
           "RR": 9,
           "WS": 0
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 2,
@@ -2260,24 +2317,24 @@
           "AR": 5,
           "DR": 2,
           "SL": 3,
+          "SR": 0,
           "RR": 9,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 58,
       "name": "Tuba",
-      "hw": {
-        "ALG": 0,
-        "FB": 6
-      },
+      "FB": 6,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2285,13 +2342,14 @@
           "AR": 6,
           "DR": 3,
           "SL": 8,
+          "SR": 0,
           "RR": 12,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2299,24 +2357,24 @@
           "AR": 8,
           "DR": 5,
           "SL": 2,
+          "SR": 0,
           "RR": 12,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 59,
       "name": "Muted Trumpet",
-      "hw": {
-        "ALG": 0,
-        "FB": 6
-      },
+      "FB": 6,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 2,
@@ -2324,13 +2382,14 @@
           "AR": 7,
           "DR": 1,
           "SL": 10,
+          "SR": 0,
           "RR": 5,
           "WS": 1
         },
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -2338,24 +2397,24 @@
           "AR": 8,
           "DR": 1,
           "SL": 9,
+          "SR": 0,
           "RR": 6,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 60,
       "name": "French Horn",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 1,
@@ -2363,13 +2422,14 @@
           "AR": 5,
           "DR": 3,
           "SL": 5,
+          "SR": 0,
           "RR": 4,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2377,24 +2437,24 @@
           "AR": 10,
           "DR": 10,
           "SL": 1,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 61,
       "name": "Brass Section",
-      "hw": {
-        "ALG": 0,
-        "FB": 5
-      },
+      "FB": 5,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2402,13 +2462,14 @@
           "AR": 5,
           "DR": 3,
           "SL": 1,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 2,
@@ -2416,24 +2477,24 @@
           "AR": 5,
           "DR": 2,
           "SL": 3,
+          "SR": 0,
           "RR": 6,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 62,
       "name": "Synth Brass 1",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2441,13 +2502,14 @@
           "AR": 8,
           "DR": 3,
           "SL": 7,
+          "SR": 0,
           "RR": 5,
           "WS": 5
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2455,24 +2517,24 @@
           "AR": 8,
           "DR": 1,
           "SL": 8,
+          "SR": 0,
           "RR": 6,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 63,
       "name": "Synth Brass 2",
-      "hw": {
-        "ALG": 0,
-        "FB": 4
-      },
+      "FB": 4,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 2,
@@ -2480,13 +2542,14 @@
           "AR": 9,
           "DR": 11,
           "SL": 2,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 2,
@@ -2494,22 +2557,22 @@
           "AR": 9,
           "DR": 0,
           "SL": 0,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 64,
       "name": "Soprano Sax",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2519,11 +2582,12 @@
           "AR": 7,
           "DR": 0,
           "SL": 14,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 5
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2533,22 +2597,22 @@
           "AR": 7,
           "DR": 0,
           "SL": 14,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 65,
       "name": "Alto Sax",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2558,11 +2622,12 @@
           "AR": 8,
           "DR": 0,
           "SL": 14,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 5
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2572,22 +2637,22 @@
           "AR": 7,
           "DR": 0,
           "SL": 14,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 66,
       "name": "Tenor Sax",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2597,11 +2662,12 @@
           "AR": 8,
           "DR": 0,
           "SL": 14,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 5
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2611,22 +2677,22 @@
           "AR": 7,
           "DR": 0,
           "SL": 14,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 67,
       "name": "Baritone Sax",
-      "hw": {
-        "ALG": 0,
-        "FB": 5
-      },
+      "FB": 5,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2636,13 +2702,14 @@
           "AR": 5,
           "DR": 1,
           "SL": 5,
-          "RR": 7,
+          "SR": 14,
+          "RR": 0,
           "WS": 1
         },
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -2650,24 +2717,24 @@
           "AR": 5,
           "DR": 2,
           "SL": 7,
+          "SR": 0,
           "RR": 7,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 68,
       "name": "Oboe",
-      "hw": {
-        "ALG": 0,
-        "FB": 1
-      },
+      "FB": 1,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 3,
@@ -2675,13 +2742,14 @@
           "AR": 6,
           "DR": 14,
           "SL": 1,
+          "SR": 0,
           "RR": 3,
           "WS": 0
         },
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 0,
@@ -2689,24 +2757,24 @@
           "AR": 8,
           "DR": 11,
           "SL": 0,
+          "SR": 0,
           "RR": 7,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 69,
       "name": "English Horn",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -2714,13 +2782,14 @@
           "AR": 7,
           "DR": 1,
           "SL": 10,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         },
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -2728,22 +2797,22 @@
           "AR": 8,
           "DR": 2,
           "SL": 9,
+          "SR": 0,
           "RR": 7,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 70,
       "name": "Bassoon",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2753,13 +2822,14 @@
           "AR": 15,
           "DR": 0,
           "SL": 2,
-          "RR": 2,
+          "SR": 4,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2767,24 +2837,24 @@
           "AR": 8,
           "DR": 0,
           "SL": 0,
+          "SR": 0,
           "RR": 7,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 71,
       "name": "Clarinet",
-      "hw": {
-        "ALG": 0,
-        "FB": 5
-      },
+      "FB": 5,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2792,13 +2862,14 @@
           "AR": 10,
           "DR": 2,
           "SL": 1,
+          "SR": 0,
           "RR": 4,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2806,24 +2877,24 @@
           "AR": 5,
           "DR": 1,
           "SL": 2,
+          "SR": 0,
           "RR": 4,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 72,
       "name": "Piccolo",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2831,13 +2902,14 @@
           "AR": 7,
           "DR": 7,
           "SL": 4,
+          "SR": 0,
           "RR": 3,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -2845,22 +2917,22 @@
           "AR": 6,
           "DR": 5,
           "SL": 0,
+          "SR": 0,
           "RR": 6,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 73,
       "name": "Flute",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -2870,13 +2942,14 @@
           "AR": 6,
           "DR": 10,
           "SL": 6,
-          "RR": 4,
+          "SR": 8,
+          "RR": 0,
           "WS": 2
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -2884,24 +2957,24 @@
           "AR": 6,
           "DR": 3,
           "SL": 6,
+          "SR": 0,
           "RR": 6,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 74,
       "name": "Recorder",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 2,
@@ -2909,13 +2982,14 @@
           "AR": 6,
           "DR": 7,
           "SL": 8,
+          "SR": 0,
           "RR": 9,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2923,24 +2997,24 @@
           "AR": 6,
           "DR": 5,
           "SL": 2,
+          "SR": 0,
           "RR": 8,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 75,
       "name": "Pan Flute",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 3,
@@ -2948,13 +3022,14 @@
           "AR": 6,
           "DR": 13,
           "SL": 8,
+          "SR": 0,
           "RR": 13,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -2962,24 +3037,24 @@
           "AR": 6,
           "DR": 5,
           "SL": 2,
+          "SR": 0,
           "RR": 9,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 76,
       "name": "Bottle Blow",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -2987,13 +3062,14 @@
           "AR": 13,
           "DR": 8,
           "SL": 6,
+          "SR": 0,
           "RR": 8,
           "WS": 0
         },
         {
-          "MULT": 6,
+          "MUL": 6,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3001,24 +3077,24 @@
           "AR": 6,
           "DR": 8,
           "SL": 9,
+          "SR": 0,
           "RR": 7,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 77,
       "name": "Shakuhachi",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 1,
@@ -3026,13 +3102,14 @@
           "AR": 4,
           "DR": 7,
           "SL": 0,
+          "SR": 0,
           "RR": 15,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3040,24 +3117,24 @@
           "AR": 6,
           "DR": 5,
           "SL": 2,
+          "SR": 0,
           "RR": 10,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 78,
       "name": "Whistle",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 3,
@@ -3065,13 +3142,14 @@
           "AR": 7,
           "DR": 0,
           "SL": 0,
+          "SR": 0,
           "RR": 12,
           "WS": 0
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -3079,24 +3157,24 @@
           "AR": 6,
           "DR": 2,
           "SL": 15,
+          "SR": 0,
           "RR": 11,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 79,
       "name": "Ocarina",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3104,13 +3182,14 @@
           "AR": 5,
           "DR": 7,
           "SL": 4,
+          "SR": 0,
           "RR": 6,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3118,22 +3197,22 @@
           "AR": 6,
           "DR": 8,
           "SL": 0,
+          "SR": 0,
           "RR": 6,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 80,
       "name": "Lead 1 squareea",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -3143,11 +3222,12 @@
           "AR": 2,
           "DR": 10,
           "SL": 0,
-          "RR": 2,
+          "SR": 4,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -3157,22 +3237,22 @@
           "AR": 4,
           "DR": 2,
           "SL": 15,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 81,
       "name": "Lead 2 sawtooth",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -3182,13 +3262,14 @@
           "AR": 5,
           "DR": 1,
           "SL": 5,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 1
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -3196,24 +3277,24 @@
           "AR": 5,
           "DR": 2,
           "SL": 7,
+          "SR": 0,
           "RR": 6,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 82,
       "name": "Lead 3 calliope",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 3,
@@ -3221,13 +3302,14 @@
           "AR": 5,
           "DR": 0,
           "SL": 0,
+          "SR": 0,
           "RR": 0,
           "WS": 3
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3235,22 +3317,22 @@
           "AR": 7,
           "DR": 2,
           "SL": 15,
+          "SR": 0,
           "RR": 8,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 83,
       "name": "Lead 4 chiff",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
           "EGT": 0,
           "VIB": 1,
@@ -3260,13 +3342,14 @@
           "AR": 11,
           "DR": 7,
           "SL": 6,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 2
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -3274,22 +3357,22 @@
           "AR": 8,
           "DR": 7,
           "SL": 0,
+          "SR": 0,
           "RR": 6,
           "WS": 2
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 84,
       "name": "Lead 5 charang",
-      "hw": {
-        "ALG": 0,
-        "FB": 3
-      },
+      "FB": 3,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -3299,11 +3382,12 @@
           "AR": 7,
           "DR": 1,
           "SL": 5,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 5,
+          "MUL": 5,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -3313,24 +3397,24 @@
           "AR": 5,
           "DR": 2,
           "SL": 7,
-          "RR": 4,
+          "SR": 8,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 85,
       "name": "Lead 6 voice",
-      "hw": {
-        "ALG": 0,
-        "FB": 3
-      },
+      "FB": 3,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 3,
@@ -3338,13 +3422,14 @@
           "AR": 5,
           "DR": 2,
           "SL": 10,
+          "SR": 0,
           "RR": 1,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -3352,24 +3437,24 @@
           "AR": 6,
           "DR": 5,
           "SL": 3,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 86,
       "name": "Lead 7 fifths",
-      "hw": {
-        "ALG": 1,
-        "FB": 2
-      },
+      "FB": 2,
+      "ALG": 1,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -3377,13 +3462,14 @@
           "AR": 13,
           "DR": 5,
           "SL": 1,
+          "SR": 0,
           "RR": 3,
           "WS": 1
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -3391,24 +3477,24 @@
           "AR": 2,
           "DR": 6,
           "SL": 1,
+          "SR": 0,
           "RR": 3,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 87,
       "name": "Lead 8 brass",
-      "hw": {
-        "ALG": 0,
-        "FB": 5
-      },
+      "FB": 5,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3416,13 +3502,14 @@
           "AR": 5,
           "DR": 3,
           "SL": 1,
+          "SR": 0,
           "RR": 4,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 2,
@@ -3430,24 +3517,24 @@
           "AR": 5,
           "DR": 2,
           "SL": 3,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 88,
       "name": "Pad 1 new age",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3455,13 +3542,14 @@
           "AR": 5,
           "DR": 1,
           "SL": 1,
+          "SR": 0,
           "RR": 5,
           "WS": 1
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -3469,24 +3557,24 @@
           "AR": 8,
           "DR": 2,
           "SL": 4,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 89,
       "name": "Pad 2 warm",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 2,
@@ -3494,13 +3582,14 @@
           "AR": 6,
           "DR": 14,
           "SL": 8,
+          "SR": 0,
           "RR": 15,
           "WS": 1
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -3508,24 +3597,24 @@
           "AR": 6,
           "DR": 5,
           "SL": 0,
+          "SR": 0,
           "RR": 6,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 90,
       "name": "Pad 3 polysynth",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3533,11 +3622,12 @@
           "AR": 12,
           "DR": 3,
           "SL": 15,
+          "SR": 0,
           "RR": 4,
           "WS": 2
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -3547,24 +3637,24 @@
           "AR": 15,
           "DR": 0,
           "SL": 15,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 91,
       "name": "Pad 4 choir",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 1,
@@ -3572,11 +3662,12 @@
           "AR": 10,
           "DR": 2,
           "SL": 4,
+          "SR": 0,
           "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
           "EGT": 0,
           "VIB": 1,
@@ -3586,24 +3677,24 @@
           "AR": 6,
           "DR": 3,
           "SL": 4,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 92,
       "name": "Pad 5 bowedpad",
-      "hw": {
-        "ALG": 0,
-        "FB": 3
-      },
+      "FB": 3,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 1,
@@ -3611,13 +3702,14 @@
           "AR": 7,
           "DR": 1,
           "SL": 3,
+          "SR": 0,
           "RR": 3,
           "WS": 1
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -3625,24 +3717,24 @@
           "AR": 4,
           "DR": 3,
           "SL": 14,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 93,
       "name": "Pad 6 metallic",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 1,
@@ -3650,13 +3742,14 @@
           "AR": 6,
           "DR": 3,
           "SL": 8,
+          "SR": 0,
           "RR": 3,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3664,24 +3757,24 @@
           "AR": 3,
           "DR": 0,
           "SL": 1,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 94,
       "name": "Pad 7 halo",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3689,13 +3782,14 @@
           "AR": 6,
           "DR": 7,
           "SL": 8,
+          "SR": 0,
           "RR": 15,
           "WS": 2
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3703,24 +3797,24 @@
           "AR": 6,
           "DR": 5,
           "SL": 2,
+          "SR": 0,
           "RR": 10,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 95,
       "name": "Pad 8 sweep",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3728,13 +3822,14 @@
           "AR": 2,
           "DR": 7,
           "SL": 8,
+          "SR": 0,
           "RR": 8,
           "WS": 2
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3742,22 +3837,22 @@
           "AR": 6,
           "DR": 5,
           "SL": 2,
+          "SR": 0,
           "RR": 6,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 96,
       "name": "FX 1 rain",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 8,
+          "MUL": 8,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -3767,11 +3862,12 @@
           "AR": 15,
           "DR": 11,
           "SL": 6,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -3781,24 +3877,24 @@
           "AR": 15,
           "DR": 5,
           "SL": 6,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 97,
       "name": "FX 2 soundtrack",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 1,
@@ -3806,13 +3902,14 @@
           "AR": 2,
           "DR": 5,
           "SL": 11,
+          "SR": 0,
           "RR": 13,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -3820,24 +3917,24 @@
           "AR": 15,
           "DR": 0,
           "SL": 4,
+          "SR": 0,
           "RR": 7,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 98,
       "name": "FX 3 crystal",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -3845,13 +3942,14 @@
           "AR": 6,
           "DR": 7,
           "SL": 8,
+          "SR": 0,
           "RR": 8,
           "WS": 2
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -3859,24 +3957,24 @@
           "AR": 6,
           "DR": 5,
           "SL": 2,
+          "SR": 0,
           "RR": 10,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 99,
       "name": "FX 4 atmosphere",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 3,
@@ -3884,13 +3982,14 @@
           "AR": 4,
           "DR": 7,
           "SL": 8,
+          "SR": 0,
           "RR": 15,
           "WS": 2
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3898,24 +3997,24 @@
           "AR": 6,
           "DR": 5,
           "SL": 2,
+          "SR": 0,
           "RR": 10,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 100,
       "name": "FX 5 brightness",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3923,13 +4022,14 @@
           "AR": 4,
           "DR": 7,
           "SL": 8,
+          "SR": 0,
           "RR": 15,
           "WS": 2
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3937,24 +4037,24 @@
           "AR": 6,
           "DR": 5,
           "SL": 2,
+          "SR": 0,
           "RR": 10,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 101,
       "name": "FX 6 goblins",
-      "hw": {
-        "ALG": 0,
-        "FB": 4
-      },
+      "FB": 4,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 6,
+          "MUL": 6,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -3962,13 +4062,14 @@
           "AR": 2,
           "DR": 5,
           "SL": 11,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -3976,24 +4077,24 @@
           "AR": 15,
           "DR": 0,
           "SL": 4,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 102,
       "name": "FX 7 echoes",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 3,
+          "MUL": 3,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 1,
@@ -4001,13 +4102,14 @@
           "AR": 2,
           "DR": 5,
           "SL": 11,
+          "SR": 0,
           "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 2,
@@ -4015,24 +4117,24 @@
           "AR": 15,
           "DR": 0,
           "SL": 4,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 103,
       "name": "FX 8 sci-fi",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 6,
+          "MUL": 6,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -4040,13 +4142,14 @@
           "AR": 7,
           "DR": 0,
           "SL": 0,
+          "SR": 0,
           "RR": 7,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -4054,24 +4157,24 @@
           "AR": 6,
           "DR": 2,
           "SL": 15,
+          "SR": 0,
           "RR": 7,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 104,
       "name": "Sitar",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 5,
+          "MUL": 5,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -4079,11 +4182,12 @@
           "AR": 15,
           "DR": 7,
           "SL": 4,
+          "SR": 0,
           "RR": 3,
           "WS": 4
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4093,22 +4197,22 @@
           "AR": 15,
           "DR": 8,
           "SL": 0,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 4
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 105,
       "name": "Banjo",
-      "hw": {
-        "ALG": 1,
-        "FB": 2
-      },
+      "FB": 2,
+      "ALG": 1,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4118,11 +4222,12 @@
           "AR": 15,
           "DR": 4,
           "SL": 10,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 4
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4132,22 +4237,22 @@
           "AR": 15,
           "DR": 8,
           "SL": 3,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 106,
       "name": "Shamisen",
-      "hw": {
-        "ALG": 0,
-        "FB": 2
-      },
+      "FB": 2,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 4,
+          "MUL": 4,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4157,11 +4262,12 @@
           "AR": 15,
           "DR": 10,
           "SL": 10,
-          "RR": 6,
+          "SR": 12,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 7,
+          "MUL": 7,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4171,22 +4277,22 @@
           "AR": 15,
           "DR": 8,
           "SL": 15,
-          "RR": 11,
+          "SR": 22,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 107,
       "name": "Koto",
-      "hw": {
-        "ALG": 0,
-        "FB": 4
-      },
+      "FB": 4,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4196,11 +4302,12 @@
           "AR": 15,
           "DR": 2,
           "SL": 1,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4210,22 +4317,22 @@
           "AR": 15,
           "DR": 4,
           "SL": 15,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 108,
       "name": "Kalimba",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4235,11 +4342,12 @@
           "AR": 15,
           "DR": 2,
           "SL": 1,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4249,22 +4357,22 @@
           "AR": 15,
           "DR": 4,
           "SL": 15,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 109,
       "name": "Bagpipe",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4274,13 +4382,14 @@
           "AR": 13,
           "DR": 0,
           "SL": 15,
-          "RR": 2,
+          "SR": 4,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -4288,22 +4397,22 @@
           "AR": 8,
           "DR": 0,
           "SL": 0,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 110,
       "name": "Fiddle",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4313,13 +4422,14 @@
           "AR": 9,
           "DR": 11,
           "SL": 3,
+          "SR": 0,
           "RR": 0,
           "WS": 3
         },
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 1,
@@ -4327,22 +4437,22 @@
           "AR": 6,
           "DR": 9,
           "SL": 0,
+          "SR": 0,
           "RR": 14,
           "WS": 5
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 111,
       "name": "Shanai",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4352,13 +4462,14 @@
           "AR": 13,
           "DR": 0,
           "SL": 15,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -4366,22 +4477,22 @@
           "AR": 8,
           "DR": 0,
           "SL": 0,
+          "SR": 0,
           "RR": 5,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 112,
       "name": "Tinkle Bell",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 6,
+          "MUL": 6,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4391,11 +4502,12 @@
           "AR": 15,
           "DR": 6,
           "SL": 5,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 7,
+          "MUL": 7,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4405,22 +4517,22 @@
           "AR": 15,
           "DR": 3,
           "SL": 5,
-          "RR": 3,
+          "SR": 6,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 113,
       "name": "Agogo Bells",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 7,
+          "MUL": 7,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4430,11 +4542,12 @@
           "AR": 15,
           "DR": 10,
           "SL": 5,
-          "RR": 7,
+          "SR": 14,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4444,22 +4557,22 @@
           "AR": 15,
           "DR": 5,
           "SL": 5,
-          "RR": 8,
+          "SR": 16,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 114,
       "name": "Steel Drums",
-      "hw": {
-        "ALG": 0,
-        "FB": 4
-      },
+      "FB": 4,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4469,11 +4582,12 @@
           "AR": 10,
           "DR": 8,
           "SL": 4,
-          "RR": 11,
+          "SR": 22,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4483,24 +4597,24 @@
           "AR": 13,
           "DR": 6,
           "SL": 4,
-          "RR": 10,
+          "SR": 20,
+          "RR": 0,
           "WS": 1
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 115,
       "name": "Woodblock",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 1,
@@ -4508,11 +4622,12 @@
           "AR": 15,
           "DR": 8,
           "SL": 15,
+          "SR": 0,
           "RR": 15,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4522,22 +4637,22 @@
           "AR": 15,
           "DR": 5,
           "SL": 7,
-          "RR": 15,
+          "SR": 30,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 116,
       "name": "Taiko Drum",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4547,11 +4662,12 @@
           "AR": 10,
           "DR": 8,
           "SL": 4,
-          "RR": 12,
+          "SR": 24,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4561,22 +4677,22 @@
           "AR": 13,
           "DR": 6,
           "SL": 4,
-          "RR": 15,
+          "SR": 30,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 117,
       "name": "Melodic Tom",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 2,
+          "MUL": 2,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4586,13 +4702,14 @@
           "AR": 15,
           "DR": 11,
           "SL": 10,
-          "RR": 7,
+          "SR": 14,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -4600,24 +4717,24 @@
           "AR": 15,
           "DR": 3,
           "SL": 5,
+          "SR": 0,
           "RR": 3,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 118,
       "name": "Synth Drum",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 11,
+          "MUL": 11,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -4625,11 +4742,12 @@
           "AR": 15,
           "DR": 15,
           "SL": 0,
+          "SR": 0,
           "RR": 14,
           "WS": 0
         },
         {
-          "MULT": 11,
+          "MUL": 11,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4639,22 +4757,22 @@
           "AR": 15,
           "DR": 7,
           "SL": 15,
-          "RR": 14,
+          "SR": 28,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 119,
       "name": "Reverse Cymbal",
-      "hw": {
-        "ALG": 0,
-        "FB": 3
-      },
+      "FB": 3,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 1,
+          "MUL": 1,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4664,11 +4782,12 @@
           "AR": 15,
           "DR": 5,
           "SL": 11,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4678,22 +4797,22 @@
           "AR": 5,
           "DR": 4,
           "SL": 2,
-          "RR": 15,
+          "SR": 30,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 120,
       "name": "Guitar FretNoise",
-      "hw": {
-        "ALG": 0,
-        "FB": 5
-      },
+      "FB": 5,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4703,11 +4822,12 @@
           "AR": 11,
           "DR": 3,
           "SL": 3,
-          "RR": 15,
+          "SR": 30,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 8,
+          "MUL": 8,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4717,24 +4837,24 @@
           "AR": 10,
           "DR": 15,
           "SL": 15,
+          "SR": 0,
           "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 121,
       "name": "Breath Noise",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 1,
@@ -4742,13 +4862,14 @@
           "AR": 11,
           "DR": 1,
           "SL": 7,
+          "SR": 0,
           "RR": 3,
           "WS": 2
         },
         {
-          "MULT": 15,
+          "MUL": 15,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -4756,24 +4877,24 @@
           "AR": 11,
           "DR": 2,
           "SL": 9,
+          "SR": 0,
           "RR": 11,
           "WS": 3
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 122,
       "name": "Seashore",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 15,
+          "MUL": 15,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 1,
@@ -4781,13 +4902,14 @@
           "AR": 10,
           "DR": 1,
           "SL": 5,
+          "SR": 0,
           "RR": 3,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 1,
           "KSL": 0,
@@ -4795,22 +4917,22 @@
           "AR": 5,
           "DR": 2,
           "SL": 7,
+          "SR": 0,
           "RR": 3,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 123,
       "name": "Bird Tweet",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4820,11 +4942,12 @@
           "AR": 15,
           "DR": 0,
           "SL": 15,
+          "SR": 0,
           "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 7,
+          "MUL": 7,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4834,24 +4957,24 @@
           "AR": 5,
           "DR": 15,
           "SL": 15,
+          "SR": 0,
           "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 124,
       "name": "Telephone",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 5,
+          "MUL": 5,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 1,
           "KSL": 0,
@@ -4859,13 +4982,14 @@
           "AR": 7,
           "DR": 0,
           "SL": 0,
+          "SR": 0,
           "RR": 15,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 1,
           "AM": 0,
           "KSL": 0,
@@ -4873,22 +4997,22 @@
           "AR": 6,
           "DR": 2,
           "SL": 15,
+          "SR": 0,
           "RR": 15,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 125,
       "name": "Helicopter",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4898,11 +5022,12 @@
           "AR": 6,
           "DR": 8,
           "SL": 12,
-          "RR": 15,
+          "SR": 30,
+          "RR": 0,
           "WS": 2
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 1,
           "EGT": 0,
           "VIB": 0,
@@ -4912,24 +5037,24 @@
           "AR": 10,
           "DR": 5,
           "SL": 6,
-          "RR": 11,
+          "SR": 22,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 126,
       "name": "Applause/Noise",
-      "hw": {
-        "ALG": 0,
-        "FB": 7
-      },
+      "FB": 7,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 11,
+          "MUL": 11,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -4937,13 +5062,14 @@
           "AR": 8,
           "DR": 2,
           "SL": 0,
+          "SR": 0,
           "RR": 10,
           "WS": 0
         },
         {
-          "MULT": 7,
+          "MUL": 7,
           "KSR": 0,
-          "EGT": 1,
+          "EGT": 0,
           "VIB": 0,
           "AM": 0,
           "KSL": 0,
@@ -4951,22 +5077,22 @@
           "AR": 7,
           "DR": 7,
           "SL": 0,
+          "SR": 0,
           "RR": 10,
           "WS": 5
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     },
     {
       "prog": 127,
       "name": "Gunshot",
-      "hw": {
-        "ALG": 0,
-        "FB": 0
-      },
+      "FB": 0,
+      "ALG": 0,
       "ops": [
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4976,11 +5102,12 @@
           "AR": 15,
           "DR": 10,
           "SL": 6,
-          "RR": 15,
+          "SR": 30,
+          "RR": 0,
           "WS": 0
         },
         {
-          "MULT": 0,
+          "MUL": 0,
           "KSR": 0,
           "EGT": 0,
           "VIB": 0,
@@ -4990,11 +5117,13 @@
           "AR": 15,
           "DR": 6,
           "SL": 8,
-          "RR": 15,
+          "SR": 30,
+          "RR": 0,
           "WS": 0
         }
       ],
-      "empty": false
+      "sw_bank": 0,
+      "sw_prog": 2
     }
   ]
 }

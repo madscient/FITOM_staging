@@ -3,8 +3,7 @@
 ALSA sbiload .sb/.o3 → FITOM_X hwbank.json 変換ツール
 
 .sb (OPL2): 128音色 × 52バイト
-  [0-3]  : マジック "SBI\x1A" or "2OP\x1A" (どちらも同じ構造)
-            マジック 0x00000000 = 未使用エントリ
+  [0-3]  : マジック "SBI\x1A" or "2OP\x1A"（どちらも同じ構造）。0x00000000=未使用
   [4-35] : 音色名 (32バイト, NULL終端)
   [36-46]: OPLレジスタ直接値 11バイト
     [0] Mod Char  (0x20): AM|VIB|EGT|KSR|MULT
@@ -21,13 +20,23 @@ ALSA sbiload .sb/.o3 → FITOM_X hwbank.json 変換ツール
   [47-51]: SBTimbre拡張 (PercVoc, Transpos, PercPitch, Reserved×2)
 
 .o3 (OPL3): 128音色 × 60バイト
-  [0-3]  : マジック "4OP\x1A" (4OP) or "2OP\x1A" (2OP扱い、ただし後半にも有効データあり)
+  [0-3]  : マジック "4OP\x1A"(4OP) or "2OP\x1A"(2OP扱い)
   [4-35] : 音色名
-  [36-46]: 2OP part1 (11バイト) = OP1(Mod1)+OP2(Car1)
-  [47-57]: 2OP part2 (11バイト) = OP3(Mod2)+OP4(Car2)
+  [36-46]: 2OP part1 (11バイト) = OP1(M1)+OP2(C1)
+  [47-57]: 2OP part2 (11バイト) = OP3(M2)+OP4(C2)
   [58-59]: パディング
 
 drums.sb/.o3: prog番号 = MIDIノート番号 (35-81に実データあり)
+
+FITOM_X hwbank.schema.json (フラット構造) へのマッピング:
+  MULT→MUL, KSR/VIB/AM/KSL/TL/AR/DR/SL/WS は直接対応。
+  実機EGTビット(bit5)とRRレジスタ(下位4bit)は、docs/voice-parameter-reference.md
+  の変換規則に従いFITOMのSR/RRへ変換する(ops[i].EGT自体はOPL系では無関係のため
+  常に0):
+    EGTビット=1(サステイン) → SR=0, RR=そのまま(シフトなし)
+    EGTビット=0(パーカッシブ) → SR=RRレジスタ<<1(4bit→5bit), RR=0
+  4OP(.o3)は前半ペア(M1/C1)= hw.FB、後半ペア(M2/C2)= hw.FB2 に分離して格納する。
+  hw.ALG(3bit) = bit0:CON1(前半接続) | bit1:CON2(後半接続) | bit2:ConnectionSEL(4OP結合)。
 """
 
 import json, sys, argparse
@@ -93,19 +102,26 @@ GM_NAMES = [
 ]
 
 def decode_op(char, scale, ar_dr, sl_rr, wave):
+    egt_bit = (char >> 5) & 1
+    rr_reg  = sl_rr & 0xF
+    if egt_bit == 1:
+        sr, rr = 0, rr_reg          # サステイン: RRはそのまま
+    else:
+        sr, rr = rr_reg << 1, 0     # パーカッシブ: SRへ4bit→5bit
     return {
-        "MULT":  char & 0xF,
-        "KSR":  (char >> 4) & 1,
-        "EGT":  (char >> 5) & 1,
-        "VIB":  (char >> 6) & 1,
-        "AM":   (char >> 7) & 1,
-        "KSL":  (scale >> 6) & 3,
-        "TL":    scale & 0x3F,
-        "AR":   (ar_dr >> 4) & 0xF,
-        "DR":    ar_dr & 0xF,
-        "SL":   (sl_rr >> 4) & 0xF,
-        "RR":    sl_rr & 0xF,
-        "WS":    wave & 7,
+        "MUL":  char & 0xF,
+        "KSR": (char >> 4) & 1,
+        "EGT":  0,   # OPL系では無関係、常に0
+        "VIB": (char >> 6) & 1,
+        "AM":  (char >> 7) & 1,
+        "KSL": (scale >> 6) & 3,
+        "TL":   scale & 0x3F,
+        "AR":  (ar_dr >> 4) & 0xF,
+        "DR":   ar_dr & 0xF,
+        "SL":  (sl_rr >> 4) & 0xF,
+        "SR":   sr,
+        "RR":   rr,
+        "WS":   wave & 7,
     }
 
 def parse_2op_block(p11):
@@ -116,21 +132,18 @@ def parse_2op_block(p11):
     con =  p11[10] & 1
     return mod, car, fb, con
 
-def convert(src_path, dst_path, bank_no=0):
+def convert(src_path, dst_path, bank_name=None):
     data     = Path(src_path).read_bytes()
     src_name = Path(src_path).stem
     ext      = Path(src_path).suffix.lower()
     is_drum  = 'drum' in src_name.lower()
 
-    VALID_MAGICS_SB = {b'SBI\x1a', b'2OP\x1a', b'\x00\x00\x00\x00'}
-    VALID_MAGICS_O3 = {b'4OP\x1a', b'2OP\x1a', b'\x00\x00\x00\x00'}
-
     if ext == '.sb':
         assert len(data) == 128 * 52, f"Expected {128*52}, got {len(data)}"
-        group, op_count, entry_size = "OPL2", 2, 52
+        voice_patch_type, op_count, entry_size = "OPL3_2", 2, 52
     elif ext == '.o3':
         assert len(data) == 128 * 60, f"Expected {128*60}, got {len(data)}"
-        group, op_count, entry_size = "OPL3", 4, 60
+        voice_patch_type, op_count, entry_size = "OPL3", 4, 60
     else:
         print(f"SKIP {src_path}: unknown extension")
         return False
@@ -140,30 +153,26 @@ def convert(src_path, dst_path, bank_no=0):
         off   = prog * entry_size
         magic = data[off:off+4]
         empty = (magic == b'\x00\x00\x00\x00')
+        if empty:
+            continue   # 未使用エントリはスキップ(現行スキーマにemptyフラグの置き場がないため)
 
         raw_name = data[off+4:off+36].split(b'\x00')[0].decode('ascii', errors='replace').strip()
-        p = data[off+36:off+entry_size]  # 16 or 24 bytes
+        p = data[off+36:off+entry_size]
 
         if ext == '.sb':
             mod, car, fb, con = parse_2op_block(p[0:11])
             ops = [mod, car]
-            hw  = {"ALG": con, "FB": fb}
-            # SBTimbre拡張
-            perc_voc   = p[11] if len(p) > 11 else 0
-            perc_pitch = p[13] if len(p) > 13 else 0
+            alg = con
+            fb2 = None
         else:  # .o3
             mod1, car1, fb1, con1 = parse_2op_block(p[0:11])
-            mod2, car2, fb2, con2 = parse_2op_block(p[11:22])
+            mod2, car2, fb2_, con2 = parse_2op_block(p[11:22])
             ops = [mod1, car1, mod2, car2]
-            # 旧FITOM方式でALG/FBを統一エンコード:
-            #   ALG = (conn_sel<<2)|(cnt1<<1)|cnt0
-            #         conn_sel=1(4OPモード), cnt1=con2, cnt0=con1
-            #   FB  = (fb2<<3)|fb1
-            hw  = {"ALG": (1<<2)|(con2<<1)|con1,
-                   "FB":  (fb2<<3)|fb1}
-            perc_voc = perc_pitch = 0
+            # ALG(3bit): bit0=CON1(前半)|bit1=CON2(後半)|bit2=ConnectionSEL(4OP結合、常時1)
+            alg = (1 << 2) | (con2 << 1) | con1
+            fb  = fb1
+            fb2 = fb2_
 
-        # 音色名の決定
         if raw_name:
             name = raw_name
         elif is_drum and prog in GM_DRUM_NAMES:
@@ -174,39 +183,41 @@ def convert(src_path, dst_path, bank_no=0):
             name = f"Program {prog}"
 
         patch = {
-            "prog": prog,
+            "prog": prog if not is_drum else prog,  # drums: prog=MIDIノート番号そのまま
             "name": name,
-            "hw":   hw,
+            "FB":   fb,
+            "ALG":  alg,
             "ops":  ops,
-            "empty": empty,
         }
-        if is_drum:
-            patch["midi_note"] = prog   # drums.sb: prog番号=MIDIノート番号
-        if perc_voc:
-            patch["perc_voc"]   = perc_voc
-            patch["perc_pitch"] = perc_pitch
-
+        if fb2 is not None:
+            patch["FB2"] = fb2
         patches.append(patch)
 
-    filled = sum(1 for p in patches if not p["empty"])
-    out = {
-        "name":       src_name,
-        "group":      group,
-        "bank":       bank_no,
-        "op_count":   op_count,
-        "source":     f"{Path(src_path).name} (ALSA sbiload format)",
-        "patches":    patches,
-    }
-    Path(dst_path).write_text(json.dumps(out, indent=2, ensure_ascii=False))
     kind = "drum" if is_drum else "melody"
-    print(f"OK {src_name}: {filled}/128音色 {group}({op_count}OP) {kind} → {dst_path}")
+    out = {
+        "name":             bank_name or src_name,
+        "voice_patch_type": voice_patch_type,
+        "op_count":         op_count,
+        "source":           f"{Path(src_path).name} (ALSA sbiload format)",
+        "note":             f"ALSA sbiload {ext}形式 {op_count}OP {kind} バンク。"
+                            "実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに正しく変換"
+                            "(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=0)。"
+                            "ops[i].EGTフィールド自体はOPL系では無関係のため常に0。"
+                            + ("4OPは前半ペア(M1/C1)=FB、後半ペア(M2/C2)=FB2に分離。" if op_count == 4 else "")
+                            + ("drums: prog番号=MIDIノート番号。" if is_drum else "")
+                            + "未使用エントリ(マジック0x00000000)は出力から除外。",
+        "patches": patches,
+    }
+    Path(dst_path).write_text(
+        json.dumps(out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    print(f"OK {src_name}: {len(patches)}/128音色 {voice_patch_type}({op_count}OP) {kind} → {dst_path}")
     return True
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="ALSA sbiload .sb/.o3 → FITOM_X hwbank.json")
     parser.add_argument("input",  help="*.sb or *.o3 file (or directory)")
     parser.add_argument("output", help="output file or directory")
-    parser.add_argument("--bank", type=int, default=0)
+    parser.add_argument("--bank-name", default=None, help="バンク名(省略時はファイル名)")
     args = parser.parse_args()
 
     src = Path(args.input)
@@ -216,8 +227,8 @@ if __name__ == "__main__":
         dst.mkdir(parents=True, exist_ok=True)
         for f in sorted(list(src.glob("*.sb")) + list(src.glob("*.o3"))):
             out = dst / (f.stem + ".hwbank.json")
-            convert(str(f), str(out), args.bank)
+            convert(str(f), str(out), args.bank_name)
     else:
         if dst.is_dir():
             dst = dst / (src.stem + ".hwbank.json")
-        convert(str(src), str(dst), args.bank)
+        convert(str(src), str(dst), args.bank_name)

@@ -15,7 +15,8 @@ VMA フォーマット:
 
 パラメータ26バイト:
   byte0   : 不明
-  byte1   : OPタイプ (0=2OP/OPL2, 1=4OP/OPL3)
+  byte1   : OPタイプ識別子 (実測値は0/1/12など機種依存、4OP判定には使わず
+            要素数固定 or 呼び出し側指定で判断する)
   byte2   : プログラム番号
   byte3   : LFO[7] | FB[5:3] | ALG[1:0]  (MA-2共通パラメータ)
   byte4   : 不明 (0x01固定)
@@ -31,6 +32,12 @@ MA-2 OP 5バイト:
   byte2: AR[7:4]   | SL[3:0]
   byte3: TL[7:2]   | KSL[1:0]
   byte4: DVB[7] | DAM[6] | AM[5] | WS[4:2] | xx[1:0]
+
+FITOM_X hwbank.schema.json (フラット構造)へのマッピング:
+  MULT→MUL, VIB→VIB, EGT→EGT, KSR→KSR, RR→RR, DR→DR, AR→AR, SL→SL,
+  TL→TL, KSL→KSL, AM→AM, WS→WS (すべて直接対応)
+  SUS(Sustain)/DVB(Delayed Vibrato)/DAM(Delayed AM)/LFOは対応フィールドが
+  存在しないため破棄する。
 """
 
 import json, struct, sys, argparse
@@ -78,25 +85,36 @@ GM_NAMES = [
 ]
 
 def parse_ma2_op(b5):
+    """MA-2形式5byte 1オペレータ → hwbank.schema.json準拠フラットop
+    実機EGTビット(b5[0]bit2)とRRレジスタ(b5[1]上位4bit)を、FITOMのSR/RR
+    フィールドに変換規則(docs/voice-parameter-reference.md)に従って変換する。
+    EGTビット=1(サステイン)→SR=0,RR=rr_reg<<1(4bit→5bit)
+    EGTビット=0(パーカッシブ)→SR=rr_reg<<1,RR=0
+    """
+    egt_bit = (b5[0] >> 2) & 1
+    rr_reg  = (b5[1] >> 4) & 0xF
+    if egt_bit == 1:
+        sr, rr = 0, rr_reg          # サステイン: RRはそのまま(シフトなし)
+    else:
+        sr, rr = rr_reg << 1, 0     # パーカッシブ: SRへ4bit→5bit変換
     return {
-        "MULT": (b5[0] >> 4) & 0xF,
+        "MUL":  (b5[0] >> 4) & 0xF,
         "VIB":  (b5[0] >> 3) & 1,
-        "EGT":  (b5[0] >> 2) & 1,
-        "SUS":  (b5[0] >> 1) & 1,
+        "EGT":  0,   # OPL系では無関係、常に0
         "KSR":   b5[0] & 1,
-        "RR":   (b5[1] >> 4) & 0xF,
+        "SR":    sr,
+        "RR":    rr,
         "DR":    b5[1] & 0xF,
         "AR":   (b5[2] >> 4) & 0xF,
         "SL":    b5[2] & 0xF,
         "TL":   (b5[3] >> 2) & 0x3F,
         "KSL":   b5[3] & 3,
-        "DVB":  (b5[4] >> 7) & 1,
-        "DAM":  (b5[4] >> 6) & 1,
         "AM":   (b5[4] >> 5) & 1,
         "WS":   (b5[4] >> 2) & 7,
+        # SUS(b5[0]bit1)/DVB(b5[4]bit7)/DAM(b5[4]bit6)は対応フィールドなし、破棄
     }
 
-def convert_vma(src_path, dst_path, bank_no=0):
+def convert_vma(src_path, dst_path, force_2op=False, bank_name=None):
     data = Path(src_path).read_bytes()
 
     magic = data[:4]
@@ -109,8 +127,15 @@ def convert_vma(src_path, dst_path, bank_no=0):
     is_drum = (N == 79)
 
     param_base = 8 + N * 16
-    is_4op = (data[param_base + 1] == 1) if len(data) > param_base + 1 else False
-    group  = "OPL3" if is_4op else "OPL2"
+    # OPタイプ判定バイトは機種依存で不定値(0/1/12等)を取るため、
+    # force_2opオプション優先。未指定時はALG/FB値レンジから推定する
+    # (2OPは通常ALG 0-1・FB 0-7に収まる)。
+    is_4op = False
+    if not force_2op:
+        sample_off = param_base + 1
+        is_4op = (len(data) > sample_off and data[sample_off] == 1)
+
+    group = "OPL3" if is_4op else "OPL3_2"
 
     patches = []
     for i in range(N):
@@ -122,7 +147,6 @@ def convert_vma(src_path, dst_path, bank_no=0):
 
         prog  = chunk[2]
         byte3 = chunk[3]
-        lfo   = (byte3 >> 7) & 1
         fb    = (byte3 >> 3) & 7
         alg   =  byte3 & 3
 
@@ -140,40 +164,34 @@ def convert_vma(src_path, dst_path, bank_no=0):
         else:
             name = f"Drum Note {27+i}" if is_drum else f"Program {prog}"
 
-        # 旧FITOM方式でALG/FBを統一エンコード:
-        #   ALG bit2=conn_sel(4OPなら1), bit1=cnt1(Array1 CNT), bit0=cnt0(Array0 CNT)
-        #   FB  bit5-3=fb1(Array1 FB),   bit2-0=fb0(Array0 FB)
-        if is_4op:
-            # MA-2 4OP: ALG/FBは全体共通 → 両ペアに同じ値を使用
-            # cnt0=cnt1=alg, fb0=fb1=fb, conn_sel=1
-            alg_enc = (1 << 2) | (alg << 1) | alg
-            fb_enc  = (fb << 3) | fb
-        else:
-            alg_enc = alg   # 2OP: そのまま
-            fb_enc  = fb
-
         patch = {
             "prog": i if is_drum else int(prog),
             "name": name,
-            "hw": {"ALG": alg_enc, "FB": fb_enc, "LFO": lfo},
-            "ops": ops,
+            "FB":   fb,
+            "ALG":  alg,
+            "ops":  ops,
         }
-        if is_drum:
-            patch["midi_note"] = 27 + i
         patches.append(patch)
 
     src_name = Path(src_path).stem
-    out = {
-        "name": src_name,
-        "group": group,
-        "bank": bank_no,
-        "op_count": 4 if is_4op else 2,
-        "source": f"{Path(src_path).name} (MA-2 VMA FM format)",
-        "patches": patches,
-    }
-    Path(dst_path).write_text(json.dumps(out, indent=2, ensure_ascii=False))
     op_str = "4OP" if is_4op else "2OP"
     kind   = "drum" if is_drum else "melody"
+    out = {
+        "name":             bank_name or src_name,
+        "voice_patch_type": group,
+        "op_count":         4 if is_4op else 2,
+        "source":           f"{Path(src_path).name} (MA-2 VMA FM format)",
+        "note":             f"MA-2 VMA形式 {op_str} {kind} バンク。"
+                            "SUS/DVB/DAM/LFOフィールドは対応フィールドが"
+                            "存在しないため変換時に破棄。"
+                            "実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに正しく変換"
+                            "(EGTビット=1→SR=0,RR=RRレジスタ<<1。"
+                            "EGTビット=0→SR=RRレジスタ<<1,RR=0)。"
+                            "ops[i].EGTフィールド自体はOPL系では無関係のため常に0。",
+        "patches": patches,
+    }
+    Path(dst_path).write_text(
+        json.dumps(out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
     print(f"OK {src_name}: {N}音色 {group}({op_str}) {kind} → {dst_path}")
     return True
 
@@ -181,7 +199,8 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="MA-2 VMA → FITOM_X hwbank.json")
     parser.add_argument("input",  help="*.vma ファイル (または *.vma を含むディレクトリ)")
     parser.add_argument("output", help="出力先ファイル or ディレクトリ")
-    parser.add_argument("--bank", type=int, default=0, help="HwBank番号 (default: 0)")
+    parser.add_argument("--force-2op", action="store_true", help="OPタイプ判定を無視して強制的に2OP(OPL3_2)として変換")
+    parser.add_argument("--bank-name", default=None, help="バンク名(省略時はファイル名)")
     args = parser.parse_args()
 
     src = Path(args.input)
@@ -191,8 +210,8 @@ if __name__ == "__main__":
         dst.mkdir(parents=True, exist_ok=True)
         for vma in sorted(src.glob("*.vma")):
             out = dst / (vma.stem + ".hwbank.json")
-            convert_vma(str(vma), str(out), args.bank)
+            convert_vma(str(vma), str(out), args.force_2op, args.bank_name)
     else:
         if dst.is_dir():
             dst = dst / (src.stem + ".hwbank.json")
-        convert_vma(str(src), str(dst), args.bank)
+        convert_vma(str(src), str(dst), args.force_2op, args.bank_name)

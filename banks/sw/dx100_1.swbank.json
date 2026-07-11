@@ -1,7 +1,7 @@
 {
   "name": "dx100_1 (Performance)",
   "bank": 0,
-  "note": "DX100 プリセット vol.1-4 演奏パラメータ集約 (prog 0-127) 各パッチops[]にVTL=80(VelScale Mid相当)を付与。",
+  "note": "DX100 プリセット vol.1-4 集約 (prog 0-127)。sw_bank/sw_progでdx100_1.swbank.jsonを参照。 各パッチops[]にVTL=80(VelScale Mid相当)を付与。",
   "patches": [
     {
       "prog": 0,

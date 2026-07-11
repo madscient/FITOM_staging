@@ -52,7 +52,7 @@
             "type": "integer",
             "minimum": 0,
             "maximum": 7,
-            "description": "Algorithm"
+            "description": "Algorithm。OPN/OPM: 3bit。OPL: 1bit。OPL3: bit0=CON1(前半ペア接続)/bit1=CON2(後半ペア接続)、bit2は未使用。4OP結合有効化フラグ(ConnectionSEL)はext.ALG_EXTに分離して持つ(2026年7月に訂正)。"
           },
           "AMS": {
             "type": "integer",
@@ -160,7 +160,25 @@
                   "type": "integer",
                   "minimum": -32768,
                   "maximum": 32767,
-                  "description": "OPN ch2 FXモード(3rd channel special mode)専用パラメータ。ext.DM0でモード選択。モード1/2(疑似デチューン/非整数倍率): 100/64セント単位の符号付きオフセット。モード3(固定周波数): 0.1Hz単位の絶対周波数。OPN以外・ch2以外では無視。"
+                  "description": "疑似デチューン/拡張周波数オフセット用パラメータ(100/64セント単位、getFnumber()にそのまま渡せる)。2箇所で使われる: ①OPN ch2 FXモード(3rd channel special mode)専用。ext.DM0でモード選択(モード1/2=疑似デチューン/非整数倍率、モード3=0.1Hz単位の絶対周波数)。②OPL3(COPL3)の4OP疑似デチューン(op[0]/op[2]、2026年7月〜。旧FITOMのDT1+DT2ビット合成(±8192)より広いレンジ(±32767)を持つ、OPNのFXモードと共通の仕組み)。上記以外のチップ/チャンネルでは無視される。"
+                },
+                "REV": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 15,
+                  "description": "Reverberation: 4bit (OPZのみ、オペレータ単位)"
+                },
+                "EGS": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 127,
+                  "description": "EG bias: 7bit (OPZのみ、オペレータ単位)"
+                },
+                "DT3": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 15,
+                  "description": "Fine frequency: 4bit OPZ ratio mode (OPZのみ、オペレータ単位)"
                 }
               }
             },
@@ -170,31 +188,17 @@
             "type": "object",
             "description": "チップ固有拡張パラメータ (OPZ / PSG 等)",
             "properties": {
-              "REV": {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 15
-              },
-              "EGS": {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 127
-              },
               "DM0": {
                 "type": "integer",
                 "minimum": 0,
                 "maximum": 3,
                 "description": "OPZ: Osc fixed freq flag(1bit相当、0/1)。OPN ch2: FXモード選択 (0=通常/1=疑似デチューン/2=非整数倍率/3=固定周波数)。他チップでは未使用。"
               },
-              "DT3": {
-                "type": "integer",
-                "minimum": 0,
-                "maximum": 15
-              },
               "ALG_EXT": {
                 "type": "integer",
                 "minimum": 0,
-                "maximum": 1
+                "maximum": 1,
+                "description": "ALG拡張ビット。OPM: noise有効化。OPLL: preset音色選択。OPL3: ConnectionSEL(4OP結合有効化、2026年7月に参照漏れを訂正)。いずれも1bit。"
               },
               "HWEP": {
                 "type": "integer",
