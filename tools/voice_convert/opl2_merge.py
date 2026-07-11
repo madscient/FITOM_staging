@@ -46,9 +46,11 @@ def load_opl2_bank(path):
         raise ValueError(f"{path}: OPL2系バンクが必要です (got voice_patch_type={vpt})")
     return d
 
-def merge_banks(bank_a, bank_b, alg_a, alg_b):
+def merge_banks(bank_a, bank_b, alg_a_override, alg_b_override):
     """bank_a (M1/C1ペア) と bank_b (M2/C2ペア) を合成する。
     両バンクの同一prog番号を対応させる。片方に存在しないprogはスキップ。
+    各パッチのALG(cnt0/cnt1)は、指定が無ければ各ソースバンクの該当パッチの
+    実際のALG値をそのまま個別に維持する(--alg-a/--alg-bで全パッチ一律上書きも可)。
     """
     patches_a = {p['prog']: p for p in bank_a['patches']}
     patches_b = {p['prog']: p for p in bank_b['patches']}
@@ -67,6 +69,11 @@ def merge_banks(bank_a, bank_b, alg_a, alg_b):
 
         fb_a = pa.get('FB', 0)
         fb_b = pb.get('FB', 0)
+
+        # ALGはパッチ単位でソースの値をそのまま維持(未指定時)。
+        # --alg-a/--alg-b指定時のみ全パッチ一律で上書きする。
+        alg_a = alg_a_override if alg_a_override is not None else pa.get('ALG', 0)
+        alg_b = alg_b_override if alg_b_override is not None else pb.get('ALG', 0)
 
         name_a = pa.get('name', f'Prog{prog}')
         name_b = pb.get('name', f'Prog{prog}')
@@ -111,13 +118,14 @@ def run(args):
     name_b  = Path(args.bank_b).stem
     src_name = args.name or f"{name_a} x {name_b}"
 
-    alg_a_default = bank_a['patches'][0].get('ALG', 0) if bank_a['patches'] else 0
-    alg_a = args.alg_a if args.alg_a is not None else alg_a_default
+    # ALGは指定が無ければ各パッチのソース値をそのまま維持(merge_banks内で解決)
+    patches = merge_banks(bank_a, bank_b, args.alg_a, args.alg_b)
 
-    alg_b_default = bank_b['patches'][0].get('ALG', 0) if bank_b['patches'] else 0
-    alg_b = args.alg_b if args.alg_b is not None else alg_b_default
-
-    patches = merge_banks(bank_a, bank_b, alg_a, alg_b)
+    alg_mode_desc = (
+        f"--alg-a/--alg-bで全パッチ一律指定(前半={args.alg_a}, 後半={args.alg_b})"
+        if (args.alg_a is not None or args.alg_b is not None)
+        else "各パッチのソースバンクのALG値をそのまま個別に維持(パッチごとに前半/後半で異なりうる)"
+    )
 
     out = {
         "name":             src_name,
@@ -126,8 +134,8 @@ def run(args):
         "source":           (f"{Path(args.bank_a).name} [M1/C1]"
                              f" + {Path(args.bank_b).name} [M2/C2]"),
         "note": (
-            f"OPL2バンク2本の合成による4OPパッチ。CON4={args.con4}相当"
-            f"(ALG: cnt1={alg_b & 1}(後半ペア), cnt0={alg_a & 1}(前半ペア))。"
+            f"OPL2バンク2本の合成による4OPパッチ。CON4={args.con4}相当。"
+            f"ALG(cnt0/cnt1): {alg_mode_desc}。"
             f"ext.ALG_EXT(ConnectionSEL)=0固定"
             f"(旧FITOM互換動作: 前半・後半ペアが独立してキーオン制御される)。"
             f"FB/FB2は各patchごとにBank-A/Bから独立設定。"
@@ -145,7 +153,7 @@ def run(args):
     print(f"OK: {len(patches)}音色 → {dst}")
     print(f"    M1/C1: {name_a}  (FB=Bank-Aから)")
     print(f"    M2/C2: {name_b}  (FB2=Bank-Bから)")
-    print(f"    CON4={args.con4}, 前半ペアALG={alg_a}, 後半ペアALG={alg_b}")
+    print(f"    CON4={args.con4}, ALGモード: {alg_mode_desc}")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(

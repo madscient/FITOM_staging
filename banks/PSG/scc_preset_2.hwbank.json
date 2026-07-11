@@ -1,0 +1,2214 @@
+{
+  "name": "SCC Preset (wave 8-15: Duty96.875+Triangle+Downsaw+Upsaw+Sine+Harpsi+Piano+Organ)",
+  "note": "SCC専用バンク(wave 8-15: Duty96.875+Triangle+Downsaw+Upsaw+Sine+Harpsi+Piano+Organ)。ops[0].WSでbasic_waveforms.sccwave.jsonのwave_noを直接指定。エンベロープ規則はPSG共有バンクと同一。ext.target_voice_patch_type=0x48(SCC)固定。",
+  "patches": [
+    {
+      "prog": 0,
+      "name": "Duty96.875 Sustain Fast NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 1,
+      "name": "Duty96.875 Sustain Fast Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 2,
+      "name": "Duty96.875 Sustain Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 3,
+      "name": "Duty96.875 Sustain Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 4,
+      "name": "Duty96.875 Sustain Slow NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 5,
+      "name": "Duty96.875 Sustain Slow Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 6,
+      "name": "Duty96.875 Decay Short NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 7,
+      "name": "Duty96.875 Decay Short Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 8,
+      "name": "Duty96.875 Decay Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 9,
+      "name": "Duty96.875 Decay Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 10,
+      "name": "Duty96.875 Decay Long NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 11,
+      "name": "Duty96.875 Decay Long Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 8
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 12,
+      "name": "Triangle Sustain Fast NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 13,
+      "name": "Triangle Sustain Fast Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 14,
+      "name": "Triangle Sustain Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 15,
+      "name": "Triangle Sustain Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 16,
+      "name": "Triangle Sustain Slow NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 17,
+      "name": "Triangle Sustain Slow Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 18,
+      "name": "Triangle Decay Short NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 19,
+      "name": "Triangle Decay Short Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 20,
+      "name": "Triangle Decay Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 21,
+      "name": "Triangle Decay Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 22,
+      "name": "Triangle Decay Long NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 23,
+      "name": "Triangle Decay Long Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 9
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 24,
+      "name": "Downsaw Sustain Fast NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 25,
+      "name": "Downsaw Sustain Fast Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 26,
+      "name": "Downsaw Sustain Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 27,
+      "name": "Downsaw Sustain Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 28,
+      "name": "Downsaw Sustain Slow NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 29,
+      "name": "Downsaw Sustain Slow Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 30,
+      "name": "Downsaw Decay Short NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 31,
+      "name": "Downsaw Decay Short Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 32,
+      "name": "Downsaw Decay Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 33,
+      "name": "Downsaw Decay Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 34,
+      "name": "Downsaw Decay Long NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 35,
+      "name": "Downsaw Decay Long Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 10
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 36,
+      "name": "Upsaw Sustain Fast NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 37,
+      "name": "Upsaw Sustain Fast Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 38,
+      "name": "Upsaw Sustain Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 39,
+      "name": "Upsaw Sustain Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 40,
+      "name": "Upsaw Sustain Slow NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 41,
+      "name": "Upsaw Sustain Slow Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 42,
+      "name": "Upsaw Decay Short NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 43,
+      "name": "Upsaw Decay Short Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 44,
+      "name": "Upsaw Decay Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 45,
+      "name": "Upsaw Decay Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 46,
+      "name": "Upsaw Decay Long NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 47,
+      "name": "Upsaw Decay Long Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 11
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 48,
+      "name": "Sinewave Sustain Fast NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 49,
+      "name": "Sinewave Sustain Fast Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 50,
+      "name": "Sinewave Sustain Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 51,
+      "name": "Sinewave Sustain Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 52,
+      "name": "Sinewave Sustain Slow NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 53,
+      "name": "Sinewave Sustain Slow Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 54,
+      "name": "Sinewave Decay Short NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 55,
+      "name": "Sinewave Decay Short Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 56,
+      "name": "Sinewave Decay Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 57,
+      "name": "Sinewave Decay Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 58,
+      "name": "Sinewave Decay Long NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 59,
+      "name": "Sinewave Decay Long Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 12
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 60,
+      "name": "Harpsichord Sustain Fast NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 61,
+      "name": "Harpsichord Sustain Fast Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 62,
+      "name": "Harpsichord Sustain Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 63,
+      "name": "Harpsichord Sustain Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 64,
+      "name": "Harpsichord Sustain Slow NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 65,
+      "name": "Harpsichord Sustain Slow Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 66,
+      "name": "Harpsichord Decay Short NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 67,
+      "name": "Harpsichord Decay Short Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 68,
+      "name": "Harpsichord Decay Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 69,
+      "name": "Harpsichord Decay Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 70,
+      "name": "Harpsichord Decay Long NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 71,
+      "name": "Harpsichord Decay Long Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 13
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 72,
+      "name": "Pianoforte Sustain Fast NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 73,
+      "name": "Pianoforte Sustain Fast Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 74,
+      "name": "Pianoforte Sustain Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 75,
+      "name": "Pianoforte Sustain Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 76,
+      "name": "Pianoforte Sustain Slow NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 77,
+      "name": "Pianoforte Sustain Slow Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 78,
+      "name": "Pianoforte Decay Short NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 79,
+      "name": "Pianoforte Decay Short Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 80,
+      "name": "Pianoforte Decay Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 81,
+      "name": "Pianoforte Decay Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 82,
+      "name": "Pianoforte Decay Long NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 83,
+      "name": "Pianoforte Decay Long Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 14
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 84,
+      "name": "Organ Sustain Fast NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 85,
+      "name": "Organ Sustain Fast Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 86,
+      "name": "Organ Sustain Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 87,
+      "name": "Organ Sustain Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 20,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 88,
+      "name": "Organ Sustain Slow NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 89,
+      "name": "Organ Sustain Slow Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 24,
+          "SL": 12,
+          "SR": 0,
+          "RR": 8,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 90,
+      "name": "Organ Decay Short NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 91,
+      "name": "Organ Decay Short Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 28,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 92,
+      "name": "Organ Decay Mid NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 93,
+      "name": "Organ Decay Mid Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 18,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    },
+    {
+      "prog": 94,
+      "name": "Organ Decay Long NoVib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 4
+    },
+    {
+      "prog": 95,
+      "name": "Organ Decay Long Vib",
+      "FB": 0,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 31,
+          "DR": 20,
+          "SL": 2,
+          "SR": 8,
+          "RR": 12,
+          "TL": 16,
+          "EGT": 0,
+          "WS": 15
+        }
+      ],
+      "ext": {
+        "target_voice_patch_type": 72
+      },
+      "sw_bank": 0,
+      "sw_prog": 6
+    }
+  ]
+}
