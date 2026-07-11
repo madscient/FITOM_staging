@@ -2,7 +2,7 @@
   "name": "OPLL Rhythm (OPL_RHY)",
   "voice_patch_type": "OPL_RHY",
   "source": "OPLL(YM2413) rhythm mode register image (ch6=BD, ch7=HH/SD, ch8=TOM/TCY)",
-  "note": "OPLLリズムモードの標準レジスタ値をOPL_RHY用にコンバート。Bass Drumは2op(Modulator+Carrier)、Hi-Hat/Snare Drum/Tom-tom/Top Cymbalは各1opの独立楽器。Hi-Hat/Snare Drum/Tom-tom/Top CymbalのTL/KSLが0なのは元データの仕様(OPLL実機ではこれら打楽器の音量は専用ボリュームレジスタR$36-R$38で個別制御され、このレジスタイメージのTLフィールドは未使用のため)。",
+  "note": "OPLLリズムモードの標準レジスタ値をOPL_RHY用にコンバート。Bass Drumは2op(Modulator+Carrier)、Hi-Hat/Snare Drum/Tom-tom/Top Cymbalは各1opの独立楽器。実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに正しく変換(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=0)。ops[i].EGTフィールド自体はOPL系では無関係のため常に0。Hi-Hat/Snare Drum/Tom-tom/Top CymbalのTL/KSLが0なのは元データの仕様(OPLL実機ではこれら打楽器の音量は専用ボリュームレジスタR$36-R$38で個別制御され、このレジスタイメージのTLフィールドは未使用のため)。",
   "patches": [
     {
       "prog": 0,
@@ -21,7 +21,8 @@
           "AR": 13,
           "DR": 15,
           "SL": 6,
-          "RR": 10,
+          "SR": 20,
+          "RR": 0,
           "WS": 1
         },
         {
@@ -35,7 +36,8 @@
           "AR": 15,
           "DR": 8,
           "SL": 6,
-          "RR": 13,
+          "SR": 26,
+          "RR": 0,
           "WS": 0
         }
       ],
@@ -57,7 +59,8 @@
           "AR": 12,
           "DR": 8,
           "SL": 10,
-          "RR": 7,
+          "SR": 14,
+          "RR": 0,
           "WS": 0
         }
       ],
@@ -79,7 +82,8 @@
           "AR": 13,
           "DR": 8,
           "SL": 4,
-          "RR": 8,
+          "SR": 16,
+          "RR": 0,
           "WS": 0
         }
       ],
@@ -101,7 +105,8 @@
           "AR": 15,
           "DR": 8,
           "SL": 5,
-          "RR": 9,
+          "SR": 18,
+          "RR": 0,
           "WS": 0
         }
       ],
@@ -123,7 +128,8 @@
           "AR": 10,
           "DR": 10,
           "SL": 5,
-          "RR": 5,
+          "SR": 10,
+          "RR": 0,
           "WS": 0
         }
       ],

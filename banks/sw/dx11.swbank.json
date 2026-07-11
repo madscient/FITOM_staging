@@ -1,7 +1,7 @@
 {
   "name": "dx11 (Performance)",
   "bank": 0,
-  "note": "DX11 内蔵プリセット演奏パラメータ (bank 1〜4 集約, prog 0-127)。各パッチops[]にVTL=80(VelScale Mid相当)を付与。",
+  "note": "DX11 内蔵プリセット (bank 1〜4 集約, prog 0-127)。sw_bank/sw_progでdx11.swbank.jsonを参照。ノイズ有効フラグ検出時はhw.ext.ALG_EXTにマッピング。 各パッチops[]にVTL=80(VelScale Mid相当)を付与。",
   "patches": [
     {
       "prog": 0,

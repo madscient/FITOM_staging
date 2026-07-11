@@ -60,25 +60,23 @@ def is_valid_name(name_bytes):
     return all(0x20 <= b <= 0x7E for b in name_bytes)
 
 def parse_op_block(b8):
-    """8バイトのOP blockを解析してFmHwOp互換辞書を返す"""
+    """8バイトのOP blockを解析してhwbank.schema.json準拠フラットop辞書を返す"""
     return {
-        "TL":    b8[0] & 0x7F,
-        "MUL":   b8[3] & 0x0F,
-        "DT1":  (b8[3] >> 4) & 0x07,
-        "DT2":  (b8[6] >> 6) & 0x03,
-        "KS":   (b8[4] >> 6) & 0x03,   # = KRS
-        "AR":    b8[4] & 0x1F,
-        "D1R":   b8[5] & 0x1F,
-        "D2R":   b8[6] & 0x1F,
-        "D1L":  (b8[7] >> 4) & 0x0F,   # = SL
-        "RR":    b8[7] & 0x0F,
-        "AM":   (b8[5] >> 7) & 0x01,   # C/M_AM flag
-        # ソフトパラメータ
-        "VEL_TL":   (b8[1] >> 4) & 0x07,
-        "VEL_AR":   (b8[5] >> 5) & 0x03,
-        "KLS_type": (((b8[3] >> 7) & 1) << 1) | ((b8[1] >> 7) & 1),
-        "KLS_depth": (b8[2] >> 4) & 0x0F,
-        "TL_adj":    b8[2] & 0x0F,
+        "TL":  b8[0] & 0x7F,
+        "MUL": b8[3] & 0x0F,
+        "DT1": (b8[3] >> 4) & 0x07,
+        "DT2": (b8[6] >> 6) & 0x03,
+        "KSR": (b8[4] >> 6) & 0x03,
+        "AR":  b8[4] & 0x1F,
+        "DR":  b8[5] & 0x1F,
+        "SR":  b8[6] & 0x1F,
+        "SL":  (b8[7] >> 4) & 0x0F,
+        "RR":  b8[7] & 0x0F,
+        "AM":  (b8[5] >> 7) & 0x01,
+        "VIB": 0,
+        "EGT": 0,
+        "WS":  0,
+        # VEL_TL/VEL_AR/KLS_type/KLS_depth/TL_adjは対応フィールドがないため破棄
     }
 
 def parse_voice(vbytes):
@@ -108,27 +106,40 @@ def parse_voice(vbytes):
     ops = [raw_ops[OP_SLOT_ORDER[i]] for i in range(4)]
 
     return {
-        "name":  name,
-        "hw": {
-            "ALG": alg,
-            "FB":  fb,
-            "PMS": pms,
-            "AMS": ams,
-            "LFO_WAVE":   lfo_wave,
-            "LFO_SYNC":   sync_lfo,
-            "LFO_ENABLE": enable_lfo,
-        },
-        "ops": ops,
+        "name": name,
+        "FB":   fb,
+        "ALG":  alg,
+        "AMS":  ams,
+        "PMS":  pms,
+        "ops":  ops,
         "sw": {
             "lfo_speed":  lfo_speed,
             "amd":        amd,
             "pmd":        pmd,
             "transpose":  transpose,
             "op_enable":  op_enable,
+            "lfo_wave":   lfo_wave,
+            "lfo_sync":   sync_lfo,
+            "lfo_enable": enable_lfo,
         },
     }
 
-def convert(src_path, dst_path, bank_no=0):
+def lfospeed_to_rate(speed_0_255, enabled):
+    """FB-01 LFO SPEED(0-255) → swbank LFR(1-127,対数カーブ0.5-50Hz)への近似変換"""
+    if not enabled or speed_0_255 <= 0:
+        return 0
+    return max(1, min(127, round(speed_0_255 * 127 / 255)))
+
+def pmd_to_depth_cents(pmd_0_127):
+    """FB-01 PMD(0-127) → swbank depth_cents への近似変換(0-600セント)"""
+    return round(pmd_0_127 * 600 / 127)
+
+def transpose_to_fine(transpose_signed):
+    """FB-01 transpose(signed byte, 100cents単位) → fine_transpose(セント、±1200でクリップ)"""
+    cents = transpose_signed * 100
+    return max(-1200, min(1200, cents))
+
+def convert(src_path, dst_hwbank_path, dst_swbank_path, bank_no=0):
     data = Path(src_path).read_bytes()
     assert len(data) == HEADER_SIZE + VOICE_COUNT * VOICE_SIZE, \
         f"Expected {HEADER_SIZE + VOICE_COUNT*VOICE_SIZE}, got {len(data)}"
@@ -136,7 +147,8 @@ def convert(src_path, dst_path, bank_no=0):
     bank_name = data[:8].decode('ascii', errors='replace').rstrip()
     src_name  = Path(src_path).stem
 
-    patches = []
+    hw_patches = []
+    sw_patches = []
     prog_no = 0
     for i in range(VOICE_COUNT):
         off    = HEADER_SIZE + i * VOICE_SIZE
@@ -144,48 +156,85 @@ def convert(src_path, dst_path, bank_no=0):
         name_bytes = vbytes[:7]
 
         if not is_valid_name(name_bytes):
-            continue  # 未使用スロットをスキップ
+            continue
 
         voice = parse_voice(vbytes)
-        patches.append({
-            "prog":  prog_no,
-            "slot":  i,           # 元のスロット番号
-            "name":  voice["name"],
-            "hw":    voice["hw"],
-            "ops":   voice["ops"],
-            "sw":    voice["sw"],
+        pname = voice["name"]
+
+        hw_patches.append({
+            "prog": prog_no,
+            "name": pname,
+            "FB":   voice["FB"],
+            "ALG":  voice["ALG"],
+            "AMS":  voice["AMS"],
+            "PMS":  voice["PMS"],
+            "ops":  voice["ops"],
+            "sw_bank": bank_no,
+            "sw_prog": prog_no,
+        })
+        sw = voice["sw"]
+        sw_patches.append({
+            "prog": prog_no,
+            "name": pname,
+            "sw": {
+                "LWF": sw["lfo_wave"],
+                "LFS": sw["lfo_sync"],
+                "LFM": 0,
+                "LFD": 0,   # FB-01データに遅延情報なし
+                "LFR": lfospeed_to_rate(sw["lfo_speed"], sw["lfo_enable"]),
+                "LFI": 0,
+                "depth_cents": pmd_to_depth_cents(sw["pmd"]),
+            },
+            "fine_transpose": transpose_to_fine(sw["transpose"]),
         })
         prog_no += 1
 
-    out = {
-        "name":     f"{src_name} ({bank_name})",
-        "group":    "OPM",
-        "bank":     bank_no,
+    hw_out = {
+        "name":             f"{src_name} ({bank_name})",
+        "voice_patch_type": "OPZ2",
         "op_count": 4,
         "source":   f"{Path(src_path).name} (Yamaha FB-01 ROM dump)",
-        "patches":  patches,
+        "note":     "FB-01系最上位(OPZ2)として宣言。ops[]=[M1,C1,M2,C2]順"
+                    "(FB-01格納順OP#0,OP#2,OP#1,OP#3から並び替え済み)。"
+                    "sw_bank/sw_progで対になるswbank(同名.swbank.json)を参照。"
+                    "VEL_TL/VEL_AR/KLS_type/KLS_depth/TL_adjは対応フィールドが"
+                    "存在しないため破棄。",
+        "patches": hw_patches,
     }
-    Path(dst_path).write_text(json.dumps(out, indent=2, ensure_ascii=False))
-    print(f"OK {src_name}: {len(patches)}音色 OPM(4OP) → {dst_path}")
+    sw_out = {
+        "name": f"{src_name} (Performance)",
+        "bank": bank_no,
+        "note": "FB-01のLFO速度/PMD/transposeから変換。速度・深さの換算式は"
+                "実機の正確なカーブが不明なため線形近似。AMDは対応フィールドなし破棄。",
+        "patches": sw_patches,
+    }
+
+    Path(dst_hwbank_path).write_text(
+        json.dumps(hw_out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    Path(dst_swbank_path).write_text(
+        json.dumps(sw_out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
+    print(f"OK {src_name}: {len(hw_patches)}音色 → {dst_hwbank_path} + {dst_swbank_path}")
     return True
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Yamaha FB-01 .dmp → FITOM_X hwbank.json (OPMグループ)")
+        description="Yamaha FB-01 .dmp → FITOM_X hwbank.json + swbank.json (OPZ2グループ)")
     parser.add_argument("input",  help="*.dmp ファイル (またはディレクトリ)")
-    parser.add_argument("output", help="出力先ファイル or ディレクトリ")
+    parser.add_argument("output", help="出力先ディレクトリ")
     parser.add_argument("--bank", type=int, default=0)
     args = parser.parse_args()
 
     src = Path(args.input)
     dst = Path(args.output)
+    dst.mkdir(parents=True, exist_ok=True)
+
+    def do_convert(f):
+        hw_out = dst / (f.stem + ".hwbank.json")
+        sw_out = dst / (f.stem + ".swbank.json")
+        convert(str(f), str(hw_out), str(sw_out), args.bank)
 
     if src.is_dir():
-        dst.mkdir(parents=True, exist_ok=True)
         for f in sorted(src.glob("*.dmp")):
-            out = dst / (f.stem + ".hwbank.json")
-            convert(str(f), str(out), args.bank)
+            do_convert(f)
     else:
-        if dst.is_dir():
-            dst = dst / (src.stem + ".hwbank.json")
-        convert(str(src), str(dst), args.bank)
+        do_convert(src)

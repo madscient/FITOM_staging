@@ -135,7 +135,6 @@ def transpose_to_fine(transpose_0_48):
 def parse_vmem_voice(vbytes):
     """128バイトのVMEMデータを解析してHwPatch(フラット構造)+SwPatchデータに変換"""
     ops = []
-    eg_bias_list = []
     for op_base in VMEM_OP_BASES:
         p = vbytes[op_base:op_base+10]
         ar   = p[0] & 0x1F
@@ -159,8 +158,9 @@ def parse_vmem_voice(vbytes):
         ops.append({
             "AR": ar, "DR": d1r, "SR": d2r, "RR": rr, "SL": d1l,
             "TL": tl, "KSR": ksr, "MUL": mul, "DT1": dt1, "DT2": dt2, "AM": am,
+            "EGS": eg_bias,   # EG bias(7bit、OPZのみ、オペレータ単位): DX21/DX100の
+                              # EG_BIAS_SENS(3bit)をそのまま格納(範囲0-7は0-127の部分集合)
         })
-        eg_bias_list.append(eg_bias)
 
     p40 = vbytes[40]
     lfo_sync = (p40 >> 7) & 1
@@ -183,9 +183,6 @@ def parse_vmem_voice(vbytes):
     # P8のFIXEDは全4オペレータ共通のはずなので先頭opの値を代表として使う
     p8_op0 = vbytes[VMEM_OP_BASES[0]+8]
     fixed_flag = (p8_op0 >> 7) & 1
-    # EG_BIAS_SENSはオペレータ単位だが hw.ext はチャンネル単位1つしか持たない
-    # ため、4オペレータの最大値を代表値として採用する近似実装。
-    eg_bias_rep = max(eg_bias_list)
 
     name = ''.join(
         chr(vbytes[57+i]) if 32 <= vbytes[57+i] <= 126 else ' '
@@ -197,8 +194,7 @@ def parse_vmem_voice(vbytes):
         "FB": fb, "ALG": alg, "AMS": ams, "PMS": pms,
         "ops": ops,
         "ext": {
-            "EGS": eg_bias_rep,     # 下位3bit相当。OPZ実機ビット割付は要検証
-            "DM0": fixed_flag,      # OPZ Osc fixed freq flag
+            "DM0": fixed_flag,      # OPZ Osc fixed freq flag(未実装、要データシート再確認)
             "ALG_EXT": 1 if noise else 0,  # ノイズ有効フラグ
         },
         "sw": {

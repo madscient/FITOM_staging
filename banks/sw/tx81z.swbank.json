@@ -1,0 +1,1799 @@
+{
+  "name": "tx81z (Performance)",
+  "bank": 5,
+  "note": "TX81Z 内蔵プリセット演奏パラメータ (bank 1〜4 集約, prog 0-127)。",
+  "patches": [
+    {
+      "prog": 0,
+      "name": "GrandPiano",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 1,
+      "name": "Uprt piano",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 2,
+      "name": "Deep Grd",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 3,
+      "name": "HonkeyTonk",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -700
+    },
+    {
+      "prog": 4,
+      "name": "Elec Grand",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 5,
+      "name": "Fuzz Piano",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 64,
+        "LFR": 35,
+        "LFI": 0,
+        "depth_cents": 12
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 6,
+      "name": "SkoolPiano",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 7,
+      "name": "Thump Pno",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 24,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 8,
+      "name": "LoTine81Z",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 10,
+        "LFR": 26,
+        "LFI": 0,
+        "depth_cents": 12
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 9,
+      "name": "HiTine81Z",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 10,
+        "LFR": 26,
+        "LFI": 0,
+        "depth_cents": 12
+      },
+      "fine_transpose": -700
+    },
+    {
+      "prog": 10,
+      "name": "ElectroPno",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 10,
+        "LFR": 26,
+        "LFI": 0,
+        "depth_cents": 12
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 11,
+      "name": "NewElectro",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 26,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 12,
+      "name": "DynomiteEP",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 26,
+        "LFI": 0,
+        "depth_cents": 6
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 13,
+      "name": "DynoWurlie",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 4,
+        "LFR": 31,
+        "LFI": 0,
+        "depth_cents": 97
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 14,
+      "name": "Wood Piano",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 32,
+        "LFI": 0,
+        "depth_cents": 42
+      },
+      "fine_transpose": 1200
+    },
+    {
+      "prog": 15,
+      "name": "Reed Piano",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 30,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 16,
+      "name": "PercOrgan",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 41,
+        "LFI": 0,
+        "depth_cents": 18
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 17,
+      "name": "16 8 4 2 F",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 18,
+      "name": "PumpOrgan",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 26,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -700
+    },
+    {
+      "prog": 19,
+      "name": "<6 Tease>",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 236
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 20,
+      "name": "Farcheeza",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 109
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 21,
+      "name": "Small Pipe",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 38,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 22,
+      "name": "Big Church",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 23,
+      "name": "AnalogOrgn",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 27,
+        "LFR": 36,
+        "LFI": 0,
+        "depth_cents": 42
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 24,
+      "name": "Thin Clav",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 36,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 25,
+      "name": "EZ Clav",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 35,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 26,
+      "name": "Fuzz Clavi",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 27,
+      "name": "LiteHarpsi",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 36,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 28,
+      "name": "RichHarpsi",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 29,
+      "name": "Celeste",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 32,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 1200
+    },
+    {
+      "prog": 30,
+      "name": "BriteCelst",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 33,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 500
+    },
+    {
+      "prog": 31,
+      "name": "Squeezebox",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 32,
+        "LFI": 0,
+        "depth_cents": 18
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 32,
+      "name": "Trumpet81Z",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 32,
+        "LFR": 38,
+        "LFI": 0,
+        "depth_cents": 30
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 33,
+      "name": "Full Brass",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 19,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 48
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 34,
+      "name": "Flugelhorn",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 32,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 42
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 35,
+      "name": "ChorusBras",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 8,
+        "LFR": 36,
+        "LFI": 0,
+        "depth_cents": 36
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 36,
+      "name": "FrenchHorn",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 32,
+        "LFR": 33,
+        "LFI": 0,
+        "depth_cents": 48
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 37,
+      "name": "AtackBrass",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 27,
+        "LFR": 36,
+        "LFI": 0,
+        "depth_cents": 36
+      },
+      "fine_transpose": -700
+    },
+    {
+      "prog": 38,
+      "name": "SpitBoneBC",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 32,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 42
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 39,
+      "name": "Horns BC",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 40,
+      "name": "MelloTenor",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 22,
+        "LFR": 38,
+        "LFI": 0,
+        "depth_cents": 67
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 41,
+      "name": "RaspAlto",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 12,
+        "LFR": 38,
+        "LFI": 0,
+        "depth_cents": 55
+      },
+      "fine_transpose": 1200
+    },
+    {
+      "prog": 42,
+      "name": "Flute",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 9,
+        "LFR": 38,
+        "LFI": 0,
+        "depth_cents": 42
+      },
+      "fine_transpose": 1200
+    },
+    {
+      "prog": 43,
+      "name": "Pan Floot",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 17,
+        "LFR": 38,
+        "LFI": 0,
+        "depth_cents": 48
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 44,
+      "name": "Bassoon",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 10,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 42
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 45,
+      "name": "Oboe",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 22,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 48
+      },
+      "fine_transpose": 1200
+    },
+    {
+      "prog": 46,
+      "name": "Clarinet",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 26,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 42
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 47,
+      "name": "Harmonica",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 19,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 12
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 48,
+      "name": "DoubleBass",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 10,
+        "LFR": 33,
+        "LFI": 0,
+        "depth_cents": 79
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 49,
+      "name": "BowCello",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 9,
+        "LFR": 33,
+        "LFI": 0,
+        "depth_cents": 115
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 50,
+      "name": "BoxCello",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 8,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 91
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 51,
+      "name": "SoloViolin",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 8,
+        "LFR": 38,
+        "LFI": 0,
+        "depth_cents": 36
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 52,
+      "name": "HiString 1",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 8,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 55
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 53,
+      "name": "LowString",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 8,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 61
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 54,
+      "name": "Pizzicato",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 55,
+      "name": "Harp",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 35,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 500
+    },
+    {
+      "prog": 56,
+      "name": "ReverbStrg",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 10,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 61
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 57,
+      "name": "SynString",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 8,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 91
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 58,
+      "name": "Voices",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 33,
+        "LFI": 0,
+        "depth_cents": 30
+      },
+      "fine_transpose": -700
+    },
+    {
+      "prog": 59,
+      "name": "HarmoPad",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 18,
+        "LFR": 36,
+        "LFI": 0,
+        "depth_cents": 170
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 60,
+      "name": "FanfarTpts",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 36
+      },
+      "fine_transpose": -700
+    },
+    {
+      "prog": 61,
+      "name": "HiString 2",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 8,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 55
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 62,
+      "name": "PercFlute",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 5,
+        "LFR": 36,
+        "LFI": 0,
+        "depth_cents": 67
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 63,
+      "name": "BreathOrgn",
+      "sw": {
+        "LWF": 3,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 127,
+        "LFI": 0,
+        "depth_cents": 285
+      },
+      "fine_transpose": -700
+    },
+    {
+      "prog": 64,
+      "name": "NylonGuit",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 18
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 65,
+      "name": "Guitar #1",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 26,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 66,
+      "name": "TwelveStrg",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 26,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 67,
+      "name": "Funky Pick",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 26,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 68,
+      "name": "AllThatJaz",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 18
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 69,
+      "name": "HeavyMetal",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 28,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 30
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 70,
+      "name": "Old Banjo",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 71,
+      "name": "Zither",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 72,
+      "name": "ElecBass 1",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 36,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 73,
+      "name": "SqncrBass",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 74,
+      "name": "SynFunkBas",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 75,
+      "name": "ElecBass 2",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 44,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 76,
+      "name": "AnalogBass",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 77,
+      "name": "Jaco Bass",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 10,
+        "LFR": 32,
+        "LFI": 0,
+        "depth_cents": 36
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 78,
+      "name": "LatelyBass",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 32,
+        "LFI": 0,
+        "depth_cents": 42
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 79,
+      "name": "MonophBass",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 36,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 80,
+      "name": "StadiumSol",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 28,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 30
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 81,
+      "name": "TrumptSolo",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 4,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 91
+      },
+      "fine_transpose": -700
+    },
+    {
+      "prog": 82,
+      "name": "BCSexyPhon",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 30,
+        "LFR": 38,
+        "LFI": 0,
+        "depth_cents": 73
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 83,
+      "name": "Lyrisyn",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 38,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 84,
+      "name": "WarmSquare",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 41,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 85,
+      "name": "Sync Lead",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 22,
+        "LFR": 44,
+        "LFI": 0,
+        "depth_cents": 85
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 86,
+      "name": "MellowSqar",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 41,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 87,
+      "name": "Jazz Flute",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 22,
+        "LFR": 41,
+        "LFI": 0,
+        "depth_cents": 109
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 88,
+      "name": "HeavyLead",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 50,
+        "LFR": 41,
+        "LFI": 0,
+        "depth_cents": 36
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 89,
+      "name": "Java Jive",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 14,
+        "LFI": 0,
+        "depth_cents": 48
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 90,
+      "name": "Xylophone",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 91,
+      "name": "GreatVibes",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 28,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 92,
+      "name": "Sitar",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 42,
+        "LFI": 0,
+        "depth_cents": 30
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 93,
+      "name": "Bell Pad",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 36
+      },
+      "fine_transpose": 500
+    },
+    {
+      "prog": 94,
+      "name": "PlasticHit",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 14,
+        "LFR": 35,
+        "LFI": 0,
+        "depth_cents": 30
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 95,
+      "name": "DigiAnnie",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 96,
+      "name": "BaadBreath",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 8,
+        "LFR": 37,
+        "LFI": 0,
+        "depth_cents": 91
+      },
+      "fine_transpose": -700
+    },
+    {
+      "prog": 97,
+      "name": "VocalNuts",
+      "sw": {
+        "LWF": 0,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 21,
+        "LFI": 0,
+        "depth_cents": 491
+      },
+      "fine_transpose": -100
+    },
+    {
+      "prog": 98,
+      "name": "KrstlChoir",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 44,
+        "LFI": 0,
+        "depth_cents": 91
+      },
+      "fine_transpose": 500
+    },
+    {
+      "prog": 99,
+      "name": "Metalimba",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 100,
+      "name": "WaterGlass",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 101,
+      "name": "BowedBell",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 8,
+        "LFR": 38,
+        "LFI": 0,
+        "depth_cents": 103
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 102,
+      "name": ">>WOW<<",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 103,
+      "name": "Fuzzy Koto",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 1,
+        "LFR": 41,
+        "LFI": 0,
+        "depth_cents": 121
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 104,
+      "name": "Spc Midiot",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 17,
+        "LFR": 40,
+        "LFI": 0,
+        "depth_cents": 85
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 105,
+      "name": "Gurgle",
+      "sw": {
+        "LWF": 3,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 69,
+        "LFR": 50,
+        "LFI": 0,
+        "depth_cents": 164
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 106,
+      "name": "Hole in 1",
+      "sw": {
+        "LWF": 3,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 74,
+        "LFI": 0,
+        "depth_cents": 600
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 107,
+      "name": "Birds",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 44,
+        "LFI": 0,
+        "depth_cents": 485
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 108,
+      "name": "MalibuNite",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 6,
+        "LFI": 0,
+        "depth_cents": 400
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 109,
+      "name": "Helicopter",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 65,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 110,
+      "name": "Flight Sim",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 73,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 111,
+      "name": "Brthbells",
+      "sw": {
+        "LWF": 3,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 108,
+        "LFI": 0,
+        "depth_cents": 430
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 112,
+      "name": "Storm Wind",
+      "sw": {
+        "LWF": 3,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 127,
+        "LFI": 0,
+        "depth_cents": 600
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 113,
+      "name": "Alarm Call",
+      "sw": {
+        "LWF": 1,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 71,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 114,
+      "name": "Racing Car",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 6,
+        "LFI": 0,
+        "depth_cents": 364
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 115,
+      "name": "Whistling",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 4,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 91
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 116,
+      "name": "Space Talk",
+      "sw": {
+        "LWF": 1,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 64,
+        "LFI": 0,
+        "depth_cents": 600
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 117,
+      "name": "Space Vibe",
+      "sw": {
+        "LWF": 1,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 455
+      },
+      "fine_transpose": 600
+    },
+    {
+      "prog": 118,
+      "name": "Timpani",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 27,
+        "LFI": 0,
+        "depth_cents": 18
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 119,
+      "name": "FM Hi-Hats",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 0,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 120,
+      "name": "Bass Drum",
+      "sw": {
+        "LWF": 3,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 127,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1100
+    },
+    {
+      "prog": 121,
+      "name": "Tube Bells",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 9,
+        "LFI": 0,
+        "depth_cents": 24
+      },
+      "fine_transpose": 1200
+    },
+    {
+      "prog": 122,
+      "name": "Noise Shot",
+      "sw": {
+        "LWF": 3,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 127,
+        "LFI": 0,
+        "depth_cents": 600
+      },
+      "fine_transpose": 1100
+    },
+    {
+      "prog": 123,
+      "name": "Snare 1",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 124,
+      "name": "Snare 2",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -1200
+    },
+    {
+      "prog": 125,
+      "name": "Hand Drum",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 45,
+        "LFI": 0,
+        "depth_cents": 48
+      },
+      "fine_transpose": 0
+    },
+    {
+      "prog": 126,
+      "name": "Synballs",
+      "sw": {
+        "LWF": 2,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 3,
+        "LFR": 0,
+        "LFI": 0,
+        "depth_cents": 0
+      },
+      "fine_transpose": -600
+    },
+    {
+      "prog": 127,
+      "name": "Efem Toms",
+      "sw": {
+        "LWF": 3,
+        "LFS": 0,
+        "LFM": 0,
+        "LFD": 0,
+        "LFR": 127,
+        "LFI": 0,
+        "depth_cents": 600
+      },
+      "fine_transpose": 800
+    }
+  ]
+}
