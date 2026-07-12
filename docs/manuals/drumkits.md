@@ -764,6 +764,8 @@
 
 ### Prog=11: OPNA Built-in set
 
+> 「固定ch」列の意味は[内蔵リズム音源の楽器選択方法](builtin_rhythm.md#opna-rhythm)を参照してください。
+
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 固定ch | 演奏ノート |
 |---|---|---|---|---|---|
 | 35 | Acoustic Bass Drum | 内蔵リズム音源 | 17/0 | 0 | 35 |
@@ -786,6 +788,8 @@
 | 59 | Ride Cymbal 2 | 内蔵リズム音源 | 17/0 | 2 | 59 |
 
 ### Prog=12: OPLL Built-in set
+
+> 「固定ch」列の意味は[内蔵リズム音源の楽器選択方法](builtin_rhythm.md#opll-rhythm)を参照してください。
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 固定ch | 演奏ノート | パフォーマンス |
 |---|---|---|---|---|---|---|

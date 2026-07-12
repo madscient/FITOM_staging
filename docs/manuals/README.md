@@ -9,6 +9,7 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)とProgram Changeによる
 2. [バンクマップ(CC#0 / CC#32)](#2-バンクマップcc0--cc32)
 3. [パフォーマンスバンク(SwPatch)マップ](swbank.md)
 4. [ドラムキット一覧・ノートマップ](drumkits.md)
+5. [内蔵リズム音源(CC#0=112)の楽器選択方法](builtin_rhythm.md)
 
 ## 1. 音源選択モードの概要
 
@@ -102,5 +103,5 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)による音色バンクの一覧です。
 | 82 | 1 | ADPCMA | [PSS-680/PSR-38 ADPCM-A (OPNB)](patches/adpcma.md#cc321) |
 | 84 | 0 | AWM | [YRW801 GM (melodic)](patches/awm.md#cc320) |
 | 84 | 1 | AWM | [YRW801 GM (drum, ws>=128 fixed table)](patches/awm.md#cc321) |
-| 112 | 17 | 内蔵リズム(OPNA) | [OPNA内蔵リズム](drumkits.md#opna-built-in-set) |
-| 112 | 40 | 内蔵リズム(OPLL) | [OPLL内蔵リズム](drumkits.md#opll-built-in-set) |
+| 112 | 17 | 内蔵リズム(OPNA) | [OPNA内蔵リズム](builtin_rhythm.md#opna-rhythm) |
+| 112 | 40 | 内蔵リズム(OPLL) | [OPLL内蔵リズム](builtin_rhythm.md#opll-rhythm) |
