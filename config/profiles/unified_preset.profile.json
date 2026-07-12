@@ -320,7 +320,7 @@
       },
       {
         "group": "OPLL",
-        "bank": 0,
+        "bank": 3,
         "file": "banks/OPLL/rom_sw_meta.hwbank.json",
         "role": "builtin_swpatch_meta"
       },
