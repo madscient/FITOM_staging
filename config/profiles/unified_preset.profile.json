@@ -297,6 +297,21 @@
         "group": "SSG",
         "bank": 3,
         "file": "banks/PSG/scc_preset_2.hwbank.json"
+      },
+      {
+        "group": "AWM",
+        "bank": 0,
+        "file": "banks/OPL4AWM/opl4awm_yrw801_gm.samplezonebank.json"
+      },
+      {
+        "group": "AWM",
+        "bank": 1,
+        "file": "banks/OPL4AWM/opl4awm_yrw801_drum.samplezonebank.json"
+      },
+      {
+        "group": "ADPCMB",
+        "bank": 0,
+        "file": "banks/PCM/pss680/pss680_opna.pcmbank.json"
       }
     ],
     "sw_banks": [
@@ -327,7 +342,78 @@
         "file": "banks/patches/gm_native_opm.patchbank.json"
       }
     ],
-    "drum_banks": [],
+    "drum_banks": [
+      {
+        "prog": 1,
+        "name": "ADPCM-A GM set",
+        "file": "banks/drums/pss680_opnb.drumkit.json"
+      },
+      {
+        "prog": 2,
+        "name": "ALSA Preset 2OP set",
+        "file": "banks/drums/alsa_preset_2op.drumkit.json"
+      },
+      {
+        "prog": 3,
+        "name": "ALSA Preset 4OP set",
+        "file": "banks/drums/alsa_preset_4op.drumkit.json"
+      },
+      {
+        "prog": 4,
+        "name": "MA-2 Preset 2OP set",
+        "file": "banks/drums/ma2_preset_2op.drumkit.json"
+      },
+      {
+        "prog": 5,
+        "name": "MA-2 Basic 2OP set",
+        "file": "banks/drums/ma2_basic_2op.drumkit.json"
+      },
+      {
+        "prog": 6,
+        "name": "MA-2 Luminous 2OP set",
+        "file": "banks/drums/ma2_luminous_2op.drumkit.json"
+      },
+      {
+        "prog": 7,
+        "name": "MA-2 MicroComputer 2OP set",
+        "file": "banks/drums/ma2_microcomputer_2op.drumkit.json"
+      },
+      {
+        "prog": 8,
+        "name": "MA-2 Digital 2OP set",
+        "file": "banks/drums/ma2_digital_2op.drumkit.json"
+      },
+      {
+        "prog": 9,
+        "name": "MA-2 Acid 2OP set",
+        "file": "banks/drums/ma2_acid_2op.drumkit.json"
+      },
+      {
+        "prog": 10,
+        "name": "MA-2 Variant 2OP set",
+        "file": "banks/drums/ma2_variant_2op.drumkit.json"
+      },
+      {
+        "prog": 11,
+        "name": "OPNA Built-in set",
+        "file": "banks/drums/opna_builtin.drumkit.json"
+      },
+      {
+        "prog": 12,
+        "name": "OPLL Built-in set",
+        "file": "banks/drums/opll_rhythm.drumkit.json"
+      },
+      {
+        "prog": 14,
+        "name": "ADPCM-B GM set",
+        "file": "banks/drums/pss680_opna.drumkit.json"
+      },
+      {
+        "prog": 15,
+        "name": "OPL4-AWM GM set",
+        "file": "banks/drums/opl4awm.drumkit.json"
+      }
+    ],
     "pcm_banks": []
   }
 }
