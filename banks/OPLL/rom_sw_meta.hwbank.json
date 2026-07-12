@@ -1,0 +1,5 @@
+{
+  "name": "OPLL ROM Voice SwPatch Meta (Skeleton)",
+  "note": "role=\"builtin_swpatch_meta\"専用メタバンク(2026年7月新設)。OPLL ROM音色(opllRomPatches_)にパフォーマンスパッチ(SwPatch)を紐づけるためのuser specific識別子(BuiltinRef)テーブル。通常のHwBankRegistryには登録されずPatchManager::opllBuiltinMetaBank_に直接ルーティングされる。プリセットバンクとしては使用せず、パッチ設計者が個別に用途を決めて割り当てるためのスケルトンとして空のまま提供する。各エントリは{\"prog\": N, \"builtin\": {\"patch_type\": \"OPLL|OPLLX|OPLLP|VRC7\", \"patch_no\": 1-15}, \"sw_bank\": N, \"sw_prog\": N} の形式で追記する。",
+  "patches": []
+}

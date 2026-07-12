@@ -135,6 +135,69 @@
       ],
       "sw_bank": 0,
       "sw_prog": 2
+    },
+    {
+      "prog": 5,
+      "name": "Tom (Pitch LFO)",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "KSL": 0,
+          "TL": 24,
+          "AR": 13,
+          "DR": 15,
+          "SL": 6,
+          "SR": 20,
+          "RR": 0,
+          "WS": 1
+        },
+        {
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "KSL": 0,
+          "TL": 15,
+          "AR": 15,
+          "DR": 8,
+          "SL": 6,
+          "SR": 26,
+          "RR": 0,
+          "WS": 0
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 10
+    },
+    {
+      "prog": 6,
+      "name": "Snare Drum (Pitch LFO)",
+      "ops": [
+        {
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "KSL": 0,
+          "TL": 0,
+          "AR": 13,
+          "DR": 8,
+          "SL": 4,
+          "SR": 16,
+          "RR": 0,
+          "WS": 0
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 10
     }
   ]
 }
