@@ -1,11 +1,4 @@
 {
-  "_comment": [
-    "GM2 Standard Drum Kit スケルトン (prog=0)。",
-    "patch_bank/patch_prog は仮置き値。実際の音色バンクに合わせて変更すること。",
-    "play_note はここでは note と同値。音色の基音に合わせて調整すること。",
-    "pan は GM2 標準定位の目安値。",
-    "gate_time はハイハット系・ミュートトライアングルのみ設定済み。"
-  ],
   "type": "routed",
   "name": "GM2 Standard Kit",
   "notes": [

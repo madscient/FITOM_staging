@@ -1,0 +1,226 @@
+{
+  "name": "MSX-AUDIO/OPLL Emulate Rhythm",
+  "voice_patch_type": "OPL_RHY",
+  "source": "OPLL(YM2413) rhythm mode register image (ch6=BD, ch7=HH/SD, ch8=TOM/TCY)",
+  "note": "msx_audio_preset.hwbank.jsonと同グループ(OPL3_2)のOPLリズム(COPLRhythm)用5楽器。128パッチ制限のため既存バンク(124パッチ使用済み)には収まらず別ファイルとして分離。OPLLリズムモード標準レジスタ値からコンバート。Bass Drumは2op(Modulator+Carrier)、Hi-Hat/Snare Drum/Tom/Top Cymbalは各1op。実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに正しく変換(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=0)。ops[i].EGTは常に0。 Open Hi Hat(prog5)はClose Hi Hat(prog1)のSRを14→6に変更し持続を延長。Tom(prog6)はBass Drum(prog0)のエンベロープをそのまま使い、sw_prog=10(performance_presets: DrumLFO Mid, down saw one-shot hold)でピッチLFOを付与。 Snare Drum(Pitch LFO)(prog7)はSnare Drum(prog2)のエンベロープをそのまま使い、sw_prog=10(DrumLFO Mid)でピッチLFOを付与。",
+  "patches": [
+    {
+      "prog": 0,
+      "name": "OPL Bass Drum",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 15,
+          "SL": 6,
+          "SR": 20,
+          "RR": 0,
+          "TL": 24,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 15,
+          "DR": 8,
+          "SL": 6,
+          "SR": 26,
+          "RR": 0,
+          "TL": 15,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 2
+    },
+    {
+      "prog": 1,
+      "name": "OPL Close Hi Hat",
+      "ops": [
+        {
+          "AR": 12,
+          "DR": 8,
+          "SL": 10,
+          "SR": 14,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 2
+    },
+    {
+      "prog": 2,
+      "name": "OPL Snare Drum",
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 8,
+          "SL": 4,
+          "SR": 16,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 2
+    },
+    {
+      "prog": 3,
+      "name": "OPL Tom",
+      "ops": [
+        {
+          "AR": 15,
+          "DR": 8,
+          "SL": 5,
+          "SR": 18,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 5,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 2
+    },
+    {
+      "prog": 4,
+      "name": "OPL Top Cymbal",
+      "ops": [
+        {
+          "AR": 10,
+          "DR": 10,
+          "SL": 5,
+          "SR": 10,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 2
+    },
+    {
+      "prog": 5,
+      "name": "OPL Open Hi Hat",
+      "ops": [
+        {
+          "AR": 12,
+          "DR": 8,
+          "SL": 10,
+          "SR": 6,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 2
+    },
+    {
+      "prog": 6,
+      "name": "OPL Tom (Pitch LFO)",
+      "FB": 7,
+      "ALG": 0,
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 15,
+          "SL": 6,
+          "SR": 20,
+          "RR": 0,
+          "TL": 24,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 1
+        },
+        {
+          "AR": 15,
+          "DR": 8,
+          "SL": 6,
+          "SR": 26,
+          "RR": 0,
+          "TL": 15,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 10
+    },
+    {
+      "prog": 7,
+      "name": "OPL Snare Drum (Pitch LFO)",
+      "ops": [
+        {
+          "AR": 13,
+          "DR": 8,
+          "SL": 4,
+          "SR": 16,
+          "RR": 0,
+          "TL": 0,
+          "KSR": 0,
+          "KSL": 0,
+          "MUL": 1,
+          "AM": 0,
+          "VIB": 0,
+          "EGT": 0,
+          "WS": 0
+        }
+      ],
+      "sw_bank": 0,
+      "sw_prog": 10
+    }
+  ]
+}
