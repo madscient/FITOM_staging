@@ -10,7 +10,6 @@
       "patch_prog": 0,
       "play_note": 45,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -22,7 +21,6 @@
       "patch_prog": 0,
       "play_note": 45,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -34,7 +32,6 @@
       "patch_prog": 2,
       "play_note": 48,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -46,7 +43,6 @@
       "patch_prog": 7,
       "play_note": 48,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -58,7 +54,6 @@
       "patch_prog": 6,
       "play_note": 33,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -70,7 +65,6 @@
       "patch_prog": 1,
       "play_note": 48,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 10
     },
@@ -82,7 +76,6 @@
       "patch_prog": 6,
       "play_note": 33,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -94,7 +87,6 @@
       "patch_prog": 1,
       "play_note": 48,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 10
     },
@@ -106,7 +98,6 @@
       "patch_prog": 6,
       "play_note": 37,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -118,7 +109,6 @@
       "patch_prog": 5,
       "play_note": 48,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -130,7 +120,6 @@
       "patch_prog": 6,
       "play_note": 37,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -142,7 +131,6 @@
       "patch_prog": 6,
       "play_note": 41,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -154,7 +142,6 @@
       "patch_prog": 4,
       "play_note": 29,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -166,7 +153,6 @@
       "patch_prog": 6,
       "play_note": 41,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -178,7 +164,6 @@
       "patch_prog": 4,
       "play_note": 29,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -190,7 +175,6 @@
       "patch_prog": 4,
       "play_note": 29,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -202,7 +186,6 @@
       "patch_prog": 4,
       "play_note": 29,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -214,7 +197,6 @@
       "patch_prog": 4,
       "play_note": 29,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -226,7 +208,6 @@
       "patch_prog": 4,
       "play_note": 29,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -238,7 +219,6 @@
       "patch_prog": 3,
       "play_note": 32,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     },
@@ -250,7 +230,6 @@
       "patch_prog": 3,
       "play_note": 26,
       "fine_tune": 0,
-      "fixed_ch": -1,
       "pan": 0,
       "gate_time": 0
     }
