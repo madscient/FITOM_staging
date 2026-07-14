@@ -28,6 +28,10 @@
 各ドラムキットについて、MIDIノート番号ごとに割り当てられている
 楽器を示します。表に無いノート番号は無音です。
 
+> 内蔵リズム音源(使用音源=「内蔵リズム音源」)の「バンク/Prog」の
+> Prog値は、通常の音色選択ではなく**楽器(物理チャンネル)番号
+> そのもの**です。詳細は[内蔵リズム音源の楽器選択方法](builtin_rhythm.md)を参照。
+
 ### Prog=1: ADPCM-A GM set
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
@@ -764,56 +768,52 @@
 
 ### Prog=11: OPNA Built-in set
 
-> 「固定ch」列の意味は[内蔵リズム音源の楽器選択方法](builtin_rhythm.md#opna-rhythm)を参照してください。
-
-| MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 固定ch | 演奏ノート |
-|---|---|---|---|---|---|
-| 35 | Acoustic Bass Drum | 内蔵リズム音源 | 17/0 | 0 | 35 |
-| 36 | Bass Drum 1 | 内蔵リズム音源 | 17/0 | 0 | 36 |
-| 37 | Side Stick | 内蔵リズム音源 | 17/0 | 5 | 37 |
-| 38 | Acoustic Snare | 内蔵リズム音源 | 17/0 | 1 | 38 |
-| 40 | Electric Snare | 内蔵リズム音源 | 17/0 | 1 | 40 |
-| 41 | Low Floor Tom | 内蔵リズム音源 | 17/0 | 4 | 41 |
-| 42 | Closed Hi-Hat | 内蔵リズム音源 | 17/0 | 3 | 42 |
-| 43 | High Floor Tom | 内蔵リズム音源 | 17/0 | 4 | 43 |
-| 44 | Pedal Hi-Hat | 内蔵リズム音源 | 17/0 | 3 | 44 |
-| 45 | Low Tom | 内蔵リズム音源 | 17/0 | 4 | 45 |
-| 46 | Open Hi-Hat | 内蔵リズム音源 | 17/0 | 3 | 46 |
-| 47 | Low-Mid Tom | 内蔵リズム音源 | 17/0 | 4 | 47 |
-| 48 | Hi-Mid Tom | 内蔵リズム音源 | 17/0 | 4 | 48 |
-| 49 | Crash Cymbal 1 | 内蔵リズム音源 | 17/0 | 2 | 49 |
-| 50 | High Tom | 内蔵リズム音源 | 17/0 | 4 | 50 |
-| 51 | Ride Cymbal 1 | 内蔵リズム音源 | 17/0 | 2 | 51 |
-| 57 | Crash Cymbal 2 | 内蔵リズム音源 | 17/0 | 2 | 57 |
-| 59 | Ride Cymbal 2 | 内蔵リズム音源 | 17/0 | 2 | 59 |
+| MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
+|---|---|---|---|---|
+| 35 | Acoustic Bass Drum | 内蔵リズム音源 | 17/0 | 35 |
+| 36 | Bass Drum 1 | 内蔵リズム音源 | 17/0 | 36 |
+| 37 | Side Stick | 内蔵リズム音源 | 17/5 | 37 |
+| 38 | Acoustic Snare | 内蔵リズム音源 | 17/1 | 38 |
+| 40 | Electric Snare | 内蔵リズム音源 | 17/1 | 40 |
+| 41 | Low Floor Tom | 内蔵リズム音源 | 17/4 | 41 |
+| 42 | Closed Hi-Hat | 内蔵リズム音源 | 17/3 | 42 |
+| 43 | High Floor Tom | 内蔵リズム音源 | 17/4 | 43 |
+| 44 | Pedal Hi-Hat | 内蔵リズム音源 | 17/3 | 44 |
+| 45 | Low Tom | 内蔵リズム音源 | 17/4 | 45 |
+| 46 | Open Hi-Hat | 内蔵リズム音源 | 17/3 | 46 |
+| 47 | Low-Mid Tom | 内蔵リズム音源 | 17/4 | 47 |
+| 48 | Hi-Mid Tom | 内蔵リズム音源 | 17/4 | 48 |
+| 49 | Crash Cymbal 1 | 内蔵リズム音源 | 17/2 | 49 |
+| 50 | High Tom | 内蔵リズム音源 | 17/4 | 50 |
+| 51 | Ride Cymbal 1 | 内蔵リズム音源 | 17/2 | 51 |
+| 57 | Crash Cymbal 2 | 内蔵リズム音源 | 17/2 | 57 |
+| 59 | Ride Cymbal 2 | 内蔵リズム音源 | 17/2 | 59 |
 
 ### Prog=12: OPLL Built-in set
 
-> 「固定ch」列の意味は[内蔵リズム音源の楽器選択方法](builtin_rhythm.md#opll-rhythm)を参照してください。
-
-| MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 固定ch | 演奏ノート | パフォーマンス |
-|---|---|---|---|---|---|---|
-| 35 | Acoustic Bass Drum | 内蔵リズム音源 | 40/0 | 4 | 45 | - |
-| 36 | Bass Drum 1 | 内蔵リズム音源 | 40/0 | 4 | 45 | - |
-| 38 | Acoustic Snare | 内蔵リズム音源 | 40/0 | 3 | 48 | - |
-| 40 | Electric Snare | 内蔵リズム音源 | 40/0 | 3 | 48 | sw_bank=0/10 |
-| 41 | Low Floor Tom | 内蔵リズム音源 | 40/0 | 2 | 33 | sw_bank=0/10 |
-| 42 | Closed Hi-Hat | 内蔵リズム音源 | 40/0 | 0 | 48 | - |
-| 43 | High Floor Tom | 内蔵リズム音源 | 40/0 | 2 | 33 | sw_bank=0/10 |
-| 44 | Pedal Hi-Hat | 内蔵リズム音源 | 40/0 | 0 | 48 | - |
-| 45 | Low Tom | 内蔵リズム音源 | 40/0 | 2 | 37 | sw_bank=0/10 |
-| 46 | Open Hi-Hat | 内蔵リズム音源 | 40/0 | 0 | 48 | - |
-| 47 | Low-Mid Tom | 内蔵リズム音源 | 40/0 | 2 | 37 | sw_bank=0/10 |
-| 48 | Hi-Mid Tom | 内蔵リズム音源 | 40/0 | 2 | 41 | sw_bank=0/10 |
-| 49 | Crash Cymbal 1 | 内蔵リズム音源 | 40/0 | 1 | 29 | - |
-| 50 | High Tom | 内蔵リズム音源 | 40/0 | 2 | 41 | sw_bank=0/10 |
-| 51 | Ride Cymbal 1 | 内蔵リズム音源 | 40/0 | 1 | 29 | - |
-| 52 | Chinese Cymbal | 内蔵リズム音源 | 40/0 | 1 | 29 | - |
-| 55 | Splash Cymbal | 内蔵リズム音源 | 40/0 | 1 | 29 | - |
-| 57 | Crash Cymbal 2 | 内蔵リズム音源 | 40/0 | 1 | 29 | - |
-| 59 | Ride Cymbal 2 | 内蔵リズム音源 | 40/0 | 1 | 29 | - |
-| 60 | Hi Bongo | 内蔵リズム音源 | 40/0 | 2 | 32 | - |
-| 61 | Low Bongo | 内蔵リズム音源 | 40/0 | 2 | 26 | - |
+| MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート | パフォーマンス |
+|---|---|---|---|---|---|
+| 35 | Acoustic Bass Drum | 内蔵リズム音源 | 40/4 | 45 | - |
+| 36 | Bass Drum 1 | 内蔵リズム音源 | 40/4 | 45 | - |
+| 38 | Acoustic Snare | 内蔵リズム音源 | 40/3 | 48 | - |
+| 40 | Electric Snare | 内蔵リズム音源 | 40/3 | 48 | sw_bank=0/10 |
+| 41 | Low Floor Tom | 内蔵リズム音源 | 40/2 | 33 | sw_bank=0/10 |
+| 42 | Closed Hi-Hat | 内蔵リズム音源 | 40/0 | 48 | - |
+| 43 | High Floor Tom | 内蔵リズム音源 | 40/2 | 33 | sw_bank=0/10 |
+| 44 | Pedal Hi-Hat | 内蔵リズム音源 | 40/0 | 48 | - |
+| 45 | Low Tom | 内蔵リズム音源 | 40/2 | 37 | sw_bank=0/10 |
+| 46 | Open Hi-Hat | 内蔵リズム音源 | 40/0 | 48 | - |
+| 47 | Low-Mid Tom | 内蔵リズム音源 | 40/2 | 37 | sw_bank=0/10 |
+| 48 | Hi-Mid Tom | 内蔵リズム音源 | 40/2 | 41 | sw_bank=0/10 |
+| 49 | Crash Cymbal 1 | 内蔵リズム音源 | 40/1 | 29 | - |
+| 50 | High Tom | 内蔵リズム音源 | 40/2 | 41 | sw_bank=0/10 |
+| 51 | Ride Cymbal 1 | 内蔵リズム音源 | 40/1 | 29 | - |
+| 52 | Chinese Cymbal | 内蔵リズム音源 | 40/1 | 29 | - |
+| 55 | Splash Cymbal | 内蔵リズム音源 | 40/1 | 29 | - |
+| 57 | Crash Cymbal 2 | 内蔵リズム音源 | 40/1 | 29 | - |
+| 59 | Ride Cymbal 2 | 内蔵リズム音源 | 40/1 | 29 | - |
+| 60 | Hi Bongo | 内蔵リズム音源 | 40/2 | 32 | - |
+| 61 | Low Bongo | 内蔵リズム音源 | 40/2 | 26 | - |
 
 ### Prog=13: OPL Built-in set
 
@@ -885,69 +885,7 @@
 
 ### Prog=15: OPL4-AWM GM set
 
-YMF278(OPL4)内蔵AWM音源(YRW801波形ROM)のGM標準ドラムセットです。
-全ノートが単一のパッチ(SampleZonePatch)にまとめられており、
-ノートごとに個別の波形が割り当てられています。
-
+全音域を単一パッチにルーティングする方式です。
+- 対応ノート範囲: 27 - 87
 - 使用音源: AWM
 - バンク/プログラム: 1 / 0
-
-| MIDIノート | 楽器名 |
-|---|---|
-| 24 | Drum note #24 |
-| 25 | Drum note #25 |
-| 26 | Drum note #26 |
-| 27 | High Q |
-| 28 | Slap |
-| 30 | Scratch Pull |
-| 31 | Sticks |
-| 32 | Square Click |
-| 33 | Metronome Click |
-| 35 | Acoustic Bass Drum |
-| 36 | Bass Drum 1 |
-| 37 | Side Stick |
-| 38 | Acoustic Snare |
-| 39 | Hand Clap |
-| 40 | Electric Snare |
-| 41 | Low Floor Tom |
-| 42 | Closed Hi-Hat |
-| 43 | High Floor Tom |
-| 44 | Pedal Hi-Hat |
-| 45 | Low Tom |
-| 46 | Open Hi-Hat |
-| 47 | Low-Mid Tom |
-| 48 | Hi-Mid Tom |
-| 49 | Crash Cymbal 1 |
-| 50 | High Tom |
-| 51 | Ride Cymbal 1 |
-| 52 | Chinese Cymbal |
-| 53 | Ride Bell |
-| 54 | Tambourine |
-| 55 | Splash Cymbal |
-| 56 | Cowbell |
-| 57 | Crash Cymbal 2 |
-| 58 | Vibraslap |
-| 59 | Ride Cymbal 2 |
-| 60 | Hi Bongo |
-| 61 | Low Bongo |
-| 62 | Mute Hi Conga |
-| 63 | Open Hi Conga |
-| 64 | Low Conga |
-| 65 | High Timbale |
-| 66 | Low Timbale |
-| 67 | High Agogo |
-| 68 | Low Agogo |
-| 69 | Cabasa |
-| 70 | Maracas |
-| 71 | Short Whistle |
-| 72 | Long Whistle |
-| 73 | Short Guiro |
-| 74 | Long Guiro |
-| 75 | Claves |
-| 76 | Hi Wood Block |
-| 77 | Low Wood Block |
-| 78 | Mute Cuica |
-| 79 | Open Cuica |
-| 80 | Mute Triangle |
-| 81 | Open Triangle |
-| 82 | Shaker |
