@@ -2599,66 +2599,66 @@ OPL系 2オペレータFM音源
 | 61 | SE_Star2 |
 | 62 | Engine 2 |
 | 63 | Silence |
-| 64 | Violin [OPLL(YM2413)] |
-| 65 | Guitar [OPLL(YM2413)] |
-| 66 | Piano [OPLL(YM2413)] |
-| 67 | Flute [OPLL(YM2413)] |
-| 68 | Clarinet [OPLL(YM2413)] |
-| 69 | Oboe [OPLL(YM2413)] |
-| 70 | Trumpet [OPLL(YM2413)] |
-| 71 | Organ [OPLL(YM2413)] |
-| 72 | Horn [OPLL(YM2413)] |
-| 73 | Synthesizer [OPLL(YM2413)] |
-| 74 | Harpsichord [OPLL(YM2413)] |
-| 75 | Vibraphone [OPLL(YM2413)] |
-| 76 | Synthesizer Bass [OPLL(YM2413)] |
-| 77 | Acoustic Bass [OPLL(YM2413)] |
-| 78 | Electric Guitar [OPLL(YM2413)] |
-| 79 | Strings [OPLL-X(YM2423)] |
-| 80 | Guitar [OPLL-X(YM2423)] |
-| 81 | Electric Guitar [OPLL-X(YM2423)] |
-| 82 | Electric Piano 2 [OPLL-X(YM2423)] |
-| 83 | Flute [OPLL-X(YM2423)] |
-| 84 | Marimba [OPLL-X(YM2423)] |
-| 85 | Trumpet [OPLL-X(YM2423)] |
-| 86 | Harmonica [OPLL-X(YM2423)] |
-| 87 | Tuba [OPLL-X(YM2423)] |
-| 88 | Synth Brass 2 [OPLL-X(YM2423)] |
-| 89 | Short Saw [OPLL-X(YM2423)] |
-| 90 | Vibraphone [OPLL-X(YM2423)] |
-| 91 | Electric Guitar 2 [OPLL-X(YM2423)] |
-| 92 | Synth Bass 2 [OPLL-X(YM2423)] |
-| 93 | Sitar [OPLL-X(YM2423)] |
-| 94 | Clarinet [OPLL-P(YMF281)] |
-| 95 | Synth Bass [OPLL-P(YMF281)] |
-| 96 | Piano [OPLL-P(YMF281)] |
-| 97 | Flute [OPLL-P(YMF281)] |
-| 98 | Square Wave [OPLL-P(YMF281)] |
-| 99 | Space Oboe [OPLL-P(YMF281)] |
-| 100 | Trumpet [OPLL-P(YMF281)] |
-| 101 | Wow Bell [OPLL-P(YMF281)] |
-| 102 | Electric Guitar [OPLL-P(YMF281)] |
-| 103 | Vibes [OPLL-P(YMF281)] |
-| 104 | Bass [OPLL-P(YMF281)] |
-| 105 | Vibraphone [OPLL-P(YMF281)] |
-| 106 | Vibrato Bell [OPLL-P(YMF281)] |
-| 107 | Click Sine [OPLL-P(YMF281)] |
-| 108 | Noise and Tone [OPLL-P(YMF281)] |
-| 109 | Buzzy Bell [VRC7(FS1001)] |
-| 110 | Guitar [VRC7(FS1001)] |
-| 111 | Wurly [VRC7(FS1001)] |
-| 112 | Flute [VRC7(FS1001)] |
-| 113 | Clarinet [VRC7(FS1001)] |
-| 114 | Synth [VRC7(FS1001)] |
-| 115 | Trumpet [VRC7(FS1001)] |
-| 116 | Organ [VRC7(FS1001)] |
-| 117 | Bells [VRC7(FS1001)] |
-| 118 | Vibes [VRC7(FS1001)] |
-| 119 | Vibraphone [VRC7(FS1001)] |
-| 120 | Tutti [VRC7(FS1001)] |
-| 121 | Fretless [VRC7(FS1001)] |
-| 122 | Synth Bass [VRC7(FS1001)] |
-| 123 | Sweep [VRC7(FS1001)] |
+| 64 | [OPLL] Violin |
+| 65 | [OPLL] Guitar |
+| 66 | [OPLL] Piano |
+| 67 | [OPLL] Flute |
+| 68 | [OPLL] Clarinet |
+| 69 | [OPLL] Oboe |
+| 70 | [OPLL] Trumpet |
+| 71 | [OPLL] Organ |
+| 72 | [OPLL] Horn |
+| 73 | [OPLL] Synthesizer |
+| 74 | [OPLL] Harpsichord |
+| 75 | [OPLL] Vibraphone |
+| 76 | [OPLL] Synthesizer Bass |
+| 77 | [OPLL] Acoustic Bass |
+| 78 | [OPLL] Electric Guitar |
+| 79 | [OPLLX] Strings |
+| 80 | [OPLLX] Guitar |
+| 81 | [OPLLX] Electric Guitar |
+| 82 | [OPLLX] Electric Piano 2 |
+| 83 | [OPLLX] Flute |
+| 84 | [OPLLX] Marimba |
+| 85 | [OPLLX] Trumpet |
+| 86 | [OPLLX] Harmonica |
+| 87 | [OPLLX] Tuba |
+| 88 | [OPLLX] Synth Brass 2 |
+| 89 | [OPLLX] Short Saw |
+| 90 | [OPLLX] Vibraphone |
+| 91 | [OPLLX] Electric Guitar 2 |
+| 92 | [OPLLX] Synth Bass 2 |
+| 93 | [OPLLX] Sitar |
+| 94 | [OPLLP] Clarinet |
+| 95 | [OPLLP] Synth Bass |
+| 96 | [OPLLP] Piano |
+| 97 | [OPLLP] Flute |
+| 98 | [OPLLP] Square Wave |
+| 99 | [OPLLP] Space Oboe |
+| 100 | [OPLLP] Trumpet |
+| 101 | [OPLLP] Wow Bell |
+| 102 | [OPLLP] Electric Guitar |
+| 103 | [OPLLP] Vibes |
+| 104 | [OPLLP] Bass |
+| 105 | [OPLLP] Vibraphone |
+| 106 | [OPLLP] Vibrato Bell |
+| 107 | [OPLLP] Click Sine |
+| 108 | [OPLLP] Noise and Tone |
+| 109 | [VRC7] Buzzy Bell |
+| 110 | [VRC7] Guitar |
+| 111 | [VRC7] Wurly |
+| 112 | [VRC7] Flute |
+| 113 | [VRC7] Clarinet |
+| 114 | [VRC7] Synth |
+| 115 | [VRC7] Trumpet |
+| 116 | [VRC7] Organ |
+| 117 | [VRC7] Bells |
+| 118 | [VRC7] Vibes |
+| 119 | [VRC7] Vibraphone |
+| 120 | [VRC7] Tutti |
+| 121 | [VRC7] Fretless |
+| 122 | [VRC7] Synth Bass |
+| 123 | [VRC7] Sweep |
 
 ## <a id="cc32112"></a>CC#32=112: ALSA drums (OPL2)
 

@@ -38,7 +38,7 @@ $Stage = $PSScriptRoot
 
 # ── プロジェクトのビルドディレクトリ (環境に合わせて変更) ──────────────────
 $Projects = @{
-    FitomX     = "..\FITOM_X\build\bin\$BuildType"
+    FitomX     = "..\FITOM_X\build\windows-vs2026-x64\bin\$BuildType"
     FitomEmuIF = "..\FitomEmuIF\build\$BuildType"
     FitomHwIF  = "..\FitomHwIF\build\$BuildType"
     YMEngine   = "..\YMEngine\build\bin\$BuildType"
