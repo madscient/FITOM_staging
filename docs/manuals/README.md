@@ -10,6 +10,8 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)とProgram Changeによる
 3. [パフォーマンスバンク(SwPatch)マップ](swbank.md)
 4. [ドラムキット一覧・ノートマップ](drumkits.md)
 5. [内蔵リズム音源(CC#0=112)の楽器選択方法](builtin_rhythm.md)
+6. [エミュレータ専用プロファイル一覧](emu_profiles.md)
+7. [OPLL GM128パッチ対応表](opll_gm128_mapping.md)
 
 ## 1. 音源選択モードの概要
 
@@ -85,6 +87,7 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)による音色バンクの一覧です。
 | 40 | 1 | OPLL | [MSX-AUDIO + OPLL(x) ROM Preset](patches/opll.md#cc321) |
 | 40 | 2 | OPLL | [OPLL Presets (PSS-140 + SHS-10)](patches/opll.md#cc322) |
 | 40 | 3 | OPLL | [OPLL ROM Voice SwPatch Meta (Skeleton)(ユーザー設定用)](patches/opll.md#cc323) |
+| 40 | 4 | OPLL | [MA-2 Preset2OP (OPLLとして参照)](patches/opll.md#cc324) |
 | 48 | 0 | OPL3 | [ALSA std (OPL3)](patches/opl3.md#cc320) |
 | 48 | 1 | OPL3 | [Preset4OP](patches/opl3.md#cc321) |
 | 48 | 2 | OPL3 | [MicroComputer x Digital](patches/opl3.md#cc322) |

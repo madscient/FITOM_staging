@@ -1,0 +1,2054 @@
+{
+  "name": "GM Standard Native OPLL",
+  "note": "OPLL用GM128配列パッチバンク。各progのToneLayerでvoice_patch_type=OPLL(0x28)固定、hw_bank別にソースを参照: hw_bank=0はOPLL Built-In ROM音色(機械合成領域、hw_progで(variantSel<<4)|instIndex指定)、hw_bank=2はSHS-10/PSS-170プリセット(opll_presets.hwbank.json)、hw_bank=4はMA-2 Preset2OP(Preset2OP.hwbank.json、OPL2用バンクをOPLLとして直接参照)。優先順位: ①OPLL Built-In ROM(名称一致) → ②SHS-10/PSS-170(名称一致) → ③MA-2 Preset2OP(同一prog番号)。 2026年7月、undocumentedsoundchips.com / plgDavid/misc wikiの資料を参考に追加8件をOPLL Built-In ROMへ変更(完全一致でなくとも近似で採用)。",
+  "patches": [
+    {
+      "prog": 0,
+      "name": "[OPLLP] Piano",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 35,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 1,
+      "name": "BritePno",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 1,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 2,
+      "name": "E.GrandP",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 2,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 3,
+      "name": "Honky-Tonk Piano 1",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 42,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 4,
+      "name": "Electric Piano 1",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 21,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 5,
+      "name": "[OPLLX] Electric Piano 2",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 20,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 6,
+      "name": "[OPLL] Harpsichord",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 11,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 7,
+      "name": "Clavi",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 7,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 8,
+      "name": "Celesta",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 106,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 9,
+      "name": "Glockenspiel",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 32,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 10,
+      "name": "Music Box",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 57,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 11,
+      "name": "[OPLL] Vibraphone",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 12,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 12,
+      "name": "[OPLLX] Marimba",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 22,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 13,
+      "name": "Xylophon",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 13,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 14,
+      "name": "TubulBel",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 14,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 15,
+      "name": "Dulcimer",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 15,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 16,
+      "name": "DrawOrgn",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 16,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 17,
+      "name": "PercOrgn",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 17,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 18,
+      "name": "RockOrgn",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 18,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 19,
+      "name": "[OPLL] Organ",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 8,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 20,
+      "name": "Reed Organ",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 69,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 21,
+      "name": "Accordion 1",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 0,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 22,
+      "name": "[OPLLX] Harmonica",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 24,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 23,
+      "name": "TangoAcd",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 23,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 24,
+      "name": "NylonGtr",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 24,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 25,
+      "name": "[OPLL] Guitar",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 2,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 26,
+      "name": "[OPLLX] Guitar",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 18,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 27,
+      "name": "[OPLL] Electric Guitar",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 15,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 28,
+      "name": "Mute.Gtr",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 28,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 29,
+      "name": "Ovrdrive",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 29,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 30,
+      "name": "Dist.Gtr",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 30,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 31,
+      "name": "GtrHarmo",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 31,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 32,
+      "name": "[OPLL] Acoustic Bass",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 14,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 33,
+      "name": "[OPLLP] Bass",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 43,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 34,
+      "name": "Picked Bass",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 65,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 35,
+      "name": "[VRC7] Fretless",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 61,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 36,
+      "name": "Slap Bass",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 75,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 37,
+      "name": "SlapBas2",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 37,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 38,
+      "name": "[OPLL] Synthesizer Bass",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 13,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 39,
+      "name": "[OPLLX] Synth Bass 2",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 30,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 40,
+      "name": "[OPLL] Violin",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 1,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 41,
+      "name": "Viola",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 41,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 42,
+      "name": "Cello",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 111,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 43,
+      "name": "Contrabs",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 43,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 44,
+      "name": "Trem.Str",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 44,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 45,
+      "name": "Pizz.Str",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 45,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 46,
+      "name": "Harp",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 46,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 47,
+      "name": "Timpani",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 47,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 48,
+      "name": "[OPLLX] Strings",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 17,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 49,
+      "name": "Strings2",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 49,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 50,
+      "name": "Syn.Str1",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 50,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 51,
+      "name": "Syn.Str2",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 51,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 52,
+      "name": "ChoirAah",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 52,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 53,
+      "name": "VoiceOoh",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 53,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 54,
+      "name": "[VRC7] Synth",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 54,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 55,
+      "name": "[VRC7] Tutti",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 60,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 56,
+      "name": "[OPLL] Trumpet",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 7,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 57,
+      "name": "Trombone",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 116,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 58,
+      "name": "[OPLLX] Tuba",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 25,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 59,
+      "name": "Mute Trumpet",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 59,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 60,
+      "name": "[OPLL] Horn",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 9,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 61,
+      "name": "[OPLLP] Electric Guitar",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 41,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 62,
+      "name": "[OPLLP] Electric Guitar",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 41,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 63,
+      "name": "[OPLLX] Synth Brass 2",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 26,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 64,
+      "name": "Soprano Sax",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 78,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 65,
+      "name": "Alto Sax",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 3,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 66,
+      "name": "Tenor Sax",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 85,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 67,
+      "name": "Bari.Sax",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 67,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 68,
+      "name": "[OPLL] Oboe",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 6,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 69,
+      "name": "Eng.Horn",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 69,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 70,
+      "name": "Bassoon",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 8,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 71,
+      "name": "[OPLL] Clarinet",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 5,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 72,
+      "name": "Piccolo",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 64,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 73,
+      "name": "[OPLL] Flute",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 4,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 74,
+      "name": "Recorder",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 74,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 75,
+      "name": "Panflute",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 61,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 76,
+      "name": "Bottle",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 76,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 77,
+      "name": "Shakhchi",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 77,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 78,
+      "name": "Whistle",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 123,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 79,
+      "name": "Ocarina",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 79,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 80,
+      "name": "[OPLLP] Square Wave",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 37,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 81,
+      "name": "[OPLLX] Short Saw",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 27,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 82,
+      "name": "[OPLLP] Wow Bell",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 40,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 83,
+      "name": "ChiffLd",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 83,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 84,
+      "name": "[OPLLX] Electric Guitar 2",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 29,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 85,
+      "name": "VoiceLd",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 85,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 86,
+      "name": "FifthLd",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 86,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 87,
+      "name": "Bass&Ld",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 87,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 88,
+      "name": "NewAgePd",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 88,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 89,
+      "name": "WarmPad",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 89,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 90,
+      "name": "PolySyPd",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 90,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 91,
+      "name": "ChoirPad",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 91,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 92,
+      "name": "BowedPad",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 92,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 93,
+      "name": "MetalPad",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 93,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 94,
+      "name": "HaloPad",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 94,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 95,
+      "name": "[VRC7] Sweep",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 63,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 96,
+      "name": "Rain",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 96,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 97,
+      "name": "SoundTrk",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 97,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 98,
+      "name": "Crystal",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 98,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 99,
+      "name": "Atmosphr",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 99,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 100,
+      "name": "Bright",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 100,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 101,
+      "name": "Goblins",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 101,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 102,
+      "name": "Echoes",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 102,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 103,
+      "name": "Sci-Fi",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 103,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 104,
+      "name": "[OPLLX] Sitar",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 31,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 105,
+      "name": "Banjo",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 5,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 106,
+      "name": "Shamisen",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 73,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 107,
+      "name": "Koto",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 53,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 108,
+      "name": "Kalimba",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 108,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 109,
+      "name": "Bagpipe",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 4,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 110,
+      "name": "Fiddle",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 110,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 111,
+      "name": "Shanai",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 111,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 112,
+      "name": "[OPLLP] Vibrato Bell",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 45,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 113,
+      "name": "Agogo",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 113,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 114,
+      "name": "Steel Drum",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 2,
+          "hw_prog": 109,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 115,
+      "name": "WoodBlok",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 115,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 116,
+      "name": "TaikoDrm",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 116,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 117,
+      "name": "[OPLLP] Click Sine",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 46,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 118,
+      "name": "Syn.Drum",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 118,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 119,
+      "name": "RevCymbl",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 119,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 120,
+      "name": "FretNoiz",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 120,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 121,
+      "name": "[OPLLP] Noise and Tone",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 0,
+          "hw_prog": 47,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 122,
+      "name": "Seashore",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 122,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 123,
+      "name": "Tweet",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 123,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 124,
+      "name": "Telphone",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 124,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 125,
+      "name": "Helicptr",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 125,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 126,
+      "name": "Applause",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 126,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    },
+    {
+      "prog": 127,
+      "name": "Gunshot",
+      "poly": 0,
+      "layers": [
+        {
+          "voice_patch_type": 40,
+          "hw_bank": 4,
+          "hw_prog": 127,
+          "note_range_lo": 0,
+          "note_range_hi": 127,
+          "transpose": 0,
+          "enabled": true
+        }
+      ]
+    }
+  ]
+}

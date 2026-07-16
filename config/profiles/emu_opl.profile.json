@@ -1,15 +1,10 @@
 {
-  "profile_name": "統合プリセットプロファイル (全チップGM+専用バンク一式)",
-  "_comment": [
-    "preset_bank_profile.xlsxに基づく全チップ統合プロファイル。",
-    "hw_plugins(実機/エミュ構成)は用途に応じて別途調整が必要。",
-    "banks配下は本Excel通りの完全なマッピングを反映済み。"
-  ],
+  "profile_name": "OPLエミュプロファイル (OPL[rhythm]/Y8950/OPL2/OPL3/OPL4)",
   "hw_plugins": [
     {
       "name": "FitomEmuIF",
       "dll": "FitomEmuIF.dll",
-      "profile": "config/fmemuif_opn_profile.json",
+      "profile": "config/fmemuif_opl5.profile.json",
       "auto_devices": true
     }
   ],
@@ -18,66 +13,6 @@
   ],
   "banks": {
     "hw_banks": [
-      {
-        "group": "OPN2",
-        "bank": 0,
-        "file": "banks/OPN/gm/necopn_gm.hwbank.json"
-      },
-      {
-        "group": "OPN2",
-        "bank": 1,
-        "file": "banks/OPN/n88basic/n88basic_preset.hwbank.json"
-      },
-      {
-        "group": "OPN2",
-        "bank": 2,
-        "file": "banks/OPN/music_lalf/music_lalf_1.hwbank.json"
-      },
-      {
-        "group": "OPN2",
-        "bank": 3,
-        "file": "banks/OPN/music_lalf/music_lalf_2.hwbank.json"
-      },
-      {
-        "group": "OPZ",
-        "bank": 0,
-        "file": "banks/OPZ/gm128/gm128_preset.hwbank.json"
-      },
-      {
-        "group": "OPZ",
-        "bank": 1,
-        "file": "banks/OPM/opmdrv/opmdrv_preset.hwbank.json"
-      },
-      {
-        "group": "OPZ",
-        "bank": 2,
-        "file": "banks/OPM/fb01/fb01.hwbank.json"
-      },
-      {
-        "group": "OPZ",
-        "bank": 3,
-        "file": "banks/OPM/dx11/dx11.hwbank.json"
-      },
-      {
-        "group": "OPZ",
-        "bank": 4,
-        "file": "banks/OPM/dx27_dx100/dx21.hwbank.json"
-      },
-      {
-        "group": "OPZ",
-        "bank": 5,
-        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json"
-      },
-      {
-        "group": "OPZ",
-        "bank": 6,
-        "file": "banks/OPM/dx27_dx100/dx100_2.hwbank.json"
-      },
-      {
-        "group": "OPZ",
-        "bank": 7,
-        "file": "banks/OPZ/tx81z/tx81z.hwbank.json"
-      },
       {
         "group": "OPL3_2",
         "bank": 0,
@@ -219,16 +154,6 @@
         "file": "banks/drums/OPL2/AcidDrumBank.hwbank.json"
       },
       {
-        "group": "OPLL",
-        "bank": 1,
-        "file": "banks/OPL2/msx_audio/msx_audio_preset.hwbank.json"
-      },
-      {
-        "group": "OPLL",
-        "bank": 2,
-        "file": "banks/OPLL/opll_presets.hwbank.json"
-      },
-      {
         "group": "OPL3",
         "bank": 0,
         "file": "banks/OPL3/alsa/std_opl3.hwbank.json"
@@ -279,26 +204,6 @@
         "file": "banks/drums/OPL3/alsa_drums.hwbank.json"
       },
       {
-        "group": "SSG",
-        "bank": 0,
-        "file": "banks/PSG/psg_shared_preset.hwbank.json"
-      },
-      {
-        "group": "SSG",
-        "bank": 1,
-        "file": "banks/PSG/epsg_preset.hwbank.json"
-      },
-      {
-        "group": "SSG",
-        "bank": 2,
-        "file": "banks/PSG/scc_preset_1.hwbank.json"
-      },
-      {
-        "group": "SSG",
-        "bank": 3,
-        "file": "banks/PSG/scc_preset_2.hwbank.json"
-      },
-      {
         "group": "AWM",
         "bank": 0,
         "file": "banks/OPL4AWM/opl4awm_yrw801_gm.samplezonebank.json"
@@ -309,159 +214,28 @@
         "file": "banks/OPL4AWM/opl4awm_yrw801_drum.samplezonebank.json"
       },
       {
-        "group": "ADPCMB",
-        "bank": 0,
-        "file": "banks/PCM/pss680/pss680_opna.pcmbank.json"
-      },
-      {
         "group": "OPL_RHY",
         "bank": 0,
         "file": "banks/OPL2/msx_audio/msx_audio_preset_rhythm.hwbank.json"
-      },
-      {
-        "group": "OPLL",
-        "bank": 3,
-        "file": "banks/OPLL/rom_sw_meta.hwbank.json",
-        "role": "builtin_swpatch_meta"
-      },
-      {
-        "group": "ADPCMA",
-        "bank": 1,
-        "file": "banks/PCM/pss680/pss680_opnb.pcmbank.json"
-      },
-      {
-        "group": "OPLL",
-        "bank": 4,
-        "file": "banks/OPL2/ma2_vma/Preset2OP.hwbank.json"
       }
     ],
     "sw_banks": [
       {
         "bank": 0,
         "file": "banks/sw/performance_presets.swbank.json"
-      },
-      {
-        "bank": 1,
-        "file": "banks/sw/dx21.swbank.json"
-      },
-      {
-        "bank": 2,
-        "file": "banks/sw/dx100_1.swbank.json"
-      },
-      {
-        "bank": 3,
-        "file": "banks/sw/dx100_2.swbank.json"
-      },
-      {
-        "bank": 4,
-        "file": "banks/sw/dx11.swbank.json"
-      },
-      {
-        "bank": 5,
-        "file": "banks/sw/tx81z.swbank.json"
-      },
-      {
-        "bank": 6,
-        "file": "banks/sw/fb01.swbank.json"
       }
     ],
     "patch_banks": [
       {
         "bank": 0,
-        "file": "banks/patches/gm_native_skeleton.patchbank.json"
-      },
-      {
-        "bank": 1,
-        "file": "banks/patches/necopn_gm.patchbank.json"
-      },
-      {
-        "bank": 2,
         "file": "banks/patches/gm_native_opl2.patchbank.json"
-      },
-      {
-        "bank": 3,
-        "file": "banks/patches/gm_native_opl3.patchbank.json"
-      },
-      {
-        "bank": 4,
-        "file": "banks/patches/gm_native_opm.patchbank.json"
       }
     ],
     "drum_banks": [
       {
-        "prog": 1,
-        "name": "ADPCM-A GM set",
-        "file": "banks/drums/pss680_opnb.drumkit.json"
-      },
-      {
-        "prog": 2,
-        "name": "ALSA Preset 2OP set",
-        "file": "banks/drums/alsa_preset_2op.drumkit.json"
-      },
-      {
-        "prog": 3,
-        "name": "ALSA Preset 4OP set",
-        "file": "banks/drums/alsa_preset_4op.drumkit.json"
-      },
-      {
-        "prog": 4,
-        "name": "MA-2 Preset 2OP set",
-        "file": "banks/drums/ma2_preset_2op.drumkit.json"
-      },
-      {
-        "prog": 5,
-        "name": "MA-2 Basic 2OP set",
-        "file": "banks/drums/ma2_basic_2op.drumkit.json"
-      },
-      {
-        "prog": 6,
-        "name": "MA-2 Luminous 2OP set",
-        "file": "banks/drums/ma2_luminous_2op.drumkit.json"
-      },
-      {
-        "prog": 7,
-        "name": "MA-2 MicroComputer 2OP set",
-        "file": "banks/drums/ma2_microcomputer_2op.drumkit.json"
-      },
-      {
-        "prog": 8,
-        "name": "MA-2 Digital 2OP set",
-        "file": "banks/drums/ma2_digital_2op.drumkit.json"
-      },
-      {
-        "prog": 9,
-        "name": "MA-2 Acid 2OP set",
-        "file": "banks/drums/ma2_acid_2op.drumkit.json"
-      },
-      {
-        "prog": 10,
-        "name": "MA-2 Variant 2OP set",
-        "file": "banks/drums/ma2_variant_2op.drumkit.json"
-      },
-      {
-        "prog": 11,
-        "name": "OPNA Built-in set",
-        "file": "banks/drums/opna_builtin.drumkit.json"
-      },
-      {
-        "prog": 12,
-        "name": "OPLL Built-in set",
-        "file": "banks/drums/opll_rhythm.drumkit.json"
-      },
-      {
-        "prog": 13,
+        "prog": 0,
         "name": "OPL Built-in set",
         "file": "banks/drums/opl_builtin_rhythm.drumkit.json"
-      },
-      {
-        "prog": 14,
-        "name": "ADPCM-B GM set",
-        "file": "banks/drums/pss680_opna.drumkit.json"
-      },
-      {
-        "prog": 15,
-        "name": "OPL4-AWM GM set",
-        "file": "banks/drums/opl4awm.drumkit.json"
       }
     ],
     "pcm_banks": []

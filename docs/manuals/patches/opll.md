@@ -155,66 +155,66 @@ Program Change番号の内訳:
 | 61 | SE_Star2 |
 | 62 | Engine 2 |
 | 63 | Silence |
-| 64 | Violin [OPLL(YM2413)] |
-| 65 | Guitar [OPLL(YM2413)] |
-| 66 | Piano [OPLL(YM2413)] |
-| 67 | Flute [OPLL(YM2413)] |
-| 68 | Clarinet [OPLL(YM2413)] |
-| 69 | Oboe [OPLL(YM2413)] |
-| 70 | Trumpet [OPLL(YM2413)] |
-| 71 | Organ [OPLL(YM2413)] |
-| 72 | Horn [OPLL(YM2413)] |
-| 73 | Synthesizer [OPLL(YM2413)] |
-| 74 | Harpsichord [OPLL(YM2413)] |
-| 75 | Vibraphone [OPLL(YM2413)] |
-| 76 | Synthesizer Bass [OPLL(YM2413)] |
-| 77 | Acoustic Bass [OPLL(YM2413)] |
-| 78 | Electric Guitar [OPLL(YM2413)] |
-| 79 | Strings [OPLL-X(YM2423)] |
-| 80 | Guitar [OPLL-X(YM2423)] |
-| 81 | Electric Guitar [OPLL-X(YM2423)] |
-| 82 | Electric Piano 2 [OPLL-X(YM2423)] |
-| 83 | Flute [OPLL-X(YM2423)] |
-| 84 | Marimba [OPLL-X(YM2423)] |
-| 85 | Trumpet [OPLL-X(YM2423)] |
-| 86 | Harmonica [OPLL-X(YM2423)] |
-| 87 | Tuba [OPLL-X(YM2423)] |
-| 88 | Synth Brass 2 [OPLL-X(YM2423)] |
-| 89 | Short Saw [OPLL-X(YM2423)] |
-| 90 | Vibraphone [OPLL-X(YM2423)] |
-| 91 | Electric Guitar 2 [OPLL-X(YM2423)] |
-| 92 | Synth Bass 2 [OPLL-X(YM2423)] |
-| 93 | Sitar [OPLL-X(YM2423)] |
-| 94 | Clarinet [OPLL-P(YMF281)] |
-| 95 | Synth Bass [OPLL-P(YMF281)] |
-| 96 | Piano [OPLL-P(YMF281)] |
-| 97 | Flute [OPLL-P(YMF281)] |
-| 98 | Square Wave [OPLL-P(YMF281)] |
-| 99 | Space Oboe [OPLL-P(YMF281)] |
-| 100 | Trumpet [OPLL-P(YMF281)] |
-| 101 | Wow Bell [OPLL-P(YMF281)] |
-| 102 | Electric Guitar [OPLL-P(YMF281)] |
-| 103 | Vibes [OPLL-P(YMF281)] |
-| 104 | Bass [OPLL-P(YMF281)] |
-| 105 | Vibraphone [OPLL-P(YMF281)] |
-| 106 | Vibrato Bell [OPLL-P(YMF281)] |
-| 107 | Click Sine [OPLL-P(YMF281)] |
-| 108 | Noise and Tone [OPLL-P(YMF281)] |
-| 109 | Buzzy Bell [VRC7(FS1001)] |
-| 110 | Guitar [VRC7(FS1001)] |
-| 111 | Wurly [VRC7(FS1001)] |
-| 112 | Flute [VRC7(FS1001)] |
-| 113 | Clarinet [VRC7(FS1001)] |
-| 114 | Synth [VRC7(FS1001)] |
-| 115 | Trumpet [VRC7(FS1001)] |
-| 116 | Organ [VRC7(FS1001)] |
-| 117 | Bells [VRC7(FS1001)] |
-| 118 | Vibes [VRC7(FS1001)] |
-| 119 | Vibraphone [VRC7(FS1001)] |
-| 120 | Tutti [VRC7(FS1001)] |
-| 121 | Fretless [VRC7(FS1001)] |
-| 122 | Synth Bass [VRC7(FS1001)] |
-| 123 | Sweep [VRC7(FS1001)] |
+| 64 | [OPLL] Violin |
+| 65 | [OPLL] Guitar |
+| 66 | [OPLL] Piano |
+| 67 | [OPLL] Flute |
+| 68 | [OPLL] Clarinet |
+| 69 | [OPLL] Oboe |
+| 70 | [OPLL] Trumpet |
+| 71 | [OPLL] Organ |
+| 72 | [OPLL] Horn |
+| 73 | [OPLL] Synthesizer |
+| 74 | [OPLL] Harpsichord |
+| 75 | [OPLL] Vibraphone |
+| 76 | [OPLL] Synthesizer Bass |
+| 77 | [OPLL] Acoustic Bass |
+| 78 | [OPLL] Electric Guitar |
+| 79 | [OPLLX] Strings |
+| 80 | [OPLLX] Guitar |
+| 81 | [OPLLX] Electric Guitar |
+| 82 | [OPLLX] Electric Piano 2 |
+| 83 | [OPLLX] Flute |
+| 84 | [OPLLX] Marimba |
+| 85 | [OPLLX] Trumpet |
+| 86 | [OPLLX] Harmonica |
+| 87 | [OPLLX] Tuba |
+| 88 | [OPLLX] Synth Brass 2 |
+| 89 | [OPLLX] Short Saw |
+| 90 | [OPLLX] Vibraphone |
+| 91 | [OPLLX] Electric Guitar 2 |
+| 92 | [OPLLX] Synth Bass 2 |
+| 93 | [OPLLX] Sitar |
+| 94 | [OPLLP] Clarinet |
+| 95 | [OPLLP] Synth Bass |
+| 96 | [OPLLP] Piano |
+| 97 | [OPLLP] Flute |
+| 98 | [OPLLP] Square Wave |
+| 99 | [OPLLP] Space Oboe |
+| 100 | [OPLLP] Trumpet |
+| 101 | [OPLLP] Wow Bell |
+| 102 | [OPLLP] Electric Guitar |
+| 103 | [OPLLP] Vibes |
+| 104 | [OPLLP] Bass |
+| 105 | [OPLLP] Vibraphone |
+| 106 | [OPLLP] Vibrato Bell |
+| 107 | [OPLLP] Click Sine |
+| 108 | [OPLLP] Noise and Tone |
+| 109 | [VRC7] Buzzy Bell |
+| 110 | [VRC7] Guitar |
+| 111 | [VRC7] Wurly |
+| 112 | [VRC7] Flute |
+| 113 | [VRC7] Clarinet |
+| 114 | [VRC7] Synth |
+| 115 | [VRC7] Trumpet |
+| 116 | [VRC7] Organ |
+| 117 | [VRC7] Bells |
+| 118 | [VRC7] Vibes |
+| 119 | [VRC7] Vibraphone |
+| 120 | [VRC7] Tutti |
+| 121 | [VRC7] Fretless |
+| 122 | [VRC7] Synth Bass |
+| 123 | [VRC7] Sweep |
 
 ## <a id="cc322"></a>CC#32=2: OPLL Presets (PSS-140 + SHS-10)
 
@@ -356,3 +356,141 @@ Program Change番号の内訳:
 割り当てを追加すると、ROM音色そのものを選択したとき
 (CC#0=40, CC#32=0)に、指定したパフォーマンスパッチが自動的に
 適用されるようになります。
+
+## <a id="cc324"></a>CC#32=4: MA-2 Preset2OP (OPLLとして参照)
+
+`Preset2OP.hwbank.json`(元はOPL2用GM128バンク)を、OPLL用として
+直接参照したものです。GM128配列の音色が一通り揃っています。
+`GM Standard Native OPLL`(通常モード、CC#0=0, CC#32=?)から
+組み立てる際のフォールバック候補としても使われています。
+
+| Prog | 名称 |
+|---|---|
+| 0 | GrandPno |
+| 1 | BritePno |
+| 2 | E.GrandP |
+| 3 | HnkyTonk |
+| 4 | E.Piano1 |
+| 5 | E.Piano2 |
+| 6 | Harpsi |
+| 7 | Clavi |
+| 8 | Celesta |
+| 9 | Glocken |
+| 10 | MusicBox |
+| 11 | Vibes |
+| 12 | Marimba |
+| 13 | Xylophon |
+| 14 | TubulBel |
+| 15 | Dulcimer |
+| 16 | DrawOrgn |
+| 17 | PercOrgn |
+| 18 | RockOrgn |
+| 19 | ChrchOrg |
+| 20 | ReedOrgn |
+| 21 | Acordion |
+| 22 | Harmnica |
+| 23 | TangoAcd |
+| 24 | NylonGtr |
+| 25 | SteelGtr |
+| 26 | JazzGtr |
+| 27 | CleanGtr |
+| 28 | Mute.Gtr |
+| 29 | Ovrdrive |
+| 30 | Dist.Gtr |
+| 31 | GtrHarmo |
+| 32 | Aco.Bass |
+| 33 | FngrBass |
+| 34 | PickBass |
+| 35 | Fretless |
+| 36 | SlapBas1 |
+| 37 | SlapBas2 |
+| 38 | SynBass1 |
+| 39 | SynBass2 |
+| 40 | Violin |
+| 41 | Viola |
+| 42 | Cello |
+| 43 | Contrabs |
+| 44 | Trem.Str |
+| 45 | Pizz.Str |
+| 46 | Harp |
+| 47 | Timpani |
+| 48 | Strings1 |
+| 49 | Strings2 |
+| 50 | Syn.Str1 |
+| 51 | Syn.Str2 |
+| 52 | ChoirAah |
+| 53 | VoiceOoh |
+| 54 | SynVoice |
+| 55 | Orch.Hit |
+| 56 | Trumpet |
+| 57 | Trombone |
+| 58 | Tuba |
+| 59 | Mute.Trp |
+| 60 | Fr.Horn |
+| 61 | BrasSect |
+| 62 | SynBras1 |
+| 63 | SynBras2 |
+| 64 | SprnoSax |
+| 65 | AltoSax |
+| 66 | TenorSax |
+| 67 | Bari.Sax |
+| 68 | Oboe |
+| 69 | Eng.Horn |
+| 70 | Bassoon |
+| 71 | Clarinet |
+| 72 | Piccolo |
+| 73 | Flute |
+| 74 | Recorder |
+| 75 | PanFlute |
+| 76 | Bottle |
+| 77 | Shakhchi |
+| 78 | Whistle |
+| 79 | Ocarina |
+| 80 | SquareLd |
+| 81 | Saw.Lead |
+| 82 | CaliopLd |
+| 83 | ChiffLd |
+| 84 | CharanLd |
+| 85 | VoiceLd |
+| 86 | FifthLd |
+| 87 | Bass&Ld |
+| 88 | NewAgePd |
+| 89 | WarmPad |
+| 90 | PolySyPd |
+| 91 | ChoirPad |
+| 92 | BowedPad |
+| 93 | MetalPad |
+| 94 | HaloPad |
+| 95 | SweepPad |
+| 96 | Rain |
+| 97 | SoundTrk |
+| 98 | Crystal |
+| 99 | Atmosphr |
+| 100 | Bright |
+| 101 | Goblins |
+| 102 | Echoes |
+| 103 | Sci-Fi |
+| 104 | Sitar |
+| 105 | Banjo |
+| 106 | Shamisen |
+| 107 | Koto |
+| 108 | Kalimba |
+| 109 | Bagpipe |
+| 110 | Fiddle |
+| 111 | Shanai |
+| 112 | TnklBell |
+| 113 | Agogo |
+| 114 | SteelDrm |
+| 115 | WoodBlok |
+| 116 | TaikoDrm |
+| 117 | MelodTom |
+| 118 | Syn.Drum |
+| 119 | RevCymbl |
+| 120 | FretNoiz |
+| 121 | BrthNoiz |
+| 122 | Seashore |
+| 123 | Tweet |
+| 124 | Telphone |
+| 125 | Helicptr |
+| 126 | Applause |
+| 127 | Gunshot |
