@@ -46,7 +46,7 @@ $Projects = @{
 
 function Copy-IfExists($src, $dst) {
     if (Test-Path $src) {
-        Copy-Item $src $dst -Force
+        Copy-Item $src $dst -Force -Recurse
         Write-Host "  OK   $src"
     } else {
         Write-Warning "  SKIP $src (not found)"
@@ -67,6 +67,7 @@ Copy-IfExists "$($Projects.FitomX)\*.dll" "$Bin\"
 # プラグイン DLL
 Copy-IfExists "$($Projects.FitomEmuIF)\*.dll" "$Bin\"
 Copy-IfExists "$($Projects.FitomHwIF)\*.dll"    "$Bin\"
+Copy-IfExists "$($Projects.FitomX)\assets" "$Bin\"
 
 # FM エンジン DLL
 Copy-IfExists "$($Projects.YMEngine)\YMFMEngine.dll" "$Bin\engines\"
