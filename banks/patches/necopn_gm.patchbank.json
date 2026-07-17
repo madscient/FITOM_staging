@@ -1,7 +1,7 @@
 {
   "name": "necopn GM (OPN single-layer)",
   "bank": 0,
-  "note": "necopn_gm.hwbank.json の全128音色を OPN2 (voice_patch_type=0x11) 単一レイヤーで参照。 OPN系最上位チップとして宣言し、OPN/OPN2/OPNA/OPNB/OPNBBすべてでフォールバック再生される。sw_bank=0 は banks/sw/necopn_gm.swbank.json に対応。",
+  "note": "necopn_gm.hwbank.json の全128音色を OPN2 (voice_patch_type=0x11) 単一レイヤーで参照。 OPN系最上位チップとして宣言し、OPN/OPN2/OPNA/OPNB/OPNBBすべてでフォールバック再生される。SwPatch(banks/sw/necopn_gm.swbank.json)との対応は、hw_bank参照先(necopn_gm.hwbank.json)の各パッチ自身のsw_bank/sw_progで管理する(Patch直下のsw_bank/sw_progは2026年7月に廃止、PatchManager::loadPatchBankJsonはこの階層のsw_bank/sw_progを読まないため無意味だった)。",
   "patches": [
     {
       "prog": 0,
@@ -17,8 +17,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 0,
       "poly": 3
     },
     {
@@ -35,8 +33,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 1,
       "poly": 3
     },
     {
@@ -53,8 +49,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 2,
       "poly": 3
     },
     {
@@ -71,8 +65,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 3,
       "poly": 3
     },
     {
@@ -89,8 +81,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 4,
       "poly": 3
     },
     {
@@ -107,8 +97,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 5,
       "poly": 3
     },
     {
@@ -125,8 +113,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 6,
       "poly": 3
     },
     {
@@ -143,8 +129,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 7,
       "poly": 3
     },
     {
@@ -161,8 +145,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 8,
       "poly": 3
     },
     {
@@ -179,8 +161,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 9,
       "poly": 3
     },
     {
@@ -197,8 +177,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 10,
       "poly": 3
     },
     {
@@ -215,8 +193,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 11,
       "poly": 3
     },
     {
@@ -233,8 +209,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 12,
       "poly": 3
     },
     {
@@ -251,8 +225,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 13,
       "poly": 3
     },
     {
@@ -269,8 +241,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 14,
       "poly": 3
     },
     {
@@ -287,8 +257,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 15,
       "poly": 3
     },
     {
@@ -305,8 +273,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 16,
       "poly": 3
     },
     {
@@ -323,8 +289,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 17,
       "poly": 3
     },
     {
@@ -341,8 +305,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 18,
       "poly": 3
     },
     {
@@ -359,8 +321,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 19,
       "poly": 3
     },
     {
@@ -377,8 +337,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 20,
       "poly": 3
     },
     {
@@ -395,8 +353,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 21,
       "poly": 3
     },
     {
@@ -413,8 +369,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 22,
       "poly": 3
     },
     {
@@ -431,8 +385,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 23,
       "poly": 3
     },
     {
@@ -449,8 +401,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 24,
       "poly": 3
     },
     {
@@ -467,8 +417,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 25,
       "poly": 3
     },
     {
@@ -485,8 +433,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 26,
       "poly": 3
     },
     {
@@ -503,8 +449,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 27,
       "poly": 3
     },
     {
@@ -521,8 +465,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 28,
       "poly": 3
     },
     {
@@ -539,8 +481,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 29,
       "poly": 3
     },
     {
@@ -557,8 +497,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 30,
       "poly": 3
     },
     {
@@ -575,8 +513,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 31,
       "poly": 3
     },
     {
@@ -593,8 +529,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 32,
       "poly": 3
     },
     {
@@ -611,8 +545,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 33,
       "poly": 3
     },
     {
@@ -629,8 +561,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 34,
       "poly": 3
     },
     {
@@ -647,8 +577,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 35,
       "poly": 3
     },
     {
@@ -665,8 +593,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 36,
       "poly": 3
     },
     {
@@ -683,8 +609,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 37,
       "poly": 3
     },
     {
@@ -701,8 +625,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 38,
       "poly": 3
     },
     {
@@ -719,8 +641,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 39,
       "poly": 3
     },
     {
@@ -737,8 +657,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 40,
       "poly": 3
     },
     {
@@ -755,8 +673,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 41,
       "poly": 3
     },
     {
@@ -773,8 +689,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 42,
       "poly": 3
     },
     {
@@ -791,8 +705,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 43,
       "poly": 3
     },
     {
@@ -809,8 +721,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 44,
       "poly": 3
     },
     {
@@ -827,8 +737,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 45,
       "poly": 3
     },
     {
@@ -845,8 +753,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 46,
       "poly": 3
     },
     {
@@ -863,8 +769,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 47,
       "poly": 3
     },
     {
@@ -881,8 +785,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 48,
       "poly": 3
     },
     {
@@ -899,8 +801,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 49,
       "poly": 3
     },
     {
@@ -917,8 +817,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 50,
       "poly": 3
     },
     {
@@ -935,8 +833,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 51,
       "poly": 3
     },
     {
@@ -953,8 +849,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 52,
       "poly": 3
     },
     {
@@ -971,8 +865,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 53,
       "poly": 3
     },
     {
@@ -989,8 +881,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 54,
       "poly": 3
     },
     {
@@ -1007,8 +897,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 55,
       "poly": 3
     },
     {
@@ -1025,8 +913,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 56,
       "poly": 3
     },
     {
@@ -1043,8 +929,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 57,
       "poly": 3
     },
     {
@@ -1061,8 +945,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 58,
       "poly": 3
     },
     {
@@ -1079,8 +961,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 59,
       "poly": 3
     },
     {
@@ -1097,8 +977,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 60,
       "poly": 3
     },
     {
@@ -1115,8 +993,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 61,
       "poly": 3
     },
     {
@@ -1133,8 +1009,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 62,
       "poly": 3
     },
     {
@@ -1151,8 +1025,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 63,
       "poly": 3
     },
     {
@@ -1169,8 +1041,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 64,
       "poly": 3
     },
     {
@@ -1187,8 +1057,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 65,
       "poly": 3
     },
     {
@@ -1205,8 +1073,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 66,
       "poly": 3
     },
     {
@@ -1223,8 +1089,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 67,
       "poly": 3
     },
     {
@@ -1241,8 +1105,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 68,
       "poly": 3
     },
     {
@@ -1259,8 +1121,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 69,
       "poly": 3
     },
     {
@@ -1277,8 +1137,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 70,
       "poly": 3
     },
     {
@@ -1295,8 +1153,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 71,
       "poly": 3
     },
     {
@@ -1313,8 +1169,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 72,
       "poly": 3
     },
     {
@@ -1331,8 +1185,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 73,
       "poly": 3
     },
     {
@@ -1349,8 +1201,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 74,
       "poly": 3
     },
     {
@@ -1367,8 +1217,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 75,
       "poly": 3
     },
     {
@@ -1385,8 +1233,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 76,
       "poly": 3
     },
     {
@@ -1403,8 +1249,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 77,
       "poly": 3
     },
     {
@@ -1421,8 +1265,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 78,
       "poly": 3
     },
     {
@@ -1439,8 +1281,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 79,
       "poly": 3
     },
     {
@@ -1457,8 +1297,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 80,
       "poly": 3
     },
     {
@@ -1475,8 +1313,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 81,
       "poly": 3
     },
     {
@@ -1493,8 +1329,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 82,
       "poly": 3
     },
     {
@@ -1511,8 +1345,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 83,
       "poly": 3
     },
     {
@@ -1529,8 +1361,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 84,
       "poly": 3
     },
     {
@@ -1547,8 +1377,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 85,
       "poly": 3
     },
     {
@@ -1565,8 +1393,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 86,
       "poly": 3
     },
     {
@@ -1583,8 +1409,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 87,
       "poly": 3
     },
     {
@@ -1601,8 +1425,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 88,
       "poly": 3
     },
     {
@@ -1619,8 +1441,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 89,
       "poly": 3
     },
     {
@@ -1637,8 +1457,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 90,
       "poly": 3
     },
     {
@@ -1655,8 +1473,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 91,
       "poly": 3
     },
     {
@@ -1673,8 +1489,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 92,
       "poly": 3
     },
     {
@@ -1691,8 +1505,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 93,
       "poly": 3
     },
     {
@@ -1709,8 +1521,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 94,
       "poly": 3
     },
     {
@@ -1727,8 +1537,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 95,
       "poly": 3
     },
     {
@@ -1745,8 +1553,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 96,
       "poly": 3
     },
     {
@@ -1763,8 +1569,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 97,
       "poly": 3
     },
     {
@@ -1781,8 +1585,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 98,
       "poly": 3
     },
     {
@@ -1799,8 +1601,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 99,
       "poly": 3
     },
     {
@@ -1817,8 +1617,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 100,
       "poly": 3
     },
     {
@@ -1835,8 +1633,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 101,
       "poly": 3
     },
     {
@@ -1853,8 +1649,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 102,
       "poly": 3
     },
     {
@@ -1871,8 +1665,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 103,
       "poly": 3
     },
     {
@@ -1889,8 +1681,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 104,
       "poly": 3
     },
     {
@@ -1907,8 +1697,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 105,
       "poly": 3
     },
     {
@@ -1925,8 +1713,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 106,
       "poly": 3
     },
     {
@@ -1943,8 +1729,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 107,
       "poly": 3
     },
     {
@@ -1961,8 +1745,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 108,
       "poly": 3
     },
     {
@@ -1979,8 +1761,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 109,
       "poly": 3
     },
     {
@@ -1997,8 +1777,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 110,
       "poly": 3
     },
     {
@@ -2015,8 +1793,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 111,
       "poly": 3
     },
     {
@@ -2033,8 +1809,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 112,
       "poly": 3
     },
     {
@@ -2051,8 +1825,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 113,
       "poly": 3
     },
     {
@@ -2069,8 +1841,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 114,
       "poly": 3
     },
     {
@@ -2087,8 +1857,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 115,
       "poly": 3
     },
     {
@@ -2105,8 +1873,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 116,
       "poly": 3
     },
     {
@@ -2123,8 +1889,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 117,
       "poly": 3
     },
     {
@@ -2141,8 +1905,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 118,
       "poly": 3
     },
     {
@@ -2159,8 +1921,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 119,
       "poly": 3
     },
     {
@@ -2177,8 +1937,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 120,
       "poly": 3
     },
     {
@@ -2195,8 +1953,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 121,
       "poly": 3
     },
     {
@@ -2213,8 +1969,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 122,
       "poly": 3
     },
     {
@@ -2231,8 +1985,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 123,
       "poly": 3
     },
     {
@@ -2249,8 +2001,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 124,
       "poly": 3
     },
     {
@@ -2267,8 +2017,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 125,
       "poly": 3
     },
     {
@@ -2285,8 +2033,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 126,
       "poly": 3
     },
     {
@@ -2303,8 +2049,6 @@
           "enabled": true
         }
       ],
-      "sw_bank": 0,
-      "sw_prog": 127,
       "poly": 3
     }
   ]

@@ -147,6 +147,98 @@ hwbank/patchbankの`prog`は`0-127`（`minimum:0, maximum:127`）。ファイル
 （`--alg-a`/`--alg-b`未指定時）。`ConnectionSEL`は`ext.ALG_EXT`で別途
 制御し、こちらは`0`固定（旧FITOM互換動作）。
 
+### 3.11 HwPatchフィールド改名（2026年7月17日、FITOM_X側コミット94e99d6に追従）
+- `ops[i].FXV` → **`PDT`**（Pseudo DeTune）に改名。`ext.DM0` →
+  **`FIX`**（Fixed freq）に改名。挙動・値域は変更なし、名称のみ
+  （フィールドの意味は3.2/3.10と同じ: OPN ch2 FXモード、OPL3(COPL3)
+  4OP疑似デチューン）。
+- 本リポジトリ側でも影響ファイルを合わせて改名済み:
+  `banks/OPL3/0{1-5}_*_detuned.hwbank.json`（`FXV`→`PDT`、疑似デチューン
+  実データ、値=4）、`banks/OPM/dx11/dx11.hwbank.json`・
+  `banks/OPM/dx27_dx100/{dx100_1,dx100_2,dx21}.hwbank.json`・
+  `banks/OPZ/gm128/gm128_preset.hwbank.json`（`DM0`→`FIX`、いずれも
+  値=0で未使用）。**JSONキー名の変更は実際の音への影響ではなく
+  読み込み可否そのものに関わる**（`PatchManager.cpp`は新キー名でしか
+  読まないため、リネーム漏れがあると疑似デチューン設定が無音のうちに
+  無視される）。
+- `DrumNote::fine_tune`の単位表記も訂正: スキーマ記述の「cents」は
+  誤りで、実際は**kfs単位（1半音=64ステップ）**。`ISoundDevice::
+  setNoteFine()`にそのまま渡される値であり、値・変換ロジック自体は
+  元から正しかった（ドキュメントの記述ミスのみ）。
+- `config_schema/{drumbank,drumkit,hwbank,fitom.conf}.schema.json`は
+  FITOM_X側から丸ごとコピーして同期済み。同期のついでに気づいた
+  副次的な差分（過去のセッションで追従漏れだったもの）:
+  - 旧形式`*.drumbank.json`/`*.drumkit.json`のノート単位`fixed_ch`
+    （ハイハットの相互チョーク用ハック）は2026年7月15日
+    （FITOM_X側コミットec07eb2）に完全廃止され、代わりに
+    `DrumPatch::chokeGroups`（drumkitトップレベルの`choke_groups`
+    フィールド、ノート番号の配列のペアで相互ダンプを明示指定）に
+    置き換わっている。本リポジトリの`banks/drums/*.drumkit.json`は
+    元々`fixed_ch`を使っていなかった（grep確認済み、データ移行は
+    不要）ため実害はないが、スキーマ更新に気づかず半年近く
+    追従漏れになっていた。
+  - `config_schema/fitom.conf.schema.json`のみ、同期後も
+    `config/fitom.conf.json`実ファイルとの間でバリデーションエラーが
+    残る（`audio`/`banks_dir`/`plugins.hw_plugin`をスキーマ側が
+    許可していない）。これは今回の同期以前から存在した既存の drift
+    （3.11の対象コミットとは無関係）。→ 3.12で解消。
+
+### 3.12 fitom.conf.json構成監査（2026年7月17日、FITOM_X側コミットda1bfcbに追従）
+FITOM_X側で「fitom.conf.jsonがパースされても実装が一切参照していない
+設定項目」の監査が行われ、以下がスキーマから削除された。本リポジトリの
+`config/fitom.conf.json`もこれに合わせて書き換え済み:
+- `plugins.midi_plugin`/`plugins.hw_plugin`: MIDIバックエンドDLL/HWプラグ
+  インDLLの指定は、実際には**プロファイル側**（`hw_plugins[]`/
+  `midi_backend.dll`）でのみ解決される。`fitom.conf.json`側の同名
+  フィールドはパースされるだけで一度も参照されていなかった（重複かつ
+  デッド）。旧`plugins.hw_plugin.dll: "fitom_fmhwif.dll"`は削除。
+- `timing.timer_ms`/`polling_interval_us`: 前者はポルタメント速度
+  テーブル・ソフトLFOレート換算が1msティック固定前提で較正されており
+  安全に可変化できない、後者はHWポーリングの責務がHWプラグイン側
+  （`fitom_fmhwif.dll`等）に移管済みでFITOM_X本体に該当スレッドが
+  存在しないため、いずれも実装のない設定として削除。旧`timing.timer_ms:
+  1`は削除。
+- `audio.*`/`banks_dir`: 元からFITOM_X本体のスキーマ・実装のどちらにも
+  存在しなかった（`Config.cpp`をgrepしても参照箇所なし）。本リポジトリ
+  独自に紛れ込んでいたデッドフィールドだったため削除。
+- 一方、`log.*`は今回**新たに実装が配線された**（以前はパースされる
+  だけで`Log::init()`に反映されていなかった）。`fitom_cli`/`fitom_gui`
+  起動時、実行ファイルと同ディレクトリの`fitom.conf.json`があれば
+  `log.level`/`log.file`/`log.console`が実際に適用される。
+  現状の`config/fitom.conf.json`（`log.level=info`,
+  `log.file=logs/fitom.log`）は変更不要、今後はこれが実際に効く。
+- あわせて`config/profiles/*.profile.json`の`devices[].sample_rate`が
+  `Config.cpp`側で44100固定になっており値を無視していたバグも
+  修正された。本リポジトリの現行プロファイルはいずれも44100指定のみ
+  のため実害はなかったが、将来44.1kHz以外を指定する場合は今後
+  正しく反映される。
+- **副次的に発見**: `banks/patches/necopn_gm.patchbank.json`の
+  Patch直下`sw_bank`/`sw_prog`（廃止済み階層）を削除。
+  `PatchManager::loadPatchBankJson`はPatch直下の`sw_bank`/`sw_prog`を
+  そもそも読まない（`name`/`poly`/`layers`のみ）ため、この128件の
+  設定は最初から無音のまま無視されるデッドデータだった。SwPatchの
+  実際の対応付けは参照先`banks/OPN/gm/necopn_gm.hwbank.json`の
+  各パッチ自身の`sw_bank`/`sw_prog`（`HwPatch::swBank`/`swProg`、
+  `jsonToHwPatch`が読む）で行う。
+
+### 3.13 パフォーマンス情報を持たない変換元からのSwPatch割り当て方針
+`necopn_gm.hwbank.json`（necopn由来のGM128、パフォーマンス情報を
+持たない変換元フォーマット）は、全128パッチが`banks/sw/necopn_gm.
+swbank.json`の`sw_prog=2`（音量ベロシティセンシティビティ(`VTL`)の
+みを設定し、他の感度パラメータ・ソフトLFOは全て無効化した汎用
+パフォーマンスパッチ）を一律で参照している。**これは意図した設計**
+であり、修正不要（2026年7月確認済み）。
+- 変換元にパフォーマンス情報（ベロシティ感度カーブ・LFO設定等）が
+  無いハードウェアパッチをhwbankへコンバートする場合、**音量ベロシ
+  ティセンシティのみを設定した汎用パフォーマンスパッチ**を一律で
+  割り当てる、というのが本プロジェクトの標準運用。
+- 変換元に実際のパフォーマンス情報がある場合は、その情報も変換して
+  **専用のパフォーマンスパッチ**（バンク内の別`sw_prog`）を割り当てる。
+- したがって「複数パッチが同じ`sw_prog`を共有している」こと自体は
+  バグの兆候ではない。個別対応の要否は変換元データの内容次第であり、
+  `sw_bank`/`swbank.json`側に楽器数分のエントリが用意されているか
+  どうかとは無関係に判断すること。
+
 ---
 
 ## 4. 未解決・要確認事項
@@ -160,6 +252,12 @@ hwbank/patchbankの`prog`は`0-127`（`minimum:0, maximum:127`）。ファイル
   （ALSA/MA-2等）も含まれるため、絞り込みが必要か要検討。
 - OPLL GM128（`gm_native_opll.patchbank.json`）は MA-2 Preset2OP由来が
   67/128と過半数。ソースを増やせる余地がないか、要継続検討。
+- `banks/drums/*.drumkit.json`（GM2ドラムキット群）はハイハット等の
+  相互チョーク（クローズ発音時にオープンを止める等）を実装していない。
+  2026年7月15日にFITOM_X側で追加された`choke_groups`
+  （drumkitトップレベル、ノート番号ペアの配列）を使えば実現できるが、
+  現状は未適用（元々`fixed_ch`ハックも使っていなかったため後退では
+  なく、単純に未着手の改善余地）。
 
 ---
 
