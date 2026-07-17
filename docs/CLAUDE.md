@@ -158,8 +158,10 @@ hwbank/patchbankの`prog`は`0-127`（`minimum:0, maximum:127`）。ファイル
   （フィールドの意味は3.2/3.10と同じ: OPN ch2 FXモード、OPL3(COPL3)
   4OP疑似デチューン）。
 - 本リポジトリ側でも影響ファイルを合わせて改名済み:
-  `banks/OPL3/0{1-5}_*_detuned.hwbank.json`（`FXV`→`PDT`、疑似デチューン
-  実データ、値=4）、`banks/OPM/dx11/dx11.hwbank.json`・
+  `banks/OPL3/opl2_merge/0{1-5}_*_detuned.hwbank.json`（`FXV`→`PDT`、
+  疑似デチューン実データ、値=4。当時は`banks/OPL3/`直下だったが、
+  3.15のディレクトリ再整理で`opl2_merge/`配下に移動済み）、
+  `banks/OPM/dx11/dx11.hwbank.json`・
   `banks/OPM/dx27_dx100/{dx100_1,dx100_2,dx21}.hwbank.json`・
   `banks/OPZ/gm128/gm128_preset.hwbank.json`（`DM0`→`FIX`、いずれも
   値=0で未使用）。**JSONキー名の変更は実際の音への影響ではなく
@@ -303,6 +305,46 @@ scc_wave_banks/pcm_banks）の相対パス解決基点が、**カレントワー
   自動設定される」という記述は現行のスキーマ・実装のどちらにも該当する
   仕組みが存在しない不正確な記載だったため、実際の解決方法（`profile`に
   明示パスを書く方式）の説明に修正した。
+
+### 3.15 banks/内部ディレクトリ構成の整理（2026年7月17日）
+`banks/`配下のチップ族ディレクトリ内で、変換元/生成方法ごとのサブ
+ディレクトリ分けが一貫していなかった（一部チップは常にサブdirあり、
+一部は無し、`drums/OPL2`・`drums/OPL3`だけ別の軸=フォーマット別トップ
+レベルディレクトリの下にチップ固有HwBankが紛れ込んでいた）ため、
+`banks/README.md`に明文化した以下の原則で統一した:
+- `drums/`・`patches/`・`sw/`・`scc/`は**フォーマット別**（DrumKit/
+  PatchBank/SwPatch/SCCWave）のトップレベルディレクトリで、チップ族
+  ディレクトリとは別軸。特に`drums/`は`*.drumkit.json`
+  （GM2ノートマッピング、`drum_banks[]`から参照）専用とし、prog番号=
+  MIDIノート番号のチップ固有HwBank（`hw_banks[]`から高いbank番号で
+  参照する「打楽器音色バンク」、DrumKitとは別物）は対象外とする。
+- チップ族ディレクトリ直下は、**同一チップに複数の変換元/生成方法が
+  ある場合のみ**変換元名のサブディレクトリで分ける。単一変換元、または
+  自前作成（外部変換元なし）のファイルはサブディレクトリを作らずフラットに
+  置く。
+
+これに伴い実施した移動（全て`git mv`、内容変更なし）:
+- `banks/drums/OPL2/{DrumsBank,07_DrumsBank,LuminousDrumBank,
+  BasicDrumBank,DigitalDrumBank,MicroComputerDrumBank,AcidDrumBank}
+  .hwbank.json`（いずれもMA-2 VMA形式、`source`フィールドで確認済み）
+  → `banks/OPL2/ma2_vma/`（既存の同形式メロディバンクと同じ場所）
+- `banks/drums/OPL2/alsa_drums.hwbank.json` → `banks/OPL2/alsa/`
+  （ALSA sbiload形式、`std_opl2.hwbank.json`と同じ場所）
+- `banks/drums/OPL3/alsa_drums.hwbank.json` → `banks/OPL3/alsa/`
+- `banks/OPL3/`直下にフラットで置かれていた7件（`0{1-5}_*_detuned
+  .hwbank.json`・`Luminous_x_Basic.hwbank.json`・
+  `MicroComputer_x_Digital.hwbank.json`）は、いずれも`opl2_merge.py`で
+  OPL2バンク2本を合成した派生バンク（`source`フィールドで確認済み）
+  であり、既存の`OPL3/alsa/`・`OPL3/ma2_vma/`という「変換元別サブ
+  ディレクトリ」の並びから外れていたため、新設した
+  `banks/OPL3/opl2_merge/`に移動。
+- 上記により`banks/drums/OPL2/`・`banks/drums/OPL3/`は空になり削除
+  （`banks/drums/`直下は`*.drumkit.json`のみが残る）。
+- 移動に伴い、参照していた5プロファイル
+  （`emu_opl`/`unified_preset`が`drums/OPL2`・`drums/OPL3`の計19箇所、
+  `emu_opl`/`unified_preset`が`OPL3/`直下7ファイルの計14箇所）の
+  `banks.hw_banks[].file`を新しいパスに更新。`banks/README.md`・
+  `tools/voice_convert/README.md`の例示パスも追従済み。
 
 ---
 
