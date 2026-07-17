@@ -164,7 +164,7 @@ if __name__ == "__main__":
   python3 opl2_merge.py \\
       banks/OPL2/ma2_vma/MicroComputerNormalBank.hwbank.json \\
       banks/OPL2/ma2_vma/DigitalNormalBank.hwbank.json \\
-      banks/OPL3/MicroComputer_x_Digital.hwbank.json
+      banks/OPL3/opl2_merge/MicroComputer_x_Digital.hwbank.json
 
 CON4 接続モード:
   0 : M1→C1→M2→C2  完全直列

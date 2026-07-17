@@ -172,16 +172,16 @@ ops[3] = C2 (Carrier 2   / Operator 4)  ← 2OP グループでは使用しな�
 python3 opl2_merge.py \\
     banks/OPL2/ma2_vma/MicroComputerNormalBank.hwbank.json \\
     banks/OPL2/ma2_vma/DigitalNormalBank.hwbank.json \\
-    banks/OPL3/MicroComputer_x_Digital.hwbank.json
+    banks/OPL3/opl2_merge/MicroComputer_x_Digital.hwbank.json
 
 # CON4=0 (完全直列) で合成
 python3 opl2_merge.py BankA.hwbank.json BankB.hwbank.json out.hwbank.json --con4 0
 
-# ドラムバンク合成も同様
+# ドラムバンク合成も同様 (出力先はメロディ用と同じくOPL3/opl2_merge/)
 python3 opl2_merge.py \\
-    banks/drums/OPL2/BasicDrumBank.hwbank.json \\
-    banks/drums/OPL2/DigitalDrumBank.hwbank.json \\
-    banks/drums/OPL3/Basic_x_Digital.hwbank.json
+    banks/OPL2/ma2_vma/BasicDrumBank.hwbank.json \\
+    banks/OPL2/ma2_vma/DigitalDrumBank.hwbank.json \\
+    banks/OPL3/opl2_merge/Basic_x_Digital_drums.hwbank.json
 ```
 
 **CON4 (4OP 接続モード)**:
