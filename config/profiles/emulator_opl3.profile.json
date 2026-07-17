@@ -4,7 +4,7 @@
     {
       "name": "FitomEmuIF",
       "dll": "FitomEmuIF.dll",
-      "profile": "fmemuif_opl3.profile.json",
+      "profile": "config/profiles/hw_plugins/fmemuif_opl3.profile.json",
       "auto_devices": true
     }
   ],
@@ -13,42 +13,42 @@
     "hw_banks": [
       {
         "bank": 0,
-        "file": "banks/OPL3/alsa/std_opl3.hwbank.json",
+        "file": "../../banks/OPL3/alsa/std_opl3.hwbank.json",
         "group": "OPL3"
       },
       {
         "bank": 1,
-        "file": "banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json",
+        "file": "../../banks/OPL3/ma2_vma/GMmapFM4op.hwbank.json",
         "group": "OPL3"
       },
       {
         "bank": 1,
-        "file": "banks/OPL2/alsa/std_opl2.hwbank.json",
+        "file": "../../banks/OPL2/alsa/std_opl2.hwbank.json",
         "group": "OPL2"
       },
       {
         "bank": 0,
-        "file": "banks/OPL2/rhythm/opll_rhythm.hwbank.json",
+        "file": "../../banks/OPL2/msx_audio/msx_audio_preset_rhythm.hwbank.json",
         "group": "OPL2"
       }
     ],
     "sw_banks": [
       {
         "bank": 0,
-        "file": "banks/sw/performance_presets.swbank.json"
+        "file": "../../banks/sw/performance_presets.swbank.json"
       }
     ],
     "patch_banks": [
       {
         "bank": 0,
-        "file": "banks/patches/opll_rhythm.patchbank.json"
+        "file": "../../banks/patches/opll_rhythm.patchbank.json"
       }
     ],
     "drum_banks": [
       {
         "prog": 0,
         "name": "OPLL Rhythm (GM2 mapped)",
-        "file": "banks/drums/opll_rhythm.drumkit.json"
+        "file": "../../banks/drums/opll_rhythm.drumkit.json"
       }
     ]
   }

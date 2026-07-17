@@ -16,7 +16,12 @@
 ```
 config/
   profiles/*.json      プロファイル本体（hw_plugins + banks構成）
-  fmemuif_*.json        FitomEmuIF用チップ構成サブプロファイル
+  profiles/hw_plugins/*.json  hw_plugins[].profileが指すプラグイン固有の
+                        サブプロファイル（FitomEmuIF用fmemuif_*.json /
+                        FitomHwIF用fitom_hw_*.json）。ディレクトリ配置が
+                        プロファイルの参照階層（トップ→サブ）と一致するよう
+                        profiles/直下ではなくprofiles/hw_plugins/に配置
+                        （2026年7月17日、3.14参照）
 config_schema/*.json   各種JSON Schemaファイル
 banks/
   OPN/ OPM/ OPZ/ OPL2/ OPL3/ OPLL/ PSG/ PCM/ OPL4AWM/  チップ族ごとの音色バンク
@@ -238,6 +243,66 @@ swbank.json`の`sw_prog=2`（音量ベロシティセンシティビティ(`VTL`
   バグの兆候ではない。個別対応の要否は変換元データの内容次第であり、
   `sw_bank`/`swbank.json`側に楽器数分のエントリが用意されているか
   どうかとは無関係に判断すること。
+
+### 3.14 banks.*[].file相対パス基点変更 + プロファイル関連ファイルの再配置（2026年7月17日、FITOM_X側コミットeed0b4aに追従）
+FITOM_X側で`banks.*[].file`（hw_banks/sw_banks/patch_banks/drum_banks/
+scc_wave_banks/pcm_banks）の相対パス解決基点が、**カレントワーキング
+ディレクトリからプロファイルファイル自身のディレクトリに変更**された
+（`FITOMConfig::loadProfile`が`buildFromProfile`に渡す`baseDir`を
+`std::filesystem::path{}`（空、旧CWD相対）から`path.parent_path()`
+（プロファイル自身の親ディレクトリ）に変更）。あわせて、`drum_banks`
+省略時にhw_banks等も含め全バンク種別のロードがスキップされる既存バグも
+修正された。
+- 本リポジトリの`config/profiles/*.profile.json`（11件）は全て
+  `config/profiles/`直下にあり、`banks/`はリポジトリルート直下（2階層上）
+  にあるため、`banks.*[].file`の値を全件`"banks/..."`から
+  `"../../banks/..."`に書き換えた。**新しいFITOM_X本体（eed0b4a以降）を
+  ビルドし直さないままこの変更を適用すると、旧CWD相対のバイナリでは
+  バンクが一切見つからなくなる点に注意**（本体の更新と本リポジトリの
+  プロファイル書き換えは同時に反映すること）。
+- 副次的に発見: `emulator_opl3.profile.json`/`hw_opm_emu_opl3.profile.json`/
+  `hw_opn_emu_opm_opl3.profile.json`の3件が、2026年7月12日のコミット
+  `5825913`（`banks/OPL2/rhythm/opll_rhythm.hwbank.json`を削除し
+  `unified_preset.profile.json`側は`banks/OPL2/msx_audio/
+  msx_audio_preset_rhythm.hwbank.json`に切り替え済み）に追従できておらず、
+  存在しないファイルを参照したままになっていた（旧CWD相対の基点でも
+  実在しないファイルだったため、今回の基点変更とは無関係の既存バグ）。
+  同じ内容の後継ファイルである`msx_audio_preset_rhythm.hwbank.json`を
+  参照するよう修正済み。
+
+**プロファイル関連ファイルの再配置**（同日、ディレクトリ階層をプロファイルの
+参照階層に合わせる目的）:
+- `hw_plugins[].profile`（FitomEmuIF/FitomHwIFなど各hwプラグインDLL自身が
+  読む設定ファイルへのパス）は、FITOM_X本体では一切解釈されず
+  `HWPlugin_Init()`にそのまま渡される。FitomEmuIF/FitomHwIFの実装は
+  いずれも渡されたパス文字列を`std::filesystem::exists()`にそのまま渡す
+  （＝プロセスのカレントワーキングディレクトリ相対）ため、本リポジトリの
+  起動運用（`bin/fitom_core.exe --profile config/profiles/<name>`を
+  リポジトリルートから実行）を前提にすると、値は常にリポジトリルート
+  相対で書く必要がある。
+- 変更前は`config/fmemuif_*.json`・`config/fitom_hw_*.json`が
+  `config/profiles/`と同階層にフラットに置かれており、かつ
+  `hw_plugins[].profile`側の参照も一部`"config/"`プレフィックス付き・
+  一部プレフィックス無し（`fmemuif_opl3.profile.json`のように書かれ、
+  CWD=リポジトリルート運用では実際には解決できない）が混在していた
+  （`emulator_opl3`/`emulator_opm`/`hw_opm_emu_opl3`/
+  `hw_opn_emu_opm_opl3`/`hw_spfm_opm`の計6箇所が該当。プロファイル
+  ディレクトリ階層とプロファイル自身が持つ参照階層が一致していなかった
+  ことに起因する既存の潜在バグ）。
+- `config/fmemuif_*.json`（7件）・`config/fitom_hw_*.json`（3件）を
+  `config/profiles/hw_plugins/`（トップ階層プロファイルからの参照先である
+  ことをディレクトリ階層でも表す）に移動し、全プロファイルの
+  `hw_plugins[].profile`を`"config/profiles/hw_plugins/<file>"`に統一。
+- `config/fmhwif_opl3.profile.json`・`config/fmhwif_opm.profile.json`・
+  `config/fmhwif_opm_opl3.profile.json`の3件は、内容が対応する
+  `fmemuif_*.json`と完全に同一かつどこからも参照されていない（`fmemuif_`
+  への改名後の削除漏れ）孤児ファイルだったため削除。
+- README.mdのディレクトリ構成図・アーキテクチャ概要・プロファイル対応表、
+  および`setup.ps1`/`setup.sh`の実機ポート設定案内も新しいパスに追従済み。
+  README.md内の「`FMHWIF_PROFILE`環境変数が`profile_env`との組み合わせで
+  自動設定される」という記述は現行のスキーマ・実装のどちらにも該当する
+  仕組みが存在しない不正確な記載だったため、実際の解決方法（`profile`に
+  明示パスを書く方式）の説明に修正した。
 
 ---
 
