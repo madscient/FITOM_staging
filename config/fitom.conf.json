@@ -1,26 +1,12 @@
 {
   "_comment": [
-    "FITOM_X システム設定。ランタイムディレクトリからの相対パスで記述する。",
-    "hw_plugin.dll は後方互換用（単一 DLL 構成）。",
-    "複数 DLL を使う場合は profile.json の devices[].dll で指定する。",
-    "profile 側で dll を指定した場合、hw_plugin.dll の設定は無視される。"
+    "FITOM_X システム設定。ログ設定のみを扱う(2026年7月〜、config audit)。",
+    "HWプラグインDLL・MIDIバックエンドDLL・音声出力設定は",
+    "profile.json 側の hw_plugins[] / midi_backend.dll、または",
+    "各HWプラグイン自身の設定ファイル(fmemuif_*.profile.json等)で指定する。"
   ],
   "log": {
     "level": "info",
     "file":  "logs/fitom.log"
-  },
-  "plugins": {
-    "hw_plugin": {
-      "_comment": "単一 DLL 構成時のみ使用。複数 DLL 混在は profile の devices[].dll で指定。",
-      "dll": "fitom_fmhwif.dll"
-    }
-  },
-  "audio": {
-    "api":           "auto",
-    "buffer_frames": 512
-  },
-  "timing": {
-    "timer_ms": 1
-  },
-  "banks_dir": "banks"
+  }
 }
