@@ -4,7 +4,7 @@
     {
       "name": "FitomEmuIF",
       "dll": "FitomEmuIF.dll",
-      "profile": "fmemuif_opm.profile.json",
+      "profile": "config/profiles/hw_plugins/fmemuif_opm.profile.json",
       "auto_devices": true
     }
   ],
@@ -13,59 +13,59 @@
     "hw_banks": [
       {
         "bank": 0,
-        "file": "banks/OPM/dx27_dx100/dx21.hwbank.json",
+        "file": "../../banks/OPM/dx27_dx100/dx21.hwbank.json",
         "group": "OPM"
       },
       {
         "bank": 1,
-        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json",
+        "file": "../../banks/OPM/dx27_dx100/dx100_1.hwbank.json",
         "group": "OPM"
       },
       {
         "bank": 2,
-        "file": "banks/OPM/dx27_dx100/dx100_2.hwbank.json",
+        "file": "../../banks/OPM/dx27_dx100/dx100_2.hwbank.json",
         "group": "OPM"
       },
       {
         "bank": 3,
-        "file": "banks/OPM/fb01/fb01.hwbank.json",
+        "file": "../../banks/OPM/fb01/fb01.hwbank.json",
         "group": "OPM"
       },
       {
         "bank": 4,
-        "file": "banks/OPM/dx11/dx11.hwbank.json",
+        "file": "../../banks/OPM/dx11/dx11.hwbank.json",
         "group": "OPM"
       },
       {
         "bank": 5,
-        "file": "banks/OPZ/tx81z/tx81z.hwbank.json",
+        "file": "../../banks/OPZ/tx81z/tx81z.hwbank.json",
         "group": "OPM"
       }
     ],
     "sw_banks": [
       {
         "bank": 0,
-        "file": "banks/sw/performance_presets.swbank.json"
+        "file": "../../banks/sw/performance_presets.swbank.json"
       },
       {
         "bank": 1,
-        "file": "banks/sw/dx21.swbank.json"
+        "file": "../../banks/sw/dx21.swbank.json"
       },
       {
         "bank": 2,
-        "file": "banks/sw/dx100_1.swbank.json"
+        "file": "../../banks/sw/dx100_1.swbank.json"
       },
       {
         "bank": 3,
-        "file": "banks/sw/dx100_2.swbank.json"
+        "file": "../../banks/sw/dx100_2.swbank.json"
       },
       {
         "bank": 4,
-        "file": "banks/sw/dx11.swbank.json"
+        "file": "../../banks/sw/dx11.swbank.json"
       },
       {
         "bank": 5,
-        "file": "banks/sw/tx81z.swbank.json"
+        "file": "../../banks/sw/tx81z.swbank.json"
       }
     ],
     "patch_banks": [],

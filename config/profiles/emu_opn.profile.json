@@ -4,7 +4,7 @@
     {
       "name": "FitomEmuIF",
       "dll": "FitomEmuIF.dll",
-      "profile": "config/fmemuif_opn_profile.json",
+      "profile": "config/profiles/hw_plugins/fmemuif_opn_profile.json",
       "auto_devices": true
     }
   ],
@@ -16,51 +16,51 @@
       {
         "group": "OPN2",
         "bank": 0,
-        "file": "banks/OPN/gm/necopn_gm.hwbank.json"
+        "file": "../../banks/OPN/gm/necopn_gm.hwbank.json"
       },
       {
         "group": "OPN2",
         "bank": 1,
-        "file": "banks/OPN/n88basic/n88basic_preset.hwbank.json"
+        "file": "../../banks/OPN/n88basic/n88basic_preset.hwbank.json"
       },
       {
         "group": "OPN2",
         "bank": 2,
-        "file": "banks/OPN/music_lalf/music_lalf_1.hwbank.json"
+        "file": "../../banks/OPN/music_lalf/music_lalf_1.hwbank.json"
       },
       {
         "group": "OPN2",
         "bank": 3,
-        "file": "banks/OPN/music_lalf/music_lalf_2.hwbank.json"
+        "file": "../../banks/OPN/music_lalf/music_lalf_2.hwbank.json"
       },
       {
         "group": "ADPCMB",
         "bank": 0,
-        "file": "banks/PCM/pss680/pss680_opna.pcmbank.json"
+        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json"
       },
       {
         "group": "ADPCMA",
         "bank": 1,
-        "file": "banks/PCM/pss680/pss680_opnb.pcmbank.json"
+        "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json"
       }
     ],
     "sw_banks": [
       {
         "bank": 0,
-        "file": "banks/sw/performance_presets.swbank.json"
+        "file": "../../banks/sw/performance_presets.swbank.json"
       }
     ],
     "patch_banks": [
       {
         "bank": 0,
-        "file": "banks/patches/necopn_gm.patchbank.json"
+        "file": "../../banks/patches/necopn_gm.patchbank.json"
       }
     ],
     "drum_banks": [
       {
         "prog": 0,
         "name": "ADPCM-A GM set",
-        "file": "banks/drums/pss680_opnb.drumkit.json"
+        "file": "../../banks/drums/pss680_opnb.drumkit.json"
       }
     ],
     "pcm_banks": []

@@ -4,7 +4,7 @@
     {
       "name": "FitomEmuIF",
       "dll": "FitomEmuIF.dll",
-      "profile": "config/fmemuif_opll5.profile.json",
+      "profile": "config/profiles/hw_plugins/fmemuif_opll5.profile.json",
       "auto_devices": true
     }
   ],
@@ -16,117 +16,117 @@
       {
         "group": "OPLL",
         "bank": 1,
-        "file": "banks/OPL2/msx_audio/msx_audio_preset.hwbank.json"
+        "file": "../../banks/OPL2/msx_audio/msx_audio_preset.hwbank.json"
       },
       {
         "group": "OPLL",
         "bank": 2,
-        "file": "banks/OPLL/opll_presets.hwbank.json"
+        "file": "../../banks/OPLL/opll_presets.hwbank.json"
       },
       {
         "group": "OPLL",
         "bank": 3,
-        "file": "banks/OPLL/rom_sw_meta.hwbank.json",
+        "file": "../../banks/OPLL/rom_sw_meta.hwbank.json",
         "role": "builtin_swpatch_meta"
       },
       {
         "group": "OPLL",
         "bank": 4,
-        "file": "banks/OPL2/ma2_vma/Preset2OP.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/Preset2OP.hwbank.json"
       }
     ],
     "sw_banks": [
       {
         "bank": 0,
-        "file": "banks/sw/performance_presets.swbank.json"
+        "file": "../../banks/sw/performance_presets.swbank.json"
       }
     ],
     "patch_banks": [
       {
         "bank": 0,
-        "file": "banks/patches/gm_native_opll.patchbank.json"
+        "file": "../../banks/patches/gm_native_opll.patchbank.json"
       }
     ],
     "drum_banks": [
       {
         "prog": 0,
         "name": "OPLL Built-in set",
-        "file": "banks/drums/opll_rhythm.drumkit.json"
+        "file": "../../banks/drums/opll_rhythm.drumkit.json"
       },
       {
         "prog": 1,
         "name": "ADPCM-A GM set",
-        "file": "banks/drums/pss680_opnb.drumkit.json"
+        "file": "../../banks/drums/pss680_opnb.drumkit.json"
       },
       {
         "prog": 2,
         "name": "ALSA Preset 2OP set",
-        "file": "banks/drums/alsa_preset_2op.drumkit.json"
+        "file": "../../banks/drums/alsa_preset_2op.drumkit.json"
       },
       {
         "prog": 3,
         "name": "ALSA Preset 4OP set",
-        "file": "banks/drums/alsa_preset_4op.drumkit.json"
+        "file": "../../banks/drums/alsa_preset_4op.drumkit.json"
       },
       {
         "prog": 4,
         "name": "MA-2 Preset 2OP set",
-        "file": "banks/drums/ma2_preset_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_preset_2op.drumkit.json"
       },
       {
         "prog": 5,
         "name": "MA-2 Basic 2OP set",
-        "file": "banks/drums/ma2_basic_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_basic_2op.drumkit.json"
       },
       {
         "prog": 6,
         "name": "MA-2 Luminous 2OP set",
-        "file": "banks/drums/ma2_luminous_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_luminous_2op.drumkit.json"
       },
       {
         "prog": 7,
         "name": "MA-2 MicroComputer 2OP set",
-        "file": "banks/drums/ma2_microcomputer_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_microcomputer_2op.drumkit.json"
       },
       {
         "prog": 8,
         "name": "MA-2 Digital 2OP set",
-        "file": "banks/drums/ma2_digital_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_digital_2op.drumkit.json"
       },
       {
         "prog": 9,
         "name": "MA-2 Acid 2OP set",
-        "file": "banks/drums/ma2_acid_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_acid_2op.drumkit.json"
       },
       {
         "prog": 10,
         "name": "MA-2 Variant 2OP set",
-        "file": "banks/drums/ma2_variant_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_variant_2op.drumkit.json"
       },
       {
         "prog": 11,
         "name": "OPNA Built-in set",
-        "file": "banks/drums/opna_builtin.drumkit.json"
+        "file": "../../banks/drums/opna_builtin.drumkit.json"
       },
       {
         "prog": 12,
         "name": "OPLL Built-in set",
-        "file": "banks/drums/opll_rhythm.drumkit.json"
+        "file": "../../banks/drums/opll_rhythm.drumkit.json"
       },
       {
         "prog": 13,
         "name": "OPL Built-in set",
-        "file": "banks/drums/opl_builtin_rhythm.drumkit.json"
+        "file": "../../banks/drums/opl_builtin_rhythm.drumkit.json"
       },
       {
         "prog": 14,
         "name": "ADPCM-B GM set",
-        "file": "banks/drums/pss680_opna.drumkit.json"
+        "file": "../../banks/drums/pss680_opna.drumkit.json"
       },
       {
         "prog": 15,
         "name": "OPL4-AWM GM set",
-        "file": "banks/drums/opl4awm.drumkit.json"
+        "file": "../../banks/drums/opl4awm.drumkit.json"
       }
     ],
     "pcm_banks": []

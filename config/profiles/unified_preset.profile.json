@@ -9,7 +9,7 @@
     {
       "name": "FitomEmuIF",
       "dll": "FitomEmuIF.dll",
-      "profile": "config/fmemuif_opn_profile.json",
+      "profile": "config/profiles/hw_plugins/fmemuif_opn_profile.json",
       "auto_devices": true
     }
   ],
@@ -21,447 +21,447 @@
       {
         "group": "OPN2",
         "bank": 0,
-        "file": "banks/OPN/gm/necopn_gm.hwbank.json"
+        "file": "../../banks/OPN/gm/necopn_gm.hwbank.json"
       },
       {
         "group": "OPN2",
         "bank": 1,
-        "file": "banks/OPN/n88basic/n88basic_preset.hwbank.json"
+        "file": "../../banks/OPN/n88basic/n88basic_preset.hwbank.json"
       },
       {
         "group": "OPN2",
         "bank": 2,
-        "file": "banks/OPN/music_lalf/music_lalf_1.hwbank.json"
+        "file": "../../banks/OPN/music_lalf/music_lalf_1.hwbank.json"
       },
       {
         "group": "OPN2",
         "bank": 3,
-        "file": "banks/OPN/music_lalf/music_lalf_2.hwbank.json"
+        "file": "../../banks/OPN/music_lalf/music_lalf_2.hwbank.json"
       },
       {
         "group": "OPZ",
         "bank": 0,
-        "file": "banks/OPZ/gm128/gm128_preset.hwbank.json"
+        "file": "../../banks/OPZ/gm128/gm128_preset.hwbank.json"
       },
       {
         "group": "OPZ",
         "bank": 1,
-        "file": "banks/OPM/opmdrv/opmdrv_preset.hwbank.json"
+        "file": "../../banks/OPM/opmdrv/opmdrv_preset.hwbank.json"
       },
       {
         "group": "OPZ",
         "bank": 2,
-        "file": "banks/OPM/fb01/fb01.hwbank.json"
+        "file": "../../banks/OPM/fb01/fb01.hwbank.json"
       },
       {
         "group": "OPZ",
         "bank": 3,
-        "file": "banks/OPM/dx11/dx11.hwbank.json"
+        "file": "../../banks/OPM/dx11/dx11.hwbank.json"
       },
       {
         "group": "OPZ",
         "bank": 4,
-        "file": "banks/OPM/dx27_dx100/dx21.hwbank.json"
+        "file": "../../banks/OPM/dx27_dx100/dx21.hwbank.json"
       },
       {
         "group": "OPZ",
         "bank": 5,
-        "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json"
+        "file": "../../banks/OPM/dx27_dx100/dx100_1.hwbank.json"
       },
       {
         "group": "OPZ",
         "bank": 6,
-        "file": "banks/OPM/dx27_dx100/dx100_2.hwbank.json"
+        "file": "../../banks/OPM/dx27_dx100/dx100_2.hwbank.json"
       },
       {
         "group": "OPZ",
         "bank": 7,
-        "file": "banks/OPZ/tx81z/tx81z.hwbank.json"
+        "file": "../../banks/OPZ/tx81z/tx81z.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 0,
-        "file": "banks/OPL2/alsa/std_opl2.hwbank.json"
+        "file": "../../banks/OPL2/alsa/std_opl2.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 1,
-        "file": "banks/OPL2/ma2_vma/Preset2OP.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/Preset2OP.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 2,
-        "file": "banks/OPL2/ma2_vma/NormalBank-1.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/NormalBank-1.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 3,
-        "file": "banks/OPL2/ma2_vma/NormalBank-2.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/NormalBank-2.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 4,
-        "file": "banks/OPL2/ma2_vma/NormalBank-3.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/NormalBank-3.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 5,
-        "file": "banks/OPL2/ma2_vma/NormalBank-4.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/NormalBank-4.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 6,
-        "file": "banks/OPL2/ma2_vma/NormalBank-5.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/NormalBank-5.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 7,
-        "file": "banks/OPL2/ma2_vma/LuminousNormalBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/LuminousNormalBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 8,
-        "file": "banks/OPL2/ma2_vma/BasicNormalBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/BasicNormalBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 9,
-        "file": "banks/OPL2/ma2_vma/DigitalNormalBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/DigitalNormalBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 10,
-        "file": "banks/OPL2/ma2_vma/MicroComputerNormalBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/MicroComputerNormalBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 11,
-        "file": "banks/OPL2/ma2_vma/AcidNormalBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/AcidNormalBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 12,
-        "file": "banks/OPL2/ma2_vma/ChineseNormalBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/ChineseNormalBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 13,
-        "file": "banks/OPL2/ma2_vma/01_Pno-Bell-OrgBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/01_Pno-Bell-OrgBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 14,
-        "file": "banks/OPL2/ma2_vma/02_Gtr-BassBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/02_Gtr-BassBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 15,
-        "file": "banks/OPL2/ma2_vma/03_Str-EnsembleBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/03_Str-EnsembleBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 16,
-        "file": "banks/OPL2/ma2_vma/04_Brs-Rd-PipeBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/04_Brs-Rd-PipeBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 17,
-        "file": "banks/OPL2/ma2_vma/05_Lead-Pad-FXBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/05_Lead-Pad-FXBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 18,
-        "file": "banks/OPL2/ma2_vma/06_Eth-Perc-SEBank.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/06_Eth-Perc-SEBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 19,
-        "file": "banks/OPL2/msx_audio/msx_audio_preset.hwbank.json"
+        "file": "../../banks/OPL2/msx_audio/msx_audio_preset.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 112,
-        "file": "banks/drums/OPL2/alsa_drums.hwbank.json"
+        "file": "../../banks/drums/OPL2/alsa_drums.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 113,
-        "file": "banks/drums/OPL2/DrumsBank.hwbank.json"
+        "file": "../../banks/drums/OPL2/DrumsBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 114,
-        "file": "banks/drums/OPL2/07_DrumsBank.hwbank.json"
+        "file": "../../banks/drums/OPL2/07_DrumsBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 115,
-        "file": "banks/drums/OPL2/LuminousDrumBank.hwbank.json"
+        "file": "../../banks/drums/OPL2/LuminousDrumBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 116,
-        "file": "banks/drums/OPL2/BasicDrumBank.hwbank.json"
+        "file": "../../banks/drums/OPL2/BasicDrumBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 117,
-        "file": "banks/drums/OPL2/DigitalDrumBank.hwbank.json"
+        "file": "../../banks/drums/OPL2/DigitalDrumBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 118,
-        "file": "banks/drums/OPL2/MicroComputerDrumBank.hwbank.json"
+        "file": "../../banks/drums/OPL2/MicroComputerDrumBank.hwbank.json"
       },
       {
         "group": "OPL3_2",
         "bank": 119,
-        "file": "banks/drums/OPL2/AcidDrumBank.hwbank.json"
+        "file": "../../banks/drums/OPL2/AcidDrumBank.hwbank.json"
       },
       {
         "group": "OPLL",
         "bank": 1,
-        "file": "banks/OPL2/msx_audio/msx_audio_preset.hwbank.json"
+        "file": "../../banks/OPL2/msx_audio/msx_audio_preset.hwbank.json"
       },
       {
         "group": "OPLL",
         "bank": 2,
-        "file": "banks/OPLL/opll_presets.hwbank.json"
+        "file": "../../banks/OPLL/opll_presets.hwbank.json"
       },
       {
         "group": "OPL3",
         "bank": 0,
-        "file": "banks/OPL3/alsa/std_opl3.hwbank.json"
+        "file": "../../banks/OPL3/alsa/std_opl3.hwbank.json"
       },
       {
         "group": "OPL3",
         "bank": 1,
-        "file": "banks/OPL3/ma2_vma/Preset4OP.hwbank.json"
+        "file": "../../banks/OPL3/ma2_vma/Preset4OP.hwbank.json"
       },
       {
         "group": "OPL3",
         "bank": 2,
-        "file": "banks/OPL3/MicroComputer_x_Digital.hwbank.json"
+        "file": "../../banks/OPL3/MicroComputer_x_Digital.hwbank.json"
       },
       {
         "group": "OPL3",
         "bank": 3,
-        "file": "banks/OPL3/Luminous_x_Basic.hwbank.json"
+        "file": "../../banks/OPL3/Luminous_x_Basic.hwbank.json"
       },
       {
         "group": "OPL3",
         "bank": 4,
-        "file": "banks/OPL3/01_Pno-Bell-OrgBank_detuned.hwbank.json"
+        "file": "../../banks/OPL3/01_Pno-Bell-OrgBank_detuned.hwbank.json"
       },
       {
         "group": "OPL3",
         "bank": 5,
-        "file": "banks/OPL3/02_Gtr-BassBank_detuned.hwbank.json"
+        "file": "../../banks/OPL3/02_Gtr-BassBank_detuned.hwbank.json"
       },
       {
         "group": "OPL3",
         "bank": 6,
-        "file": "banks/OPL3/03_Str-EnsembleBank_detuned.hwbank.json"
+        "file": "../../banks/OPL3/03_Str-EnsembleBank_detuned.hwbank.json"
       },
       {
         "group": "OPL3",
         "bank": 7,
-        "file": "banks/OPL3/04_Brs-Rd-PipeBank_detuned.hwbank.json"
+        "file": "../../banks/OPL3/04_Brs-Rd-PipeBank_detuned.hwbank.json"
       },
       {
         "group": "OPL3",
         "bank": 8,
-        "file": "banks/OPL3/05_Lead-Pad-FXBank_detuned.hwbank.json"
+        "file": "../../banks/OPL3/05_Lead-Pad-FXBank_detuned.hwbank.json"
       },
       {
         "group": "OPL3",
         "bank": 112,
-        "file": "banks/drums/OPL3/alsa_drums.hwbank.json"
+        "file": "../../banks/drums/OPL3/alsa_drums.hwbank.json"
       },
       {
         "group": "SSG",
         "bank": 0,
-        "file": "banks/PSG/psg_shared_preset.hwbank.json"
+        "file": "../../banks/PSG/psg_shared_preset.hwbank.json"
       },
       {
         "group": "SSG",
         "bank": 1,
-        "file": "banks/PSG/epsg_preset.hwbank.json"
+        "file": "../../banks/PSG/epsg_preset.hwbank.json"
       },
       {
         "group": "SSG",
         "bank": 2,
-        "file": "banks/PSG/scc_preset_1.hwbank.json"
+        "file": "../../banks/PSG/scc_preset_1.hwbank.json"
       },
       {
         "group": "SSG",
         "bank": 3,
-        "file": "banks/PSG/scc_preset_2.hwbank.json"
+        "file": "../../banks/PSG/scc_preset_2.hwbank.json"
       },
       {
         "group": "AWM",
         "bank": 0,
-        "file": "banks/OPL4AWM/opl4awm_yrw801_gm.samplezonebank.json"
+        "file": "../../banks/OPL4AWM/opl4awm_yrw801_gm.samplezonebank.json"
       },
       {
         "group": "AWM",
         "bank": 1,
-        "file": "banks/OPL4AWM/opl4awm_yrw801_drum.samplezonebank.json"
+        "file": "../../banks/OPL4AWM/opl4awm_yrw801_drum.samplezonebank.json"
       },
       {
         "group": "ADPCMB",
         "bank": 0,
-        "file": "banks/PCM/pss680/pss680_opna.pcmbank.json"
+        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json"
       },
       {
         "group": "OPL_RHY",
         "bank": 0,
-        "file": "banks/OPL2/msx_audio/msx_audio_preset_rhythm.hwbank.json"
+        "file": "../../banks/OPL2/msx_audio/msx_audio_preset_rhythm.hwbank.json"
       },
       {
         "group": "OPLL",
         "bank": 3,
-        "file": "banks/OPLL/rom_sw_meta.hwbank.json",
+        "file": "../../banks/OPLL/rom_sw_meta.hwbank.json",
         "role": "builtin_swpatch_meta"
       },
       {
         "group": "ADPCMA",
         "bank": 1,
-        "file": "banks/PCM/pss680/pss680_opnb.pcmbank.json"
+        "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json"
       },
       {
         "group": "OPLL",
         "bank": 4,
-        "file": "banks/OPL2/ma2_vma/Preset2OP.hwbank.json"
+        "file": "../../banks/OPL2/ma2_vma/Preset2OP.hwbank.json"
       }
     ],
     "sw_banks": [
       {
         "bank": 0,
-        "file": "banks/sw/performance_presets.swbank.json"
+        "file": "../../banks/sw/performance_presets.swbank.json"
       },
       {
         "bank": 1,
-        "file": "banks/sw/dx21.swbank.json"
+        "file": "../../banks/sw/dx21.swbank.json"
       },
       {
         "bank": 2,
-        "file": "banks/sw/dx100_1.swbank.json"
+        "file": "../../banks/sw/dx100_1.swbank.json"
       },
       {
         "bank": 3,
-        "file": "banks/sw/dx100_2.swbank.json"
+        "file": "../../banks/sw/dx100_2.swbank.json"
       },
       {
         "bank": 4,
-        "file": "banks/sw/dx11.swbank.json"
+        "file": "../../banks/sw/dx11.swbank.json"
       },
       {
         "bank": 5,
-        "file": "banks/sw/tx81z.swbank.json"
+        "file": "../../banks/sw/tx81z.swbank.json"
       },
       {
         "bank": 6,
-        "file": "banks/sw/fb01.swbank.json"
+        "file": "../../banks/sw/fb01.swbank.json"
       }
     ],
     "patch_banks": [
       {
         "bank": 0,
-        "file": "banks/patches/gm_native_skeleton.patchbank.json"
+        "file": "../../banks/patches/gm_native_skeleton.patchbank.json"
       },
       {
         "bank": 1,
-        "file": "banks/patches/necopn_gm.patchbank.json"
+        "file": "../../banks/patches/necopn_gm.patchbank.json"
       },
       {
         "bank": 2,
-        "file": "banks/patches/gm_native_opl2.patchbank.json"
+        "file": "../../banks/patches/gm_native_opl2.patchbank.json"
       },
       {
         "bank": 3,
-        "file": "banks/patches/gm_native_opl3.patchbank.json"
+        "file": "../../banks/patches/gm_native_opl3.patchbank.json"
       },
       {
         "bank": 4,
-        "file": "banks/patches/gm_native_opm.patchbank.json"
+        "file": "../../banks/patches/gm_native_opm.patchbank.json"
       }
     ],
     "drum_banks": [
       {
         "prog": 1,
         "name": "ADPCM-A GM set",
-        "file": "banks/drums/pss680_opnb.drumkit.json"
+        "file": "../../banks/drums/pss680_opnb.drumkit.json"
       },
       {
         "prog": 2,
         "name": "ALSA Preset 2OP set",
-        "file": "banks/drums/alsa_preset_2op.drumkit.json"
+        "file": "../../banks/drums/alsa_preset_2op.drumkit.json"
       },
       {
         "prog": 3,
         "name": "ALSA Preset 4OP set",
-        "file": "banks/drums/alsa_preset_4op.drumkit.json"
+        "file": "../../banks/drums/alsa_preset_4op.drumkit.json"
       },
       {
         "prog": 4,
         "name": "MA-2 Preset 2OP set",
-        "file": "banks/drums/ma2_preset_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_preset_2op.drumkit.json"
       },
       {
         "prog": 5,
         "name": "MA-2 Basic 2OP set",
-        "file": "banks/drums/ma2_basic_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_basic_2op.drumkit.json"
       },
       {
         "prog": 6,
         "name": "MA-2 Luminous 2OP set",
-        "file": "banks/drums/ma2_luminous_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_luminous_2op.drumkit.json"
       },
       {
         "prog": 7,
         "name": "MA-2 MicroComputer 2OP set",
-        "file": "banks/drums/ma2_microcomputer_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_microcomputer_2op.drumkit.json"
       },
       {
         "prog": 8,
         "name": "MA-2 Digital 2OP set",
-        "file": "banks/drums/ma2_digital_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_digital_2op.drumkit.json"
       },
       {
         "prog": 9,
         "name": "MA-2 Acid 2OP set",
-        "file": "banks/drums/ma2_acid_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_acid_2op.drumkit.json"
       },
       {
         "prog": 10,
         "name": "MA-2 Variant 2OP set",
-        "file": "banks/drums/ma2_variant_2op.drumkit.json"
+        "file": "../../banks/drums/ma2_variant_2op.drumkit.json"
       },
       {
         "prog": 11,
         "name": "OPNA Built-in set",
-        "file": "banks/drums/opna_builtin.drumkit.json"
+        "file": "../../banks/drums/opna_builtin.drumkit.json"
       },
       {
         "prog": 12,
         "name": "OPLL Built-in set",
-        "file": "banks/drums/opll_rhythm.drumkit.json"
+        "file": "../../banks/drums/opll_rhythm.drumkit.json"
       },
       {
         "prog": 13,
         "name": "OPL Built-in set",
-        "file": "banks/drums/opl_builtin_rhythm.drumkit.json"
+        "file": "../../banks/drums/opl_builtin_rhythm.drumkit.json"
       },
       {
         "prog": 14,
         "name": "ADPCM-B GM set",
-        "file": "banks/drums/pss680_opna.drumkit.json"
+        "file": "../../banks/drums/pss680_opna.drumkit.json"
       },
       {
         "prog": 15,
         "name": "OPL4-AWM GM set",
-        "file": "banks/drums/opl4awm.drumkit.json"
+        "file": "../../banks/drums/opl4awm.drumkit.json"
       }
     ],
     "pcm_banks": []
