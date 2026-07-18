@@ -1,6 +1,7 @@
 {
   "type": "routed",
   "name": "MA-2 Digital 2OP set",
+  "choke_groups": [[42, 44, 46], [71, 72], [73, 74], [78, 79], [80, 81]],
   "notes": [
     {
       "note": 27,
