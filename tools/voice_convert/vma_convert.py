@@ -31,7 +31,7 @@ MA-2 OP 5バイト:
   byte1: RR[7:4]   | DR[3:0]
   byte2: AR[7:4]   | SL[3:0]
   byte3: TL[7:2]   | KSL[1:0]
-  byte4: DVB[7] | DAM[6] | AM[5] | WS[4:2] | xx[1:0]
+  byte4: DVB[7:6] | DAM[5:4] | AM[3] | WS[2:0]
 
 FITOM_X hwbank.schema.json (フラット構造)へのマッピング:
   MULT→MUL, VIB→VIB, EGT→EGT, KSR→KSR, SL→SL, KSL→KSL, AM→AM, WS→WS
@@ -117,9 +117,14 @@ def parse_ma2_op(b5):
         "SL":    b5[2] & 0xF,
         "TL":  ((b5[3] >> 2) & 0x3F) << 1,
         "KSL":   b5[3] & 3,
-        "AM":   (b5[4] >> 5) & 1,
-        "WS":   (b5[4] >> 2) & 7,
-        # SUS(b5[0]bit1)/DVB(b5[4]bit7)/DAM(b5[4]bit6)は対応フィールドなし、破棄
+        "AM":    (b5[4] >> 3) & 1,
+        "WS":     b5[4] & 7,
+        # SUS(b5[0]bit1)/DVB(b5[4]bit7-6)/DAM(b5[4]bit5-4)は対応フィールドなし、破棄
+        # (2026年7月19日、AM/WSのビット位置を実データ解析に基づく一次資料
+        # (https://pcm1723.hateblo.jp/entry/20080214/1202996791 のMA-2
+        # Operatorバイト4テーブル: DVB[7:6]|DAM[5:4]|AM[3]|WS[2:0])に修正。
+        # 旧実装(AM=bit5,WS=bits4-2)には根拠となる記録が無く、単純な
+        # ビット位置ミスと判断)
     }
 
 def convert_vma(src_path, dst_path, force_2op=False, bank_name=None):
@@ -156,7 +161,13 @@ def convert_vma(src_path, dst_path, force_2op=False, bank_name=None):
         prog  = chunk[2]
         byte3 = chunk[3]
         fb    = (byte3 >> 3) & 7
-        alg   =  byte3 & 3
+        # ALGは3bit(bit2-0)。bit2はOPL3の4OP結合有効化(ConnectionSEL、
+        # FITOM_X側ではhw.ALGのbit2に統合済み)。以前は"& 3"で2bitしか
+        # 取り出しておらず、4OP音色でConnectionSELが常に0(未結合)に
+        # なってしまうバグがあった(2026年7月19日修正。実データ確認:
+        # Preset4OP.vma/GMmapFM4op.vmaは全128音色でbit2=1、他の2OP系
+        # vmaファイルは全て0であることを確認済み)。
+        alg   =  byte3 & 7
 
         op1 = parse_ma2_op(chunk[5:10])
         op2 = parse_ma2_op(chunk[10:15])

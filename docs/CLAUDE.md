@@ -448,6 +448,63 @@ FitomEmuIFが読み込むFMエンジンDLLは、旧名`YMEngine`から`YMFMEngin
   からの直接コピー)に従いあえて追従しなかった。本体側が改称され次第
   同期すること。
 
+### 3.19 vma_convert.pyのALG/AM/WSビット位置バグを修正 + ma2_vma全27ファイル再変換（2026年7月19日）
+FITOM_X側コミット`80e25e7`(3.18の前段、`ConnectionSEL`を`ext.ALG_EXT`から
+`hw.ALG`のbit2へ再統合)を受けて`banks/OPL3/`配下を調査した結果、
+`ext.ALG_EXT`を実際に使っていたのは`opl2_merge/`の派生バンクのみ
+（全128パッチ×7ファイルで`ALG_EXT=0`固定、ユーザー確認済みの通り
+影響なし）で、`alsa/`系(alsa_convert.py出力)は元々`ALG`のbit2に
+ConnectionSELを直接ハードコード済み(4OP変換時`alg = (1<<2)|(con2<<1)|
+con1`)だったため無関係と判明。
+
+一方、`tools/voice_convert/vma_convert.py`（`ma2_vma/GMmapFM4op.hwbank
+.json`・`Preset4OP.hwbank.json`の変換元）に**別の、より根本的なバグ**を
+発見した。VMAフォーマットの解説
+(https://pcm1723.hateblo.jp/entry/20080214/1202996791 、著者による
+実データ解析に基づく表)によれば、MA-2の音色パラメータ26バイト中の
+グローバルバイト(byte3)は`LFO[7:6] | FB[5:3] | ALG[2:0]`という**3bit
+のALG**を持つが、`vma_convert.py`は`alg = byte3 & 3`と**2bitしか**
+取り出しておらず、4OP結合を示すbit2を常に欠落させていた。
+
+実データで検証済み: `E:\マイドライブ\FITOM\material\fmvoice\vma\`配下の
+全27個の.vmaファイルをスキャンした結果、**`Preset4OP.vma`と
+`GMmapFM4op.vma`の2ファイルのみ、全128/128パッチでbit2=1**（他の
+2OP系ファイルは全パッチでbit2=0）。この2ファイルがまさに本リポジトリの
+唯一のOPL3(4OP) ma2_vma変換バンクと一致しており、`& 3`のせいで両ファイル
+とも常にConnectionSEL=0（4OP非結合、独立2OPペア×2として動作)のまま
+生成されていたことを確認した。
+
+**対応**:
+- `vma_convert.py`の`alg = byte3 & 3`を`alg = byte3 & 7`に修正
+  (ALGを3bitフルに取り出す)。
+- `Preset4OP.vma`・`GMmapFM4op.vma`を修正後のスクリプトで再変換し、
+  `banks/OPL3/ma2_vma/{Preset4OP,GMmapFM4op}.hwbank.json`を上書き。
+  全128パッチで`ALG`が旧値+4（bit2が立つ）になったことを検証済み。
+  再変換により失われる`sw_bank: 0, sw_prog: 2`(変換スクリプトが生成
+  しない、過去セッションで別途付与されたデフォルトSwPatch参照)は
+  差分比較の上、全パッチに復元済み。ALG以外の差分が無いことも確認済み。
+- opl2_merge由来の7ファイルは、上記の通りConnectionSEL=0前提の設計
+  (`ALG_EXT`常時0)であり、今回のALGビット拡張(`& 3`→`& 7`)によっても
+  実害はない(合成元2OPバンクは元々bit2=0だったファイルのみ使用)。
+
+**副次的に発見した別バグも同時に修正**: 同じ調査中、`vma_convert.py`の
+`parse_ma2_op()`におけるオペレータ5バイト目(`AM`/`WS`)のビット位置が、
+上記VMAフォーマット解説記事の表(DVB[7:6]|DAM[5:4]|AM[3]|WS[2:0])と
+2bitずれていた(旧コードは`AM=(b5[4]>>5)&1`(bit5)・`WS=(b5[4]>>2)&7`
+(bits4-2))。この記事の表は著者による実データ解析結果であり、旧コードの
+ビット位置を裏付ける記録(コミットメッセージ・コメント等)が一切
+残っていなかったため、単純なビット位置ミスと判断して記事の表通り
+(`AM`=bit3・`WS`=bits2-0)に修正した。
+
+**対応(AM/WS)**:
+- `parse_ma2_op()`の`AM`/`WS`抽出を修正。
+- `banks/OPL2/ma2_vma/`(25件)・`banks/OPL3/ma2_vma/`(2件、上記ALG修正
+  分と合わせて)、計27件全てを対応する`E:\マイドライブ\FITOM\material\
+  fmvoice\vma\*.vma`から修正後のスクリプトで再変換。再変換で失われる
+  `sw_bank: 0, sw_prog: 2`は全ファイル全パッチに復元済み。`AM`/`WS`
+  (および該当2ファイルの`ALG`)以外のフィールドに差分が無いことを
+  全27ファイルについてプログラム的に検証済み。
+
 ---
 
 ## 4. 未解決・要確認事項
