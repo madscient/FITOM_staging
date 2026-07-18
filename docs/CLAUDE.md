@@ -346,6 +346,28 @@ scc_wave_banks/pcm_banks）の相対パス解決基点が、**カレントワー
   `banks.hw_banks[].file`を新しいパスに更新。`banks/README.md`・
   `tools/voice_convert/README.md`の例示パスも追従済み。
 
+### 3.16 pcmbank.jsonのbin_file/adpcm_json参照が解決できないバグを修正（2026年7月18日）
+`PatchManager::loadPcmBankJson()`は、`*.pcmbank.json`内の`bin_file`/
+`adpcm_json`フィールド（相対パスの場合）を**そのpcmbank.jsonファイル
+自身の親ディレクトリ**を起点に解決する（`baseDir = path.parent_path()`、
+3.14の`banks.*[].file`とは別の、より以前から存在する解決規則）。
+- `banks/PCM/pss680/pss680_opna.pcmbank.json`・
+  `pss680_opnb.pcmbank.json`は、この2フィールドに
+  `"banks/PCM/pss680/xxx.bin"`のようなリポジトリルート相対のフルパスを
+  書いていた。pcmbank.json自身が既に`banks/PCM/pss680/`に置かれている
+  ため、これを基点に解決すると`banks/PCM/pss680/banks/PCM/pss680/
+  xxx.bin`という二重パスになり、実在しないファイルを指していた
+  （3.14のbanks path変更とは無関係の、以前から存在した既存バグ）。
+  同一ディレクトリ内のファイル名のみ（`"pss680_opna_adpcmb.bin"`等）に
+  修正。
+- `banks/PCM/pss680/`には他に`pss680_opnb_adpcmb.bin`/`.json`と
+  `params_opna_adpcmb.json`/`params_opnb_adpcma.json`/
+  `params_opnb_adpcmb.json`が存在するが、前者はどのpcmbank.jsonからも
+  参照されていない未使用データ（OPNB用ADPCM-Bのパック済み出力だが
+  対応するpcmbank.jsonが無い）、後者はadpcm_packerツールへの入力
+  レシピ（wavファイル一覧、FITOM_X実行時には読み込まれないビルド用
+  中間ファイル）であり、いずれも今回のバグとは無関係。
+
 ---
 
 ## 4. 未解決・要確認事項

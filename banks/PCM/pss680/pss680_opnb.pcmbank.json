@@ -2,6 +2,6 @@
   "name": "PSS-680/PSR-38 ADPCM-A (OPNB)",
   "codec": "adpcm-a",
   "boundary": 32,
-  "bin_file": "banks/PCM/pss680/pss680_opnb_adpcma.bin",
-  "adpcm_json": "banks/PCM/pss680/pss680_opnb_adpcma.json"
+  "bin_file": "pss680_opnb_adpcma.bin",
+  "adpcm_json": "pss680_opnb_adpcma.json"
 }
