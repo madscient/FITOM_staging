@@ -69,7 +69,7 @@ Copy-IfExists "$($Projects.FitomX)\assets" "$Bin\"
 # パッチエディタ
 Copy-IfExists "$($Projects.PatchEditor)\*.exe" "$Bin\"
 Copy-IfExists "$($Projects.PatchEditor)\*.dll" "$Bin\"
-
+Copy-IfExists "$($Projects.PatchEditor)\assets" "$Bin\"
 
 # プラグイン DLL
 Copy-IfExists "$($Projects.FitomEmuIF)\*.dll" "$Bin\"
