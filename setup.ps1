@@ -39,6 +39,7 @@ $Stage = $PSScriptRoot
 # ── プロジェクトのビルドディレクトリ (環境に合わせて変更) ──────────────────
 $Projects = @{
     FitomX     = "..\FITOM_X\build\windows-vs2026-x64\bin\$BuildType"
+    PatchEditor= "..\FITOM_patch_editor\build\vs2026\$BuildType"
     FitomEmuIF = "..\FitomEmuIF\build\$BuildType"
     FitomHwIF  = "..\FitomHwIF\build\$BuildType"
     YMEngine   = "..\YMEngine\build\bin\$BuildType"
@@ -63,11 +64,16 @@ New-Item -ItemType Directory -Force -Path "$Bin\engines" | Out-Null
 # FITOM_X 本体
 Copy-IfExists "$($Projects.FitomX)\*.exe" "$Bin\"
 Copy-IfExists "$($Projects.FitomX)\*.dll" "$Bin\"
+Copy-IfExists "$($Projects.FitomX)\assets" "$Bin\"
+
+# パッチエディタ
+Copy-IfExists "$($Projects.PatchEditor)\*.exe" "$Bin\"
+Copy-IfExists "$($Projects.PatchEditor)\*.dll" "$Bin\"
+
 
 # プラグイン DLL
 Copy-IfExists "$($Projects.FitomEmuIF)\*.dll" "$Bin\"
 Copy-IfExists "$($Projects.FitomHwIF)\*.dll"    "$Bin\"
-Copy-IfExists "$($Projects.FitomX)\assets" "$Bin\"
 
 # FM エンジン DLL
 Copy-IfExists "$($Projects.YMEngine)\YMFMEngine.dll" "$Bin\engines\"
