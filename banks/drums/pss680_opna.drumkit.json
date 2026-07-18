@@ -1,6 +1,7 @@
 {
   "type": "routed",
   "name": "PSS-680/PSR-38 GM Drum Kit (OPNA ADPCM-B)",
+  "choke_groups": [[42, 44, 46], [71, 72], [73, 74], [78, 79], [80, 81]],
   "notes": [
     {
       "note": 35,
