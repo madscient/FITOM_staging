@@ -3,6 +3,6 @@
   "codec": "adpcm-b",
   "sample_rate": 16000,
   "boundary": 32,
-  "bin_file": "banks/PCM/pss680/pss680_opna_adpcmb.bin",
-  "adpcm_json": "banks/PCM/pss680/pss680_opna_adpcmb.json"
+  "bin_file": "pss680_opna_adpcmb.bin",
+  "adpcm_json": "pss680_opna_adpcmb.json"
 }
