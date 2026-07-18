@@ -57,7 +57,7 @@ FITOM_staging/
 │   ├── FitomEmuIF.dll/.so
 │   ├── fitom_hw.dll/.so
 │   └── engines/
-│       └── YMEngine.dll/.so
+│       └── YMFMEngine.dll/.so
 ├── dist/                   インストールパッケージ成果物 (.gitignore 対象)
 └── logs/                   ログ出力先 (.gitignore 対象)
 ```
@@ -69,7 +69,7 @@ FITOM_X (config/profiles/*.profile.json)
   └── hw_plugins[]          プラグイン DLL を名前登録
         ├── FitomEmuIF.dll  ← hw_plugins[].profile (config/profiles/hw_plugins/
         │     │                fmemuif_*.profile.json) でチップ構成を管理
-        │     └── YMEngine.dll (bin/engines/ に配置)
+        │     └── YMFMEngine.dll (bin/engines/ に配置)
         └── fitom_hw.dll    ← hw_plugins[].profile (config/profiles/hw_plugins/
                                fitom_hw_*.profile.json) で実機構成を管理
 ```
@@ -105,7 +105,7 @@ FITOM_X 本体はエミュレーターか実機かを区別しない。
 | [FITOM_X](https://github.com/madscient/FITOM_X) | コアエンジン | このリポジトリはバイナリのみ依存 |
 | FitomHwIF | 物理HW I/F DLL (`fitom_hw.dll`) | IHWPlugin 実装 |
 | FitomEmuIF | FMエンジン内蔵 hwif DLL (`FitomEmuIF.dll`) | IHWPlugin 実装 |
-| YMEngine | FM音源エミュレーター (`YMEngine.dll`) | engines/ に配置 |
+| YMEngine | FM音源エミュレーター (`YMFMEngine.dll`、旧名`YMEngine.dll`から改称) | engines/ に配置 |
 
 ## 初回セットアップ
 
