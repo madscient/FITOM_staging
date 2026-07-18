@@ -12,7 +12,7 @@
       FitomEmuIF.dll      FMエンジン内蔵エミュレーター統合プラグイン (FitomEmuIF)
       fitom_hw.dll        物理チップ用プラグイン (FitomHwIF)
       engines/
-        YMEngine.dll      FM音源エミュレーター
+        YMFMEngine.dll    FM音源エミュレーター
 
   プラグインDLLの検索パスは実行ファイルからの相対パスで解決される。
   デフォルトでは実行ファイルと同階層 (bin/) を探索する。

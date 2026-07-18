@@ -10,7 +10,7 @@
 #     FitomEmuIF.so       FMエンジン内蔵エミュレーター統合プラグイン (FitomEmuIF)
 #     fitom_hw.so         物理チップ用プラグイン (FitomHwIF)
 #     engines/
-#       YMEngine.so       FM音源エミュレーター
+#       YMFMEngine.so     FM音源エミュレーター
 #
 # プラグインDLLの検索パスは実行ファイルからの相対パスで解決される。
 # デフォルトでは実行ファイルと同階層 (bin/) を探索する。
@@ -49,7 +49,7 @@ copy_if_exists "$FITOM_EMUIF_BUILD/FitomEmuIF.so"   "$STAGE/bin/FitomEmuIF.so"
 copy_if_exists "$FITOM_HWIF_BUILD/fitom_hw.so"      "$STAGE/bin/fitom_hw.so"
 
 # FM エンジン
-copy_if_exists "$YMENGINE_BUILD/YMEngine.so"        "$STAGE/bin/engines/YMEngine.so"
+copy_if_exists "$YMENGINE_BUILD/YMFMEngine.so"      "$STAGE/bin/engines/YMFMEngine.so"
 
 # ── その他 ───────────────────────────────────────────────────────────────────
 mkdir -p "$STAGE/dist"

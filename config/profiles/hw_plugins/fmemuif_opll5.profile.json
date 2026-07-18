@@ -5,7 +5,7 @@
   "audio_device":  "",
   "engines": [
     {
-      "dll": "YMEngine",
+      "dll": "engines/YMFMEngine",
       "chips": [
         { "chip": "OPLL",  "clock": 3579545, "pan": 0 },
         { "chip": "OPLL2", "clock": 3579545, "pan": 0 },
