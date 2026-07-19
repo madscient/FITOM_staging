@@ -35,6 +35,39 @@
 | 21 | Combo VelDrumLFO Weak |
 | 22 | Combo VelDrumLFO Mid |
 | 23 | Combo VelDrumLFO Strong |
+| 24 | VelScale Mid (Carrier: OP4) |
+| 25 | VelScale Mid (Carrier: OP2+4) |
+| 26 | VelScale Mid (Carrier: OP2+3+4) |
+| 27 | VelScale Mid (Carrier: OP2) |
+| 28 | VelScale Mid (Carrier: OP1+2) |
+| 29 | VelScale Mid (Carrier: OP1+2+4) |
+| 30 | VelScale Mid (Carrier: OP1+4) |
+| 31 | VelScale Mid (Carrier: OP1+3+4) |
+
+prog24-31は「VelScale Mid」(prog2)と同じVTL=80だが、TLが音量に作用するのは
+キャリアオペレータのみであるため、実際にキャリアとなるopsインデックスにだけ
+VTLを設定し、モジュレータ側は0固定にしたバリアント。変換元にパフォーマンス
+情報が無い音色にVTLのみの汎用センシティビティを割り当てる場合（詳細は
+`docs/CLAUDE.md`の該当節を参照）、HwPatch自身のALG値に応じて以下の対応で
+sw_progを選択する。全opsがキャリアになるケース(OPN/OPM/OPZのALG=7、
+OPL3のALG=3)は従来通りprog=2のままでよい(全op VTL=80なので変える必要がない)。
+
+| チップ族 | ALG | キャリア | sw_prog |
+|---|---|---|---|
+| OPN/OPM/OPZ (4op, 3bit ALG) | 0,1,2,3 | OP4のみ | 24 |
+| OPN/OPM/OPZ | 4 | OP2,OP4 | 25 |
+| OPN/OPM/OPZ | 5,6 | OP2,OP3,OP4 | 26 |
+| OPN/OPM/OPZ | 7 | OP1,OP2,OP3,OP4 | 2 |
+| OPL(2op) | 0 | OP2のみ | 27 |
+| OPL(2op) | 1 | OP1,OP2 | 28 |
+| OPL3(4op) | 0,5 | OP2,OP4 | 25 |
+| OPL3(4op) | 1 | OP1,OP2,OP4 | 29 |
+| OPL3(4op) | 2 | OP2,OP3,OP4 | 26 |
+| OPL3(4op) | 3 | OP1,OP2,OP3,OP4 | 2 |
+| OPL3(4op) | 4 | OP4のみ | 24 |
+| OPL3(4op) | 6 | OP1,OP4 | 30 |
+| OPL3(4op) | 7 | OP1,OP3,OP4 | 31 |
+| OPLL | (常に固定) | OP2のみ | 27 |
 
 ## sw_bank = 1: dx21 (Performance)
 

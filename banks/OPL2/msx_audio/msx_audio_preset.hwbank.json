@@ -42,7 +42,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 1,
@@ -82,7 +82,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 2,
@@ -122,7 +122,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 3,
@@ -162,7 +162,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 4,
@@ -202,7 +202,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 5,
@@ -242,7 +242,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 6,
@@ -282,7 +282,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 7,
@@ -322,7 +322,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 28
     },
     {
       "prog": 8,
@@ -362,7 +362,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 9,
@@ -402,7 +402,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 28
     },
     {
       "prog": 10,
@@ -442,7 +442,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 11,
@@ -482,7 +482,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 12,
@@ -522,7 +522,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 13,
@@ -562,7 +562,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 14,
@@ -602,7 +602,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 28
     },
     {
       "prog": 15,
@@ -642,7 +642,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 16,
@@ -682,7 +682,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 17,
@@ -722,7 +722,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 18,
@@ -762,7 +762,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 19,
@@ -802,7 +802,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 20,
@@ -842,7 +842,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 21,
@@ -882,7 +882,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 22,
@@ -922,7 +922,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 23,
@@ -962,7 +962,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 24,
@@ -1002,7 +1002,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 25,
@@ -1042,7 +1042,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 26,
@@ -1082,7 +1082,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 28
     },
     {
       "prog": 27,
@@ -1122,7 +1122,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 28,
@@ -1162,7 +1162,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 29,
@@ -1202,7 +1202,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 30,
@@ -1242,7 +1242,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 31,
@@ -1282,7 +1282,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 32,
@@ -1322,7 +1322,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 33,
@@ -1362,7 +1362,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 34,
@@ -1402,7 +1402,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 35,
@@ -1442,7 +1442,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 36,
@@ -1482,7 +1482,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 37,
@@ -1522,7 +1522,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 38,
@@ -1562,7 +1562,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 39,
@@ -1602,7 +1602,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 40,
@@ -1642,7 +1642,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 28
     },
     {
       "prog": 41,
@@ -1682,7 +1682,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 42,
@@ -1722,7 +1722,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 43,
@@ -1762,7 +1762,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 44,
@@ -1802,7 +1802,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 28
     },
     {
       "prog": 45,
@@ -1842,7 +1842,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 46,
@@ -1882,7 +1882,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 47,
@@ -1922,7 +1922,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 28
     },
     {
       "prog": 48,
@@ -1962,7 +1962,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 49,
@@ -2002,7 +2002,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 50,
@@ -2042,7 +2042,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 28
     },
     {
       "prog": 51,
@@ -2082,7 +2082,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 52,
@@ -2122,7 +2122,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 28
     },
     {
       "prog": 53,
@@ -2162,7 +2162,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 54,
@@ -2202,7 +2202,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 55,
@@ -2242,7 +2242,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 56,
@@ -2282,7 +2282,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 28
     },
     {
       "prog": 57,
@@ -2322,7 +2322,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 58,
@@ -2362,7 +2362,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 59,
@@ -2402,7 +2402,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 60,
@@ -2442,7 +2442,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 61,
@@ -2482,7 +2482,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 62,
@@ -2522,7 +2522,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "prog": 63,
@@ -2562,7 +2562,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Violin",
@@ -2602,7 +2602,7 @@
       ],
       "prog": 64,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Guitar",
@@ -2642,7 +2642,7 @@
       ],
       "prog": 65,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Piano",
@@ -2682,7 +2682,7 @@
       ],
       "prog": 66,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Flute",
@@ -2722,7 +2722,7 @@
       ],
       "prog": 67,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Clarinet",
@@ -2762,7 +2762,7 @@
       ],
       "prog": 68,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Oboe",
@@ -2802,7 +2802,7 @@
       ],
       "prog": 69,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Trumpet",
@@ -2842,7 +2842,7 @@
       ],
       "prog": 70,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Organ",
@@ -2882,7 +2882,7 @@
       ],
       "prog": 71,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Horn",
@@ -2922,7 +2922,7 @@
       ],
       "prog": 72,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Synthesizer",
@@ -2962,7 +2962,7 @@
       ],
       "prog": 73,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Harpsichord",
@@ -3002,7 +3002,7 @@
       ],
       "prog": 74,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Vibraphone",
@@ -3042,7 +3042,7 @@
       ],
       "prog": 75,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Synthesizer Bass",
@@ -3082,7 +3082,7 @@
       ],
       "prog": 76,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Acoustic Bass",
@@ -3122,7 +3122,7 @@
       ],
       "prog": 77,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLL] Electric Guitar",
@@ -3162,7 +3162,7 @@
       ],
       "prog": 78,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Strings",
@@ -3202,7 +3202,7 @@
       ],
       "prog": 79,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Guitar",
@@ -3242,7 +3242,7 @@
       ],
       "prog": 80,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Electric Guitar",
@@ -3282,7 +3282,7 @@
       ],
       "prog": 81,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Electric Piano 2",
@@ -3322,7 +3322,7 @@
       ],
       "prog": 82,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Flute",
@@ -3362,7 +3362,7 @@
       ],
       "prog": 83,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Marimba",
@@ -3402,7 +3402,7 @@
       ],
       "prog": 84,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Trumpet",
@@ -3442,7 +3442,7 @@
       ],
       "prog": 85,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Harmonica",
@@ -3482,7 +3482,7 @@
       ],
       "prog": 86,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Tuba",
@@ -3522,7 +3522,7 @@
       ],
       "prog": 87,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Synth Brass 2",
@@ -3562,7 +3562,7 @@
       ],
       "prog": 88,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Short Saw",
@@ -3602,7 +3602,7 @@
       ],
       "prog": 89,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Vibraphone",
@@ -3642,7 +3642,7 @@
       ],
       "prog": 90,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Electric Guitar 2",
@@ -3682,7 +3682,7 @@
       ],
       "prog": 91,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Synth Bass 2",
@@ -3722,7 +3722,7 @@
       ],
       "prog": 92,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLX] Sitar",
@@ -3762,7 +3762,7 @@
       ],
       "prog": 93,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Clarinet",
@@ -3802,7 +3802,7 @@
       ],
       "prog": 94,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Synth Bass",
@@ -3842,7 +3842,7 @@
       ],
       "prog": 95,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Piano",
@@ -3882,7 +3882,7 @@
       ],
       "prog": 96,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Flute",
@@ -3922,7 +3922,7 @@
       ],
       "prog": 97,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Square Wave",
@@ -3962,7 +3962,7 @@
       ],
       "prog": 98,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Space Oboe",
@@ -4002,7 +4002,7 @@
       ],
       "prog": 99,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Trumpet",
@@ -4042,7 +4042,7 @@
       ],
       "prog": 100,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Wow Bell",
@@ -4082,7 +4082,7 @@
       ],
       "prog": 101,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Electric Guitar",
@@ -4122,7 +4122,7 @@
       ],
       "prog": 102,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Vibes",
@@ -4162,7 +4162,7 @@
       ],
       "prog": 103,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Bass",
@@ -4202,7 +4202,7 @@
       ],
       "prog": 104,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Vibraphone",
@@ -4242,7 +4242,7 @@
       ],
       "prog": 105,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Vibrato Bell",
@@ -4282,7 +4282,7 @@
       ],
       "prog": 106,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Click Sine",
@@ -4322,7 +4322,7 @@
       ],
       "prog": 107,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[OPLLP] Noise and Tone",
@@ -4362,7 +4362,7 @@
       ],
       "prog": 108,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Buzzy Bell",
@@ -4402,7 +4402,7 @@
       ],
       "prog": 109,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Guitar",
@@ -4442,7 +4442,7 @@
       ],
       "prog": 110,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Wurly",
@@ -4482,7 +4482,7 @@
       ],
       "prog": 111,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Flute",
@@ -4522,7 +4522,7 @@
       ],
       "prog": 112,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Clarinet",
@@ -4562,7 +4562,7 @@
       ],
       "prog": 113,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Synth",
@@ -4602,7 +4602,7 @@
       ],
       "prog": 114,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Trumpet",
@@ -4642,7 +4642,7 @@
       ],
       "prog": 115,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Organ",
@@ -4682,7 +4682,7 @@
       ],
       "prog": 116,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Bells",
@@ -4722,7 +4722,7 @@
       ],
       "prog": 117,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Vibes",
@@ -4762,7 +4762,7 @@
       ],
       "prog": 118,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Vibraphone",
@@ -4802,7 +4802,7 @@
       ],
       "prog": 119,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Tutti",
@@ -4842,7 +4842,7 @@
       ],
       "prog": 120,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Fretless",
@@ -4882,7 +4882,7 @@
       ],
       "prog": 121,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Synth Bass",
@@ -4922,7 +4922,7 @@
       ],
       "prog": 122,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     },
     {
       "name": "[VRC7] Sweep",
@@ -4962,7 +4962,7 @@
       ],
       "prog": 123,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 27
     }
   ]
 }

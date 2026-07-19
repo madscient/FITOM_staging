@@ -134,12 +134,10 @@ def convert(src_path, dst_path, bank_no=0, group="OPN"):
         patches.append({
             "prog": prog,
             "name": name,
-            "hw": {
-                "ALG": alg,
-                "FB":  fb,
-                "AMS": 0,   # necopn.binにチャンネルAMSの格納は無い(常に0)
-                "PMS": pms,
-            },
+            "FB":  fb,
+            "ALG": alg,
+            "AMS": 0,   # necopn.binにチャンネルAMSの格納は無い(常に0)
+            "PMS": pms,
             "ops": ops,
         })
 
