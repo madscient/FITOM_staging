@@ -2,22 +2,43 @@
 """
 necopn.bin → FITOM_X hwbank.json 変換ツール
 
-フォーマット（N88-BASIC(86)互換 + 14バイトパディング）:
-  1音色 = 64バイト
-  [0-5]   OP1(M1): DT1/MUL, TL, KSR/AR, AM/DR, SR, SL/RR
-  [6-11]  OP2(C1): 同上
-  [12-17] OP3(M2): 同上
-  [18-23] OP4(C2): 同上
-  [24]    FB/ALG  (D5-3=FB, D2-0=ALG)
-  [25]    AMS/FMS (D5-4=AMS, D2-0=FMS/PMS)
-  [26-63] パディング (38バイト)
+フォーマット（N88-BASIC(86)互換、1音色=64バイト、パラメータごとの列方向格納）:
+  [0]     FB/ALG   (D5-3=FB, D2-0=ALG)
+  [1-4]   AR  (OP1,OP2,OP3,OP4の順。1の補数格納: 実値 = 31 - 生値)
+  [5]     オペレータ有効マスク (常時0x0F、未使用)
+  [6-9]   DR  (同上、1の補数格納: 実値 = 31 - 生値)
+  [10]    LFO波形 (未使用、hwbankに対応フィールドなし)
+  [11-14] SR  (同上、1の補数格納: 実値 = 31 - 生値)
+  [15]    LFOディレイ (未使用)
+  [16-19] RR  (同上、1の補数格納: 実値 = 15 - 生値)
+  [20]    LFO速度 (未使用)
+  [21-24] SL  (同上、1の補数格納: 実値 = 15 - 生値)
+  [25]    LFO PMD (未使用)
+  [26-29] TL  (同上、1の補数格納: 実値 = 127 - 生値、拡張なし)
+  [30]    LFO AMD (未使用)
+  [31-34] KSR (生値のまま、2bit)
+  [35]    PMS (チャンネル、生値&0x07)
+  [36-39] MUL (生値のまま、4bit)
+  [40]    未使用
+  [41-44] DT1 (生値のまま、3bit)
+  [45]    未使用
+  [46-49] AM  (生値!=0の真偽値)
+  [50-63] パディング (14バイト、未使用)
 
-OPNチップのレジスタ順: M1,M2,C1,C2
-N88-BASIC(86)の格納順: M1,C1,M2,C2 (OP1,OP2,OP3,OP4)
-→ 変換時に並び替えが必要
+各オペレータのパラメータ列はOP1,OP2,OP3,OP4の順で格納されており、これは
+N88-BASIC(86)側の格納順(M1,C1,M2,C2)と一致する。FITOM_X側のops[]格納順も
+[M1,C1,M2,C2]であるため、並び替えは不要。
+
+このレイアウトは、旧FITOM(dev/fmvoice)のn88tofmb2.pl(N88→FMB2変換)と、
+実際に変換済みだったdev/fmvoice/VOICE/OPNA/necopn.fmbをopn2ini.plで
+デコードした結果を突き合わせて確認したもの(2026-07-19)。旧necopn_convert.py
+は1音色内で「オペレータごとに6バイトずつ」読む行方向レイアウトを仮定して
+いたが、実際のnecopn.binは「パラメータごとに4オペレータ分ずつ」読む列方向
+レイアウトであり、オフセットが全く異なっていた(単なるAR/DR/SL/SR/RR/TLの
+符号反転だけの問題ではなかった)。
 """
 
-import struct, json, sys, argparse
+import json, argparse
 from pathlib import Path
 
 # GM楽器名 (prog 0-127)
@@ -62,20 +83,40 @@ GM_NAMES = [
     "Telephone Ring","Helicopter","Applause","Gunshot",
 ]
 
-def parse_op(data, base):
-    """1OPのパラメータをバイト列から解析"""
-    return {
-        "DT1": (data[base+0] >> 4) & 0x07,
-        "MUL":  data[base+0] & 0x0F,
-        "TL":   data[base+1] & 0x7F,
-        "KSR": (data[base+2] >> 6) & 0x03,
-        "AR":   data[base+2] & 0x1F,
-        "AM":  (data[base+3] >> 7) & 0x01,
-        "DR":   data[base+3] & 0x1F,
-        "SR":   data[base+4] & 0x1F,
-        "SL":  (data[base+5] >> 4) & 0x0F,
-        "RR":   data[base+5] & 0x0F,
-    }
+def parse_voice(data, base):
+    """1音色(64バイト)のパラメータをバイト列から解析"""
+    fb_alg = data[base + 0]
+    fb  = (fb_alg >> 3) & 0x07
+    alg =  fb_alg        & 0x07
+    pms = data[base + 35] & 0x07
+
+    ops = []
+    for i in range(4):
+        raw_ar  = data[base + 1  + i]
+        raw_dr  = data[base + 6  + i]
+        raw_sr  = data[base + 11 + i]
+        raw_rr  = data[base + 16 + i]
+        raw_sl  = data[base + 21 + i]
+        raw_tl  = data[base + 26 + i]
+        ksr     = data[base + 31 + i] & 0x03
+        mul     = data[base + 36 + i] & 0x0F
+        dt1     = data[base + 41 + i] & 0x07
+        am_flag = data[base + 46 + i] != 0
+
+        ops.append({
+            "AR":  0x1F - (raw_ar & 0x1F),
+            "DR":  0x1F - (raw_dr & 0x1F),
+            "SR":  0x1F - (raw_sr & 0x1F),
+            "RR":  0x0F - (raw_rr & 0x0F),
+            "SL":  0x0F - (raw_sl & 0x0F),
+            "TL":  0x7F - (raw_tl & 0x7F),
+            "KSR": ksr,
+            "MUL": mul,
+            "DT1": dt1,
+            "AM":  1 if am_flag else 0,
+        })
+
+    return fb, alg, pms, ops
 
 def convert(src_path, dst_path, bank_no=0, group="OPN"):
     data = Path(src_path).read_bytes()
@@ -84,40 +125,22 @@ def convert(src_path, dst_path, bank_no=0, group="OPN"):
     patches = []
     for prog in range(128):
         base = prog * 64
-
-        # N88-BASIC(86)格納順: M1(op0), C1(op1), M2(op2), C2(op3)
-        op_m1 = parse_op(data, base + 0)   # OP1 = M1
-        op_c1 = parse_op(data, base + 6)   # OP2 = C1
-        op_m2 = parse_op(data, base + 12)  # OP3 = M2
-        op_c2 = parse_op(data, base + 18)  # OP4 = C2
-
-        fb_alg = data[base + 24]
-        ams_fms = data[base + 25]
-
-        alg = fb_alg & 0x07
-        fb  = (fb_alg >> 3) & 0x07
-        fms =  ams_fms & 0x07       # PMS (B4h の bit2-0)
-        ams = (ams_fms >> 4) & 0x03 # AMS (B4h の bit5-4)
+        fb, alg, pms, ops = parse_voice(data, base)
 
         name = GM_NAMES[prog] if prog < len(GM_NAMES) else f"Program {prog}"
 
         # FITOM_X HwPatch JSON形式
-        # FITOM_X ops[] 格納順: [M1, C1, M2, C2]
+        # FITOM_X ops[] 格納順: [M1, C1, M2, C2] (necopn.binの格納順そのまま)
         patches.append({
             "prog": prog,
             "name": name,
             "hw": {
                 "ALG": alg,
                 "FB":  fb,
-                "AMS": ams,
-                "FMS": fms,
+                "AMS": 0,   # necopn.binにチャンネルAMSの格納は無い(常に0)
+                "PMS": pms,
             },
-            "ops": [
-                op_m1,  # op[0] = M1
-                op_c1,  # op[1] = C1
-                op_m2,  # op[2] = M2
-                op_c2,  # op[3] = C2
-            ]
+            "ops": ops,
         })
 
     out = {
