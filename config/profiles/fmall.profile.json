@@ -15,7 +15,8 @@
     }
   ],
   "midi_inputs": [
-    "loopMIDI Port 1"
+    "loopMIDI Port 1",
+    "microKEY-25"
   ],
   "banks": {
     "hw_banks": [
