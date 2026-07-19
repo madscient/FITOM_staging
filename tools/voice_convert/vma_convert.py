@@ -44,6 +44,8 @@ FITOM_X hwbank.schema.json (フラット構造)へのマッピング:
   hwbank.jsonは別途一括修正済み。docs/CLAUDE.md 3.17参照)。
   SUS(Sustain)/DVB(Delayed Vibrato)/DAM(Delayed AM)/LFOは対応フィールドが
   存在しないため破棄する。
+  EGT[2]/RR[7:4]は実機OPLレジスタと極性が逆(2026年7月19日修正、
+  parse_ma2_op()参照)のため、そのままEGT→EGT/RR→RRへは対応させない。
 """
 
 import json, struct, sys, argparse
@@ -92,17 +94,20 @@ GM_NAMES = [
 
 def parse_ma2_op(b5):
     """MA-2形式5byte 1オペレータ → hwbank.schema.json準拠フラットop
-    実機EGTビット(b5[0]bit2)とRRレジスタ(b5[1]上位4bit)を、FITOMのSR/RR
-    フィールドに変換規則(docs/voice-parameter-reference.md)に従って変換する。
-    EGTビット=1(サステイン)→SR=0,RR=rr_reg<<1(4bit→5bit)
-    EGTビット=0(パーカッシブ)→SR=rr_reg<<1,RR=0
+
+    MA-2形式のEGTビット(b5[0]bit2)は実機OPLレジスタのEGTビットとは
+    極性が逆(2026年7月19日、実データとの聴感比較により判明。ピアノ等の
+    減衰音がSR=0(サステイン)になってしまうバグがあった)。
+    MA-2側のEGTビット/RRレジスタ(b5[1]上位4bit)をFITOMのSR/RRへ
+    変換元EGT=0の場合: 変換先SR=0, 変換先RR=変換元RR
+    変換元EGT=1の場合: 変換先SR=変換元RR, 変換先RR=変換元RR
+    SRのみ、AR/DR/TLと同じ4bit→5bit「上位ビット表現」で<<1して格納する
+    (OPL_new.cpp ar4()側で>>1されるため。RRは直接4bit値のまま)。
     """
     egt_bit = (b5[0] >> 2) & 1
     rr_reg  = (b5[1] >> 4) & 0xF
-    if egt_bit == 1:
-        sr, rr = 0, rr_reg          # サステイン: RRはそのまま(シフトなし)
-    else:
-        sr, rr = rr_reg << 1, 0     # パーカッシブ: SRへ4bit→5bit変換
+    sr = (rr_reg << 1) if egt_bit == 1 else 0
+    rr = rr_reg
     return {
         "MUL":  (b5[0] >> 4) & 0xF,
         "VIB":  (b5[0] >> 3) & 1,
@@ -203,9 +208,9 @@ def convert_vma(src_path, dst_path, force_2op=False, bank_name=None):
         "note":             f"MA-2 VMA形式 {op_str} {kind} バンク。"
                             "SUS/DVB/DAM/LFOフィールドは対応フィールドが"
                             "存在しないため変換時に破棄。"
-                            "実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに正しく変換"
-                            "(EGTビット=1→SR=0,RR=RRレジスタ<<1。"
-                            "EGTビット=0→SR=RRレジスタ<<1,RR=0)。"
+                            "MA-2形式のEGTビット/RRレジスタ(実機OPLとは極性が逆)をFITOMのSR/RRフィールドに変換"
+                            "(変換元EGT=1→SR=RRレジスタ<<1,RR=RRレジスタ。"
+                            "変換元EGT=0→SR=0,RR=RRレジスタ)。"
                             "ops[i].EGTフィールド自体はOPL系では無関係のため常に0。",
         "patches": patches,
     }
