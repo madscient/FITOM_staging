@@ -66,7 +66,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 1,
@@ -130,7 +130,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 2,
@@ -194,7 +194,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 3,
@@ -258,7 +258,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 4,
@@ -322,7 +322,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 26
     },
     {
       "prog": 5,
@@ -386,7 +386,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 6,
@@ -450,7 +450,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 7,
@@ -514,7 +514,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 8,
@@ -578,7 +578,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 9,
@@ -642,7 +642,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 10,
@@ -706,7 +706,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 11,
@@ -770,7 +770,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 12,
@@ -834,7 +834,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 13,
@@ -898,7 +898,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 14,
@@ -962,7 +962,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 26
     },
     {
       "prog": 15,
@@ -1154,7 +1154,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 18,
@@ -1218,7 +1218,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 19,
@@ -1282,7 +1282,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 20,
@@ -1346,7 +1346,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 21,
@@ -1410,7 +1410,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 26
     },
     {
       "prog": 22,
@@ -1474,7 +1474,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 23,
@@ -1538,7 +1538,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 26
     },
     {
       "prog": 24,
@@ -1602,7 +1602,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 25,
@@ -1666,7 +1666,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 26,
@@ -1794,7 +1794,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 28,
@@ -1858,7 +1858,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 29,
@@ -1922,7 +1922,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 30,
@@ -1986,7 +1986,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 31,
@@ -2050,7 +2050,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 32,
@@ -2114,7 +2114,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 33,
@@ -2178,7 +2178,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 34,
@@ -2242,7 +2242,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 35,
@@ -2306,7 +2306,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 36,
@@ -2370,7 +2370,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 26
     },
     {
       "prog": 37,
@@ -2434,7 +2434,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 38,
@@ -2498,7 +2498,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 39,
@@ -2562,7 +2562,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 40,
@@ -2626,7 +2626,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 41,
@@ -2690,7 +2690,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 42,
@@ -2754,7 +2754,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 43,
@@ -2818,7 +2818,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 44,
@@ -2882,7 +2882,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 45,
@@ -2946,7 +2946,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 46,
@@ -3010,7 +3010,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 47,
@@ -3074,7 +3074,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 48,
@@ -3138,7 +3138,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 49,
@@ -3202,7 +3202,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 50,
@@ -3266,7 +3266,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 51,
@@ -3330,7 +3330,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 52,
@@ -3394,7 +3394,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 53,
@@ -3458,7 +3458,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 54,
@@ -3522,7 +3522,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 55,
@@ -3586,7 +3586,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 56,
@@ -3650,7 +3650,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 57,
@@ -3714,7 +3714,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 58,
@@ -3778,7 +3778,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 59,
@@ -3842,7 +3842,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 60,
@@ -3906,7 +3906,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 61,
@@ -3970,7 +3970,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 62,
@@ -4034,7 +4034,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 63,
@@ -4098,7 +4098,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 64,
@@ -4162,7 +4162,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 65,
@@ -4226,7 +4226,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 66,
@@ -4290,7 +4290,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 26
     },
     {
       "prog": 67,
@@ -4354,7 +4354,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 68,
@@ -4418,7 +4418,7 @@
         }
       ],
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     }
   ]
 }

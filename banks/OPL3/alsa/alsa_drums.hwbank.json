@@ -74,7 +74,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 36,
@@ -145,7 +145,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 37,
@@ -216,7 +216,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 38,
@@ -287,7 +287,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 39,
@@ -358,7 +358,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 40,
@@ -429,7 +429,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 41,
@@ -500,7 +500,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 42,
@@ -571,7 +571,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 43,
@@ -642,7 +642,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 44,
@@ -713,7 +713,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 45,
@@ -784,7 +784,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 46,
@@ -855,7 +855,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 47,
@@ -926,7 +926,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 48,
@@ -997,7 +997,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 49,
@@ -1068,7 +1068,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 50,
@@ -1139,7 +1139,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 51,
@@ -1210,7 +1210,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 52,
@@ -1281,7 +1281,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 53,
@@ -1352,7 +1352,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 54,
@@ -1423,7 +1423,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 55,
@@ -1494,7 +1494,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 56,
@@ -1565,7 +1565,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 57,
@@ -1636,7 +1636,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 58,
@@ -1707,7 +1707,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 59,
@@ -1778,7 +1778,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 60,
@@ -1849,7 +1849,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 61,
@@ -1920,7 +1920,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 62,
@@ -1991,7 +1991,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 63,
@@ -2062,7 +2062,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 64,
@@ -2133,7 +2133,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 65,
@@ -2204,7 +2204,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 66,
@@ -2275,7 +2275,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 67,
@@ -2346,7 +2346,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 68,
@@ -2417,7 +2417,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 69,
@@ -2488,7 +2488,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 70,
@@ -2559,7 +2559,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 71,
@@ -2630,7 +2630,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 72,
@@ -2701,7 +2701,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 73,
@@ -2772,7 +2772,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 74,
@@ -2843,7 +2843,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 75,
@@ -2914,7 +2914,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 76,
@@ -2985,7 +2985,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 77,
@@ -3056,7 +3056,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 78,
@@ -3127,7 +3127,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 79,
@@ -3198,7 +3198,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 80,
@@ -3269,7 +3269,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 81,
@@ -3340,7 +3340,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     }
   ]
 }

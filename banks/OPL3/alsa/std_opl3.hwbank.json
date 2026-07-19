@@ -74,7 +74,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 1,
@@ -145,7 +145,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 2,
@@ -216,7 +216,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 3,
@@ -287,7 +287,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 4,
@@ -358,7 +358,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 5,
@@ -429,7 +429,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 6,
@@ -500,7 +500,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 7,
@@ -571,7 +571,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 8,
@@ -642,7 +642,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 9,
@@ -713,7 +713,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 10,
@@ -784,7 +784,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 11,
@@ -855,7 +855,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 12,
@@ -926,7 +926,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 13,
@@ -997,7 +997,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 14,
@@ -1068,7 +1068,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 15,
@@ -1139,7 +1139,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 16,
@@ -1210,7 +1210,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 17,
@@ -1281,7 +1281,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 18,
@@ -1352,7 +1352,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 19,
@@ -1423,7 +1423,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 20,
@@ -1494,7 +1494,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 21,
@@ -1565,7 +1565,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 22,
@@ -1636,7 +1636,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 23,
@@ -1707,7 +1707,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 24,
@@ -1778,7 +1778,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 25,
@@ -1849,7 +1849,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 26,
@@ -1920,7 +1920,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 27,
@@ -1991,7 +1991,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 28,
@@ -2062,7 +2062,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 29,
@@ -2133,7 +2133,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 30,
@@ -2204,7 +2204,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 31,
@@ -2275,7 +2275,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 32,
@@ -2346,7 +2346,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 33,
@@ -2417,7 +2417,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 34,
@@ -2488,7 +2488,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 35,
@@ -2559,7 +2559,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 36,
@@ -2630,7 +2630,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 37,
@@ -2701,7 +2701,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 38,
@@ -2772,7 +2772,7 @@
       ],
       "FB2": 4,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 39,
@@ -2843,7 +2843,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 40,
@@ -2914,7 +2914,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 41,
@@ -2985,7 +2985,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 42,
@@ -3056,7 +3056,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 43,
@@ -3127,7 +3127,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 44,
@@ -3198,7 +3198,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 45,
@@ -3269,7 +3269,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 46,
@@ -3340,7 +3340,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 47,
@@ -3411,7 +3411,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 48,
@@ -3482,7 +3482,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 49,
@@ -3553,7 +3553,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 50,
@@ -3624,7 +3624,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 51,
@@ -3695,7 +3695,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 52,
@@ -3766,7 +3766,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 53,
@@ -3837,7 +3837,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 54,
@@ -3908,7 +3908,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 55,
@@ -3979,7 +3979,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 56,
@@ -4050,7 +4050,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 57,
@@ -4121,7 +4121,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 58,
@@ -4192,7 +4192,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 59,
@@ -4263,7 +4263,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 60,
@@ -4334,7 +4334,7 @@
       ],
       "FB2": 7,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 61,
@@ -4405,7 +4405,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 62,
@@ -4476,7 +4476,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 63,
@@ -4547,7 +4547,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 64,
@@ -4618,7 +4618,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 65,
@@ -4689,7 +4689,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 66,
@@ -4760,7 +4760,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 67,
@@ -4831,7 +4831,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 68,
@@ -4902,7 +4902,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 69,
@@ -4973,7 +4973,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 70,
@@ -5044,7 +5044,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 71,
@@ -5115,7 +5115,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 72,
@@ -5186,7 +5186,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 73,
@@ -5257,7 +5257,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 74,
@@ -5328,7 +5328,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 75,
@@ -5399,7 +5399,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 76,
@@ -5470,7 +5470,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 77,
@@ -5541,7 +5541,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 78,
@@ -5612,7 +5612,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 79,
@@ -5683,7 +5683,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 80,
@@ -5754,7 +5754,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 81,
@@ -5825,7 +5825,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 82,
@@ -5896,7 +5896,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 83,
@@ -5967,7 +5967,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 84,
@@ -6038,7 +6038,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 85,
@@ -6109,7 +6109,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 86,
@@ -6180,7 +6180,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 87,
@@ -6251,7 +6251,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 88,
@@ -6322,7 +6322,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 89,
@@ -6393,7 +6393,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 90,
@@ -6464,7 +6464,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 91,
@@ -6535,7 +6535,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 24
     },
     {
       "prog": 92,
@@ -6606,7 +6606,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 93,
@@ -6677,7 +6677,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 94,
@@ -6748,7 +6748,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 95,
@@ -6819,7 +6819,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 96,
@@ -6890,7 +6890,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 97,
@@ -6961,7 +6961,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 98,
@@ -7032,7 +7032,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 99,
@@ -7103,7 +7103,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 100,
@@ -7174,7 +7174,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 101,
@@ -7245,7 +7245,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 102,
@@ -7316,7 +7316,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 103,
@@ -7387,7 +7387,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 104,
@@ -7458,7 +7458,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 105,
@@ -7529,7 +7529,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 106,
@@ -7600,7 +7600,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 107,
@@ -7671,7 +7671,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 25
     },
     {
       "prog": 108,
@@ -7742,7 +7742,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 109,
@@ -7813,7 +7813,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 110,
@@ -7884,7 +7884,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 111,
@@ -7955,7 +7955,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 112,
@@ -8026,7 +8026,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 113,
@@ -8097,7 +8097,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 114,
@@ -8168,7 +8168,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 115,
@@ -8239,7 +8239,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 116,
@@ -8310,7 +8310,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 117,
@@ -8381,7 +8381,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 118,
@@ -8452,7 +8452,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 119,
@@ -8523,7 +8523,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 120,
@@ -8594,7 +8594,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 121,
@@ -8665,7 +8665,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 122,
@@ -8736,7 +8736,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 123,
@@ -8807,7 +8807,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 31
     },
     {
       "prog": 124,
@@ -8878,7 +8878,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 125,
@@ -8949,7 +8949,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 126,
@@ -9020,7 +9020,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     },
     {
       "prog": 127,
@@ -9091,7 +9091,7 @@
       ],
       "FB2": 0,
       "sw_bank": 0,
-      "sw_prog": 2
+      "sw_prog": 30
     }
   ]
 }
