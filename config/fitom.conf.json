@@ -6,7 +6,7 @@
     "各HWプラグイン自身の設定ファイル(fmemuif_*.profile.json等)で指定する。"
   ],
   "log": {
-    "level": "info",
+    "level": "trace",
     "file":  "logs/fitom.log"
   }
 }
