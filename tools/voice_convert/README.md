@@ -211,6 +211,36 @@ python3 opl2_merge.py \\
 
 `midi_note` 等のドラム固有フィールドは Bank-A から自動的に引き継がれます。
 
+### `opll_convert.py` — OPLL グループ
+
+**対応フォーマット**: YM2413(OPLL) 実機レジスタダンプ(8byte/音色)のテキスト書き起こし
+
+```bash
+python3 opll_convert.py \
+  --pss140 pss140_patches.txt --pss140-names pss140_patches_names.txt \
+  --shs10 shs10_patches.txt \
+  banks/OPLL/opll_presets.hwbank.json
+```
+
+入力元 (banks/OPLL/opll_presets.hwbank.json の `source` フィールド参照):
+- https://github.com/plgDavid/misc/blob/master/OPLL%20Synth%20Patches/pss140_patches.txt (`$XX $XX ...` 形式、1行8byte)
+- https://github.com/plgDavid/misc/blob/master/OPLL%20Synth%20Patches/pss140_patches_names.txt (1行1名前、行順=prog順)
+- https://github.com/plgDavid/misc/blob/master/OPLL%20Synth%20Patches/shs10_patches.txt (C配列風 `{0xXX,...},//名前` 形式)
+
+**フォーマット概要**: YM2413カスタム音色レジスタ R#0-R#7(8byte)そのもの。
+R#0/R#1=AM|VIB|EGT|KSR|MULT(モジュレータ/キャリア)、R#2=KSL1|TL1、
+R#3=KSL2|DC|DM|FB、R#4/R#5=AR|DR、R#6/R#7=SL|RR。
+
+**OPLL特有のSR/RR変換規則に注意**: OPLLは`updateVoice`+`updateKey`の2段階
+書き込みで、キーオフ時は常にFITOMの`RR`値を直接RRレジスタへ書く
+(OPL系のように`SR>0`のとき`RR`が無視されるわけではない)。そのため
+実機EGTビットの値に関わらず常に`RR=変換元RRレジスタ値`(シフトなし)を
+格納する必要がある(`SR`のみ実機EGTビットに応じて0または変換元RR<<1)。
+詳細は `docs/voice-parameter-reference.md`「OPLL系」節、
+`opll_convert.py` 冒頭コメント参照。
+
+---
+
 ## n88basic_convert.py
 
 N88-BASIC(86) OPN音色テキストファイル群を hwbank.json に変換する。

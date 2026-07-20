@@ -40,7 +40,17 @@ FITOM_X hwbank.schema.json (フラット構造) へのマッピング:
   の変換規則に従いFITOMのSR/RRへ変換する(ops[i].EGT自体はOPL系では無関係のため
   常に0):
     EGTビット=1(サステイン) → SR=0, RR=そのまま(シフトなし)
-    EGTビット=0(パーカッシブ) → SR=RRレジスタ<<1(4bit→5bit), RR=0
+    EGTビット=0(パーカッシブ) → SR=RRレジスタ<<1(4bit→5bit), RR=そのまま(シフトなし)
+  FITOM_XはOPL系もキーオン時=常に実機EGTビット0+SR値、キーオフ時=常に
+  実機EGTビット1+RR値、という動的な書き込みを行うため(2026年7月20日訂正、
+  旧実装は「EGTビット=0(パーカッシブ)ならRR=0」としていたが、これだと
+  キーオフ時にRR=0が実機へ書き込まれ消音しなくなるバグがあった。
+  docs/CLAUDE.md 3.3/3.24参照)、`RR`は実機EGTビットの値に関わらず常に
+  変換元RRレジスタ値を格納する。
+  変換元のRRレジスタ自体が0の場合、キャリアオペレータのRRが0のまま
+  (実機で事実上消音しない状態)になるため、キャリアに限りRRへ最小値を
+  補う(apply_carrier_rr_floor()参照。モジュレータ側は音声出力に寄与
+  しないため対象外)。
   4OP(.o3)は前半ペア(M1/C1)= hw.FB、後半ペア(M2/C2)= hw.FB2 に分離して格納する。
   hw.ALG(3bit) = bit0:CON1(前半接続) | bit1:CON2(後半接続) | bit2:ConnectionSEL(4OP結合)。
 """
@@ -107,13 +117,49 @@ GM_NAMES = [
     "Telephone Ring","Helicopter","Applause","Gunshot",
 ]
 
+MIN_CARRIER_RR = 1  # SR=0かつRR=0(実機で事実上消音しない)になるキャリアに適用する最小値
+
+def carrier_flags(op_count, alg):
+    """ops[]の各要素が実際に音声出力に寄与する(キャリアである)かを判定。
+
+    hw.ALG: bit0=CON1(前半ペア接続)、bit1=CON2(後半ペア接続、4OPのみ)、
+    bit2=ConnectionSEL(4OP結合、4OPのみ)。CON=0はFM(直列、後段の
+    オペレータのみキャリア)、CON=1はAM(並列、両方キャリア)。
+    """
+    if op_count == 2:
+        con = alg & 1
+        return [False, True] if con == 0 else [True, True]
+    con1 = alg & 1
+    con2 = (alg >> 1) & 1
+    connsel = (alg >> 2) & 1
+    front = [False, True] if con1 == 0 else [True, True]
+    rear  = [False, True] if con2 == 0 else [True, True]
+    if connsel == 0:
+        return front + [False, False]
+    return front + rear
+
+def apply_carrier_rr_floor(ops, alg):
+    """キャリアオペレータのRRが0(実機で事実上消音しない)になっている
+    場合、RR に最小値を補う(変換元のRRレジスタ自体が0の場合に発生。
+    FITOM_Xはキーオフ時に`SR`の値に関わらず常に`RR`をRRレジスタへ
+    書き込むため、`SR`が非ゼロでもRR=0は消音しないバグになる。
+    モジュレータ側は音声出力に寄与しないため実害が無く対象外。
+    2026年7月20日追加・7月20日`SR`分岐を撤廃、docs/CLAUDE.md 3.24参照)。
+    """
+    for op, is_carrier in zip(ops, carrier_flags(len(ops), alg)):
+        if is_carrier and op.get("AR", 0) > 0 and op["RR"] == 0:
+            op["RR"] = MIN_CARRIER_RR
+
 def decode_op(char, scale, ar_dr, sl_rr, wave):
     egt_bit = (char >> 5) & 1
     rr_reg  = sl_rr & 0xF
-    if egt_bit == 1:
-        sr, rr = 0, rr_reg          # サステイン: RRはそのまま
-    else:
-        sr, rr = rr_reg << 1, 0     # パーカッシブ: SRへ4bit→5bit
+    # FITOM_Xはキーオフ時に常に実機EGTビット=1+RRレジスタ=変換元RR値を
+    # 書き込むため、EGTビットの値に関わらずRRは常に変換元RRレジスタ値
+    # を格納する(2026年7月20日修正、旧実装はパーカッシブ側でRR=0に
+    # していたためキーオフで消音しないバグがあった。docs/CLAUDE.md
+    # 3.24参照)。
+    sr = (rr_reg << 1) if egt_bit == 0 else 0
+    rr = rr_reg
     return {
         "MUL":  char & 0xF,
         "KSR": (char >> 4) & 1,
@@ -181,6 +227,8 @@ def convert(src_path, dst_path, bank_name=None):
             fb  = fb1
             fb2 = fb2_
 
+        apply_carrier_rr_floor(ops, alg)
+
         if raw_name:
             name = raw_name
         elif is_drum and prog in GM_DRUM_NAMES:
@@ -209,8 +257,10 @@ def convert(src_path, dst_path, bank_name=None):
         "source":           f"{Path(src_path).name} (ALSA sbiload format)",
         "note":             f"ALSA sbiload {ext}形式 {op_count}OP {kind} バンク。"
                             "実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに正しく変換"
-                            "(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=0)。"
+                            "(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=そのまま)。"
                             "ops[i].EGTフィールド自体はOPL系では無関係のため常に0。"
+                            f"キャリアオペレータのRRが0(消音しない状態)になる場合は"
+                            f"RR={MIN_CARRIER_RR}へ補正(モジュレータ側は対象外)。"
                             + ("4OPは前半ペア(M1/C1)=FB、後半ペア(M2/C2)=FB2に分離。" if op_count == 4 else "")
                             + ("drums: prog番号=MIDIノート番号。" if is_drum else "")
                             + "未使用エントリ(マジック0x00000000)は出力から除外。",

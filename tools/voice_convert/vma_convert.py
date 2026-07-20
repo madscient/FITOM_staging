@@ -46,6 +46,10 @@ FITOM_X hwbank.schema.json (フラット構造)へのマッピング:
   存在しないため破棄する。
   EGT[2]/RR[7:4]は実機OPLレジスタと極性が逆(2026年7月19日修正、
   parse_ma2_op()参照)のため、そのままEGT→EGT/RR→RRへは対応させない。
+  変換元のRRレジスタが0の場合、キャリアオペレータで`SR=0`かつ`RR=0`
+  (実機で事実上消音しない状態)になることがあるため、キャリアに限り
+  RRへ最小値を補う(2026年7月20日追加、apply_carrier_rr_floor()参照。
+  モジュレータ側は音声出力に寄与しないため対象外)。
 """
 
 import json, struct, sys, argparse
@@ -91,6 +95,44 @@ GM_NAMES = [
     "Guitar Fret Noise","Breath Noise","Seashore","Bird Tweet",
     "Telephone Ring","Helicopter","Applause","Gunshot",
 ]
+
+MIN_CARRIER_RR = 1  # SR=0かつRR=0(実機で事実上消音しない)になるキャリアに適用する最小値
+
+def carrier_flags(op_count, alg):
+    """ops[]の各要素が実際に音声出力に寄与する(キャリアである)かを判定。
+
+    hw.ALG: bit0=CON1(前半ペア接続)、bit1=CON2(後半ペア接続、4OPのみ)、
+    bit2=ConnectionSEL(4OP結合、4OPのみ)。CON=0はFM(直列、後段の
+    オペレータのみキャリア)、CON=1はAM(並列、両方キャリア)。
+    """
+    if op_count == 2:
+        con = alg & 1
+        return [False, True] if con == 0 else [True, True]
+    con1 = alg & 1
+    con2 = (alg >> 1) & 1
+    connsel = (alg >> 2) & 1
+    front = [False, True] if con1 == 0 else [True, True]
+    rear  = [False, True] if con2 == 0 else [True, True]
+    if connsel == 0:
+        return front + [False, False]
+    return front + rear
+
+def apply_carrier_rr_floor(ops, alg):
+    """キャリアオペレータのRRが0(実機で事実上消音しない)になっている
+    場合、RR に最小値を補う。
+
+    変換元(MA-2/実機ダンプ等)のRRレジスタ自体が0の場合にこの状態が
+    発生する。FITOM_Xはキーオフ時に`SR`の値に関わらず常に`RR`をRR
+    レジスタへ書き込むため、`SR`が非ゼロでもRR=0は消音しないバグになる
+    (2026年7月20日、`SR`分岐を撤廃。旧実装は`SR==0`の場合のみ対象と
+    誤解していた)。モジュレータ側は音声出力に寄与しないため実害が無く、
+    変換元の値をそのまま保持する(Preset4OP.vma/GMmapFM4op.vmaの一部
+    音色でキャリア側がこの状態になり、キーオフで消音しないバグが見つ
+    かったため対応。docs/CLAUDE.md 3.24参照)。
+    """
+    for op, is_carrier in zip(ops, carrier_flags(len(ops), alg)):
+        if is_carrier and op.get("AR", 0) > 0 and op["RR"] == 0:
+            op["RR"] = MIN_CARRIER_RR
 
 def parse_ma2_op(b5):
     """MA-2形式5byte 1オペレータ → hwbank.schema.json準拠フラットop
@@ -181,6 +223,8 @@ def convert_vma(src_path, dst_path, force_2op=False, bank_name=None):
             ops.append(parse_ma2_op(chunk[15:20]))
             ops.append(parse_ma2_op(chunk[20:25]))
 
+        apply_carrier_rr_floor(ops, alg)
+
         if raw_name:
             name = raw_name
         elif not is_drum and int(prog) < len(GM_NAMES):
@@ -211,7 +255,9 @@ def convert_vma(src_path, dst_path, force_2op=False, bank_name=None):
                             "MA-2形式のEGTビット/RRレジスタ(実機OPLとは極性が逆)をFITOMのSR/RRフィールドに変換"
                             "(変換元EGT=1→SR=RRレジスタ<<1,RR=RRレジスタ。"
                             "変換元EGT=0→SR=0,RR=RRレジスタ)。"
-                            "ops[i].EGTフィールド自体はOPL系では無関係のため常に0。",
+                            "ops[i].EGTフィールド自体はOPL系では無関係のため常に0。"
+                            f"キャリアオペレータがSR=0かつRR=0(消音しない状態)に"
+                            f"なる場合はRR={MIN_CARRIER_RR}へ補正(モジュレータ側は対象外)。",
         "patches": patches,
     }
     Path(dst_path).write_text(

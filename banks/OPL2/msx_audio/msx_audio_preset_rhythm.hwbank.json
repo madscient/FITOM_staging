@@ -2,7 +2,7 @@
   "name": "MSX-AUDIO/OPLL Emulate Rhythm",
   "voice_patch_type": "OPL_RHY",
   "source": "OPLL(YM2413) rhythm mode register image (ch6=BD, ch7=HH/SD, ch8=TOM/TCY)",
-  "note": "msx_audio_preset.hwbank.jsonと同グループ(OPL3_2)のOPLリズム(COPLRhythm)用5楽器。128パッチ制限のため既存バンク(124パッチ使用済み)には収まらず別ファイルとして分離。OPLLリズムモード標準レジスタ値からコンバート。Bass Drumは2op(Modulator+Carrier)、Hi-Hat/Snare Drum/Tom/Top Cymbalは各1op。実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに正しく変換(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=0)。ops[i].EGTは常に0。 Open Hi Hat(prog5)はClose Hi Hat(prog1)のSRを14→6に変更し持続を延長。Tom(prog6)はBass Drum(prog0)のエンベロープをそのまま使い、sw_prog=10(performance_presets: DrumLFO Mid, down saw one-shot hold)でピッチLFOを付与。 Snare Drum(Pitch LFO)(prog7)はSnare Drum(prog2)のエンベロープをそのまま使い、sw_prog=10(DrumLFO Mid)でピッチLFOを付与。 各パッチにext.rhythm_ch(0=HH,1=CYM,2=TOM,3=SD,4=BD)を設定。同一楽器の複数バリエーション(Open Hi Hat/Pitch LFO版)は、同じrhythm_chを持つ別スロット(prog)として提供する。",
+  "note": "msx_audio_preset.hwbank.jsonと同グループ(OPL3_2)のOPLリズム(COPLRhythm)用5楽器。128パッチ制限のため既存バンク(124パッチ使用済み)には収まらず別ファイルとして分離。OPLLリズムモード標準レジスタ値からコンバート。Bass Drumは2op(Modulator+Carrier)、Hi-Hat/Snare Drum/Tom/Top Cymbalは各1op。実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに変換(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=そのまま)。ops[i].EGTは常に0。2026年7月20日、キャリアがEGTビット=0(パーカッシブ)のときRR=0にしていた旧変換の誤りを修正(キーオフで消音しないバグ、SRから元のRR値を復元。docs/CLAUDE.md 3.24参照)。 Open Hi Hat(prog5)はClose Hi Hat(prog1)のSRを14→6に変更し持続を延長。Tom(prog6)はBass Drum(prog0)のエンベロープをそのまま使い、sw_prog=10(performance_presets: DrumLFO Mid, down saw one-shot hold)でピッチLFOを付与。 Snare Drum(Pitch LFO)(prog7)はSnare Drum(prog2)のエンベロープをそのまま使い、sw_prog=10(DrumLFO Mid)でピッチLFOを付与。 各パッチにext.rhythm_ch(0=HH,1=CYM,2=TOM,3=SD,4=BD)を設定。同一楽器の複数バリエーション(Open Hi Hat/Pitch LFO版)は、同じrhythm_chを持つ別スロット(prog)として提供する。",
   "patches": [
     {
       "prog": 0,
@@ -30,7 +30,7 @@
           "DR": 16,
           "SL": 6,
           "SR": 26,
-          "RR": 0,
+          "RR": 13,
           "TL": 30,
           "KSR": 0,
           "KSL": 0,
@@ -203,7 +203,7 @@
           "DR": 16,
           "SL": 6,
           "SR": 26,
-          "RR": 0,
+          "RR": 13,
           "TL": 30,
           "KSR": 0,
           "KSL": 0,
