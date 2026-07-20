@@ -583,6 +583,65 @@ FM音源の性質を無視して、ALGに関わらず無条件に全opsへVTLを
   自体も同時にフラット出力へ修正済みのため、今後`necopn.bin`から
   再変換しても同じ不具合は再発しない。
 
+### 3.22 hwif/emuif向けPCMメモリイメージカタログを新設・配線（2026年7月20日）
+`config_schema/profile.schema.json`の`hw_plugins[].profile`説明が、
+ADPCM/PCM系サンプルメモリを要するチップ（YM2608/YM2610/YM2610B/YMF278等）
+向けに「PCMメモリイメージカタログ(`pcm_image_catalog.schema.json`参照)」
+を予告していたが、本リポジトリには実体が存在しなかった。当初FITOM_X本体
+側にも存在しないと誤認してローカル暫定スキーマを作成したが、実際には
+`../FitomEmuIF`・`../FitomHwIF`（隣接リポジトリ）のドキュメント
+（`FitomEmuIF/README.md`「PCM/ADPCMイメージカタログ」節、
+`FitomHwIF/docs/profile-reference.md`「PCMカタログとの連携」節）で
+既に具体的な参照方法・フォーマットが規定されており、`FITOM_X/config_schema/
+pcm_image_catalog.schema.json`にも正式スキーマが存在していた（本リポジトリの
+`config_schema/`への同期漏れだった）。誤った暫定版は破棄し、正式スキーマの
+verbatimコピーに置き換えた。
+
+- **フォーマット**: `images`は配列ではなく、種別名をキーとする**オブジェクト**
+  （`ADPCM-A` / `ADPCM-B` / `OPNB_ADPCM-B` / `OPNA_RHYTHM` / `OPL4AWM`の5キー、
+  1種別1ファイルのみ）。他の`config_schema/*.json`同様、本ファイルは
+  FITOM_X本体からのverbatimコピーであり、独自にフィールドを追加しない。
+- **パス解決基点の不整合を`../FitomEmuIF`側で修正済み（2026年7月20日）**。
+  導入当初、`pcm_catalog`自体（プラグイン固有プロファイル中のカタログへの
+  パス指定フィールド）はFitomEmuIF・FitomHwIFとも**指定元プロファイル
+  ファイル自身のディレクトリ**基点で解決するのに対し、カタログ**内部**の
+  `images{}`の値（実イメージファイルへのパス）はFitomEmuIFのみ**実行時
+  カレントディレクトリ**基点（FitomHwIFは最初からカタログファイル自身の
+  ディレクトリ基点）という食い違いがあり、同じカタログJSONをhwif/emuif両方
+  で共用できなかった。ステージング運用上「カタログファイル基点」の方が
+  CWD（起動時の作業ディレクトリ）に依存せず可搬性が高く、かつFITOM_X本体が
+  `banks.*[].file`の解決基点をCWD相対から参照元ファイル相対へ変更した経緯
+  （3.14参照）とも整合するため、これを正とし、FitomEmuIF側
+  （`FmEmuIfImpl.cpp`の`apply_pcm_images()`、`load_engine()`にカタログ
+  ディレクトリを引き回すよう変更）をFitomHwIFの`PcmCatalog::load()`と同じ
+  規則に合わせて修正した（`../FitomEmuIF`は独立リポジトリのため、本リポジトリ
+  とは別にコミットが必要。ビルド確認済み、`bin/FitomEmuIF.dll`は再デプロイ
+  済み）。FitomEmuIF側のREADME.md・`pcm_images.catalog.example.json`・
+  `CLAUDE.md`（設計判断の経緯6.）も合わせて修正済み。
+  - 両プラグインとも「カタログファイル自身のディレクトリ」基点に統一された
+    ため、カタログファイルの置き場所はもはやリポジトリルート固定である必要は
+    ない。ただし本リポジトリでは変更のリスクを避けるため、現状
+    `pcm_image_catalog.json`をリポジトリルート直下に置いたままとしている
+    （`images{}`の値`banks/PCM/...`・`roms/...`はそのままリポジトリルート
+    相対として引き続き有効）。将来的に`config/profiles/hw_plugins/`配下へ
+    移設する場合は、`images{}`の値を移設先からの相対パスに書き換えること。
+- **登録イメージ**（`pcm_image_catalog.json`、リポジトリルート直下）:
+  - `ADPCM-A` → `banks/PCM/pss680/pss680_opnb_adpcma.bin`（OPNB/OPNBB用）
+  - `ADPCM-B` → `banks/PCM/pss680/pss680_opna_adpcmb.bin`（OPNA/Y8950用）
+  - `OPNB_ADPCM-B` → `banks/PCM/pss680/pss680_opnb_adpcmb.bin`（OPNB/OPNBB用、
+    OPNA/Y8950とはアドレッシング境界が異なるため別イメージ・別キー）
+  - `OPNA_RHYTHM` → `roms/ym2608_rhythm.rom`（YM2608内蔵リズム音源ROM）
+  - `OPL4AWM` → `roms/yrw801.rom`（YMF278/OPL4のAWM波形ROM）
+  - いずれも既存の`*.pcmbank.json`（PatchManagerが読む発音オフセット
+    メタデータ）とは別物（生のメモリダンプイメージそのもの）。
+- **配線**: ADPCM/AWM対応チップ（OPNA/OPNB/OPNBB/Y8950/OPL4）を含む
+  `fmemuif_opn_profile.json`・`fmemuif_fmall.profile.json`・
+  `fmemuif_opl5.profile.json`の3件に`"pcm_catalog": "../../../pcm_image_catalog.json"`
+  を追加。それ以外のfmemuif_*/fitom_hw_*サブプロファイルは対応チップを
+  含まないため未配線（`fitom_hw_*.profile.json`は現状すべてOPN/OPMのみで
+  ADPCM対応チップを持つ実機構成が無く、`pcm_catalog`を追加しても意味を
+  持たないため見送った。今後OPNA/OPNB実機構成を追加する際に配線すること）。
+
 ## 4. 未解決・要確認事項
 
 - `config_schema/profile.schema.json`のFITOM_X側原本に、以下2点の
@@ -621,6 +680,12 @@ FM音源の性質を無視して、ALGに関わらず無条件に全opsへVTLを
   SwPatchのVTLを実際に`ops[i]`ごとの正しいインデックスへ適用している
   ことまでは本リポジトリからは検証できていない（コアエンジンのソース
   非公開のため）。本体側で動作確認することが望ましい。
+- 3.22で新設した`pcm_image_catalog.json`（リポジトリルート直下）・
+  `config_schema/pcm_image_catalog.schema.json`（FITOM_X本体からの
+  verbatimコピー）は今回のセッションで動作未検証（JSON構文とパス実在性
+  のみ確認済み、実際に`fitom_core.exe`+FitomEmuIF.dllでADPCM RAM/AWM ROM
+  が正しくロードされることは未確認）。実機/エミュレータでの動作確認が
+  望ましい。
 
 ---
 

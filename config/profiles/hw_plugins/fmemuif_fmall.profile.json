@@ -3,6 +3,7 @@
   "buffer_frames": 512,
   "audio_api":     "auto",
   "audio_device":  "",
+  "pcm_catalog":   "../../../pcm_image_catalog.json",
   "engines": [
     {
       "dll": "engines/YMFMEngine",

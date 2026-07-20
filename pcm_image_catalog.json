@@ -1,0 +1,24 @@
+{
+  "_comment": [
+    "hwif(FitomHwIF)/emuif(FitomEmuIF)が共用するPCM/ADPCMメモリイメージ",
+    "カタログ。config_schema/pcm_image_catalog.schema.json 準拠。",
+    "",
+    "各プラグイン固有の設定ファイル(config/profiles/hw_plugins/fmemuif_*.profile.json /",
+    "fitom_hw_*.profile.json)の\"pcm_catalog\"フィールドからこのファイルを参照する。",
+    "",
+    "images{}の各値は、絶対パスならそのまま、相対パスならこのカタログファイル自身の",
+    "ディレクトリを基準に解決される(FitomEmuIF/FitomHwIFとも共通の規則、2026年7月20日",
+    "にFitomEmuIF側を修正しFitomHwIFのPcmCatalog::load()と統一)。",
+    "このファイルは現状リポジトリルート直下に置いているが、両プラグインとも",
+    "カタログファイル相対で解決するため配置に制約は無い。移動する場合は",
+    "images{}の値を移動先からの相対パスに書き換えること。"
+  ],
+
+  "images": {
+    "ADPCM-A":      "banks/PCM/pss680/pss680_opnb_adpcma.bin",
+    "ADPCM-B":      "banks/PCM/pss680/pss680_opna_adpcmb.bin",
+    "OPNB_ADPCM-B": "banks/PCM/pss680/pss680_opnb_adpcmb.bin",
+    "OPNA_RHYTHM":  "roms/ym2608_rhythm.rom",
+    "OPL4AWM":      "roms/yrw801.rom"
+  }
+}
