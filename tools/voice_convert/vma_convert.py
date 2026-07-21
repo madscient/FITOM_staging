@@ -44,9 +44,18 @@ FITOM_X hwbank.schema.json (フラット構造)へのマッピング:
   hwbank.jsonは別途一括修正済み。docs/CLAUDE.md 3.17参照)。
   SUS(Sustain)/DVB(Delayed Vibrato)/DAM(Delayed AM)/LFOは対応フィールドが
   存在しないため破棄する。
-  EGT[2]/RR[7:4]は実機OPLレジスタと極性が逆(2026年7月19日修正、
-  parse_ma2_op()参照)のため、そのままEGT→EGT/RR→RRへは対応させない。
-  変換元のRRレジスタが0の場合、キャリアオペレータで`SR=0`かつ`RR=0`
+  MA-2形式のEGT[2]ビットは実機OPLレジスタのEGTビットと**同じ極性**
+  (EGT=1→サステイン,EGT=0→パーカッシブ)である(2026年7月22日再訂正、
+  parse_ma2_op()参照)。2026年7月19日に一度「極性が逆」と誤って結論づけ
+  反転させてしまったが、実際には反転不要だった(docs/CLAUDE.md 3.26参照。
+  ユーザー指摘により発覚: オルガン/ストリングス等の持続音系楽器と
+  ピアノ/ベル/ギター等の減衰音系楽器の名前キーワードで生EGTビットを
+  集計したところ、持続音系97.6%がEGT=1・減衰音系83.5%がEGT=0という
+  明確な相関があり、反転させると全く逆の結果になっていたことを確認)。
+  RR[7:4]レジスタ自体は素直にFITOMのRRフィールドへ対応する(EGTの値に
+  関わらず常に変換元RRレジスタ値をそのまま格納。docs/CLAUDE.md 3.25の
+  OPL/OPLL共通規則参照)。
+  変換元のRRレジスタが0の場合、キャリアオペレータのRRが0のまま
   (実機で事実上消音しない状態)になることがあるため、キャリアに限り
   RRへ最小値を補う(2026年7月20日追加、apply_carrier_rr_floor()参照。
   モジュレータ側は音声出力に寄与しないため対象外)。
@@ -137,18 +146,24 @@ def apply_carrier_rr_floor(ops, alg):
 def parse_ma2_op(b5):
     """MA-2形式5byte 1オペレータ → hwbank.schema.json準拠フラットop
 
-    MA-2形式のEGTビット(b5[0]bit2)は実機OPLレジスタのEGTビットとは
-    極性が逆(2026年7月19日、実データとの聴感比較により判明。ピアノ等の
-    減衰音がSR=0(サステイン)になってしまうバグがあった)。
+    MA-2形式のEGTビット(b5[0]bit2)は実機OPLレジスタのEGTビットと
+    同じ極性(EGT=1→サステイン,EGT=0→パーカッシブ)である
+    (2026年7月22日再訂正。2026年7月19日に「極性が逆」と誤って結論づけ
+    反転させていたが、これは誤りだった。ユーザー指摘を受け、オルガン/
+    ストリングス等の持続音系とピアノ/ベル/ギター等の減衰音系の名前
+    キーワードで生EGTビットを統計的に照合し(926音色)、持続音系97.6%が
+    EGT=1・減衰音系83.5%がEGT=0という明確な相関を確認、反転無し
+    (2026年7月19日以前の実装)が正しいことを確定させた。docs/CLAUDE.md
+    3.26参照)。
     MA-2側のEGTビット/RRレジスタ(b5[1]上位4bit)をFITOMのSR/RRへ
-    変換元EGT=0の場合: 変換先SR=0, 変換先RR=変換元RR
-    変換元EGT=1の場合: 変換先SR=変換元RR, 変換先RR=変換元RR
+    変換元EGT=1(サステイン)の場合: 変換先SR=0, 変換先RR=変換元RR
+    変換元EGT=0(パーカッシブ)の場合: 変換先SR=変換元RR<<1, 変換先RR=変換元RR
     SRのみ、AR/DR/TLと同じ4bit→5bit「上位ビット表現」で<<1して格納する
     (OPL_new.cpp ar4()側で>>1されるため。RRは直接4bit値のまま)。
     """
     egt_bit = (b5[0] >> 2) & 1
     rr_reg  = (b5[1] >> 4) & 0xF
-    sr = (rr_reg << 1) if egt_bit == 1 else 0
+    sr = 0 if egt_bit == 1 else (rr_reg << 1)
     rr = rr_reg
     return {
         "MUL":  (b5[0] >> 4) & 0xF,
@@ -252,12 +267,12 @@ def convert_vma(src_path, dst_path, force_2op=False, bank_name=None):
         "note":             f"MA-2 VMA形式 {op_str} {kind} バンク。"
                             "SUS/DVB/DAM/LFOフィールドは対応フィールドが"
                             "存在しないため変換時に破棄。"
-                            "MA-2形式のEGTビット/RRレジスタ(実機OPLとは極性が逆)をFITOMのSR/RRフィールドに変換"
-                            "(変換元EGT=1→SR=RRレジスタ<<1,RR=RRレジスタ。"
-                            "変換元EGT=0→SR=0,RR=RRレジスタ)。"
+                            "MA-2形式のEGTビット/RRレジスタ(実機OPLと同じ極性)をFITOMのSR/RRフィールドに変換"
+                            "(変換元EGT=1→SR=0,RR=RRレジスタ。"
+                            "変換元EGT=0→SR=RRレジスタ<<1,RR=RRレジスタ)。"
                             "ops[i].EGTフィールド自体はOPL系では無関係のため常に0。"
-                            f"キャリアオペレータがSR=0かつRR=0(消音しない状態)に"
-                            f"なる場合はRR={MIN_CARRIER_RR}へ補正(モジュレータ側は対象外)。",
+                            f"キャリアオペレータのRRが0(消音しない状態)になる場合は"
+                            f"RR={MIN_CARRIER_RR}へ補正(モジュレータ側は対象外)。",
         "patches": patches,
     }
     Path(dst_path).write_text(
