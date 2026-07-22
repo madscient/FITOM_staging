@@ -3,7 +3,7 @@
   "voice_patch_type": "OPL3_2",
   "op_count": 2,
   "source": "NormalBank-1.vma (MA-2 VMA FM format)",
-  "note": "MA-2 VMA形式 2OP melody バンク。SUS/DVB/DAM/LFOフィールドは対応フィールドが存在しないため変換時に破棄。MA-2形式のEGTビット/RRレジスタ(実機OPLと同じ極性)をFITOMのSR/RRフィールドに変換(変換元EGT=1→SR=0,RR=RRレジスタ。変換元EGT=0→SR=RRレジスタ<<1,RR=RRレジスタ)。ops[i].EGTフィールド自体はOPL系では無関係のため常に0。キャリアオペレータのRRが0(消音しない状態)になる場合はRR=1へ補正(モジュレータ側は対象外)。",
+  "note": "MA-2 VMA形式 2OP melody バンク。SUS/DVB/DAM/LFOフィールドは対応フィールドが存在しないため変換時に破棄。MA-2形式のEGTビット/RRレジスタ(実機OPLと同じ極性)をFITOMのSR/RRフィールドに変換(変換元EGT=1→SR=0,RR=RRレジスタ。変換元EGT=0→SR=RRレジスタ<<1,RR=RRレジスタ)。ops[i].EGTフィールド自体はOPL系では無関係のため常に0。キャリアオペレータのRRが0(消音しない状態)になる場合はRR=1へ補正(モジュレータ側は対象外)。全opのAR=0(未使用プレースホルダ枠)のパッチは出力から除外。",
   "patches": [
     {
       "prog": 0,
@@ -764,86 +764,6 @@
       ],
       "sw_bank": 0,
       "sw_prog": 28
-    },
-    {
-      "prog": 19,
-      "name": "Church Organ",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
-      "prog": 20,
-      "name": "Reed Organ",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
     },
     {
       "prog": 21,
@@ -1646,46 +1566,6 @@
       "sw_prog": 27
     },
     {
-      "prog": 41,
-      "name": "Viola",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
       "prog": 42,
       "name": "Cello-2",
       "FB": 4,
@@ -1760,46 +1640,6 @@
           "KSL": 1,
           "AM": 0,
           "WS": 1
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
-      "prog": 44,
-      "name": "Tremolo Strings",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
         }
       ],
       "sw_bank": 0,
@@ -2158,46 +1998,6 @@
           "SL": 1,
           "TL": 0,
           "KSL": 2,
-          "AM": 0,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
-      "prog": 54,
-      "name": "Synth Voice",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
           "AM": 0,
           "WS": 0
         }
@@ -2766,46 +2566,6 @@
       "sw_prog": 27
     },
     {
-      "prog": 69,
-      "name": "English Horn",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
       "prog": 70,
       "name": "Bassoon-2",
       "FB": 4,
@@ -2999,86 +2759,6 @@
           "TL": 0,
           "KSL": 2,
           "AM": 1,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
-      "prog": 75,
-      "name": "Pan Flute",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
-      "prog": 76,
-      "name": "Blown Bottle",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
           "WS": 0
         }
       ],
@@ -3400,46 +3080,6 @@
           "KSL": 0,
           "AM": 0,
           "WS": 3
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
-      "prog": 85,
-      "name": "Lead 6 (voice)",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
         }
       ],
       "sw_bank": 0,
@@ -4526,46 +4166,6 @@
       "sw_prog": 27
     },
     {
-      "prog": 113,
-      "name": "Agogo",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
       "prog": 114,
       "name": "SteelDrum-2",
       "FB": 5,
@@ -4637,86 +4237,6 @@
           "AR": 30,
           "SL": 4,
           "TL": 10,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
-      "prog": 116,
-      "name": "Taiko Drum",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
-      "prog": 117,
-      "name": "Melodic Tom",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
           "KSL": 0,
           "AM": 0,
           "WS": 0
@@ -4836,46 +4356,6 @@
           "DR": 18,
           "AR": 22,
           "SL": 12,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        }
-      ],
-      "sw_bank": 0,
-      "sw_prog": 27
-    },
-    {
-      "prog": 121,
-      "name": "Breath Noise",
-      "FB": 0,
-      "ALG": 0,
-      "ops": [
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
-          "TL": 0,
-          "KSL": 0,
-          "AM": 0,
-          "WS": 0
-        },
-        {
-          "MUL": 0,
-          "VIB": 0,
-          "EGT": 0,
-          "KSR": 0,
-          "SR": 0,
-          "RR": 0,
-          "DR": 0,
-          "AR": 0,
-          "SL": 0,
           "TL": 0,
           "KSL": 0,
           "AM": 0,
