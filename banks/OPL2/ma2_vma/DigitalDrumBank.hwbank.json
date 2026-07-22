@@ -3,7 +3,7 @@
   "voice_patch_type": "OPL3_2",
   "op_count": 2,
   "source": "DigitalDrumBank.vma (MA-2 VMA FM format)",
-  "note": "MA-2 VMA形式 2OP drum バンク。SUS/DVB/DAM/LFOフィールドは対応フィールドが存在しないため変換時に破棄。MA-2形式のEGTビット/RRレジスタ(実機OPLと同じ極性)をFITOMのSR/RRフィールドに変換(変換元EGT=1→SR=0,RR=RRレジスタ。変換元EGT=0→SR=RRレジスタ<<1,RR=RRレジスタ)。ops[i].EGTフィールド自体はOPL系では無関係のため常に0。キャリアオペレータのRRが0(消音しない状態)になる場合はRR=1へ補正(モジュレータ側は対象外)。",
+  "note": "MA-2 VMA形式 2OP drum バンク。SUS/DVB/DAM/LFOフィールドは対応フィールドが存在しないため変換時に破棄。MA-2形式のEGTビット/RRレジスタ(実機OPLと同じ極性)をFITOMのSR/RRフィールドに変換(変換元EGT=1→SR=0,RR=RRレジスタ。変換元EGT=0→SR=RRレジスタ<<1,RR=RRレジスタ)。ops[i].EGTフィールド自体はOPL系では無関係のため常に0。キャリアオペレータのRRが0(消音しない状態)になる場合はRR=1へ補正(モジュレータ側は対象外)。全opのAR=0(未使用プレースホルダ枠)のパッチは出力から除外。",
   "patches": [
     {
       "prog": 0,

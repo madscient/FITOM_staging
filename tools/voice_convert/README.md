@@ -39,6 +39,8 @@ python3 vma_convert.py /path/to/vma/dir/ /path/to/out/ [--bank 0]
 - byte1=0 → 2OP(OPL2), byte1=1 → 4OP(OPL3)
 - パラメータはMA-2レジスタ形式(ビット位置がOPLと異なる)
 - `ADP  ` マジックの ADPCM ファイルはスキップ
+- 全opでAR=0(未使用プレースホルダ枠)のパッチは出力から除外(prog番号に
+  欠番が生じうる)
 
 ---
 

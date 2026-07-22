@@ -59,6 +59,10 @@ FITOM_X hwbank.schema.json (フラット構造)へのマッピング:
   (実機で事実上消音しない状態)になることがあるため、キャリアに限り
   RRへ最小値を補う(2026年7月20日追加、apply_carrier_rr_floor()参照。
   モジュレータ側は音声出力に寄与しないため対象外)。
+  全opのAR=0(音が一切鳴らない)のパッチは、未使用プレースホルダ枠
+  (実データでは埋め込み名も常に空)と判断し出力から除外する
+  (2026年7月22日追加。除外しないと、名前だけGMフォールバックで
+  付与された無音パッチが登録されてしまう)。
 """
 
 import json, struct, sys, argparse
@@ -238,6 +242,13 @@ def convert_vma(src_path, dst_path, force_2op=False, bank_name=None):
             ops.append(parse_ma2_op(chunk[15:20]))
             ops.append(parse_ma2_op(chunk[20:25]))
 
+        if all(op["AR"] == 0 for op in ops):
+            # 未使用プレースホルダ枠(全opでAR=0、AR=0は音が一切鳴らない)。
+            # 実データでは埋め込み名も常に空で、GMフォールバック名だけが
+            # 付与されてしまうため、名前付きなのに無音のパッチとして
+            # 出力されるのを避けるためスキップする(2026年7月22日追加)。
+            continue
+
         apply_carrier_rr_floor(ops, alg)
 
         if raw_name:
@@ -272,12 +283,13 @@ def convert_vma(src_path, dst_path, force_2op=False, bank_name=None):
                             "変換元EGT=0→SR=RRレジスタ<<1,RR=RRレジスタ)。"
                             "ops[i].EGTフィールド自体はOPL系では無関係のため常に0。"
                             f"キャリアオペレータのRRが0(消音しない状態)になる場合は"
-                            f"RR={MIN_CARRIER_RR}へ補正(モジュレータ側は対象外)。",
+                            f"RR={MIN_CARRIER_RR}へ補正(モジュレータ側は対象外)。"
+                            "全opのAR=0(未使用プレースホルダ枠)のパッチは出力から除外。",
         "patches": patches,
     }
     Path(dst_path).write_text(
         json.dumps(out, indent=2, ensure_ascii=False) + '\n', encoding='utf-8')
-    print(f"OK {src_name}: {N}音色 {group}({op_str}) {kind} → {dst_path}")
+    print(f"OK {src_name}: {len(patches)}/{N}音色 {group}({op_str}) {kind} → {dst_path}")
     return True
 
 if __name__ == "__main__":
