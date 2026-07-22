@@ -1,54 +1,42 @@
 {
-  "profile_name": "OPNエミュプロファイル (OPN/OPN2/OPNA/OPNB/OPNBB)",
-  "hw_plugins": [
-    {
-      "name": "FitomEmuIF",
-      "dll": "FitomEmuIF.dll",
-      "profile": "config/profiles/hw_plugins/fmemuif_opn_profile.json",
-      "auto_devices": true
-    }
-  ],
-  "midi_inputs": [
-    "loopMIDI Port 1",
-    "microKEY-25 0"
-  ],
   "banks": {
-    "hw_banks": [
+    "drum_banks": [
       {
-        "group": "OPN2",
-        "bank": 0,
-        "file": "../../banks/OPN/gm/necopn_gm.hwbank.json"
-      },
-      {
-        "group": "OPN2",
-        "bank": 1,
-        "file": "../../banks/OPN/n88basic/n88basic_preset.hwbank.json"
-      },
-      {
-        "group": "OPN2",
-        "bank": 2,
-        "file": "../../banks/OPN/music_lalf/music_lalf_1.hwbank.json"
-      },
-      {
-        "group": "OPN2",
-        "bank": 3,
-        "file": "../../banks/OPN/music_lalf/music_lalf_2.hwbank.json"
-      },
-      {
-        "group": "ADPCMB",
-        "bank": 0,
-        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json"
-      },
-      {
-        "group": "ADPCMA",
-        "bank": 1,
-        "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json"
+        "file": "../../banks/drums/pss680_opnb.drumkit.json",
+        "name": "ADPCM-A GM set",
+        "prog": 0
       }
     ],
-    "sw_banks": [
+    "hw_banks": [
       {
         "bank": 0,
-        "file": "../../banks/sw/performance_presets.swbank.json"
+        "file": "../../banks/OPN/gm/necopn_gm.hwbank.json",
+        "group": "OPN2"
+      },
+      {
+        "bank": 1,
+        "file": "../../banks/OPN/n88basic/n88basic_preset.hwbank.json",
+        "group": "OPN2"
+      },
+      {
+        "bank": 2,
+        "file": "../../banks/OPN/music_lalf/music_lalf_1.hwbank.json",
+        "group": "OPN2"
+      },
+      {
+        "bank": 3,
+        "file": "../../banks/OPN/music_lalf/music_lalf_2.hwbank.json",
+        "group": "OPN2"
+      },
+      {
+        "bank": 0,
+        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json",
+        "group": "ADPCMB"
+      },
+      {
+        "bank": 1,
+        "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json",
+        "group": "ADPCMA"
       }
     ],
     "patch_banks": [
@@ -57,13 +45,29 @@
         "file": "../../banks/patches/necopn_gm.patchbank.json"
       }
     ],
-    "drum_banks": [
+    "pcm_banks": [],
+    "sw_banks": [
       {
-        "prog": 0,
-        "name": "ADPCM-A GM set",
-        "file": "../../banks/drums/pss680_opnb.drumkit.json"
+        "bank": 0,
+        "file": "../../banks/sw/performance_presets.swbank.json"
       }
-    ],
-    "pcm_banks": []
-  }
+    ]
+  },
+  "hw_plugins": [
+    {
+      "auto_devices": true,
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_opn_profile.json"
+    }
+  ],
+  "master_pitch": 440.0,
+  "master_volume": 100,
+  "midi_inputs": [
+    "loopMIDI Port 0",
+    "",
+    "",
+    ""
+  ],
+  "profile_name": "OPNエミュプロファイル (OPN/OPN2/OPNA/OPNB/OPNBB)"
 }
