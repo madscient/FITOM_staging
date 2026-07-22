@@ -27,7 +27,15 @@
         "bank": 3,
         "file": "../../banks/OPN/music_lalf/music_lalf_2.hwbank.json",
         "group": "OPN2"
-      },
+      }
+    ],
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/necopn_gm.patchbank.json"
+      }
+    ],
+    "pcm_banks": [
       {
         "bank": 0,
         "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json",
@@ -39,13 +47,6 @@
         "group": "ADPCMA"
       }
     ],
-    "patch_banks": [
-      {
-        "bank": 0,
-        "file": "../../banks/patches/necopn_gm.patchbank.json"
-      }
-    ],
-    "pcm_banks": [],
     "sw_banks": [
       {
         "bank": 0,
