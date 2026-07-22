@@ -310,11 +310,6 @@
         "file": "../../banks/OPL4AWM/opl4awm_yrw801_drum.samplezonebank.json"
       },
       {
-        "group": "ADPCMB",
-        "bank": 0,
-        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json"
-      },
-      {
         "group": "OPL_RHY",
         "bank": 0,
         "file": "../../banks/OPL2/msx_audio/msx_audio_preset_rhythm.hwbank.json"
@@ -324,11 +319,6 @@
         "bank": 3,
         "file": "../../banks/OPLL/rom_sw_meta.hwbank.json",
         "role": "builtin_swpatch_meta"
-      },
-      {
-        "group": "ADPCMA",
-        "bank": 1,
-        "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json"
       },
       {
         "group": "OPLL",
@@ -465,6 +455,17 @@
         "file": "../../banks/drums/opl4awm.drumkit.json"
       }
     ],
-    "pcm_banks": []
+    "pcm_banks": [
+      {
+        "group": "ADPCMB",
+        "bank": 0,
+        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json"
+      },
+      {
+        "group": "ADPCMA",
+        "bank": 1,
+        "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json"
+      }
+    ]
   }
 }

@@ -160,16 +160,6 @@
         "group": "AWM",
         "bank": 1,
         "file": "../../banks/OPL4AWM/opl4awm_yrw801_drum.samplezonebank.json"
-      },
-      {
-        "group": "ADPCMB",
-        "bank": 0,
-        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json"
-      },
-      {
-        "group": "ADPCMA",
-        "bank": 1,
-        "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json"
       }
     ],
     "sw_banks": [
@@ -215,6 +205,17 @@
         "file": "../../banks/drums/opl4awm.drumkit.json"
       }
     ],
-    "pcm_banks": []
+    "pcm_banks": [
+      {
+        "group": "ADPCMB",
+        "bank": 0,
+        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json"
+      },
+      {
+        "group": "ADPCMA",
+        "bank": 1,
+        "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json"
+      }
+    ]
   }
 }
