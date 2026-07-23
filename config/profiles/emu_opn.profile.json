@@ -39,12 +39,20 @@
       {
         "bank": 0,
         "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json",
-        "group": "ADPCMB"
+        "group": "ADPCMB",
+        "chip": "OPNA"
       },
       {
         "bank": 1,
         "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json",
         "group": "ADPCMA"
+      },
+      {
+        "bank": 2,
+        "file": "../../banks/PCM/pss680/pss680_opnb_adpcmb.pcmbank.json",
+        "group": "ADPCMB",
+        "chip": "OPNB",
+        "offsets_only": true
       }
     ],
     "sw_banks": [
@@ -65,7 +73,7 @@
   "master_pitch": 440.0,
   "master_volume": 100,
   "midi_inputs": [
-    "loopMIDI Port 0",
+    "microKEY-25 0",
     "",
     "",
     ""
