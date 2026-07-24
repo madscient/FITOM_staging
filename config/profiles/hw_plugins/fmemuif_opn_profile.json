@@ -8,7 +8,6 @@
     {
       "dll": "engines/YMFMEngine",
       "chips": [
-        { "chip": "OPN",   "clock": 3579545, "pan": 0 },
         { "chip": "OPN2",  "clock": 7159090, "pan": 0 },
         { "chip": "OPNA",  "clock": 7159090, "pan": 0 },
         { "chip": "OPNB",  "clock": 7159090, "pan": 0 },
