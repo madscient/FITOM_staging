@@ -2,7 +2,7 @@
 
 [← 目次に戻る](README.md)
 
-`gm_native_opll.patchbank.json`の全128パッチについて、GM標準音色名と
+`gm_layered_opll.patchbank.json`の全128パッチについて、GM標準音色名と
 実際に割り当てたOPLLパッチのソース内訳です。
 
 | GM# | GM標準名 | 割り当てパッチ名 | ソース | ソース内Prog |

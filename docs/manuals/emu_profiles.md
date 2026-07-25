@@ -37,7 +37,7 @@
 - OPL4(33,868,800Hz)
 
 **通常モード(CC#0=0, CC#32=0)のパッチバンク:**
-- `gm_native_opl2.patchbank.json`
+- `gm_layered_opl2.patchbank.json`
 
 **ドラムキット(prog0):**
 - OPL Built-in set
@@ -55,7 +55,7 @@
 - OPZ(3,579,545Hz)
 
 **通常モード(CC#0=0, CC#32=0)のパッチバンク:**
-- `gm_native_opm.patchbank.json`
+- `gm_layered_opm.patchbank.json`
 
 **ドラムキット(prog0):**
 - (未設定)
@@ -74,7 +74,7 @@
 - OPLLX(3,579,545Hz)
 
 **通常モード(CC#0=0, CC#32=0)のパッチバンク:**
-- `gm_native_opll.patchbank.json`
+- `gm_layered_opll.patchbank.json`
 
 **ドラムキット(prog0):**
 - OPLL Built-in set
@@ -84,7 +84,7 @@
 ## OPLL用GM128パッチバンクの内訳
 
 OPLLエミュプロファイルの通常モードパッチバンク
-(`gm_native_opll.patchbank.json`)は、以下3種類のソースを
+(`gm_layered_opll.patchbank.json`)は、以下3種類のソースを
 組み合わせて128音色を構成しています。
 詳細な対応表は[OPLL GM128パッチ対応表](opll_gm128_mapping.md)を
 参照してください。

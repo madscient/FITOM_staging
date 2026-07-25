@@ -49,7 +49,7 @@ docs/manuals/           エンドユーザー向けレファレンスマニュ�
 | `emu_opl.profile.json` | OPL専用（OPL[rhythm]/Y8950/OPL2/OPL3/OPL4×1ずつ） |
 | `emu_opm.profile.json` | OPM専用（OPM×2/OPZ×2） |
 | `emu_opll.profile.json` | OPLL専用（OPLL/OPLL2[rhythm]/OPLLP/VRC7/OPLLX×1ずつ） |
-| `fmall.profile.json` | OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7構成（2026年7月19日新設、hw_banks 26件・sw_banks 7件、patch_banks 0番=`gm_native_opl4awm.patchbank.json`[ToneLayer0でAWM直参照のGM128バンク、新規作成]、drum_banks 0番=`opl4awm.drumkit.json`のみ） |
+| `fmall.profile.json` | OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7構成（2026年7月19日新設、hw_banks 26件・sw_banks 7件、patch_banks 0番=`gm_layered_opl4awm.patchbank.json`[ToneLayer0でAWM直参照のGM128バンク、新規作成]、drum_banks 0番=`opl4awm.drumkit.json`のみ） |
 | `emulator_opm.profile.json`ほか既存5件 | 旧・個別プロファイル（統合前からの遺産、現役利用中のため削除しないこと） |
 
 ### ドキュメント
@@ -934,7 +934,7 @@ MA-2 VMAファイルは128音色(メロディ)/79音色(ドラム)分の固定�
 - `emu_opm.profile.json`/`emu_opll.profile.json`の`drum_banks`は「統合
   プロファイルのまま」全15件を引き継いでいる。他チップ用ドラムキット
   （ALSA/MA-2等）も含まれるため、絞り込みが必要か要検討。
-- OPLL GM128（`gm_native_opll.patchbank.json`）は MA-2 Preset2OP由来が
+- OPLL GM128（`gm_layered_opll.patchbank.json`）は MA-2 Preset2OP由来が
   67/128と過半数。ソースを増やせる余地がないか、要継続検討
   （2026年7月19日確認: この67パッチはToneLayerで`voice_patch_type=OPLL,
   hw_bank=4`(`Preset2OP.hwbank.json`)を参照しているのみで値のコピーは

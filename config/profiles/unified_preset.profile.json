@@ -359,7 +359,7 @@
     "patch_banks": [
       {
         "bank": 0,
-        "file": "../../banks/patches/gm_native_skeleton.patchbank.json"
+        "file": "../../banks/patches/gm_layered_skeleton.patchbank.json"
       },
       {
         "bank": 1,
@@ -367,15 +367,15 @@
       },
       {
         "bank": 2,
-        "file": "../../banks/patches/gm_native_opl2.patchbank.json"
+        "file": "../../banks/patches/gm_layered_opl2.patchbank.json"
       },
       {
         "bank": 3,
-        "file": "../../banks/patches/gm_native_opl3.patchbank.json"
+        "file": "../../banks/patches/gm_layered_opl3.patchbank.json"
       },
       {
         "bank": 4,
-        "file": "../../banks/patches/gm_native_opm.patchbank.json"
+        "file": "../../banks/patches/gm_layered_opm.patchbank.json"
       }
     ],
     "drum_banks": [

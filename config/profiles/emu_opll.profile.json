@@ -45,7 +45,7 @@
     "patch_banks": [
       {
         "bank": 0,
-        "file": "../../banks/patches/gm_native_opll.patchbank.json"
+        "file": "../../banks/patches/gm_layered_opll.patchbank.json"
       }
     ],
     "drum_banks": [
