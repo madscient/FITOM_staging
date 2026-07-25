@@ -1,0 +1,7 @@
+{
+  "name": "wavs/rhythm ADPCM-A (YM2610/OPNB)",
+  "codec": "adpcm-a",
+  "boundary": 256,
+  "bin_file": "wavs_opnb_adpcma.bin",
+  "adpcm_json": "wavs_opnb_adpcma.json"
+}

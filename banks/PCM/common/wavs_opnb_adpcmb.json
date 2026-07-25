@@ -1,0 +1,134 @@
+{
+  "boundary": 256,
+  "codec": "adpcm-b",
+  "entries": [
+    {
+      "end_hex": "0x0077FF",
+      "name": "BrassHit",
+      "offset": 0,
+      "offset_hex": "0x000000",
+      "padded_size": 30720,
+      "root_note": 69,
+      "size": 30720
+    },
+    {
+      "end_hex": "0x00B6FF",
+      "name": "BrightOrchestraHit_C",
+      "offset": 30720,
+      "offset_hex": "0x007800",
+      "padded_size": 16128,
+      "root_note": 69,
+      "size": 16000
+    },
+    {
+      "end_hex": "0x00FDFF",
+      "name": "CinematicHit",
+      "offset": 46848,
+      "offset_hex": "0x00B700",
+      "padded_size": 18176,
+      "root_note": 69,
+      "size": 18080
+    },
+    {
+      "end_hex": "0x013EFF",
+      "name": "ExplosionHit",
+      "offset": 65024,
+      "offset_hex": "0x00FE00",
+      "padded_size": 16640,
+      "root_note": 69,
+      "size": 16608
+    },
+    {
+      "end_hex": "0x01A3FF",
+      "name": "HiPitchOrchestraHit",
+      "offset": 81664,
+      "offset_hex": "0x013F00",
+      "padded_size": 25856,
+      "root_note": 69,
+      "size": 25760
+    },
+    {
+      "end_hex": "0x0208FF",
+      "name": "LoPitchOrchestraHit",
+      "offset": 107520,
+      "offset_hex": "0x01A400",
+      "padded_size": 25856,
+      "root_note": 69,
+      "size": 25856
+    },
+    {
+      "end_hex": "0x022BFF",
+      "name": "MassiveTimpani",
+      "offset": 133376,
+      "offset_hex": "0x020900",
+      "padded_size": 8960,
+      "root_note": 69,
+      "size": 8864
+    },
+    {
+      "end_hex": "0x0261FF",
+      "name": "OrchestraHit",
+      "offset": 142336,
+      "offset_hex": "0x022C00",
+      "padded_size": 13824,
+      "root_note": 69,
+      "size": 13632
+    },
+    {
+      "end_hex": "0x0278FF",
+      "name": "PSR_38_ORCHESTRA_HIT",
+      "offset": 156160,
+      "offset_hex": "0x026200",
+      "padded_size": 5888,
+      "root_note": 69,
+      "size": 5824
+    },
+    {
+      "end_hex": "0x02A3FF",
+      "name": "PSR_38_TIMPANI",
+      "offset": 162048,
+      "offset_hex": "0x027900",
+      "padded_size": 11008,
+      "root_note": 69,
+      "size": 10944
+    },
+    {
+      "end_hex": "0x02B2FF",
+      "name": "PSS_590_OrchestraHit",
+      "offset": 173056,
+      "offset_hex": "0x02A400",
+      "padded_size": 3840,
+      "root_note": 69,
+      "size": 3616
+    },
+    {
+      "end_hex": "0x02BFFF",
+      "name": "PSS_590_Timpani",
+      "offset": 176896,
+      "offset_hex": "0x02B300",
+      "padded_size": 3328,
+      "root_note": 69,
+      "size": 3264
+    },
+    {
+      "end_hex": "0x02FFFF",
+      "name": "TenseStringHit",
+      "offset": 180224,
+      "offset_hex": "0x02C000",
+      "padded_size": 16384,
+      "root_note": 69,
+      "size": 16224
+    },
+    {
+      "end_hex": "0x033EFF",
+      "name": "WarmOrchestraHit_C",
+      "offset": 196608,
+      "offset_hex": "0x030000",
+      "padded_size": 16128,
+      "root_note": 69,
+      "size": 16000
+    }
+  ],
+  "sample_rate": 16000,
+  "total_size": 212736
+}

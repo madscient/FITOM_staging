@@ -1,0 +1,7 @@
+{
+  "name": "wavs/rhythm+melodic ADPCM (YMZ280B)",
+  "codec": "pcmd8",
+  "boundary": 256,
+  "bin_file": "wavs_ymz280_adpcm.bin",
+  "adpcm_json": "wavs_ymz280_adpcm.json"
+}

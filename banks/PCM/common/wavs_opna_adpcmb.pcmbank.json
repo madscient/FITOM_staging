@@ -1,0 +1,8 @@
+{
+  "name": "wavs/melodic ADPCM-B (YM2608/OPNA)",
+  "codec": "adpcm-b",
+  "sample_rate": 16000,
+  "boundary": 32,
+  "bin_file": "wavs_opna_adpcmb.bin",
+  "adpcm_json": "wavs_opna_adpcmb.json"
+}
