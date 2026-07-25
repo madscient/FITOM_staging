@@ -158,11 +158,6 @@
         "file": "../../banks/drums/opl4awm.drumkit.json"
       },
       {
-        "prog": 16,
-        "name": "PSS-560 GM Drum Kit (OPNB)",
-        "file": "../../banks/drums/pss560_opnb.drumkit.json"
-      },
-      {
         "prog": 17,
         "name": "PSS-590 GM Drum Kit (OPNB)",
         "file": "../../banks/drums/pss590_opnb.drumkit.json"
@@ -181,6 +176,31 @@
         "prog": 20,
         "name": "RX11/21L GM Drum Kit (OPNB)",
         "file": "../../banks/drums/rx11_21l_opnb.drumkit.json"
+      },
+      {
+        "prog": 21,
+        "name": "PSS-560 GM Drum Kit (OPNB)",
+        "file": "../../banks/drums/pss560_opnb.drumkit.json"
+      },
+      {
+        "prog": 22,
+        "name": "RX5 Extra Kit (OPNB)",
+        "file": "../../banks/drums/rx5_extra_opnb.drumkit.json"
+      },
+      {
+        "prog": 16,
+        "name": "PSS-590 Power Kit (OPNB)",
+        "file": "../../banks/drums/pss590_power_opnb.drumkit.json"
+      },
+      {
+        "prog": 24,
+        "name": "PSS-590 Electronic Kit (OPNB)",
+        "file": "../../banks/drums/pss590_electronic_opnb.drumkit.json"
+      },
+      {
+        "prog": 40,
+        "name": "PSS-680 Brush Kit (OPNB)",
+        "file": "../../banks/drums/pss680_brush_opnb.drumkit.json"
       }
     ],
     "pcm_banks": []
