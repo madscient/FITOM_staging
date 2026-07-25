@@ -361,7 +361,7 @@ Program Change番号の内訳:
 
 `Preset2OP.hwbank.json`(元はOPL2用GM128バンク)を、OPLL用として
 直接参照したものです。GM128配列の音色が一通り揃っています。
-`GM Standard Native OPLL`(通常モード、CC#0=0, CC#32=?)から
+`GM Standard Layered OPLL`(通常モード、CC#0=0, CC#32=?)から
 組み立てる際のフォールバック候補としても使われています。
 
 | Prog | 名称 |

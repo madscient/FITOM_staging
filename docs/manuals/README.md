@@ -37,11 +37,11 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)による音色バンクの一覧です。
 
 | CC#0 | CC#32 | 音源 | バンク名 |
 |---|---|---|---|
-| 0 | 0 | Native | [GM Standard Native](patches/native.md#cc320) |
-| 0 | 1 | Native | [necopn GM (OPN single-layer)](patches/native.md#cc321) |
-| 0 | 2 | Native | [GM Standard Native OPL2](patches/native.md#cc322) |
-| 0 | 3 | Native | [GM Standard Native OPL3](patches/native.md#cc323) |
-| 0 | 4 | Native | [GM Standard Native OPM](patches/native.md#cc324) |
+| 0 | 0 | Layered | [GM Standard Layered](patches/layered.md#cc320) |
+| 0 | 1 | Layered | [necopn GM (OPN single-layer)](patches/layered.md#cc321) |
+| 0 | 2 | Layered | [GM Standard Layered OPL2](patches/layered.md#cc322) |
+| 0 | 3 | Layered | [GM Standard Layered OPL3](patches/layered.md#cc323) |
+| 0 | 4 | Layered | [GM Standard Layered OPM](patches/layered.md#cc324) |
 | 17 | 0 | OPN2 | [necopn GM Bank](patches/opn2.md#cc320) |
 | 17 | 1 | OPN2 | [N88-BASIC Preset](patches/opn2.md#cc321) |
 | 17 | 2 | OPN2 | [MUSIC LALF Preset 1](patches/opn2.md#cc322) |

@@ -88,7 +88,7 @@
     "patch_banks": [
       {
         "bank": 0,
-        "file": "../../banks/patches/gm_native_opm.patchbank.json"
+        "file": "../../banks/patches/gm_layered_opm.patchbank.json"
       }
     ],
     "drum_banks": [
