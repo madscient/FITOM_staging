@@ -65,7 +65,8 @@ banks/
 │                         (自前作成、外部変換元なし)
 ├── OPL4AWM/              opl4awm_yrw801_gm/drum.samplezonebank.json
 ├── PCM/
-│   └── pss680/           pss680_opna/opnb.pcmbank.json + 付随bin/json
+│   └── common/           wavs/配下をadpcm_packerでパックしたADPCM-A/B/YMZ280
+│                         (pcmd8)バンク(*.pcmbank.json + 付随bin/json)
 ├── drums/                DrumKit(*.drumkit.json、GM2ノートマッピング)
 ├── patches/              PatchBank(*.patchbank.json、ToneLayer経由の複合パッチ)
 ├── sw/                   SwPatch(*.swbank.json、ベロシティ感度/LFO。README.md参照)

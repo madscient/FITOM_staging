@@ -209,7 +209,7 @@
       {
         "group": "ADPCMB",
         "bank": 0,
-        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json"
+        "file": "../../banks/PCM/common/wavs_opna_adpcmb.pcmbank.json"
       },
       {
         "group": "ADPCMA",

@@ -59,7 +59,7 @@
       {
         "bank": 0,
         "chip": "OPNA",
-        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json",
+        "file": "../../banks/PCM/common/wavs_opna_adpcmb.pcmbank.json",
         "group": "ADPCMB"
       },
       {
@@ -70,7 +70,7 @@
       {
         "bank": 2,
         "chip": "OPNB",
-        "file": "../../banks/PCM/pss680/pss680_opnb_adpcmb.pcmbank.json",
+        "file": "../../banks/PCM/common/wavs_opnb_adpcmb.pcmbank.json",
         "group": "ADPCMB",
         "offsets_only": true
       }

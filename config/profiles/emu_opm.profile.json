@@ -153,11 +153,6 @@
         "file": "../../banks/drums/opl_builtin_rhythm.drumkit.json"
       },
       {
-        "prog": 14,
-        "name": "ADPCM-B GM set",
-        "file": "../../banks/drums/pss680_opna.drumkit.json"
-      },
-      {
         "prog": 15,
         "name": "OPL4-AWM GM set",
         "file": "../../banks/drums/opl4awm.drumkit.json"
