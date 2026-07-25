@@ -1,5 +1,5 @@
 {
-  "name": "GM Standard Native OPL2",
+  "name": "GM Standard Layered OPL2",
   "note": "ALSA GM Standard 2OP(std_opl2.hwbank.json)をベースに構築。voice_patch_type=OPL3_2(0x22)固定。",
   "patches": [
     {

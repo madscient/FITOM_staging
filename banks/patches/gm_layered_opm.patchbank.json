@@ -1,5 +1,5 @@
 {
-  "name": "GM Standard Native OPM",
+  "name": "GM Standard Layered OPM",
   "note": "DX/TX GM Standard(gm128_preset.hwbank.json)をベースに構築。voice_patch_type=OPZ(0x1a)固定。",
   "patches": [
     {
