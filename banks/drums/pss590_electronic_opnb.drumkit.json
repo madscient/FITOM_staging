@@ -1,0 +1,222 @@
+{
+  "type": "routed",
+  "name": "PSS-590 Electronic Kit (OPNB ADPCM-A)",
+  "choke_groups": [
+    [
+      42,
+      44,
+      46
+    ]
+  ],
+  "notes": [
+    {
+      "note": 35,
+      "name": "Acoustic Bass Drum",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 25,
+      "play_note": 35,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 36,
+      "name": "Bass Drum 1",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 22,
+      "play_note": 36,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 37,
+      "name": "Side Stick",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 33,
+      "play_note": 37,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 38,
+      "name": "Acoustic Snare",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 23,
+      "play_note": 38,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 40,
+      "name": "Electric Snare 2",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 40,
+      "play_note": 40,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 41,
+      "name": "Electric Low Tom 2",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 38,
+      "play_note": 41,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 42,
+      "name": "Closed Hi-Hat",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 18,
+      "play_note": 42,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 43,
+      "name": "Electric Low Tom 1",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 36,
+      "play_note": 43,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 44,
+      "name": "Pedal Hi-Hat",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 30,
+      "play_note": 44,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 45,
+      "name": "Electric Mid Tom 2",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 38,
+      "play_note": 45,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 46,
+      "name": "Open Hi-Hat",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 29,
+      "play_note": 46,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 47,
+      "name": "Electric Mid Tom 1",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 39,
+      "play_note": 47,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 48,
+      "name": "Electric Hi Tom 2",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 39,
+      "play_note": 48,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 49,
+      "name": "Crash Cymbal 1",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 19,
+      "play_note": 49,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 50,
+      "name": "Electric Hi Tom 1",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 37,
+      "play_note": 50,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 51,
+      "name": "Ride Cymbal 1",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 32,
+      "play_note": 51,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 55,
+      "name": "Splash Cymbal",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 35,
+      "play_note": 55,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 57,
+      "name": "Crash Cymbal 2",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 19,
+      "play_note": 57,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 59,
+      "name": "Ride Cymbal 2",
+      "voice_patch_type": 82,
+      "patch_bank": 1,
+      "patch_prog": 32,
+      "play_note": 59,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    }
+  ]
+}
