@@ -2,7 +2,7 @@
 
 [← バンクマップに戻る](../README.md#2-バンクマップcc0--cc32)
 
-## <a id="cc320"></a>CC#32=0: GM Standard Native
+## <a id="cc320"></a>CC#32=0: GM Standard Layered
 
 (音色未登録)
 
@@ -139,7 +139,7 @@
 | 126 | Applause |
 | 127 | Gunshot |
 
-## <a id="cc322"></a>CC#32=2: GM Standard Native OPL2
+## <a id="cc322"></a>CC#32=2: GM Standard Layered OPL2
 
 | Prog | 名称 |
 |---|---|
@@ -272,7 +272,7 @@
 | 126 | Applause/Noise |
 | 127 | Gunshot |
 
-## <a id="cc323"></a>CC#32=3: GM Standard Native OPL3
+## <a id="cc323"></a>CC#32=3: GM Standard Layered OPL3
 
 | Prog | 名称 |
 |---|---|
@@ -405,7 +405,7 @@
 | 126 | Applause/Noise |
 | 127 | Gunshot |
 
-## <a id="cc324"></a>CC#32=4: GM Standard Native OPM
+## <a id="cc324"></a>CC#32=4: GM Standard Layered OPM
 
 | Prog | 名称 |
 |---|---|

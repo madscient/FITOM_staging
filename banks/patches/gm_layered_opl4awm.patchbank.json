@@ -1,5 +1,5 @@
 {
-  "name": "GM Standard Native OPL4AWM",
+  "name": "GM Standard Layered OPL4AWM",
   "note": "YRW801 GM(opl4awm_yrw801_gm.samplezonebank.json)をベースに構築。voice_patch_type=AWM(0x54)固定、ToneLayer0のみでhw_bank/hw_progはsamplezonebank側のprogとそのまま対応。",
   "patches": [
     {

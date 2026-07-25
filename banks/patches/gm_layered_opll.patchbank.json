@@ -1,5 +1,5 @@
 {
-  "name": "GM Standard Native OPLL",
+  "name": "GM Standard Layered OPLL",
   "note": "OPLL用GM128配列パッチバンク。各progのToneLayerでvoice_patch_type=OPLL(0x28)固定、hw_bank別にソースを参照: hw_bank=0はOPLL Built-In ROM音色(機械合成領域、hw_progで(variantSel<<4)|instIndex指定)、hw_bank=2はSHS-10/PSS-170プリセット(opll_presets.hwbank.json)、hw_bank=4はMA-2 Preset2OP(Preset2OP.hwbank.json、OPL2用バンクをOPLLとして直接参照)。優先順位: ①OPLL Built-In ROM(名称一致) → ②SHS-10/PSS-170(名称一致) → ③MA-2 Preset2OP(同一prog番号)。 2026年7月、undocumentedsoundchips.com / plgDavid/misc wikiの資料を参考に追加8件をOPLL Built-In ROMへ変更(完全一致でなくとも近似で採用)。",
   "patches": [
     {

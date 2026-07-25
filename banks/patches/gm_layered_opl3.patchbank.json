@@ -1,5 +1,5 @@
 {
-  "name": "GM Standard Native OPL3",
+  "name": "GM Standard Layered OPL3",
   "note": "ALSA GM Standard 4OP(std_opl3.hwbank.json)をベースに構築。voice_patch_type=OPL3(0x30)固定。",
   "patches": [
     {
