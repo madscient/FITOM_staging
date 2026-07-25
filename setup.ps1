@@ -56,6 +56,16 @@ function Copy-IfExists($src, $dst) {
 
 Write-Host "=== FITOM_staging setup ($BuildType) ==="
 
+# ── config/profiles/ の環境依存フィールド(MIDI入力名・実機ポート名)を ──────
+# ── gitの索引上プレースホルダーへ正規化するcleanフィルタをローカル登録 ──────
+# (.gitattributesはフィルタ名の宣言のみで、実行コマンド自体はセキュリティ上
+#  ローカルgit configへの登録が必須。詳細はtools/git_filters/README相当の
+#  コメントを.gitattributes参照)
+git -C $Stage config filter.envlocal.clean "python tools/git_filters/normalize_env_fields.py"
+git -C $Stage config filter.envlocal.smudge "cat"
+git -C $Stage config filter.envlocal.required "true"
+Write-Host "  OK   git filter 'envlocal' registered"
+
 # ── bin/ を作成 ──────────────────────────────────────────────────────────────
 $Bin = Join-Path $Stage "bin"
 New-Item -ItemType Directory -Force -Path $Bin | Out-Null

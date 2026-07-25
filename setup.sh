@@ -37,6 +37,15 @@ copy_if_exists() {
 
 echo "=== FITOM_staging setup ($BUILD_TYPE) ==="
 
+# ── config/profiles/ の環境依存フィールド(MIDI入力名・実機ポート名)を ──────
+# ── gitの索引上プレースホルダーへ正規化するcleanフィルタをローカル登録 ──────
+# (.gitattributesはフィルタ名の宣言のみで、実行コマンド自体はセキュリティ上
+#  ローカルgit configへの登録が必須)
+git -C "$STAGE" config filter.envlocal.clean "python3 tools/git_filters/normalize_env_fields.py"
+git -C "$STAGE" config filter.envlocal.smudge "cat"
+git -C "$STAGE" config filter.envlocal.required "true"
+echo "  OK   git filter 'envlocal' registered"
+
 # ── bin/ を作成 ──────────────────────────────────────────────────────────────
 mkdir -p "$STAGE/bin/engines"
 

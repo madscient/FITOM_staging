@@ -239,10 +239,10 @@
   "master_pitch": 440.0,
   "master_volume": 100,
   "midi_inputs": [
-    "loopMIDI Port 0",
-    "microKEY-25 0",
-    "",
-    ""
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
   ],
   "profile_name": "OPLエミュプロファイル (OPL[rhythm]/Y8950/OPL2/OPL3/OPL4)"
 }

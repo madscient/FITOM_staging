@@ -906,6 +906,54 @@ MA-2 VMAファイルは128音色(メロディ)/79音色(ドラム)分の固定�
   設定になっている。これらのノートに何を割り当てるべきかはデータ
   設計判断が必要なため、今回は現状維持とし4節に記載する。
 
+### 3.28 config/profiles/配下の環境依存フィールドをgit clean/smudgeフィルタで正規化（2026年7月26日）
+`config/profiles/*.profile.json`の`midi_inputs`(MIDI入力デバイス名)・
+`config/profiles/hw_plugins/fitom_hw_*.profile.json`の`interfaces[].port`
+(実機シリアルポート名)は、テスト機ごとに実際の接続環境に合わせて
+書き換えざるを得ないフィールドで、従来はテストのたびに`git status`に
+無関係な差分が出ていた(典型例: `emu_opn.profile.json`の`midi_inputs`)。
+
+**当初検討し不採用にした案**: `git update-index --skip-worktree`は
+副作用が大きい(pullでの更新が作業ツリーに反映されず気づきにくい)ため
+不採用。ファイルごとのtemplate化+`.gitignore`も、環境依存フィールドを
+持つ全プロファイル(トップレベル7件+hw_plugins3件)に同じ対応を都度
+繰り返す必要があり運用の手間が大きいため不採用。
+
+**採用した方式**: gitのclean/smudgeフィルタ(`filter=envlocal`)で
+`midi_inputs`配列の全要素・`"port"`の値を`"__LOCAL__"`という
+プレースホルダーへ正規化してから索引に格納する。ワーキングツリー側は
+実際の値のまま自由に書き換えてよく、`git add`/`git status`/`git diff`
+はいずれもクリーンなままになる(それ以外のフィールドの変更は通常通り
+検出される)。
+
+- フィルタ本体: `tools/git_filters/normalize_env_fields.py`(標準入力→
+  標準出力のテキスト置換のみ。JSONをフルパース→再ダンプする方式は
+  一部ファイル(`fitom_hw_*.profile.json`のslots配列等)が1行に詰めて
+  書かれたオブジェクトを複数行に展開してしまい無関係な差分を生むため
+  不採用。正規表現でのピンポイント置換に留めている)。
+- `.gitattributes`: `config/profiles/**/*.json filter=envlocal
+  eol=crlf`。フィルタ名の宣言と対象パターンのみで、フィルタの実行
+  コマンド自体はセキュリティ上ローカルのgit configへの登録が必須
+  (`setup.ps1`/`setup.sh`が自動登録する。手動なら`git config
+  filter.envlocal.clean "python tools/git_filters/
+  normalize_env_fields.py"` / `filter.envlocal.smudge cat`)。
+- **`eol=crlf`が必須な理由**: このリポジトリは`core.autocrlf=true`だが
+  `.gitattributes`が元々存在しなかったため、一部ファイル
+  (`emu_opl.profile.json`・`emu_opn.profile.json`)は索引にも
+  CRLFのまま保存されてしまっていた(本来の`core.autocrlf`の動作では
+  索引は常にLFのはず)。`eol=crlf`を指定せず`filter=envlocal`だけ
+  だと、cleanフィルタの出力(CRLF保持)に対してさらに`core.autocrlf`の
+  checkin変換(CRLF→LF)が二重にかかり、対象2ファイルが全行差分化して
+  しまう(1回試して確認済み)。`eol=crlf`を指定すると索引には常にLFで
+  正規化されるため、上記2ファイルは初回のみ「改行コード是正+
+  フィールド値変更」の差分になるが、既に索引がLFで正しかった残り
+  8ファイルは無傷(フィールド値のみの最小差分)になることを確認済み。
+- 新しく環境依存フィールドを持つプロファイルを追加する場合、ファイル名
+  が`config/profiles/**/*.json`に一致してさえいれば`.gitattributes`の
+  追記は不要(パターンマッチで自動適用される)。ただし新しい種類の
+  環境依存フィールド(`midi_inputs`/`port`以外)を追加する場合は
+  `normalize_env_fields.py`側の正規表現追加が必要。
+
 ## 4. 未解決・要確認事項
 
 - `banks/drums/ma2_preset_2op.drumkit.json`・`ma2_variant_2op.drumkit.json`
