@@ -93,10 +93,10 @@
   "master_pitch": 440.0,
   "master_volume": 100,
   "midi_inputs": [
-    "loopMIDI Port 0",
-    "",
-    "",
-    ""
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
   ],
   "profile_name": "OPNエミュプロファイル (OPN/OPN2/OPNA/OPNB/OPNBB)"
 }

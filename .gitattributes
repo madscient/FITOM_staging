@@ -1,0 +1,17 @@
+# config/profiles/配下のJSONは、MIDI入力デバイス名・実機シリアルポート名
+# など環境ごとに書き換えるフィールドを持つ。これらをgitの索引上は常に
+# プレースホルダーへ正規化し、テスト機ごとのローカル編集がgit statusに
+# 「差分」として出続けないようにする(clean/smudgeフィルタ)。
+#
+# フィルタ本体は tools/git_filters/normalize_env_fields.py。
+# .gitattributesはフィルタ名の宣言のみで、フィルタコマンド自体は
+# セキュリティ上ローカルのgit configに登録する必要がある
+# (setup.ps1/setup.shが自動登録する。手動なら下記を実行):
+#   git config filter.envlocal.clean "python tools/git_filters/normalize_env_fields.py"
+#   git config filter.envlocal.smudge cat
+# eol=crlf: 索引には常にLFで正規化して保存し(通常のtext属性と同じ
+# checkin変換)、ワーキングツリーには常にCRLFで復元する。これを明示
+# しないと、filter適用後にcore.autocrlfのcheckin変換が二重にかかり、
+# 元々索引がCRLFのまま保存されていたファイル(過去の運用の名残)で
+# 全行差分化してしまう。
+config/profiles/**/*.json filter=envlocal eol=crlf
