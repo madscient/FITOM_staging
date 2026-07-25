@@ -214,7 +214,7 @@
       {
         "group": "ADPCMA",
         "bank": 1,
-        "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json"
+        "file": "../../banks/PCM/common/wavs_opnb_adpcma.pcmbank.json"
       }
     ]
   }

@@ -380,11 +380,6 @@
     ],
     "drum_banks": [
       {
-        "prog": 1,
-        "name": "ADPCM-A GM set",
-        "file": "../../banks/drums/pss680_opnb.drumkit.json"
-      },
-      {
         "prog": 2,
         "name": "ALSA Preset 2OP set",
         "file": "../../banks/drums/alsa_preset_2op.drumkit.json"
@@ -453,6 +448,31 @@
         "prog": 15,
         "name": "OPL4-AWM GM set",
         "file": "../../banks/drums/opl4awm.drumkit.json"
+      },
+      {
+        "prog": 16,
+        "name": "PSS-560 GM Drum Kit (OPNB)",
+        "file": "../../banks/drums/pss560_opnb.drumkit.json"
+      },
+      {
+        "prog": 17,
+        "name": "PSS-590 GM Drum Kit (OPNB)",
+        "file": "../../banks/drums/pss590_opnb.drumkit.json"
+      },
+      {
+        "prog": 18,
+        "name": "PSS-680 GM Drum Kit (OPNB)",
+        "file": "../../banks/drums/pss680_opnb.drumkit.json"
+      },
+      {
+        "prog": 19,
+        "name": "RX5 GM Drum Kit (OPNB)",
+        "file": "../../banks/drums/rx5_opnb.drumkit.json"
+      },
+      {
+        "prog": 20,
+        "name": "RX11/21L GM Drum Kit (OPNB)",
+        "file": "../../banks/drums/rx11_21l_opnb.drumkit.json"
       }
     ],
     "pcm_banks": [
@@ -464,7 +484,7 @@
       {
         "group": "ADPCMA",
         "bank": 1,
-        "file": "../../banks/PCM/pss680/pss680_opnb.pcmbank.json"
+        "file": "../../banks/PCM/common/wavs_opnb_adpcma.pcmbank.json"
       }
     ]
   }

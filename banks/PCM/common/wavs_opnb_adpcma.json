@@ -1,0 +1,1151 @@
+{
+  "boundary": 256,
+  "codec": "adpcm-a",
+  "entries": [
+    {
+      "end_hex": "0x0003FF",
+      "name": "PSS_560_PSS_560_AgogoHi",
+      "offset": 0,
+      "offset_hex": "0x000000",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 800
+    },
+    {
+      "end_hex": "0x0009FF",
+      "name": "PSS_560_PSS_560_AgogoLow",
+      "offset": 1024,
+      "offset_hex": "0x000400",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1504
+    },
+    {
+      "end_hex": "0x000CFF",
+      "name": "PSS_560_PSS_560_BassDrum",
+      "offset": 2560,
+      "offset_hex": "0x000A00",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 672
+    },
+    {
+      "end_hex": "0x000EFF",
+      "name": "PSS_560_PSS_560_Bongo",
+      "offset": 3328,
+      "offset_hex": "0x000D00",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 416
+    },
+    {
+      "end_hex": "0x0011FF",
+      "name": "PSS_560_PSS_560_Cavasa",
+      "offset": 3840,
+      "offset_hex": "0x000F00",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 544
+    },
+    {
+      "end_hex": "0x0373FF",
+      "name": "PSS_560_PSS_560_Claves",
+      "offset": 4608,
+      "offset_hex": "0x001200",
+      "padded_size": 221696,
+      "root_note": 69,
+      "size": 221568
+    },
+    {
+      "end_hex": "0x0376FF",
+      "name": "PSS_560_PSS_560_CloseHH",
+      "offset": 226304,
+      "offset_hex": "0x037400",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 608
+    },
+    {
+      "end_hex": "0x0378FF",
+      "name": "PSS_560_PSS_560_CongaHi",
+      "offset": 227072,
+      "offset_hex": "0x037700",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 288
+    },
+    {
+      "end_hex": "0x037BFF",
+      "name": "PSS_560_PSS_560_CongaLow",
+      "offset": 227584,
+      "offset_hex": "0x037900",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 704
+    },
+    {
+      "end_hex": "0x039DFF",
+      "name": "PSS_560_PSS_560_Cymbal",
+      "offset": 228352,
+      "offset_hex": "0x037C00",
+      "padded_size": 8704,
+      "root_note": 69,
+      "size": 8576
+    },
+    {
+      "end_hex": "0x03A0FF",
+      "name": "PSS_560_PSS_560_HandClap",
+      "offset": 237056,
+      "offset_hex": "0x039E00",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 576
+    },
+    {
+      "end_hex": "0x03A9FF",
+      "name": "PSS_560_PSS_560_OpenHH",
+      "offset": 237824,
+      "offset_hex": "0x03A100",
+      "padded_size": 2304,
+      "root_note": 69,
+      "size": 2304
+    },
+    {
+      "end_hex": "0x03ABFF",
+      "name": "PSS_560_PSS_560_RimShot",
+      "offset": 240128,
+      "offset_hex": "0x03AA00",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 288
+    },
+    {
+      "end_hex": "0x03AEFF",
+      "name": "PSS_560_PSS_560_SnareDrum",
+      "offset": 240640,
+      "offset_hex": "0x03AC00",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 672
+    },
+    {
+      "end_hex": "0x03B2FF",
+      "name": "PSS_560_PSS_560_Tom1",
+      "offset": 241408,
+      "offset_hex": "0x03AF00",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 800
+    },
+    {
+      "end_hex": "0x03B6FF",
+      "name": "PSS_560_PSS_560_Tom2",
+      "offset": 242432,
+      "offset_hex": "0x03B300",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 864
+    },
+    {
+      "end_hex": "0x03BCFF",
+      "name": "PSS_560_PSS_560_Tom3",
+      "offset": 243456,
+      "offset_hex": "0x03B700",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1440
+    },
+    {
+      "end_hex": "0x03C3FF",
+      "name": "PSS_560_PSS_560_Tom4",
+      "offset": 244992,
+      "offset_hex": "0x03BD00",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1632
+    },
+    {
+      "end_hex": "0x03C7FF",
+      "name": "PSS_590_closehh",
+      "offset": 246784,
+      "offset_hex": "0x03C400",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 960
+    },
+    {
+      "end_hex": "0x03EFFF",
+      "name": "PSS_590_crash",
+      "offset": 247808,
+      "offset_hex": "0x03C800",
+      "padded_size": 10240,
+      "root_note": 69,
+      "size": 10144
+    },
+    {
+      "end_hex": "0x040BFF",
+      "name": "PSS_590_fltom",
+      "offset": 258048,
+      "offset_hex": "0x03F000",
+      "padded_size": 7168,
+      "root_note": 69,
+      "size": 6976
+    },
+    {
+      "end_hex": "0x041CFF",
+      "name": "PSS_590_gate_snare",
+      "offset": 265216,
+      "offset_hex": "0x040C00",
+      "padded_size": 4352,
+      "root_note": 69,
+      "size": 4192
+    },
+    {
+      "end_hex": "0x0421FF",
+      "name": "PSS_590_hibass",
+      "offset": 269568,
+      "offset_hex": "0x041D00",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1184
+    },
+    {
+      "end_hex": "0x042AFF",
+      "name": "PSS_590_hisnare",
+      "offset": 270848,
+      "offset_hex": "0x042200",
+      "padded_size": 2304,
+      "root_note": 69,
+      "size": 2272
+    },
+    {
+      "end_hex": "0x043BFF",
+      "name": "PSS_590_hitom",
+      "offset": 273152,
+      "offset_hex": "0x042B00",
+      "padded_size": 4352,
+      "root_note": 69,
+      "size": 4352
+    },
+    {
+      "end_hex": "0x0443FF",
+      "name": "PSS_590_lobass",
+      "offset": 277504,
+      "offset_hex": "0x043C00",
+      "padded_size": 2048,
+      "root_note": 69,
+      "size": 1824
+    },
+    {
+      "end_hex": "0x0450FF",
+      "name": "PSS_590_losnare",
+      "offset": 279552,
+      "offset_hex": "0x044400",
+      "padded_size": 3328,
+      "root_note": 69,
+      "size": 3232
+    },
+    {
+      "end_hex": "0x0467FF",
+      "name": "PSS_590_lotom",
+      "offset": 282880,
+      "offset_hex": "0x045100",
+      "padded_size": 5888,
+      "root_note": 69,
+      "size": 5696
+    },
+    {
+      "end_hex": "0x047AFF",
+      "name": "PSS_590_midtom",
+      "offset": 288768,
+      "offset_hex": "0x046800",
+      "padded_size": 4864,
+      "root_note": 69,
+      "size": 4864
+    },
+    {
+      "end_hex": "0x0499FF",
+      "name": "PSS_590_openhh",
+      "offset": 293632,
+      "offset_hex": "0x047B00",
+      "padded_size": 7936,
+      "root_note": 69,
+      "size": 7936
+    },
+    {
+      "end_hex": "0x049CFF",
+      "name": "PSS_590_pedalhh",
+      "offset": 301568,
+      "offset_hex": "0x049A00",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 672
+    },
+    {
+      "end_hex": "0x04A9FF",
+      "name": "PSS_590_rev_bass",
+      "offset": 302336,
+      "offset_hex": "0x049D00",
+      "padded_size": 3328,
+      "root_note": 69,
+      "size": 3136
+    },
+    {
+      "end_hex": "0x04CEFF",
+      "name": "PSS_590_ride_edge",
+      "offset": 305664,
+      "offset_hex": "0x04AA00",
+      "padded_size": 9472,
+      "root_note": 69,
+      "size": 9408
+    },
+    {
+      "end_hex": "0x04D1FF",
+      "name": "PSS_590_rimshot",
+      "offset": 315136,
+      "offset_hex": "0x04CF00",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 640
+    },
+    {
+      "end_hex": "0x04D8FF",
+      "name": "PSS_590_rimshot2",
+      "offset": 315904,
+      "offset_hex": "0x04D200",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1760
+    },
+    {
+      "end_hex": "0x04E5FF",
+      "name": "PSS_590_splash",
+      "offset": 317696,
+      "offset_hex": "0x04D900",
+      "padded_size": 3328,
+      "root_note": 69,
+      "size": 3264
+    },
+    {
+      "end_hex": "0x04F5FF",
+      "name": "PSS_590_syn_fltom",
+      "offset": 321024,
+      "offset_hex": "0x04E600",
+      "padded_size": 4096,
+      "root_note": 69,
+      "size": 4000
+    },
+    {
+      "end_hex": "0x04FDFF",
+      "name": "PSS_590_syn_hitom",
+      "offset": 325120,
+      "offset_hex": "0x04F600",
+      "padded_size": 2048,
+      "root_note": 69,
+      "size": 2016
+    },
+    {
+      "end_hex": "0x050EFF",
+      "name": "PSS_590_syn_lotom",
+      "offset": 327168,
+      "offset_hex": "0x04FE00",
+      "padded_size": 4352,
+      "root_note": 69,
+      "size": 4160
+    },
+    {
+      "end_hex": "0x051AFF",
+      "name": "PSS_590_syn_midtom",
+      "offset": 331520,
+      "offset_hex": "0x050F00",
+      "padded_size": 3072,
+      "root_note": 69,
+      "size": 2912
+    },
+    {
+      "end_hex": "0x0527FF",
+      "name": "PSS_590_syn_snare",
+      "offset": 334592,
+      "offset_hex": "0x051B00",
+      "padded_size": 3328,
+      "root_note": 69,
+      "size": 3232
+    },
+    {
+      "end_hex": "0x052AFF",
+      "name": "PSS_680_bass",
+      "offset": 337920,
+      "offset_hex": "0x052800",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 672
+    },
+    {
+      "end_hex": "0x0536FF",
+      "name": "PSS_680_brush",
+      "offset": 338688,
+      "offset_hex": "0x052B00",
+      "padded_size": 3072,
+      "root_note": 69,
+      "size": 3072
+    },
+    {
+      "end_hex": "0x053CFF",
+      "name": "PSS_680_brush_hit",
+      "offset": 341760,
+      "offset_hex": "0x053700",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1504
+    },
+    {
+      "end_hex": "0x053EFF",
+      "name": "PSS_680_cavasa",
+      "offset": 343296,
+      "offset_hex": "0x053D00",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 448
+    },
+    {
+      "end_hex": "0x0543FF",
+      "name": "PSS_680_closehh",
+      "offset": 343808,
+      "offset_hex": "0x053F00",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1120
+    },
+    {
+      "end_hex": "0x0547FF",
+      "name": "PSS_680_cowbell",
+      "offset": 345088,
+      "offset_hex": "0x054400",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 800
+    },
+    {
+      "end_hex": "0x056CFF",
+      "name": "PSS_680_crash",
+      "offset": 346112,
+      "offset_hex": "0x054800",
+      "padded_size": 9472,
+      "root_note": 69,
+      "size": 9376
+    },
+    {
+      "end_hex": "0x0570FF",
+      "name": "PSS_680_handclap",
+      "offset": 355584,
+      "offset_hex": "0x056D00",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 1024
+    },
+    {
+      "end_hex": "0x0575FF",
+      "name": "PSS_680_hiagogo",
+      "offset": 356608,
+      "offset_hex": "0x057100",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1216
+    },
+    {
+      "end_hex": "0x057BFF",
+      "name": "PSS_680_hibongo",
+      "offset": 357888,
+      "offset_hex": "0x057600",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1408
+    },
+    {
+      "end_hex": "0x0584FF",
+      "name": "PSS_680_hiconga",
+      "offset": 359424,
+      "offset_hex": "0x057C00",
+      "padded_size": 2304,
+      "root_note": 69,
+      "size": 2176
+    },
+    {
+      "end_hex": "0x058BFF",
+      "name": "PSS_680_hicuica",
+      "offset": 361728,
+      "offset_hex": "0x058500",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1568
+    },
+    {
+      "end_hex": "0x0590FF",
+      "name": "PSS_680_hitimbaless",
+      "offset": 363520,
+      "offset_hex": "0x058C00",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1184
+    },
+    {
+      "end_hex": "0x059CFF",
+      "name": "PSS_680_hitom",
+      "offset": 364800,
+      "offset_hex": "0x059100",
+      "padded_size": 3072,
+      "root_note": 69,
+      "size": 3072
+    },
+    {
+      "end_hex": "0x05ACFF",
+      "name": "PSS_680_hitom2",
+      "offset": 367872,
+      "offset_hex": "0x059D00",
+      "padded_size": 4096,
+      "root_note": 69,
+      "size": 3936
+    },
+    {
+      "end_hex": "0x05B3FF",
+      "name": "PSS_680_loagogo",
+      "offset": 371968,
+      "offset_hex": "0x05AD00",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1568
+    },
+    {
+      "end_hex": "0x05B9FF",
+      "name": "PSS_680_lobongo",
+      "offset": 373760,
+      "offset_hex": "0x05B400",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1376
+    },
+    {
+      "end_hex": "0x05C5FF",
+      "name": "PSS_680_loconga",
+      "offset": 375296,
+      "offset_hex": "0x05BA00",
+      "padded_size": 3072,
+      "root_note": 69,
+      "size": 2848
+    },
+    {
+      "end_hex": "0x05CCFF",
+      "name": "PSS_680_locuica",
+      "offset": 378368,
+      "offset_hex": "0x05C600",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1696
+    },
+    {
+      "end_hex": "0x05D4FF",
+      "name": "PSS_680_lotimbaless",
+      "offset": 380160,
+      "offset_hex": "0x05CD00",
+      "padded_size": 2048,
+      "root_note": 69,
+      "size": 1984
+    },
+    {
+      "end_hex": "0x05E3FF",
+      "name": "PSS_680_lotom",
+      "offset": 382208,
+      "offset_hex": "0x05D500",
+      "padded_size": 3840,
+      "root_note": 69,
+      "size": 3648
+    },
+    {
+      "end_hex": "0x05F2FF",
+      "name": "PSS_680_lotom2",
+      "offset": 386048,
+      "offset_hex": "0x05E400",
+      "padded_size": 3840,
+      "root_note": 69,
+      "size": 3808
+    },
+    {
+      "end_hex": "0x0601FF",
+      "name": "PSS_680_midtom",
+      "offset": 389888,
+      "offset_hex": "0x05F300",
+      "padded_size": 3840,
+      "root_note": 69,
+      "size": 3648
+    },
+    {
+      "end_hex": "0x0610FF",
+      "name": "PSS_680_midtom2",
+      "offset": 393728,
+      "offset_hex": "0x060200",
+      "padded_size": 3840,
+      "root_note": 69,
+      "size": 3840
+    },
+    {
+      "end_hex": "0x0612FF",
+      "name": "PSS_680_mutetambarine",
+      "offset": 397568,
+      "offset_hex": "0x061100",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 384
+    },
+    {
+      "end_hex": "0x0622FF",
+      "name": "PSS_680_openhh",
+      "offset": 398080,
+      "offset_hex": "0x061300",
+      "padded_size": 4096,
+      "root_note": 69,
+      "size": 3904
+    },
+    {
+      "end_hex": "0x0642FF",
+      "name": "PSS_680_ride",
+      "offset": 402176,
+      "offset_hex": "0x062300",
+      "padded_size": 8192,
+      "root_note": 69,
+      "size": 8128
+    },
+    {
+      "end_hex": "0x0645FF",
+      "name": "PSS_680_rimshot",
+      "offset": 410368,
+      "offset_hex": "0x064300",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 672
+    },
+    {
+      "end_hex": "0x064BFF",
+      "name": "PSS_680_snare",
+      "offset": 411136,
+      "offset_hex": "0x064600",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1376
+    },
+    {
+      "end_hex": "0x0650FF",
+      "name": "PSS_680_snare2",
+      "offset": 412672,
+      "offset_hex": "0x064C00",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1248
+    },
+    {
+      "end_hex": "0x066CFF",
+      "name": "PSS_680_splash",
+      "offset": 413952,
+      "offset_hex": "0x065100",
+      "padded_size": 7168,
+      "root_note": 69,
+      "size": 7008
+    },
+    {
+      "end_hex": "0x0679FF",
+      "name": "PSS_680_whistle",
+      "offset": 421120,
+      "offset_hex": "0x066D00",
+      "padded_size": 3328,
+      "root_note": 69,
+      "size": 3168
+    },
+    {
+      "end_hex": "0x067DFF",
+      "name": "RX11_RX11Clap",
+      "offset": 424448,
+      "offset_hex": "0x067A00",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 992
+    },
+    {
+      "end_hex": "0x06E1FF",
+      "name": "RX11_RX11Crash",
+      "offset": 425472,
+      "offset_hex": "0x067E00",
+      "padded_size": 25600,
+      "root_note": 69,
+      "size": 25536
+    },
+    {
+      "end_hex": "0x06E3FF",
+      "name": "RX11_RX11Hat_C",
+      "offset": 451072,
+      "offset_hex": "0x06E200",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 480
+    },
+    {
+      "end_hex": "0x06F4FF",
+      "name": "RX11_RX11Hat_O",
+      "offset": 451584,
+      "offset_hex": "0x06E400",
+      "padded_size": 4352,
+      "root_note": 69,
+      "size": 4192
+    },
+    {
+      "end_hex": "0x06F6FF",
+      "name": "RX11_RX11Hat_P",
+      "offset": 455936,
+      "offset_hex": "0x06F500",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 352
+    },
+    {
+      "end_hex": "0x06F8FF",
+      "name": "RX11_RX11Kick",
+      "offset": 456448,
+      "offset_hex": "0x06F700",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 352
+    },
+    {
+      "end_hex": "0x071CFF",
+      "name": "RX11_RX11Ride",
+      "offset": 456960,
+      "offset_hex": "0x06F900",
+      "padded_size": 9216,
+      "root_note": 69,
+      "size": 9184
+    },
+    {
+      "end_hex": "0x071EFF",
+      "name": "RX11_RX11Rimshot",
+      "offset": 466176,
+      "offset_hex": "0x071D00",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 448
+    },
+    {
+      "end_hex": "0x0723FF",
+      "name": "RX11_RX11Snare01",
+      "offset": 466688,
+      "offset_hex": "0x071F00",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1152
+    },
+    {
+      "end_hex": "0x0729FF",
+      "name": "RX11_RX11Snare02",
+      "offset": 467968,
+      "offset_hex": "0x072400",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1472
+    },
+    {
+      "end_hex": "0x0735FF",
+      "name": "RX21L_RX21LAgogoHi",
+      "offset": 469504,
+      "offset_hex": "0x072A00",
+      "padded_size": 3072,
+      "root_note": 69,
+      "size": 2944
+    },
+    {
+      "end_hex": "0x0741FF",
+      "name": "RX21L_RX21LAgogoLo",
+      "offset": 472576,
+      "offset_hex": "0x073600",
+      "padded_size": 3072,
+      "root_note": 69,
+      "size": 2880
+    },
+    {
+      "end_hex": "0x0745FF",
+      "name": "RX21L_RX21LBongoHi",
+      "offset": 475648,
+      "offset_hex": "0x074200",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 1024
+    },
+    {
+      "end_hex": "0x074BFF",
+      "name": "RX21L_RX21LBongoLo",
+      "offset": 476672,
+      "offset_hex": "0x074600",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1312
+    },
+    {
+      "end_hex": "0x074FFF",
+      "name": "RX21L_RX21LClaves",
+      "offset": 478208,
+      "offset_hex": "0x074C00",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 960
+    },
+    {
+      "end_hex": "0x075AFF",
+      "name": "RX21L_RX21LCongaHi",
+      "offset": 479232,
+      "offset_hex": "0x075000",
+      "padded_size": 2816,
+      "root_note": 69,
+      "size": 2688
+    },
+    {
+      "end_hex": "0x075FFF",
+      "name": "RX21L_RX21LCongaLo",
+      "offset": 482048,
+      "offset_hex": "0x075B00",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1280
+    },
+    {
+      "end_hex": "0x0764FF",
+      "name": "RX21L_RX21LCongaM",
+      "offset": 483328,
+      "offset_hex": "0x076000",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1248
+    },
+    {
+      "end_hex": "0x0769FF",
+      "name": "RX21L_RX21LCowbell",
+      "offset": 484608,
+      "offset_hex": "0x076500",
+      "padded_size": 1280,
+      "root_note": 69,
+      "size": 1184
+    },
+    {
+      "end_hex": "0x0770FF",
+      "name": "RX21L_RX21LCuicaHi",
+      "offset": 485888,
+      "offset_hex": "0x076A00",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1568
+    },
+    {
+      "end_hex": "0x0776FF",
+      "name": "RX21L_RX21LCuicaLo",
+      "offset": 487680,
+      "offset_hex": "0x077100",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1504
+    },
+    {
+      "end_hex": "0x077DFF",
+      "name": "RX21L_RX21LTambourine",
+      "offset": 489216,
+      "offset_hex": "0x077700",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1600
+    },
+    {
+      "end_hex": "0x078EFF",
+      "name": "RX21L_RX21LTimbaleHi",
+      "offset": 491008,
+      "offset_hex": "0x077E00",
+      "padded_size": 4352,
+      "root_note": 69,
+      "size": 4256
+    },
+    {
+      "end_hex": "0x07A1FF",
+      "name": "RX21L_RX21LTimbaleLo",
+      "offset": 495360,
+      "offset_hex": "0x078F00",
+      "padded_size": 4864,
+      "root_note": 69,
+      "size": 4704
+    },
+    {
+      "end_hex": "0x07AEFF",
+      "name": "RX21L_RX21LWhistleL",
+      "offset": 500224,
+      "offset_hex": "0x07A200",
+      "padded_size": 3328,
+      "root_note": 69,
+      "size": 3200
+    },
+    {
+      "end_hex": "0x07B2FF",
+      "name": "RX21L_RX21LWhistleS",
+      "offset": 503552,
+      "offset_hex": "0x07AF00",
+      "padded_size": 1024,
+      "root_note": 69,
+      "size": 928
+    },
+    {
+      "end_hex": "0x07B5FF",
+      "name": "RX5_RX5Bongo_Hi",
+      "offset": 504576,
+      "offset_hex": "0x07B300",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 768
+    },
+    {
+      "end_hex": "0x07BBFF",
+      "name": "RX5_RX5Bongo_Lo",
+      "offset": 505344,
+      "offset_hex": "0x07B600",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1344
+    },
+    {
+      "end_hex": "0x07DFFF",
+      "name": "RX5_RX5China",
+      "offset": 506880,
+      "offset_hex": "0x07BC00",
+      "padded_size": 9216,
+      "root_note": 69,
+      "size": 9184
+    },
+    {
+      "end_hex": "0x07E5FF",
+      "name": "RX5_RX5Clap",
+      "offset": 516096,
+      "offset_hex": "0x07E000",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1536
+    },
+    {
+      "end_hex": "0x0811FF",
+      "name": "RX5_RX5Crash",
+      "offset": 517632,
+      "offset_hex": "0x07E600",
+      "padded_size": 11264,
+      "root_note": 69,
+      "size": 11168
+    },
+    {
+      "end_hex": "0x083AFF",
+      "name": "RX5_RX5Cup",
+      "offset": 528896,
+      "offset_hex": "0x081200",
+      "padded_size": 10496,
+      "root_note": 69,
+      "size": 10464
+    },
+    {
+      "end_hex": "0x0865FF",
+      "name": "RX5_RX5Edge",
+      "offset": 539392,
+      "offset_hex": "0x083B00",
+      "padded_size": 11008,
+      "root_note": 69,
+      "size": 10816
+    },
+    {
+      "end_hex": "0x0868FF",
+      "name": "RX5_RX5Hat_C",
+      "offset": 550400,
+      "offset_hex": "0x086600",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 672
+    },
+    {
+      "end_hex": "0x0881FF",
+      "name": "RX5_RX5Hat_O",
+      "offset": 551168,
+      "offset_hex": "0x086900",
+      "padded_size": 6400,
+      "root_note": 69,
+      "size": 6240
+    },
+    {
+      "end_hex": "0x0884FF",
+      "name": "RX5_RX5Kick01",
+      "offset": 557568,
+      "offset_hex": "0x088200",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 576
+    },
+    {
+      "end_hex": "0x0887FF",
+      "name": "RX5_RX5Kick02",
+      "offset": 558336,
+      "offset_hex": "0x088500",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 576
+    },
+    {
+      "end_hex": "0x088AFF",
+      "name": "RX5_RX5Kick03",
+      "offset": 559104,
+      "offset_hex": "0x088800",
+      "padded_size": 768,
+      "root_note": 69,
+      "size": 608
+    },
+    {
+      "end_hex": "0x0890FF",
+      "name": "RX5_RX5Kick04",
+      "offset": 559872,
+      "offset_hex": "0x088B00",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1440
+    },
+    {
+      "end_hex": "0x0898FF",
+      "name": "RX5_RX5Kick05",
+      "offset": 561408,
+      "offset_hex": "0x089100",
+      "padded_size": 2048,
+      "root_note": 69,
+      "size": 1952
+    },
+    {
+      "end_hex": "0x08A5FF",
+      "name": "RX5_RX5Kick06",
+      "offset": 563456,
+      "offset_hex": "0x089900",
+      "padded_size": 3328,
+      "root_note": 69,
+      "size": 3104
+    },
+    {
+      "end_hex": "0x08A7FF",
+      "name": "RX5_RX5Rimshot",
+      "offset": 566784,
+      "offset_hex": "0x08A600",
+      "padded_size": 512,
+      "root_note": 69,
+      "size": 448
+    },
+    {
+      "end_hex": "0x08B4FF",
+      "name": "RX5_RX5Smack",
+      "offset": 567296,
+      "offset_hex": "0x08A800",
+      "padded_size": 3328,
+      "root_note": 69,
+      "size": 3328
+    },
+    {
+      "end_hex": "0x08BBFF",
+      "name": "RX5_RX5Snare01",
+      "offset": 570624,
+      "offset_hex": "0x08B500",
+      "padded_size": 1792,
+      "root_note": 69,
+      "size": 1792
+    },
+    {
+      "end_hex": "0x08C1FF",
+      "name": "RX5_RX5Snare02",
+      "offset": 572416,
+      "offset_hex": "0x08BC00",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1504
+    },
+    {
+      "end_hex": "0x08C7FF",
+      "name": "RX5_RX5Snare03",
+      "offset": 573952,
+      "offset_hex": "0x08C200",
+      "padded_size": 1536,
+      "root_note": 69,
+      "size": 1472
+    },
+    {
+      "end_hex": "0x08CFFF",
+      "name": "RX5_RX5Snare04",
+      "offset": 575488,
+      "offset_hex": "0x08C800",
+      "padded_size": 2048,
+      "root_note": 69,
+      "size": 1888
+    },
+    {
+      "end_hex": "0x08DBFF",
+      "name": "RX5_RX5Snare05",
+      "offset": 577536,
+      "offset_hex": "0x08D000",
+      "padded_size": 3072,
+      "root_note": 69,
+      "size": 3040
+    },
+    {
+      "end_hex": "0x08E5FF",
+      "name": "RX5_RX5Snare06",
+      "offset": 580608,
+      "offset_hex": "0x08DC00",
+      "padded_size": 2560,
+      "root_note": 69,
+      "size": 2336
+    },
+    {
+      "end_hex": "0x08EFFF",
+      "name": "RX5_RX5Snare07",
+      "offset": 583168,
+      "offset_hex": "0x08E600",
+      "padded_size": 2560,
+      "root_note": 69,
+      "size": 2528
+    },
+    {
+      "end_hex": "0x08F8FF",
+      "name": "RX5_RX5Tamborine",
+      "offset": 585728,
+      "offset_hex": "0x08F000",
+      "padded_size": 2304,
+      "root_note": 69,
+      "size": 2080
+    },
+    {
+      "end_hex": "0x0902FF",
+      "name": "RX5_RX5Thud",
+      "offset": 588032,
+      "offset_hex": "0x08F900",
+      "padded_size": 2560,
+      "root_note": 69,
+      "size": 2368
+    },
+    {
+      "end_hex": "0x090AFF",
+      "name": "RX5_RX5Timbale_Hi",
+      "offset": 590592,
+      "offset_hex": "0x090300",
+      "padded_size": 2048,
+      "root_note": 69,
+      "size": 2048
+    },
+    {
+      "end_hex": "0x0912FF",
+      "name": "RX5_RX5Timbale_Lo",
+      "offset": 592640,
+      "offset_hex": "0x090B00",
+      "padded_size": 2048,
+      "root_note": 69,
+      "size": 2048
+    }
+  ],
+  "sample_rate": 18518,
+  "total_size": 594688
+}
