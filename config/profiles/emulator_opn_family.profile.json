@@ -34,11 +34,6 @@
     ],
     "drum_banks": [
       {
-        "prog": 0,
-        "name": "PSS-680/PSR-38 GM Drum Kit (OPNA)",
-        "file": "../../banks/drums/pss680_opna.drumkit.json"
-      },
-      {
         "prog": 1,
         "name": "PSS-560 GM Drum Kit (OPNB)",
         "file": "../../banks/drums/pss560_opnb.drumkit.json"
@@ -67,7 +62,7 @@
     "pcm_banks": [
       {
         "bank": 0,
-        "file": "../../banks/PCM/pss680/pss680_opna.pcmbank.json",
+        "file": "../../banks/PCM/common/wavs_opna_adpcmb.pcmbank.json",
         "group": "ADPCMB"
       },
       {

@@ -1,8 +1,0 @@
-{
-  "name": "PSS-680/PSR-38 ADPCM-B (OPNA)",
-  "codec": "adpcm-b",
-  "sample_rate": 16000,
-  "boundary": 32,
-  "bin_file": "pss680_opna_adpcmb.bin",
-  "adpcm_json": "pss680_opna_adpcmb.json"
-}

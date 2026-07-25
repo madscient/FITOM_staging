@@ -15,9 +15,9 @@
   ],
 
   "images": {
-    "ADPCM-A":      "banks/PCM/pss680/pss680_opnb_adpcma.bin",
-    "ADPCM-B":      "banks/PCM/pss680/pss680_opna_adpcmb.bin",
-    "OPNB_ADPCM-B": "banks/PCM/pss680/pss680_opnb_adpcmb.bin",
+    "ADPCM-A":      "banks/PCM/common/wavs_opnb_adpcma.bin",
+    "ADPCM-B":      "banks/PCM/common/wavs_opna_adpcmb.bin",
+    "OPNB_ADPCM-B": "banks/PCM/common/wavs_opnb_adpcmb.bin",
     "OPNA_RHYTHM":  "roms/ym2608_rhythm.rom",
     "OPL4AWM":      "roms/yrw801.rom"
   }
