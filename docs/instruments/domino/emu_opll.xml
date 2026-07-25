@@ -1,0 +1,1776 @@
+<?xml version="1.0" encoding="Shift_JIS"?>
+
+<ModuleData Name="OPLLエミュプロファイル (OPLL/OPLL2[rhythm]/OPLLP/VRC7/OPLLX)" Folder="FITOM_X" Priority="100" FileCreator="FITOM_staging/tools/instrument_export" FileVersion="1.0">
+	<RhythmTrackDefault Gate="1" />
+
+	<InstrumentList>
+		<Map Name="emu_opll">
+			<PC Name="Program 1" PC="1">
+				<Bank Name="[OPLLP] Piano" MSB="0" LSB="0" />
+				<Bank Name="Piano 1" MSB="40" LSB="1" />
+				<Bank Name="Accordion 1" MSB="40" LSB="2" />
+				<Bank Name="GrandPno" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 2" PC="2">
+				<Bank Name="BritePno" MSB="0" LSB="0" />
+				<Bank Name="Piano 2" MSB="40" LSB="1" />
+				<Bank Name="Accordion 2" MSB="40" LSB="2" />
+				<Bank Name="BritePno" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 3" PC="3">
+				<Bank Name="E.GrandP" MSB="0" LSB="0" />
+				<Bank Name="Violin" MSB="40" LSB="1" />
+				<Bank Name="Alpenhorn" MSB="40" LSB="2" />
+				<Bank Name="E.GrandP" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 4" PC="4">
+				<Bank Name="Honky-Tonk Piano 1" MSB="0" LSB="0" />
+				<Bank Name="Flute" MSB="40" LSB="1" />
+				<Bank Name="Alto Sax" MSB="40" LSB="2" />
+				<Bank Name="HnkyTonk" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 5" PC="5">
+				<Bank Name="Electric Piano 1" MSB="0" LSB="0" />
+				<Bank Name="Clarinet" MSB="40" LSB="1" />
+				<Bank Name="Bagpipe" MSB="40" LSB="2" />
+				<Bank Name="E.Piano1" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 6" PC="6">
+				<Bank Name="[OPLLX] Electric Piano 2" MSB="0" LSB="0" />
+				<Bank Name="Oboe" MSB="40" LSB="1" />
+				<Bank Name="Banjo" MSB="40" LSB="2" />
+				<Bank Name="E.Piano2" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 7" PC="7">
+				<Bank Name="[OPLL] Harpsichord" MSB="0" LSB="0" />
+				<Bank Name="Trumpet" MSB="40" LSB="1" />
+				<Bank Name="Bar Chimes" MSB="40" LSB="2" />
+				<Bank Name="Harpsi" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 8" PC="8">
+				<Bank Name="Clavi" MSB="0" LSB="0" />
+				<Bank Name="PipeOrgn" MSB="40" LSB="1" />
+				<Bank Name="Bass Clarinet" MSB="40" LSB="2" />
+				<Bank Name="Clavi" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 9" PC="9">
+				<Bank Name="Celesta" MSB="0" LSB="0" />
+				<Bank Name="Xylophon" MSB="40" LSB="1" />
+				<Bank Name="Bassoon" MSB="40" LSB="2" />
+				<Bank Name="Celesta" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 10" PC="10">
+				<Bank Name="Glockenspiel" MSB="0" LSB="0" />
+				<Bank Name="Organ" MSB="40" LSB="1" />
+				<Bank Name="Boom Piano" MSB="40" LSB="2" />
+				<Bank Name="Glocken" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 11" PC="11">
+				<Bank Name="Music Box" MSB="0" LSB="0" />
+				<Bank Name="Guitar" MSB="40" LSB="1" />
+				<Bank Name="Bowed bass" MSB="40" LSB="2" />
+				<Bank Name="MusicBox" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 12" PC="12">
+				<Bank Name="[OPLL] Vibraphone" MSB="0" LSB="0" />
+				<Bank Name="Santool" MSB="40" LSB="1" />
+				<Bank Name="Brass &amp; Marimba" MSB="40" LSB="2" />
+				<Bank Name="Vibes" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 13" PC="13">
+				<Bank Name="[OPLLX] Marimba" MSB="0" LSB="0" />
+				<Bank Name="Elecpian" MSB="40" LSB="1" />
+				<Bank Name="Cello" MSB="40" LSB="2" />
+				<Bank Name="Marimba" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 14" PC="14">
+				<Bank Name="Xylophon" MSB="0" LSB="0" />
+				<Bank Name="Clavicod" MSB="40" LSB="1" />
+				<Bank Name="Chime &amp; Organ" MSB="40" LSB="2" />
+				<Bank Name="Xylophon" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 15" PC="15">
+				<Bank Name="TubulBel" MSB="0" LSB="0" />
+				<Bank Name="Harpsicd" MSB="40" LSB="1" />
+				<Bank Name="Chimes" MSB="40" LSB="2" />
+				<Bank Name="TubulBel" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 16" PC="16">
+				<Bank Name="Dulcimer" MSB="0" LSB="0" />
+				<Bank Name="Harpscd2" MSB="40" LSB="1" />
+				<Bank Name="Clarinet" MSB="40" LSB="2" />
+				<Bank Name="Dulcimer" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 17" PC="17">
+				<Bank Name="DrawOrgn" MSB="0" LSB="0" />
+				<Bank Name="Vibraphn" MSB="40" LSB="1" />
+				<Bank Name="Classic Guitar" MSB="40" LSB="2" />
+				<Bank Name="DrawOrgn" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 18" PC="18">
+				<Bank Name="PercOrgn" MSB="0" LSB="0" />
+				<Bank Name="Koto" MSB="40" LSB="1" />
+				<Bank Name="Clavi 1" MSB="40" LSB="2" />
+				<Bank Name="PercOrgn" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 19" PC="19">
+				<Bank Name="RockOrgn" MSB="0" LSB="0" />
+				<Bank Name="Taiko" MSB="40" LSB="1" />
+				<Bank Name="Clavi 2" MSB="40" LSB="2" />
+				<Bank Name="RockOrgn" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 20" PC="20">
+				<Bank Name="[OPLL] Organ" MSB="0" LSB="0" />
+				<Bank Name="Engine" MSB="40" LSB="1" />
+				<Bank Name="Drip" MSB="40" LSB="2" />
+				<Bank Name="ChrchOrg" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 21" PC="21">
+				<Bank Name="Reed Organ" MSB="0" LSB="0" />
+				<Bank Name="UFO" MSB="40" LSB="1" />
+				<Bank Name="Electric Bass" MSB="40" LSB="2" />
+				<Bank Name="ReedOrgn" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 22" PC="22">
+				<Bank Name="Accordion 1" MSB="0" LSB="0" />
+				<Bank Name="SynBell" MSB="40" LSB="1" />
+				<Bank Name="Electric Piano 1" MSB="40" LSB="2" />
+				<Bank Name="Acordion" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 23" PC="23">
+				<Bank Name="[OPLLX] Harmonica" MSB="0" LSB="0" />
+				<Bank Name="Chime" MSB="40" LSB="1" />
+				<Bank Name="Electric Piano 2" MSB="40" LSB="2" />
+				<Bank Name="Harmnica" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 24" PC="24">
+				<Bank Name="TangoAcd" MSB="0" LSB="0" />
+				<Bank Name="SynBass" MSB="40" LSB="1" />
+				<Bank Name="Electric Trumpet" MSB="40" LSB="2" />
+				<Bank Name="TangoAcd" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 25" PC="25">
+				<Bank Name="NylonGtr" MSB="0" LSB="0" />
+				<Bank Name="Synthsiz" MSB="40" LSB="1" />
+				<Bank Name="Electron Organ" MSB="40" LSB="2" />
+				<Bank Name="NylonGtr" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 26" PC="26">
+				<Bank Name="[OPLL] Guitar" MSB="0" LSB="0" />
+				<Bank Name="SynPercu" MSB="40" LSB="1" />
+				<Bank Name="Fantastic Piano" MSB="40" LSB="2" />
+				<Bank Name="SteelGtr" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 27" PC="27">
+				<Bank Name="[OPLLX] Guitar" MSB="0" LSB="0" />
+				<Bank Name="SynRhyth" MSB="40" LSB="1" />
+				<Bank Name="Fireworks" MSB="40" LSB="2" />
+				<Bank Name="JazzGtr" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 28" PC="28">
+				<Bank Name="[OPLL] Electric Guitar" MSB="0" LSB="0" />
+				<Bank Name="HarmDrum" MSB="40" LSB="1" />
+				<Bank Name="Flute" MSB="40" LSB="2" />
+				<Bank Name="CleanGtr" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 29" PC="29">
+				<Bank Name="Mute.Gtr" MSB="0" LSB="0" />
+				<Bank Name="Cowbell" MSB="40" LSB="1" />
+				<Bank Name="Fork Guitar 1" MSB="40" LSB="2" />
+				<Bank Name="Mute.Gtr" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 30" PC="30">
+				<Bank Name="Ovrdrive" MSB="0" LSB="0" />
+				<Bank Name="ClseHiht" MSB="40" LSB="1" />
+				<Bank Name="Fork Guitar 2" MSB="40" LSB="2" />
+				<Bank Name="Ovrdrive" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 31" PC="31">
+				<Bank Name="Dist.Gtr" MSB="0" LSB="0" />
+				<Bank Name="SnareDrm" MSB="40" LSB="1" />
+				<Bank Name="Funky Marimba" MSB="40" LSB="2" />
+				<Bank Name="Dist.Gtr" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 32" PC="32">
+				<Bank Name="GtrHarmo" MSB="0" LSB="0" />
+				<Bank Name="BassDrum" MSB="40" LSB="1" />
+				<Bank Name="Glass Celesta" MSB="40" LSB="2" />
+				<Bank Name="GtrHarmo" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 33" PC="33">
+				<Bank Name="[OPLL] Acoustic Bass" MSB="0" LSB="0" />
+				<Bank Name="Piano 3" MSB="40" LSB="1" />
+				<Bank Name="Glockenspiel" MSB="40" LSB="2" />
+				<Bank Name="Aco.Bass" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 34" PC="34">
+				<Bank Name="[OPLLP] Bass" MSB="0" LSB="0" />
+				<Bank Name="Elecpia2" MSB="40" LSB="1" />
+				<Bank Name="Gurgle" MSB="40" LSB="2" />
+				<Bank Name="FngrBass" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 35" PC="35">
+				<Bank Name="Picked Bass" MSB="0" LSB="0" />
+				<Bank Name="Santool2" MSB="40" LSB="1" />
+				<Bank Name="Hand Bell" MSB="40" LSB="2" />
+				<Bank Name="PickBass" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 36" PC="36">
+				<Bank Name="[VRC7] Fretless" MSB="0" LSB="0" />
+				<Bank Name="Brass" MSB="40" LSB="1" />
+				<Bank Name="Handsaw" MSB="40" LSB="2" />
+				<Bank Name="Fretless" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 37" PC="37">
+				<Bank Name="Slap Bass" MSB="0" LSB="0" />
+				<Bank Name="Flute 2" MSB="40" LSB="1" />
+				<Bank Name="Harmonica" MSB="40" LSB="2" />
+				<Bank Name="SlapBas1" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 38" PC="38">
+				<Bank Name="SlapBas2" MSB="0" LSB="0" />
+				<Bank Name="Clavicd2" MSB="40" LSB="1" />
+				<Bank Name="Harp" MSB="40" LSB="2" />
+				<Bank Name="SlapBas2" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 39" PC="39">
+				<Bank Name="[OPLL] Synthesizer Bass" MSB="0" LSB="0" />
+				<Bank Name="Clavicd3" MSB="40" LSB="1" />
+				<Bank Name="Harpsichord 1" MSB="40" LSB="2" />
+				<Bank Name="SynBass1" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 40" PC="40">
+				<Bank Name="[OPLLX] Synth Bass 2" MSB="0" LSB="0" />
+				<Bank Name="Koto 2" MSB="40" LSB="1" />
+				<Bank Name="Harpsichord 2" MSB="40" LSB="2" />
+				<Bank Name="SynBass2" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 41" PC="41">
+				<Bank Name="[OPLL] Violin" MSB="0" LSB="0" />
+				<Bank Name="PipeOrg2" MSB="40" LSB="1" />
+				<Bank Name="Harpsichord 3" MSB="40" LSB="2" />
+				<Bank Name="Violin" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 42" PC="42">
+				<Bank Name="Viola" MSB="0" LSB="0" />
+				<Bank Name="PohdsPLA" MSB="40" LSB="1" />
+				<Bank Name="Hawaiian Guitar" MSB="40" LSB="2" />
+				<Bank Name="Viola" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 43" PC="43">
+				<Bank Name="Cello" MSB="0" LSB="0" />
+				<Bank Name="RohdsPRA" MSB="40" LSB="1" />
+				<Bank Name="Honky-Tonk Piano 1" MSB="40" LSB="2" />
+				<Bank Name="Cello" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 44" PC="44">
+				<Bank Name="Contrabs" MSB="0" LSB="0" />
+				<Bank Name="Orch L" MSB="40" LSB="1" />
+				<Bank Name="Honky-Tonk Piano 2" MSB="40" LSB="2" />
+				<Bank Name="Contrabs" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 45" PC="45">
+				<Bank Name="Trem.Str" MSB="0" LSB="0" />
+				<Bank Name="Orch R" MSB="40" LSB="1" />
+				<Bank Name="Horn" MSB="40" LSB="2" />
+				<Bank Name="Trem.Str" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 46" PC="46">
+				<Bank Name="Pizz.Str" MSB="0" LSB="0" />
+				<Bank Name="SynViol" MSB="40" LSB="1" />
+				<Bank Name="Human Voice 1" MSB="40" LSB="2" />
+				<Bank Name="Pizz.Str" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 47" PC="47">
+				<Bank Name="Harp" MSB="0" LSB="0" />
+				<Bank Name="SynOrgan" MSB="40" LSB="1" />
+				<Bank Name="Human Voice 2" MSB="40" LSB="2" />
+				<Bank Name="Harp" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 48" PC="48">
+				<Bank Name="Timpani" MSB="0" LSB="0" />
+				<Bank Name="SynBrass" MSB="40" LSB="1" />
+				<Bank Name="Human Voice 3" MSB="40" LSB="2" />
+				<Bank Name="Timpani" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 49" PC="49">
+				<Bank Name="[OPLLX] Strings" MSB="0" LSB="0" />
+				<Bank Name="Tube" MSB="40" LSB="1" />
+				<Bank Name="Ice Block" MSB="40" LSB="2" />
+				<Bank Name="Strings1" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 50" PC="50">
+				<Bank Name="Strings2" MSB="0" LSB="0" />
+				<Bank Name="Shamisen" MSB="40" LSB="1" />
+				<Bank Name="Jamisen" MSB="40" LSB="2" />
+				<Bank Name="Strings2" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 51" PC="51">
+				<Bank Name="Syn.Str1" MSB="0" LSB="0" />
+				<Bank Name="Magical" MSB="40" LSB="1" />
+				<Bank Name="Jazz Guitar" MSB="40" LSB="2" />
+				<Bank Name="Syn.Str1" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 52" PC="52">
+				<Bank Name="Syn.Str2" MSB="0" LSB="0" />
+				<Bank Name="Huwawa" MSB="40" LSB="1" />
+				<Bank Name="Jazz Organ" MSB="40" LSB="2" />
+				<Bank Name="Syn.Str2" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 53" PC="53">
+				<Bank Name="ChoirAah" MSB="0" LSB="0" />
+				<Bank Name="WnderFlt" MSB="40" LSB="1" />
+				<Bank Name="Jug" MSB="40" LSB="2" />
+				<Bank Name="ChoirAah" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 54" PC="54">
+				<Bank Name="VoiceOoh" MSB="0" LSB="0" />
+				<Bank Name="Hardrock" MSB="40" LSB="1" />
+				<Bank Name="Koto" MSB="40" LSB="2" />
+				<Bank Name="VoiceOoh" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 55" PC="55">
+				<Bank Name="[VRC7] Synth" MSB="0" LSB="0" />
+				<Bank Name="Machine" MSB="40" LSB="1" />
+				<Bank Name="Leaf Spring" MSB="40" LSB="2" />
+				<Bank Name="SynVoice" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 56" PC="56">
+				<Bank Name="[VRC7] Tutti" MSB="0" LSB="0" />
+				<Bank Name="MachineV" MSB="40" LSB="1" />
+				<Bank Name="Marimba" MSB="40" LSB="2" />
+				<Bank Name="Orch.Hit" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 57" PC="57">
+				<Bank Name="[OPLL] Trumpet" MSB="0" LSB="0" />
+				<Bank Name="Comic" MSB="40" LSB="1" />
+				<Bank Name="Metallic Synth" MSB="40" LSB="2" />
+				<Bank Name="Trumpet" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 58" PC="58">
+				<Bank Name="Trombone" MSB="0" LSB="0" />
+				<Bank Name="SE_Comic" MSB="40" LSB="1" />
+				<Bank Name="Music Box" MSB="40" LSB="2" />
+				<Bank Name="Trombone" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 59" PC="59">
+				<Bank Name="[OPLLX] Tuba" MSB="0" LSB="0" />
+				<Bank Name="SE_Laser" MSB="40" LSB="1" />
+				<Bank Name="Mute Bass" MSB="40" LSB="2" />
+				<Bank Name="Tuba" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 60" PC="60">
+				<Bank Name="Mute Trumpet" MSB="0" LSB="0" />
+				<Bank Name="SE_Noise" MSB="40" LSB="1" />
+				<Bank Name="Mute Trumpet" MSB="40" LSB="2" />
+				<Bank Name="Mute.Trp" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 61" PC="61">
+				<Bank Name="[OPLL] Horn" MSB="0" LSB="0" />
+				<Bank Name="SE_Star" MSB="40" LSB="1" />
+				<Bank Name="Oboe" MSB="40" LSB="2" />
+				<Bank Name="Fr.Horn" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 62" PC="62">
+				<Bank Name="[OPLLP] Electric Guitar" MSB="0" LSB="0" />
+				<Bank Name="SE_Star2" MSB="40" LSB="1" />
+				<Bank Name="Panflute" MSB="40" LSB="2" />
+				<Bank Name="BrasSect" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 63" PC="63">
+				<Bank Name="[OPLLP] Electric Guitar" MSB="0" LSB="0" />
+				<Bank Name="Engine 2" MSB="40" LSB="1" />
+				<Bank Name="Piano 1" MSB="40" LSB="2" />
+				<Bank Name="SynBras1" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 64" PC="64">
+				<Bank Name="[OPLLX] Synth Brass 2" MSB="0" LSB="0" />
+				<Bank Name="Silence" MSB="40" LSB="1" />
+				<Bank Name="Piano 2" MSB="40" LSB="2" />
+				<Bank Name="SynBras2" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 65" PC="65">
+				<Bank Name="Soprano Sax" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Violin" MSB="40" LSB="1" />
+				<Bank Name="Piccolo" MSB="40" LSB="2" />
+				<Bank Name="SprnoSax" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 66" PC="66">
+				<Bank Name="Alto Sax" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Guitar" MSB="40" LSB="1" />
+				<Bank Name="Picked Bass" MSB="40" LSB="2" />
+				<Bank Name="AltoSax" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 67" PC="67">
+				<Bank Name="Tenor Sax" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Piano" MSB="40" LSB="1" />
+				<Bank Name="Pipe Organ 1" MSB="40" LSB="2" />
+				<Bank Name="TenorSax" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 68" PC="68">
+				<Bank Name="Bari.Sax" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Flute" MSB="40" LSB="1" />
+				<Bank Name="Pipe Organ 2" MSB="40" LSB="2" />
+				<Bank Name="Bari.Sax" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 69" PC="69">
+				<Bank Name="[OPLL] Oboe" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Clarinet" MSB="40" LSB="1" />
+				<Bank Name="Popcorn" MSB="40" LSB="2" />
+				<Bank Name="Oboe" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 70" PC="70">
+				<Bank Name="Eng.Horn" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Oboe" MSB="40" LSB="1" />
+				<Bank Name="Reed Organ" MSB="40" LSB="2" />
+				<Bank Name="Eng.Horn" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 71" PC="71">
+				<Bank Name="Bassoon" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Trumpet" MSB="40" LSB="1" />
+				<Bank Name="Reverse" MSB="40" LSB="2" />
+				<Bank Name="Bassoon" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 72" PC="72">
+				<Bank Name="[OPLL] Clarinet" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Organ" MSB="40" LSB="1" />
+				<Bank Name="Rock Guitar 1" MSB="40" LSB="2" />
+				<Bank Name="Clarinet" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 73" PC="73">
+				<Bank Name="Piccolo" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Horn" MSB="40" LSB="1" />
+				<Bank Name="Rock Guitar 2" MSB="40" LSB="2" />
+				<Bank Name="Piccolo" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 74" PC="74">
+				<Bank Name="[OPLL] Flute" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Synthesizer" MSB="40" LSB="1" />
+				<Bank Name="Shamisen" MSB="40" LSB="2" />
+				<Bank Name="Flute" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 75" PC="75">
+				<Bank Name="Recorder" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Harpsichord" MSB="40" LSB="1" />
+				<Bank Name="Sine Wave" MSB="40" LSB="2" />
+				<Bank Name="Recorder" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 76" PC="76">
+				<Bank Name="Panflute" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Vibraphone" MSB="40" LSB="1" />
+				<Bank Name="Slap Bass" MSB="40" LSB="2" />
+				<Bank Name="PanFlute" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 77" PC="77">
+				<Bank Name="Bottle" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Synthesizer Bass" MSB="40" LSB="1" />
+				<Bank Name="Small Church" MSB="40" LSB="2" />
+				<Bank Name="Bottle" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 78" PC="78">
+				<Bank Name="Shakhchi" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Acoustic Bass" MSB="40" LSB="1" />
+				<Bank Name="Soft Trombone" MSB="40" LSB="2" />
+				<Bank Name="Shakhchi" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 79" PC="79">
+				<Bank Name="Whistle" MSB="0" LSB="0" />
+				<Bank Name="[OPLL] Electric Guitar" MSB="40" LSB="1" />
+				<Bank Name="Soprano Sax" MSB="40" LSB="2" />
+				<Bank Name="Whistle" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 80" PC="80">
+				<Bank Name="Ocarina" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Strings" MSB="40" LSB="1" />
+				<Bank Name="Steel Drum 1" MSB="40" LSB="2" />
+				<Bank Name="Ocarina" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 81" PC="81">
+				<Bank Name="[OPLLP] Square Wave" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Guitar" MSB="40" LSB="1" />
+				<Bank Name="Steel Drum 2" MSB="40" LSB="2" />
+				<Bank Name="SquareLd" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 82" PC="82">
+				<Bank Name="[OPLLX] Short Saw" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Electric Guitar" MSB="40" LSB="1" />
+				<Bank Name="Street Organ" MSB="40" LSB="2" />
+				<Bank Name="Saw.Lead" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 83" PC="83">
+				<Bank Name="[OPLLP] Wow Bell" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Electric Piano 2" MSB="40" LSB="1" />
+				<Bank Name="Strings" MSB="40" LSB="2" />
+				<Bank Name="CaliopLd" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 84" PC="84">
+				<Bank Name="ChiffLd" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Flute" MSB="40" LSB="1" />
+				<Bank Name="Synth Bass" MSB="40" LSB="2" />
+				<Bank Name="ChiffLd" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 85" PC="85">
+				<Bank Name="[OPLLX] Electric Guitar 2" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Marimba" MSB="40" LSB="1" />
+				<Bank Name="Synth Brass" MSB="40" LSB="2" />
+				<Bank Name="CharanLd" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 86" PC="86">
+				<Bank Name="VoiceLd" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Trumpet" MSB="40" LSB="1" />
+				<Bank Name="Tenor Sax" MSB="40" LSB="2" />
+				<Bank Name="VoiceLd" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 87" PC="87">
+				<Bank Name="FifthLd" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Harmonica" MSB="40" LSB="1" />
+				<Bank Name="Toy Piano" MSB="40" LSB="2" />
+				<Bank Name="FifthLd" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 88" PC="88">
+				<Bank Name="Bass&amp;Ld" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Tuba" MSB="40" LSB="1" />
+				<Bank Name="Transistor Organ" MSB="40" LSB="2" />
+				<Bank Name="Bass&amp;Ld" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 89" PC="89">
+				<Bank Name="NewAgePd" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Synth Brass 2" MSB="40" LSB="1" />
+				<Bank Name="Tremolo Organ" MSB="40" LSB="2" />
+				<Bank Name="NewAgePd" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 90" PC="90">
+				<Bank Name="WarmPad" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Short Saw" MSB="40" LSB="1" />
+				<Bank Name="Trombone" MSB="40" LSB="2" />
+				<Bank Name="WarmPad" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 91" PC="91">
+				<Bank Name="PolySyPd" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Vibraphone" MSB="40" LSB="1" />
+				<Bank Name="Trumpet" MSB="40" LSB="2" />
+				<Bank Name="PolySyPd" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 92" PC="92">
+				<Bank Name="ChoirPad" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Electric Guitar 2" MSB="40" LSB="1" />
+				<Bank Name="Tuba" MSB="40" LSB="2" />
+				<Bank Name="ChoirPad" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 93" PC="93">
+				<Bank Name="BowedPad" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Synth Bass 2" MSB="40" LSB="1" />
+				<Bank Name="Ukulele" MSB="40" LSB="2" />
+				<Bank Name="BowedPad" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 94" PC="94">
+				<Bank Name="MetalPad" MSB="0" LSB="0" />
+				<Bank Name="[OPLLX] Sitar" MSB="40" LSB="1" />
+				<Bank Name="Vibraphone" MSB="40" LSB="2" />
+				<Bank Name="MetalPad" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 95" PC="95">
+				<Bank Name="HaloPad" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Clarinet" MSB="40" LSB="1" />
+				<Bank Name="Violin 1" MSB="40" LSB="2" />
+				<Bank Name="HaloPad" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 96" PC="96">
+				<Bank Name="[VRC7] Sweep" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Synth Bass" MSB="40" LSB="1" />
+				<Bank Name="Violin 2" MSB="40" LSB="2" />
+				<Bank Name="SweepPad" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 97" PC="97">
+				<Bank Name="Rain" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Piano" MSB="40" LSB="1" />
+				<Bank Name="Whistle" MSB="40" LSB="2" />
+				<Bank Name="Rain" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 98" PC="98">
+				<Bank Name="SoundTrk" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Flute" MSB="40" LSB="1" />
+				<Bank Name="Wide Bell" MSB="40" LSB="2" />
+				<Bank Name="SoundTrk" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 99" PC="99">
+				<Bank Name="Crystal" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Square Wave" MSB="40" LSB="1" />
+				<Bank Name="Wood Bass 1" MSB="40" LSB="2" />
+				<Bank Name="Crystal" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 100" PC="100">
+				<Bank Name="Atmosphr" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Space Oboe" MSB="40" LSB="1" />
+				<Bank Name="Wood Bass 2" MSB="40" LSB="2" />
+				<Bank Name="Atmosphr" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 101" PC="101">
+				<Bank Name="Bright" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Trumpet" MSB="40" LSB="1" />
+				<Bank Name="Synthesizer" MSB="40" LSB="2" />
+				<Bank Name="Bright" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 102" PC="102">
+				<Bank Name="Goblins" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Wow Bell" MSB="40" LSB="1" />
+				<Bank Name="Jazz Organ" MSB="40" LSB="2" />
+				<Bank Name="Goblins" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 103" PC="103">
+				<Bank Name="Echoes" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Electric Guitar" MSB="40" LSB="1" />
+				<Bank Name="Pipe Organ" MSB="40" LSB="2" />
+				<Bank Name="Echoes" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 104" PC="104">
+				<Bank Name="Sci-Fi" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Vibes" MSB="40" LSB="1" />
+				<Bank Name="Piano" MSB="40" LSB="2" />
+				<Bank Name="Sci-Fi" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 105" PC="105">
+				<Bank Name="[OPLLX] Sitar" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Bass" MSB="40" LSB="1" />
+				<Bank Name="Harpsichord" MSB="40" LSB="2" />
+				<Bank Name="Sitar" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 106" PC="106">
+				<Bank Name="Banjo" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Vibraphone" MSB="40" LSB="1" />
+				<Bank Name="Electric Piano" MSB="40" LSB="2" />
+				<Bank Name="Banjo" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 107" PC="107">
+				<Bank Name="Shamisen" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Vibrato Bell" MSB="40" LSB="1" />
+				<Bank Name="Celesta" MSB="40" LSB="2" />
+				<Bank Name="Shamisen" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 108" PC="108">
+				<Bank Name="Koto" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Click Sine" MSB="40" LSB="1" />
+				<Bank Name="Vibraphone" MSB="40" LSB="2" />
+				<Bank Name="Koto" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 109" PC="109">
+				<Bank Name="Kalimba" MSB="0" LSB="0" />
+				<Bank Name="[OPLLP] Noise and Tone" MSB="40" LSB="1" />
+				<Bank Name="Marimba" MSB="40" LSB="2" />
+				<Bank Name="Kalimba" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 110" PC="110">
+				<Bank Name="Bagpipe" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Buzzy Bell" MSB="40" LSB="1" />
+				<Bank Name="Steel Drum" MSB="40" LSB="2" />
+				<Bank Name="Bagpipe" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 111" PC="111">
+				<Bank Name="Fiddle" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Guitar" MSB="40" LSB="1" />
+				<Bank Name="Violin" MSB="40" LSB="2" />
+				<Bank Name="Fiddle" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 112" PC="112">
+				<Bank Name="Shanai" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Wurly" MSB="40" LSB="1" />
+				<Bank Name="Cello" MSB="40" LSB="2" />
+				<Bank Name="Shanai" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 113" PC="113">
+				<Bank Name="[OPLLP] Vibrato Bell" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Flute" MSB="40" LSB="1" />
+				<Bank Name="Jazz Guitar" MSB="40" LSB="2" />
+				<Bank Name="TnklBell" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 114" PC="114">
+				<Bank Name="Agogo" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Clarinet" MSB="40" LSB="1" />
+				<Bank Name="Rock Guitar" MSB="40" LSB="2" />
+				<Bank Name="Agogo" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 115" PC="115">
+				<Bank Name="Steel Drum" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Synth" MSB="40" LSB="1" />
+				<Bank Name="Wood Bass" MSB="40" LSB="2" />
+				<Bank Name="SteelDrm" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 116" PC="116">
+				<Bank Name="WoodBlok" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Trumpet" MSB="40" LSB="1" />
+				<Bank Name="Trumpet" MSB="40" LSB="2" />
+				<Bank Name="WoodBlok" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 117" PC="117">
+				<Bank Name="TaikoDrm" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Organ" MSB="40" LSB="1" />
+				<Bank Name="Trombone" MSB="40" LSB="2" />
+				<Bank Name="TaikoDrm" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 118" PC="118">
+				<Bank Name="[OPLLP] Click Sine" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Bells" MSB="40" LSB="1" />
+				<Bank Name="Horn" MSB="40" LSB="2" />
+				<Bank Name="MelodTom" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 119" PC="119">
+				<Bank Name="Syn.Drum" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Vibes" MSB="40" LSB="1" />
+				<Bank Name="Saxophone" MSB="40" LSB="2" />
+				<Bank Name="Syn.Drum" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 120" PC="120">
+				<Bank Name="RevCymbl" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Vibraphone" MSB="40" LSB="1" />
+				<Bank Name="Clarinet" MSB="40" LSB="2" />
+				<Bank Name="RevCymbl" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 121" PC="121">
+				<Bank Name="FretNoiz" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Tutti" MSB="40" LSB="1" />
+				<Bank Name="Flute" MSB="40" LSB="2" />
+				<Bank Name="FretNoiz" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 122" PC="122">
+				<Bank Name="[OPLLP] Noise and Tone" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Fretless" MSB="40" LSB="1" />
+				<Bank Name="Oboe" MSB="40" LSB="2" />
+				<Bank Name="BrthNoiz" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 123" PC="123">
+				<Bank Name="Seashore" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Synth Bass" MSB="40" LSB="1" />
+				<Bank Name="Harmonica" MSB="40" LSB="2" />
+				<Bank Name="Seashore" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 124" PC="124">
+				<Bank Name="Tweet" MSB="0" LSB="0" />
+				<Bank Name="[VRC7] Sweep" MSB="40" LSB="1" />
+				<Bank Name="Whistle" MSB="40" LSB="2" />
+				<Bank Name="Tweet" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 125" PC="125">
+				<Bank Name="Telphone" MSB="0" LSB="0" />
+				<Bank Name="Music Box" MSB="40" LSB="2" />
+				<Bank Name="Telphone" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 126" PC="126">
+				<Bank Name="Helicptr" MSB="0" LSB="0" />
+				<Bank Name="Helicptr" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 127" PC="127">
+				<Bank Name="Applause" MSB="0" LSB="0" />
+				<Bank Name="Applause" MSB="40" LSB="4" />
+			</PC>
+			<PC Name="Program 128" PC="128">
+				<Bank Name="Gunshot" MSB="0" LSB="0" />
+				<Bank Name="Gunshot" MSB="40" LSB="4" />
+			</PC>
+		</Map>
+	</InstrumentList>
+
+	<DrumSetList>
+		<Map Name="emu_opll">
+			<PC Name="Drum Kits" PC="1">
+				<Bank Name="OPLL Built-in set" MSB="112" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Chinese Cymbal" Key="52" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+				</Bank>
+				<Bank Name="ALSA Preset 2OP set" MSB="112" LSB="2">
+					<Tone Name="Ac Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed High Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Pedal High Hat" Key="44" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open High Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="High-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Chinese Cymbal" Key="52" />
+					<Tone Name="Ride Bell" Key="53" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cow Bell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Vibraslap" Key="58" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="High Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute High Conga" Key="62" />
+					<Tone Name="Open High Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Maracas" Key="70" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Short Guiro" Key="73" />
+					<Tone Name="Long Guiro" Key="74" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="High Wood Block" Key="76" />
+					<Tone Name="Low Wood Block" Key="77" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+					<Tone Name="Mute Triangle" Key="80" />
+					<Tone Name="Open Triangle" Key="81" />
+				</Bank>
+				<Bank Name="ALSA Preset 4OP set" MSB="112" LSB="3">
+					<Tone Name="Ac Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed High Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Pedal High Hat" Key="44" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open High Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="High-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Chinese Cymbal" Key="52" />
+					<Tone Name="Ride Bell" Key="53" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cow Bell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Vibraslap" Key="58" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="High Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute High Conga" Key="62" />
+					<Tone Name="Open High Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Maracas" Key="70" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Short Guiro" Key="73" />
+					<Tone Name="Long Guiro" Key="74" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="High Wood Block" Key="76" />
+					<Tone Name="Low Wood Block" Key="77" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+					<Tone Name="Mute Triangle" Key="80" />
+					<Tone Name="Open Triangle" Key="81" />
+				</Bank>
+				<Bank Name="MA-2 Preset 2OP set" MSB="112" LSB="4">
+					<Tone Name="Drum Note 27" Key="27" />
+					<Tone Name="Drum Note 28" Key="28" />
+					<Tone Name="Hi-Q" Key="29" />
+					<Tone Name="WhipSlap" Key="30" />
+					<Tone Name="Drum Note 31" Key="31" />
+					<Tone Name="Drum Note 32" Key="32" />
+					<Tone Name="Drum Note 33" Key="33" />
+					<Tone Name="Drum Note 34" Key="34" />
+					<Tone Name="Drum Note 35" Key="35" />
+					<Tone Name="Drum Note 36" Key="36" />
+					<Tone Name="SeqClick L" Key="37" />
+					<Tone Name="SeqClick H-2" Key="38" />
+					<Tone Name="BrushTapSoft-2" Key="39" />
+					<Tone Name="BrushSwirl L-2" Key="40" />
+					<Tone Name="BrashSlap-2" Key="41" />
+					<Tone Name="BrushSwirl H-2" Key="42" />
+					<Tone Name="SnareRoll-2" Key="43" />
+					<Tone Name="Castanet-2" Key="44" />
+					<Tone Name="Snare L-2" Key="45" />
+					<Tone Name="Pla-Stick" Key="46" />
+					<Tone Name="BassDrum L-2" Key="47" />
+					<Tone Name="OpenRimShot-2" Key="48" />
+					<Tone Name="AnalogBassDrum" Key="49" />
+					<Tone Name="BassDrum H-2" Key="50" />
+					<Tone Name="CloseRimShot-2" Key="51" />
+					<Tone Name="AnalogSnare" Key="52" />
+					<Tone Name="HandClap-2" Key="53" />
+					<Tone Name="Snare H-2" Key="54" />
+					<Tone Name="FloorTom L-2" Key="55" />
+					<Tone Name="Hi-HatClosed-2" Key="56" />
+					<Tone Name="FloorTom H-2" Key="57" />
+					<Tone Name="Hi-HatPedal-2" Key="58" />
+					<Tone Name="LowTom-2" Key="59" />
+					<Tone Name="Hi-HatOpen-2" Key="60" />
+					<Tone Name="MidTom L-2" Key="61" />
+					<Tone Name="MidTom H-2" Key="62" />
+					<Tone Name="CrashCymbal-3 " Key="63" />
+					<Tone Name="HighTom-2" Key="64" />
+					<Tone Name="RideCymbal-3" Key="65" />
+					<Tone Name="ChineseCymbal-2" Key="66" />
+					<Tone Name="RideCup-2" Key="67" />
+					<Tone Name="Tambourine-2" Key="68" />
+					<Tone Name="SplashCymbal-2" Key="69" />
+					<Tone Name="Cowbell Hi" Key="70" />
+					<Tone Name="CrashCymbal-4" Key="71" />
+					<Tone Name="Vibraslap-2" Key="72" />
+					<Tone Name="RideCymbal-4" Key="73" />
+					<Tone Name="Bongo H-2" Key="74" />
+					<Tone Name="Bongo L-2" Key="75" />
+					<Tone Name="Conga H Mute-2" Key="76" />
+					<Tone Name="Conga H Open-2" Key="77" />
+					<Tone Name="Conga L-2" Key="78" />
+					<Tone Name="Timbale H-2" Key="79" />
+					<Tone Name="Timbale L-2" Key="80" />
+					<Tone Name="AgogoTrad-Hi" Key="81" />
+					<Tone Name="AgogoTrad-Lo" Key="82" />
+					<Tone Name="Cabasa-2" Key="83" />
+					<Tone Name="Maracas-2" Key="84" />
+					<Tone Name="SambaWhistl H-2" Key="85" />
+					<Tone Name="SambaWhistl L-2" Key="86" />
+					<Tone Name="GuiroShort-2" Key="87" />
+					<Tone Name="GuiroLong-2" Key="88" />
+					<Tone Name="Claves-2" Key="89" />
+					<Tone Name="WoodBlock H-2" Key="90" />
+					<Tone Name="WoodBlock L-2" Key="91" />
+					<Tone Name="CuicaMute-2" Key="92" />
+					<Tone Name="CuicaOpen-2" Key="93" />
+					<Tone Name="TriangleMute-2" Key="94" />
+					<Tone Name="TriangleOpen-2" Key="95" />
+					<Tone Name="Shaker-2" Key="96" />
+					<Tone Name="JingleBell-2" Key="97" />
+					<Tone Name="BellTree-2" Key="98" />
+					<Tone Name="Ring" Key="99" />
+					<Tone Name="ChineseCymbal-3" Key="100" />
+					<Tone Name="ChineseCymbal-4" Key="101" />
+					<Tone Name="RideCymbal-5" Key="102" />
+					<Tone Name="Drum Note 103" Key="103" />
+					<Tone Name="Drum Note 104" Key="104" />
+					<Tone Name="Drum Note 105" Key="105" />
+				</Bank>
+				<Bank Name="MA-2 Basic 2OP set" MSB="112" LSB="5">
+					<Tone Name="Drum" Key="27" />
+					<Tone Name="Drum" Key="28" />
+					<Tone Name="Drum" Key="29" />
+					<Tone Name="Drum" Key="30" />
+					<Tone Name="Drum" Key="31" />
+					<Tone Name="Drum" Key="32" />
+					<Tone Name="Drum" Key="33" />
+					<Tone Name="Drum" Key="34" />
+					<Tone Name="Drum" Key="35" />
+					<Tone Name="Drum" Key="36" />
+					<Tone Name="Drum" Key="37" />
+					<Tone Name="Ba-SeqClick H" Key="38" />
+					<Tone Name="Ba-Brush Tap" Key="39" />
+					<Tone Name="Ba-Brush Swirl L" Key="40" />
+					<Tone Name="Ba-Brush Slap" Key="41" />
+					<Tone Name="Ba-Brush Swirl H" Key="42" />
+					<Tone Name="Ba-Snare Roll" Key="43" />
+					<Tone Name="Ba-Castanet" Key="44" />
+					<Tone Name="Ba-Snare L" Key="45" />
+					<Tone Name="Ba-Sticks" Key="46" />
+					<Tone Name="Ba-Bass Drum L" Key="47" />
+					<Tone Name="Ba-Open Rim Shot" Key="48" />
+					<Tone Name="Ba-Bass Drum M" Key="49" />
+					<Tone Name="Ba-Bass Drum H" Key="50" />
+					<Tone Name="Ba-ClosedRimShot" Key="51" />
+					<Tone Name="Ba-Snare M" Key="52" />
+					<Tone Name="Ba-Hand Clap" Key="53" />
+					<Tone Name="Ba-Snare H" Key="54" />
+					<Tone Name="Ba-Floor Tom L" Key="55" />
+					<Tone Name="Ba-Hi-Hat Closed" Key="56" />
+					<Tone Name="Ba-Floor Tom H" Key="57" />
+					<Tone Name="Ba-Hi-Hat Pedal" Key="58" />
+					<Tone Name="Ba-Low Tom" Key="59" />
+					<Tone Name="Ba-Hi-Hat Open" Key="60" />
+					<Tone Name="Ba-Mid Tom L" Key="61" />
+					<Tone Name="Ba-Mid Tom H" Key="62" />
+					<Tone Name="Ba-CrashCymbal 1" Key="63" />
+					<Tone Name="Ba-High Tom" Key="64" />
+					<Tone Name="Ba-Ride Cymbal 1" Key="65" />
+					<Tone Name="Ba-ChineseCymbal" Key="66" />
+					<Tone Name="Ba-RideCymbalCup" Key="67" />
+					<Tone Name="Ba-Tambourine" Key="68" />
+					<Tone Name="Ba-Splash Cymbal" Key="69" />
+					<Tone Name="Ba-Cowbell" Key="70" />
+					<Tone Name="Ba-CrashCymbal 2" Key="71" />
+					<Tone Name="Ba-Vibraslap" Key="72" />
+					<Tone Name="Ba-Ride Cymbal 2" Key="73" />
+					<Tone Name="Ba-Bongo H" Key="74" />
+					<Tone Name="Ba-Bongo L" Key="75" />
+					<Tone Name="Ba-Conga H Mute" Key="76" />
+					<Tone Name="Ba-Conga H Open" Key="77" />
+					<Tone Name="Ba-Conga L" Key="78" />
+					<Tone Name="Ba-Timbale H" Key="79" />
+					<Tone Name="Ba-Timbale L" Key="80" />
+					<Tone Name="Ba-Agogo H" Key="81" />
+					<Tone Name="Ba-Agogo L" Key="82" />
+					<Tone Name="Ba-Cabasa" Key="83" />
+					<Tone Name="Ba-Maracas" Key="84" />
+					<Tone Name="Ba-SambaWhistleH" Key="85" />
+					<Tone Name="Ba-SambaWhistleL" Key="86" />
+					<Tone Name="Ba-Guiro Short" Key="87" />
+					<Tone Name="Ba-Guiro Long" Key="88" />
+					<Tone Name="Ba-Claves" Key="89" />
+					<Tone Name="Ba-Wood Block H" Key="90" />
+					<Tone Name="Ba-Wood Block L" Key="91" />
+					<Tone Name="Ba-Cuica Mute" Key="92" />
+					<Tone Name="Ba-Cuica Open" Key="93" />
+					<Tone Name="Ba-Triangle Mute" Key="94" />
+					<Tone Name="Ba-Triangle Open" Key="95" />
+					<Tone Name="Ba-Shaker" Key="96" />
+					<Tone Name="Ba-Jingle Bell" Key="97" />
+					<Tone Name="Ba-Belltree" Key="98" />
+					<Tone Name="Drum" Key="99" />
+					<Tone Name="Drum" Key="100" />
+					<Tone Name="Drum" Key="101" />
+					<Tone Name="Drum" Key="102" />
+					<Tone Name="Drum" Key="103" />
+					<Tone Name="Drum" Key="104" />
+					<Tone Name="Drum" Key="105" />
+				</Bank>
+				<Bank Name="MA-2 Luminous 2OP set" MSB="112" LSB="6">
+					<Tone Name="Drum" Key="27" />
+					<Tone Name="Drum" Key="28" />
+					<Tone Name="Drum" Key="29" />
+					<Tone Name="Drum" Key="30" />
+					<Tone Name="Drum" Key="31" />
+					<Tone Name="Drum" Key="32" />
+					<Tone Name="Drum" Key="33" />
+					<Tone Name="Drum" Key="34" />
+					<Tone Name="Drum" Key="35" />
+					<Tone Name="Drum" Key="36" />
+					<Tone Name="Drum" Key="37" />
+					<Tone Name="Lu-SeqClick H" Key="38" />
+					<Tone Name="Lu-Brush Tap" Key="39" />
+					<Tone Name="Lu-Brush Swirl L" Key="40" />
+					<Tone Name="Lu-Brush Slap" Key="41" />
+					<Tone Name="Lu-Brush Swirl H" Key="42" />
+					<Tone Name="Lu-Snare Roll" Key="43" />
+					<Tone Name="Lu-Castanet" Key="44" />
+					<Tone Name="Lu-Snare L" Key="45" />
+					<Tone Name="Lu-Sticks" Key="46" />
+					<Tone Name="Lu-Bass Drum L" Key="47" />
+					<Tone Name="Lu-Open Rim Shot" Key="48" />
+					<Tone Name="Lu-Bass Drum M" Key="49" />
+					<Tone Name="Lu-Bass Drum H" Key="50" />
+					<Tone Name="Lu-ClosedRimShot" Key="51" />
+					<Tone Name="Lu-Snare M" Key="52" />
+					<Tone Name="Lu-Hand Clap" Key="53" />
+					<Tone Name="Lu-Snare H" Key="54" />
+					<Tone Name="Lu-Floor Tom L" Key="55" />
+					<Tone Name="Lu-Hi-Hat Closed" Key="56" />
+					<Tone Name="Lu-Floor Tom H" Key="57" />
+					<Tone Name="Lu-Hi-Hat Pedal" Key="58" />
+					<Tone Name="Lu-Low Tom" Key="59" />
+					<Tone Name="Lu-Hi-Hat Open" Key="60" />
+					<Tone Name="Lu-Mid Tom L" Key="61" />
+					<Tone Name="Lu-Mid Tom H" Key="62" />
+					<Tone Name="Lu-CrashCymbal 1" Key="63" />
+					<Tone Name="Lu-High Tom" Key="64" />
+					<Tone Name="Lu-Ride Cymbal 1" Key="65" />
+					<Tone Name="Lu-ChineseCymbal" Key="66" />
+					<Tone Name="Lu-RideCymbalCup" Key="67" />
+					<Tone Name="Lu-Tambourine" Key="68" />
+					<Tone Name="Lu-Splash Cymbal" Key="69" />
+					<Tone Name="Lu-Cowbell" Key="70" />
+					<Tone Name="Lu-CrashCymbal 2" Key="71" />
+					<Tone Name="Lu-Vibraslap" Key="72" />
+					<Tone Name="Lu-Ride Cymbal 2" Key="73" />
+					<Tone Name="Lu-Bongo H" Key="74" />
+					<Tone Name="Lu-Bongo L" Key="75" />
+					<Tone Name="Lu-Conga H Mute" Key="76" />
+					<Tone Name="Lu-Conga H Open" Key="77" />
+					<Tone Name="Lu-Conga L" Key="78" />
+					<Tone Name="Lu-Timbale H" Key="79" />
+					<Tone Name="Lu-Timbale L" Key="80" />
+					<Tone Name="Lu-Agogo H" Key="81" />
+					<Tone Name="Lu-Agogo L" Key="82" />
+					<Tone Name="Lu-Cabasa" Key="83" />
+					<Tone Name="Lu-Maracas" Key="84" />
+					<Tone Name="Lu-SambaWhistleH" Key="85" />
+					<Tone Name="Lu-SambaWhistleL" Key="86" />
+					<Tone Name="Lu-Guiro Short" Key="87" />
+					<Tone Name="Lu-Guiro Long" Key="88" />
+					<Tone Name="Lu-Claves" Key="89" />
+					<Tone Name="Lu-Wood Block H" Key="90" />
+					<Tone Name="Lu-Wood Block L" Key="91" />
+					<Tone Name="Lu-Cuica Mute" Key="92" />
+					<Tone Name="Lu-Cuica Open" Key="93" />
+					<Tone Name="Lu-Triangle Mute" Key="94" />
+					<Tone Name="Lu-Triangle Open" Key="95" />
+					<Tone Name="Lu-Shaker" Key="96" />
+					<Tone Name="Lu-Jingle Bell" Key="97" />
+					<Tone Name="Lu-Belltree" Key="98" />
+					<Tone Name="Drum" Key="99" />
+					<Tone Name="Drum" Key="100" />
+					<Tone Name="Drum" Key="101" />
+					<Tone Name="Drum" Key="102" />
+					<Tone Name="Drum" Key="103" />
+					<Tone Name="Drum" Key="104" />
+					<Tone Name="Drum" Key="105" />
+				</Bank>
+				<Bank Name="MA-2 MicroComputer 2OP set" MSB="112" LSB="7">
+					<Tone Name="Drum" Key="27" />
+					<Tone Name="Drum" Key="28" />
+					<Tone Name="Drum" Key="29" />
+					<Tone Name="Drum" Key="30" />
+					<Tone Name="Drum" Key="31" />
+					<Tone Name="Drum" Key="32" />
+					<Tone Name="Drum" Key="33" />
+					<Tone Name="Drum" Key="34" />
+					<Tone Name="Drum" Key="35" />
+					<Tone Name="Drum" Key="36" />
+					<Tone Name="Drum" Key="37" />
+					<Tone Name="Mi-SeqClick H" Key="38" />
+					<Tone Name="Mi-Brush Tap" Key="39" />
+					<Tone Name="Mi-Brush Swirl L" Key="40" />
+					<Tone Name="Mi-Brush Slap" Key="41" />
+					<Tone Name="Mi-Brush Swirl H" Key="42" />
+					<Tone Name="Mi-Snare Roll" Key="43" />
+					<Tone Name="Mi-Castanet" Key="44" />
+					<Tone Name="Mi-Snare L" Key="45" />
+					<Tone Name="Mi-Sticks" Key="46" />
+					<Tone Name="Mi-Bass Drum L" Key="47" />
+					<Tone Name="Mi-Open Rim Shot" Key="48" />
+					<Tone Name="Mi-Bass Drum M" Key="49" />
+					<Tone Name="Mi-Bass Drum H" Key="50" />
+					<Tone Name="Mi-ClosedRimShot" Key="51" />
+					<Tone Name="Mi-Snare M" Key="52" />
+					<Tone Name="Mi-Hand Clap" Key="53" />
+					<Tone Name="Mi-Snare H" Key="54" />
+					<Tone Name="Mi-Floor Tom L" Key="55" />
+					<Tone Name="Mi-Hi-Hat Closed" Key="56" />
+					<Tone Name="Mi-Floor Tom H" Key="57" />
+					<Tone Name="Mi-Hi-Hat Pedal" Key="58" />
+					<Tone Name="Mi-Low Tom" Key="59" />
+					<Tone Name="Mi-Hi-Hat Open" Key="60" />
+					<Tone Name="Mi-Mid Tom L" Key="61" />
+					<Tone Name="Mi-Mid Tom H" Key="62" />
+					<Tone Name="Mi-CrashCymbal 1" Key="63" />
+					<Tone Name="Mi-High Tom" Key="64" />
+					<Tone Name="Mi-Ride Cymbal 1" Key="65" />
+					<Tone Name="Mi-ChineseCymbal" Key="66" />
+					<Tone Name="Mi-RideCymbalCup" Key="67" />
+					<Tone Name="Mi-Tambourine" Key="68" />
+					<Tone Name="Mi-Splash Cymbal" Key="69" />
+					<Tone Name="Mi-Cowbell" Key="70" />
+					<Tone Name="Mi-CrashCymbal 2" Key="71" />
+					<Tone Name="Mi-Vibraslap" Key="72" />
+					<Tone Name="Mi-Ride Cymbal 2" Key="73" />
+					<Tone Name="Mi-Bongo H" Key="74" />
+					<Tone Name="Mi-Bongo L" Key="75" />
+					<Tone Name="Mi-Conga H Mute" Key="76" />
+					<Tone Name="Mi-Conga H Open" Key="77" />
+					<Tone Name="Mi-Conga L" Key="78" />
+					<Tone Name="Mi-Timbale H" Key="79" />
+					<Tone Name="Mi-Timbale L" Key="80" />
+					<Tone Name="Mi-Agogo H" Key="81" />
+					<Tone Name="Mi-Agogo L" Key="82" />
+					<Tone Name="Mi-Cabasa" Key="83" />
+					<Tone Name="Mi-Maracas" Key="84" />
+					<Tone Name="Mi-SambaWhistleH" Key="85" />
+					<Tone Name="Mi-SambaWhistleL" Key="86" />
+					<Tone Name="Mi-Guiro Short" Key="87" />
+					<Tone Name="Mi-Guiro Long" Key="88" />
+					<Tone Name="Mi-Claves" Key="89" />
+					<Tone Name="Mi-Wood Block H" Key="90" />
+					<Tone Name="Mi-Wood Block L" Key="91" />
+					<Tone Name="Mi-Cuica Mute" Key="92" />
+					<Tone Name="Mi-Cuica Open" Key="93" />
+					<Tone Name="Mi-Triangle Mute" Key="94" />
+					<Tone Name="Mi-Triangle Open" Key="95" />
+					<Tone Name="Mi-Shaker" Key="96" />
+					<Tone Name="Mi-Jingle Bell" Key="97" />
+					<Tone Name="Mi-Belltree" Key="98" />
+					<Tone Name="Drum" Key="99" />
+					<Tone Name="Drum" Key="100" />
+					<Tone Name="Drum" Key="101" />
+					<Tone Name="Drum" Key="102" />
+					<Tone Name="Drum" Key="103" />
+					<Tone Name="Drum" Key="104" />
+					<Tone Name="Drum" Key="105" />
+				</Bank>
+				<Bank Name="MA-2 Digital 2OP set" MSB="112" LSB="8">
+					<Tone Name="Drum" Key="27" />
+					<Tone Name="Drum" Key="28" />
+					<Tone Name="Drum" Key="29" />
+					<Tone Name="Drum" Key="30" />
+					<Tone Name="Drum" Key="31" />
+					<Tone Name="Drum" Key="32" />
+					<Tone Name="Drum" Key="33" />
+					<Tone Name="Drum" Key="34" />
+					<Tone Name="Drum" Key="35" />
+					<Tone Name="Drum" Key="36" />
+					<Tone Name="Drum" Key="37" />
+					<Tone Name="Di-SeqClick H" Key="38" />
+					<Tone Name="Di-Brush Tap" Key="39" />
+					<Tone Name="Di-Brush Swirl L" Key="40" />
+					<Tone Name="Di-Brush Slap" Key="41" />
+					<Tone Name="Di-Brush Swirl H" Key="42" />
+					<Tone Name="Di-Snare Roll" Key="43" />
+					<Tone Name="Di-Castanet" Key="44" />
+					<Tone Name="Di-Snare L" Key="45" />
+					<Tone Name="Di-Sticks" Key="46" />
+					<Tone Name="Di-Bass Drum L" Key="47" />
+					<Tone Name="Di-Open Rim Shot" Key="48" />
+					<Tone Name="Di-Bass Drum M" Key="49" />
+					<Tone Name="Di-Bass Drum H" Key="50" />
+					<Tone Name="Di-ClosedRimShot" Key="51" />
+					<Tone Name="Di-Snare M" Key="52" />
+					<Tone Name="Di-Hand Clap" Key="53" />
+					<Tone Name="Di-Snare H" Key="54" />
+					<Tone Name="Di-Floor Tom L" Key="55" />
+					<Tone Name="Di-Hi-Hat Closed" Key="56" />
+					<Tone Name="Di-Floor Tom H" Key="57" />
+					<Tone Name="Di-Hi-Hat Pedal" Key="58" />
+					<Tone Name="Di-Low Tom" Key="59" />
+					<Tone Name="Di-Hi-Hat Open" Key="60" />
+					<Tone Name="Di-Mid Tom L" Key="61" />
+					<Tone Name="Di-Mid Tom H" Key="62" />
+					<Tone Name="Di-CrashCymbal 1" Key="63" />
+					<Tone Name="Di-High Tom" Key="64" />
+					<Tone Name="Di-Ride Cymbal 1" Key="65" />
+					<Tone Name="Di-ChineseCymbal" Key="66" />
+					<Tone Name="Di-RideCymbalCup" Key="67" />
+					<Tone Name="Di-Tambourine" Key="68" />
+					<Tone Name="Di-Splash Cymbal" Key="69" />
+					<Tone Name="Di-Cowbell" Key="70" />
+					<Tone Name="Di-CrashCymbal 2" Key="71" />
+					<Tone Name="Di-Vibraslap" Key="72" />
+					<Tone Name="Di-Ride Cymbal 2" Key="73" />
+					<Tone Name="Di-Bongo H" Key="74" />
+					<Tone Name="Di-Bongo L" Key="75" />
+					<Tone Name="Di-Conga H Mute" Key="76" />
+					<Tone Name="Di-Conga H Open" Key="77" />
+					<Tone Name="Di-Conga L" Key="78" />
+					<Tone Name="Di-Timbale H" Key="79" />
+					<Tone Name="Di-Timbale L" Key="80" />
+					<Tone Name="Di-Agogo H" Key="81" />
+					<Tone Name="Di-Agogo L" Key="82" />
+					<Tone Name="Di-Cabasa" Key="83" />
+					<Tone Name="Di-Maracas" Key="84" />
+					<Tone Name="Di-SambaWhistleH" Key="85" />
+					<Tone Name="Di-SambaWhistleL" Key="86" />
+					<Tone Name="Di-Guiro Short" Key="87" />
+					<Tone Name="Di-Guiro Long" Key="88" />
+					<Tone Name="Di-Claves" Key="89" />
+					<Tone Name="Di-Wood Block H" Key="90" />
+					<Tone Name="Di-Wood Block L" Key="91" />
+					<Tone Name="Di-Cuica Mute" Key="92" />
+					<Tone Name="Di-Cuica Open" Key="93" />
+					<Tone Name="Di-Triangle Mute" Key="94" />
+					<Tone Name="Di-Triangle Open" Key="95" />
+					<Tone Name="Di-Shaker" Key="96" />
+					<Tone Name="Di-Jingle Bell" Key="97" />
+					<Tone Name="Di-Belltree" Key="98" />
+					<Tone Name="Drum" Key="99" />
+					<Tone Name="Drum" Key="100" />
+					<Tone Name="Drum" Key="101" />
+					<Tone Name="Drum" Key="102" />
+					<Tone Name="Drum" Key="103" />
+					<Tone Name="Drum" Key="104" />
+					<Tone Name="Drum" Key="105" />
+				</Bank>
+				<Bank Name="MA-2 Acid 2OP set" MSB="112" LSB="9">
+					<Tone Name="Drum" Key="27" />
+					<Tone Name="Drum" Key="28" />
+					<Tone Name="Drum" Key="29" />
+					<Tone Name="Drum" Key="30" />
+					<Tone Name="Drum" Key="31" />
+					<Tone Name="Drum" Key="32" />
+					<Tone Name="Drum" Key="33" />
+					<Tone Name="Drum" Key="34" />
+					<Tone Name="Drum" Key="35" />
+					<Tone Name="Drum" Key="36" />
+					<Tone Name="Drum" Key="37" />
+					<Tone Name="Ac-SeqClick H" Key="38" />
+					<Tone Name="Ac-Brush Tap" Key="39" />
+					<Tone Name="Ac-Brush Swirl L" Key="40" />
+					<Tone Name="Ac-Brush Slap" Key="41" />
+					<Tone Name="Ac-Brush Swirl H" Key="42" />
+					<Tone Name="Ac-Snare Roll" Key="43" />
+					<Tone Name="Ac-Castanet" Key="44" />
+					<Tone Name="Ac-Snare L" Key="45" />
+					<Tone Name="Ac-Sticks" Key="46" />
+					<Tone Name="Ac-Bass Drum L" Key="47" />
+					<Tone Name="Ac-Open Rim Shot" Key="48" />
+					<Tone Name="Ac-Bass Drum M" Key="49" />
+					<Tone Name="Ac-Bass Drum H" Key="50" />
+					<Tone Name="Ac-ClosedRimShot" Key="51" />
+					<Tone Name="Ac-Snare M" Key="52" />
+					<Tone Name="Ac-Hand Clap" Key="53" />
+					<Tone Name="Ac-Snare H" Key="54" />
+					<Tone Name="Ac-Floor Tom L" Key="55" />
+					<Tone Name="Ac-Hi-Hat Closed" Key="56" />
+					<Tone Name="Ac-Floor Tom H" Key="57" />
+					<Tone Name="Ac-Hi-Hat Pedal" Key="58" />
+					<Tone Name="Ac-Low Tom" Key="59" />
+					<Tone Name="Ac-Hi-Hat Open" Key="60" />
+					<Tone Name="Ac-Mid Tom L" Key="61" />
+					<Tone Name="Ac-Mid Tom H" Key="62" />
+					<Tone Name="Ac-CrashCymbal 1" Key="63" />
+					<Tone Name="Ac-High Tom" Key="64" />
+					<Tone Name="Ac-Ride Cymbal 1" Key="65" />
+					<Tone Name="Ac-ChineseCymbal" Key="66" />
+					<Tone Name="Ac-RideCymbalCup" Key="67" />
+					<Tone Name="Ac-Tambourine" Key="68" />
+					<Tone Name="Ac-Splash Cymbal" Key="69" />
+					<Tone Name="Ac-Cowbell" Key="70" />
+					<Tone Name="Ac-CrashCymbal 2" Key="71" />
+					<Tone Name="Ac-Vibraslap" Key="72" />
+					<Tone Name="Ac-Ride Cymbal 2" Key="73" />
+					<Tone Name="Ac-Bongo H" Key="74" />
+					<Tone Name="Ac-Bongo L" Key="75" />
+					<Tone Name="Ac-Conga H Mute" Key="76" />
+					<Tone Name="Ac-Conga H Open" Key="77" />
+					<Tone Name="Ac-Conga L" Key="78" />
+					<Tone Name="Ac-Timbale H" Key="79" />
+					<Tone Name="Ac-Timbale L" Key="80" />
+					<Tone Name="Ac-Agogo H" Key="81" />
+					<Tone Name="Ac-Agogo L" Key="82" />
+					<Tone Name="Ac-Cabasa" Key="83" />
+					<Tone Name="Ac-Maracas" Key="84" />
+					<Tone Name="Ac-SambaWhistleH" Key="85" />
+					<Tone Name="Ac-SambaWhistleL" Key="86" />
+					<Tone Name="Ac-Guiro Short" Key="87" />
+					<Tone Name="Ac-Guiro Long" Key="88" />
+					<Tone Name="Ac-Claves" Key="89" />
+					<Tone Name="Ac-Wood Block H" Key="90" />
+					<Tone Name="Ac-Wood Block L" Key="91" />
+					<Tone Name="Ac-Cuica Mute" Key="92" />
+					<Tone Name="Ac-Cuica Open" Key="93" />
+					<Tone Name="Ac-Triangle Mute" Key="94" />
+					<Tone Name="Ac-Triangle Open" Key="95" />
+					<Tone Name="Ac-Shaker" Key="96" />
+					<Tone Name="Ac-Jingle Bell" Key="97" />
+					<Tone Name="Ac-Belltree" Key="98" />
+					<Tone Name="Drum" Key="99" />
+					<Tone Name="Drum" Key="100" />
+					<Tone Name="Drum" Key="101" />
+					<Tone Name="Drum" Key="102" />
+					<Tone Name="Drum" Key="103" />
+					<Tone Name="Drum" Key="104" />
+					<Tone Name="Drum" Key="105" />
+				</Bank>
+				<Bank Name="MA-2 Variant 2OP set" MSB="112" LSB="10">
+					<Tone Name="Drum Note 27" Key="27" />
+					<Tone Name="Drum Note 28" Key="28" />
+					<Tone Name="Hi-Q" Key="29" />
+					<Tone Name="WhipSlap" Key="30" />
+					<Tone Name="Drum Note 31" Key="31" />
+					<Tone Name="Drum Note 32" Key="32" />
+					<Tone Name="Drum Note 33" Key="33" />
+					<Tone Name="Drum Note 34" Key="34" />
+					<Tone Name="Drum Note 35" Key="35" />
+					<Tone Name="Drum Note 36" Key="36" />
+					<Tone Name="SeqClick L" Key="37" />
+					<Tone Name="SeqClick H-2" Key="38" />
+					<Tone Name="BrushTapSoft-2" Key="39" />
+					<Tone Name="BrushSwirl L-2" Key="40" />
+					<Tone Name="BrashSlap-2" Key="41" />
+					<Tone Name="BrushSwirl H-2" Key="42" />
+					<Tone Name="SnareRoll-2" Key="43" />
+					<Tone Name="Castanet-2" Key="44" />
+					<Tone Name="Snare L-2" Key="45" />
+					<Tone Name="Pla-Stick" Key="46" />
+					<Tone Name="BassDrum L-2" Key="47" />
+					<Tone Name="OpenRimShot-2" Key="48" />
+					<Tone Name="AnalogBassDrum" Key="49" />
+					<Tone Name="BassDrum H-2" Key="50" />
+					<Tone Name="CloseRimShot-2" Key="51" />
+					<Tone Name="AnalogSnare" Key="52" />
+					<Tone Name="HandClap-2" Key="53" />
+					<Tone Name="Snare H-2" Key="54" />
+					<Tone Name="FloorTom L-2" Key="55" />
+					<Tone Name="Hi-HatClosed-2" Key="56" />
+					<Tone Name="FloorTom H-2" Key="57" />
+					<Tone Name="Hi-HatPedal-2" Key="58" />
+					<Tone Name="LowTom-2" Key="59" />
+					<Tone Name="Hi-HatOpen-2" Key="60" />
+					<Tone Name="MidTom L-2" Key="61" />
+					<Tone Name="MidTom H-2" Key="62" />
+					<Tone Name="CrashCymbal-3 " Key="63" />
+					<Tone Name="HighTom-2" Key="64" />
+					<Tone Name="RideCymbal-3" Key="65" />
+					<Tone Name="ChineseCymbal-2" Key="66" />
+					<Tone Name="RideCup-2" Key="67" />
+					<Tone Name="Tambourine-2" Key="68" />
+					<Tone Name="SplashCymbal-2" Key="69" />
+					<Tone Name="Cowbell Hi" Key="70" />
+					<Tone Name="CrashCymbal-4" Key="71" />
+					<Tone Name="Vibraslap-2" Key="72" />
+					<Tone Name="RideCymbal-4" Key="73" />
+					<Tone Name="Bongo H-2" Key="74" />
+					<Tone Name="Bongo L-2" Key="75" />
+					<Tone Name="Conga H Mute-2" Key="76" />
+					<Tone Name="Conga H Open-2" Key="77" />
+					<Tone Name="Conga L-2" Key="78" />
+					<Tone Name="Timbale H-2" Key="79" />
+					<Tone Name="Timbale L-2" Key="80" />
+					<Tone Name="AgogoTrad-Hi" Key="81" />
+					<Tone Name="AgogoTrad-Lo" Key="82" />
+					<Tone Name="Cabasa-2" Key="83" />
+					<Tone Name="Maracas-2" Key="84" />
+					<Tone Name="SambaWhistl H-2" Key="85" />
+					<Tone Name="SambaWhistl L-2" Key="86" />
+					<Tone Name="GuiroShort-2" Key="87" />
+					<Tone Name="GuiroLong-2" Key="88" />
+					<Tone Name="Claves-2" Key="89" />
+					<Tone Name="WoodBlock H-2" Key="90" />
+					<Tone Name="WoodBlock L-2" Key="91" />
+					<Tone Name="CuicaMute-2" Key="92" />
+					<Tone Name="CuicaOpen-2" Key="93" />
+					<Tone Name="TriangleMute-2" Key="94" />
+					<Tone Name="TriangleOpen-2" Key="95" />
+					<Tone Name="Shaker-2" Key="96" />
+					<Tone Name="JingleBell-2" Key="97" />
+					<Tone Name="BellTree-2" Key="98" />
+					<Tone Name="Ring" Key="99" />
+					<Tone Name="ChineseCymbal-3" Key="100" />
+					<Tone Name="ChineseCymbal-4" Key="101" />
+					<Tone Name="RideCymbal-5" Key="102" />
+					<Tone Name="Drum Note 103" Key="103" />
+					<Tone Name="Drum Note 104" Key="104" />
+					<Tone Name="Drum Note 105" Key="105" />
+				</Bank>
+				<Bank Name="OPNA Built-in set" MSB="112" LSB="11">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+				</Bank>
+				<Bank Name="OPLL Built-in set" MSB="112" LSB="12">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Chinese Cymbal" Key="52" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+				</Bank>
+				<Bank Name="OPL Built-in set" MSB="112" LSB="13">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Chinese Cymbal" Key="52" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+				</Bank>
+				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="112" LSB="17">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+				</Bank>
+				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="112" LSB="18">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="112" LSB="19">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Chinese Cymbal" Key="52" />
+					<Tone Name="Ride Bell" Key="53" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+				</Bank>
+				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="112" LSB="20">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="112" LSB="21">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Claves" Key="75" />
+				</Bank>
+				<Bank Name="RX5 Extra Kit (OPNB)" MSB="112" LSB="22">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Kick 03" Key="36" />
+					<Tone Name="Kick 04" Key="37" />
+					<Tone Name="Kick 05" Key="38" />
+					<Tone Name="Kick 06" Key="39" />
+					<Tone Name="Smack" Key="40" />
+					<Tone Name="Snare 03" Key="41" />
+					<Tone Name="Snare 04" Key="42" />
+					<Tone Name="Snare 05" Key="43" />
+					<Tone Name="Snare 06" Key="44" />
+					<Tone Name="Snare 07" Key="45" />
+					<Tone Name="Thud" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Chinese Cymbal" Key="52" />
+					<Tone Name="Ride Bell" Key="53" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+				</Bank>
+				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="112" LSB="16">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Power Kick Drum" Key="36" />
+					<Tone Name="Side Stick 2" Key="37" />
+					<Tone Name="Power Snare Drum" Key="38" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+				</Bank>
+				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="112" LSB="24">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Electric Snare 2" Key="40" />
+					<Tone Name="Electric Low Tom 2" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Electric Low Tom 1" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Electric Mid Tom 2" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Electric Mid Tom 1" Key="47" />
+					<Tone Name="Electric Hi Tom 2" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Electric Hi Tom 1" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+				</Bank>
+				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="112" LSB="40">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Brush Tap" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Brush Swirl" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
+		</Map>
+	</DrumSetList>
+
+</ModuleData>

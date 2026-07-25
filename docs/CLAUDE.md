@@ -954,6 +954,48 @@ MA-2 VMAファイルは128音色(メロディ)/79音色(ドラム)分の固定�
   環境依存フィールド(`midi_inputs`/`port`以外)を追加する場合は
   `normalize_env_fields.py`側の正規表現追加が必要。
 
+### 3.29 MIDIシーケンサー向けインストゥルメントリストの自動生成を新設（2026年7月26日）
+`config/profiles/*.profile.json`から、Cakewalk/Sekaiju用`.ins`ファイルと
+DOMINO用`.xml`ファイルを機械生成する`tools/instrument_export/
+generate_instruments.py`を新設し、全11プロファイル分を`docs/instruments/
+{sekaiju,domino}/`配下に生成した。
+
+- **変換ロジック**: `patch_banks[]`→CC#0=0、`hw_banks[].group`→CC#0
+  (3.2節のVoicePatchType対応表通り)、`pcm_banks[].group`→CC#0(ADPCMB=81/
+  ADPCMA=82)、`drum_banks[]`→CC#0=112という対応で、各バンクファイル
+  (`*.hwbank.json`/`*.patchbank.json`/`*.samplezonebank.json`/
+  `*.pcmbank.json`/`*.drumkit.json`)の`patches[]`/`entries[]`/`notes[]`
+  から`prog`(またはノート番号)と`name`を収集し、CC#0/CC#32/Prog単位の
+  一覧に組み立てている。詳細は`tools/instrument_export/README.md`参照。
+- **旧プロファイル(`emulator_*`/`hw_*`)のgroup旧称に対応**: `emulator_opm.
+  profile.json`等はhw_banks[].groupを統合後の命名(`OPN2`/`OPZ`/`OPL3_2`)
+  ではなく旧称(`OPN`/`OPM`/`OPL2`)のまま使っている。同一の`hwbank.json`
+  実体ファイルが新プロファイル側でOPN2/OPZ/OPL3_2として参照されている
+  ことを確認した上で、変換スクリプト内の`GROUP_CC0_HW`に旧称エイリアス
+  として追加した(データ側の変更は無し、変換スクリプト側のみで吸収)。
+- **sw_banks[]は対象外**: パフォーマンスパッチ(ベロシティ感度・ビブラート
+  等)は音色選択そのものではないため、インストゥルメントリストには含めて
+  いない。
+- **未検証事項**: 生成した`.ins`/`.xml`はいずれもJSON/XMLとしての構文
+  検証(XML well-formed性、`.ins`側のセクション名一意性・`Patch[]`添字
+  重複無し)のみプログラム的に確認済みで、Sekaiju/Cakewalk/DOMINO本体での
+  実際の読み込み動作は未検証(特にSekaiju `.ins`のドラムキット部の
+  `Key[MSB,PC]=<Note Namesセクション>`という書式は、実機配布の
+  `GM1_GM2.ins`の記述パターンを参考に類推したもので、公式マニュアル
+  (`Sekaiju.pdf`等)による裏付けは取れていない。PDFレンダリングツール
+  [poppler-utils]が環境に無く読解できなかったため)。
+- **Studio One / REAPER対応は保留(2026年7月26日、ユーザー判断)**:
+  いずれも本リポジトリの作業環境に実機(実ソフト)が無く動作検証ができない
+  ため、Sekaiju/DOMINOの2形式に留めた。Studio Oneは特にDOMINOの`.xml`
+  (1ファイル完結)と異なり、パッチ名を独自スクリプト言語の`.txt`
+  (`Patchnames`フォルダ、メーカー別)として定義し、そこから実際にDAWで
+  使う「デバイス」パネル定義(別のXML、`User Devices`フォルダ配下)を
+  生成する2層構造で、`.txt`スクリプトの正確な構文(同梱の
+  `script documentation.txt`)も未確認。将来、検証可能な環境が用意でき
+  次第、着手を検討する(Studio One側はPreSonusフォーラムの「Instrument
+  Definition Manager」ツールや`script documentation.txt`の内容を先に
+  確認すること)。
+
 ## 4. 未解決・要確認事項
 
 - `banks/drums/ma2_preset_2op.drumkit.json`・`ma2_variant_2op.drumkit.json`
@@ -1007,6 +1049,12 @@ MA-2 VMAファイルは128音色(メロディ)/79音色(ドラム)分の固定�
   のみ確認済み、実際に`fitom_core.exe`+FitomEmuIF.dllでADPCM RAM/AWM ROM
   が正しくロードされることは未確認）。実機/エミュレータでの動作確認が
   望ましい。
+- 3.29で新設した`docs/instruments/{sekaiju,domino}/*.{ins,xml}`は
+  Sekaiju/Cakewalk/DOMINO本体での読み込み動作が未検証（構文検証のみ
+  済み）。実機/実ソフトでの動作確認、および他に対応した方が良い
+  MIDIシーケンサー/フォーマット（例: Studio One用`.instrumentmap`、
+  Reaper用ノートネーム(`.reaperbank`/`.txt`)、標準MIDIファイルへの
+  Bank/Program名メタイベント埋め込み等）の要否をユーザーと相談すること。
 
 ---
 
