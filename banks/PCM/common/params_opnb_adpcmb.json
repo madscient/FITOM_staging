@@ -8,72 +8,72 @@
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/BrassHit.wav",
       "name": "BrassHit",
-      "root_note": "none"
+      "root_note": "C3"
     },
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/banks/PCM/common/_fixed_source/BrightOrchestraHit(C).wav",
       "name": "BrightOrchestraHit_C",
-      "root_note": "none"
+      "root_note": "C3"
     },
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/CinematicHit.wav",
       "name": "CinematicHit",
-      "root_note": "none"
+      "root_note": "C3"
     },
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/ExplosionHit.wav",
       "name": "ExplosionHit",
-      "root_note": "none"
+      "root_note": "C3"
     },
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/HiPitchOrchestraHit.wav",
       "name": "HiPitchOrchestraHit",
-      "root_note": "none"
+      "root_note": "C3"
     },
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/LoPitchOrchestraHit.wav",
       "name": "LoPitchOrchestraHit",
-      "root_note": "none"
-    },
-    {
-      "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/MassiveTimpani.wav",
-      "name": "MassiveTimpani",
-      "root_note": "none"
+      "root_note": "C3"
     },
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/OrchestraHit.wav",
       "name": "OrchestraHit",
-      "root_note": "none"
+      "root_note": "C3"
     },
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/PSR-38_ORCHESTRA_HIT.wav",
       "name": "PSR_38_ORCHESTRA_HIT",
-      "root_note": "none"
-    },
-    {
-      "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/PSR-38_TIMPANI.wav",
-      "name": "PSR_38_TIMPANI",
-      "root_note": "none"
+      "root_note": "A3"
     },
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/banks/PCM/common/_fixed_source/PSS-590_OrchestraHit.wav",
       "name": "PSS_590_OrchestraHit",
-      "root_note": "none"
-    },
-    {
-      "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/banks/PCM/common/_fixed_source/PSS-590_Timpani.wav",
-      "name": "PSS_590_Timpani",
-      "root_note": "none"
+      "root_note": "A3"
     },
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/TenseStringHit.wav",
       "name": "TenseStringHit",
-      "root_note": "none"
+      "root_note": "C3"
     },
     {
       "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/WarmOrchestraHit(C).wav",
       "name": "WarmOrchestraHit_C",
-      "root_note": "none"
+      "root_note": "C3"
+    },
+    {
+      "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/MassiveTimpani.wav",
+      "name": "MassiveTimpani",
+      "root_note": "C3"
+    },
+    {
+      "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/wavs/melodic/PSR-38_TIMPANI.wav",
+      "name": "PSR_38_TIMPANI",
+      "root_note": "A3"
+    },
+    {
+      "path": "d:/Users/willi.DESKTOP-67M4JJT/source/repos/FITOM_staging/banks/PCM/common/_fixed_source/PSS-590_Timpani.wav",
+      "name": "PSS_590_Timpani",
+      "root_note": "A3"
     }
   ]
 }

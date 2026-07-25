@@ -67,6 +67,12 @@ banks/
 ├── PCM/
 │   └── common/           wavs/配下をadpcm_packerでパックしたADPCM-A/B/YMZ280
 │                         (pcmd8)バンク(*.pcmbank.json + 付随bin/json)
+│                         wavs/rhythm → ADPCM-A(wavs_opnb_adpcma)。
+│                         wavs/melodic → ADPCM-B(OPNA/OPNB、wavs_opna/opnb_adpcmb)。
+│                         rhythm+melodic統合 → YMZ280(wavs_ymz280_adpcm)。
+│                         melodicはOrchestra Hit系→Timpani系の順にグループ化
+│                         して整列。root_noteはファイル名プリフィクスで判定
+│                         (PSS-/PSR-由来はA3、他はC3)。
 ├── drums/                DrumKit(*.drumkit.json、GM2ノートマッピング)
 ├── patches/              PatchBank(*.patchbank.json、ToneLayer経由の複合パッチ)
 ├── sw/                   SwPatch(*.swbank.json、ベロシティ感度/LFO。README.md参照)
