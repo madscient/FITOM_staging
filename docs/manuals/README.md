@@ -102,8 +102,8 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)による音色バンクの一覧です。
 | 64 | 1 | SSG | [EPSG (AY8930) Preset](patches/ssg.md#cc321) |
 | 64 | 2 | SSG | [SCC Preset (wave 0-7: Duty系)](patches/ssg.md#cc322) |
 | 64 | 3 | SSG | [SCC Preset (wave 8-15: Duty96.875+Triangle+Downsaw+Upsaw+Sine+Harpsi+Piano+Organ)](patches/ssg.md#cc323) |
-| 81 | 0 | ADPCMB | [PSS-680/PSR-38 ADPCM-B (OPNA)](patches/adpcmb.md#cc320) |
-| 82 | 1 | ADPCMA | [PSS-680/PSR-38 ADPCM-A (OPNB)](patches/adpcma.md#cc321) |
+| 81 | 0 | ADPCMB | [wavs/melodic ADPCM-B (OPNA)](patches/adpcmb.md#cc320) |
+| 82 | 1 | ADPCMA | [wavs/rhythm ADPCM-A (OPNB)](patches/adpcma.md#cc321) |
 | 84 | 0 | AWM | [YRW801 GM (melodic)](patches/awm.md#cc320) |
 | 84 | 1 | AWM | [YRW801 GM (drum, ws>=128 fixed table)](patches/awm.md#cc321) |
 | 112 | 17 | 内蔵リズム(OPNA) | [OPNA内蔵リズム](builtin_rhythm.md#opna-rhythm) |
