@@ -20,10 +20,14 @@
 **通常モード(CC#0=0, CC#32=0)のパッチバンク:**
 - `necopn_gm.patchbank.json`
 
-**ドラムキット(prog0):**
-- ADPCM-A GM set
+**ドラムキット(prog0-4):**
+- PSS-560 GM Drum Kit (OPNB)
+- PSS-590 GM Drum Kit (OPNB)
+- PSS-680 GM Drum Kit (OPNB)
+- RX5 GM Drum Kit (OPNB)
+- RX11/21L GM Drum Kit (OPNB)
 
-収録ドラムキット総数: 1種類
+収録ドラムキット総数: 5種類
 
 ## OPLエミュプロファイル
 
@@ -57,10 +61,11 @@
 **通常モード(CC#0=0, CC#32=0)のパッチバンク:**
 - `gm_layered_opm.patchbank.json`
 
-**ドラムキット(prog0):**
-- (未設定)
+**ドラムキット:** ALSA/MA-2/OPNA/OPLL/OPL Built-in/OPL4-AWM各種
+(prog2-13,15)に加え、PSS-560/590/680・RX5・RX11/21LのADPCM-A GM
+ドラムキット(prog16-20)を収録。
 
-収録ドラムキット総数: 15種類
+収録ドラムキット総数: 18種類
 
 ## OPLLエミュプロファイル
 
@@ -76,10 +81,11 @@
 **通常モード(CC#0=0, CC#32=0)のパッチバンク:**
 - `gm_layered_opll.patchbank.json`
 
-**ドラムキット(prog0):**
-- OPLL Built-in set
+**ドラムキット:** OPLL Built-in set(prog0)に加え、ALSA/MA-2/OPNA/OPL
+Built-in/OPL4-AWM各種(prog2-13,15)、PSS-560/590/680・RX5・RX11/21Lの
+ADPCM-A GMドラムキット(prog16-20)を収録。
 
-収録ドラムキット総数: 16種類
+収録ドラムキット総数: 19種類
 
 ## OPLL用GM128パッチバンクの内訳
 
