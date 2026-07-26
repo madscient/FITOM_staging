@@ -118,6 +118,31 @@ def parse_voice(data, base):
 
     return fb, alg, pms, ops
 
+# OPN/OPM/OPZ(3bit ALG)のキャリアオペレータ対応(docs/manuals/swbank.mdの
+# prog24-31対応表と同じ、ops[]添字: 0=M1,1=C1,2=M2,3=C2)
+CARRIER_OPS_BY_ALG = {
+    0: [3], 1: [3], 2: [3], 3: [3],
+    4: [1, 3],
+    5: [1, 2, 3],
+    6: [1, 2, 3],
+    7: [0, 1, 2, 3],
+}
+
+def normalize_carrier_tl(alg, ops):
+    """キャリアオペレータのTLを正規化する。
+
+    necopn.binのキャリアTLは、必ずしも最小値(=最大音量)が0になっていない
+    (実機ドライバ側の音量調整の都合による可能性がある)。単一キャリアなら
+    そのTLを0に、複数キャリアなら最もTLが小さい(=最も音量が大きい)
+    オペレータのTLを0にし、他のキャリアのTLからも同じ量を減算すること
+    で、キャリア間の相対的な音量バランスを保ったまま基準を揃える。
+    モジュレータのTL(音色の明るさに作用)は変更しない。
+    """
+    carriers = CARRIER_OPS_BY_ALG[alg]
+    min_tl = min(ops[i]["TL"] for i in carriers)
+    for i in carriers:
+        ops[i]["TL"] -= min_tl
+
 def convert(src_path, dst_path, bank_no=0, group="OPN"):
     data = Path(src_path).read_bytes()
     assert len(data) == 128 * 64, f"Expected 8192 bytes, got {len(data)}"
@@ -126,6 +151,7 @@ def convert(src_path, dst_path, bank_no=0, group="OPN"):
     for prog in range(128):
         base = prog * 64
         fb, alg, pms, ops = parse_voice(data, base)
+        normalize_carrier_tl(alg, ops)
 
         name = GM_NAMES[prog] if prog < len(GM_NAMES) else f"Program {prog}"
 
