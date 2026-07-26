@@ -40,6 +40,11 @@
         "file": "../../banks/OPN/music_lalf/music_lalf_2.hwbank.json"
       },
       {
+        "group": "OPN2",
+        "bank": 4,
+        "file": "../../banks/OPN/valsound/valsound_1.hwbank.json"
+      },
+      {
         "group": "OPZ",
         "bank": 0,
         "file": "../../banks/OPZ/gm128/gm128_preset.hwbank.json"
