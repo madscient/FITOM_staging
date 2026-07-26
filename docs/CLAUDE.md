@@ -50,7 +50,9 @@ docs/manuals/           エンドユーザー向けレファレンスマニュ�
 | `emu_opm.profile.json` | OPM専用（OPM×2/OPZ×2） |
 | `emu_opll.profile.json` | OPLL専用（OPLL/OPLL2[rhythm]/OPLLP/VRC7/OPLLX×1ずつ） |
 | `fmall.profile.json` | OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7構成（2026年7月19日新設、hw_banks 26件・sw_banks 7件、patch_banks 0番=`gm_layered_opl4awm.patchbank.json`[ToneLayer0でAWM直参照のGM128バンク、新規作成]、drum_banks 0番=`opl4awm.drumkit.json`のみ） |
-| `emulator_opm.profile.json`ほか既存5件 | 旧・個別プロファイル（統合前からの遺産、現役利用中のため削除しないこと） |
+旧・個別プロファイル（`emulator_opm.profile.json`ほか計6件、統合前からの
+遺産）は、誰もメンテナンスしておらず統合後の構成と矛盾していたため
+2026年7月26日に削除した（3.30節参照）。
 
 ### ドキュメント
 `docs/manuals/`（本セッションで新規作成、`FITOM_X_preset_docs`から展開）:
@@ -954,11 +956,13 @@ MA-2 VMAファイルは128音色(メロディ)/79音色(ドラム)分の固定�
   環境依存フィールド(`midi_inputs`/`port`以外)を追加する場合は
   `normalize_env_fields.py`側の正規表現追加が必要。
 
-### 3.29 MIDIシーケンサー向けインストゥルメントリストの自動生成を新設（2026年7月26日）
+### 3.29 MIDIシーケンサー向けインストゥルメントリストの自動生成を新設（2026年7月26日、同日中に3.30で構成変更）
 `config/profiles/*.profile.json`から、Cakewalk/Sekaiju用`.ins`ファイルと
 DOMINO用`.xml`ファイルを機械生成する`tools/instrument_export/
-generate_instruments.py`を新設し、全11プロファイル分を`docs/instruments/
-{sekaiju,domino}/`配下に生成した。
+generate_instruments.py`を新設した。当初は当時存在した全11プロファイル
+分を`docs/instruments/{sekaiju,domino}/`配下にプロファイルごと個別
+ファイルとして生成したが、その後3.30の変更で対象プロファイル・出力
+ファイル構成とも変わっている。以下は初版時点の設計メモ。
 
 - **変換ロジック**: `patch_banks[]`→CC#0=0、`hw_banks[].group`→CC#0
   (3.2節のVoicePatchType対応表通り)、`pcm_banks[].group`→CC#0(ADPCMB=81/
@@ -967,23 +971,40 @@ generate_instruments.py`を新設し、全11プロファイル分を`docs/instru
   `*.pcmbank.json`/`*.drumkit.json`)の`patches[]`/`entries[]`/`notes[]`
   から`prog`(またはノート番号)と`name`を収集し、CC#0/CC#32/Prog単位の
   一覧に組み立てている。詳細は`tools/instrument_export/README.md`参照。
-- **旧プロファイル(`emulator_*`/`hw_*`)のgroup旧称に対応**: `emulator_opm.
-  profile.json`等はhw_banks[].groupを統合後の命名(`OPN2`/`OPZ`/`OPL3_2`)
-  ではなく旧称(`OPN`/`OPM`/`OPL2`)のまま使っている。同一の`hwbank.json`
-  実体ファイルが新プロファイル側でOPN2/OPZ/OPL3_2として参照されている
-  ことを確認した上で、変換スクリプト内の`GROUP_CC0_HW`に旧称エイリアス
-  として追加した(データ側の変更は無し、変換スクリプト側のみで吸収)。
+- **旧プロファイル(`emulator_*`/`hw_*`)のgroup旧称に対応**(初版時点、
+  3.30で旧プロファイル自体を削除したため後日不要になった):
+  `emulator_opm.profile.json`等はhw_banks[].groupを統合後の命名
+  (`OPN2`/`OPZ`/`OPL3_2`)ではなく旧称(`OPN`/`OPM`/`OPL2`)のまま使って
+  いたため、当初は変換スクリプト内の`GROUP_CC0_HW`に旧称エイリアスとして
+  追加していたが、3.30で旧プロファイル自体を削除したため、現在の
+  `GROUP_CC0_HW`にはこのエイリアスは存在しない。
 - **sw_banks[]は対象外**: パフォーマンスパッチ(ベロシティ感度・ビブラート
   等)は音色選択そのものではないため、インストゥルメントリストには含めて
   いない。
 - **未検証事項**: 生成した`.ins`/`.xml`はいずれもJSON/XMLとしての構文
   検証(XML well-formed性、`.ins`側のセクション名一意性・`Patch[]`添字
   重複無し)のみプログラム的に確認済みで、Sekaiju/Cakewalk/DOMINO本体での
-  実際の読み込み動作は未検証(特にSekaiju `.ins`のドラムキット部の
-  `Key[MSB,PC]=<Note Namesセクション>`という書式は、実機配布の
-  `GM1_GM2.ins`の記述パターンを参考に類推したもので、公式マニュアル
-  (`Sekaiju.pdf`等)による裏付けは取れていない。PDFレンダリングツール
-  [poppler-utils]が環境に無く読解できなかったため)。
+  実際の読み込み動作は未検証。
+
+**【訂正】`.Instrument Definitions`は1プロファイル=1機材にまとめる
+（2026年7月26日、ユーザー指摘により同日中に修正）**: 初版はCC#0/CC#32の
+バンクごとに独立した`.Instrument Definitions`セクション(バンク単位で
+別々の「機材」)を作っていたが、これはSekaiju上でバンクの数だけ別々の
+機材として表示されてしまう誤りだった。実機音源の実例
+(`Sekaiju8.3/instrument/KORG_KROME.ins`・`Roland_SC-8850.ins`)の
+`.Instrument Definitions`節を確認したところ、いずれも1機材=1セクション
+であり、その中で持つ全バンクを`Patch[(MSB<<7)|LSB]=<Patch Names
+セクション>`として列挙する構成だった。これに倣い、プロファイル全体を
+1つのセクションにまとめるよう修正した。あわせて、`Key[]`/`Drum[]`の
+第一引数は「対象バンクのPatch[]添字の値と一致させる」という規則も
+上記2ファイルから確認した(`GM1_GM2.ins`の`Key[120,0]`のような
+「生のBank MSB値のみ」の書き方は例外的で、他2ファイルはいずれも
+Patch[]添字と同じ値を使っている多数派のパターンに合わせた)。
+ドラムキットは同一セクション内でメロディ音色と混在するため、
+`Drum[*,*]=1`のようなワイルドカード指定はできず(メロディ側までドラム
+扱いになってしまう)、ドラムキットの`Patch[]`添字ごとに個別に
+`Drum[<添字>,*]=1`を立てる方式にした。詳細は
+`tools/instrument_export/README.md`参照。
 - **Studio One / REAPER対応は保留(2026年7月26日、ユーザー判断)**:
   いずれも本リポジトリの作業環境に実機(実ソフト)が無く動作検証ができない
   ため、Sekaiju/DOMINOの2形式に留めた。Studio Oneは特にDOMINOの`.xml`
@@ -996,7 +1017,78 @@ generate_instruments.py`を新設し、全11プロファイル分を`docs/instru
   Definition Manager」ツールや`script documentation.txt`の内容を先に
   確認すること)。
 
-## 4. 未解決・要確認事項
+### 3.30 統合前の個別プロファイル6件を削除 + インストゥルメントリストを1ファイルに統合（2026年7月26日）
+ユーザー指摘・判断により、2点の大きな構成変更を行った。
+
+**1. 統合前の個別プロファイル(`emulator_*`/`hw_*`、計6件)を削除**:
+`emulator_opl3.profile.json`・`emulator_opm.profile.json`・
+`emulator_opn_family.profile.json`・`hw_opm_emu_opl3.profile.json`・
+`hw_opn_emu_opm_opl3.profile.json`・`hw_spfm_opm.profile.json`は
+「誰もメンテナンスしておらず統合後の構成と矛盾している」とのユーザー
+判断により削除した。あわせて、これら6件だけが参照し他プロファイルから
+参照されていなかった孤立予定のhw_pluginsサブプロファイル6件
+(`fmemuif_opl3.profile.json`・`fmemuif_opm.profile.json`・
+`fitom_hw_opm.profile.json`・`fmemuif_opm_opl3.profile.json`・
+`fitom_hw_opn.profile.json`・`fitom_hw_spfm_opm.profile.json`)も
+削除した(削除前に全11プロファイルの`hw_plugins[].profile`参照を
+突き合わせ、`fmemuif_opn_profile.json`のように新プロファイル側
+(`unified_preset`/`emu_opn`等)からも共有参照されているものは残置)。
+これにより、実機(FitomHwIF)構成のプロファイルは本リポジトリから
+一時的に無くなった。実機構成が必要になった場合は、削除前のコミット
+(`git log -- config/profiles/hw_spfm_opm.profile.json`等で辿れる)を
+参照して再構成すること。README.md・setup.ps1のプロファイル一覧・
+起動例も合わせて更新済み。
+
+**2. インストゥルメントリストを1ファイルに統合**:
+3.29で新設した`generate_instruments.py`は当初、プロファイル(当時11件)
+ごとに個別の`.ins`/`.xml`ファイルを生成し、かつ`.Instrument
+Definitions`セクションもCC#0/CC#32のバンクごとに分けていた(3.29の
+訂正で1プロファイル=1セクションに直したのが直前の修正)。今回さらに
+「`.Instrument Definitions`は1セクション=1機材なので、対象プロファイル
+全部を1つの`.ins`/`.xml`ファイルにまとめられるはず」とのユーザー指摘を
+受け、実際に1ファイルにまとめる設計に変更した。
+- 対象は上記1.の削除により残った統合設計6プロファイル
+  (`unified_preset`/`emu_opn`/`emu_opl`/`emu_opm`/`emu_opll`/`fmall`)
+  のみ。`generate_instruments.py`の`TARGET_PROFILES`辞書に固定リストと
+  して定義し、`--profile`引数(旧: 変換対象を指定)は廃止した。
+- 出力先を`docs/instruments/sekaiju/<profile>.ins`(プロファイルごと)
+  から`docs/instruments/sekaiju/FITOM_X.ins`(1ファイル)に変更。DOMINO側
+  も同様に`docs/instruments/domino/FITOM_X.xml`1ファイルに統合。
+  Sekaiju側は1つの`.ins`内に6つの`.Instrument Definitions`セクション
+  (=6機材)、DOMINO側は1つの`.xml`内に6つの`<Map>`要素(DOMINOの仕様上
+  `<Map>`は複数定義できる、`InstrumentList`/`DrumSetList`とも)として
+  並べている。
+- **`.Instrument Definitions`/`<Map>`の見出し名にマルチバイト文字は
+  使えない**とのユーザー指摘を受け、`config/profiles/*.profile.json`の
+  日本語`profile_name`をそのまま使うのをやめ、`TARGET_PROFILES`辞書で
+  プロファイルキーごとに`"FITOM_X Unified Profile"`のようなASCII名を
+  個別に割り当てるようにした(`.Patch Names`/`.Note Names`側のセクション
+  名は元々プロファイルキー(ファイル名、常にASCII)ベースだったため
+  変更不要)。
+- 詳細・対応表は`tools/instrument_export/README.md`参照。
+
+**【訂正】ドラムキットの`drum_banks[].prog`はCC#32ではなくProgram
+Change値だった（2026年7月26日、ユーザー指摘により同日中に修正）**:
+上記時点の実装は`drum_banks[].prog`をCC#32(Bank Select LSB)相当として
+扱い、キットごとに異なる`Patch[(112<<7)|prog]`(Sekaiju)・
+`<Bank MSB="112" LSB="<prog>">`(DOMINO)を割り当てていたが、これは誤り
+だった。`profile.schema.json`が`drum_banks[]`を「バンク番号概念なし、
+常にbank0固定でprogのみで選択」と定義している通り、`prog`は
+**Program Change値**であり、CC#0=112・CC#32=0固定の**1つのバンク**の
+中でProgram Changeによってキットが切り替わる(GM2ドラムマップの
+Bank MSB=120/121固定・PC違いでキット切替、という仕様と同型)。
+- Sekaiju側: ドラムキット用`Patch[]`はプロファイルにつき
+  `Patch[(112<<7)|0]=<Prog→キット名一覧のPatch Namesセクション>`の
+  1エントリのみにし、`Key[(112<<7)|0, <prog>] = <Note Namesセクション>`
+  という形でProgram Change値(第二引数)ごとにノート名を切り替えるよう
+  修正した(実機の`GM1_GM2.ins`の`[General MIDI Level 2 Drumsets]`と
+  同型の構成)。
+- DOMINO側: `<DrumSetList>`もキットごとに個別の
+  `<PC Name="<キット名>" PC="<prog+1>">`タグ(DOMINOのPC属性は
+  1〜128の1-indexedのため`+1`)を作り、その中の`<Bank>`は常に
+  `LSB="0"`固定にするよう修正した。
+- `DrumKit`データクラスのフィールド名も`cc32`→`prog`に変更し、
+  変数名からも意味の取り違えが起きないようにした。
 
 - `banks/drums/ma2_preset_2op.drumkit.json`・`ma2_variant_2op.drumkit.json`
   のGM2ドラムノート27,28,31-36,103-105(計11ノート)は、参照先
@@ -1049,12 +1141,11 @@ generate_instruments.py`を新設し、全11プロファイル分を`docs/instru
   のみ確認済み、実際に`fitom_core.exe`+FitomEmuIF.dllでADPCM RAM/AWM ROM
   が正しくロードされることは未確認）。実機/エミュレータでの動作確認が
   望ましい。
-- 3.29で新設した`docs/instruments/{sekaiju,domino}/*.{ins,xml}`は
-  Sekaiju/Cakewalk/DOMINO本体での読み込み動作が未検証（構文検証のみ
-  済み）。実機/実ソフトでの動作確認、および他に対応した方が良い
-  MIDIシーケンサー/フォーマット（例: Studio One用`.instrumentmap`、
-  Reaper用ノートネーム(`.reaperbank`/`.txt`)、標準MIDIファイルへの
-  Bank/Program名メタイベント埋め込み等）の要否をユーザーと相談すること。
+- 3.29/3.30で新設した`docs/instruments/sekaiju/FITOM_X.ins`・
+  `docs/instruments/domino/FITOM_X.xml`は、Sekaiju/Cakewalk/DOMINO本体
+  での読み込み動作が未検証（構文検証のみ済み）。実機/実ソフトでの動作
+  確認が望ましい（Studio One/REAPER対応の要否は3.29末尾の記述の通り
+  検証環境待ちで保留中）。
 
 ---
 
