@@ -12,17 +12,26 @@ N88-BASIC(86) OPN音色テキストファイル → FITOM_X hwbank.json 変換�
     [2-9] 未使用 (0固定)
 
   行1〜4 (OP行): OP1(M1), OP2(C1), OP3(M2), OP4(C2)
-    バイナリと同一のバイト値をカンマ区切りで展開したもの:
-    [0] DT1/MUL packed  (D6-4=DT1, D3-0=MUL)
-    [1] TL              (D6-0) ← 1's complement (反転値で格納)
-    [2] KSR/AR packed   (D7-6=KSR, D4-0=AR) ← AR は 1's complement
-    [3] AM/DR packed    (D7=AM, D4-0=DR) ← DR は 1's complement
-    [4] SR              (D4-0) ← 1's complement
-    [5] SL/RR packed    (D7-4=SL, D3-0=RR) ← SL/RR ともに 1's complement
+    各OP行10カラムはパラメータごとの列方向格納(necopn.binと同じグループ順):
+    [0] AR  ← 1's complement (実値 = 31 - 生値)
+    [1] DR  ← 1's complement (実値 = 31 - 生値)
+    [2] SR  ← 1's complement (実値 = 31 - 生値)
+    [3] RR  ← 1's complement (実値 = 15 - 生値)
+    [4] SL  ← 1's complement (実値 = 15 - 生値)
+    [5] TL  ← 1's complement (実値 = 127 - 生値)
+    [6] KSR (生値のまま、2bit)
+    [7] MUL (生値のまま、4bit)
+    [8] DT1/AM合成 (生値が負の場合のみ、DT1が[9]側へ退避されAM情報は失われる。
+        詳細は下記)
+    [9] [8]が負の場合のDT1退避先、[8]が非負の場合はAM(0/1)
 
-  N88-BASIC(86)はADSR/TLをユーザー向け値（OPNレジスタ値の1's complement）で
-  格納しているため、読み出し時にビット反転してレジスタ値に変換する必要がある。
-  DT1/MUL/KSR/AMは方向が同じなので反転不要。
+  [8]/[9]の関係(実データとの照合により判明、2026-07-27):
+    [8] >= 0 の場合: DT1 = [8]、AM = ([9] != 0)
+    [8] <  0 の場合: DT1 = [9]、AM = 0
+    (N88-BASIC側の内部表現で、DT1/AMを1バイトに合成する際に符号付き扱いで
+    オーバーフローしたと見られる古いエディタの挙動。実際に変換済みだった
+    dev/fmvoice/VOICE/OPNA/n88preset.fmbをopn2ini.plでデコードした結果と
+    全82音色・全フィールドが一致することを確認済み)。
 
   参考: https://madscient.hatenablog.jp/entry/2013/07/08/051133
 
@@ -34,23 +43,49 @@ N88-BASIC(86) OPN音色テキストファイル → FITOM_X hwbank.json 変換�
 import json, os, sys, argparse
 from pathlib import Path
 
+# OPN(3bit ALG)のキャリアオペレータ対応(necopn_convert.pyと同一、
+# docs/manuals/swbank.mdのprog24-31対応表参照。ops[]添字: 0=M1,1=C1,2=M2,3=C2)
+CARRIER_OPS_BY_ALG = {
+    0: [3], 1: [3], 2: [3], 3: [3],
+    4: [1, 3],
+    5: [1, 2, 3],
+    6: [1, 2, 3],
+    7: [0, 1, 2, 3],
+}
+
+def normalize_carrier_tl(alg, ops):
+    """キャリアオペレータのTLを正規化する(necopn_convert.pyと同じ規則)。
+
+    単一キャリアならそのTLを0に、複数キャリアなら最もTLが小さい
+    (最も音量が大きい)オペレータのTLを0にし、他のキャリアのTLからも
+    同じ量を減算して相対バランスを保つ。モジュレータのTLは変更しない。
+    """
+    carriers = CARRIER_OPS_BY_ALG[alg]
+    min_tl = min(ops[i]["TL"] for i in carriers)
+    for i in carriers:
+        ops[i]["TL"] -= min_tl
+
 
 def parse_op(row):
     """1OP行(10値リスト) → FmHwOp dict
     ADSR/TL は 1's complement で格納されているため反転してレジスタ値に変換する。
     """
-    b0, b1, b2, b3, b4, b5 = row[0], row[1], row[2], row[3], row[4], row[5]
+    ar, dr, sr, rr, sl, tl, ksr, mul, c8, c9 = row[:10]
+    if c8 < 0:
+        dt1, am = c9, 0
+    else:
+        dt1, am = c8, (1 if c9 != 0 else 0)
     return {
-        "DT1":  (b0 >> 4) & 0x07,          # 反転不要
-        "MUL":   b0 & 0x0F,                 # 反転不要
-        "TL":   (~b1) & 0x7F,               # 7bit 反転
-        "KSR":  (b2 >> 6) & 0x03,           # 反転不要
-        "AR":   (~b2) & 0x1F,               # 5bit 反転
-        "AM":   (b3 >> 7) & 0x01,           # 反転不要
-        "DR":   (~b3) & 0x1F,               # 5bit 反転
-        "SR":   (~b4) & 0x1F,               # 5bit 反転
-        "SL":   (~(b5 >> 4)) & 0x0F,        # 4bit 反転 (上位4bit)
-        "RR":   (~b5) & 0x0F,               # 4bit 反転 (下位4bit)
+        "DT1": dt1,
+        "MUL": mul,
+        "TL":  0x7F - tl,   # 7bit 反転
+        "KSR": ksr,
+        "AR":  0x1F - ar,   # 5bit 反転
+        "AM":  am,
+        "DR":  0x1F - dr,   # 5bit 反転
+        "SR":  0x1F - sr,   # 5bit 反転
+        "SL":  0x0F - sl,   # 4bit 反転
+        "RR":  0x0F - rr,   # 4bit 反転
     }
 
 
@@ -90,6 +125,9 @@ def convert(src_dir, dst_path, names=None, bank_name="N88-BASIC Preset"):
         op_m2 = parse_op(rows[3])  # OP3 = M2
         op_c2 = parse_op(rows[4])  # OP4 = C2
 
+        ops = [op_m1, op_c1, op_m2, op_c2]
+        normalize_carrier_tl(alg, ops)
+
         name = names[i] if names else fname
         patches.append({
             "prog": i,
@@ -98,7 +136,7 @@ def convert(src_dir, dst_path, names=None, bank_name="N88-BASIC Preset"):
             "ALG":  alg,
             "AMS":  ams,
             "PMS":  fms,
-            "ops":  [op_m1, op_c1, op_m2, op_c2],
+            "ops":  ops,
         })
 
     hwbank = {
@@ -107,6 +145,8 @@ def convert(src_dir, dst_path, names=None, bank_name="N88-BASIC Preset"):
         "source":           str(src_dir),
         "note":             "N88-BASIC(86)のOPN音色テキストデータ。"
                             "ADSR/TLはN88-BASIC格納値(1's complement)からレジスタ値に変換済み。"
+                            "キャリアオペレータのTLはALGに応じて正規化済み"
+                            "(normalize_carrier_tl()、necopn_convert.pyと同じ規則)。"
                             "ops格納順は [M1, C1, M2, C2]。",
         "patches": patches,
     }
