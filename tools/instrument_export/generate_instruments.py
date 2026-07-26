@@ -1,21 +1,30 @@
 #!/usr/bin/env python3
 """FITOM_X の config/profiles/*.profile.json から、MIDIシーケンサー用の
 インストゥルメント定義ファイル(Cakewalk/Sekaiju用 .ins、DOMINO用 .xml)を
-生成する汎用変換スクリプト。
+生成するスクリプト。
 
 対応するCC#0(Bank Select MSB)の意味は docs/CLAUDE.md 3.2節、
 docs/manuals/README.md の対応表を参照。
 
+対象は統合設計プロファイル(TARGET_PROFILES参照)のみ。統合前の個別
+プロファイル(旧emulator_*/hw_*)は誰もメンテナンスしておらず統合後の
+構成と矛盾していたため2026年7月26日に削除済み(docs/CLAUDE.md 3.30節)。
+
+実機音源の実例(Sekaiju8.3/instrument/KORG_KROME.ins・Roland_SC-8850.ins)
+に倣い、Sekaiju上で1プロファイル=1機材として認識されるよう、
+全対象プロファイルを1つの.Instrument Definitionsセクション群として
+1つの.ins/.xmlファイルにまとめて出力する(プロファイルごとに別ファイルには
+分けない)。
+
 使い方:
-    python3 generate_instruments.py                     # 全プロファイルを変換
-    python3 generate_instruments.py --profile config/profiles/unified_preset.profile.json
+    python3 generate_instruments.py                     # 既定の出力先に生成
     python3 generate_instruments.py --out-dir docs/instruments
 """
 from __future__ import annotations
 
 import argparse
-import json
 import sys
+import json
 from dataclasses import dataclass
 from pathlib import Path
 from xml.sax.saxutils import escape as _xml_escape_text
@@ -25,18 +34,30 @@ def xml_escape(s: str) -> str:
     """XML属性値として安全な文字列に変換する(属性値中の " も含めてエスケープ)。"""
     return _xml_escape_text(s, {'"': "&quot;"})
 
+
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PROFILES_DIR = REPO_ROOT / "config" / "profiles"
 DEFAULT_OUT_DIR = REPO_ROOT / "docs" / "instruments"
+OUTPUT_STEM = "FITOM_X"
 
-# docs/CLAUDE.md 3.2節 VoicePatchType(CC#0直接モード値)。
-# "OPN"/"OPM"/"OPL2"は統合前の旧プロファイル(emulator_*/hw_*)が使う旧称で、
-# 参照先hwbank.jsonの実体は同一ファイルが新プロファイルでOPN2/OPZ/OPL3_2として
-# 参照されていることを確認済み(2026年7月26日、本スクリプト作成時に照合)。
+# 生成対象プロファイル(profile_key -> セクション見出し用ASCII表示名)。
+# Sekaiju/CakewalkのInstrument Definitionセクション名にマルチバイト文字は
+# 使えないため、config/profiles/*.profile.jsonの日本語profile_nameは使わず
+# ここで別途ASCII名を割り当てる。
+TARGET_PROFILES: dict[str, str] = {
+    "unified_preset": "FITOM_X Unified Profile",
+    "emu_opn": "FITOM_X OPN Emulator",
+    "emu_opl": "FITOM_X OPL Emulator",
+    "emu_opm": "FITOM_X OPM Emulator",
+    "emu_opll": "FITOM_X OPLL Emulator",
+    "fmall": "FITOM_X FM All",
+}
+
+# docs/CLAUDE.md 3.2節 VoicePatchType(CC#0直接モード値)
 GROUP_CC0_HW = {
-    "OPN2": 17, "OPN": 17,
-    "OPZ": 26, "OPM": 26,
-    "OPL3_2": 34, "OPL2": 34,
+    "OPN2": 17,
+    "OPZ": 26,
+    "OPL3_2": 34,
     "OPL_RHY": 35,
     "OPLL": 40,
     "OPL3": 48,
@@ -62,9 +83,22 @@ class Entry:
 
 @dataclass(frozen=True)
 class DrumKit:
-    cc32: int
+    # drum_banks[].prog はCC#32(Bank Select LSB)ではなくProgram Change値。
+    # CC#0=112・CC#32=0固定の1バンク内で、Progによってキットが切り替わる
+    # (docs/manuals/README.md「バンクマップ」表・drumkits.mdの「Prog」列、
+    # profile.schema.jsonのdrum_banks[]が「常にbank0固定でprogのみで選択」
+    # である設計に対応)。
+    prog: int
     name: str
     notes: "list[tuple[int, str]] | None"  # None = type:direct (個別ノート名なし)
+
+
+@dataclass(frozen=True)
+class Profile:
+    key: str
+    display_name: str
+    melodic: "list[Entry]"
+    drums: "list[DrumKit]"
 
 
 def load_json(path: Path) -> dict:
@@ -156,6 +190,18 @@ def collect_drum_kits(profile: dict, profile_dir: Path) -> list[DrumKit]:
     return kits
 
 
+def load_profiles(warn) -> list[Profile]:
+    profiles: list[Profile] = []
+    for key, display_name in TARGET_PROFILES.items():
+        path = PROFILES_DIR / f"{key}.profile.json"
+        profile_dir = path.parent
+        data = load_json(path)
+        melodic = collect_melodic_entries(data, profile_dir, lambda m, k=key: warn(f"{k}: {m}"))
+        drums = collect_drum_kits(data, profile_dir)
+        profiles.append(Profile(key, display_name, melodic, drums))
+    return profiles
+
+
 # ---------------------------------------------------------------------------
 # Sekaiju / Cakewalk .ins 出力
 # ---------------------------------------------------------------------------
@@ -176,15 +222,31 @@ GM_CONTROLLER_NAMES = [
 GM_RPN_NAMES = [
     (0, "Pitch Bend Sensitivity"), (1, "Channel Fine Tune"), (2, "Channel Coarse Tune"),
 ]
+CONTROLLERS_SECTION = f"{OUTPUT_STEM} Controllers"
+RPN_SECTION = f"{OUTPUT_STEM} RPN"
 
 
-def build_ins(profile_key: str, profile_display_name: str,
-              melodic: list[Entry], drums: list[DrumKit]) -> str:
+def _bank_section_name(profile_key: str, cc0: int, cc32: int) -> str:
+    return f"{profile_key} CC0={cc0} CC32={cc32}"
+
+
+def _drum_patch_names_section(profile_key: str) -> str:
+    """CC#0=112・CC#32=0固定の1バンク内、Prog(Program Change)ごとの
+    ドラムキット名一覧(GM1_GM2.insの[General MIDI Level 2 Drumsets]と
+    同じ構造)。"""
+    return f"{profile_key} Drum Kits"
+
+
+def _drum_note_section_name(profile_key: str, prog: int, name: str) -> str:
+    return f"{profile_key} Drum Prog={prog} {_ins_sanitize(name)}"
+
+
+def build_ins(profiles: list[Profile]) -> str:
     lines: list[str] = []
     lines.append(";")
-    lines.append(f"; FITOM_X - {_ins_sanitize(profile_display_name)}")
+    lines.append(f"; {OUTPUT_STEM} - MIDI Instrument Definitions")
     lines.append(f"; Auto-generated by tools/instrument_export/generate_instruments.py")
-    lines.append(f"; source: config/profiles/{profile_key}.profile.json")
+    lines.append("; source: config/profiles/*.profile.json")
     lines.append(";")
     lines.append("")
     lines.append("; ----------------------------------------------------------------------")
@@ -192,49 +254,47 @@ def build_ins(profile_key: str, profile_display_name: str,
     lines.append(".Patch Names")
     lines.append("")
 
-    # メロディ系: (cc0,cc32)ごとにグループ化
-    by_bank: dict[tuple[int, int], list[Entry]] = {}
-    bank_display: dict[tuple[int, int], str] = {}
-    for e in melodic:
-        key = (e.cc0, e.cc32)
-        by_bank.setdefault(key, []).append(e)
+    by_bank_per_profile: dict[str, dict[tuple[int, int], list[Entry]]] = {}
+    for prof in profiles:
+        by_bank: dict[tuple[int, int], list[Entry]] = {}
+        for e in prof.melodic:
+            by_bank.setdefault((e.cc0, e.cc32), []).append(e)
+        by_bank_per_profile[prof.key] = by_bank
 
-    def bank_section_name(cc0: int, cc32: int) -> str:
-        return f"{profile_key} CC0={cc0} CC32={cc32}"
+        for (cc0, cc32), items in sorted(by_bank.items()):
+            lines.append(f"[{_bank_section_name(prof.key, cc0, cc32)}]")
+            for e in sorted(items, key=lambda x: x.prog):
+                lines.append(f"{e.prog}={_ins_sanitize(e.name)}")
+            lines.append("")
 
-    def drum_section_name(cc32: int, name: str) -> str:
-        return f"{profile_key} Drum CC32={cc32} {_ins_sanitize(name)}"
-
-    for (cc0, cc32), items in sorted(by_bank.items()):
-        lines.append(f"[{bank_section_name(cc0, cc32)}]")
-        for e in sorted(items, key=lambda x: x.prog):
-            lines.append(f"{e.prog}={_ins_sanitize(e.name)}")
-        lines.append("")
-
-    # ドラムキットは1キット=1Patchとして扱うため、Patch Namesは「0=キット名」の1件のみ
-    for kit in drums:
-        lines.append(f"[{drum_section_name(kit.cc32, kit.name)}]")
-        lines.append(f"0={_ins_sanitize(kit.name)}")
-        lines.append("")
+        # ドラムキットはCC#0=112・CC#32=0固定の1バンク内でProgram Changeに
+        # よって切り替わる(drum_banks[].progはCC#32ではなくProg)。そのため
+        # Patch Namesも1バンク分のセクションにProg->キット名の一覧としてまとめる。
+        if prof.drums:
+            lines.append(f"[{_drum_patch_names_section(prof.key)}]")
+            for kit in sorted(prof.drums, key=lambda k: k.prog):
+                lines.append(f"{kit.prog}={_ins_sanitize(kit.name)}")
+            lines.append("")
 
     lines.append("; ----------------------------------------------------------------------")
     lines.append("")
     lines.append(".Note Names")
     lines.append("")
 
-    for kit in drums:
-        if not kit.notes:
-            continue
-        lines.append(f"[{drum_section_name(kit.cc32, kit.name)}]")
-        for note, name in sorted(kit.notes):
-            lines.append(f"{note}={_ins_sanitize(name)}")
-        lines.append("")
+    for prof in profiles:
+        for kit in prof.drums:
+            if not kit.notes:
+                continue
+            lines.append(f"[{_drum_note_section_name(prof.key, kit.prog, kit.name)}]")
+            for note, name in sorted(kit.notes):
+                lines.append(f"{note}={_ins_sanitize(name)}")
+            lines.append("")
 
     lines.append("; ----------------------------------------------------------------------")
     lines.append("")
     lines.append(".Controller Names")
     lines.append("")
-    lines.append(f"[{profile_key} Controllers]")
+    lines.append(f"[{CONTROLLERS_SECTION}]")
     for num, name in GM_CONTROLLER_NAMES:
         lines.append(f"{num}={name}")
     lines.append("")
@@ -243,7 +303,7 @@ def build_ins(profile_key: str, profile_display_name: str,
     lines.append("")
     lines.append(".RPN Names")
     lines.append("")
-    lines.append(f"[{profile_key} RPN]")
+    lines.append(f"[{RPN_SECTION}]")
     for num, name in GM_RPN_NAMES:
         lines.append(f"{num}={name}")
     lines.append("")
@@ -253,27 +313,41 @@ def build_ins(profile_key: str, profile_display_name: str,
     lines.append(".Instrument Definitions")
     lines.append("")
 
-    for (cc0, cc32), _items in sorted(by_bank.items()):
-        section = bank_section_name(cc0, cc32)
-        patch_index = (cc0 << 7) | cc32
-        lines.append(f"[{section}]")
-        lines.append(f"Control={profile_key} Controllers")
-        lines.append(f"RPN={profile_key} RPN")
-        lines.append(f"Patch[{patch_index}]={section}")
+    # 実機音源の.ins実例(KORG_KROME.ins、Roland_SC-8850.ins)は、1機材=1つの
+    # Instrument Definitionセクションであり、その中で持つ全バンクをPatch[]で
+    # 列挙する構成になっている(バンクごとに別セクションを作ると、Sekaiju上で
+    # バンクの数だけ別々の「機材」として扱われてしまう)。これに倣い、
+    # プロファイルごとに1つのセクションにまとめる(複数プロファイルは
+    # 同じ1ファイルの中に複数の機材として並ぶ)。
+    for prof in profiles:
+        by_bank = by_bank_per_profile[prof.key]
+        lines.append(f"[{_ins_sanitize(prof.display_name)}]")
+        lines.append(f"Control={CONTROLLERS_SECTION}")
+        lines.append(f"RPN={RPN_SECTION}")
+        for (cc0, cc32), _items in sorted(by_bank.items()):
+            patch_index = (cc0 << 7) | cc32
+            lines.append(f"Patch[{patch_index}]={_bank_section_name(prof.key, cc0, cc32)}")
+        # ドラムキットはCC#0=112・CC#32=0固定の1バンクのみ(Patch[]添字は
+        # 1個だけ)。GM1_GM2.insの[General MIDI Level 2 Drumsets]と同じく、
+        # Key[]の第二引数(PC)でキットの種類を切り替える。
+        drum_patch_index = (CC0_RHYTHM << 7) | 0
+        if prof.drums:
+            lines.append(f"Patch[{drum_patch_index}]={_drum_patch_names_section(prof.key)}")
         lines.append("Patch[*]=1..128")
-        lines.append("")
-
-    for kit in drums:
-        section = drum_section_name(kit.cc32, kit.name)
-        patch_index = (CC0_RHYTHM << 7) | kit.cc32
-        lines.append(f"[{section} Inst]")
-        lines.append(f"Control={profile_key} Controllers")
-        lines.append(f"RPN={profile_key} RPN")
-        lines.append(f"Patch[{patch_index}]={section}")
         lines.append("Key[*,*]=0..127")
-        if kit.notes:
-            lines.append(f"Key[{CC0_RHYTHM},0]={section}")
-        lines.append("Drum[*,*]=1")
+        # Key[]の第一引数は対応するPatch[]添字の値と一致させる(KORG_KROME.ins/
+        # Roland_SC-8850.insの実例に倣う)。第二引数はProgram Change値
+        # (drum_banks[].prog、0-indexed)。
+        # メロディ音色と同一セクション内にドラムキットも列挙するため、
+        # Drum[*,*]のようなワイルドカード指定はできない(メロディ側まで
+        # ドラムトラック扱いになってしまう)。ドラムキットのPatch[]添字にのみ
+        # 個別に立てる。
+        for kit in prof.drums:
+            if kit.notes:
+                lines.append(f"Key[{drum_patch_index},{kit.prog}]="
+                              f"{_drum_note_section_name(prof.key, kit.prog, kit.name)}")
+        if prof.drums:
+            lines.append(f"Drum[{drum_patch_index},*]=1")
         lines.append("")
 
     return "\n".join(lines) + "\n"
@@ -283,53 +357,58 @@ def build_ins(profile_key: str, profile_display_name: str,
 # DOMINO .xml 出力
 # ---------------------------------------------------------------------------
 
-def build_domino_xml(profile_key: str, profile_display_name: str,
-                      melodic: list[Entry], drums: list[DrumKit]) -> str:
-    by_prog: dict[int, list[Entry]] = {}
-    for e in melodic:
-        by_prog.setdefault(e.prog, []).append(e)
-
+def build_domino_xml(profiles: list[Profile]) -> str:
     out: list[str] = []
     out.append('<?xml version="1.0" encoding="Shift_JIS"?>')
     out.append("")
     out.append(
-        f'<ModuleData Name="{xml_escape(profile_display_name)}" Folder="FITOM_X" '
+        f'<ModuleData Name="{xml_escape(OUTPUT_STEM)}" Folder="FITOM_X" '
         f'Priority="100" FileCreator="FITOM_staging/tools/instrument_export" '
         f'FileVersion="1.0">'
     )
     out.append('\t<RhythmTrackDefault Gate="1" />')
     out.append("")
     out.append("\t<InstrumentList>")
-    out.append(f'\t\t<Map Name="{xml_escape(profile_key)}">')
-    for prog in sorted(by_prog):
-        items = by_prog[prog]
-        pc_name = f"Program {prog + 1}"
-        out.append(f'\t\t\t<PC Name="{xml_escape(pc_name)}" PC="{prog + 1}">')
-        for e in sorted(items, key=lambda x: (x.cc0, x.cc32)):
-            out.append(
-                f'\t\t\t\t<Bank Name="{xml_escape(e.name)}" '
-                f'MSB="{e.cc0}" LSB="{e.cc32}" />'
-            )
-        out.append("\t\t\t</PC>")
-    out.append("\t\t</Map>")
+    for prof in profiles:
+        by_prog: dict[int, list[Entry]] = {}
+        for e in prof.melodic:
+            by_prog.setdefault(e.prog, []).append(e)
+
+        out.append(f'\t\t<Map Name="{xml_escape(prof.display_name)}">')
+        for prog in sorted(by_prog):
+            items = by_prog[prog]
+            pc_name = f"Program {prog + 1}"
+            out.append(f'\t\t\t<PC Name="{xml_escape(pc_name)}" PC="{prog + 1}">')
+            for e in sorted(items, key=lambda x: (x.cc0, x.cc32)):
+                out.append(
+                    f'\t\t\t\t<Bank Name="{xml_escape(e.name)}" '
+                    f'MSB="{e.cc0}" LSB="{e.cc32}" />'
+                )
+            out.append("\t\t\t</PC>")
+        out.append("\t\t</Map>")
     out.append("\t</InstrumentList>")
     out.append("")
 
-    kits_with_notes = [k for k in drums if k.notes]
-    if kits_with_notes:
+    profiles_with_drums = [p for p in profiles if any(k.notes for k in p.drums)]
+    if profiles_with_drums:
         out.append("\t<DrumSetList>")
-        out.append(f'\t\t<Map Name="{xml_escape(profile_key)}">')
-        out.append('\t\t\t<PC Name="Drum Kits" PC="1">')
-        for kit in kits_with_notes:
-            out.append(
-                f'\t\t\t\t<Bank Name="{xml_escape(kit.name)}" '
-                f'MSB="{CC0_RHYTHM}" LSB="{kit.cc32}">'
-            )
-            for note, name in sorted(kit.notes):
-                out.append(f'\t\t\t\t\t<Tone Name="{xml_escape(name)}" Key="{note}" />')
-            out.append("\t\t\t\t</Bank>")
-        out.append("\t\t\t</PC>")
-        out.append("\t\t</Map>")
+        for prof in profiles_with_drums:
+            kits_with_notes = [k for k in prof.drums if k.notes]
+            out.append(f'\t\t<Map Name="{xml_escape(prof.display_name)}">')
+            # ドラムキットはCC#0=112・CC#32=0固定の1バンク内でProgram Changeに
+            # よって切り替わる(drum_banks[].progはCC#32ではなくProg)ため、
+            # キットごとに別のPCタグ(PC=prog+1)を作り、Bankは常にLSB=0固定。
+            for kit in sorted(kits_with_notes, key=lambda k: k.prog):
+                out.append(f'\t\t\t<PC Name="{xml_escape(kit.name)}" PC="{kit.prog + 1}">')
+                out.append(
+                    f'\t\t\t\t<Bank Name="{xml_escape(kit.name)}" '
+                    f'MSB="{CC0_RHYTHM}" LSB="0">'
+                )
+                for note, name in sorted(kit.notes):
+                    out.append(f'\t\t\t\t\t<Tone Name="{xml_escape(name)}" Key="{note}" />')
+                out.append("\t\t\t\t</Bank>")
+                out.append("\t\t\t</PC>")
+            out.append("\t\t</Map>")
         out.append("\t</DrumSetList>")
         out.append("")
 
@@ -341,51 +420,32 @@ def build_domino_xml(profile_key: str, profile_display_name: str,
 # メイン処理
 # ---------------------------------------------------------------------------
 
-def convert_profile(profile_path: Path, out_dir: Path) -> None:
-    profile_dir = profile_path.parent
-    profile_key = profile_path.stem.replace(".profile", "")
-    profile = load_json(profile_path)
-    display_name = profile.get("profile_name") or profile_key
-
-    warnings: list[str] = []
-    melodic = collect_melodic_entries(profile, profile_dir, lambda m: warnings.append(m))
-    drums = collect_drum_kits(profile, profile_dir)
-
-    for w in warnings:
-        print(f"  [警告] {profile_key}: {w}", file=sys.stderr)
-
-    sekaiju_dir = out_dir / "sekaiju"
-    domino_dir = out_dir / "domino"
-    sekaiju_dir.mkdir(parents=True, exist_ok=True)
-    domino_dir.mkdir(parents=True, exist_ok=True)
-
-    ins_text = build_ins(profile_key, display_name, melodic, drums)
-    (sekaiju_dir / f"{profile_key}.ins").write_text(ins_text, encoding="cp932", errors="replace")
-
-    xml_text = build_domino_xml(profile_key, display_name, melodic, drums)
-    (domino_dir / f"{profile_key}.xml").write_text(xml_text, encoding="cp932", errors="replace")
-
-    print(f"{profile_key}: melodic={len(melodic)} patches, "
-          f"banks={len({(e.cc0, e.cc32) for e in melodic})}, "
-          f"drum_kits={len(drums)} -> {sekaiju_dir / (profile_key + '.ins')}, "
-          f"{domino_dir / (profile_key + '.xml')}")
-
-
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--profile", type=Path, action="append",
-                         help="変換するprofile.jsonのパス(複数指定可、省略時は全件)")
     parser.add_argument("--out-dir", type=Path, default=DEFAULT_OUT_DIR,
                          help=f"出力先ディレクトリ(既定: {DEFAULT_OUT_DIR})")
     args = parser.parse_args()
 
-    if args.profile:
-        profile_paths = [p.resolve() for p in args.profile]
-    else:
-        profile_paths = sorted(PROFILES_DIR.glob("*.profile.json"))
+    warnings: list[str] = []
+    profiles = load_profiles(lambda m: warnings.append(m))
+    for w in warnings:
+        print(f"  [警告] {w}", file=sys.stderr)
 
-    for path in profile_paths:
-        convert_profile(path, args.out_dir)
+    sekaiju_dir = args.out_dir / "sekaiju"
+    domino_dir = args.out_dir / "domino"
+    sekaiju_dir.mkdir(parents=True, exist_ok=True)
+    domino_dir.mkdir(parents=True, exist_ok=True)
+
+    ins_path = sekaiju_dir / f"{OUTPUT_STEM}.ins"
+    ins_path.write_text(build_ins(profiles), encoding="cp932", errors="replace")
+
+    xml_path = domino_dir / f"{OUTPUT_STEM}.xml"
+    xml_path.write_text(build_domino_xml(profiles), encoding="cp932", errors="replace")
+
+    total_melodic = sum(len(p.melodic) for p in profiles)
+    total_drums = sum(len(p.drums) for p in profiles)
+    print(f"{len(profiles)} profiles: melodic={total_melodic} patches, "
+          f"drum_kits={total_drums} -> {ins_path}, {xml_path}")
 
 
 if __name__ == "__main__":

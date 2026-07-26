@@ -19,25 +19,20 @@ FITOM_staging/
 │   │
 │   ├── profiles/           FITOM_X プロファイル階層 (ディレクトリ配置を
 │   │   │                   プロファイルの参照階層に合わせている)
-│   │   ├── emulator_opm.profile.json        OPM エミュレーター構成
-│   │   ├── emulator_opl3.profile.json       OPL3 エミュレーター構成
-│   │   ├── emulator_opn_family.profile.json OPN/OPN2/OPNA/OPNB/OPNBB 5チップ同時
-│   │   ├── hw_spfm_opm.profile.json         SPFM 実機 OPM 構成
-│   │   ├── hw_opm_emu_opl3.profile.json     OPM 実機 + OPL3 エミュ混在
-│   │   ├── hw_opn_emu_opm_opl3.profile.json OPN 実機 + OPM/OPL3 エミュ混在
+│   │   ├── unified_preset.profile.json      全チップ統合プロファイル (GM+専用バンク一式)
+│   │   ├── emu_opn.profile.json             OPNエミュプロファイル (OPN/OPN2/OPNA/OPNB/OPNBB)
+│   │   ├── emu_opl.profile.json             OPLエミュプロファイル (OPL[rhythm]/Y8950/OPL2/OPL3/OPL4)
+│   │   ├── emu_opm.profile.json             OPMエミュプロファイル (OPM×2/OPZ×2)
+│   │   ├── emu_opll.profile.json            OPLLエミュプロファイル (OPLL/OPLL2[rhythm]/OPLLP/VRC7/OPLLX)
+│   │   ├── fmall.profile.json               FMALL (OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7)
 │   │   │
 │   │   └── hw_plugins/     上記プロファイルの hw_plugins[].profile が指す
 │   │       │               プラグイン固有サブプロファイル (第2階層)
-│   │       ├── fmemuif_opn_profile.json    FitomEmuIF 用 (OPN ファミリー 5チップ)
-│   │       ├── fmemuif_opm.profile.json    FitomEmuIF 用 (OPM 単体)
-│   │       ├── fmemuif_opl3.profile.json   FitomEmuIF 用 (OPL3 単体)
-│   │       ├── fmemuif_opm_opl3.profile.json FitomEmuIF 用 (OPM + OPL3 混在)
+│   │       ├── fmemuif_opn_profile.json    FitomEmuIF 用 (OPN ファミリー 5チップ、unified_preset/emu_opnが共用)
 │   │       ├── fmemuif_opl5.profile.json   FitomEmuIF 用 (OPL系 5チップ)
-│   │       ├── fmemuif_opll5.profile.json  FitomEmuIF 用 (OPLL系 5チップ)
 │   │       ├── fmemuif_opm_opz4.profile.json FitomEmuIF 用 (OPM/OPZ 4チップ)
-│   │       ├── fitom_hw_spfm_opm.profile.json  FitomHwIF 用 (SPFM OPM 単体)
-│   │       ├── fitom_hw_opm.profile.json   FitomHwIF 用 (SPFM OPM、混在用)
-│   │       └── fitom_hw_opn.profile.json   FitomHwIF 用 (SPFM OPN、混在用)
+│   │       ├── fmemuif_opll5.profile.json  FitomEmuIF 用 (OPLL系 5チップ)
+│   │       └── fmemuif_fmall.profile.json  FitomEmuIF 用 (FMALL 10チップ)
 │
 ├── config_schema/          JSON Schema 定義
 │   ├── profile.schema.json
@@ -91,16 +86,23 @@ FITOM_X 本体はエミュレーターか実機かを区別しない。
 
 ### プロファイルの対応関係
 
-| FITOM_X プロファイル | FitomEmuIF サブプロファイル | FitomHwIF サブプロファイル |
-|---|---|---|
-| emulator_opn_family | fmemuif_opn_profile.json (5チップ) | — |
-| emulator_opm | fmemuif_opm.profile.json | — |
-| emulator_opl3 | fmemuif_opl3.profile.json | — |
-| hw_spfm_opm | — | fitom_hw_spfm_opm.profile.json |
-| hw_opm_emu_opl3 | fmemuif_opl3.profile.json | fitom_hw_opm.profile.json |
-| hw_opn_emu_opm_opl3 | fmemuif_opm_opl3.profile.json | fitom_hw_opn.profile.json |
+| FITOM_X プロファイル | FitomEmuIF サブプロファイル |
+|---|---|
+| unified_preset | fmemuif_opn_profile.json |
+| emu_opn | fmemuif_opn_profile.json |
+| emu_opl | fmemuif_opl5.profile.json |
+| emu_opm | fmemuif_opm_opz4.profile.json |
+| emu_opll | fmemuif_opll5.profile.json |
+| fmall | fmemuif_fmall.profile.json |
 
 (いずれも `config/profiles/hw_plugins/` 配下)
+
+統合前の個別プロファイル(`emulator_*.profile.json`/`hw_*.profile.json`、
+FitomHwIF実機構成を含む)は誰もメンテナンスしておらず統合後の構成と
+矛盾していたため、2026年7月26日に`config/profiles/`および対応する
+`hw_plugins/`サブプロファイルごと削除した。実機(FitomHwIF)構成を
+使う場合は、削除前の履歴(`git log -- config/profiles/hw_spfm_opm.profile.json`等)
+を参照して再構成すること。
 
 ## 依存プロジェクト
 
@@ -134,7 +136,7 @@ cd FITOM_staging
 
 ```powershell
 # FITOM_X プロファイルを指定して起動
-fitom_core.exe --profile config/profiles/emulator_opn_family.profile.json
+fitom_core.exe --profile config/profiles/unified_preset.profile.json
 ```
 
 実際に読み込まれるサブプロファイルは、選択した FITOM_X プロファイルの
