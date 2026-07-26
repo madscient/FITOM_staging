@@ -14,6 +14,7 @@
 				<Bank Name="DEFAULT" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 1" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 129" MSB="17" LSB="3" />
+				<Bank Name="Analog Bass #2+FBsynth" MSB="17" LSB="4" />
 				<Bank Name="GrandPiano" MSB="26" LSB="0" />
 				<Bank Name="AcouPiano" MSB="26" LSB="1" />
 				<Bank Name="Brass" MSB="26" LSB="2" />
@@ -78,6 +79,7 @@
 				<Bank Name="BRASS2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 2" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 130" MSB="17" LSB="3" />
+				<Bank Name="Analog Bass" MSB="17" LSB="4" />
 				<Bank Name="PhGrand" MSB="26" LSB="0" />
 				<Bank Name="HonkPiano" MSB="26" LSB="1" />
 				<Bank Name="LoStrig" MSB="26" LSB="2" />
@@ -137,6 +139,7 @@
 				<Bank Name="STRING2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 3" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 131" MSB="17" LSB="3" />
+				<Bank Name="Analog bass #2 (q2)" MSB="17" LSB="4" />
 				<Bank Name="Elec Grand" MSB="26" LSB="0" />
 				<Bank Name="ElecPiano" MSB="26" LSB="1" />
 				<Bank Name="NewEP" MSB="26" LSB="2" />
@@ -196,6 +199,7 @@
 				<Bank Name="EPIANO3" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 4" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 132" MSB="17" LSB="3" />
+				<Bank Name="Chopper Bass 0" MSB="17" LSB="4" />
 				<Bank Name="HonkeyTonk" MSB="26" LSB="0" />
 				<Bank Name="Clavinet" MSB="26" LSB="1" />
 				<Bank Name="EBass" MSB="26" LSB="2" />
@@ -249,6 +253,7 @@
 				<Bank Name="EBASS1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 5" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 133" MSB="17" LSB="3" />
+				<Bank Name="Chopper Bass 1" MSB="17" LSB="4" />
 				<Bank Name="E Piano  1" MSB="26" LSB="0" />
 				<Bank Name="Celesta" MSB="26" LSB="1" />
 				<Bank Name="EOrgan2" MSB="26" LSB="2" />
@@ -305,6 +310,7 @@
 				<Bank Name="EORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 6" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 134" MSB="17" LSB="3" />
+				<Bank Name="Chopper bass 2 (CUT)" MSB="17" LSB="4" />
 				<Bank Name="E Piano  2" MSB="26" LSB="0" />
 				<Bank Name="Chambalo" MSB="26" LSB="1" />
 				<Bank Name="Flute" MSB="26" LSB="2" />
@@ -366,6 +372,7 @@
 				<Bank Name="PORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 7" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 135" MSB="17" LSB="3" />
+				<Bank Name="Chopper bass 3" MSB="17" LSB="4" />
 				<Bank Name="Harpsichrd" MSB="26" LSB="0" />
 				<Bank Name="A.Guitar" MSB="26" LSB="1" />
 				<Bank Name="Clarine" MSB="26" LSB="2" />
@@ -424,6 +431,7 @@
 				<Bank Name="FLUTE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 8" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 136" MSB="17" LSB="3" />
+				<Bank Name="Elec.Chopper bass+ 4" MSB="17" LSB="4" />
 				<Bank Name="Clavi" MSB="26" LSB="0" />
 				<Bank Name="ElecGuitar" MSB="26" LSB="1" />
 				<Bank Name="Xylophn" MSB="26" LSB="2" />
@@ -480,6 +488,7 @@
 				<Bank Name="OBOE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 9" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 137" MSB="17" LSB="3" />
+				<Bank Name="Effect Bass 1" MSB="17" LSB="4" />
 				<Bank Name="Celeste" MSB="26" LSB="0" />
 				<Bank Name="WoodBass" MSB="26" LSB="1" />
 				<Bank Name="Clav" MSB="26" LSB="2" />
@@ -533,6 +542,7 @@
 				<Bank Name="CLARINET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 10" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 138" MSB="17" LSB="3" />
+				<Bank Name="Effect Bass 2 to UP" MSB="17" LSB="4" />
 				<Bank Name="Glocken" MSB="26" LSB="0" />
 				<Bank Name="ElecBass" MSB="26" LSB="1" />
 				<Bank Name="Harp" MSB="26" LSB="2" />
@@ -587,6 +597,7 @@
 				<Bank Name="VIBRAPHN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 11" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 139" MSB="17" LSB="3" />
+				<Bank Name="Effect Bass 1" MSB="17" LSB="4" />
 				<Bank Name="Music Box" MSB="26" LSB="0" />
 				<Bank Name="Banjo" MSB="26" LSB="1" />
 				<Bank Name="SteelDr" MSB="26" LSB="2" />
@@ -648,6 +659,7 @@
 				<Bank Name="HARPSIC" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 12" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 140" MSB="17" LSB="3" />
+				<Bank Name="Mowa~" MSB="17" LSB="4" />
 				<Bank Name="Vibraphone" MSB="26" LSB="0" />
 				<Bank Name="Sitar" MSB="26" LSB="1" />
 				<Bank Name="Horn Lo" MSB="26" LSB="2" />
@@ -706,6 +718,7 @@
 				<Bank Name="BELL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 13" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 141" MSB="17" LSB="3" />
+				<Bank Name="Effect FB Bass #5" MSB="17" LSB="4" />
 				<Bank Name="Marimba" MSB="26" LSB="0" />
 				<Bank Name="Harp" MSB="26" LSB="1" />
 				<Bank Name="Metal" MSB="26" LSB="2" />
@@ -762,6 +775,7 @@
 				<Bank Name="PIANO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 14" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 142" MSB="17" LSB="3" />
+				<Bank Name="Calm Bell" MSB="17" LSB="4" />
 				<Bank Name="Xylophone" MSB="26" LSB="0" />
 				<Bank Name="Koto" MSB="26" LSB="1" />
 				<Bank Name="Voices" MSB="26" LSB="2" />
@@ -811,6 +825,7 @@
 				<Bank Name="MUSHI" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 15" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 143" MSB="17" LSB="3" />
+				<Bank Name="China Bell Double" MSB="17" LSB="4" />
 				<Bank Name="Tube Bells" MSB="26" LSB="0" />
 				<Bank Name="PipeOrgan1" MSB="26" LSB="1" />
 				<Bank Name="SnareDr" MSB="26" LSB="2" />
@@ -861,6 +876,7 @@
 				<Bank Name="DESCENT" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 16" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 144" MSB="17" LSB="3" />
+				<Bank Name="Church Bell 2" MSB="17" LSB="4" />
 				<Bank Name="HitKoto" MSB="26" LSB="0" />
 				<Bank Name="PipeOrgan2" MSB="26" LSB="1" />
 				<Bank Name="Mars to" MSB="26" LSB="2" />
@@ -921,6 +937,7 @@
 				<Bank Name="UFO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 17" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 145" MSB="17" LSB="3" />
+				<Bank Name="Church Bell" MSB="17" LSB="4" />
 				<Bank Name="Drawbars" MSB="26" LSB="0" />
 				<Bank Name="ElecOrgan" MSB="26" LSB="1" />
 				<Bank Name="UpPiano" MSB="26" LSB="2" />
@@ -975,6 +992,7 @@
 				<Bank Name="GRANPRI" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 18" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 146" MSB="17" LSB="3" />
+				<Bank Name="Glocken 1" MSB="17" LSB="4" />
 				<Bank Name="PercOrgan" MSB="26" LSB="0" />
 				<Bank Name="Accordion" MSB="26" LSB="1" />
 				<Bank Name="Piano3" MSB="26" LSB="2" />
@@ -1025,6 +1043,7 @@
 				<Bank Name="LASER1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 19" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 147" MSB="17" LSB="3" />
+				<Bank Name="Harp #1" MSB="17" LSB="4" />
 				<Bank Name="AnalogOrgn" MSB="26" LSB="0" />
 				<Bank Name="Violin" MSB="26" LSB="1" />
 				<Bank Name="PhGrand" MSB="26" LSB="2" />
@@ -1076,6 +1095,7 @@
 				<Bank Name="LASER2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 20" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 148" MSB="17" LSB="3" />
+				<Bank Name="Harp #2" MSB="17" LSB="4" />
 				<Bank Name="Big Church" MSB="26" LSB="0" />
 				<Bank Name="Cello" MSB="26" LSB="1" />
 				<Bank Name="LPiano1" MSB="26" LSB="2" />
@@ -1124,6 +1144,7 @@
 				<Bank Name="SIN WAVE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 21" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 149" MSB="17" LSB="3" />
+				<Bank Name="kirakira" MSB="17" LSB="4" />
 				<Bank Name="PumpOrgan" MSB="26" LSB="0" />
 				<Bank Name="Strings1" MSB="26" LSB="1" />
 				<Bank Name="Honkey1" MSB="26" LSB="2" />
@@ -1179,6 +1200,7 @@
 				<Bank Name="BRASS1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 22" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 150" MSB="17" LSB="3" />
+				<Bank Name="Marimba" MSB="17" LSB="4" />
 				<Bank Name="Accordion" MSB="26" LSB="0" />
 				<Bank Name="Strings2" MSB="26" LSB="1" />
 				<Bank Name="PfVibe" MSB="26" LSB="2" />
@@ -1230,6 +1252,7 @@
 				<Bank Name="BRASS2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 23" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 151" MSB="17" LSB="3" />
+				<Bank Name="Old Bell" MSB="17" LSB="4" />
 				<Bank Name="Harmonica" MSB="26" LSB="0" />
 				<Bank Name="Pizzicato" MSB="26" LSB="1" />
 				<Bank Name="NewEP4" MSB="26" LSB="2" />
@@ -1280,6 +1303,7 @@
 				<Bank Name="TRUMPET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 24" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 152" MSB="17" LSB="3" />
+				<Bank Name="E.mute Trampet" MSB="17" LSB="4" />
 				<Bank Name="Tango Accordion" MSB="26" LSB="0" />
 				<Bank Name="Voice" MSB="26" LSB="1" />
 				<Bank Name="EPiano2" MSB="26" LSB="2" />
@@ -1330,6 +1354,7 @@
 				<Bank Name="STRING1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 25" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 153" MSB="17" LSB="3" />
+				<Bank Name="HORN 2" MSB="17" LSB="4" />
 				<Bank Name="NylonGuit" MSB="26" LSB="0" />
 				<Bank Name="Chorus" MSB="26" LSB="1" />
 				<Bank Name="EPiano5" MSB="26" LSB="2" />
@@ -1379,6 +1404,7 @@
 				<Bank Name="STRING2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 26" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 154" MSB="17" LSB="3" />
+				<Bank Name="Alpine Horn #3" MSB="17" LSB="4" />
 				<Bank Name="Folk Guit" MSB="26" LSB="0" />
 				<Bank Name="GlassHarp" MSB="26" LSB="1" />
 				<Bank Name="PercPf" MSB="26" LSB="2" />
@@ -1436,6 +1462,7 @@
 				<Bank Name="EPIANO1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 27" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 155" MSB="17" LSB="3" />
+				<Bank Name="Lead brass" MSB="17" LSB="4" />
 				<Bank Name="Jazz Guit" MSB="26" LSB="0" />
 				<Bank Name="Whistle" MSB="26" LSB="1" />
 				<Bank Name="EPBrass" MSB="26" LSB="2" />
@@ -1494,6 +1521,7 @@
 				<Bank Name="EPIANO2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 28" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 156" MSB="17" LSB="3" />
+				<Bank Name="Normal HORN" MSB="17" LSB="4" />
 				<Bank Name="Guitar #1" MSB="26" LSB="0" />
 				<Bank Name="Piccolo" MSB="26" LSB="1" />
 				<Bank Name="Clav4" MSB="26" LSB="2" />
@@ -1551,6 +1579,7 @@
 				<Bank Name="EPIANO3" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 29" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 157" MSB="17" LSB="3" />
+				<Bank Name="Synth Oboe" MSB="17" LSB="4" />
 				<Bank Name="Funky Pick" MSB="26" LSB="0" />
 				<Bank Name="Flute" MSB="26" LSB="1" />
 				<Bank Name="MuteCl2" MSB="26" LSB="2" />
@@ -1601,6 +1630,7 @@
 				<Bank Name="GUITAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 30" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 158" MSB="17" LSB="3" />
+				<Bank Name="Oboe 2" MSB="17" LSB="4" />
 				<Bank Name="Fuzz Guit" MSB="26" LSB="0" />
 				<Bank Name="Oboe" MSB="26" LSB="1" />
 				<Bank Name="SynClv3" MSB="26" LSB="2" />
@@ -1650,6 +1680,7 @@
 				<Bank Name="EBASS1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 31" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 159" MSB="17" LSB="3" />
+				<Bank Name="Attack Brass (q2)" MSB="17" LSB="4" />
 				<Bank Name="HeavyMetal" MSB="26" LSB="0" />
 				<Bank Name="Clarinet" MSB="26" LSB="1" />
 				<Bank Name="Harpsi3" MSB="26" LSB="2" />
@@ -1711,6 +1742,7 @@
 				<Bank Name="EBASS2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 32" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 160" MSB="17" LSB="3" />
+				<Bank Name="SAX" MSB="17" LSB="4" />
 				<Bank Name="Guitar harmonics" MSB="26" LSB="0" />
 				<Bank Name="Basoon" MSB="26" LSB="1" />
 				<Bank Name="Circust" MSB="26" LSB="2" />
@@ -1767,6 +1799,7 @@
 				<Bank Name="EORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 33" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 161" MSB="17" LSB="3" />
+				<Bank Name="Soft brass(lead)" MSB="17" LSB="4" />
 				<Bank Name="Uprt Bass" MSB="26" LSB="0" />
 				<Bank Name="Saxophone" MSB="26" LSB="1" />
 				<Bank Name="Horn2" MSB="26" LSB="2" />
@@ -1821,6 +1854,7 @@
 				<Bank Name="EORGAN2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 34" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 162" MSB="17" LSB="3" />
+				<Bank Name="A.Guitar #3" MSB="17" LSB="4" />
 				<Bank Name="EBass" MSB="26" LSB="0" />
 				<Bank Name="Trumpet" MSB="26" LSB="1" />
 				<Bank Name="Flugelh" MSB="26" LSB="2" />
@@ -1872,6 +1906,7 @@
 				<Bank Name="PORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 35" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 163" MSB="17" LSB="3" />
+				<Bank Name="Cutting E.Guitar" MSB="17" LSB="4" />
 				<Bank Name="PlukBas" MSB="26" LSB="0" />
 				<Bank Name="Horn" MSB="26" LSB="1" />
 				<Bank Name="Brass2" MSB="26" LSB="2" />
@@ -1919,6 +1954,7 @@
 				<Bank Name="PORGAN2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 36" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 164" MSB="17" LSB="3" />
+				<Bank Name="Dis. Synth (old)" MSB="17" LSB="4" />
 				<Bank Name="Fretless" MSB="26" LSB="0" />
 				<Bank Name="Trombone" MSB="26" LSB="1" />
 				<Bank Name="HardBr2" MSB="26" LSB="2" />
@@ -1979,6 +2015,7 @@
 				<Bank Name="FLUTE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 37" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 165" MSB="17" LSB="3" />
+				<Bank Name="Dra-spi-Dis.G." MSB="17" LSB="4" />
 				<Bank Name="Slap Bass 1" MSB="26" LSB="0" />
 				<Bank Name="Tuba" MSB="26" LSB="1" />
 				<Bank Name="HuffBrs" MSB="26" LSB="2" />
@@ -2034,6 +2071,7 @@
 				<Bank Name="PICCOLO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 38" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 166" MSB="17" LSB="3" />
+				<Bank Name="Dis.Guitar 3-" MSB="17" LSB="4" />
 				<Bank Name="Slap Bass 2" MSB="26" LSB="0" />
 				<Bank Name="Brass1" MSB="26" LSB="1" />
 				<Bank Name="String1" MSB="26" LSB="2" />
@@ -2086,6 +2124,7 @@
 				<Bank Name="OBOE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 39" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 167" MSB="17" LSB="3" />
+				<Bank Name="Dis.Guitar 3+" MSB="17" LSB="4" />
 				<Bank Name="SynthBass1" MSB="26" LSB="0" />
 				<Bank Name="Brass2" MSB="26" LSB="1" />
 				<Bank Name="String4" MSB="26" LSB="2" />
@@ -2137,6 +2176,7 @@
 				<Bank Name="CLARINET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 40" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 168" MSB="17" LSB="3" />
+				<Bank Name="Feed-back Guitar 1" MSB="17" LSB="4" />
 				<Bank Name="SynthBass2" MSB="26" LSB="0" />
 				<Bank Name="Harmonica" MSB="26" LSB="1" />
 				<Bank Name="RichSt2" MSB="26" LSB="2" />
@@ -2188,6 +2228,7 @@
 				<Bank Name="GROCKEN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 41" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 169" MSB="17" LSB="3" />
+				<Bank Name="Hard Dis. Guitar 1" MSB="17" LSB="4" />
 				<Bank Name="Violin" MSB="26" LSB="0" />
 				<Bank Name="Occarina" MSB="26" LSB="1" />
 				<Bank Name="Cello1" MSB="26" LSB="2" />
@@ -2248,6 +2289,7 @@
 				<Bank Name="VIBRAPHN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 42" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 170" MSB="17" LSB="3" />
+				<Bank Name="Hard Dis.Guitar 3" MSB="17" LSB="4" />
 				<Bank Name="Silk Cello" MSB="26" LSB="0" />
 				<Bank Name="Recorder" MSB="26" LSB="1" />
 				<Bank Name="LoStrg4" MSB="26" LSB="2" />
@@ -2304,6 +2346,7 @@
 				<Bank Name="XYLOPHN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 43" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 171" MSB="17" LSB="3" />
+				<Bank Name="Dis.Guitar '94 Hard" MSB="17" LSB="4" />
 				<Bank Name="Cello" MSB="26" LSB="0" />
 				<Bank Name="SambaWhistle" MSB="26" LSB="1" />
 				<Bank Name="5th Str" MSB="26" LSB="2" />
@@ -2354,6 +2397,7 @@
 				<Bank Name="KOTO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 44" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 172" MSB="17" LSB="3" />
+				<Bank Name="New Dis.Guitar 1" MSB="17" LSB="4" />
 				<Bank Name="DoubleBass" MSB="26" LSB="0" />
 				<Bank Name="PanFlute" MSB="26" LSB="1" />
 				<Bank Name="Flute2" MSB="26" LSB="2" />
@@ -2402,6 +2446,7 @@
 				<Bank Name="ZITAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 45" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 173" MSB="17" LSB="3" />
+				<Bank Name="New Dis.Guitar 2" MSB="17" LSB="4" />
 				<Bank Name="Strings" MSB="26" LSB="0" />
 				<Bank Name="SnareDrum" MSB="26" LSB="1" />
 				<Bank Name="Pan Flt" MSB="26" LSB="2" />
@@ -2449,6 +2494,7 @@
 				<Bank Name="CLAVINET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 46" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 174" MSB="17" LSB="3" />
+				<Bank Name="New Dis.Guitar 3" MSB="17" LSB="4" />
 				<Bank Name="Pizzicato" MSB="26" LSB="0" />
 				<Bank Name="RimShot" MSB="26" LSB="1" />
 				<Bank Name="Oboe2" MSB="26" LSB="2" />
@@ -2508,6 +2554,7 @@
 				<Bank Name="HARPSIC" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 47" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 175" MSB="17" LSB="3" />
+				<Bank Name="Overdrive.G. (AL=0or1or3)" MSB="17" LSB="4" />
 				<Bank Name="Soft Harp" MSB="26" LSB="0" />
 				<Bank Name="BassDrum" MSB="26" LSB="1" />
 				<Bank Name="Harmon2" MSB="26" LSB="2" />
@@ -2564,6 +2611,7 @@
 				<Bank Name="BELL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 48" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 176" MSB="17" LSB="3" />
+				<Bank Name="METAL" MSB="17" LSB="4" />
 				<Bank Name="Timpany" MSB="26" LSB="0" />
 				<Bank Name="TomTom" MSB="26" LSB="1" />
 				<Bank Name="MonoSax" MSB="26" LSB="2" />
@@ -2616,6 +2664,7 @@
 				<Bank Name="HARP" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 49" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 177" MSB="17" LSB="3" />
+				<Bank Name="Soft Dis.Guitar" MSB="17" LSB="4" />
 				<Bank Name="Ensemble 1" MSB="26" LSB="0" />
 				<Bank Name="Timpany" MSB="26" LSB="1" />
 				<Bank Name="FnkSyn2" MSB="26" LSB="2" />
@@ -2667,6 +2716,7 @@
 				<Bank Name="BELL/BRASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 50" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 178" MSB="17" LSB="3" />
+				<Bank Name="Aco code" MSB="17" LSB="4" />
 				<Bank Name="Ensemble 2" MSB="26" LSB="0" />
 				<Bank Name="Bongo" MSB="26" LSB="1" />
 				<Bank Name="SynFeed" MSB="26" LSB="2" />
@@ -2717,6 +2767,7 @@
 				<Bank Name="HARMONICA" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 51" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 179" MSB="17" LSB="3" />
+				<Bank Name="Analog synthe 1" MSB="17" LSB="4" />
 				<Bank Name="Syn.Str  1" MSB="26" LSB="0" />
 				<Bank Name="Timbaless" MSB="26" LSB="1" />
 				<Bank Name="SynLead" MSB="26" LSB="2" />
@@ -2776,6 +2827,7 @@
 				<Bank Name="STEELDRUM" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 52" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 180" MSB="17" LSB="3" />
+				<Bank Name="SQ-lead" MSB="17" LSB="4" />
 				<Bank Name="Syn.Str  2" MSB="26" LSB="0" />
 				<Bank Name="Triangle" MSB="26" LSB="1" />
 				<Bank Name="Hollow" MSB="26" LSB="2" />
@@ -2831,6 +2883,7 @@
 				<Bank Name="TIMPANI" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 53" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 181" MSB="17" LSB="3" />
+				<Bank Name="Cosmo Lead" MSB="17" LSB="4" />
 				<Bank Name="Sy.Voice 1" MSB="26" LSB="0" />
 				<Bank Name="CowBell" MSB="26" LSB="1" />
 				<Bank Name="Cheeky" MSB="26" LSB="2" />
@@ -2883,6 +2936,7 @@
 				<Bank Name="TRAIN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 54" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 182" MSB="17" LSB="3" />
+				<Bank Name="Cosmo Lead 2" MSB="17" LSB="4" />
 				<Bank Name="M.Voice" MSB="26" LSB="0" />
 				<Bank Name="TublarBells" MSB="26" LSB="1" />
 				<Bank Name="EBass3" MSB="26" LSB="2" />
@@ -2934,6 +2988,7 @@
 				<Bank Name="AMBULANCE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 55" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 183" MSB="17" LSB="3" />
+				<Bank Name="Digital lead #1" MSB="17" LSB="4" />
 				<Bank Name="Synth Voice" MSB="26" LSB="0" />
 				<Bank Name="SteelDrum" MSB="26" LSB="1" />
 				<Bank Name="PlukBas" MSB="26" LSB="2" />
@@ -2981,6 +3036,7 @@
 				<Bank Name="TWEET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 56" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 184" MSB="17" LSB="3" />
+				<Bank Name="Double sin wave" MSB="17" LSB="4" />
 				<Bank Name="Orchestra" MSB="26" LSB="0" />
 				<Bank Name="Glocken" MSB="26" LSB="1" />
 				<Bank Name="FlapBas" MSB="26" LSB="2" />
@@ -3041,6 +3097,7 @@
 				<Bank Name="RAIN DROP" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 57" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 185" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 2 bright" MSB="17" LSB="4" />
 				<Bank Name="Trumpet" MSB="26" LSB="0" />
 				<Bank Name="Vibraphone" MSB="26" LSB="1" />
 				<Bank Name="SynBas2" MSB="26" LSB="2" />
@@ -3098,6 +3155,7 @@
 				<Bank Name="HORN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 58" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 186" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 2 (voice)" MSB="17" LSB="4" />
 				<Bank Name="Trombone" MSB="26" LSB="0" />
 				<Bank Name="Marimba" MSB="26" LSB="1" />
 				<Bank Name="SynBas5" MSB="26" LSB="2" />
@@ -3150,6 +3208,7 @@
 				<Bank Name="SNARE DRUM" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 59" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 187" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 4 Click" MSB="17" LSB="4" />
 				<Bank Name="Tuba" MSB="26" LSB="0" />
 				<Bank Name="OpenHiHat" MSB="26" LSB="1" />
 				<Bank Name="Marimb2" MSB="26" LSB="2" />
@@ -3202,6 +3261,7 @@
 				<Bank Name="COW BELL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 60" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 188" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 5 Click" MSB="17" LSB="4" />
 				<Bank Name="Muted Trumpet" MSB="26" LSB="0" />
 				<Bank Name="CloseHiHat" MSB="26" LSB="1" />
 				<Bank Name="Vibe2" MSB="26" LSB="2" />
@@ -3250,6 +3310,7 @@
 				<Bank Name="PERC1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 61" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 189" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 6" MSB="17" LSB="4" />
 				<Bank Name="FrenchHorn" MSB="26" LSB="0" />
 				<Bank Name="Cymbal" MSB="26" LSB="1" />
 				<Bank Name="TubeBe1" MSB="26" LSB="2" />
@@ -3308,6 +3369,7 @@
 				<Bank Name="PERC2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 62" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 190" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 7 Church" MSB="17" LSB="4" />
 				<Bank Name="Brass    1" MSB="26" LSB="0" />
 				<Bank Name="SynthLead1" MSB="26" LSB="1" />
 				<Bank Name="TempleG" MSB="26" LSB="2" />
@@ -3363,6 +3425,7 @@
 				<Bank Name="PERC3" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 63" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 191" MSB="17" LSB="3" />
+				<Bank Name="Bass Drum 2 /OL=10:Filter" MSB="17" LSB="4" />
 				<Bank Name="Sy.Brass 1" MSB="26" LSB="0" />
 				<Bank Name="SynthLead2" MSB="26" LSB="1" />
 				<Bank Name="Hand Dr" MSB="26" LSB="2" />
@@ -3416,6 +3479,7 @@
 				<Bank Name="MUSIC BOX" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 64" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 192" MSB="17" LSB="3" />
+				<Bank Name="Bass Drum 3 o1f" MSB="17" LSB="4" />
 				<Bank Name="Sy.Brass 2" MSB="26" LSB="0" />
 				<Bank Name="Siren" MSB="26" LSB="1" />
 				<Bank Name="Heifer" MSB="26" LSB="2" />
@@ -3466,6 +3530,7 @@
 				<Bank Name="CELLO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 65" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 193" MSB="17" LSB="3" />
+				<Bank Name="RUFINA BD o2c" MSB="17" LSB="4" />
 				<Bank Name="MonoSax" MSB="26" LSB="0" />
 				<Bank Name="Storm" MSB="26" LSB="1" />
 				<Bank Name="JOrgan1" MSB="26" LSB="2" />
@@ -3515,6 +3580,7 @@
 				<Bank Name="LOW BRASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 66" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 194" MSB="17" LSB="3" />
+				<Bank Name="B.D.(ReqBend)" MSB="17" LSB="4" />
 				<Bank Name="RaspAlto" MSB="26" LSB="0" />
 				<Bank Name="LaserGun" MSB="26" LSB="1" />
 				<Bank Name="COrgan2" MSB="26" LSB="2" />
@@ -3572,6 +3638,7 @@
 				<Bank Name="WW ENSMBL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 67" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 195" MSB="17" LSB="3" />
+				<Bank Name="BD808_2(ReqBend)" MSB="17" LSB="4" />
 				<Bank Name="MelloTenor" MSB="26" LSB="0" />
 				<Bank Name="S.E.1" MSB="26" LSB="1" />
 				<Bank Name="EOrgan5" MSB="26" LSB="2" />
@@ -3624,6 +3691,7 @@
 				<Bank Name="AC GUITAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 68" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 196" MSB="17" LSB="3" />
+				<Bank Name="Cho cho 3 (o2e)" MSB="17" LSB="4" />
 				<Bank Name="Baritone Sax" MSB="26" LSB="0" />
 				<Bank Name="S.E.2" MSB="26" LSB="1" />
 				<Bank Name="EOrgan8" MSB="26" LSB="2" />
@@ -3673,6 +3741,7 @@
 				<Bank Name="FLUTE/HARP" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 69" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 197" MSB="17" LSB="3" />
+				<Bank Name="Cow-Bell 1" MSB="17" LSB="4" />
 				<Bank Name="Oboe" MSB="26" LSB="0" />
 				<Bank Name="SineWave" MSB="26" LSB="1" />
 				<Bank Name="BigPipe" MSB="26" LSB="2" />
@@ -3721,6 +3790,7 @@
 				<Bank Name="FUNC PLUC" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 70" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 198" MSB="17" LSB="3" />
+				<Bank Name="Crash Cymbal (noise)" MSB="17" LSB="4" />
 				<Bank Name="Horn Lo" MSB="26" LSB="0" />
 				<Bank Name="Guitar" MSB="26" LSB="2" />
 				<Bank Name="Violin   2" MSB="26" LSB="3" />
@@ -3767,6 +3837,7 @@
 				<Bank Name="FUNC BASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 71" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 199" MSB="17" LSB="3" />
+				<Bank Name="Crash Noise" MSB="17" LSB="4" />
 				<Bank Name="Bassoon" MSB="26" LSB="0" />
 				<Bank Name="BriteGt" MSB="26" LSB="2" />
 				<Bank Name="Cello    1" MSB="26" LSB="3" />
@@ -3824,6 +3895,7 @@
 				<Bank Name="SYN LEAD" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 72" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 200" MSB="17" LSB="3" />
+				<Bank Name="Crash Noise Short" MSB="17" LSB="4" />
 				<Bank Name="Clarinet" MSB="26" LSB="0" />
 				<Bank Name="Lute" MSB="26" LSB="2" />
 				<Bank Name="Cello    2" MSB="26" LSB="3" />
@@ -3880,6 +3952,7 @@
 				<Bank Name="METAL CLES" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 73" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 201" MSB="17" LSB="3" />
+				<Bank Name="ETHNIC Percus.0" MSB="17" LSB="4" />
 				<Bank Name="Piccolo" MSB="26" LSB="0" />
 				<Bank Name="Harp2" MSB="26" LSB="2" />
 				<Bank Name="Brass    1" MSB="26" LSB="3" />
@@ -3933,6 +4006,7 @@
 				<Bank Name="STAIN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 74" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 202" MSB="17" LSB="3" />
+				<Bank Name="ETHNIC Percus.1" MSB="17" LSB="4" />
 				<Bank Name="Flute" MSB="26" LSB="0" />
 				<Bank Name="HitKoto" MSB="26" LSB="2" />
 				<Bank Name="Brass    2" MSB="26" LSB="3" />
@@ -3982,6 +4056,7 @@
 				<Bank Name="CUBIN GLASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 75" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 203" MSB="17" LSB="3" />
+				<Bank Name="Heavy BD." MSB="17" LSB="4" />
 				<Bank Name="Recorder" MSB="26" LSB="0" />
 				<Bank Name="HuffSyn" MSB="26" LSB="2" />
 				<Bank Name="Trumpet  1" MSB="26" LSB="3" />
@@ -4029,6 +4104,7 @@
 				<Bank Name="HUMAN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 76" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 204" MSB="17" LSB="3" />
+				<Bank Name="Heavy BD2 Hard" MSB="17" LSB="4" />
 				<Bank Name="PanFlute" MSB="26" LSB="0" />
 				<Bank Name="M.Voice" MSB="26" LSB="2" />
 				<Bank Name="Trumpet  2" MSB="26" LSB="3" />
@@ -4086,6 +4162,7 @@
 				<Bank Name="WOOD BASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 77" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 205" MSB="17" LSB="3" />
+				<Bank Name="Aco Piano2 (Attack)" MSB="17" LSB="4" />
 				<Bank Name="Blown Bottle" MSB="26" LSB="0" />
 				<Bank Name="Water" MSB="26" LSB="2" />
 				<Bank Name="Trombone" MSB="26" LSB="3" />
@@ -4141,6 +4218,7 @@
 				<Bank Name="CHIMES" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 78" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 206" MSB="17" LSB="3" />
+				<Bank Name="Backing 1 (Clav.)" MSB="17" LSB="4" />
 				<Bank Name="Shakuhachi" MSB="26" LSB="0" />
 				<Bank Name="Wave" MSB="26" LSB="2" />
 				<Bank Name="Horn" MSB="26" LSB="3" />
@@ -4193,6 +4271,7 @@
 				<Bank Name="SPACY" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 79" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 207" MSB="17" LSB="3" />
+				<Bank Name="Clav. coad" MSB="17" LSB="4" />
 				<Bank Name="Whistle" MSB="26" LSB="0" />
 				<Bank Name="SpTalk" MSB="26" LSB="2" />
 				<Bank Name="Tuba" MSB="26" LSB="3" />
@@ -4242,6 +4321,7 @@
 				<Bank Name="OBOE/B.CLAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 80" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 208" MSB="17" LSB="3" />
+				<Bank Name="Deep Piano 1" MSB="17" LSB="4" />
 				<Bank Name="Occarina" MSB="26" LSB="0" />
 				<Bank Name="Alarm" MSB="26" LSB="2" />
 				<Bank Name="Sax      1" MSB="26" LSB="3" />
@@ -4282,6 +4362,7 @@
 				<Bank Name="OLD STRING" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 81" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 209" MSB="17" LSB="3" />
+				<Bank Name="Deep Piano 3" MSB="17" LSB="4" />
 				<Bank Name="FM SQUARE" MSB="26" LSB="0" />
 				<Bank Name="Sax      2" MSB="26" LSB="3" />
 				<Bank Name="Diesel" MSB="26" LSB="4" />
@@ -4332,6 +4413,7 @@
 				<Bank Name="STEEL'S CRY" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 82" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 210" MSB="17" LSB="3" />
+				<Bank Name="E.piano #2" MSB="17" LSB="4" />
 				<Bank Name="FMSAWTOOTH" MSB="26" LSB="0" />
 				<Bank Name="Wood Wind" MSB="26" LSB="3" />
 				<Bank Name="Hole in 1" MSB="26" LSB="4" />
@@ -4381,6 +4463,7 @@
 				<Bank Name="Lead 3 (calliope)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 83" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 211" MSB="17" LSB="3" />
+				<Bank Name="E.piano #3" MSB="17" LSB="4" />
 				<Bank Name="Small Pipe" MSB="26" LSB="0" />
 				<Bank Name="Clarinet 1" MSB="26" LSB="3" />
 				<Bank Name="&lt;&lt;Smash&gt;&gt;" MSB="26" LSB="4" />
@@ -4420,6 +4503,7 @@
 				<Bank Name="Lead 4 (chiff)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 84" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 212" MSB="17" LSB="3" />
+				<Bank Name="E.piano #4(2+) (sign type)" MSB="17" LSB="4" />
 				<Bank Name="Lead 4 (chiff)" MSB="26" LSB="0" />
 				<Bank Name="Clarinet 2" MSB="26" LSB="3" />
 				<Bank Name="FM SQUARE" MSB="26" LSB="4" />
@@ -4460,6 +4544,7 @@
 				<Bank Name="Lead 5 (charang)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 85" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 213" MSB="17" LSB="3" />
+				<Bank Name="E.(Bell)Piano #5" MSB="17" LSB="4" />
 				<Bank Name="RubberBand" MSB="26" LSB="0" />
 				<Bank Name="Oboe" MSB="26" LSB="3" />
 				<Bank Name="FM PULSE" MSB="26" LSB="4" />
@@ -4496,6 +4581,7 @@
 				<Bank Name="Lead 6 (voice)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 86" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 214" MSB="17" LSB="3" />
+				<Bank Name="E.Piano #6" MSB="17" LSB="4" />
 				<Bank Name="Synvox" MSB="26" LSB="0" />
 				<Bank Name="Flute    1" MSB="26" LSB="3" />
 				<Bank Name="FMSAWTOOTH" MSB="26" LSB="4" />
@@ -4537,6 +4623,7 @@
 				<Bank Name="Lead 7 (fifths)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 87" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 215" MSB="17" LSB="3" />
+				<Bank Name="E.Piano #7" MSB="17" LSB="4" />
 				<Bank Name="5th String" MSB="26" LSB="0" />
 				<Bank Name="Flute    2" MSB="26" LSB="3" />
 				<Bank Name="LFO NOISE" MSB="26" LSB="4" />
@@ -4578,6 +4665,7 @@
 				<Bank Name="Lead 8 (bass + lead)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 88" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 216" MSB="17" LSB="3" />
+				<Bank Name="S.Effect ReqDetune o2c(GyuinWawawawa)" MSB="17" LSB="4" />
 				<Bank Name="Feed Lead" MSB="26" LSB="0" />
 				<Bank Name="Recorder" MSB="26" LSB="3" />
 				<Bank Name="PINK NOISE" MSB="26" LSB="4" />
@@ -4614,6 +4702,7 @@
 				<Bank Name="Pad 1 (new age)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 89" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 217" MSB="17" LSB="3" />
+				<Bank Name="S.Effect 2 o0-1-2" MSB="17" LSB="4" />
 				<Bank Name="Pad 1 (new age)" MSB="26" LSB="0" />
 				<Bank Name="Harmonica" MSB="26" LSB="3" />
 				<Bank Name="Windbells" MSB="26" LSB="4" />
@@ -4650,6 +4739,7 @@
 				<Bank Name="Pad 2 (warm)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 90" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 218" MSB="17" LSB="3" />
+				<Bank Name="S.E. 3(Feed-in and noise add.)" MSB="17" LSB="4" />
 				<Bank Name="Lyrisyn" MSB="26" LSB="0" />
 				<Bank Name="E.Organ  1" MSB="26" LSB="3" />
 				<Bank Name="Synvox" MSB="26" LSB="4" />
@@ -4687,6 +4777,7 @@
 				<Bank Name="Pad 3 (polysynth)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 91" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 219" MSB="17" LSB="3" />
+				<Bank Name="Digital 1" MSB="17" LSB="4" />
 				<Bank Name="S/H Synth" MSB="26" LSB="0" />
 				<Bank Name="E.Organ  2" MSB="26" LSB="3" />
 				<Bank Name="Punk funk" MSB="26" LSB="4" />
@@ -4733,6 +4824,7 @@
 				<Bank Name="Pad 4 (choir)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 92" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 220" MSB="17" LSB="3" />
+				<Bank Name="Digital 2" MSB="17" LSB="4" />
 				<Bank Name="Sy.Voice 2" MSB="26" LSB="0" />
 				<Bank Name="E.Organ  3" MSB="26" LSB="3" />
 				<Bank Name="Whistling" MSB="26" LSB="4" />
@@ -4773,6 +4865,7 @@
 				<Bank Name="Pad 5 (bowed)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 93" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 221" MSB="17" LSB="3" />
+				<Bank Name="Digital [BAS] 3 o2-o3" MSB="17" LSB="4" />
 				<Bank Name="Pad 5 (bowed)" MSB="26" LSB="0" />
 				<Bank Name="E.Organ  4" MSB="26" LSB="3" />
 				<Bank Name="Voices" MSB="26" LSB="4" />
@@ -4815,6 +4908,7 @@
 				<Bank Name="Pad 6 (metallic)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 94" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 222" MSB="17" LSB="3" />
+				<Bank Name="Digital 4 o4a" MSB="17" LSB="4" />
 				<Bank Name="Metal Keys" MSB="26" LSB="0" />
 				<Bank Name="P.Organ  1" MSB="26" LSB="3" />
 				<Bank Name="Zing Plop" MSB="26" LSB="4" />
@@ -4851,6 +4945,7 @@
 				<Bank Name="Pad 7 (halo)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 95" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 223" MSB="17" LSB="3" />
+				<Bank Name="Accordion1" MSB="17" LSB="4" />
 				<Bank Name="Fantasy" MSB="26" LSB="0" />
 				<Bank Name="P.Organ  2" MSB="26" LSB="3" />
 				<Bank Name="Valve Plop" MSB="26" LSB="4" />
@@ -4888,6 +4983,7 @@
 				<Bank Name="Pad 8 (sweep)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 96" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 224" MSB="17" LSB="3" />
+				<Bank Name="Accordion2" MSB="17" LSB="4" />
 				<Bank Name="Dopplar FX" MSB="26" LSB="0" />
 				<Bank Name="Accordion" MSB="26" LSB="3" />
 				<Bank Name="Mars to ??" MSB="26" LSB="4" />
@@ -4928,6 +5024,7 @@
 				<Bank Name="FX 1 (rain)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 97" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 225" MSB="17" LSB="3" />
+				<Bank Name="Accordion3" MSB="17" LSB="4" />
 				<Bank Name="Storm Wind" MSB="26" LSB="0" />
 				<Bank Name="Bass Drum1" MSB="26" LSB="3" />
 				<Bank Name="ElectroTom" MSB="26" LSB="4" />
@@ -4964,6 +5061,7 @@
 				<Bank Name="FX 2 (soundtrack)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 98" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 226" MSB="17" LSB="3" />
+				<Bank Name="Chorus #2(Voice)" MSB="17" LSB="4" />
 				<Bank Name="FX 2 (soundtrack)" MSB="26" LSB="0" />
 				<Bank Name="Bass Drum2" MSB="26" LSB="3" />
 				<Bank Name="Timpani" MSB="26" LSB="4" />
@@ -4999,6 +5097,7 @@
 				<Bank Name="FX 3 (crystal)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 99" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 227" MSB="17" LSB="3" />
+				<Bank Name="Chorus #3" MSB="17" LSB="4" />
 				<Bank Name="KrstlChoir" MSB="26" LSB="0" />
 				<Bank Name="Snare    1" MSB="26" LSB="3" />
 				<Bank Name="Breakin" MSB="26" LSB="4" />
@@ -5035,6 +5134,7 @@
 				<Bank Name="FX 4 (atmosphere)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 100" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 228" MSB="17" LSB="3" />
+				<Bank Name="Chorus #4" MSB="17" LSB="4" />
 				<Bank Name="Wind Voice" MSB="26" LSB="0" />
 				<Bank Name="Snare    2" MSB="26" LSB="3" />
 				<Bank Name="Xylosnare" MSB="26" LSB="4" />
@@ -5069,6 +5169,7 @@
 				<Bank Name="FX 5 (brightness)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 101" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 229" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 1" MSB="17" LSB="4" />
 				<Bank Name="FX 5 (brightness)" MSB="26" LSB="0" />
 				<Bank Name="Tom      1" MSB="26" LSB="3" />
 				<Bank Name="Synballs" MSB="26" LSB="4" />
@@ -5106,6 +5207,7 @@
 				<Bank Name="FX 6 (goblins)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 102" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 230" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 2" MSB="17" LSB="4" />
 				<Bank Name="Terror!" MSB="26" LSB="0" />
 				<Bank Name="Tom      2" MSB="26" LSB="3" />
 				<Bank Name="Hand Drum" MSB="26" LSB="4" />
@@ -5141,6 +5243,7 @@
 				<Bank Name="FX 7 (echoes)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 103" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 231" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 3" MSB="17" LSB="4" />
 				<Bank Name="Templegong" MSB="26" LSB="0" />
 				<Bank Name="Tom      3" MSB="26" LSB="3" />
 				<Bank Name="Clockwerks" MSB="26" LSB="4" />
@@ -5176,6 +5279,7 @@
 				<Bank Name="FX 8 (sci-fi)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 104" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 232" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 4 (low)" MSB="17" LSB="4" />
 				<Bank Name="Space BUG?" MSB="26" LSB="0" />
 				<Bank Name="Tom      4" MSB="26" LSB="3" />
 				<Bank Name="HeiferBell" MSB="26" LSB="4" />
@@ -5211,6 +5315,7 @@
 				<Bank Name="Sitar" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 105" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 233" MSB="17" LSB="3" />
+				<Bank Name="Pizzicate#1 (Processed KOTO2)" MSB="17" LSB="4" />
 				<Bank Name="Sitar" MSB="26" LSB="0" />
 				<Bank Name="&quot;Hi!&quot; Hat!" MSB="26" LSB="3" />
 				<Bank Name="Heavysynth" MSB="26" LSB="4" />
@@ -5248,6 +5353,7 @@
 				<Bank Name="Banjo" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 106" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 234" MSB="17" LSB="3" />
+				<Bank Name="sound truck modoki" MSB="17" LSB="4" />
 				<Bank Name="Banjo" MSB="26" LSB="0" />
 				<Bank Name="Cow Bell" MSB="26" LSB="3" />
 				<Bank Name="Harmosolo" MSB="26" LSB="4" />
@@ -5289,6 +5395,7 @@
 				<Bank Name="Shamisen" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 107" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 235" MSB="17" LSB="3" />
+				<Bank Name="Strings" MSB="17" LSB="4" />
 				<Bank Name="Syamisen" MSB="26" LSB="0" />
 				<Bank Name="Agogo Bell" MSB="26" LSB="3" />
 				<Bank Name="Feed Lead" MSB="26" LSB="4" />
@@ -5326,6 +5433,7 @@
 				<Bank Name="Koto" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 108" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 236" MSB="17" LSB="3" />
+				<Bank Name="Clarinet #1" MSB="17" LSB="4" />
 				<Bank Name="Koto" MSB="26" LSB="0" />
 				<Bank Name="Wood Block" MSB="26" LSB="3" />
 				<Bank Name="Mono Lead" MSB="26" LSB="4" />
@@ -5361,6 +5469,7 @@
 				<Bank Name="Kalimba" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 109" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 237" MSB="17" LSB="3" />
+				<Bank Name="Clarinet #2 (Brighter than #1)" MSB="17" LSB="4" />
 				<Bank Name="Kalimba" MSB="26" LSB="0" />
 				<Bank Name="Castanet" MSB="26" LSB="3" />
 				<Bank Name="Hollowlead" MSB="26" LSB="4" />
@@ -5394,6 +5503,7 @@
 				<Bank Name="Bag pipe" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 110" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 238" MSB="17" LSB="3" />
+				<Bank Name="E.Flute" MSB="17" LSB="4" />
 				<Bank Name="Bag pipe" MSB="26" LSB="0" />
 				<Bank Name="SyBon" MSB="26" LSB="3" />
 				<Bank Name="Lyrisyn" MSB="26" LSB="4" />
@@ -5428,6 +5538,7 @@
 				<Bank Name="Fiddle" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 111" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 239" MSB="17" LSB="3" />
+				<Bank Name="E.Flute 2" MSB="17" LSB="4" />
 				<Bank Name="Fiddle" MSB="26" LSB="0" />
 				<Bank Name="BoConga" MSB="26" LSB="3" />
 				<Bank Name="Schmooh" MSB="26" LSB="4" />
@@ -5468,6 +5579,7 @@
 				<Bank Name="Shanai" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 112" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 240" MSB="17" LSB="3" />
+				<Bank Name="Flute + Bell" MSB="17" LSB="4" />
 				<Bank Name="Shanai" MSB="26" LSB="0" />
 				<Bank Name="Tom-Pany" MSB="26" LSB="3" />
 				<Bank Name="Huff Talk" MSB="26" LSB="4" />
@@ -5506,6 +5618,7 @@
 				<Bank Name="Tinkle Bell" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 113" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 241" MSB="17" LSB="3" />
+				<Bank Name="Old flute" MSB="17" LSB="4" />
 				<Bank Name="BellsBells" MSB="26" LSB="0" />
 				<Bank Name="SynGameran" MSB="26" LSB="3" />
 				<Bank Name="Harpsi low" MSB="26" LSB="4" />
@@ -5540,6 +5653,7 @@
 				<Bank Name="Agogo" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 114" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 242" MSB="17" LSB="3" />
+				<Bank Name="Whitsle 1" MSB="17" LSB="4" />
 				<Bank Name="Agogo Bell" MSB="26" LSB="0" />
 				<Bank Name="Mouse-Tom" MSB="26" LSB="3" />
 				<Bank Name="Harpsi Hi" MSB="26" LSB="4" />
@@ -5572,6 +5686,7 @@
 				<Bank Name="Steel Drums" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 115" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 243" MSB="17" LSB="3" />
+				<Bank Name="Whitsle 2" MSB="17" LSB="4" />
 				<Bank Name="Steel Drum" MSB="26" LSB="0" />
 				<Bank Name="Carnival!" MSB="26" LSB="3" />
 				<Bank Name="Fuzz Clav" MSB="26" LSB="4" />
@@ -5605,6 +5720,7 @@
 				<Bank Name="Woodblock" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 116" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 244" MSB="17" LSB="3" />
+				<Bank Name="Banjo (Harpci)" MSB="17" LSB="4" />
 				<Bank Name="Wood Block" MSB="26" LSB="0" />
 				<Bank Name="&quot;Air&quot;imba" MSB="26" LSB="3" />
 				<Bank Name="Clear Clav" MSB="26" LSB="4" />
@@ -5646,6 +5762,7 @@
 				<Bank Name="Taiko Drum" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 117" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 245" MSB="17" LSB="3" />
+				<Bank Name="KOTO" MSB="17" LSB="4" />
 				<Bank Name="Bass Drum1" MSB="26" LSB="0" />
 				<Bank Name="SplashClav" MSB="26" LSB="3" />
 				<Bank Name="Mute Clav" MSB="26" LSB="4" />
@@ -5683,6 +5800,7 @@
 				<Bank Name="Melodic Tom" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 118" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 246" MSB="17" LSB="3" />
+				<Bank Name="Koto 2" MSB="17" LSB="4" />
 				<Bank Name="Tom      1" MSB="26" LSB="0" />
 				<Bank Name="BamboBlock" MSB="26" LSB="3" />
 				<Bank Name="Squeezebox" MSB="26" LSB="4" />
@@ -5716,6 +5834,7 @@
 				<Bank Name="Synth Drum" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 119" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 247" MSB="17" LSB="3" />
+				<Bank Name="Sitar 1" MSB="17" LSB="4" />
 				<Bank Name="Synth Perc" MSB="26" LSB="0" />
 				<Bank Name="Terror!" MSB="26" LSB="3" />
 				<Bank Name="Celeste" MSB="26" LSB="4" />
@@ -5752,6 +5871,7 @@
 				<Bank Name="Reverse Cymbal" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 120" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 248" MSB="17" LSB="3" />
+				<Bank Name="Shamisen 2" MSB="17" LSB="4" />
 				<Bank Name="Reverse Cymbal" MSB="26" LSB="0" />
 				<Bank Name="Wind Voice" MSB="26" LSB="3" />
 				<Bank Name="Circustime" MSB="26" LSB="4" />
@@ -5786,6 +5906,7 @@
 				<Bank Name="Guitar Fret Noise" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 121" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 249" MSB="17" LSB="3" />
+				<Bank Name="Shamisen 1" MSB="17" LSB="4" />
 				<Bank Name="Guitar Fret Noise" MSB="26" LSB="0" />
 				<Bank Name="GuiRoach::" MSB="26" LSB="3" />
 				<Bank Name="Claranette" MSB="26" LSB="4" />
@@ -5822,6 +5943,7 @@
 				<Bank Name="Breath Noise" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 122" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 250" MSB="17" LSB="3" />
+				<Bank Name="Synth Shamisen" MSB="17" LSB="4" />
 				<Bank Name="Breath Noise" MSB="26" LSB="0" />
 				<Bank Name="Space BUG?" MSB="26" LSB="3" />
 				<Bank Name="Bassoon" MSB="26" LSB="4" />
@@ -6045,6 +6167,7 @@
 				<Bank Name="DEFAULT" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 1" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 129" MSB="17" LSB="3" />
+				<Bank Name="Analog Bass #2+FBsynth" MSB="17" LSB="4" />
 				<Bank Name="BrassHit" MSB="81" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
@@ -6055,6 +6178,7 @@
 				<Bank Name="BRASS2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 2" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 130" MSB="17" LSB="3" />
+				<Bank Name="Analog Bass" MSB="17" LSB="4" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
@@ -6065,6 +6189,7 @@
 				<Bank Name="STRING2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 3" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 131" MSB="17" LSB="3" />
+				<Bank Name="Analog bass #2 (q2)" MSB="17" LSB="4" />
 				<Bank Name="CinematicHit" MSB="81" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
@@ -6075,6 +6200,7 @@
 				<Bank Name="EPIANO3" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 4" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 132" MSB="17" LSB="3" />
+				<Bank Name="Chopper Bass 0" MSB="17" LSB="4" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
@@ -6085,6 +6211,7 @@
 				<Bank Name="EBASS1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 5" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 133" MSB="17" LSB="3" />
+				<Bank Name="Chopper Bass 1" MSB="17" LSB="4" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
@@ -6095,6 +6222,7 @@
 				<Bank Name="EORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 6" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 134" MSB="17" LSB="3" />
+				<Bank Name="Chopper bass 2 (CUT)" MSB="17" LSB="4" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
@@ -6105,6 +6233,7 @@
 				<Bank Name="PORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 7" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 135" MSB="17" LSB="3" />
+				<Bank Name="Chopper bass 3" MSB="17" LSB="4" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
@@ -6115,6 +6244,7 @@
 				<Bank Name="FLUTE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 8" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 136" MSB="17" LSB="3" />
+				<Bank Name="Elec.Chopper bass+ 4" MSB="17" LSB="4" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
@@ -6125,6 +6255,7 @@
 				<Bank Name="OBOE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 9" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 137" MSB="17" LSB="3" />
+				<Bank Name="Effect Bass 1" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
@@ -6135,6 +6266,7 @@
 				<Bank Name="CLARINET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 10" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 138" MSB="17" LSB="3" />
+				<Bank Name="Effect Bass 2 to UP" MSB="17" LSB="4" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
@@ -6145,6 +6277,7 @@
 				<Bank Name="VIBRAPHN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 11" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 139" MSB="17" LSB="3" />
+				<Bank Name="Effect Bass 1" MSB="17" LSB="4" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
@@ -6155,6 +6288,7 @@
 				<Bank Name="HARPSIC" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 12" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 140" MSB="17" LSB="3" />
+				<Bank Name="Mowa~" MSB="17" LSB="4" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
@@ -6165,6 +6299,7 @@
 				<Bank Name="BELL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 13" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 141" MSB="17" LSB="3" />
+				<Bank Name="Effect FB Bass #5" MSB="17" LSB="4" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
@@ -6175,6 +6310,7 @@
 				<Bank Name="PIANO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 14" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 142" MSB="17" LSB="3" />
+				<Bank Name="Calm Bell" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
@@ -6185,6 +6321,7 @@
 				<Bank Name="MUSHI" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 15" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 143" MSB="17" LSB="3" />
+				<Bank Name="China Bell Double" MSB="17" LSB="4" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 16" PC="16">
@@ -6193,6 +6330,7 @@
 				<Bank Name="DESCENT" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 16" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 144" MSB="17" LSB="3" />
+				<Bank Name="Church Bell 2" MSB="17" LSB="4" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 17" PC="17">
@@ -6201,6 +6339,7 @@
 				<Bank Name="UFO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 17" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 145" MSB="17" LSB="3" />
+				<Bank Name="Church Bell" MSB="17" LSB="4" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 18" PC="18">
@@ -6209,6 +6348,7 @@
 				<Bank Name="GRANPRI" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 18" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 146" MSB="17" LSB="3" />
+				<Bank Name="Glocken 1" MSB="17" LSB="4" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 19" PC="19">
@@ -6217,6 +6357,7 @@
 				<Bank Name="LASER1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 19" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 147" MSB="17" LSB="3" />
+				<Bank Name="Harp #1" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 20" PC="20">
@@ -6225,6 +6366,7 @@
 				<Bank Name="LASER2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 20" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 148" MSB="17" LSB="3" />
+				<Bank Name="Harp #2" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 21" PC="21">
@@ -6233,6 +6375,7 @@
 				<Bank Name="SIN WAVE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 21" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 149" MSB="17" LSB="3" />
+				<Bank Name="kirakira" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_fltom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 22" PC="22">
@@ -6241,6 +6384,7 @@
 				<Bank Name="BRASS1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 22" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 150" MSB="17" LSB="3" />
+				<Bank Name="Marimba" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_gate_snare" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 23" PC="23">
@@ -6249,6 +6393,7 @@
 				<Bank Name="BRASS2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 23" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 151" MSB="17" LSB="3" />
+				<Bank Name="Old Bell" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_hibass" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 24" PC="24">
@@ -6257,6 +6402,7 @@
 				<Bank Name="TRUMPET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 24" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 152" MSB="17" LSB="3" />
+				<Bank Name="E.mute Trampet" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_hisnare" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 25" PC="25">
@@ -6265,6 +6411,7 @@
 				<Bank Name="STRING1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 25" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 153" MSB="17" LSB="3" />
+				<Bank Name="HORN 2" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_hitom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 26" PC="26">
@@ -6273,6 +6420,7 @@
 				<Bank Name="STRING2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 26" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 154" MSB="17" LSB="3" />
+				<Bank Name="Alpine Horn #3" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_lobass" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 27" PC="27">
@@ -6281,6 +6429,7 @@
 				<Bank Name="EPIANO1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 27" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 155" MSB="17" LSB="3" />
+				<Bank Name="Lead brass" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_losnare" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 28" PC="28">
@@ -6289,6 +6438,7 @@
 				<Bank Name="EPIANO2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 28" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 156" MSB="17" LSB="3" />
+				<Bank Name="Normal HORN" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_lotom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 29" PC="29">
@@ -6297,6 +6447,7 @@
 				<Bank Name="EPIANO3" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 29" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 157" MSB="17" LSB="3" />
+				<Bank Name="Synth Oboe" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_midtom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 30" PC="30">
@@ -6305,6 +6456,7 @@
 				<Bank Name="GUITAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 30" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 158" MSB="17" LSB="3" />
+				<Bank Name="Oboe 2" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_openhh" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 31" PC="31">
@@ -6313,6 +6465,7 @@
 				<Bank Name="EBASS1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 31" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 159" MSB="17" LSB="3" />
+				<Bank Name="Attack Brass (q2)" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_pedalhh" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 32" PC="32">
@@ -6321,6 +6474,7 @@
 				<Bank Name="EBASS2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 32" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 160" MSB="17" LSB="3" />
+				<Bank Name="SAX" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_rev_bass" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 33" PC="33">
@@ -6329,6 +6483,7 @@
 				<Bank Name="EORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 33" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 161" MSB="17" LSB="3" />
+				<Bank Name="Soft brass(lead)" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_ride_edge" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 34" PC="34">
@@ -6337,6 +6492,7 @@
 				<Bank Name="EORGAN2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 34" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 162" MSB="17" LSB="3" />
+				<Bank Name="A.Guitar #3" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_rimshot" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 35" PC="35">
@@ -6345,6 +6501,7 @@
 				<Bank Name="PORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 35" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 163" MSB="17" LSB="3" />
+				<Bank Name="Cutting E.Guitar" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_rimshot2" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 36" PC="36">
@@ -6353,6 +6510,7 @@
 				<Bank Name="PORGAN2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 36" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 164" MSB="17" LSB="3" />
+				<Bank Name="Dis. Synth (old)" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_splash" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 37" PC="37">
@@ -6361,6 +6519,7 @@
 				<Bank Name="FLUTE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 37" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 165" MSB="17" LSB="3" />
+				<Bank Name="Dra-spi-Dis.G." MSB="17" LSB="4" />
 				<Bank Name="PSS_590_syn_fltom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 38" PC="38">
@@ -6369,6 +6528,7 @@
 				<Bank Name="PICCOLO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 38" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 166" MSB="17" LSB="3" />
+				<Bank Name="Dis.Guitar 3-" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_syn_hitom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 39" PC="39">
@@ -6377,6 +6537,7 @@
 				<Bank Name="OBOE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 39" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 167" MSB="17" LSB="3" />
+				<Bank Name="Dis.Guitar 3+" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_syn_lotom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 40" PC="40">
@@ -6385,6 +6546,7 @@
 				<Bank Name="CLARINET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 40" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 168" MSB="17" LSB="3" />
+				<Bank Name="Feed-back Guitar 1" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_syn_midtom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 41" PC="41">
@@ -6393,6 +6555,7 @@
 				<Bank Name="GROCKEN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 41" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 169" MSB="17" LSB="3" />
+				<Bank Name="Hard Dis. Guitar 1" MSB="17" LSB="4" />
 				<Bank Name="PSS_590_syn_snare" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 42" PC="42">
@@ -6401,6 +6564,7 @@
 				<Bank Name="VIBRAPHN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 42" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 170" MSB="17" LSB="3" />
+				<Bank Name="Hard Dis.Guitar 3" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_bass" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 43" PC="43">
@@ -6409,6 +6573,7 @@
 				<Bank Name="XYLOPHN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 43" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 171" MSB="17" LSB="3" />
+				<Bank Name="Dis.Guitar '94 Hard" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_brush" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 44" PC="44">
@@ -6417,6 +6582,7 @@
 				<Bank Name="KOTO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 44" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 172" MSB="17" LSB="3" />
+				<Bank Name="New Dis.Guitar 1" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_brush_hit" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 45" PC="45">
@@ -6425,6 +6591,7 @@
 				<Bank Name="ZITAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 45" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 173" MSB="17" LSB="3" />
+				<Bank Name="New Dis.Guitar 2" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_cavasa" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 46" PC="46">
@@ -6433,6 +6600,7 @@
 				<Bank Name="CLAVINET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 46" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 174" MSB="17" LSB="3" />
+				<Bank Name="New Dis.Guitar 3" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_closehh" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 47" PC="47">
@@ -6441,6 +6609,7 @@
 				<Bank Name="HARPSIC" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 47" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 175" MSB="17" LSB="3" />
+				<Bank Name="Overdrive.G. (AL=0or1or3)" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_cowbell" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 48" PC="48">
@@ -6449,6 +6618,7 @@
 				<Bank Name="BELL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 48" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 176" MSB="17" LSB="3" />
+				<Bank Name="METAL" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_crash" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 49" PC="49">
@@ -6457,6 +6627,7 @@
 				<Bank Name="HARP" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 49" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 177" MSB="17" LSB="3" />
+				<Bank Name="Soft Dis.Guitar" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_handclap" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 50" PC="50">
@@ -6465,6 +6636,7 @@
 				<Bank Name="BELL/BRASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 50" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 178" MSB="17" LSB="3" />
+				<Bank Name="Aco code" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_hiagogo" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 51" PC="51">
@@ -6473,6 +6645,7 @@
 				<Bank Name="HARMONICA" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 51" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 179" MSB="17" LSB="3" />
+				<Bank Name="Analog synthe 1" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_hibongo" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 52" PC="52">
@@ -6481,6 +6654,7 @@
 				<Bank Name="STEELDRUM" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 52" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 180" MSB="17" LSB="3" />
+				<Bank Name="SQ-lead" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_hiconga" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 53" PC="53">
@@ -6489,6 +6663,7 @@
 				<Bank Name="TIMPANI" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 53" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 181" MSB="17" LSB="3" />
+				<Bank Name="Cosmo Lead" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_hicuica" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 54" PC="54">
@@ -6497,6 +6672,7 @@
 				<Bank Name="TRAIN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 54" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 182" MSB="17" LSB="3" />
+				<Bank Name="Cosmo Lead 2" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_hitimbaless" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 55" PC="55">
@@ -6505,6 +6681,7 @@
 				<Bank Name="AMBULANCE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 55" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 183" MSB="17" LSB="3" />
+				<Bank Name="Digital lead #1" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_hitom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 56" PC="56">
@@ -6513,6 +6690,7 @@
 				<Bank Name="TWEET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 56" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 184" MSB="17" LSB="3" />
+				<Bank Name="Double sin wave" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_hitom2" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 57" PC="57">
@@ -6521,6 +6699,7 @@
 				<Bank Name="RAIN DROP" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 57" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 185" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 2 bright" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_loagogo" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 58" PC="58">
@@ -6529,6 +6708,7 @@
 				<Bank Name="HORN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 58" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 186" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 2 (voice)" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_lobongo" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 59" PC="59">
@@ -6537,6 +6717,7 @@
 				<Bank Name="SNARE DRUM" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 59" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 187" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 4 Click" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_loconga" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 60" PC="60">
@@ -6545,6 +6726,7 @@
 				<Bank Name="COW BELL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 60" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 188" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 5 Click" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_locuica" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 61" PC="61">
@@ -6553,6 +6735,7 @@
 				<Bank Name="PERC1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 61" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 189" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 6" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_lotimbaless" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 62" PC="62">
@@ -6561,6 +6744,7 @@
 				<Bank Name="PERC2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 62" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 190" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 7 Church" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_lotom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 63" PC="63">
@@ -6569,6 +6753,7 @@
 				<Bank Name="PERC3" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 63" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 191" MSB="17" LSB="3" />
+				<Bank Name="Bass Drum 2 /OL=10:Filter" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_lotom2" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 64" PC="64">
@@ -6577,6 +6762,7 @@
 				<Bank Name="MUSIC BOX" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 64" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 192" MSB="17" LSB="3" />
+				<Bank Name="Bass Drum 3 o1f" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_midtom" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 65" PC="65">
@@ -6585,6 +6771,7 @@
 				<Bank Name="CELLO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 65" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 193" MSB="17" LSB="3" />
+				<Bank Name="RUFINA BD o2c" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_midtom2" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 66" PC="66">
@@ -6593,6 +6780,7 @@
 				<Bank Name="LOW BRASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 66" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 194" MSB="17" LSB="3" />
+				<Bank Name="B.D.(ReqBend)" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_mutetambarine" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 67" PC="67">
@@ -6601,6 +6789,7 @@
 				<Bank Name="WW ENSMBL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 67" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 195" MSB="17" LSB="3" />
+				<Bank Name="BD808_2(ReqBend)" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_openhh" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 68" PC="68">
@@ -6609,6 +6798,7 @@
 				<Bank Name="AC GUITAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 68" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 196" MSB="17" LSB="3" />
+				<Bank Name="Cho cho 3 (o2e)" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_ride" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 69" PC="69">
@@ -6617,6 +6807,7 @@
 				<Bank Name="FLUTE/HARP" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 69" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 197" MSB="17" LSB="3" />
+				<Bank Name="Cow-Bell 1" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_rimshot" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 70" PC="70">
@@ -6625,6 +6816,7 @@
 				<Bank Name="FUNC PLUC" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 70" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 198" MSB="17" LSB="3" />
+				<Bank Name="Crash Cymbal (noise)" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_snare" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 71" PC="71">
@@ -6633,6 +6825,7 @@
 				<Bank Name="FUNC BASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 71" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 199" MSB="17" LSB="3" />
+				<Bank Name="Crash Noise" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_snare2" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 72" PC="72">
@@ -6641,6 +6834,7 @@
 				<Bank Name="SYN LEAD" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 72" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 200" MSB="17" LSB="3" />
+				<Bank Name="Crash Noise Short" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_splash" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 73" PC="73">
@@ -6649,6 +6843,7 @@
 				<Bank Name="METAL CLES" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 73" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 201" MSB="17" LSB="3" />
+				<Bank Name="ETHNIC Percus.0" MSB="17" LSB="4" />
 				<Bank Name="PSS_680_whistle" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 74" PC="74">
@@ -6657,6 +6852,7 @@
 				<Bank Name="STAIN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 74" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 202" MSB="17" LSB="3" />
+				<Bank Name="ETHNIC Percus.1" MSB="17" LSB="4" />
 				<Bank Name="RX11_RX11Clap" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 75" PC="75">
@@ -6665,6 +6861,7 @@
 				<Bank Name="CUBIN GLASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 75" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 203" MSB="17" LSB="3" />
+				<Bank Name="Heavy BD." MSB="17" LSB="4" />
 				<Bank Name="RX11_RX11Crash" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 76" PC="76">
@@ -6673,6 +6870,7 @@
 				<Bank Name="HUMAN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 76" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 204" MSB="17" LSB="3" />
+				<Bank Name="Heavy BD2 Hard" MSB="17" LSB="4" />
 				<Bank Name="RX11_RX11Hat_C" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 77" PC="77">
@@ -6681,6 +6879,7 @@
 				<Bank Name="WOOD BASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 77" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 205" MSB="17" LSB="3" />
+				<Bank Name="Aco Piano2 (Attack)" MSB="17" LSB="4" />
 				<Bank Name="RX11_RX11Hat_O" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 78" PC="78">
@@ -6689,6 +6888,7 @@
 				<Bank Name="CHIMES" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 78" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 206" MSB="17" LSB="3" />
+				<Bank Name="Backing 1 (Clav.)" MSB="17" LSB="4" />
 				<Bank Name="RX11_RX11Hat_P" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 79" PC="79">
@@ -6697,6 +6897,7 @@
 				<Bank Name="SPACY" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 79" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 207" MSB="17" LSB="3" />
+				<Bank Name="Clav. coad" MSB="17" LSB="4" />
 				<Bank Name="RX11_RX11Kick" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 80" PC="80">
@@ -6705,6 +6906,7 @@
 				<Bank Name="OBOE/B.CLAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 80" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 208" MSB="17" LSB="3" />
+				<Bank Name="Deep Piano 1" MSB="17" LSB="4" />
 				<Bank Name="RX11_RX11Ride" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 81" PC="81">
@@ -6713,6 +6915,7 @@
 				<Bank Name="OLD STRING" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 81" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 209" MSB="17" LSB="3" />
+				<Bank Name="Deep Piano 3" MSB="17" LSB="4" />
 				<Bank Name="RX11_RX11Rimshot" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 82" PC="82">
@@ -6721,6 +6924,7 @@
 				<Bank Name="STEEL'S CRY" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 82" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 210" MSB="17" LSB="3" />
+				<Bank Name="E.piano #2" MSB="17" LSB="4" />
 				<Bank Name="RX11_RX11Snare01" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 83" PC="83">
@@ -6728,6 +6932,7 @@
 				<Bank Name="Lead 3 (calliope)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 83" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 211" MSB="17" LSB="3" />
+				<Bank Name="E.piano #3" MSB="17" LSB="4" />
 				<Bank Name="RX11_RX11Snare02" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 84" PC="84">
@@ -6735,6 +6940,7 @@
 				<Bank Name="Lead 4 (chiff)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 84" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 212" MSB="17" LSB="3" />
+				<Bank Name="E.piano #4(2+) (sign type)" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LAgogoHi" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 85" PC="85">
@@ -6742,6 +6948,7 @@
 				<Bank Name="Lead 5 (charang)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 85" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 213" MSB="17" LSB="3" />
+				<Bank Name="E.(Bell)Piano #5" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LAgogoLo" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 86" PC="86">
@@ -6749,6 +6956,7 @@
 				<Bank Name="Lead 6 (voice)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 86" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 214" MSB="17" LSB="3" />
+				<Bank Name="E.Piano #6" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LBongoHi" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 87" PC="87">
@@ -6756,6 +6964,7 @@
 				<Bank Name="Lead 7 (fifths)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 87" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 215" MSB="17" LSB="3" />
+				<Bank Name="E.Piano #7" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LBongoLo" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 88" PC="88">
@@ -6763,6 +6972,7 @@
 				<Bank Name="Lead 8 (bass + lead)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 88" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 216" MSB="17" LSB="3" />
+				<Bank Name="S.Effect ReqDetune o2c(GyuinWawawawa)" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LClaves" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 89" PC="89">
@@ -6770,6 +6980,7 @@
 				<Bank Name="Pad 1 (new age)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 89" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 217" MSB="17" LSB="3" />
+				<Bank Name="S.Effect 2 o0-1-2" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LCongaHi" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 90" PC="90">
@@ -6777,6 +6988,7 @@
 				<Bank Name="Pad 2 (warm)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 90" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 218" MSB="17" LSB="3" />
+				<Bank Name="S.E. 3(Feed-in and noise add.)" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LCongaLo" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 91" PC="91">
@@ -6784,6 +6996,7 @@
 				<Bank Name="Pad 3 (polysynth)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 91" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 219" MSB="17" LSB="3" />
+				<Bank Name="Digital 1" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LCongaM" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 92" PC="92">
@@ -6791,6 +7004,7 @@
 				<Bank Name="Pad 4 (choir)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 92" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 220" MSB="17" LSB="3" />
+				<Bank Name="Digital 2" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LCowbell" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 93" PC="93">
@@ -6798,6 +7012,7 @@
 				<Bank Name="Pad 5 (bowed)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 93" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 221" MSB="17" LSB="3" />
+				<Bank Name="Digital [BAS] 3 o2-o3" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LCuicaHi" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 94" PC="94">
@@ -6805,6 +7020,7 @@
 				<Bank Name="Pad 6 (metallic)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 94" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 222" MSB="17" LSB="3" />
+				<Bank Name="Digital 4 o4a" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LCuicaLo" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 95" PC="95">
@@ -6812,6 +7028,7 @@
 				<Bank Name="Pad 7 (halo)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 95" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 223" MSB="17" LSB="3" />
+				<Bank Name="Accordion1" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LTambourine" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 96" PC="96">
@@ -6819,6 +7036,7 @@
 				<Bank Name="Pad 8 (sweep)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 96" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 224" MSB="17" LSB="3" />
+				<Bank Name="Accordion2" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LTimbaleHi" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 97" PC="97">
@@ -6826,6 +7044,7 @@
 				<Bank Name="FX 1 (rain)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 97" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 225" MSB="17" LSB="3" />
+				<Bank Name="Accordion3" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LTimbaleLo" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 98" PC="98">
@@ -6833,6 +7052,7 @@
 				<Bank Name="FX 2 (soundtrack)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 98" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 226" MSB="17" LSB="3" />
+				<Bank Name="Chorus #2(Voice)" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LWhistleL" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 99" PC="99">
@@ -6840,6 +7060,7 @@
 				<Bank Name="FX 3 (crystal)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 99" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 227" MSB="17" LSB="3" />
+				<Bank Name="Chorus #3" MSB="17" LSB="4" />
 				<Bank Name="RX21L_RX21LWhistleS" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 100" PC="100">
@@ -6847,6 +7068,7 @@
 				<Bank Name="FX 4 (atmosphere)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 100" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 228" MSB="17" LSB="3" />
+				<Bank Name="Chorus #4" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Bongo_Hi" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 101" PC="101">
@@ -6854,6 +7076,7 @@
 				<Bank Name="FX 5 (brightness)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 101" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 229" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 1" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Bongo_Lo" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 102" PC="102">
@@ -6861,6 +7084,7 @@
 				<Bank Name="FX 6 (goblins)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 102" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 230" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 2" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5China" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 103" PC="103">
@@ -6868,6 +7092,7 @@
 				<Bank Name="FX 7 (echoes)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 103" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 231" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 3" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Clap" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 104" PC="104">
@@ -6875,6 +7100,7 @@
 				<Bank Name="FX 8 (sci-fi)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 104" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 232" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 4 (low)" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Crash" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 105" PC="105">
@@ -6882,6 +7108,7 @@
 				<Bank Name="Sitar" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 105" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 233" MSB="17" LSB="3" />
+				<Bank Name="Pizzicate#1 (Processed KOTO2)" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Cup" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 106" PC="106">
@@ -6889,6 +7116,7 @@
 				<Bank Name="Banjo" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 106" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 234" MSB="17" LSB="3" />
+				<Bank Name="sound truck modoki" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Edge" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 107" PC="107">
@@ -6896,6 +7124,7 @@
 				<Bank Name="Shamisen" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 107" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 235" MSB="17" LSB="3" />
+				<Bank Name="Strings" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Hat_C" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 108" PC="108">
@@ -6903,6 +7132,7 @@
 				<Bank Name="Koto" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 108" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 236" MSB="17" LSB="3" />
+				<Bank Name="Clarinet #1" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Hat_O" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 109" PC="109">
@@ -6910,6 +7140,7 @@
 				<Bank Name="Kalimba" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 109" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 237" MSB="17" LSB="3" />
+				<Bank Name="Clarinet #2 (Brighter than #1)" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Kick01" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 110" PC="110">
@@ -6917,6 +7148,7 @@
 				<Bank Name="Bag pipe" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 110" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 238" MSB="17" LSB="3" />
+				<Bank Name="E.Flute" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Kick02" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 111" PC="111">
@@ -6924,6 +7156,7 @@
 				<Bank Name="Fiddle" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 111" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 239" MSB="17" LSB="3" />
+				<Bank Name="E.Flute 2" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Kick03" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 112" PC="112">
@@ -6931,6 +7164,7 @@
 				<Bank Name="Shanai" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 112" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 240" MSB="17" LSB="3" />
+				<Bank Name="Flute + Bell" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Kick04" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 113" PC="113">
@@ -6938,6 +7172,7 @@
 				<Bank Name="Tinkle Bell" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 113" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 241" MSB="17" LSB="3" />
+				<Bank Name="Old flute" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Kick05" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 114" PC="114">
@@ -6945,6 +7180,7 @@
 				<Bank Name="Agogo" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 114" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 242" MSB="17" LSB="3" />
+				<Bank Name="Whitsle 1" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Kick06" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 115" PC="115">
@@ -6952,6 +7188,7 @@
 				<Bank Name="Steel Drums" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 115" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 243" MSB="17" LSB="3" />
+				<Bank Name="Whitsle 2" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Rimshot" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 116" PC="116">
@@ -6959,6 +7196,7 @@
 				<Bank Name="Woodblock" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 116" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 244" MSB="17" LSB="3" />
+				<Bank Name="Banjo (Harpci)" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Smack" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 117" PC="117">
@@ -6966,6 +7204,7 @@
 				<Bank Name="Taiko Drum" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 117" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 245" MSB="17" LSB="3" />
+				<Bank Name="KOTO" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Snare01" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 118" PC="118">
@@ -6973,6 +7212,7 @@
 				<Bank Name="Melodic Tom" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 118" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 246" MSB="17" LSB="3" />
+				<Bank Name="Koto 2" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Snare02" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 119" PC="119">
@@ -6980,6 +7220,7 @@
 				<Bank Name="Synth Drum" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 119" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 247" MSB="17" LSB="3" />
+				<Bank Name="Sitar 1" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Snare03" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 120" PC="120">
@@ -6987,6 +7228,7 @@
 				<Bank Name="Reverse Cymbal" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 120" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 248" MSB="17" LSB="3" />
+				<Bank Name="Shamisen 2" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Snare04" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 121" PC="121">
@@ -6994,6 +7236,7 @@
 				<Bank Name="Guitar Fret Noise" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 121" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 249" MSB="17" LSB="3" />
+				<Bank Name="Shamisen 1" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Snare05" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 122" PC="122">
@@ -7001,6 +7244,7 @@
 				<Bank Name="Breath Noise" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 122" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 250" MSB="17" LSB="3" />
+				<Bank Name="Synth Shamisen" MSB="17" LSB="4" />
 				<Bank Name="RX5_RX5Snare06" MSB="82" LSB="1" />
 			</PC>
 			<PC Name="Program 123" PC="123">
@@ -12531,6 +12775,7 @@
 				<Bank Name="DEFAULT" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 1" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 129" MSB="17" LSB="3" />
+				<Bank Name="Analog Bass #2+FBsynth" MSB="17" LSB="4" />
 				<Bank Name="GrandPiano" MSB="26" LSB="0" />
 				<Bank Name="AcouPiano" MSB="26" LSB="1" />
 				<Bank Name="Brass" MSB="26" LSB="2" />
@@ -12562,6 +12807,7 @@
 				<Bank Name="BRASS2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 2" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 130" MSB="17" LSB="3" />
+				<Bank Name="Analog Bass" MSB="17" LSB="4" />
 				<Bank Name="PhGrand" MSB="26" LSB="0" />
 				<Bank Name="HonkPiano" MSB="26" LSB="1" />
 				<Bank Name="LoStrig" MSB="26" LSB="2" />
@@ -12591,6 +12837,7 @@
 				<Bank Name="STRING2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 3" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 131" MSB="17" LSB="3" />
+				<Bank Name="Analog bass #2 (q2)" MSB="17" LSB="4" />
 				<Bank Name="Elec Grand" MSB="26" LSB="0" />
 				<Bank Name="ElecPiano" MSB="26" LSB="1" />
 				<Bank Name="NewEP" MSB="26" LSB="2" />
@@ -12619,6 +12866,7 @@
 				<Bank Name="EPIANO3" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 4" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 132" MSB="17" LSB="3" />
+				<Bank Name="Chopper Bass 0" MSB="17" LSB="4" />
 				<Bank Name="HonkeyTonk" MSB="26" LSB="0" />
 				<Bank Name="Clavinet" MSB="26" LSB="1" />
 				<Bank Name="EBass" MSB="26" LSB="2" />
@@ -12645,6 +12893,7 @@
 				<Bank Name="EBASS1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 5" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 133" MSB="17" LSB="3" />
+				<Bank Name="Chopper Bass 1" MSB="17" LSB="4" />
 				<Bank Name="E Piano  1" MSB="26" LSB="0" />
 				<Bank Name="Celesta" MSB="26" LSB="1" />
 				<Bank Name="EOrgan2" MSB="26" LSB="2" />
@@ -12671,6 +12920,7 @@
 				<Bank Name="EORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 6" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 134" MSB="17" LSB="3" />
+				<Bank Name="Chopper bass 2 (CUT)" MSB="17" LSB="4" />
 				<Bank Name="E Piano  2" MSB="26" LSB="0" />
 				<Bank Name="Chambalo" MSB="26" LSB="1" />
 				<Bank Name="Flute" MSB="26" LSB="2" />
@@ -12700,6 +12950,7 @@
 				<Bank Name="PORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 7" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 135" MSB="17" LSB="3" />
+				<Bank Name="Chopper bass 3" MSB="17" LSB="4" />
 				<Bank Name="Harpsichrd" MSB="26" LSB="0" />
 				<Bank Name="A.Guitar" MSB="26" LSB="1" />
 				<Bank Name="Clarine" MSB="26" LSB="2" />
@@ -12728,6 +12979,7 @@
 				<Bank Name="FLUTE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 8" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 136" MSB="17" LSB="3" />
+				<Bank Name="Elec.Chopper bass+ 4" MSB="17" LSB="4" />
 				<Bank Name="Clavi" MSB="26" LSB="0" />
 				<Bank Name="ElecGuitar" MSB="26" LSB="1" />
 				<Bank Name="Xylophn" MSB="26" LSB="2" />
@@ -12755,6 +13007,7 @@
 				<Bank Name="OBOE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 9" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 137" MSB="17" LSB="3" />
+				<Bank Name="Effect Bass 1" MSB="17" LSB="4" />
 				<Bank Name="Celeste" MSB="26" LSB="0" />
 				<Bank Name="WoodBass" MSB="26" LSB="1" />
 				<Bank Name="Clav" MSB="26" LSB="2" />
@@ -12781,6 +13034,7 @@
 				<Bank Name="CLARINET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 10" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 138" MSB="17" LSB="3" />
+				<Bank Name="Effect Bass 2 to UP" MSB="17" LSB="4" />
 				<Bank Name="Glocken" MSB="26" LSB="0" />
 				<Bank Name="ElecBass" MSB="26" LSB="1" />
 				<Bank Name="Harp" MSB="26" LSB="2" />
@@ -12807,6 +13061,7 @@
 				<Bank Name="VIBRAPHN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 11" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 139" MSB="17" LSB="3" />
+				<Bank Name="Effect Bass 1" MSB="17" LSB="4" />
 				<Bank Name="Music Box" MSB="26" LSB="0" />
 				<Bank Name="Banjo" MSB="26" LSB="1" />
 				<Bank Name="SteelDr" MSB="26" LSB="2" />
@@ -12837,6 +13092,7 @@
 				<Bank Name="HARPSIC" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 12" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 140" MSB="17" LSB="3" />
+				<Bank Name="Mowa~" MSB="17" LSB="4" />
 				<Bank Name="Vibraphone" MSB="26" LSB="0" />
 				<Bank Name="Sitar" MSB="26" LSB="1" />
 				<Bank Name="Horn Lo" MSB="26" LSB="2" />
@@ -12865,6 +13121,7 @@
 				<Bank Name="BELL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 13" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 141" MSB="17" LSB="3" />
+				<Bank Name="Effect FB Bass #5" MSB="17" LSB="4" />
 				<Bank Name="Marimba" MSB="26" LSB="0" />
 				<Bank Name="Harp" MSB="26" LSB="1" />
 				<Bank Name="Metal" MSB="26" LSB="2" />
@@ -12893,6 +13150,7 @@
 				<Bank Name="PIANO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 14" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 142" MSB="17" LSB="3" />
+				<Bank Name="Calm Bell" MSB="17" LSB="4" />
 				<Bank Name="Xylophone" MSB="26" LSB="0" />
 				<Bank Name="Koto" MSB="26" LSB="1" />
 				<Bank Name="Voices" MSB="26" LSB="2" />
@@ -12918,6 +13176,7 @@
 				<Bank Name="MUSHI" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 15" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 143" MSB="17" LSB="3" />
+				<Bank Name="China Bell Double" MSB="17" LSB="4" />
 				<Bank Name="Tube Bells" MSB="26" LSB="0" />
 				<Bank Name="PipeOrgan1" MSB="26" LSB="1" />
 				<Bank Name="SnareDr" MSB="26" LSB="2" />
@@ -12942,6 +13201,7 @@
 				<Bank Name="DESCENT" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 16" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 144" MSB="17" LSB="3" />
+				<Bank Name="Church Bell 2" MSB="17" LSB="4" />
 				<Bank Name="HitKoto" MSB="26" LSB="0" />
 				<Bank Name="PipeOrgan2" MSB="26" LSB="1" />
 				<Bank Name="Mars to" MSB="26" LSB="2" />
@@ -12971,6 +13231,7 @@
 				<Bank Name="UFO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 17" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 145" MSB="17" LSB="3" />
+				<Bank Name="Church Bell" MSB="17" LSB="4" />
 				<Bank Name="Drawbars" MSB="26" LSB="0" />
 				<Bank Name="ElecOrgan" MSB="26" LSB="1" />
 				<Bank Name="UpPiano" MSB="26" LSB="2" />
@@ -12997,6 +13258,7 @@
 				<Bank Name="GRANPRI" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 18" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 146" MSB="17" LSB="3" />
+				<Bank Name="Glocken 1" MSB="17" LSB="4" />
 				<Bank Name="PercOrgan" MSB="26" LSB="0" />
 				<Bank Name="Accordion" MSB="26" LSB="1" />
 				<Bank Name="Piano3" MSB="26" LSB="2" />
@@ -13022,6 +13284,7 @@
 				<Bank Name="LASER1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 19" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 147" MSB="17" LSB="3" />
+				<Bank Name="Harp #1" MSB="17" LSB="4" />
 				<Bank Name="AnalogOrgn" MSB="26" LSB="0" />
 				<Bank Name="Violin" MSB="26" LSB="1" />
 				<Bank Name="PhGrand" MSB="26" LSB="2" />
@@ -13047,6 +13310,7 @@
 				<Bank Name="LASER2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 20" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 148" MSB="17" LSB="3" />
+				<Bank Name="Harp #2" MSB="17" LSB="4" />
 				<Bank Name="Big Church" MSB="26" LSB="0" />
 				<Bank Name="Cello" MSB="26" LSB="1" />
 				<Bank Name="LPiano1" MSB="26" LSB="2" />
@@ -13072,6 +13336,7 @@
 				<Bank Name="SIN WAVE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 21" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 149" MSB="17" LSB="3" />
+				<Bank Name="kirakira" MSB="17" LSB="4" />
 				<Bank Name="PumpOrgan" MSB="26" LSB="0" />
 				<Bank Name="Strings1" MSB="26" LSB="1" />
 				<Bank Name="Honkey1" MSB="26" LSB="2" />
@@ -13100,6 +13365,7 @@
 				<Bank Name="BRASS1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 22" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 150" MSB="17" LSB="3" />
+				<Bank Name="Marimba" MSB="17" LSB="4" />
 				<Bank Name="Accordion" MSB="26" LSB="0" />
 				<Bank Name="Strings2" MSB="26" LSB="1" />
 				<Bank Name="PfVibe" MSB="26" LSB="2" />
@@ -13126,6 +13392,7 @@
 				<Bank Name="BRASS2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 23" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 151" MSB="17" LSB="3" />
+				<Bank Name="Old Bell" MSB="17" LSB="4" />
 				<Bank Name="Harmonica" MSB="26" LSB="0" />
 				<Bank Name="Pizzicato" MSB="26" LSB="1" />
 				<Bank Name="NewEP4" MSB="26" LSB="2" />
@@ -13151,6 +13418,7 @@
 				<Bank Name="TRUMPET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 24" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 152" MSB="17" LSB="3" />
+				<Bank Name="E.mute Trampet" MSB="17" LSB="4" />
 				<Bank Name="Tango Accordion" MSB="26" LSB="0" />
 				<Bank Name="Voice" MSB="26" LSB="1" />
 				<Bank Name="EPiano2" MSB="26" LSB="2" />
@@ -13176,6 +13444,7 @@
 				<Bank Name="STRING1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 25" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 153" MSB="17" LSB="3" />
+				<Bank Name="HORN 2" MSB="17" LSB="4" />
 				<Bank Name="NylonGuit" MSB="26" LSB="0" />
 				<Bank Name="Chorus" MSB="26" LSB="1" />
 				<Bank Name="EPiano5" MSB="26" LSB="2" />
@@ -13201,6 +13470,7 @@
 				<Bank Name="STRING2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 26" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 154" MSB="17" LSB="3" />
+				<Bank Name="Alpine Horn #3" MSB="17" LSB="4" />
 				<Bank Name="Folk Guit" MSB="26" LSB="0" />
 				<Bank Name="GlassHarp" MSB="26" LSB="1" />
 				<Bank Name="PercPf" MSB="26" LSB="2" />
@@ -13229,6 +13499,7 @@
 				<Bank Name="EPIANO1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 27" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 155" MSB="17" LSB="3" />
+				<Bank Name="Lead brass" MSB="17" LSB="4" />
 				<Bank Name="Jazz Guit" MSB="26" LSB="0" />
 				<Bank Name="Whistle" MSB="26" LSB="1" />
 				<Bank Name="EPBrass" MSB="26" LSB="2" />
@@ -13257,6 +13528,7 @@
 				<Bank Name="EPIANO2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 28" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 156" MSB="17" LSB="3" />
+				<Bank Name="Normal HORN" MSB="17" LSB="4" />
 				<Bank Name="Guitar #1" MSB="26" LSB="0" />
 				<Bank Name="Piccolo" MSB="26" LSB="1" />
 				<Bank Name="Clav4" MSB="26" LSB="2" />
@@ -13284,6 +13556,7 @@
 				<Bank Name="EPIANO3" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 29" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 157" MSB="17" LSB="3" />
+				<Bank Name="Synth Oboe" MSB="17" LSB="4" />
 				<Bank Name="Funky Pick" MSB="26" LSB="0" />
 				<Bank Name="Flute" MSB="26" LSB="1" />
 				<Bank Name="MuteCl2" MSB="26" LSB="2" />
@@ -13309,6 +13582,7 @@
 				<Bank Name="GUITAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 30" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 158" MSB="17" LSB="3" />
+				<Bank Name="Oboe 2" MSB="17" LSB="4" />
 				<Bank Name="Fuzz Guit" MSB="26" LSB="0" />
 				<Bank Name="Oboe" MSB="26" LSB="1" />
 				<Bank Name="SynClv3" MSB="26" LSB="2" />
@@ -13333,6 +13607,7 @@
 				<Bank Name="EBASS1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 31" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 159" MSB="17" LSB="3" />
+				<Bank Name="Attack Brass (q2)" MSB="17" LSB="4" />
 				<Bank Name="HeavyMetal" MSB="26" LSB="0" />
 				<Bank Name="Clarinet" MSB="26" LSB="1" />
 				<Bank Name="Harpsi3" MSB="26" LSB="2" />
@@ -13362,6 +13637,7 @@
 				<Bank Name="EBASS2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 32" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 160" MSB="17" LSB="3" />
+				<Bank Name="SAX" MSB="17" LSB="4" />
 				<Bank Name="Guitar harmonics" MSB="26" LSB="0" />
 				<Bank Name="Basoon" MSB="26" LSB="1" />
 				<Bank Name="Circust" MSB="26" LSB="2" />
@@ -13390,6 +13666,7 @@
 				<Bank Name="EORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 33" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 161" MSB="17" LSB="3" />
+				<Bank Name="Soft brass(lead)" MSB="17" LSB="4" />
 				<Bank Name="Uprt Bass" MSB="26" LSB="0" />
 				<Bank Name="Saxophone" MSB="26" LSB="1" />
 				<Bank Name="Horn2" MSB="26" LSB="2" />
@@ -13417,6 +13694,7 @@
 				<Bank Name="EORGAN2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 34" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 162" MSB="17" LSB="3" />
+				<Bank Name="A.Guitar #3" MSB="17" LSB="4" />
 				<Bank Name="EBass" MSB="26" LSB="0" />
 				<Bank Name="Trumpet" MSB="26" LSB="1" />
 				<Bank Name="Flugelh" MSB="26" LSB="2" />
@@ -13443,6 +13721,7 @@
 				<Bank Name="PORGAN1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 35" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 163" MSB="17" LSB="3" />
+				<Bank Name="Cutting E.Guitar" MSB="17" LSB="4" />
 				<Bank Name="PlukBas" MSB="26" LSB="0" />
 				<Bank Name="Horn" MSB="26" LSB="1" />
 				<Bank Name="Brass2" MSB="26" LSB="2" />
@@ -13467,6 +13746,7 @@
 				<Bank Name="PORGAN2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 36" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 164" MSB="17" LSB="3" />
+				<Bank Name="Dis. Synth (old)" MSB="17" LSB="4" />
 				<Bank Name="Fretless" MSB="26" LSB="0" />
 				<Bank Name="Trombone" MSB="26" LSB="1" />
 				<Bank Name="HardBr2" MSB="26" LSB="2" />
@@ -13497,6 +13777,7 @@
 				<Bank Name="FLUTE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 37" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 165" MSB="17" LSB="3" />
+				<Bank Name="Dra-spi-Dis.G." MSB="17" LSB="4" />
 				<Bank Name="Slap Bass 1" MSB="26" LSB="0" />
 				<Bank Name="Tuba" MSB="26" LSB="1" />
 				<Bank Name="HuffBrs" MSB="26" LSB="2" />
@@ -13525,6 +13806,7 @@
 				<Bank Name="PICCOLO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 38" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 166" MSB="17" LSB="3" />
+				<Bank Name="Dis.Guitar 3-" MSB="17" LSB="4" />
 				<Bank Name="Slap Bass 2" MSB="26" LSB="0" />
 				<Bank Name="Brass1" MSB="26" LSB="1" />
 				<Bank Name="String1" MSB="26" LSB="2" />
@@ -13552,6 +13834,7 @@
 				<Bank Name="OBOE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 39" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 167" MSB="17" LSB="3" />
+				<Bank Name="Dis.Guitar 3+" MSB="17" LSB="4" />
 				<Bank Name="SynthBass1" MSB="26" LSB="0" />
 				<Bank Name="Brass2" MSB="26" LSB="1" />
 				<Bank Name="String4" MSB="26" LSB="2" />
@@ -13577,6 +13860,7 @@
 				<Bank Name="CLARINET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 40" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 168" MSB="17" LSB="3" />
+				<Bank Name="Feed-back Guitar 1" MSB="17" LSB="4" />
 				<Bank Name="SynthBass2" MSB="26" LSB="0" />
 				<Bank Name="Harmonica" MSB="26" LSB="1" />
 				<Bank Name="RichSt2" MSB="26" LSB="2" />
@@ -13602,6 +13886,7 @@
 				<Bank Name="GROCKEN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 41" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 169" MSB="17" LSB="3" />
+				<Bank Name="Hard Dis. Guitar 1" MSB="17" LSB="4" />
 				<Bank Name="Violin" MSB="26" LSB="0" />
 				<Bank Name="Occarina" MSB="26" LSB="1" />
 				<Bank Name="Cello1" MSB="26" LSB="2" />
@@ -13632,6 +13917,7 @@
 				<Bank Name="VIBRAPHN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 42" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 170" MSB="17" LSB="3" />
+				<Bank Name="Hard Dis.Guitar 3" MSB="17" LSB="4" />
 				<Bank Name="Silk Cello" MSB="26" LSB="0" />
 				<Bank Name="Recorder" MSB="26" LSB="1" />
 				<Bank Name="LoStrg4" MSB="26" LSB="2" />
@@ -13661,6 +13947,7 @@
 				<Bank Name="XYLOPHN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 43" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 171" MSB="17" LSB="3" />
+				<Bank Name="Dis.Guitar '94 Hard" MSB="17" LSB="4" />
 				<Bank Name="Cello" MSB="26" LSB="0" />
 				<Bank Name="SambaWhistle" MSB="26" LSB="1" />
 				<Bank Name="5th Str" MSB="26" LSB="2" />
@@ -13687,6 +13974,7 @@
 				<Bank Name="KOTO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 44" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 172" MSB="17" LSB="3" />
+				<Bank Name="New Dis.Guitar 1" MSB="17" LSB="4" />
 				<Bank Name="DoubleBass" MSB="26" LSB="0" />
 				<Bank Name="PanFlute" MSB="26" LSB="1" />
 				<Bank Name="Flute2" MSB="26" LSB="2" />
@@ -13712,6 +14000,7 @@
 				<Bank Name="ZITAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 45" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 173" MSB="17" LSB="3" />
+				<Bank Name="New Dis.Guitar 2" MSB="17" LSB="4" />
 				<Bank Name="Strings" MSB="26" LSB="0" />
 				<Bank Name="SnareDrum" MSB="26" LSB="1" />
 				<Bank Name="Pan Flt" MSB="26" LSB="2" />
@@ -13737,6 +14026,7 @@
 				<Bank Name="CLAVINET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 46" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 174" MSB="17" LSB="3" />
+				<Bank Name="New Dis.Guitar 3" MSB="17" LSB="4" />
 				<Bank Name="Pizzicato" MSB="26" LSB="0" />
 				<Bank Name="RimShot" MSB="26" LSB="1" />
 				<Bank Name="Oboe2" MSB="26" LSB="2" />
@@ -13767,6 +14057,7 @@
 				<Bank Name="HARPSIC" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 47" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 175" MSB="17" LSB="3" />
+				<Bank Name="Overdrive.G. (AL=0or1or3)" MSB="17" LSB="4" />
 				<Bank Name="Soft Harp" MSB="26" LSB="0" />
 				<Bank Name="BassDrum" MSB="26" LSB="1" />
 				<Bank Name="Harmon2" MSB="26" LSB="2" />
@@ -13796,6 +14087,7 @@
 				<Bank Name="BELL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 48" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 176" MSB="17" LSB="3" />
+				<Bank Name="METAL" MSB="17" LSB="4" />
 				<Bank Name="Timpany" MSB="26" LSB="0" />
 				<Bank Name="TomTom" MSB="26" LSB="1" />
 				<Bank Name="MonoSax" MSB="26" LSB="2" />
@@ -13823,6 +14115,7 @@
 				<Bank Name="HARP" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 49" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 177" MSB="17" LSB="3" />
+				<Bank Name="Soft Dis.Guitar" MSB="17" LSB="4" />
 				<Bank Name="Ensemble 1" MSB="26" LSB="0" />
 				<Bank Name="Timpany" MSB="26" LSB="1" />
 				<Bank Name="FnkSyn2" MSB="26" LSB="2" />
@@ -13849,6 +14142,7 @@
 				<Bank Name="BELL/BRASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 50" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 178" MSB="17" LSB="3" />
+				<Bank Name="Aco code" MSB="17" LSB="4" />
 				<Bank Name="Ensemble 2" MSB="26" LSB="0" />
 				<Bank Name="Bongo" MSB="26" LSB="1" />
 				<Bank Name="SynFeed" MSB="26" LSB="2" />
@@ -13874,6 +14168,7 @@
 				<Bank Name="HARMONICA" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 51" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 179" MSB="17" LSB="3" />
+				<Bank Name="Analog synthe 1" MSB="17" LSB="4" />
 				<Bank Name="Syn.Str  1" MSB="26" LSB="0" />
 				<Bank Name="Timbaless" MSB="26" LSB="1" />
 				<Bank Name="SynLead" MSB="26" LSB="2" />
@@ -13904,6 +14199,7 @@
 				<Bank Name="STEELDRUM" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 52" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 180" MSB="17" LSB="3" />
+				<Bank Name="SQ-lead" MSB="17" LSB="4" />
 				<Bank Name="Syn.Str  2" MSB="26" LSB="0" />
 				<Bank Name="Triangle" MSB="26" LSB="1" />
 				<Bank Name="Hollow" MSB="26" LSB="2" />
@@ -13932,6 +14228,7 @@
 				<Bank Name="TIMPANI" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 53" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 181" MSB="17" LSB="3" />
+				<Bank Name="Cosmo Lead" MSB="17" LSB="4" />
 				<Bank Name="Sy.Voice 1" MSB="26" LSB="0" />
 				<Bank Name="CowBell" MSB="26" LSB="1" />
 				<Bank Name="Cheeky" MSB="26" LSB="2" />
@@ -13959,6 +14256,7 @@
 				<Bank Name="TRAIN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 54" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 182" MSB="17" LSB="3" />
+				<Bank Name="Cosmo Lead 2" MSB="17" LSB="4" />
 				<Bank Name="M.Voice" MSB="26" LSB="0" />
 				<Bank Name="TublarBells" MSB="26" LSB="1" />
 				<Bank Name="EBass3" MSB="26" LSB="2" />
@@ -13985,6 +14283,7 @@
 				<Bank Name="AMBULANCE" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 55" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 183" MSB="17" LSB="3" />
+				<Bank Name="Digital lead #1" MSB="17" LSB="4" />
 				<Bank Name="Synth Voice" MSB="26" LSB="0" />
 				<Bank Name="SteelDrum" MSB="26" LSB="1" />
 				<Bank Name="PlukBas" MSB="26" LSB="2" />
@@ -14010,6 +14309,7 @@
 				<Bank Name="TWEET" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 56" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 184" MSB="17" LSB="3" />
+				<Bank Name="Double sin wave" MSB="17" LSB="4" />
 				<Bank Name="Orchestra" MSB="26" LSB="0" />
 				<Bank Name="Glocken" MSB="26" LSB="1" />
 				<Bank Name="FlapBas" MSB="26" LSB="2" />
@@ -14040,6 +14340,7 @@
 				<Bank Name="RAIN DROP" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 57" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 185" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 2 bright" MSB="17" LSB="4" />
 				<Bank Name="Trumpet" MSB="26" LSB="0" />
 				<Bank Name="Vibraphone" MSB="26" LSB="1" />
 				<Bank Name="SynBas2" MSB="26" LSB="2" />
@@ -14068,6 +14369,7 @@
 				<Bank Name="HORN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 58" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 186" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 2 (voice)" MSB="17" LSB="4" />
 				<Bank Name="Trombone" MSB="26" LSB="0" />
 				<Bank Name="Marimba" MSB="26" LSB="1" />
 				<Bank Name="SynBas5" MSB="26" LSB="2" />
@@ -14094,6 +14396,7 @@
 				<Bank Name="SNARE DRUM" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 59" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 187" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 4 Click" MSB="17" LSB="4" />
 				<Bank Name="Tuba" MSB="26" LSB="0" />
 				<Bank Name="OpenHiHat" MSB="26" LSB="1" />
 				<Bank Name="Marimb2" MSB="26" LSB="2" />
@@ -14120,6 +14423,7 @@
 				<Bank Name="COW BELL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 60" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 188" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 5 Click" MSB="17" LSB="4" />
 				<Bank Name="Muted Trumpet" MSB="26" LSB="0" />
 				<Bank Name="CloseHiHat" MSB="26" LSB="1" />
 				<Bank Name="Vibe2" MSB="26" LSB="2" />
@@ -14145,6 +14449,7 @@
 				<Bank Name="PERC1" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 61" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 189" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 6" MSB="17" LSB="4" />
 				<Bank Name="FrenchHorn" MSB="26" LSB="0" />
 				<Bank Name="Cymbal" MSB="26" LSB="1" />
 				<Bank Name="TubeBe1" MSB="26" LSB="2" />
@@ -14175,6 +14480,7 @@
 				<Bank Name="PERC2" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 62" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 190" MSB="17" LSB="3" />
+				<Bank Name="E.Organ 7 Church" MSB="17" LSB="4" />
 				<Bank Name="Brass    1" MSB="26" LSB="0" />
 				<Bank Name="SynthLead1" MSB="26" LSB="1" />
 				<Bank Name="TempleG" MSB="26" LSB="2" />
@@ -14202,6 +14508,7 @@
 				<Bank Name="PERC3" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 63" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 191" MSB="17" LSB="3" />
+				<Bank Name="Bass Drum 2 /OL=10:Filter" MSB="17" LSB="4" />
 				<Bank Name="Sy.Brass 1" MSB="26" LSB="0" />
 				<Bank Name="SynthLead2" MSB="26" LSB="1" />
 				<Bank Name="Hand Dr" MSB="26" LSB="2" />
@@ -14228,6 +14535,7 @@
 				<Bank Name="MUSIC BOX" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 64" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 192" MSB="17" LSB="3" />
+				<Bank Name="Bass Drum 3 o1f" MSB="17" LSB="4" />
 				<Bank Name="Sy.Brass 2" MSB="26" LSB="0" />
 				<Bank Name="Siren" MSB="26" LSB="1" />
 				<Bank Name="Heifer" MSB="26" LSB="2" />
@@ -14253,6 +14561,7 @@
 				<Bank Name="CELLO" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 65" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 193" MSB="17" LSB="3" />
+				<Bank Name="RUFINA BD o2c" MSB="17" LSB="4" />
 				<Bank Name="MonoSax" MSB="26" LSB="0" />
 				<Bank Name="Storm" MSB="26" LSB="1" />
 				<Bank Name="JOrgan1" MSB="26" LSB="2" />
@@ -14278,6 +14587,7 @@
 				<Bank Name="LOW BRASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 66" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 194" MSB="17" LSB="3" />
+				<Bank Name="B.D.(ReqBend)" MSB="17" LSB="4" />
 				<Bank Name="RaspAlto" MSB="26" LSB="0" />
 				<Bank Name="LaserGun" MSB="26" LSB="1" />
 				<Bank Name="COrgan2" MSB="26" LSB="2" />
@@ -14307,6 +14617,7 @@
 				<Bank Name="WW ENSMBL" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 67" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 195" MSB="17" LSB="3" />
+				<Bank Name="BD808_2(ReqBend)" MSB="17" LSB="4" />
 				<Bank Name="MelloTenor" MSB="26" LSB="0" />
 				<Bank Name="S.E.1" MSB="26" LSB="1" />
 				<Bank Name="EOrgan5" MSB="26" LSB="2" />
@@ -14333,6 +14644,7 @@
 				<Bank Name="AC GUITAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 68" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 196" MSB="17" LSB="3" />
+				<Bank Name="Cho cho 3 (o2e)" MSB="17" LSB="4" />
 				<Bank Name="Baritone Sax" MSB="26" LSB="0" />
 				<Bank Name="S.E.2" MSB="26" LSB="1" />
 				<Bank Name="EOrgan8" MSB="26" LSB="2" />
@@ -14358,6 +14670,7 @@
 				<Bank Name="FLUTE/HARP" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 69" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 197" MSB="17" LSB="3" />
+				<Bank Name="Cow-Bell 1" MSB="17" LSB="4" />
 				<Bank Name="Oboe" MSB="26" LSB="0" />
 				<Bank Name="SineWave" MSB="26" LSB="1" />
 				<Bank Name="BigPipe" MSB="26" LSB="2" />
@@ -14383,6 +14696,7 @@
 				<Bank Name="FUNC PLUC" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 70" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 198" MSB="17" LSB="3" />
+				<Bank Name="Crash Cymbal (noise)" MSB="17" LSB="4" />
 				<Bank Name="Horn Lo" MSB="26" LSB="0" />
 				<Bank Name="Guitar" MSB="26" LSB="2" />
 				<Bank Name="Violin   2" MSB="26" LSB="3" />
@@ -14407,6 +14721,7 @@
 				<Bank Name="FUNC BASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 71" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 199" MSB="17" LSB="3" />
+				<Bank Name="Crash Noise" MSB="17" LSB="4" />
 				<Bank Name="Bassoon" MSB="26" LSB="0" />
 				<Bank Name="BriteGt" MSB="26" LSB="2" />
 				<Bank Name="Cello    1" MSB="26" LSB="3" />
@@ -14435,6 +14750,7 @@
 				<Bank Name="SYN LEAD" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 72" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 200" MSB="17" LSB="3" />
+				<Bank Name="Crash Noise Short" MSB="17" LSB="4" />
 				<Bank Name="Clarinet" MSB="26" LSB="0" />
 				<Bank Name="Lute" MSB="26" LSB="2" />
 				<Bank Name="Cello    2" MSB="26" LSB="3" />
@@ -14463,6 +14779,7 @@
 				<Bank Name="METAL CLES" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 73" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 201" MSB="17" LSB="3" />
+				<Bank Name="ETHNIC Percus.0" MSB="17" LSB="4" />
 				<Bank Name="Piccolo" MSB="26" LSB="0" />
 				<Bank Name="Harp2" MSB="26" LSB="2" />
 				<Bank Name="Brass    1" MSB="26" LSB="3" />
@@ -14489,6 +14806,7 @@
 				<Bank Name="STAIN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 74" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 202" MSB="17" LSB="3" />
+				<Bank Name="ETHNIC Percus.1" MSB="17" LSB="4" />
 				<Bank Name="Flute" MSB="26" LSB="0" />
 				<Bank Name="HitKoto" MSB="26" LSB="2" />
 				<Bank Name="Brass    2" MSB="26" LSB="3" />
@@ -14514,6 +14832,7 @@
 				<Bank Name="CUBIN GLASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 75" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 203" MSB="17" LSB="3" />
+				<Bank Name="Heavy BD." MSB="17" LSB="4" />
 				<Bank Name="Recorder" MSB="26" LSB="0" />
 				<Bank Name="HuffSyn" MSB="26" LSB="2" />
 				<Bank Name="Trumpet  1" MSB="26" LSB="3" />
@@ -14538,6 +14857,7 @@
 				<Bank Name="HUMAN" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 76" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 204" MSB="17" LSB="3" />
+				<Bank Name="Heavy BD2 Hard" MSB="17" LSB="4" />
 				<Bank Name="PanFlute" MSB="26" LSB="0" />
 				<Bank Name="M.Voice" MSB="26" LSB="2" />
 				<Bank Name="Trumpet  2" MSB="26" LSB="3" />
@@ -14567,6 +14887,7 @@
 				<Bank Name="WOOD BASS" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 77" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 205" MSB="17" LSB="3" />
+				<Bank Name="Aco Piano2 (Attack)" MSB="17" LSB="4" />
 				<Bank Name="Blown Bottle" MSB="26" LSB="0" />
 				<Bank Name="Water" MSB="26" LSB="2" />
 				<Bank Name="Trombone" MSB="26" LSB="3" />
@@ -14595,6 +14916,7 @@
 				<Bank Name="CHIMES" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 78" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 206" MSB="17" LSB="3" />
+				<Bank Name="Backing 1 (Clav.)" MSB="17" LSB="4" />
 				<Bank Name="Shakuhachi" MSB="26" LSB="0" />
 				<Bank Name="Wave" MSB="26" LSB="2" />
 				<Bank Name="Horn" MSB="26" LSB="3" />
@@ -14621,6 +14943,7 @@
 				<Bank Name="SPACY" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 79" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 207" MSB="17" LSB="3" />
+				<Bank Name="Clav. coad" MSB="17" LSB="4" />
 				<Bank Name="Whistle" MSB="26" LSB="0" />
 				<Bank Name="SpTalk" MSB="26" LSB="2" />
 				<Bank Name="Tuba" MSB="26" LSB="3" />
@@ -14646,6 +14969,7 @@
 				<Bank Name="OBOE/B.CLAR" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 80" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 208" MSB="17" LSB="3" />
+				<Bank Name="Deep Piano 1" MSB="17" LSB="4" />
 				<Bank Name="Occarina" MSB="26" LSB="0" />
 				<Bank Name="Alarm" MSB="26" LSB="2" />
 				<Bank Name="Sax      1" MSB="26" LSB="3" />
@@ -14670,6 +14994,7 @@
 				<Bank Name="OLD STRING" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 81" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 209" MSB="17" LSB="3" />
+				<Bank Name="Deep Piano 3" MSB="17" LSB="4" />
 				<Bank Name="FM SQUARE" MSB="26" LSB="0" />
 				<Bank Name="Sax      2" MSB="26" LSB="3" />
 				<Bank Name="Diesel" MSB="26" LSB="4" />
@@ -14696,6 +15021,7 @@
 				<Bank Name="STEEL'S CRY" MSB="17" LSB="1" />
 				<Bank Name="LALF Preset 82" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 210" MSB="17" LSB="3" />
+				<Bank Name="E.piano #2" MSB="17" LSB="4" />
 				<Bank Name="FMSAWTOOTH" MSB="26" LSB="0" />
 				<Bank Name="Wood Wind" MSB="26" LSB="3" />
 				<Bank Name="Hole in 1" MSB="26" LSB="4" />
@@ -14721,6 +15047,7 @@
 				<Bank Name="Lead 3 (calliope)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 83" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 211" MSB="17" LSB="3" />
+				<Bank Name="E.piano #3" MSB="17" LSB="4" />
 				<Bank Name="Small Pipe" MSB="26" LSB="0" />
 				<Bank Name="Clarinet 1" MSB="26" LSB="3" />
 				<Bank Name="&lt;&lt;Smash&gt;&gt;" MSB="26" LSB="4" />
@@ -14743,6 +15070,7 @@
 				<Bank Name="Lead 4 (chiff)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 84" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 212" MSB="17" LSB="3" />
+				<Bank Name="E.piano #4(2+) (sign type)" MSB="17" LSB="4" />
 				<Bank Name="Lead 4 (chiff)" MSB="26" LSB="0" />
 				<Bank Name="Clarinet 2" MSB="26" LSB="3" />
 				<Bank Name="FM SQUARE" MSB="26" LSB="4" />
@@ -14765,6 +15093,7 @@
 				<Bank Name="Lead 5 (charang)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 85" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 213" MSB="17" LSB="3" />
+				<Bank Name="E.(Bell)Piano #5" MSB="17" LSB="4" />
 				<Bank Name="RubberBand" MSB="26" LSB="0" />
 				<Bank Name="Oboe" MSB="26" LSB="3" />
 				<Bank Name="FM PULSE" MSB="26" LSB="4" />
@@ -14786,6 +15115,7 @@
 				<Bank Name="Lead 6 (voice)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 86" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 214" MSB="17" LSB="3" />
+				<Bank Name="E.Piano #6" MSB="17" LSB="4" />
 				<Bank Name="Synvox" MSB="26" LSB="0" />
 				<Bank Name="Flute    1" MSB="26" LSB="3" />
 				<Bank Name="FMSAWTOOTH" MSB="26" LSB="4" />
@@ -14810,6 +15140,7 @@
 				<Bank Name="Lead 7 (fifths)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 87" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 215" MSB="17" LSB="3" />
+				<Bank Name="E.Piano #7" MSB="17" LSB="4" />
 				<Bank Name="5th String" MSB="26" LSB="0" />
 				<Bank Name="Flute    2" MSB="26" LSB="3" />
 				<Bank Name="LFO NOISE" MSB="26" LSB="4" />
@@ -14833,6 +15164,7 @@
 				<Bank Name="Lead 8 (bass + lead)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 88" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 216" MSB="17" LSB="3" />
+				<Bank Name="S.Effect ReqDetune o2c(GyuinWawawawa)" MSB="17" LSB="4" />
 				<Bank Name="Feed Lead" MSB="26" LSB="0" />
 				<Bank Name="Recorder" MSB="26" LSB="3" />
 				<Bank Name="PINK NOISE" MSB="26" LSB="4" />
@@ -14854,6 +15186,7 @@
 				<Bank Name="Pad 1 (new age)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 89" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 217" MSB="17" LSB="3" />
+				<Bank Name="S.Effect 2 o0-1-2" MSB="17" LSB="4" />
 				<Bank Name="Pad 1 (new age)" MSB="26" LSB="0" />
 				<Bank Name="Harmonica" MSB="26" LSB="3" />
 				<Bank Name="Windbells" MSB="26" LSB="4" />
@@ -14875,6 +15208,7 @@
 				<Bank Name="Pad 2 (warm)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 90" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 218" MSB="17" LSB="3" />
+				<Bank Name="S.E. 3(Feed-in and noise add.)" MSB="17" LSB="4" />
 				<Bank Name="Lyrisyn" MSB="26" LSB="0" />
 				<Bank Name="E.Organ  1" MSB="26" LSB="3" />
 				<Bank Name="Synvox" MSB="26" LSB="4" />
@@ -14896,6 +15230,7 @@
 				<Bank Name="Pad 3 (polysynth)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 91" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 219" MSB="17" LSB="3" />
+				<Bank Name="Digital 1" MSB="17" LSB="4" />
 				<Bank Name="S/H Synth" MSB="26" LSB="0" />
 				<Bank Name="E.Organ  2" MSB="26" LSB="3" />
 				<Bank Name="Punk funk" MSB="26" LSB="4" />
@@ -14920,6 +15255,7 @@
 				<Bank Name="Pad 4 (choir)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 92" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 220" MSB="17" LSB="3" />
+				<Bank Name="Digital 2" MSB="17" LSB="4" />
 				<Bank Name="Sy.Voice 2" MSB="26" LSB="0" />
 				<Bank Name="E.Organ  3" MSB="26" LSB="3" />
 				<Bank Name="Whistling" MSB="26" LSB="4" />
@@ -14943,6 +15279,7 @@
 				<Bank Name="Pad 5 (bowed)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 93" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 221" MSB="17" LSB="3" />
+				<Bank Name="Digital [BAS] 3 o2-o3" MSB="17" LSB="4" />
 				<Bank Name="Pad 5 (bowed)" MSB="26" LSB="0" />
 				<Bank Name="E.Organ  4" MSB="26" LSB="3" />
 				<Bank Name="Voices" MSB="26" LSB="4" />
@@ -14966,6 +15303,7 @@
 				<Bank Name="Pad 6 (metallic)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 94" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 222" MSB="17" LSB="3" />
+				<Bank Name="Digital 4 o4a" MSB="17" LSB="4" />
 				<Bank Name="Metal Keys" MSB="26" LSB="0" />
 				<Bank Name="P.Organ  1" MSB="26" LSB="3" />
 				<Bank Name="Zing Plop" MSB="26" LSB="4" />
@@ -14987,6 +15325,7 @@
 				<Bank Name="Pad 7 (halo)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 95" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 223" MSB="17" LSB="3" />
+				<Bank Name="Accordion1" MSB="17" LSB="4" />
 				<Bank Name="Fantasy" MSB="26" LSB="0" />
 				<Bank Name="P.Organ  2" MSB="26" LSB="3" />
 				<Bank Name="Valve Plop" MSB="26" LSB="4" />
@@ -15008,6 +15347,7 @@
 				<Bank Name="Pad 8 (sweep)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 96" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 224" MSB="17" LSB="3" />
+				<Bank Name="Accordion2" MSB="17" LSB="4" />
 				<Bank Name="Dopplar FX" MSB="26" LSB="0" />
 				<Bank Name="Accordion" MSB="26" LSB="3" />
 				<Bank Name="Mars to ??" MSB="26" LSB="4" />
@@ -15030,6 +15370,7 @@
 				<Bank Name="FX 1 (rain)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 97" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 225" MSB="17" LSB="3" />
+				<Bank Name="Accordion3" MSB="17" LSB="4" />
 				<Bank Name="Storm Wind" MSB="26" LSB="0" />
 				<Bank Name="Bass Drum1" MSB="26" LSB="3" />
 				<Bank Name="ElectroTom" MSB="26" LSB="4" />
@@ -15051,6 +15392,7 @@
 				<Bank Name="FX 2 (soundtrack)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 98" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 226" MSB="17" LSB="3" />
+				<Bank Name="Chorus #2(Voice)" MSB="17" LSB="4" />
 				<Bank Name="FX 2 (soundtrack)" MSB="26" LSB="0" />
 				<Bank Name="Bass Drum2" MSB="26" LSB="3" />
 				<Bank Name="Timpani" MSB="26" LSB="4" />
@@ -15072,6 +15414,7 @@
 				<Bank Name="FX 3 (crystal)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 99" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 227" MSB="17" LSB="3" />
+				<Bank Name="Chorus #3" MSB="17" LSB="4" />
 				<Bank Name="KrstlChoir" MSB="26" LSB="0" />
 				<Bank Name="Snare    1" MSB="26" LSB="3" />
 				<Bank Name="Breakin" MSB="26" LSB="4" />
@@ -15093,6 +15436,7 @@
 				<Bank Name="FX 4 (atmosphere)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 100" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 228" MSB="17" LSB="3" />
+				<Bank Name="Chorus #4" MSB="17" LSB="4" />
 				<Bank Name="Wind Voice" MSB="26" LSB="0" />
 				<Bank Name="Snare    2" MSB="26" LSB="3" />
 				<Bank Name="Xylosnare" MSB="26" LSB="4" />
@@ -15114,6 +15458,7 @@
 				<Bank Name="FX 5 (brightness)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 101" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 229" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 1" MSB="17" LSB="4" />
 				<Bank Name="FX 5 (brightness)" MSB="26" LSB="0" />
 				<Bank Name="Tom      1" MSB="26" LSB="3" />
 				<Bank Name="Synballs" MSB="26" LSB="4" />
@@ -15136,6 +15481,7 @@
 				<Bank Name="FX 6 (goblins)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 102" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 230" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 2" MSB="17" LSB="4" />
 				<Bank Name="Terror!" MSB="26" LSB="0" />
 				<Bank Name="Tom      2" MSB="26" LSB="3" />
 				<Bank Name="Hand Drum" MSB="26" LSB="4" />
@@ -15157,6 +15503,7 @@
 				<Bank Name="FX 7 (echoes)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 103" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 231" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 3" MSB="17" LSB="4" />
 				<Bank Name="Templegong" MSB="26" LSB="0" />
 				<Bank Name="Tom      3" MSB="26" LSB="3" />
 				<Bank Name="Clockwerks" MSB="26" LSB="4" />
@@ -15178,6 +15525,7 @@
 				<Bank Name="FX 8 (sci-fi)" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 104" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 232" MSB="17" LSB="3" />
+				<Bank Name="F.Strings 4 (low)" MSB="17" LSB="4" />
 				<Bank Name="Space BUG?" MSB="26" LSB="0" />
 				<Bank Name="Tom      4" MSB="26" LSB="3" />
 				<Bank Name="HeiferBell" MSB="26" LSB="4" />
@@ -15199,6 +15547,7 @@
 				<Bank Name="Sitar" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 105" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 233" MSB="17" LSB="3" />
+				<Bank Name="Pizzicate#1 (Processed KOTO2)" MSB="17" LSB="4" />
 				<Bank Name="Sitar" MSB="26" LSB="0" />
 				<Bank Name="&quot;Hi!&quot; Hat!" MSB="26" LSB="3" />
 				<Bank Name="Heavysynth" MSB="26" LSB="4" />
@@ -15220,6 +15569,7 @@
 				<Bank Name="Banjo" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 106" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 234" MSB="17" LSB="3" />
+				<Bank Name="sound truck modoki" MSB="17" LSB="4" />
 				<Bank Name="Banjo" MSB="26" LSB="0" />
 				<Bank Name="Cow Bell" MSB="26" LSB="3" />
 				<Bank Name="Harmosolo" MSB="26" LSB="4" />
@@ -15244,6 +15594,7 @@
 				<Bank Name="Shamisen" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 107" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 235" MSB="17" LSB="3" />
+				<Bank Name="Strings" MSB="17" LSB="4" />
 				<Bank Name="Syamisen" MSB="26" LSB="0" />
 				<Bank Name="Agogo Bell" MSB="26" LSB="3" />
 				<Bank Name="Feed Lead" MSB="26" LSB="4" />
@@ -15266,6 +15617,7 @@
 				<Bank Name="Koto" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 108" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 236" MSB="17" LSB="3" />
+				<Bank Name="Clarinet #1" MSB="17" LSB="4" />
 				<Bank Name="Koto" MSB="26" LSB="0" />
 				<Bank Name="Wood Block" MSB="26" LSB="3" />
 				<Bank Name="Mono Lead" MSB="26" LSB="4" />
@@ -15287,6 +15639,7 @@
 				<Bank Name="Kalimba" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 109" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 237" MSB="17" LSB="3" />
+				<Bank Name="Clarinet #2 (Brighter than #1)" MSB="17" LSB="4" />
 				<Bank Name="Kalimba" MSB="26" LSB="0" />
 				<Bank Name="Castanet" MSB="26" LSB="3" />
 				<Bank Name="Hollowlead" MSB="26" LSB="4" />
@@ -15308,6 +15661,7 @@
 				<Bank Name="Bag pipe" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 110" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 238" MSB="17" LSB="3" />
+				<Bank Name="E.Flute" MSB="17" LSB="4" />
 				<Bank Name="Bag pipe" MSB="26" LSB="0" />
 				<Bank Name="SyBon" MSB="26" LSB="3" />
 				<Bank Name="Lyrisyn" MSB="26" LSB="4" />
@@ -15329,6 +15683,7 @@
 				<Bank Name="Fiddle" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 111" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 239" MSB="17" LSB="3" />
+				<Bank Name="E.Flute 2" MSB="17" LSB="4" />
 				<Bank Name="Fiddle" MSB="26" LSB="0" />
 				<Bank Name="BoConga" MSB="26" LSB="3" />
 				<Bank Name="Schmooh" MSB="26" LSB="4" />
@@ -15353,6 +15708,7 @@
 				<Bank Name="Shanai" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 112" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 240" MSB="17" LSB="3" />
+				<Bank Name="Flute + Bell" MSB="17" LSB="4" />
 				<Bank Name="Shanai" MSB="26" LSB="0" />
 				<Bank Name="Tom-Pany" MSB="26" LSB="3" />
 				<Bank Name="Huff Talk" MSB="26" LSB="4" />
@@ -15376,6 +15732,7 @@
 				<Bank Name="Tinkle Bell" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 113" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 241" MSB="17" LSB="3" />
+				<Bank Name="Old flute" MSB="17" LSB="4" />
 				<Bank Name="BellsBells" MSB="26" LSB="0" />
 				<Bank Name="SynGameran" MSB="26" LSB="3" />
 				<Bank Name="Harpsi low" MSB="26" LSB="4" />
@@ -15397,6 +15754,7 @@
 				<Bank Name="Agogo" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 114" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 242" MSB="17" LSB="3" />
+				<Bank Name="Whitsle 1" MSB="17" LSB="4" />
 				<Bank Name="Agogo Bell" MSB="26" LSB="0" />
 				<Bank Name="Mouse-Tom" MSB="26" LSB="3" />
 				<Bank Name="Harpsi Hi" MSB="26" LSB="4" />
@@ -15418,6 +15776,7 @@
 				<Bank Name="Steel Drums" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 115" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 243" MSB="17" LSB="3" />
+				<Bank Name="Whitsle 2" MSB="17" LSB="4" />
 				<Bank Name="Steel Drum" MSB="26" LSB="0" />
 				<Bank Name="Carnival!" MSB="26" LSB="3" />
 				<Bank Name="Fuzz Clav" MSB="26" LSB="4" />
@@ -15439,6 +15798,7 @@
 				<Bank Name="Woodblock" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 116" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 244" MSB="17" LSB="3" />
+				<Bank Name="Banjo (Harpci)" MSB="17" LSB="4" />
 				<Bank Name="Wood Block" MSB="26" LSB="0" />
 				<Bank Name="&quot;Air&quot;imba" MSB="26" LSB="3" />
 				<Bank Name="Clear Clav" MSB="26" LSB="4" />
@@ -15463,6 +15823,7 @@
 				<Bank Name="Taiko Drum" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 117" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 245" MSB="17" LSB="3" />
+				<Bank Name="KOTO" MSB="17" LSB="4" />
 				<Bank Name="Bass Drum1" MSB="26" LSB="0" />
 				<Bank Name="SplashClav" MSB="26" LSB="3" />
 				<Bank Name="Mute Clav" MSB="26" LSB="4" />
@@ -15486,6 +15847,7 @@
 				<Bank Name="Melodic Tom" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 118" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 246" MSB="17" LSB="3" />
+				<Bank Name="Koto 2" MSB="17" LSB="4" />
 				<Bank Name="Tom      1" MSB="26" LSB="0" />
 				<Bank Name="BamboBlock" MSB="26" LSB="3" />
 				<Bank Name="Squeezebox" MSB="26" LSB="4" />
@@ -15507,6 +15869,7 @@
 				<Bank Name="Synth Drum" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 119" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 247" MSB="17" LSB="3" />
+				<Bank Name="Sitar 1" MSB="17" LSB="4" />
 				<Bank Name="Synth Perc" MSB="26" LSB="0" />
 				<Bank Name="Terror!" MSB="26" LSB="3" />
 				<Bank Name="Celeste" MSB="26" LSB="4" />
@@ -15528,6 +15891,7 @@
 				<Bank Name="Reverse Cymbal" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 120" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 248" MSB="17" LSB="3" />
+				<Bank Name="Shamisen 2" MSB="17" LSB="4" />
 				<Bank Name="Reverse Cymbal" MSB="26" LSB="0" />
 				<Bank Name="Wind Voice" MSB="26" LSB="3" />
 				<Bank Name="Circustime" MSB="26" LSB="4" />
@@ -15549,6 +15913,7 @@
 				<Bank Name="Guitar Fret Noise" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 121" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 249" MSB="17" LSB="3" />
+				<Bank Name="Shamisen 1" MSB="17" LSB="4" />
 				<Bank Name="Guitar Fret Noise" MSB="26" LSB="0" />
 				<Bank Name="GuiRoach::" MSB="26" LSB="3" />
 				<Bank Name="Claranette" MSB="26" LSB="4" />
@@ -15570,6 +15935,7 @@
 				<Bank Name="Breath Noise" MSB="17" LSB="0" />
 				<Bank Name="LALF Preset 122" MSB="17" LSB="2" />
 				<Bank Name="LALF Preset 250" MSB="17" LSB="3" />
+				<Bank Name="Synth Shamisen" MSB="17" LSB="4" />
 				<Bank Name="Breath Noise" MSB="26" LSB="0" />
 				<Bank Name="Space BUG?" MSB="26" LSB="3" />
 				<Bank Name="Bassoon" MSB="26" LSB="4" />

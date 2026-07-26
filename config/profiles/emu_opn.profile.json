@@ -67,6 +67,11 @@
         "bank": 3,
         "file": "../../banks/OPN/music_lalf/music_lalf_2.hwbank.json",
         "group": "OPN2"
+      },
+      {
+        "bank": 4,
+        "file": "../../banks/OPN/valsound/valsound_1.hwbank.json",
+        "group": "OPN2"
       }
     ],
     "patch_banks": [
@@ -110,8 +115,8 @@
       "profile": "config/profiles/hw_plugins/fmemuif_opn_profile.json"
     }
   ],
-  "master_pitch": 440.0,
-  "master_volume": 100,
+  "master_pitch": 442.0,
+  "master_volume": 127,
   "midi_inputs": [
     "__LOCAL__",
     "__LOCAL__",
