@@ -42,6 +42,7 @@ $Projects = @{
     PatchEditor= "..\FITOM_patch_editor\build\vs2026\$BuildType"
     FitomEmuIF = "..\FitomEmuIF\build\$BuildType"
     FitomHwIF  = "..\FitomHwIF\build\$BuildType"
+    FitomSf2IF = "..\FitomSf2IF\build\$BuildType"
     YMEngine   = "..\YMEngine\build\bin\$BuildType"
 }
 
@@ -84,6 +85,7 @@ Copy-IfExists "$($Projects.PatchEditor)\assets" "$Bin\"
 # プラグイン DLL
 Copy-IfExists "$($Projects.FitomEmuIF)\*.dll" "$Bin\"
 Copy-IfExists "$($Projects.FitomHwIF)\*.dll"    "$Bin\"
+Copy-IfExists "$($Projects.FitomSf2IF)\*.dll"    "$Bin\"
 
 # FM エンジン DLL
 Copy-IfExists "$($Projects.YMEngine)\YMFMEngine.dll" "$Bin\engines\"
