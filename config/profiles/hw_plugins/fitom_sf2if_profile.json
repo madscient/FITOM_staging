@@ -1,0 +1,21 @@
+{
+  "_comment": [
+    "FitomSf2IF (SF2/FluidSynth統合hwifプラグイン) 固有の設定ファイル。",
+    "FITOM_X本体はこの内容を一切解釈せず、HWPlugin_Init()にそのまま渡すだけ。",
+    "soundfontsファイル一覧はここには書かない(banks.sf2_banksから",
+    "FITOM_Xコアが自動導出してparams_json経由でHWPlugin_Open()に渡す、",
+    "docs/sf2-fluidsynth-integration.md 4節⑥参照)。"
+  ],
+
+  "sample_rate": 44100,
+
+  "gain":      0.5,
+  "polyphony": 256,
+  "reverb":    true,
+  "chorus":    true,
+
+  "audio_driver":      "",
+  "audio_device":      "",
+  "audio_period_size": 0,
+  "audio_periods":     0
+}
