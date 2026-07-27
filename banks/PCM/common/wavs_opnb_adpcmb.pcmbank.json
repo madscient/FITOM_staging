@@ -4,5 +4,21 @@
   "sample_rate": 16000,
   "boundary": 256,
   "bin_file": "wavs_opnb_adpcmb.bin",
-  "adpcm_json": "wavs_opnb_adpcmb.json"
+  "adpcm_json": "wavs_opnb_adpcmb.json",
+  "swpatches": [
+    { "entry_no": 0, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 1, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 2, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 3, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 4, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 5, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 6, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 7, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 8, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 9, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 10, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 11, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 12, "sw_bank": 0, "sw_prog": 2 },
+    { "entry_no": 13, "sw_bank": 0, "sw_prog": 2 }
+  ]
 }
