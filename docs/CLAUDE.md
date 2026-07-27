@@ -1090,6 +1090,72 @@ Bank MSB=120/121固定・PC違いでキット切替、という仕様と同型)�
 - `DrumKit`データクラスのフィールド名も`cc32`→`prog`に変更し、
   変数名からも意味の取り違えが起きないようにした。
 
+### 3.31 FitomSf2IF(SF2/FluidSynth)対応: unified_preset.profile.jsonへのsf2_banks/sf2_channel_windows新設（2026年7月27日）
+FITOM_XにSF2(SoundFont2)/FluidSynth統合機能が追加された(設計検討は
+`../FITOM_X/docs/sf2-fluidsynth-integration.md`で確定済み・FITOM_X本体側
+実装も完了済み、実際にSF2を鳴らす`IHWPlugin`実装は別リポジトリ
+`../FitomSf2IF`、設計は確定済みだが本リポジトリには未ビルド)のを受け、
+統合プロファイルにSF2直行パスの配線を追加した。
+
+**事前作業(スキーマ同期)**: `config_schema/profile.schema.json`・
+`hwbank.schema.json`・`sccwave.schema.json`をFITOM_X本体から再同期した
+(5.5節の運用ルール通り)。前回同期以降、`sf2_banks`/`sf2_channel_windows`
+新設に加え、`pcm_banks[].chip`/`group`/`offsets_only`新設・`master_volume`/
+`master_pitch`新設・`midi_backend`の説明文がRtMidi統一実装を反映、と
+複数の差分が溜まっていたため、まとめて反映した。`hwbank.schema.json`の
+差分はOPL3 `ALG`のConnectionSELビット統合(3.19関連)に伴う説明文更新のみ
+(実データ・バリデーション結果に影響なし)、`sccwave.schema.json`は内容差分
+なし(改行コードのみ)。同期後、既存11プロファイル全件が新スキーマでも
+バリデーション(`jsonschema`)を通過することを確認済み。
+
+**`unified_preset.profile.json`への配線**:
+- `hw_plugins[]`に`FitomSf2IF`(`FitomSf2IF.dll`)を追加。設定ファイルは
+  新設`config/profiles/hw_plugins/fitom_sf2if_profile.json`
+  (`../FitomSf2IF/sf2if_profile.example.json`の内容をそのまま流用、
+  audio_driver等は既定値のまま)。
+- `devices[]`(このプロファイルには元々存在せず、FitomEmuIF側は
+  `hw_plugins[].auto_devices`で自動生成されていた)を新設し、
+  `{ "if": "HW", "chip": "SF2", "plugin": "FitomSf2IF" }`の1エントリのみ
+  配置(設計ドキュメント4節⑥の通り、`serial`/`port`/`slot`等FM/PSG固有
+  フィールドは一切指定しない)。
+- `banks.sf2_banks`に、`docs/sf2_source.txt`記載順(General User GS→
+  YAMAHA RX5→YAMAHA RX11→YAMAHA RX15 Drums→Phoenix MT-32→CMI Orchestra
+  Hit)・各ファイル内は`sf2_bank`昇順で計10エントリ(`bank`0-9)を登録した。
+  各sf2ファイルの内部バンク構成は、本リポジトリに`fluidsynth`本体や
+  sfinfo相当のツールが無いため、SF2(RIFF)ファイルの`phdr`(preset header)
+  チャンクを直接パースするワンオフスクリプトで実データから確認した。
+
+  | bank | file | sf2_bank | 内容 |
+  |---|---|---|---|
+  | 0 | GeneralUser GS v1.471.sf2 | 0 | GM128 melody |
+  | 1 | GeneralUser GS v1.471.sf2 | 128 | GM percussion(標準) |
+  | 2 | YAMAHA_RX5.sf2 | 0 | RX5 単発melodic(Timpani/Gunshot) |
+  | 3 | YAMAHA_RX5.sf2 | 1 | RX5 DX系melodic抜粋(Clav/Marimba/EBass/Orch) |
+  | 4 | YAMAHA_RX5.sf2 | 128 | RX5 ドラムキット5種(Standard/IncludeRom/Power/Electric/Rock) |
+  | 5 | Yamaha_RX11.sf2 | 128 | RX11 ドラムキット5種 |
+  | 6 | Yamaha_RX15_Drums.sf2 | 0 | RX15 ドラムキット(単一) |
+  | 7 | Phoenix_MT-32.sf2 | 0 | MT-32 melodic 128パッチ |
+  | 8 | Phoenix_MT-32.sf2 | 128 | MT-32 リズムバリエーション11種 |
+  | 9 | CMI_Orchestra_Hit_Soundfont.sf2 | 0 | CMI Orchestra Hit(単一) |
+
+  `GeneralUser GS v1.471.sf2`はこの他にbank1-16(GS variation、楽器の
+  ごく一部だけを差し替えた別ティンバー集)・bank120(GS方式percussion、
+  bank128と内容重複する旧形式)も持つが、今回は主要な2バンク(0, 128)のみ
+  登録し、GS variation群は登録を見送った(4節に記載)。
+- `sf2_channel_windows`は、既存の`midi_inputs`2件(`[0]`=loopMIDI Port 1→
+  MPU0、`[1]`=microKEY-25→MPU1)のうちMPU0(DAW/シーケンサー想定)のch12-15
+  の4chを`fluidsynth_chan`0-3へ静的に割り当てる暫定値とした(MPU2/3は
+  本プロファイルの`midi_inputs`に対応デバイスが無く、窓を割り当てても
+  MIDIメッセージ自体が届かず機能しないため除外)。既存のCC#0ベースの
+  ネイティブ経路(ch0-11)との衝突を避けるための控えめな初期値であり、
+  実際の運用(同時に何パート鳴らすか等)に応じて要調整。
+
+**未検証**: `FitomSf2IF`プラグイン本体は`../FitomSf2IF`側で設計・実装
+済みだが、本リポジトリに`FitomSf2IF.dll`としてビルド・配置されていない
+ため、今回の設定一式はJSON構文・スキーマレベルの検証(`jsonschema`)と
+参照ファイルの実在確認のみ行った。実際に`fitom_core.exe`上でSF2が鳴る
+ことは未確認(4節に記載)。
+
 - `banks/drums/ma2_preset_2op.drumkit.json`・`ma2_variant_2op.drumkit.json`
   のGM2ドラムノート27,28,31-36,103-105(計11ノート)は、参照先
   (`banks/OPL2/ma2_vma/DrumsBank.hwbank.json`・`07_DrumsBank.hwbank.json`
@@ -1146,6 +1212,17 @@ Bank MSB=120/121固定・PC違いでキット切替、という仕様と同型)�
   での読み込み動作が未検証（構文検証のみ済み）。実機/実ソフトでの動作
   確認が望ましい（Studio One/REAPER対応の要否は3.29末尾の記述の通り
   検証環境待ちで保留中）。
+- 3.31で`unified_preset.profile.json`に追加した`sf2_banks`/
+  `sf2_channel_windows`/`devices[chip=SF2]`は、`FitomSf2IF.dll`が本
+  リポジトリに未ビルド・未配置のため実機能未検証（JSON構文・スキーマ
+  検証のみ済み）。`../FitomSf2IF`側のビルドが完了し`bin/`へ配置され
+  次第、実際にSF2が鳴るか動作確認が必要。
+- `GeneralUser GS v1.471.sf2`のGS variationバンク（sf2_bank 1-16, 120）は
+  `sf2_banks`未登録（3.31参照）。必要になった場合は`bank=10`以降に追加
+  すること。
+- 3.31の`sf2_channel_windows`（MPU0 ch12-15→fluidsynth_chan0-3の4ch）は
+  暫定値。実際にSF2で同時に鳴らしたいパート数・既存ネイティブ経路との
+  ch使用状況を踏まえて要調整。
 
 ---
 

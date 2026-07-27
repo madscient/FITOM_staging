@@ -172,7 +172,7 @@
     },
     "midi_inputs": {
       "type": "array",
-      "description": "使用する MIDI 入力デバイス名の一覧。MidiPlugin_EnumerateIn() が返すデバイス名と一致させること。",
+      "description": "使用する MIDI 入力デバイス名の一覧。MidiPlugin_EnumerateIn() が返すデバイス名と一致させること。配列のindexがMPU番号(0-3、最大4)に対応する。空文字列の要素は「そのMPUには割り当てない」ことを表す(GUIのMIDIポート設定ダイアログで一部のMPUのみ設定した場合等、途中のindexが空になりうる)。",
       "items": {
         "type": "string"
       },
@@ -258,6 +258,36 @@
                   "builtin_swpatch_meta"
                 ],
                 "description": "このバンクエントリの特殊な役割(省略時は通常のHwBank、voice_patch_type/bank/prog経由で検索される)。\"builtin_swpatch_meta\": OPLL ROM音色(opllRomPatches_、PatchManager::resolveOpllRomVoice参照)にswPatchを紐づけるための専用メタデータバンク。通常のHwBankRegistry検索の対象にならず、専用の保持スロット(PatchManager::opllBuiltinMetaBank_)にルーティングされる。bankフィールドの値はこの場合意味を持たない(何番でもよい)が、スキーマ上は引き続き必須のままとする(既存のhw_banks[]エントリ形式との一貫性のため)。各パッチエントリはhwbank.schema.jsonのbuiltinフィールド(ops[]とは排他)で、対象のROM音色を指定する。2026年7月新設。詳細はdocs/patch-structure-design.md参照。"
+              }
+            }
+          }
+        },
+        "sf2_banks": {
+          "type": "array",
+          "description": "SF2直行パス(docs/sf2-fluidsynth-integration.md参照)で使うSoundFont(.sf2)ファイルのバンク定義。CC#32の値(bank)から、SF2ファイル(file)とそのファイル内部のネイティブbank番号(sf2_bank)への間接参照テーブルであり、CC#32の値をSF2内部のbank番号としてそのまま使うわけではない(1つのsf2ファイルが複数の内部bankを持ちうる、複数の異なるsf2ファイルを併用したい、という2つの理由による)。同一fileを複数エントリが参照してもよく、その場合もHWプラグイン側でファイルパスをキーにキャッシュし、実体のロード(fluid_synth_sfload()相当)は1回だけ行う想定。2026年7月、FITOM_X本体側(Sf2BankRegistry、CC#32解決・devices[]のsoundfonts一覧自動生成)は実装済み。実際にSF2を鳴らすにはこのファイル一覧を受け取るhwifプラグイン(仮称FitomSf2IF、別リポジトリ)が別途必要で、そちらは未実装。",
+          "items": {
+            "type": "object",
+            "required": [
+              "bank",
+              "file",
+              "sf2_bank"
+            ],
+            "properties": {
+              "bank": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 127,
+                "description": "CC#32で選択するインデックス(既存hw_banks[].bankと同じ意味論のインデックスで、SF2ファイル内部のbank番号そのものではない)。"
+              },
+              "file": {
+                "type": "string",
+                "description": "SoundFont2(.sf2)ファイルへのパス。"
+              },
+              "sf2_bank": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 128,
+                "description": "このエントリが指すSF2ファイル内部でのネイティブbank番号。128はSF2/GM界隈で広く使われるパーカッションバンクの慣習を許容するための値で、hw_banks[].bankの上限(127)より1つ広い。"
               }
             }
           }
@@ -382,6 +412,30 @@
               "file": {
                 "type": "string",
                 "description": "*.pcmbank.json のパス。"
+              },
+              "group": {
+                "type": "string",
+                "enum": [
+                  "ADPCMB",
+                  "ADPCMA",
+                  "PCMD8"
+                ],
+                "description": "任意。このPCMバンクが対象とするVoicePatchType。指定すると、①CFITOM::initDevices()が一致するVoicePatchTypeのPCMデバイスへこのバンク番号を自動的に割り当てるようになり(省略時は全PCMデバイスがbank0を共有する後方互換動作のまま)、②entries[]の各サンプルが、パッチピッカー等で選択可能なnamed patchとして自動的にHwBankRegistry側にも公開される(*.hwbank.jsonを別途手書きする必要はない、PatchManager::loadPcmBankJson()参照)。異なるコーデックのPCMバンクを複数併用する場合は指定必須(省略のままだと2つ目以降のバンクが無視される)。"
+              },
+              "chip": {
+                "type": "string",
+                "enum": [
+                  "Y8950",
+                  "OPNA",
+                  "OPNB",
+                  "OPNBB"
+                ],
+                "description": "任意。このPCMバンクを限定する物理チップ。OPNA(YM2608)とOPNB/OPNBB(YM2610/2610B)のADPCM-Bは同一group(VoicePatchType)を共有するが、実際に配置された波形バイナリのバウンダリ整列(OPNA=32byte、OPNB/OPNBB=256byte)が異なり同じオフセットテーブルを共有できない。同一group内で複数の物理チップ向けバンクを併用する場合は各エントリにchipを指定する(CFITOM::initDevices()がgroupより先にdeviceType完全一致で解決する、PcmBank::deviceType参照)。ADPCM-A/PCM-D8のようにVoicePatchTypeとdeviceTypeが1:1のグループでは通常不要。"
+              },
+              "offsets_only": {
+                "type": "boolean",
+                "default": false,
+                "description": "任意、既定false。trueの場合、このバンクはchipで指定した物理チップ向けのStart/Endレジスタ計算用オフセットテーブルとしてのみ登録し、entries[]からのnamed patch自動合成(パッチピッカーへの公開)を行わない。同一group内でchip違いのバンクを複数併用する場合、entries[]の名前集合はどのバンクも同一(オフセット値のみチップ毎に異なる)なので、代表となる1つのバンク(通常はchip省略または最初のバンク)以外にtrueを指定し、パッチピッカーでの重複表示を避ける。"
               }
             }
           }
@@ -398,18 +452,50 @@
         }
       }
     },
+    "sf2_channel_windows": {
+      "type": "array",
+      "description": "SF2直行パス(docs/sf2-fluidsynth-integration.md参照)における、MPU×chとfluidsynthの`chan`(0–15)の静的な対応表(「窓」)。ここに載っているMPU×chは、FITOM_Xのネイティブ処理(通常モード/直接デバイス選択モード/内蔵リズムバンク/役割切替/DVA/PatchManagerによるHwPatch解決)を一切経由せず、Note On/Off・CC(CC#0を除く)・プログラムチェンジをそのままfluidsynthエンジンへ素通しする経路になる。載っていないMPU×chは、これまでどおりネイティブ経路が適用される。banks(hw_banks等)がバンク内容の参照であるのに対し、これはMIDIチャンネルそのもののルーティング設定であるため、bank類とは別のトップレベルプロパティとした。演奏中に窓の割り当てを変更する場合は、プライベートSysEx(sub-cmd 0x04、docs/manuals/midi-message-reference.mdの8.2節参照)を使う。ここでのプロファイル設定は、その初期値に相当する。2026年7月、FITOM_X本体側(この読み込み・検証・MidiProcessorでの窓判定・SysEx sub-cmd 0x04受信)は実装済み。実際にSF2を鳴らすにはhwifプラグイン(仮称FitomSf2IF、別リポジトリ)が別途必要で、そちらは未実装。",
+      "items": {
+        "type": "object",
+        "required": [
+          "mpu",
+          "ch",
+          "fluidsynth_chan"
+        ],
+        "properties": {
+          "mpu": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 3,
+            "description": "対象MPU番号(0起算、現状MAX_MPUS=4)。"
+          },
+          "ch": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15,
+            "description": "対象MIDIチャンネル番号(0起算)。"
+          },
+          "fluidsynth_chan": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 15,
+            "description": "割り当て先のfluidsynth chan番号(0起算)。全エントリを通じて重複不可(スキーマでは表現できないため、ローダー側でのバリデーションが必要)。"
+          }
+        }
+      }
+    },
     "midi_backend": {
       "type": "object",
-      "description": "MIDI入力バックエンドDLL(WinMM/ALSA等)の指定。省略時はプラットフォーム既定(Windows: fitom_midi_winmm、Linux: fitom_midi_alsa)を実行ファイルと同じディレクトリから探索する。",
+      "description": "MIDI入力バックエンドDLL(RtMidi、Windows/Linux/macOS共通実装)の指定。省略時はプラットフォーム既定(fitom_midi_rtmidi.dll/.so/.dylib)を実行ファイルと同じディレクトリから探索する。",
       "additionalProperties": false,
       "properties": {
         "dll": {
           "type": "string",
           "description": "MIDIバックエンドDLLのファイル名またはパス。相対パスの場合は実行ファイルのディレクトリを基点とする。",
           "examples": [
-            "fitom_midi_winmm.dll",
-            "fitom_midi_alsa.so",
-            "fitom_midi_wms.dll"
+            "fitom_midi_rtmidi.dll",
+            "fitom_midi_rtmidi.so",
+            "fitom_midi_rtmidi.dylib"
           ]
         },
         "_comment": {
@@ -494,6 +580,20 @@
       ],
       "default": "SSG",
       "description": "PSG系共有バンク(voice_patch_type=0x40、SSG/EPSG/DCSG/SAA/SCC全チップが同じCC#0/バンク名前空間を共有する、2026年7月〜)において、個々のHwPatchエントリの対象チップ指定(targetVoicePatchType)が未設定(0)の場合に、どのチップ向けとして解決するかを指定する。省略時は'SSG'。hw_patchごとに明示的な対象チップが指定されている場合は、この設定よりそちらが優先される。"
+    },
+    "master_volume": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 127,
+      "default": 100,
+      "description": "マスターボリューム(全チャンネル共通の出力音量係数)。GUIのシステム設定ダイアログから変更可能。省略時は100。"
+    },
+    "master_pitch": {
+      "type": "number",
+      "minimum": 430.0,
+      "maximum": 450.0,
+      "default": 440.0,
+      "description": "マスターピッチ(基準A音のHz)。GUIのシステム設定ダイアログから変更可能。省略時は440.0。"
     }
   },
   "examples": [
