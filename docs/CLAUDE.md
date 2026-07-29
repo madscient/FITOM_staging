@@ -42,14 +42,21 @@ docs/manuals/           エンドユーザー向けレファレンスマニュ�
 ## 2. 現在のリポジトリ状態（このドキュメント作成時点）
 
 ### プロファイル一覧
-| ファイル | 用途 |
+全6プロファイルとも`banks`は`config/profiles/unified.bankset.json`
+（hw_banks 63件, sf2_banks 10件, sw_banks 7件, patch_banks 7件,
+drum_banks 21件, pcm_banks 3件）を共有参照している（2026年7月29日、
+3.32節参照。デバイス構成に含まれないチップ向けのバンクエントリは
+単に発音しないだけで実害はない）。`devices`/`hw_plugins`（実際に
+ロードするチップ構成）のみがプロファイルごとに異なる。
+
+| ファイル | デバイス構成 |
 |---|---|
-| `unified_preset.profile.json` | 全チップ統合プロファイル（hw_banks 63件, sw_banks 7件, patch_banks 5件, drum_banks 15件） |
+| `unified_preset.profile.json` | SF2(FluidSynth)のみ（全チップ分のbanksカタログを保持する“総本山”） |
 | `emu_opn.profile.json` | OPN専用（OPN/OPN2/OPNA/OPNB/OPNBB×1ずつ） |
 | `emu_opl.profile.json` | OPL専用（OPL[rhythm]/Y8950/OPL2/OPL3/OPL4×1ずつ） |
 | `emu_opm.profile.json` | OPM専用（OPM×2/OPZ×2） |
 | `emu_opll.profile.json` | OPLL専用（OPLL/OPLL2[rhythm]/OPLLP/VRC7/OPLLX×1ずつ） |
-| `fmall.profile.json` | OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7構成（2026年7月19日新設、hw_banks 26件・sw_banks 7件、patch_banks 0番=`gm_layered_opl4awm.patchbank.json`[ToneLayer0でAWM直参照のGM128バンク、新規作成]、drum_banks 0番=`opl4awm.drumkit.json`のみ） |
+| `fmall.profile.json` | OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7構成（2026年7月19日新設） |
 旧・個別プロファイル（`emulator_opm.profile.json`ほか計6件、統合前からの
 遺産）は、誰もメンテナンスしておらず統合後の構成と矛盾していたため
 2026年7月26日に削除した（3.30節参照）。
@@ -1156,6 +1163,91 @@ FITOM_XにSF2(SoundFont2)/FluidSynth統合機能が追加された(設計検討�
 参照ファイルの実在確認のみ行った。実際に`fitom_core.exe`上でSF2が鳴る
 ことは未確認(4節に記載)。
 
+---
+
+### 3.32 banksセクションを外部ファイル化し、6プロファイルで共有参照するよう変更（2026年7月29日、FITOM_X側コミットb672de2に追従）
+FITOM_X本体側に`banks`セクションの外部ファイル参照機能
+（`"banks": "<ファイルパス>"`という文字列を指定すると、参照先JSON
+オブジェクトの内容がそのまま`banks`として展開される。パス解決基点は
+プロファイル自身のディレクトリ）が新設されたのを受け、ユーザー指摘
+（「デバイス構成とバンクセット構成を分離した方がマニュアルがシンプルに
+なる」）により、6プロファイル全件の`banks`直書きを廃止し、単一の外部
+ファイル`config/profiles/unified.bankset.json`への参照に統一した。
+
+**事前作業(スキーマ同期)**: `config_schema/profile.schema.json`の
+`banks`をFITOM_X本体の最新版（`oneOf`: 文字列 or 従来のオブジェクト
+直書き）に再同期。
+
+**移行內容**: `unified_preset.profile.json`が持っていた`banks`
+オブジェクト（hw_banks 63件・sf2_banks 10件・sw_banks 7件・
+patch_banks 5件・drum_banks 21件・pcm_banks 2件）をそのまま
+`config/profiles/unified.bankset.json`へ切り出し、6プロファイル全件の
+`banks`を`"unified.bankset.json"`という文字列参照に置き換えた。
+
+**移行前の差分調査で判明した事実（重要）**: 5プロファイル
+（`emu_opn`/`emu_opl`/`emu_opm`/`emu_opll`/`fmall`）の旧`banks`は、
+`hw_banks`/`sw_banks`はunified_presetの完全なコピー（bank番号も
+一致、hwbank.json内部の`sw_bank`/`sw_prog`参照との整合を保つため
+意図的に維持されていたもの、fmallの`_comment`参照）だった一方、
+`patch_banks`/`drum_banks`/`pcm_banks`は各プロファイルが「そのチップ
+向けの既定バンクをローカルでbank/prog 0に付け替える」という個別の
+再番号付けを行っていた。単純に`unified_preset`の値へ差し替えると
+以下2点が失われることが判明したため、統合前に`unified.bankset.json`
+側へ追加してカバーした:
+- `patch_banks`: `emu_opll`が参照していた`gm_layered_opll.patchbank.json`・
+  `fmall`が参照していた`gm_layered_opl4awm.patchbank.json`は、
+  旧`unified_preset.profile.json`の`patch_banks`(5件)に**そもそも
+  含まれていなかった**（各プロファイルが独自追加していたファイル）。
+  そのまま差し替えるとこの2ファイルがどのプロファイルからも
+  参照されなくなり、OPLL/FMALLの通常モードGM128パッチバンクが完全に
+  無音になるところだった。`unified.bankset.json`の`patch_banks`に
+  bank5/bank6として追加。
+- `pcm_banks`: `emu_opn`が持っていた3件目のエントリ
+  （`group=ADPCMB, chip=OPNB, offsets_only=true`、OPNB/OPNBB用ADPCM-B
+  の物理オフセットテーブル。OPNAとはバウンダリ整列が異なるため別建てが
+  必要、`pcmbank.schema.json`の`chip`説明参照）は、旧`unified_preset`
+  の`pcm_banks`(2件、OPNA想定)に含まれていなかった。そのまま差し替える
+  とOPNB/OPNBBのADPCM-B発音時のオフセット計算が誤ったものになる
+  ところだった。`unified.bankset.json`の`pcm_banks`にbank2として追加し、
+  同一group内でchip違いを併用するため（スキーマの規則通り）既存bank0にも
+  `"chip": "OPNA"`を明示。
+- `drum_banks`は各プロファイルのローカルbank/prog0エントリ
+  （`opll_rhythm.drumkit.json`・`opl_builtin_rhythm.drumkit.json`等）が
+  いずれも`unified_preset`側に(別のprog番号で)既に含まれていたため、
+  ファイルの追加は不要だった（番号が変わるのみ）。
+
+**この移行による既知の挙動変化**: 上記の通りファイル自体の消失は防いだ
+が、各プロファイルの「通常モード(CC#0=0,CC#32=0)でbank/prog=0が指す
+パッチバンク/ドラムキット」は、旧来のチップ固有デフォルト
+（例: `emu_opn`なら`necopn_gm.patchbank.json`）から、全プロファイル
+共通の`gm_layered_skeleton.patchbank.json`（`patch_banks`bank0）に
+変わった。各チップ固有のGM128バンクは消えたわけではなく、
+`unified.bankset.json`が定義する新しいbank/prog番号
+（`docs/manuals/emu_profiles.md`に反映済み）で引き続き選択できる。
+単一の共有カタログである以上、5チップ分の「それぞれのbank0」を同時に
+維持することはできない（同じbank番号に複数チップ分のファイルを
+同時に割り当てられないため）ことによる、設計上不可避のトレードオフ。
+
+**検証**: 6プロファイル全件・`unified.bankset.json`単体とも
+`jsonschema`で`profile.schema.json`に対して検証済み。
+`unified.bankset.json`が参照する111件中101件（`sf2/`配下の10件を除く、
+配布対象外のためgitignore対象、3.31以前から未コミット）の実ファイル
+存在を確認済み。
+
+**この移行により4節の以下の項目が解消**: 「`emu_opm`/`emu_opll`の
+`drum_banks`が統合プロファイルのまま全15件を引き継いでおり絞り込みが
+必要か要検討」という項目は、そもそも全プロファイルがカタログ全体を
+共有参照するのが設計原則（3.32）になったことで前提が変わり、
+「絞り込み」自体が不要という結論になった（README.mdの設計原則通り、
+デバイス構成に含まれないバンクエントリは単に発音しないだけで実害が
+ない）。
+
+---
+
+## 4. 未解決・要確認事項
+（各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
+見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
+
 - `banks/drums/ma2_preset_2op.drumkit.json`・`ma2_variant_2op.drumkit.json`
   のGM2ドラムノート27,28,31-36,103-105(計11ノート)は、参照先
   (`banks/OPL2/ma2_vma/DrumsBank.hwbank.json`・`07_DrumsBank.hwbank.json`
@@ -1179,9 +1271,6 @@ FITOM_XにSF2(SoundFont2)/FluidSynth統合機能が追加された(設計検討�
   `fmemuif_opll5.profile.json`（新規作成した4チップ構成サブプロファイル）
   の**クロック値は一般的な標準値からの推測**（特にOPL4=33,868,800Hzは
   未検証）。実機/エンジン仕様に合わせた確認・調整が必要。
-- `emu_opm.profile.json`/`emu_opll.profile.json`の`drum_banks`は「統合
-  プロファイルのまま」全15件を引き継いでいる。他チップ用ドラムキット
-  （ALSA/MA-2等）も含まれるため、絞り込みが必要か要検討。
 - OPLL GM128（`gm_layered_opll.patchbank.json`）は MA-2 Preset2OP由来が
   67/128と過半数。ソースを増やせる余地がないか、要継続検討
   （2026年7月19日確認: この67パッチはToneLayerで`voice_patch_type=OPLL,
@@ -1223,6 +1312,11 @@ FITOM_XにSF2(SoundFont2)/FluidSynth統合機能が追加された(設計検討�
 - 3.31の`sf2_channel_windows`（MPU0 ch12-15→fluidsynth_chan0-3の4ch）は
   暫定値。実際にSF2で同時に鳴らしたいパート数・既存ネイティブ経路との
   ch使用状況を踏まえて要調整。
+- 3.32で`unified.bankset.json`を6プロファイル共有にした結果、各
+  プロファイルの通常モードbank/prog0が指すパッチ/ドラムキットが
+  従来のチップ固有デフォルトから汎用の`gm_layered_skeleton`
+  (patch_banks bank0)に変わった。実機/エミュレータでの動作確認は
+  未実施（JSON構文・スキーマ検証のみ済み）。
 
 ---
 
