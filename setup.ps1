@@ -44,6 +44,7 @@ $Projects = @{
     FitomHwIF  = "..\FitomHwIF\build\$BuildType"
     FitomSf2IF = "..\FitomSf2IF\build\$BuildType"
     YMEngine   = "..\YMEngine\build\bin\$BuildType"
+    FmGenEngine  = "..\FmGenEngine\build\bin\$BuildType"
 }
 
 function Copy-IfExists($src, $dst) {
@@ -89,6 +90,7 @@ Copy-IfExists "$($Projects.FitomSf2IF)\*.dll"    "$Bin\"
 
 # FM エンジン DLL
 Copy-IfExists "$($Projects.YMEngine)\YMFMEngine.dll" "$Bin\engines\"
+Copy-IfExists "$($Projects.FmGenEngine)\FmGenEngineApi.dll" "$Bin\engines\"
 
 # ── その他 ───────────────────────────────────────────────────────────────────
 New-Item -ItemType Directory -Force -Path "$Stage\dist" | Out-Null

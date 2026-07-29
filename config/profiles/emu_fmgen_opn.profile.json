@@ -1,0 +1,20 @@
+{
+  "banks": "unified.bankset.json",
+  "hw_plugins": [
+    {
+      "auto_devices": true,
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmgenif_opn_profile.json"
+    }
+  ],
+  "master_pitch": 442.0,
+  "master_volume": 127,
+  "midi_inputs": [
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
+  ],
+  "profile_name": "OPNエミュプロファイル (OPN/OPN2/OPNA/OPNB/OPNBB)"
+}
