@@ -12,5 +12,21 @@
     "__LOCAL__",
     "__LOCAL__"
   ],
-  "banks": "unified.bankset.json"
+  "banks": "unified.bankset.json",
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルに必ず存在するOPLL系デバイス向けのバンクで上書きする(2026年7月新設のbank_overrides機構、既存bank/progとの重複可)。",
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/gm_layered_opll.patchbank.json"
+      }
+    ],
+    "drum_banks": [
+      {
+        "prog": 0,
+        "name": "OPLL Built-in set",
+        "file": "../../banks/drums/opll_rhythm.drumkit.json"
+      }
+    ]
+  }
 }

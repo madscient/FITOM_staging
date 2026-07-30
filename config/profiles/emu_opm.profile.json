@@ -12,5 +12,21 @@
     "__LOCAL__",
     "__LOCAL__"
   ],
-  "banks": "unified.bankset.json"
+  "banks": "unified.bankset.json",
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルに必ず存在するOPM系デバイス向けのバンクで上書きする(2026年7月新設のbank_overrides機構、既存bank/progとの重複可)。ドラムキットについては、OPM/OPZ固有のchip依存drumkitがunified.bankset.json側に存在しないため、レイヤードバンク0(このオーバーライドで有効化したgm_layered_opm.patchbank.json)経由で発音するgm2_standard.drumkit.jsonを割り当てる。",
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/gm_layered_opm.patchbank.json"
+      }
+    ],
+    "drum_banks": [
+      {
+        "prog": 0,
+        "name": "GM2 Standard Kit",
+        "file": "../../banks/drums/gm2_standard.drumkit.json"
+      }
+    ]
+  }
 }

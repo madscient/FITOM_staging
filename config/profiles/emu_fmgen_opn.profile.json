@@ -1,5 +1,21 @@
 {
   "banks": "unified.bankset.json",
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルに必ず存在するOPN系デバイス向けのバンクで上書きする(2026年7月新設のbank_overrides機構、既存bank/progとの重複可)。",
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/necopn_gm.patchbank.json"
+      }
+    ],
+    "drum_banks": [
+      {
+        "prog": 0,
+        "name": "PSS-560 GM Drum Kit (OPNB)",
+        "file": "../../banks/drums/pss560_opnb.drumkit.json"
+      }
+    ]
+  },
   "hw_plugins": [
     {
       "auto_devices": true,

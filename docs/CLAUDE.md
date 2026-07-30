@@ -1242,6 +1242,61 @@ patch_banks 5件・drum_banks 21件・pcm_banks 2件）をそのまま
 デバイス構成に含まれないバンクエントリは単に発音しないだけで実害が
 ない）。
 
+### 3.33 `bank_overrides`で6プロファイルのレイヤードバンク0/ドラムキット0の無音を解消（2026年7月30日、FITOM_X側コミットc2bbe83に追従）
+3.32の移行で判明していた「通常モード(CC#0=0,CC#32=0)のデフォルトパッチ
+（レイヤードバンク0`patch_banks`bank0・ドラムキット0`drum_banks`prog0）
+が全プロファイル共通で無音になる」という既知の挙動変化に対応するため、
+FITOM_X本体側に新設された`bank_overrides`（`banks`と同一スキーマ、
+識別キー一致で置換・不一致で追加、削除は不可）を使い、6プロファイル
+それぞれにそのプロファイルへ必ず存在するデバイス向けのバンクを
+bank0/prog0として割り当てた。
+
+**事前作業(スキーマ同期)**: `config_schema/profile.schema.json`を
+FITOM_X本体最新版から丸ごとコピー。`banks`オブジェクト形式の定義を
+`definitions.banksObject`へ切り出し、新設の`bank_overrides`
+（`banks`と同じ`oneOf`(文字列/オブジェクト)）が`$ref`で共有する形に
+リファクタリングされている。
+
+**各プロファイルへの割り当て**（`patch_banks`は`bank`、`drum_banks`は
+`prog`が識別キー。カッコ内は`unified.bankset.json`側で同一ファイルが
+既に使われている番号で、重複を許容する運用）:
+
+| プロファイル | レイヤードバンク0 | ドラムキット0 |
+|---|---|---|
+| `emu_opn` | `necopn_gm.patchbank.json`(bank1と重複) | `pss560_opnb.drumkit.json`(prog21と重複) |
+| `emu_opl` | `gm_layered_opl2.patchbank.json`(bank2と重複) | `opl_builtin_rhythm.drumkit.json`(prog13と重複) |
+| `emu_opm` | `gm_layered_opm.patchbank.json`(bank4と重複) | `gm2_standard.drumkit.json`(新規) |
+| `emu_opll` | `gm_layered_opll.patchbank.json`(bank5と重複) | `opll_rhythm.drumkit.json`(prog12と重複) |
+| `fmall` | `gm_layered_opl4awm.patchbank.json`(bank6と重複) | `opl4awm.drumkit.json`(prog15と重複) |
+| `emu_fmgen_opn` | `necopn_gm.patchbank.json`(bank1と重複) | `pss560_opnb.drumkit.json`(prog21と重複) |
+
+いずれも3.32以前（統合前）に各プロファイルがローカルで持っていた
+bank0/prog0の再番号付けと同じファイルを踏襲している（`5f2d080^`時点の
+各`banks.patch_banks`/`banks.drum_banks`をgit履歴から復元して確認）。
+`unified_preset.profile.json`はSF2(FluidSynth)デバイスのみでHWチップを
+一切持たないため対象外とした（`bank_overrides`のレイヤードバンク/
+ドラムキットはCC#0/CC#32経由の通常モードHwPatch解決でのみ使われ、
+SF2直行パスとは無関係）。
+
+`emu_opm`（OPM×2/OPZ×2構成）だけは、`unified.bankset.json`の
+`drum_banks`にOPM/OPZ固有のchip依存ドラムキットが1件も存在しない
+（`voice_patch_type`固定の`opna_builtin`/`opl_builtin_rhythm`/
+`opll_rhythm`等はいずれも別チップ向け）ため、代わりに
+`gm2_standard.drumkit.json`を採用した。このファイルは特定チップに
+依存せず、全61ノートが`patch_bank=0`（＝このオーバーライドで
+`gm_layered_opm.patchbank.json`に差し替え済みのレイヤードバンク0）
+経由で発音する設計のため、OPMデバイスでも問題なく鳴る（ユーザー確認済み）。
+
+**検証**: 6プロファイル全件を`jsonschema`で更新後の`profile.schema.json`
+に対して再検証しVALID、`bank_overrides`が参照する全10ファイルの実在も
+確認済み。`bin/fitom_cli.exe`での実行時ロード確認は試みたが、
+同梱バイナリが2026年7月28日ビルド（`bank_overrides`実装
+[FITOM_X側コミットc2bbe83、7月29日]より前）のため、この環境では
+`PatchBank 0 not found`/`DrumPatch not found bank=0 prog=0`が引き続き
+出力される（バイナリ未更新が原因であり、プロファイル側の設定不備では
+ない）。`bank_overrides`対応版でのビルド後、実機/実プラグイン環境での
+再確認が必要。
+
 ---
 
 ## 4. 未解決・要確認事項
@@ -1312,11 +1367,13 @@ patch_banks 5件・drum_banks 21件・pcm_banks 2件）をそのまま
 - 3.31の`sf2_channel_windows`（MPU0 ch12-15→fluidsynth_chan0-3の4ch）は
   暫定値。実際にSF2で同時に鳴らしたいパート数・既存ネイティブ経路との
   ch使用状況を踏まえて要調整。
-- 3.32で`unified.bankset.json`を6プロファイル共有にした結果、各
-  プロファイルの通常モードbank/prog0が指すパッチ/ドラムキットが
-  従来のチップ固有デフォルトから汎用の`gm_layered_skeleton`
-  (patch_banks bank0)に変わった。実機/エミュレータでの動作確認は
-  未実施（JSON構文・スキーマ検証のみ済み）。
+- 3.33で6プロファイルに追加した`bank_overrides`（レイヤードバンク0/
+  ドラムキット0の無音解消）は、`bin/fitom_cli.exe`が対応コミット
+  （FITOM_X側`c2bbe83`）より前のビルド（2026年7月28日）のため、この
+  リポジトリの環境では実行時ロード確認ができていない（JSON構文・
+  スキーマ検証、参照ファイル実在確認のみ済み）。`bank_overrides`対応版
+  バイナリに更新後、実機/実エンジン環境で実際に音が出ることの確認が
+  必要。
 
 ---
 
