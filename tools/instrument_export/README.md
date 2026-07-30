@@ -18,11 +18,32 @@ python3 generate_instruments.py --out-dir /path/to/out
 ```
 
 **対象プロファイル**: `TARGET_PROFILES`(スクリプト冒頭)で固定リスト
-指定している統合設計プロファイル6件(`unified_preset`/`emu_opn`/
-`emu_opl`/`emu_opm`/`emu_opll`/`fmall`)のみが対象です。統合前の個別
-プロファイル(旧`emulator_*`/`hw_*`)は誰もメンテナンスしておらず統合後の
-構成と矛盾していたため、2026年7月26日に`config/profiles/`ごと削除済み
-です(`docs/CLAUDE.md` 3.30節参照)。
+指定している統合設計プロファイル7件(`unified_preset`/`emu_opn`/
+`emu_fmgen_opn`/`emu_opl`/`emu_opm`/`emu_opll`/`fmall`)のみが対象です。
+統合前の個別プロファイル(旧`emulator_*`/`hw_*`)は誰もメンテナンスして
+おらず統合後の構成と矛盾していたため、2026年7月26日に
+`config/profiles/`ごと削除済みです(`docs/CLAUDE.md` 3.30節参照)。
+
+**`banks`の外部ファイル参照 / `bank_overrides`への対応**(2026年7月29-31日、
+`docs/CLAUDE.md` 3.32/3.33節参照): 全プロファイルの`banks`は現在
+`config/profiles/unified.bankset.json`への文字列参照に統一されており、
+各プロファイル固有の差分は`bank_overrides`(`banks`と同一スキーマ、識別
+キー一致で置換・不一致で追加)で表現されます。本スクリプトは`banks`が
+文字列の場合の解決、`bank_overrides`のマージ(識別キーはセクションごとに
+異なる。`hw_banks`は`group`+`bank`、`pcm_banks`は`bank`+`chip`、
+`drum_banks`は`prog`、それ以外は`bank`)の両方に対応しています。
+
+**レイヤードバンク0・ドラムキット0のGM標準統一**: `bank_overrides`により
+通常モード(CC#0=0,CC#32=0)のレイヤードバンク0(`patch_banks`bank=0)・
+ドラムキット0(`drum_banks`prog=0)はプロファイルごとに実際に鳴るファイル
+が異なります(例: `emu_opn`は`necopn_gm.patchbank.json`、`emu_opl`は
+`gm_layered_opl2.patchbank.json`)。インストゥルメントリスト上はこの
+プロファイル固有の違いを反映せず、`GM_STANDARD_MELODIC_FILE`
+(`necopn_gm.patchbank.json`、GM128標準音色名)・`GM_STANDARD_DRUM_FILE`
+(`gm2_standard.drumkit.json`、GM2標準ドラムマップ)で全プロファイル
+共通に統一表示します(ユーザー判断、2026年7月31日)。実際に鳴る音と
+インストゥルメントリストの表示が一致しないプロファイルがある点に
+注意してください。
 
 **出力形式**: 対象プロファイル全件を**1つのファイル**にまとめて出力します
 (プロファイルごとにファイルを分けません。理由は後述)。
