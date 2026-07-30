@@ -1297,6 +1297,48 @@ SF2直行パスとは無関係）。
 ない）。`bank_overrides`対応版でのビルド後、実機/実プラグイン環境での
 再確認が必要。
 
+### 3.34 generate_instruments.pyをbanks外部ファイル参照/bank_overridesに対応（2026年7月31日）
+3.32/3.33の変更後、`tools/instrument_export/generate_instruments.py`
+(3.29/3.30参照)を未対応のまま実行すると、`banks`が文字列(外部ファイル
+参照)であることを想定していない旧コードが`AttributeError: 'str' object
+has no attribute 'get'`で停止する状態になっていた。ユーザー指示
+「統合パッチバンクプロファイルに基づいてインストゥルメントリストを
+更新してほしい」を受け、以下を対応した。
+
+- `resolve_banks_dict()`: `banks`/`bank_overrides`いずれも文字列(外部
+  参照)・オブジェクト直書きの両方を受け付けるようにした。
+- `apply_bank_overrides()`: `bank_overrides`を識別キー一致で置換・
+  不一致で追加する形でマージ。識別キーはセクションごとに異なる
+  (`profile.schema.json`の`bank_overrides`説明文通り): `hw_banks`は
+  `group`+`bank`の複合キー、`pcm_banks`は`bank`+`chip`の複合キー、
+  `drum_banks`は`prog`、それ以外(`sw_banks`/`patch_banks`/`sf2_banks`/
+  `scc_wave_banks`)は`bank`単独。
+- `TARGET_PROFILES`に新設プロファイル`emu_fmgen_opn`(FmGenエンジン版
+  OPN、`emu_opn`と同構成でエンジンのみ異なる)を追加(7件に)。
+- **レイヤードバンク0・ドラムキット0はGM標準へ強制統一**(ユーザー指示
+  「レイヤードパッチ0、ドラムキット0はプロファイルごとに違いがあるが、
+  インストゥルメントリストとしてはGM標準で良い」に対応): 3.33の
+  `bank_overrides`により`patch_banks`bank=0・`drum_banks`prog=0は
+  プロファイルごとに実際に鳴るファイルが異なる(例:
+  `emu_opn`→`necopn_gm.patchbank.json`、`emu_opl`→
+  `gm_layered_opl2.patchbank.json`)が、これらを`load_profiles()`内で
+  無条件に`banks/patches/necopn_gm.patchbank.json`(GM128標準音色名)・
+  `banks/drums/gm2_standard.drumkit.json`(GM2標準ドラムマップ、`name`
+  は`data.get("name")`「GM2 Standard Kit」を使わせるため`db`側の
+  `name`は除去)へ差し替える`force_gm_standard_bank0()`を追加し、
+  `bank_overrides`のマージ結果に対して`banks`/`bank_overrides`解決の
+  最後に適用する。プロファイル間でbank0/prog0の表示が統一される一方、
+  実際に発音する内容とインストゥルメントリストの表示が一致しない
+  プロファイルがある(意図した挙動)。
+- 検証: `.ins`は666セクションで名前重複なし、`.xml`は`encoding`宣言を
+  一時的にUTF-8へ差し替えた上で`xml.etree.ElementTree`によるwell-formed
+  検証をパス(Shift_JISのままでは`ElementTree`がmulti-byteエンコーディング
+  を直接扱えないための回避策、恒久的な検証コードには未組み込み)。
+  生成結果は7プロファイル・melodic 44072パッチ・drum_kits 160キット
+  (全プロファイルが同一の共有カタログ`unified.bankset.json`を参照する
+  設計(3.32)のため、バンク一覧自体は各プロファイルで同一内容になる)。
+- 詳細は`tools/instrument_export/README.md`参照。
+
 ---
 
 ## 4. 未解決・要確認事項

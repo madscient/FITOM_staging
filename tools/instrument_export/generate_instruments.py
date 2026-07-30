@@ -47,11 +47,36 @@ OUTPUT_STEM = "FITOM_X"
 TARGET_PROFILES: dict[str, str] = {
     "unified_preset": "FITOM_X Unified Profile",
     "emu_opn": "FITOM_X OPN Emulator",
+    "emu_fmgen_opn": "FITOM_X OPN Emulator (FmGen)",
     "emu_opl": "FITOM_X OPL Emulator",
     "emu_opm": "FITOM_X OPM Emulator",
     "emu_opll": "FITOM_X OPLL Emulator",
     "fmall": "FITOM_X FM All",
 }
+
+# 2026年7月29日、banksセクションが外部ファイル参照(文字列)+
+# bank_overrides(部分上書き)方式に変わった(docs/CLAUDE.md 3.32/3.33節)。
+# 識別キーはセクションごとに異なる(profile.schema.json bank_overrides説明文参照):
+#   hw_banks: (group, bank) / pcm_banks: (bank, chip) / drum_banks: prog
+#   それ以外(sw_banks/patch_banks/sf2_banks/scc_wave_banks): bank
+def _override_key(section: str, entry: dict):
+    if section == "hw_banks":
+        return (entry.get("group"), entry.get("bank"))
+    if section == "pcm_banks":
+        return (entry.get("bank"), entry.get("chip"))
+    if section == "drum_banks":
+        return entry.get("prog")
+    return entry.get("bank")
+
+
+# 通常モード(CC#0=0,CC#32=0)のレイヤードバンク0(patch_banks bank=0)・
+# ドラムキット0(drum_banks prog=0)は、bank_overridesにより実際に鳴る
+# ファイルがプロファイルごとに異なる(docs/CLAUDE.md 3.33節)。
+# インストゥルメントリスト上はプロファイル固有の内容を反映せず、GM標準
+# (GM128メロディ名・GM2標準ドラムマップ)で統一表示する(ユーザー判断、
+# 2026年7月31日)。
+GM_STANDARD_MELODIC_FILE = "../../banks/patches/necopn_gm.patchbank.json"
+GM_STANDARD_DRUM_FILE = "../../banks/drums/gm2_standard.drumkit.json"
 
 # docs/CLAUDE.md 3.2節 VoicePatchType(CC#0直接モード値)
 GROUP_CC0_HW = {
@@ -108,6 +133,44 @@ def load_json(path: Path) -> dict:
 
 def resolve(base_dir: Path, rel: str) -> Path:
     return (base_dir / rel).resolve()
+
+
+def resolve_banks_dict(value, profile_dir: Path) -> dict:
+    """banks/bank_overridesの値(オブジェクト直書き、または外部参照ファイル
+    パスの文字列)を解決してオブジェクトにする。"""
+    if isinstance(value, str):
+        return load_json(resolve(profile_dir, value))
+    return value or {}
+
+
+def apply_bank_overrides(banks: dict, overrides: dict) -> dict:
+    """bank_overridesをbanksへマージする。識別キーが一致するエントリは
+    置換、一致しなければ追加(profile.schema.json bank_overrides説明文の
+    仕様通り)。"""
+    merged = {k: list(v) for k, v in banks.items() if isinstance(v, list)}
+    for section, ov_items in overrides.items():
+        if section == "_comment" or not isinstance(ov_items, list):
+            continue
+        items = merged.setdefault(section, [])
+        for ov in ov_items:
+            key = _override_key(section, ov)
+            idx = next((i for i, e in enumerate(items)
+                        if _override_key(section, e) == key), None)
+            if idx is not None:
+                items[idx] = ov
+            else:
+                items.append(ov)
+    return merged
+
+
+def force_gm_standard_bank0(banks: dict) -> None:
+    for pb in banks.get("patch_banks", []):
+        if pb.get("bank") == 0:
+            pb["file"] = GM_STANDARD_MELODIC_FILE
+    for db in banks.get("drum_banks", []):
+        if db.get("prog") == 0:
+            db["file"] = GM_STANDARD_DRUM_FILE
+            db.pop("name", None)  # ファイル自身のname("GM2 Standard Kit")を使わせる
 
 
 def fallback_name(prefix: str, num: int) -> str:
@@ -196,6 +259,14 @@ def load_profiles(warn) -> list[Profile]:
         path = PROFILES_DIR / f"{key}.profile.json"
         profile_dir = path.parent
         data = load_json(path)
+
+        banks = resolve_banks_dict(data.get("banks"), profile_dir)
+        overrides = data.get("bank_overrides")
+        if overrides:
+            banks = apply_bank_overrides(banks, resolve_banks_dict(overrides, profile_dir))
+        force_gm_standard_bank0(banks)
+        data = {**data, "banks": banks}
+
         melodic = collect_melodic_entries(data, profile_dir, lambda m, k=key: warn(f"{k}: {m}"))
         drums = collect_drum_kits(data, profile_dir)
         profiles.append(Profile(key, display_name, melodic, drums))
