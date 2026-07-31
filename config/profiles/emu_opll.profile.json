@@ -4,8 +4,60 @@
     {
       "name": "FitomEmuIF",
       "dll": "FitomEmuIF.dll",
-      "profile": "config/profiles/hw_plugins/fmemuif_opll5.profile.json",
-      "auto_devices": true
+      "profile": "config/profiles/hw_plugins/fmemuif_opll5.profile.json"
+    }
+  ],
+  "devices": [
+    {
+      "if": "HW",
+      "label": "OPLL",
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF",
+      "engine": "YMFMEngine",
+      "chip": "OPLL",
+      "index": 0,
+      "pan": 0
+    },
+    {
+      "if": "HW",
+      "label": "OPLL2",
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF",
+      "engine": "YMFMEngine",
+      "chip": "OPLL2",
+      "index": 0,
+      "pan": 0,
+      "rhythm_mode": true
+    },
+    {
+      "if": "HW",
+      "label": "OPLLP",
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF",
+      "engine": "YMFMEngine",
+      "chip": "OPLLP",
+      "index": 0,
+      "pan": 0
+    },
+    {
+      "if": "HW",
+      "label": "VRC7",
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF",
+      "engine": "YMFMEngine",
+      "chip": "VRC7",
+      "index": 0,
+      "pan": 0
+    },
+    {
+      "if": "HW",
+      "label": "OPLLX",
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF",
+      "engine": "YMFMEngine",
+      "chip": "OPLLX",
+      "index": 0,
+      "pan": 0
     }
   ],
   "midi_inputs": [
