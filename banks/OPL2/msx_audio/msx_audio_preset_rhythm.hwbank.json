@@ -1,250 +1,383 @@
 {
   "name": "MSX-AUDIO/OPLL Emulate Rhythm",
-  "voice_patch_type": "OPL_RHY",
-  "source": "OPLL(YM2413) rhythm mode register image (ch6=BD, ch7=HH/SD, ch8=TOM/TCY)",
-  "note": "msx_audio_preset.hwbank.jsonと同グループ(OPL3_2)のOPLリズム(COPLRhythm)用5楽器。128パッチ制限のため既存バンク(124パッチ使用済み)には収まらず別ファイルとして分離。OPLLリズムモード標準レジスタ値からコンバート。Bass Drumは2op(Modulator+Carrier)、Hi-Hat/Snare Drum/Tom/Top Cymbalは各1op。実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに変換(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=そのまま)。ops[i].EGTは常に0。2026年7月20日、キャリアがEGTビット=0(パーカッシブ)のときRR=0にしていた旧変換の誤りを修正(キーオフで消音しないバグ、SRから元のRR値を復元。docs/CLAUDE.md 3.24参照)。 Open Hi Hat(prog5)はClose Hi Hat(prog1)のSRを14→6に変更し持続を延長。Tom(prog6)はBass Drum(prog0)のエンベロープをそのまま使い、sw_prog=10(performance_presets: DrumLFO Mid, down saw one-shot hold)でピッチLFOを付与。 Snare Drum(Pitch LFO)(prog7)はSnare Drum(prog2)のエンベロープをそのまま使い、sw_prog=10(DrumLFO Mid)でピッチLFOを付与。 各パッチにext.rhythm_ch(0=HH,1=CYM,2=TOM,3=SD,4=BD)を設定。同一楽器の複数バリエーション(Open Hi Hat/Pitch LFO版)は、同じrhythm_chを持つ別スロット(prog)として提供する。",
   "patches": [
     {
-      "prog": 0,
-      "name": "OPL Bass Drum",
-      "FB": 7,
       "ALG": 0,
+      "AMS": 0,
+      "FB": 7,
+      "FB2": 0,
+      "NFQ": 0,
+      "PMS": 0,
+      "ext": {
+        "ALG_EXT": 0,
+        "FIX": 0,
+        "HWEP": 0,
+        "rhythm_ch": 4,
+        "target_voice_patch_type": 0
+      },
+      "name": "OPL Bass Drum",
       "ops": [
         {
+          "AM": 0,
           "AR": 26,
           "DR": 30,
+          "DT1": 0,
+          "DT2": 0,
+          "DT3": 0,
+          "EGS": 0,
+          "EGT": 0,
+          "KSL": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "PDT": 0,
+          "REV": 0,
+          "RR": 0,
           "SL": 6,
           "SR": 20,
-          "RR": 0,
           "TL": 48,
-          "KSR": 0,
-          "KSL": 0,
-          "MUL": 1,
-          "AM": 0,
           "VIB": 0,
-          "EGT": 0,
           "WS": 1
         },
         {
+          "AM": 0,
           "AR": 30,
           "DR": 16,
+          "DT1": 0,
+          "DT2": 0,
+          "DT3": 0,
+          "EGS": 0,
+          "EGT": 0,
+          "KSL": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "PDT": 0,
+          "REV": 0,
+          "RR": 13,
           "SL": 6,
           "SR": 26,
-          "RR": 13,
           "TL": 0,
-          "KSR": 0,
-          "KSL": 0,
-          "MUL": 1,
-          "AM": 0,
           "VIB": 0,
-          "EGT": 0,
           "WS": 0
         }
       ],
+      "prog": 0,
       "sw_bank": 0,
-      "sw_prog": 27,
-      "ext": {
-        "rhythm_ch": 4
-      }
+      "sw_prog": 27
     },
     {
-      "prog": 1,
+      "ALG": 0,
+      "AMS": 0,
+      "FB": 0,
+      "FB2": 0,
+      "NFQ": 0,
+      "PMS": 0,
+      "ext": {
+        "ALG_EXT": 0,
+        "FIX": 0,
+        "HWEP": 0,
+        "rhythm_ch": 0,
+        "target_voice_patch_type": 0
+      },
       "name": "OPL Close Hi Hat",
       "ops": [
         {
+          "AM": 0,
           "AR": 24,
           "DR": 16,
+          "DT1": 0,
+          "DT2": 0,
+          "DT3": 0,
+          "EGS": 0,
+          "EGT": 0,
+          "KSL": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "PDT": 0,
+          "REV": 0,
+          "RR": 0,
           "SL": 10,
           "SR": 14,
-          "RR": 0,
           "TL": 0,
-          "KSR": 0,
-          "KSL": 0,
-          "MUL": 1,
-          "AM": 0,
           "VIB": 0,
-          "EGT": 0,
           "WS": 0
         }
       ],
+      "prog": 1,
       "sw_bank": 0,
-      "sw_prog": 2,
-      "ext": {
-        "rhythm_ch": 0
-      }
+      "sw_prog": 2
     },
     {
-      "prog": 2,
+      "ALG": 0,
+      "AMS": 0,
+      "FB": 0,
+      "FB2": 0,
+      "NFQ": 0,
+      "PMS": 0,
+      "ext": {
+        "ALG_EXT": 0,
+        "FIX": 0,
+        "HWEP": 0,
+        "rhythm_ch": 3,
+        "target_voice_patch_type": 0
+      },
       "name": "OPL Snare Drum",
       "ops": [
         {
+          "AM": 0,
           "AR": 26,
           "DR": 16,
+          "DT1": 0,
+          "DT2": 0,
+          "DT3": 0,
+          "EGS": 0,
+          "EGT": 0,
+          "KSL": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "PDT": 0,
+          "REV": 0,
+          "RR": 0,
           "SL": 4,
           "SR": 16,
-          "RR": 0,
           "TL": 0,
-          "KSR": 0,
-          "KSL": 0,
-          "MUL": 1,
-          "AM": 0,
           "VIB": 0,
-          "EGT": 0,
           "WS": 0
         }
       ],
+      "prog": 2,
       "sw_bank": 0,
-      "sw_prog": 2,
-      "ext": {
-        "rhythm_ch": 3
-      }
+      "sw_prog": 2
     },
     {
-      "prog": 3,
+      "ALG": 0,
+      "AMS": 0,
+      "FB": 0,
+      "FB2": 0,
+      "NFQ": 0,
+      "PMS": 0,
+      "ext": {
+        "ALG_EXT": 0,
+        "FIX": 0,
+        "HWEP": 0,
+        "rhythm_ch": 2,
+        "target_voice_patch_type": 0
+      },
       "name": "OPL Tom",
       "ops": [
         {
+          "AM": 0,
           "AR": 30,
           "DR": 16,
+          "DT1": 0,
+          "DT2": 0,
+          "DT3": 0,
+          "EGS": 0,
+          "EGT": 0,
+          "KSL": 0,
+          "KSR": 0,
+          "MUL": 5,
+          "PDT": 0,
+          "REV": 0,
+          "RR": 0,
           "SL": 5,
           "SR": 18,
-          "RR": 0,
           "TL": 0,
-          "KSR": 0,
-          "KSL": 0,
-          "MUL": 5,
-          "AM": 0,
           "VIB": 0,
-          "EGT": 0,
           "WS": 0
         }
       ],
+      "prog": 3,
       "sw_bank": 0,
-      "sw_prog": 2,
-      "ext": {
-        "rhythm_ch": 2
-      }
+      "sw_prog": 2
     },
     {
-      "prog": 4,
+      "ALG": 0,
+      "AMS": 0,
+      "FB": 0,
+      "FB2": 0,
+      "NFQ": 0,
+      "PMS": 0,
+      "ext": {
+        "ALG_EXT": 0,
+        "FIX": 0,
+        "HWEP": 0,
+        "rhythm_ch": 1,
+        "target_voice_patch_type": 0
+      },
       "name": "OPL Top Cymbal",
       "ops": [
         {
+          "AM": 0,
           "AR": 20,
           "DR": 20,
+          "DT1": 0,
+          "DT2": 0,
+          "DT3": 0,
+          "EGS": 0,
+          "EGT": 0,
+          "KSL": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "PDT": 0,
+          "REV": 0,
+          "RR": 0,
           "SL": 5,
           "SR": 10,
-          "RR": 0,
           "TL": 0,
-          "KSR": 0,
-          "KSL": 0,
-          "MUL": 1,
-          "AM": 0,
           "VIB": 0,
-          "EGT": 0,
           "WS": 0
         }
       ],
+      "prog": 4,
       "sw_bank": 0,
-      "sw_prog": 2,
-      "ext": {
-        "rhythm_ch": 1
-      }
+      "sw_prog": 2
     },
     {
-      "prog": 5,
+      "ALG": 0,
+      "AMS": 0,
+      "FB": 0,
+      "FB2": 0,
+      "NFQ": 0,
+      "PMS": 0,
+      "ext": {
+        "ALG_EXT": 0,
+        "FIX": 0,
+        "HWEP": 0,
+        "rhythm_ch": 0,
+        "target_voice_patch_type": 0
+      },
       "name": "OPL Open Hi Hat",
       "ops": [
         {
+          "AM": 0,
           "AR": 24,
           "DR": 16,
-          "SL": 10,
-          "SR": 6,
-          "RR": 0,
-          "TL": 0,
-          "KSR": 0,
-          "KSL": 0,
-          "MUL": 1,
-          "AM": 0,
-          "VIB": 0,
+          "DT1": 0,
+          "DT2": 0,
+          "DT3": 0,
+          "EGS": 0,
           "EGT": 0,
+          "KSL": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "PDT": 0,
+          "REV": 0,
+          "RR": 0,
+          "SL": 6,
+          "SR": 0,
+          "TL": 0,
+          "VIB": 0,
           "WS": 0
         }
       ],
+      "prog": 5,
       "sw_bank": 0,
-      "sw_prog": 2,
-      "ext": {
-        "rhythm_ch": 0
-      }
+      "sw_prog": 2
     },
     {
-      "prog": 6,
-      "name": "OPL Tom (Pitch LFO)",
-      "FB": 7,
       "ALG": 0,
+      "AMS": 0,
+      "FB": 7,
+      "FB2": 0,
+      "NFQ": 0,
+      "PMS": 0,
+      "ext": {
+        "ALG_EXT": 0,
+        "FIX": 0,
+        "HWEP": 0,
+        "rhythm_ch": 2,
+        "target_voice_patch_type": 0
+      },
+      "name": "OPL Tom (Pitch LFO)",
       "ops": [
         {
+          "AM": 0,
           "AR": 26,
           "DR": 30,
+          "DT1": 0,
+          "DT2": 0,
+          "DT3": 0,
+          "EGS": 0,
+          "EGT": 0,
+          "KSL": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "PDT": 0,
+          "REV": 0,
+          "RR": 0,
           "SL": 6,
           "SR": 20,
-          "RR": 0,
           "TL": 48,
-          "KSR": 0,
-          "KSL": 0,
-          "MUL": 1,
-          "AM": 0,
           "VIB": 0,
-          "EGT": 0,
           "WS": 1
         },
         {
+          "AM": 0,
           "AR": 30,
           "DR": 16,
+          "DT1": 0,
+          "DT2": 0,
+          "DT3": 0,
+          "EGS": 0,
+          "EGT": 0,
+          "KSL": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "PDT": 0,
+          "REV": 0,
+          "RR": 13,
           "SL": 6,
           "SR": 26,
-          "RR": 13,
           "TL": 30,
-          "KSR": 0,
-          "KSL": 0,
-          "MUL": 1,
-          "AM": 0,
           "VIB": 0,
-          "EGT": 0,
           "WS": 0
         }
       ],
+      "prog": 6,
       "sw_bank": 0,
-      "sw_prog": 10,
-      "ext": {
-        "rhythm_ch": 2
-      }
+      "sw_prog": 10
     },
     {
-      "prog": 7,
+      "ALG": 0,
+      "AMS": 0,
+      "FB": 0,
+      "FB2": 0,
+      "NFQ": 0,
+      "PMS": 0,
+      "ext": {
+        "ALG_EXT": 0,
+        "FIX": 0,
+        "HWEP": 0,
+        "rhythm_ch": 3,
+        "target_voice_patch_type": 0
+      },
       "name": "OPL Snare Drum (Pitch LFO)",
       "ops": [
         {
+          "AM": 0,
           "AR": 26,
           "DR": 16,
+          "DT1": 0,
+          "DT2": 0,
+          "DT3": 0,
+          "EGS": 0,
+          "EGT": 0,
+          "KSL": 0,
+          "KSR": 0,
+          "MUL": 1,
+          "PDT": 0,
+          "REV": 0,
+          "RR": 0,
           "SL": 4,
           "SR": 16,
-          "RR": 0,
           "TL": 0,
-          "KSR": 0,
-          "KSL": 0,
-          "MUL": 1,
-          "AM": 0,
           "VIB": 0,
-          "EGT": 0,
           "WS": 0
         }
       ],
+      "prog": 7,
       "sw_bank": 0,
-      "sw_prog": 10,
-      "ext": {
-        "rhythm_ch": 3
-      }
+      "sw_prog": 10
     }
   ]
 }
