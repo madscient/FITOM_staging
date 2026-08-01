@@ -374,7 +374,7 @@
         "LFD": 0,
         "LFR": 1,
         "LFI": 0,
-        "depth_cents": -300
+        "depth_cents": 300
       }
     },
     {
@@ -387,7 +387,7 @@
         "LFD": 0,
         "LFR": 12,
         "LFI": 0,
-        "depth_cents": -450
+        "depth_cents": 450
       }
     },
     {
@@ -400,7 +400,7 @@
         "LFD": 0,
         "LFR": 20,
         "LFI": 0,
-        "depth_cents": -600
+        "depth_cents": 600
       }
     },
     {
