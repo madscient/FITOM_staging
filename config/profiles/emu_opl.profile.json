@@ -16,64 +16,64 @@
     ]
   },
   "banks": "unified.bankset.json",
+  "devices": [
+    {
+      "chip": "OPL",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPL",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "Y8950",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "Y8950",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL2",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPL2",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL3",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPL3",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL4",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPL4",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    }
+  ],
   "hw_plugins": [
     {
       "dll": "FitomEmuIF.dll",
       "name": "FitomEmuIF",
       "profile": "config/profiles/hw_plugins/fmemuif_opl5.profile.json"
-    }
-  ],
-  "devices": [
-    {
-      "if": "HW",
-      "label": "OPL",
-      "plugin": "FitomEmuIF",
-      "type": "FMHWIF",
-      "engine": "YMFMEngine",
-      "chip": "OPL",
-      "index": 0,
-      "pan": 0
-    },
-    {
-      "if": "HW",
-      "label": "Y8950",
-      "plugin": "FitomEmuIF",
-      "type": "FMHWIF",
-      "engine": "YMFMEngine",
-      "chip": "Y8950",
-      "index": 0,
-      "pan": 0,
-      "rhythm_mode": true
-    },
-    {
-      "if": "HW",
-      "label": "OPL2",
-      "plugin": "FitomEmuIF",
-      "type": "FMHWIF",
-      "engine": "YMFMEngine",
-      "chip": "OPL2",
-      "index": 0,
-      "pan": 0
-    },
-    {
-      "if": "HW",
-      "label": "OPL3",
-      "plugin": "FitomEmuIF",
-      "type": "FMHWIF",
-      "engine": "YMFMEngine",
-      "chip": "OPL3",
-      "index": 0,
-      "pan": 0
-    },
-    {
-      "if": "HW",
-      "label": "OPL4",
-      "plugin": "FitomEmuIF",
-      "type": "FMHWIF",
-      "engine": "YMFMEngine",
-      "chip": "OPL4",
-      "index": 0,
-      "pan": 0
     }
   ],
   "master_pitch": 440.0,
