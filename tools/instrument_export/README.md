@@ -64,14 +64,18 @@ python3 generate_instruments.py --out-dir /path/to/out
 | `patch_banks[]` | 0(通常モード) | `bank` | `patches[].prog` | `*.patchbank.json` |
 | `hw_banks[]` | `group`から決定(下表) | `bank` | `patches[].prog` | `*.hwbank.json` / `*.samplezonebank.json`(AWM) |
 | `pcm_banks[]` | `group`から決定(ADPCMB=81/ADPCMA=82) | `bank` | `entries[].entry_no`(またはインデックス) | `*.pcmbank.json` |
-| `drum_banks[]` | 112(内蔵リズム/ドラムキット) | 0固定 | `drum_banks[].prog`(キット選択) | `*.drumkit.json` |
+| `drum_banks[]` | 120(ドラムキット、GM2 Percussion Bank相当) | 0固定 | `drum_banks[].prog`(キット選択) | `*.drumkit.json` |
 
 `drum_banks[]`だけは他と軸が異なる点に注意: `prog`フィールドは**CC#32
 ではなくProgram Change値**です(`profile.schema.json`が`drum_banks[]`を
 「バンク番号概念なし、常にbank0固定でprogのみで選択」と定義している
-通り)。つまりドラムキットはCC#0=112・CC#32=0固定の1バンクの中で、
+通り)。つまりドラムキットはCC#0=120・CC#32=0固定の1バンクの中で、
 Program Changeによってキットが切り替わります(GM2ドラムマップの
 Bank MSB=120/121固定・PC違いでキット切替、という仕様と同型)。
+**CC#0=112は後述のOPNA/OPLL内蔵リズム音源の直接選択専用であり、通常の
+ドラムキット選択とは別軸**なので、ドラムキットのバンクには使いません
+(2026年8月4日、ユーザー指摘により訂正。それ以前の版ではCC#0=112を
+誤って両方の意味に使っていました)。
 
 `hw_banks[].group` → CC#0 対応表:
 
@@ -98,6 +102,39 @@ Bank MSB=120/121固定・PC違いでキット切替、という仕様と同型)�
 
 `sw_banks[]`(パフォーマンスパッチ)は音色選択そのものではないため対象外です。
 
+### ファイルを持たない機械合成バンク(OPLLビルトイン音色・OPLLビルトイン
+リズム・OPNAビルトインリズム)
+
+以下3種類は`hw_banks[]`/`drum_banks[]`のいずれにも現れない
+「ファイルを持たない機械合成バンク」で、実際のパッチ名/楽器名は
+FITOM_X本体(`../FITOM_X`)のC++ソースにハードコードされています。
+プロファイルJSONの走査だけでは拾えないため、本スクリプトの
+`OPLL_ROM_NAMES`/`OPLL_RHYTHM_NAMES`/`OPNA_RHYTHM_NAMES`定数に
+本体ソースから転記しています(2026年8月4日、ユーザー指摘により追加)。
+
+| バンク | CC#0 | CC#32 | Prog | 本体ソースの定義箇所 |
+|---|---|---|---|---|
+| OPLLビルトイン音色 | 40(OPLL) | 0固定 | `(variant<<4)\|instIndex`(1-15、0は無音のため未収録) | `core/src/PatchManager.cpp` `initOpllRomPatches()` の `kNames[4][16]` |
+| OPLLビルトインリズム | 112 | 40固定 | 0-4(楽器番号) | `gui/bridge/FITOMBridge.cpp` `kOpllRhythmNames[]` |
+| OPNAビルトインリズム | 112 | 17固定 | 0-5(楽器番号) | `gui/bridge/FITOMBridge.cpp` `kOpnaRhythmNames[]` |
+
+OPLLビルトインリズム・OPNAビルトインリズムは、CC#0=112配下でも
+`drum_banks[]`由来の通常ドラムキット(CC#32=0固定、Progでキット選択)とは
+**別軸**である点に注意してください。CC#32=17/40を選んだ場合のみ、
+CC#32の意味が「対象チップ選択」に、Progの意味が「楽器(物理チャンネル)
+直接指定」に変わります(`docs/manuals/builtin_rhythm.md`参照)。
+
+`variant`(OPLLビルトイン音色の上位3bit)は0=OPLL/OPLL2、1=OPLLX、
+2=OPLLP、3=VRC7に対応します。どのvariantを含めるかは、プロファイルの
+`hw_plugins[].profile`(`fmemuif_*.profile.json`等)が実際に搭載している
+チップ(`engines[].chips[].chip`)を`collect_engine_chips()`で読み取って
+動的に判定しています(`OPLL_CHIP_TO_VARIANT`)。OPNAビルトインリズムも
+同様に、搭載チップに`"OPNA"`が含まれるプロファイルのみに追加されます。
+これによって、たとえば`emu_opl`/`emu_opm`(OPLL/OPNAどちらも非搭載)には
+これら3種類のバンクは一切追加されず、`emu_opll`にはOPLLビルトイン音色・
+OPLLビルトインリズムのみ、`unified_preset`/`emu_opn`/`emu_fmgen_opn`には
+OPNAビルトインリズムのみ、両方搭載する`fmall`には3種類とも追加されます。
+
 ## 出力フォーマットの設計・制約・未検証事項
 
 - Sekaiju/Cakewalkの`.ins`は、**1プロファイル=1つのInstrument
@@ -107,17 +144,17 @@ Bank MSB=120/121固定・PC違いでキット切替、という仕様と同型)�
   列挙する構成になっていることに倣ったもの。バンクごとに別セクションを
   作ると、Sekaiju上でバンクの数だけ別々の「機材」として表示されてしまう
   ため、この構成は採用していません)。
-- ドラムキットはCC#0=112・CC#32=0固定の1バンクしか持たないため、
-  `Patch[]`は`(112<<7)|0`の1エントリのみ追加し、キットの切り替えは
-  `Key[(112<<7)|0, <drum_banks[].prog>] = <Note Namesセクション>`という
+- ドラムキットはCC#0=120・CC#32=0固定の1バンクしか持たないため、
+  `Patch[]`は`(120<<7)|0`の1エントリのみ追加し、キットの切り替えは
+  `Key[(120<<7)|0, <drum_banks[].prog>] = <Note Namesセクション>`という
   形でProgram Change値(第二引数)ごとに列挙します(実機の`GM1_GM2.ins`
   にある`[General MIDI Level 2 Drumsets]`セクション──Bank固定・PC違いで
   複数のドラムセットNote Namesを`Key[MSB,PC]`で切り替える構成──と
-  同型)。`Drum[(112<<7)|0,*]=1`はドラムキットを持つプロファイルのみ
+  同型)。`Drum[(120<<7)|0,*]=1`はドラムキットを持つプロファイルのみ
   1行だけ追加します。Sekaiju本体での実際の動作は未検証です。
-- 対象プロファイル6件は、Sekaiju側は1つの`.ins`ファイルの中に6つの
-  `.Instrument Definitions`セクション(=6つの機材)として、DOMINO側は
-  1つの`.xml`ファイルの中に6つの`<Map>`要素として、まとめて出力します。
+- 対象プロファイル7件は、Sekaiju側は1つの`.ins`ファイルの中に7つの
+  `.Instrument Definitions`セクション(=7つの機材)として、DOMINO側は
+  1つの`.xml`ファイルの中に7つの`<Map>`要素として、まとめて出力します。
   `.Instrument Definitions`は1セクション=1機材である以上、プロファイル
   ごとにファイルを分ける必要はなく、DOMINOも`<Map>`タグを複数持てる
   仕様のため、1ファイルにまとめることでシーケンサー側に読み込む音源
@@ -129,7 +166,7 @@ Bank MSB=120/121固定・PC違いでキット切替、という仕様と同型)�
   (`config/profiles/*.profile.json`側の日本語`profile_name`は使いません)。
 - DOMINOの`<DrumSetList>`も同じ理由で、ドラムキットごとに個別の
   `<PC Name="<キット名>" PC="<drum_banks[].prog + 1>">`タグを作り、その中に
-  `<Bank MSB="112" LSB="0">`(常にLSB固定)を1つだけ持たせる構成にして
+  `<Bank MSB="120" LSB="0">`(常にLSB固定)を1つだけ持たせる構成にして
   います(DOMINOの`PC`属性は1〜128の1-indexedのため`+1`しています)。
 - `.Patch Names`/`.Note Names`のセクション見出し名にはプロファイル固有の
   英数字プレフィックス(`config/profiles/*.profile.json`のファイル名、

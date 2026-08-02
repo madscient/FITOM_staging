@@ -73,6 +73,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 2" PC="2">
 				<Bank Name="Bright Acoustic Piano" MSB="0" LSB="0" />
@@ -137,6 +138,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 3" PC="3">
 				<Bank Name="Electric Grand Piano" MSB="0" LSB="0" />
@@ -201,6 +203,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 4" PC="4">
 				<Bank Name="Honky-tonk Piano" MSB="0" LSB="0" />
@@ -259,6 +262,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 5" PC="5">
 				<Bank Name="Electric Piano 1" MSB="0" LSB="0" />
@@ -320,6 +324,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="Tom" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 6" PC="6">
 				<Bank Name="Electric Piano 2" MSB="0" LSB="0" />
@@ -386,6 +391,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 7" PC="7">
 				<Bank Name="Harpsichord" MSB="0" LSB="0" />
@@ -6627,6 +6633,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 2" PC="2">
 				<Bank Name="Bright Acoustic Piano" MSB="0" LSB="0" />
@@ -6691,6 +6698,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 3" PC="3">
 				<Bank Name="Electric Grand Piano" MSB="0" LSB="0" />
@@ -6755,6 +6763,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 4" PC="4">
 				<Bank Name="Honky-tonk Piano" MSB="0" LSB="0" />
@@ -6813,6 +6822,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 5" PC="5">
 				<Bank Name="Electric Piano 1" MSB="0" LSB="0" />
@@ -6874,6 +6884,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="Tom" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 6" PC="6">
 				<Bank Name="Electric Piano 2" MSB="0" LSB="0" />
@@ -6940,6 +6951,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 7" PC="7">
 				<Bank Name="Harpsichord" MSB="0" LSB="0" />
@@ -13181,6 +13193,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 2" PC="2">
 				<Bank Name="Bright Acoustic Piano" MSB="0" LSB="0" />
@@ -13245,6 +13258,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 3" PC="3">
 				<Bank Name="Electric Grand Piano" MSB="0" LSB="0" />
@@ -13309,6 +13323,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 4" PC="4">
 				<Bank Name="Honky-tonk Piano" MSB="0" LSB="0" />
@@ -13367,6 +13382,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 5" PC="5">
 				<Bank Name="Electric Piano 1" MSB="0" LSB="0" />
@@ -13428,6 +13444,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="Tom" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 6" PC="6">
 				<Bank Name="Electric Piano 2" MSB="0" LSB="0" />
@@ -13494,6 +13511,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 7" PC="7">
 				<Bank Name="Harpsichord" MSB="0" LSB="0" />
@@ -32843,6 +32861,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
 			</PC>
 			<PC Name="Program 2" PC="2">
 				<Bank Name="Bright Acoustic Piano" MSB="0" LSB="0" />
@@ -32888,6 +32907,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Close Hi Hat" MSB="35" LSB="0" />
+				<Bank Name="Violin" MSB="40" LSB="0" />
 				<Bank Name="Piano 2" MSB="40" LSB="1" />
 				<Bank Name="Accordion 2" MSB="40" LSB="2" />
 				<Bank Name="BritePno" MSB="40" LSB="4" />
@@ -32907,6 +32927,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
 			</PC>
 			<PC Name="Program 3" PC="3">
 				<Bank Name="Electric Grand Piano" MSB="0" LSB="0" />
@@ -32953,6 +32974,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Snare Drum" MSB="35" LSB="0" />
+				<Bank Name="Guitar" MSB="40" LSB="0" />
 				<Bank Name="Violin" MSB="40" LSB="1" />
 				<Bank Name="Alpenhorn" MSB="40" LSB="2" />
 				<Bank Name="E.GrandP" MSB="40" LSB="4" />
@@ -32971,6 +32993,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="Tom" MSB="112" LSB="40" />
 			</PC>
 			<PC Name="Program 4" PC="4">
 				<Bank Name="Honky-tonk Piano" MSB="0" LSB="0" />
@@ -33013,6 +33036,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Tom" MSB="35" LSB="0" />
+				<Bank Name="Piano" MSB="40" LSB="0" />
 				<Bank Name="Flute" MSB="40" LSB="1" />
 				<Bank Name="Alto Sax" MSB="40" LSB="2" />
 				<Bank Name="HnkyTonk" MSB="40" LSB="4" />
@@ -33029,6 +33053,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="Snare Drum" MSB="112" LSB="40" />
 			</PC>
 			<PC Name="Program 5" PC="5">
 				<Bank Name="Electric Piano 1" MSB="0" LSB="0" />
@@ -33074,6 +33099,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Top Cymbal" MSB="35" LSB="0" />
+				<Bank Name="Flute" MSB="40" LSB="0" />
 				<Bank Name="Clarinet" MSB="40" LSB="1" />
 				<Bank Name="Bagpipe" MSB="40" LSB="2" />
 				<Bank Name="E.Piano1" MSB="40" LSB="4" />
@@ -33090,6 +33116,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="Bass Drum" MSB="112" LSB="40" />
 			</PC>
 			<PC Name="Program 6" PC="6">
 				<Bank Name="Electric Piano 2" MSB="0" LSB="0" />
@@ -33137,6 +33164,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Open Hi Hat" MSB="35" LSB="0" />
+				<Bank Name="Clarinet" MSB="40" LSB="0" />
 				<Bank Name="Oboe" MSB="40" LSB="1" />
 				<Bank Name="Banjo" MSB="40" LSB="2" />
 				<Bank Name="E.Piano2" MSB="40" LSB="4" />
@@ -33201,6 +33229,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Tom (Pitch LFO)" MSB="35" LSB="0" />
+				<Bank Name="Oboe" MSB="40" LSB="0" />
 				<Bank Name="Trumpet" MSB="40" LSB="1" />
 				<Bank Name="Bar Chimes" MSB="40" LSB="2" />
 				<Bank Name="Harpsi" MSB="40" LSB="4" />
@@ -33263,6 +33292,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Snare Drum (Pitch LFO)" MSB="35" LSB="0" />
+				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="PipeOrgn" MSB="40" LSB="1" />
 				<Bank Name="Bass Clarinet" MSB="40" LSB="2" />
 				<Bank Name="Clavi" MSB="40" LSB="4" />
@@ -33322,6 +33352,7 @@
 				<Bank Name="Drum" MSB="34" LSB="117" />
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
+				<Bank Name="Organ" MSB="40" LSB="0" />
 				<Bank Name="Xylophon" MSB="40" LSB="1" />
 				<Bank Name="Bassoon" MSB="40" LSB="2" />
 				<Bank Name="Celesta" MSB="40" LSB="4" />
@@ -33381,6 +33412,7 @@
 				<Bank Name="Drum" MSB="34" LSB="117" />
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
+				<Bank Name="Horn" MSB="40" LSB="0" />
 				<Bank Name="Organ" MSB="40" LSB="1" />
 				<Bank Name="Boom Piano" MSB="40" LSB="2" />
 				<Bank Name="Glocken" MSB="40" LSB="4" />
@@ -33443,6 +33475,7 @@
 				<Bank Name="Drum" MSB="34" LSB="117" />
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
+				<Bank Name="Synthesizer" MSB="40" LSB="0" />
 				<Bank Name="Guitar" MSB="40" LSB="1" />
 				<Bank Name="Bowed bass" MSB="40" LSB="2" />
 				<Bank Name="MusicBox" MSB="40" LSB="4" />
@@ -33508,6 +33541,7 @@
 				<Bank Name="Di-SeqClick H" MSB="34" LSB="117" />
 				<Bank Name="Mi-SeqClick H" MSB="34" LSB="118" />
 				<Bank Name="Ac-SeqClick H" MSB="34" LSB="119" />
+				<Bank Name="Harpsichord" MSB="40" LSB="0" />
 				<Bank Name="Santool" MSB="40" LSB="1" />
 				<Bank Name="Brass &amp; Marimba" MSB="40" LSB="2" />
 				<Bank Name="Vibes" MSB="40" LSB="4" />
@@ -33569,6 +33603,7 @@
 				<Bank Name="Di-Brush Tap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Brush Tap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Brush Tap" MSB="34" LSB="119" />
+				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="Elecpian" MSB="40" LSB="1" />
 				<Bank Name="Cello" MSB="40" LSB="2" />
 				<Bank Name="Marimba" MSB="40" LSB="4" />
@@ -33626,6 +33661,7 @@
 				<Bank Name="Di-Brush Swirl L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Brush Swirl L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Brush Swirl L" MSB="34" LSB="119" />
+				<Bank Name="Synthesizer Bass" MSB="40" LSB="0" />
 				<Bank Name="Clavicod" MSB="40" LSB="1" />
 				<Bank Name="Chime &amp; Organ" MSB="40" LSB="2" />
 				<Bank Name="Xylophon" MSB="40" LSB="4" />
@@ -33682,6 +33718,7 @@
 				<Bank Name="Di-Brush Slap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Brush Slap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Brush Slap" MSB="34" LSB="119" />
+				<Bank Name="Acoustic Bass" MSB="40" LSB="0" />
 				<Bank Name="Harpsicd" MSB="40" LSB="1" />
 				<Bank Name="Chimes" MSB="40" LSB="2" />
 				<Bank Name="TubulBel" MSB="40" LSB="4" />
@@ -33741,6 +33778,7 @@
 				<Bank Name="Di-Brush Swirl H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Brush Swirl H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Brush Swirl H" MSB="34" LSB="119" />
+				<Bank Name="Electric Guitar" MSB="40" LSB="0" />
 				<Bank Name="Harpscd2" MSB="40" LSB="1" />
 				<Bank Name="Clarinet" MSB="40" LSB="2" />
 				<Bank Name="Dulcimer" MSB="40" LSB="4" />
@@ -33857,6 +33895,7 @@
 				<Bank Name="Di-Castanet" MSB="34" LSB="117" />
 				<Bank Name="Mi-Castanet" MSB="34" LSB="118" />
 				<Bank Name="Ac-Castanet" MSB="34" LSB="119" />
+				<Bank Name="Strings" MSB="40" LSB="0" />
 				<Bank Name="Koto" MSB="40" LSB="1" />
 				<Bank Name="Clavi 1" MSB="40" LSB="2" />
 				<Bank Name="PercOrgn" MSB="40" LSB="4" />
@@ -33912,6 +33951,7 @@
 				<Bank Name="Di-Snare L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare L" MSB="34" LSB="119" />
+				<Bank Name="Guitar" MSB="40" LSB="0" />
 				<Bank Name="Taiko" MSB="40" LSB="1" />
 				<Bank Name="Clavi 2" MSB="40" LSB="2" />
 				<Bank Name="RockOrgn" MSB="40" LSB="4" />
@@ -33964,6 +34004,7 @@
 				<Bank Name="Di-Sticks" MSB="34" LSB="117" />
 				<Bank Name="Mi-Sticks" MSB="34" LSB="118" />
 				<Bank Name="Ac-Sticks" MSB="34" LSB="119" />
+				<Bank Name="Electric Guitar" MSB="40" LSB="0" />
 				<Bank Name="Engine" MSB="40" LSB="1" />
 				<Bank Name="Drip" MSB="40" LSB="2" />
 				<Bank Name="ChrchOrg" MSB="40" LSB="4" />
@@ -34020,6 +34061,7 @@
 				<Bank Name="Di-Bass Drum L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum L" MSB="34" LSB="119" />
+				<Bank Name="Electric Piano 2" MSB="40" LSB="0" />
 				<Bank Name="UFO" MSB="40" LSB="1" />
 				<Bank Name="Electric Bass" MSB="40" LSB="2" />
 				<Bank Name="ReedOrgn" MSB="40" LSB="4" />
@@ -34077,6 +34119,7 @@
 				<Bank Name="Di-Open Rim Shot" MSB="34" LSB="117" />
 				<Bank Name="Mi-Open Rim Shot" MSB="34" LSB="118" />
 				<Bank Name="Ac-Open Rim Shot" MSB="34" LSB="119" />
+				<Bank Name="Flute" MSB="40" LSB="0" />
 				<Bank Name="SynBell" MSB="40" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="40" LSB="2" />
 				<Bank Name="Acordion" MSB="40" LSB="4" />
@@ -34132,6 +34175,7 @@
 				<Bank Name="Di-Bass Drum M" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum M" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum M" MSB="34" LSB="119" />
+				<Bank Name="Marimba" MSB="40" LSB="0" />
 				<Bank Name="Chime" MSB="40" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="40" LSB="2" />
 				<Bank Name="Harmnica" MSB="40" LSB="4" />
@@ -34186,6 +34230,7 @@
 				<Bank Name="Di-Bass Drum H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum H" MSB="34" LSB="119" />
+				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="SynBass" MSB="40" LSB="1" />
 				<Bank Name="Electric Trumpet" MSB="40" LSB="2" />
 				<Bank Name="TangoAcd" MSB="40" LSB="4" />
@@ -34239,6 +34284,7 @@
 				<Bank Name="Di-ClosedRimShot" MSB="34" LSB="117" />
 				<Bank Name="Mi-ClosedRimShot" MSB="34" LSB="118" />
 				<Bank Name="Ac-ClosedRimShot" MSB="34" LSB="119" />
+				<Bank Name="Harmonica" MSB="40" LSB="0" />
 				<Bank Name="Synthsiz" MSB="40" LSB="1" />
 				<Bank Name="Electron Organ" MSB="40" LSB="2" />
 				<Bank Name="NylonGtr" MSB="40" LSB="4" />
@@ -34297,6 +34343,7 @@
 				<Bank Name="Di-Snare M" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare M" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare M" MSB="34" LSB="119" />
+				<Bank Name="Tuba" MSB="40" LSB="0" />
 				<Bank Name="SynPercu" MSB="40" LSB="1" />
 				<Bank Name="Fantastic Piano" MSB="40" LSB="2" />
 				<Bank Name="SteelGtr" MSB="40" LSB="4" />
@@ -34359,6 +34406,7 @@
 				<Bank Name="Di-Hand Clap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hand Clap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hand Clap" MSB="34" LSB="119" />
+				<Bank Name="Synth Brass 2" MSB="40" LSB="0" />
 				<Bank Name="SynRhyth" MSB="40" LSB="1" />
 				<Bank Name="Fireworks" MSB="40" LSB="2" />
 				<Bank Name="JazzGtr" MSB="40" LSB="4" />
@@ -34421,6 +34469,7 @@
 				<Bank Name="Di-Snare H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare H" MSB="34" LSB="119" />
+				<Bank Name="Short Saw" MSB="40" LSB="0" />
 				<Bank Name="HarmDrum" MSB="40" LSB="1" />
 				<Bank Name="Flute" MSB="40" LSB="2" />
 				<Bank Name="CleanGtr" MSB="40" LSB="4" />
@@ -34477,6 +34526,7 @@
 				<Bank Name="Di-Floor Tom L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Floor Tom L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Floor Tom L" MSB="34" LSB="119" />
+				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="Cowbell" MSB="40" LSB="1" />
 				<Bank Name="Fork Guitar 1" MSB="40" LSB="2" />
 				<Bank Name="Mute.Gtr" MSB="40" LSB="4" />
@@ -34531,6 +34581,7 @@
 				<Bank Name="Di-Hi-Hat Closed" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Closed" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Closed" MSB="34" LSB="119" />
+				<Bank Name="Electric Guitar 2" MSB="40" LSB="0" />
 				<Bank Name="ClseHiht" MSB="40" LSB="1" />
 				<Bank Name="Fork Guitar 2" MSB="40" LSB="2" />
 				<Bank Name="Ovrdrive" MSB="40" LSB="4" />
@@ -34591,6 +34642,7 @@
 				<Bank Name="Di-Floor Tom H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Floor Tom H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Floor Tom H" MSB="34" LSB="119" />
+				<Bank Name="Synth Bass 2" MSB="40" LSB="0" />
 				<Bank Name="SnareDrm" MSB="40" LSB="1" />
 				<Bank Name="Funky Marimba" MSB="40" LSB="2" />
 				<Bank Name="Dist.Gtr" MSB="40" LSB="4" />
@@ -34652,6 +34704,7 @@
 				<Bank Name="Di-Hi-Hat Pedal" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Pedal" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Pedal" MSB="34" LSB="119" />
+				<Bank Name="Sitar" MSB="40" LSB="0" />
 				<Bank Name="BassDrum" MSB="40" LSB="1" />
 				<Bank Name="Glass Celesta" MSB="40" LSB="2" />
 				<Bank Name="GtrHarmo" MSB="40" LSB="4" />
@@ -34767,6 +34820,7 @@
 				<Bank Name="Di-Hi-Hat Open" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Open" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Open" MSB="34" LSB="119" />
+				<Bank Name="Electric Strings" MSB="40" LSB="0" />
 				<Bank Name="Elecpia2" MSB="40" LSB="1" />
 				<Bank Name="Gurgle" MSB="40" LSB="2" />
 				<Bank Name="FngrBass" MSB="40" LSB="4" />
@@ -34820,6 +34874,7 @@
 				<Bank Name="Di-Mid Tom L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Mid Tom L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Mid Tom L" MSB="34" LSB="119" />
+				<Bank Name="Bow Wow" MSB="40" LSB="0" />
 				<Bank Name="Santool2" MSB="40" LSB="1" />
 				<Bank Name="Hand Bell" MSB="40" LSB="2" />
 				<Bank Name="PickBass" MSB="40" LSB="4" />
@@ -34878,6 +34933,7 @@
 				<Bank Name="Di-Mid Tom H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Mid Tom H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Mid Tom H" MSB="34" LSB="119" />
+				<Bank Name="Electric Guitar" MSB="40" LSB="0" />
 				<Bank Name="Brass" MSB="40" LSB="1" />
 				<Bank Name="Handsaw" MSB="40" LSB="2" />
 				<Bank Name="Fretless" MSB="40" LSB="4" />
@@ -34940,6 +34996,7 @@
 				<Bank Name="Di-CrashCymbal 1" MSB="34" LSB="117" />
 				<Bank Name="Mi-CrashCymbal 1" MSB="34" LSB="118" />
 				<Bank Name="Ac-CrashCymbal 1" MSB="34" LSB="119" />
+				<Bank Name="Organ" MSB="40" LSB="0" />
 				<Bank Name="Flute 2" MSB="40" LSB="1" />
 				<Bank Name="Harmonica" MSB="40" LSB="2" />
 				<Bank Name="SlapBas1" MSB="40" LSB="4" />
@@ -34997,6 +35054,7 @@
 				<Bank Name="Di-High Tom" MSB="34" LSB="117" />
 				<Bank Name="Mi-High Tom" MSB="34" LSB="118" />
 				<Bank Name="Ac-High Tom" MSB="34" LSB="119" />
+				<Bank Name="Clarinet" MSB="40" LSB="0" />
 				<Bank Name="Clavicd2" MSB="40" LSB="1" />
 				<Bank Name="Harp" MSB="40" LSB="2" />
 				<Bank Name="SlapBas2" MSB="40" LSB="4" />
@@ -35054,6 +35112,7 @@
 				<Bank Name="Di-Ride Cymbal 1" MSB="34" LSB="117" />
 				<Bank Name="Mi-Ride Cymbal 1" MSB="34" LSB="118" />
 				<Bank Name="Ac-Ride Cymbal 1" MSB="34" LSB="119" />
+				<Bank Name="Saxophone" MSB="40" LSB="0" />
 				<Bank Name="Clavicd3" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 1" MSB="40" LSB="2" />
 				<Bank Name="SynBass1" MSB="40" LSB="4" />
@@ -35109,6 +35168,7 @@
 				<Bank Name="Di-ChineseCymbal" MSB="34" LSB="117" />
 				<Bank Name="Mi-ChineseCymbal" MSB="34" LSB="118" />
 				<Bank Name="Ac-ChineseCymbal" MSB="34" LSB="119" />
+				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="Koto 2" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 2" MSB="40" LSB="2" />
 				<Bank Name="SynBass2" MSB="40" LSB="4" />
@@ -35168,6 +35228,7 @@
 				<Bank Name="Di-RideCymbalCup" MSB="34" LSB="117" />
 				<Bank Name="Mi-RideCymbalCup" MSB="34" LSB="118" />
 				<Bank Name="Ac-RideCymbalCup" MSB="34" LSB="119" />
+				<Bank Name="Street Organ" MSB="40" LSB="0" />
 				<Bank Name="PipeOrg2" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 3" MSB="40" LSB="2" />
 				<Bank Name="Violin" MSB="40" LSB="4" />
@@ -35229,6 +35290,7 @@
 				<Bank Name="Di-Tambourine" MSB="34" LSB="117" />
 				<Bank Name="Mi-Tambourine" MSB="34" LSB="118" />
 				<Bank Name="Ac-Tambourine" MSB="34" LSB="119" />
+				<Bank Name="Synth Brass" MSB="40" LSB="0" />
 				<Bank Name="PohdsPLA" MSB="40" LSB="1" />
 				<Bank Name="Hawaiian Guitar" MSB="40" LSB="2" />
 				<Bank Name="Viola" MSB="40" LSB="4" />
@@ -35286,6 +35348,7 @@
 				<Bank Name="Di-Splash Cymbal" MSB="34" LSB="117" />
 				<Bank Name="Mi-Splash Cymbal" MSB="34" LSB="118" />
 				<Bank Name="Ac-Splash Cymbal" MSB="34" LSB="119" />
+				<Bank Name="Electric Piano" MSB="40" LSB="0" />
 				<Bank Name="RohdsPRA" MSB="40" LSB="1" />
 				<Bank Name="Honky-Tonk Piano 1" MSB="40" LSB="2" />
 				<Bank Name="Cello" MSB="40" LSB="4" />
@@ -35339,6 +35402,7 @@
 				<Bank Name="Di-Cowbell" MSB="34" LSB="117" />
 				<Bank Name="Mi-Cowbell" MSB="34" LSB="118" />
 				<Bank Name="Ac-Cowbell" MSB="34" LSB="119" />
+				<Bank Name="Bass" MSB="40" LSB="0" />
 				<Bank Name="Orch L" MSB="40" LSB="1" />
 				<Bank Name="Honky-Tonk Piano 2" MSB="40" LSB="2" />
 				<Bank Name="Contrabs" MSB="40" LSB="4" />
@@ -35390,6 +35454,7 @@
 				<Bank Name="Di-CrashCymbal 2" MSB="34" LSB="117" />
 				<Bank Name="Mi-CrashCymbal 2" MSB="34" LSB="118" />
 				<Bank Name="Ac-CrashCymbal 2" MSB="34" LSB="119" />
+				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="Orch R" MSB="40" LSB="1" />
 				<Bank Name="Horn" MSB="40" LSB="2" />
 				<Bank Name="Trem.Str" MSB="40" LSB="4" />
@@ -35448,6 +35513,7 @@
 				<Bank Name="Di-Vibraslap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Vibraslap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Vibraslap" MSB="34" LSB="119" />
+				<Bank Name="Chime" MSB="40" LSB="0" />
 				<Bank Name="SynViol" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 1" MSB="40" LSB="2" />
 				<Bank Name="Pizz.Str" MSB="40" LSB="4" />
@@ -35509,6 +35575,7 @@
 				<Bank Name="Di-Ride Cymbal 2" MSB="34" LSB="117" />
 				<Bank Name="Mi-Ride Cymbal 2" MSB="34" LSB="118" />
 				<Bank Name="Ac-Ride Cymbal 2" MSB="34" LSB="119" />
+				<Bank Name="Tom Tom 2" MSB="40" LSB="0" />
 				<Bank Name="SynOrgan" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 2" MSB="40" LSB="2" />
 				<Bank Name="Harp" MSB="40" LSB="4" />
@@ -35567,6 +35634,7 @@
 				<Bank Name="Di-Bongo H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bongo H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bongo H" MSB="34" LSB="119" />
+				<Bank Name="Noise and Tone" MSB="40" LSB="0" />
 				<Bank Name="SynBrass" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 3" MSB="40" LSB="2" />
 				<Bank Name="Timpani" MSB="40" LSB="4" />
@@ -35678,6 +35746,7 @@
 				<Bank Name="Di-Conga H Mute" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga H Mute" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga H Mute" MSB="34" LSB="119" />
+				<Bank Name="Buzzy Bell" MSB="40" LSB="0" />
 				<Bank Name="Shamisen" MSB="40" LSB="1" />
 				<Bank Name="Jamisen" MSB="40" LSB="2" />
 				<Bank Name="Strings2" MSB="40" LSB="4" />
@@ -35736,6 +35805,7 @@
 				<Bank Name="Di-Conga H Open" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga H Open" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga H Open" MSB="34" LSB="119" />
+				<Bank Name="Guitar" MSB="40" LSB="0" />
 				<Bank Name="Magical" MSB="40" LSB="1" />
 				<Bank Name="Jazz Guitar" MSB="40" LSB="2" />
 				<Bank Name="Syn.Str1" MSB="40" LSB="4" />
@@ -35797,6 +35867,7 @@
 				<Bank Name="Di-Conga L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga L" MSB="34" LSB="119" />
+				<Bank Name="Wurly" MSB="40" LSB="0" />
 				<Bank Name="Huwawa" MSB="40" LSB="1" />
 				<Bank Name="Jazz Organ" MSB="40" LSB="2" />
 				<Bank Name="Syn.Str2" MSB="40" LSB="4" />
@@ -35854,6 +35925,7 @@
 				<Bank Name="Di-Timbale H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Timbale H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Timbale H" MSB="34" LSB="119" />
+				<Bank Name="Flute" MSB="40" LSB="0" />
 				<Bank Name="WnderFlt" MSB="40" LSB="1" />
 				<Bank Name="Jug" MSB="40" LSB="2" />
 				<Bank Name="ChoirAah" MSB="40" LSB="4" />
@@ -35910,6 +35982,7 @@
 				<Bank Name="Di-Timbale L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Timbale L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Timbale L" MSB="34" LSB="119" />
+				<Bank Name="Clarinet" MSB="40" LSB="0" />
 				<Bank Name="Hardrock" MSB="40" LSB="1" />
 				<Bank Name="Koto" MSB="40" LSB="2" />
 				<Bank Name="VoiceOoh" MSB="40" LSB="4" />
@@ -35962,6 +36035,7 @@
 				<Bank Name="Di-Agogo H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Agogo H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Agogo H" MSB="34" LSB="119" />
+				<Bank Name="Synth" MSB="40" LSB="0" />
 				<Bank Name="Machine" MSB="40" LSB="1" />
 				<Bank Name="Leaf Spring" MSB="40" LSB="2" />
 				<Bank Name="SynVoice" MSB="40" LSB="4" />
@@ -36021,6 +36095,7 @@
 				<Bank Name="Di-Agogo L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Agogo L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Agogo L" MSB="34" LSB="119" />
+				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="MachineV" MSB="40" LSB="1" />
 				<Bank Name="Marimba" MSB="40" LSB="2" />
 				<Bank Name="Orch.Hit" MSB="40" LSB="4" />
@@ -36084,6 +36159,7 @@
 				<Bank Name="Di-Cabasa" MSB="34" LSB="117" />
 				<Bank Name="Mi-Cabasa" MSB="34" LSB="118" />
 				<Bank Name="Ac-Cabasa" MSB="34" LSB="119" />
+				<Bank Name="Organ" MSB="40" LSB="0" />
 				<Bank Name="Comic" MSB="40" LSB="1" />
 				<Bank Name="Metallic Synth" MSB="40" LSB="2" />
 				<Bank Name="Trumpet" MSB="40" LSB="4" />
@@ -36142,6 +36218,7 @@
 				<Bank Name="Di-Maracas" MSB="34" LSB="117" />
 				<Bank Name="Mi-Maracas" MSB="34" LSB="118" />
 				<Bank Name="Ac-Maracas" MSB="34" LSB="119" />
+				<Bank Name="Bells" MSB="40" LSB="0" />
 				<Bank Name="SE_Comic" MSB="40" LSB="1" />
 				<Bank Name="Music Box" MSB="40" LSB="2" />
 				<Bank Name="Trombone" MSB="40" LSB="4" />
@@ -36198,6 +36275,7 @@
 				<Bank Name="Di-SambaWhistleH" MSB="34" LSB="117" />
 				<Bank Name="Mi-SambaWhistleH" MSB="34" LSB="118" />
 				<Bank Name="Ac-SambaWhistleH" MSB="34" LSB="119" />
+				<Bank Name="Vibes" MSB="40" LSB="0" />
 				<Bank Name="SE_Laser" MSB="40" LSB="1" />
 				<Bank Name="Mute Bass" MSB="40" LSB="2" />
 				<Bank Name="Tuba" MSB="40" LSB="4" />
@@ -36251,6 +36329,7 @@
 				<Bank Name="Di-SambaWhistleL" MSB="34" LSB="117" />
 				<Bank Name="Mi-SambaWhistleL" MSB="34" LSB="118" />
 				<Bank Name="Ac-SambaWhistleL" MSB="34" LSB="119" />
+				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="SE_Noise" MSB="40" LSB="1" />
 				<Bank Name="Mute Trumpet" MSB="40" LSB="2" />
 				<Bank Name="Mute.Trp" MSB="40" LSB="4" />
@@ -36308,6 +36387,7 @@
 				<Bank Name="Di-Guiro Short" MSB="34" LSB="117" />
 				<Bank Name="Mi-Guiro Short" MSB="34" LSB="118" />
 				<Bank Name="Ac-Guiro Short" MSB="34" LSB="119" />
+				<Bank Name="Tutti" MSB="40" LSB="0" />
 				<Bank Name="SE_Star" MSB="40" LSB="1" />
 				<Bank Name="Oboe" MSB="40" LSB="2" />
 				<Bank Name="Fr.Horn" MSB="40" LSB="4" />
@@ -36370,6 +36450,7 @@
 				<Bank Name="Di-Guiro Long" MSB="34" LSB="117" />
 				<Bank Name="Mi-Guiro Long" MSB="34" LSB="118" />
 				<Bank Name="Ac-Guiro Long" MSB="34" LSB="119" />
+				<Bank Name="Fretless" MSB="40" LSB="0" />
 				<Bank Name="SE_Star2" MSB="40" LSB="1" />
 				<Bank Name="Panflute" MSB="40" LSB="2" />
 				<Bank Name="BrasSect" MSB="40" LSB="4" />
@@ -36428,6 +36509,7 @@
 				<Bank Name="Di-Claves" MSB="34" LSB="117" />
 				<Bank Name="Mi-Claves" MSB="34" LSB="118" />
 				<Bank Name="Ac-Claves" MSB="34" LSB="119" />
+				<Bank Name="Synth Bass" MSB="40" LSB="0" />
 				<Bank Name="Engine 2" MSB="40" LSB="1" />
 				<Bank Name="Piano 1" MSB="40" LSB="2" />
 				<Bank Name="SynBras1" MSB="40" LSB="4" />
@@ -36483,6 +36565,7 @@
 				<Bank Name="Di-Wood Block H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Wood Block H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Wood Block H" MSB="34" LSB="119" />
+				<Bank Name="Sweep" MSB="40" LSB="0" />
 				<Bank Name="Silence" MSB="40" LSB="1" />
 				<Bank Name="Piano 2" MSB="40" LSB="2" />
 				<Bank Name="SynBras2" MSB="40" LSB="4" />
@@ -39397,6 +39480,8 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="Bass Drum" MSB="112" LSB="17" />
+				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
 			</PC>
 			<PC Name="Program 2" PC="2">
 				<Bank Name="Bright Acoustic Piano" MSB="0" LSB="0" />
@@ -39442,6 +39527,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Close Hi Hat" MSB="35" LSB="0" />
+				<Bank Name="Violin" MSB="40" LSB="0" />
 				<Bank Name="Piano 2" MSB="40" LSB="1" />
 				<Bank Name="Accordion 2" MSB="40" LSB="2" />
 				<Bank Name="BritePno" MSB="40" LSB="4" />
@@ -39461,6 +39547,8 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="Snare Drum" MSB="112" LSB="17" />
+				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
 			</PC>
 			<PC Name="Program 3" PC="3">
 				<Bank Name="Electric Grand Piano" MSB="0" LSB="0" />
@@ -39507,6 +39595,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Snare Drum" MSB="35" LSB="0" />
+				<Bank Name="Guitar" MSB="40" LSB="0" />
 				<Bank Name="Violin" MSB="40" LSB="1" />
 				<Bank Name="Alpenhorn" MSB="40" LSB="2" />
 				<Bank Name="E.GrandP" MSB="40" LSB="4" />
@@ -39525,6 +39614,8 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
+				<Bank Name="Tom" MSB="112" LSB="40" />
 			</PC>
 			<PC Name="Program 4" PC="4">
 				<Bank Name="Honky-tonk Piano" MSB="0" LSB="0" />
@@ -39567,6 +39658,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Tom" MSB="35" LSB="0" />
+				<Bank Name="Piano" MSB="40" LSB="0" />
 				<Bank Name="Flute" MSB="40" LSB="1" />
 				<Bank Name="Alto Sax" MSB="40" LSB="2" />
 				<Bank Name="HnkyTonk" MSB="40" LSB="4" />
@@ -39583,6 +39675,8 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
+				<Bank Name="Snare Drum" MSB="112" LSB="40" />
 			</PC>
 			<PC Name="Program 5" PC="5">
 				<Bank Name="Electric Piano 1" MSB="0" LSB="0" />
@@ -39628,6 +39722,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Top Cymbal" MSB="35" LSB="0" />
+				<Bank Name="Flute" MSB="40" LSB="0" />
 				<Bank Name="Clarinet" MSB="40" LSB="1" />
 				<Bank Name="Bagpipe" MSB="40" LSB="2" />
 				<Bank Name="E.Piano1" MSB="40" LSB="4" />
@@ -39644,6 +39739,8 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="Tom" MSB="112" LSB="17" />
+				<Bank Name="Bass Drum" MSB="112" LSB="40" />
 			</PC>
 			<PC Name="Program 6" PC="6">
 				<Bank Name="Electric Piano 2" MSB="0" LSB="0" />
@@ -39691,6 +39788,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Open Hi Hat" MSB="35" LSB="0" />
+				<Bank Name="Clarinet" MSB="40" LSB="0" />
 				<Bank Name="Oboe" MSB="40" LSB="1" />
 				<Bank Name="Banjo" MSB="40" LSB="2" />
 				<Bank Name="E.Piano2" MSB="40" LSB="4" />
@@ -39710,6 +39808,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 			</PC>
 			<PC Name="Program 7" PC="7">
 				<Bank Name="Harpsichord" MSB="0" LSB="0" />
@@ -39755,6 +39854,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Tom (Pitch LFO)" MSB="35" LSB="0" />
+				<Bank Name="Oboe" MSB="40" LSB="0" />
 				<Bank Name="Trumpet" MSB="40" LSB="1" />
 				<Bank Name="Bar Chimes" MSB="40" LSB="2" />
 				<Bank Name="Harpsi" MSB="40" LSB="4" />
@@ -39817,6 +39917,7 @@
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
 				<Bank Name="OPL Snare Drum (Pitch LFO)" MSB="35" LSB="0" />
+				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="PipeOrgn" MSB="40" LSB="1" />
 				<Bank Name="Bass Clarinet" MSB="40" LSB="2" />
 				<Bank Name="Clavi" MSB="40" LSB="4" />
@@ -39876,6 +39977,7 @@
 				<Bank Name="Drum" MSB="34" LSB="117" />
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
+				<Bank Name="Organ" MSB="40" LSB="0" />
 				<Bank Name="Xylophon" MSB="40" LSB="1" />
 				<Bank Name="Bassoon" MSB="40" LSB="2" />
 				<Bank Name="Celesta" MSB="40" LSB="4" />
@@ -39935,6 +40037,7 @@
 				<Bank Name="Drum" MSB="34" LSB="117" />
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
+				<Bank Name="Horn" MSB="40" LSB="0" />
 				<Bank Name="Organ" MSB="40" LSB="1" />
 				<Bank Name="Boom Piano" MSB="40" LSB="2" />
 				<Bank Name="Glocken" MSB="40" LSB="4" />
@@ -39997,6 +40100,7 @@
 				<Bank Name="Drum" MSB="34" LSB="117" />
 				<Bank Name="Drum" MSB="34" LSB="118" />
 				<Bank Name="Drum" MSB="34" LSB="119" />
+				<Bank Name="Synthesizer" MSB="40" LSB="0" />
 				<Bank Name="Guitar" MSB="40" LSB="1" />
 				<Bank Name="Bowed bass" MSB="40" LSB="2" />
 				<Bank Name="MusicBox" MSB="40" LSB="4" />
@@ -40062,6 +40166,7 @@
 				<Bank Name="Di-SeqClick H" MSB="34" LSB="117" />
 				<Bank Name="Mi-SeqClick H" MSB="34" LSB="118" />
 				<Bank Name="Ac-SeqClick H" MSB="34" LSB="119" />
+				<Bank Name="Harpsichord" MSB="40" LSB="0" />
 				<Bank Name="Santool" MSB="40" LSB="1" />
 				<Bank Name="Brass &amp; Marimba" MSB="40" LSB="2" />
 				<Bank Name="Vibes" MSB="40" LSB="4" />
@@ -40123,6 +40228,7 @@
 				<Bank Name="Di-Brush Tap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Brush Tap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Brush Tap" MSB="34" LSB="119" />
+				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="Elecpian" MSB="40" LSB="1" />
 				<Bank Name="Cello" MSB="40" LSB="2" />
 				<Bank Name="Marimba" MSB="40" LSB="4" />
@@ -40180,6 +40286,7 @@
 				<Bank Name="Di-Brush Swirl L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Brush Swirl L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Brush Swirl L" MSB="34" LSB="119" />
+				<Bank Name="Synthesizer Bass" MSB="40" LSB="0" />
 				<Bank Name="Clavicod" MSB="40" LSB="1" />
 				<Bank Name="Chime &amp; Organ" MSB="40" LSB="2" />
 				<Bank Name="Xylophon" MSB="40" LSB="4" />
@@ -40236,6 +40343,7 @@
 				<Bank Name="Di-Brush Slap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Brush Slap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Brush Slap" MSB="34" LSB="119" />
+				<Bank Name="Acoustic Bass" MSB="40" LSB="0" />
 				<Bank Name="Harpsicd" MSB="40" LSB="1" />
 				<Bank Name="Chimes" MSB="40" LSB="2" />
 				<Bank Name="TubulBel" MSB="40" LSB="4" />
@@ -40295,6 +40403,7 @@
 				<Bank Name="Di-Brush Swirl H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Brush Swirl H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Brush Swirl H" MSB="34" LSB="119" />
+				<Bank Name="Electric Guitar" MSB="40" LSB="0" />
 				<Bank Name="Harpscd2" MSB="40" LSB="1" />
 				<Bank Name="Clarinet" MSB="40" LSB="2" />
 				<Bank Name="Dulcimer" MSB="40" LSB="4" />
@@ -40411,6 +40520,7 @@
 				<Bank Name="Di-Castanet" MSB="34" LSB="117" />
 				<Bank Name="Mi-Castanet" MSB="34" LSB="118" />
 				<Bank Name="Ac-Castanet" MSB="34" LSB="119" />
+				<Bank Name="Strings" MSB="40" LSB="0" />
 				<Bank Name="Koto" MSB="40" LSB="1" />
 				<Bank Name="Clavi 1" MSB="40" LSB="2" />
 				<Bank Name="PercOrgn" MSB="40" LSB="4" />
@@ -40466,6 +40576,7 @@
 				<Bank Name="Di-Snare L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare L" MSB="34" LSB="119" />
+				<Bank Name="Guitar" MSB="40" LSB="0" />
 				<Bank Name="Taiko" MSB="40" LSB="1" />
 				<Bank Name="Clavi 2" MSB="40" LSB="2" />
 				<Bank Name="RockOrgn" MSB="40" LSB="4" />
@@ -40518,6 +40629,7 @@
 				<Bank Name="Di-Sticks" MSB="34" LSB="117" />
 				<Bank Name="Mi-Sticks" MSB="34" LSB="118" />
 				<Bank Name="Ac-Sticks" MSB="34" LSB="119" />
+				<Bank Name="Electric Guitar" MSB="40" LSB="0" />
 				<Bank Name="Engine" MSB="40" LSB="1" />
 				<Bank Name="Drip" MSB="40" LSB="2" />
 				<Bank Name="ChrchOrg" MSB="40" LSB="4" />
@@ -40574,6 +40686,7 @@
 				<Bank Name="Di-Bass Drum L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum L" MSB="34" LSB="119" />
+				<Bank Name="Electric Piano 2" MSB="40" LSB="0" />
 				<Bank Name="UFO" MSB="40" LSB="1" />
 				<Bank Name="Electric Bass" MSB="40" LSB="2" />
 				<Bank Name="ReedOrgn" MSB="40" LSB="4" />
@@ -40631,6 +40744,7 @@
 				<Bank Name="Di-Open Rim Shot" MSB="34" LSB="117" />
 				<Bank Name="Mi-Open Rim Shot" MSB="34" LSB="118" />
 				<Bank Name="Ac-Open Rim Shot" MSB="34" LSB="119" />
+				<Bank Name="Flute" MSB="40" LSB="0" />
 				<Bank Name="SynBell" MSB="40" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="40" LSB="2" />
 				<Bank Name="Acordion" MSB="40" LSB="4" />
@@ -40686,6 +40800,7 @@
 				<Bank Name="Di-Bass Drum M" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum M" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum M" MSB="34" LSB="119" />
+				<Bank Name="Marimba" MSB="40" LSB="0" />
 				<Bank Name="Chime" MSB="40" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="40" LSB="2" />
 				<Bank Name="Harmnica" MSB="40" LSB="4" />
@@ -40740,6 +40855,7 @@
 				<Bank Name="Di-Bass Drum H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum H" MSB="34" LSB="119" />
+				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="SynBass" MSB="40" LSB="1" />
 				<Bank Name="Electric Trumpet" MSB="40" LSB="2" />
 				<Bank Name="TangoAcd" MSB="40" LSB="4" />
@@ -40793,6 +40909,7 @@
 				<Bank Name="Di-ClosedRimShot" MSB="34" LSB="117" />
 				<Bank Name="Mi-ClosedRimShot" MSB="34" LSB="118" />
 				<Bank Name="Ac-ClosedRimShot" MSB="34" LSB="119" />
+				<Bank Name="Harmonica" MSB="40" LSB="0" />
 				<Bank Name="Synthsiz" MSB="40" LSB="1" />
 				<Bank Name="Electron Organ" MSB="40" LSB="2" />
 				<Bank Name="NylonGtr" MSB="40" LSB="4" />
@@ -40851,6 +40968,7 @@
 				<Bank Name="Di-Snare M" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare M" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare M" MSB="34" LSB="119" />
+				<Bank Name="Tuba" MSB="40" LSB="0" />
 				<Bank Name="SynPercu" MSB="40" LSB="1" />
 				<Bank Name="Fantastic Piano" MSB="40" LSB="2" />
 				<Bank Name="SteelGtr" MSB="40" LSB="4" />
@@ -40913,6 +41031,7 @@
 				<Bank Name="Di-Hand Clap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hand Clap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hand Clap" MSB="34" LSB="119" />
+				<Bank Name="Synth Brass 2" MSB="40" LSB="0" />
 				<Bank Name="SynRhyth" MSB="40" LSB="1" />
 				<Bank Name="Fireworks" MSB="40" LSB="2" />
 				<Bank Name="JazzGtr" MSB="40" LSB="4" />
@@ -40975,6 +41094,7 @@
 				<Bank Name="Di-Snare H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare H" MSB="34" LSB="119" />
+				<Bank Name="Short Saw" MSB="40" LSB="0" />
 				<Bank Name="HarmDrum" MSB="40" LSB="1" />
 				<Bank Name="Flute" MSB="40" LSB="2" />
 				<Bank Name="CleanGtr" MSB="40" LSB="4" />
@@ -41031,6 +41151,7 @@
 				<Bank Name="Di-Floor Tom L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Floor Tom L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Floor Tom L" MSB="34" LSB="119" />
+				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="Cowbell" MSB="40" LSB="1" />
 				<Bank Name="Fork Guitar 1" MSB="40" LSB="2" />
 				<Bank Name="Mute.Gtr" MSB="40" LSB="4" />
@@ -41085,6 +41206,7 @@
 				<Bank Name="Di-Hi-Hat Closed" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Closed" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Closed" MSB="34" LSB="119" />
+				<Bank Name="Electric Guitar 2" MSB="40" LSB="0" />
 				<Bank Name="ClseHiht" MSB="40" LSB="1" />
 				<Bank Name="Fork Guitar 2" MSB="40" LSB="2" />
 				<Bank Name="Ovrdrive" MSB="40" LSB="4" />
@@ -41145,6 +41267,7 @@
 				<Bank Name="Di-Floor Tom H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Floor Tom H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Floor Tom H" MSB="34" LSB="119" />
+				<Bank Name="Synth Bass 2" MSB="40" LSB="0" />
 				<Bank Name="SnareDrm" MSB="40" LSB="1" />
 				<Bank Name="Funky Marimba" MSB="40" LSB="2" />
 				<Bank Name="Dist.Gtr" MSB="40" LSB="4" />
@@ -41206,6 +41329,7 @@
 				<Bank Name="Di-Hi-Hat Pedal" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Pedal" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Pedal" MSB="34" LSB="119" />
+				<Bank Name="Sitar" MSB="40" LSB="0" />
 				<Bank Name="BassDrum" MSB="40" LSB="1" />
 				<Bank Name="Glass Celesta" MSB="40" LSB="2" />
 				<Bank Name="GtrHarmo" MSB="40" LSB="4" />
@@ -41321,6 +41445,7 @@
 				<Bank Name="Di-Hi-Hat Open" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Open" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Open" MSB="34" LSB="119" />
+				<Bank Name="Electric Strings" MSB="40" LSB="0" />
 				<Bank Name="Elecpia2" MSB="40" LSB="1" />
 				<Bank Name="Gurgle" MSB="40" LSB="2" />
 				<Bank Name="FngrBass" MSB="40" LSB="4" />
@@ -41374,6 +41499,7 @@
 				<Bank Name="Di-Mid Tom L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Mid Tom L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Mid Tom L" MSB="34" LSB="119" />
+				<Bank Name="Bow Wow" MSB="40" LSB="0" />
 				<Bank Name="Santool2" MSB="40" LSB="1" />
 				<Bank Name="Hand Bell" MSB="40" LSB="2" />
 				<Bank Name="PickBass" MSB="40" LSB="4" />
@@ -41432,6 +41558,7 @@
 				<Bank Name="Di-Mid Tom H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Mid Tom H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Mid Tom H" MSB="34" LSB="119" />
+				<Bank Name="Electric Guitar" MSB="40" LSB="0" />
 				<Bank Name="Brass" MSB="40" LSB="1" />
 				<Bank Name="Handsaw" MSB="40" LSB="2" />
 				<Bank Name="Fretless" MSB="40" LSB="4" />
@@ -41494,6 +41621,7 @@
 				<Bank Name="Di-CrashCymbal 1" MSB="34" LSB="117" />
 				<Bank Name="Mi-CrashCymbal 1" MSB="34" LSB="118" />
 				<Bank Name="Ac-CrashCymbal 1" MSB="34" LSB="119" />
+				<Bank Name="Organ" MSB="40" LSB="0" />
 				<Bank Name="Flute 2" MSB="40" LSB="1" />
 				<Bank Name="Harmonica" MSB="40" LSB="2" />
 				<Bank Name="SlapBas1" MSB="40" LSB="4" />
@@ -41551,6 +41679,7 @@
 				<Bank Name="Di-High Tom" MSB="34" LSB="117" />
 				<Bank Name="Mi-High Tom" MSB="34" LSB="118" />
 				<Bank Name="Ac-High Tom" MSB="34" LSB="119" />
+				<Bank Name="Clarinet" MSB="40" LSB="0" />
 				<Bank Name="Clavicd2" MSB="40" LSB="1" />
 				<Bank Name="Harp" MSB="40" LSB="2" />
 				<Bank Name="SlapBas2" MSB="40" LSB="4" />
@@ -41608,6 +41737,7 @@
 				<Bank Name="Di-Ride Cymbal 1" MSB="34" LSB="117" />
 				<Bank Name="Mi-Ride Cymbal 1" MSB="34" LSB="118" />
 				<Bank Name="Ac-Ride Cymbal 1" MSB="34" LSB="119" />
+				<Bank Name="Saxophone" MSB="40" LSB="0" />
 				<Bank Name="Clavicd3" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 1" MSB="40" LSB="2" />
 				<Bank Name="SynBass1" MSB="40" LSB="4" />
@@ -41663,6 +41793,7 @@
 				<Bank Name="Di-ChineseCymbal" MSB="34" LSB="117" />
 				<Bank Name="Mi-ChineseCymbal" MSB="34" LSB="118" />
 				<Bank Name="Ac-ChineseCymbal" MSB="34" LSB="119" />
+				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="Koto 2" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 2" MSB="40" LSB="2" />
 				<Bank Name="SynBass2" MSB="40" LSB="4" />
@@ -41722,6 +41853,7 @@
 				<Bank Name="Di-RideCymbalCup" MSB="34" LSB="117" />
 				<Bank Name="Mi-RideCymbalCup" MSB="34" LSB="118" />
 				<Bank Name="Ac-RideCymbalCup" MSB="34" LSB="119" />
+				<Bank Name="Street Organ" MSB="40" LSB="0" />
 				<Bank Name="PipeOrg2" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 3" MSB="40" LSB="2" />
 				<Bank Name="Violin" MSB="40" LSB="4" />
@@ -41783,6 +41915,7 @@
 				<Bank Name="Di-Tambourine" MSB="34" LSB="117" />
 				<Bank Name="Mi-Tambourine" MSB="34" LSB="118" />
 				<Bank Name="Ac-Tambourine" MSB="34" LSB="119" />
+				<Bank Name="Synth Brass" MSB="40" LSB="0" />
 				<Bank Name="PohdsPLA" MSB="40" LSB="1" />
 				<Bank Name="Hawaiian Guitar" MSB="40" LSB="2" />
 				<Bank Name="Viola" MSB="40" LSB="4" />
@@ -41840,6 +41973,7 @@
 				<Bank Name="Di-Splash Cymbal" MSB="34" LSB="117" />
 				<Bank Name="Mi-Splash Cymbal" MSB="34" LSB="118" />
 				<Bank Name="Ac-Splash Cymbal" MSB="34" LSB="119" />
+				<Bank Name="Electric Piano" MSB="40" LSB="0" />
 				<Bank Name="RohdsPRA" MSB="40" LSB="1" />
 				<Bank Name="Honky-Tonk Piano 1" MSB="40" LSB="2" />
 				<Bank Name="Cello" MSB="40" LSB="4" />
@@ -41893,6 +42027,7 @@
 				<Bank Name="Di-Cowbell" MSB="34" LSB="117" />
 				<Bank Name="Mi-Cowbell" MSB="34" LSB="118" />
 				<Bank Name="Ac-Cowbell" MSB="34" LSB="119" />
+				<Bank Name="Bass" MSB="40" LSB="0" />
 				<Bank Name="Orch L" MSB="40" LSB="1" />
 				<Bank Name="Honky-Tonk Piano 2" MSB="40" LSB="2" />
 				<Bank Name="Contrabs" MSB="40" LSB="4" />
@@ -41944,6 +42079,7 @@
 				<Bank Name="Di-CrashCymbal 2" MSB="34" LSB="117" />
 				<Bank Name="Mi-CrashCymbal 2" MSB="34" LSB="118" />
 				<Bank Name="Ac-CrashCymbal 2" MSB="34" LSB="119" />
+				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="Orch R" MSB="40" LSB="1" />
 				<Bank Name="Horn" MSB="40" LSB="2" />
 				<Bank Name="Trem.Str" MSB="40" LSB="4" />
@@ -42002,6 +42138,7 @@
 				<Bank Name="Di-Vibraslap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Vibraslap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Vibraslap" MSB="34" LSB="119" />
+				<Bank Name="Chime" MSB="40" LSB="0" />
 				<Bank Name="SynViol" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 1" MSB="40" LSB="2" />
 				<Bank Name="Pizz.Str" MSB="40" LSB="4" />
@@ -42063,6 +42200,7 @@
 				<Bank Name="Di-Ride Cymbal 2" MSB="34" LSB="117" />
 				<Bank Name="Mi-Ride Cymbal 2" MSB="34" LSB="118" />
 				<Bank Name="Ac-Ride Cymbal 2" MSB="34" LSB="119" />
+				<Bank Name="Tom Tom 2" MSB="40" LSB="0" />
 				<Bank Name="SynOrgan" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 2" MSB="40" LSB="2" />
 				<Bank Name="Harp" MSB="40" LSB="4" />
@@ -42121,6 +42259,7 @@
 				<Bank Name="Di-Bongo H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bongo H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bongo H" MSB="34" LSB="119" />
+				<Bank Name="Noise and Tone" MSB="40" LSB="0" />
 				<Bank Name="SynBrass" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 3" MSB="40" LSB="2" />
 				<Bank Name="Timpani" MSB="40" LSB="4" />
@@ -42232,6 +42371,7 @@
 				<Bank Name="Di-Conga H Mute" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga H Mute" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga H Mute" MSB="34" LSB="119" />
+				<Bank Name="Buzzy Bell" MSB="40" LSB="0" />
 				<Bank Name="Shamisen" MSB="40" LSB="1" />
 				<Bank Name="Jamisen" MSB="40" LSB="2" />
 				<Bank Name="Strings2" MSB="40" LSB="4" />
@@ -42290,6 +42430,7 @@
 				<Bank Name="Di-Conga H Open" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga H Open" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga H Open" MSB="34" LSB="119" />
+				<Bank Name="Guitar" MSB="40" LSB="0" />
 				<Bank Name="Magical" MSB="40" LSB="1" />
 				<Bank Name="Jazz Guitar" MSB="40" LSB="2" />
 				<Bank Name="Syn.Str1" MSB="40" LSB="4" />
@@ -42351,6 +42492,7 @@
 				<Bank Name="Di-Conga L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga L" MSB="34" LSB="119" />
+				<Bank Name="Wurly" MSB="40" LSB="0" />
 				<Bank Name="Huwawa" MSB="40" LSB="1" />
 				<Bank Name="Jazz Organ" MSB="40" LSB="2" />
 				<Bank Name="Syn.Str2" MSB="40" LSB="4" />
@@ -42408,6 +42550,7 @@
 				<Bank Name="Di-Timbale H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Timbale H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Timbale H" MSB="34" LSB="119" />
+				<Bank Name="Flute" MSB="40" LSB="0" />
 				<Bank Name="WnderFlt" MSB="40" LSB="1" />
 				<Bank Name="Jug" MSB="40" LSB="2" />
 				<Bank Name="ChoirAah" MSB="40" LSB="4" />
@@ -42464,6 +42607,7 @@
 				<Bank Name="Di-Timbale L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Timbale L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Timbale L" MSB="34" LSB="119" />
+				<Bank Name="Clarinet" MSB="40" LSB="0" />
 				<Bank Name="Hardrock" MSB="40" LSB="1" />
 				<Bank Name="Koto" MSB="40" LSB="2" />
 				<Bank Name="VoiceOoh" MSB="40" LSB="4" />
@@ -42516,6 +42660,7 @@
 				<Bank Name="Di-Agogo H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Agogo H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Agogo H" MSB="34" LSB="119" />
+				<Bank Name="Synth" MSB="40" LSB="0" />
 				<Bank Name="Machine" MSB="40" LSB="1" />
 				<Bank Name="Leaf Spring" MSB="40" LSB="2" />
 				<Bank Name="SynVoice" MSB="40" LSB="4" />
@@ -42575,6 +42720,7 @@
 				<Bank Name="Di-Agogo L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Agogo L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Agogo L" MSB="34" LSB="119" />
+				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="MachineV" MSB="40" LSB="1" />
 				<Bank Name="Marimba" MSB="40" LSB="2" />
 				<Bank Name="Orch.Hit" MSB="40" LSB="4" />
@@ -42638,6 +42784,7 @@
 				<Bank Name="Di-Cabasa" MSB="34" LSB="117" />
 				<Bank Name="Mi-Cabasa" MSB="34" LSB="118" />
 				<Bank Name="Ac-Cabasa" MSB="34" LSB="119" />
+				<Bank Name="Organ" MSB="40" LSB="0" />
 				<Bank Name="Comic" MSB="40" LSB="1" />
 				<Bank Name="Metallic Synth" MSB="40" LSB="2" />
 				<Bank Name="Trumpet" MSB="40" LSB="4" />
@@ -42696,6 +42843,7 @@
 				<Bank Name="Di-Maracas" MSB="34" LSB="117" />
 				<Bank Name="Mi-Maracas" MSB="34" LSB="118" />
 				<Bank Name="Ac-Maracas" MSB="34" LSB="119" />
+				<Bank Name="Bells" MSB="40" LSB="0" />
 				<Bank Name="SE_Comic" MSB="40" LSB="1" />
 				<Bank Name="Music Box" MSB="40" LSB="2" />
 				<Bank Name="Trombone" MSB="40" LSB="4" />
@@ -42752,6 +42900,7 @@
 				<Bank Name="Di-SambaWhistleH" MSB="34" LSB="117" />
 				<Bank Name="Mi-SambaWhistleH" MSB="34" LSB="118" />
 				<Bank Name="Ac-SambaWhistleH" MSB="34" LSB="119" />
+				<Bank Name="Vibes" MSB="40" LSB="0" />
 				<Bank Name="SE_Laser" MSB="40" LSB="1" />
 				<Bank Name="Mute Bass" MSB="40" LSB="2" />
 				<Bank Name="Tuba" MSB="40" LSB="4" />
@@ -42805,6 +42954,7 @@
 				<Bank Name="Di-SambaWhistleL" MSB="34" LSB="117" />
 				<Bank Name="Mi-SambaWhistleL" MSB="34" LSB="118" />
 				<Bank Name="Ac-SambaWhistleL" MSB="34" LSB="119" />
+				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="SE_Noise" MSB="40" LSB="1" />
 				<Bank Name="Mute Trumpet" MSB="40" LSB="2" />
 				<Bank Name="Mute.Trp" MSB="40" LSB="4" />
@@ -42862,6 +43012,7 @@
 				<Bank Name="Di-Guiro Short" MSB="34" LSB="117" />
 				<Bank Name="Mi-Guiro Short" MSB="34" LSB="118" />
 				<Bank Name="Ac-Guiro Short" MSB="34" LSB="119" />
+				<Bank Name="Tutti" MSB="40" LSB="0" />
 				<Bank Name="SE_Star" MSB="40" LSB="1" />
 				<Bank Name="Oboe" MSB="40" LSB="2" />
 				<Bank Name="Fr.Horn" MSB="40" LSB="4" />
@@ -42924,6 +43075,7 @@
 				<Bank Name="Di-Guiro Long" MSB="34" LSB="117" />
 				<Bank Name="Mi-Guiro Long" MSB="34" LSB="118" />
 				<Bank Name="Ac-Guiro Long" MSB="34" LSB="119" />
+				<Bank Name="Fretless" MSB="40" LSB="0" />
 				<Bank Name="SE_Star2" MSB="40" LSB="1" />
 				<Bank Name="Panflute" MSB="40" LSB="2" />
 				<Bank Name="BrasSect" MSB="40" LSB="4" />
@@ -42982,6 +43134,7 @@
 				<Bank Name="Di-Claves" MSB="34" LSB="117" />
 				<Bank Name="Mi-Claves" MSB="34" LSB="118" />
 				<Bank Name="Ac-Claves" MSB="34" LSB="119" />
+				<Bank Name="Synth Bass" MSB="40" LSB="0" />
 				<Bank Name="Engine 2" MSB="40" LSB="1" />
 				<Bank Name="Piano 1" MSB="40" LSB="2" />
 				<Bank Name="SynBras1" MSB="40" LSB="4" />
@@ -43037,6 +43190,7 @@
 				<Bank Name="Di-Wood Block H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Wood Block H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Wood Block H" MSB="34" LSB="119" />
+				<Bank Name="Sweep" MSB="40" LSB="0" />
 				<Bank Name="Silence" MSB="40" LSB="1" />
 				<Bank Name="Piano 2" MSB="40" LSB="2" />
 				<Bank Name="SynBras2" MSB="40" LSB="4" />
@@ -45887,7 +46041,7 @@
 	<DrumSetList>
 		<Map Name="FITOM_X Unified Profile">
 			<PC Name="ALSA Preset 2OP set" PC="3">
-				<Bank Name="ALSA Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -45938,7 +46092,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 4OP set" PC="4">
-				<Bank Name="ALSA Preset 4OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 4OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -45989,7 +46143,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Preset 2OP set" PC="5">
-				<Bank Name="MA-2 Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -46072,7 +46226,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Basic 2OP set" PC="6">
-				<Bank Name="MA-2 Basic 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Basic 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -46155,7 +46309,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Luminous 2OP set" PC="7">
-				<Bank Name="MA-2 Luminous 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Luminous 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -46238,7 +46392,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 MicroComputer 2OP set" PC="8">
-				<Bank Name="MA-2 MicroComputer 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 MicroComputer 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -46321,7 +46475,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Digital 2OP set" PC="9">
-				<Bank Name="MA-2 Digital 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Digital 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -46404,7 +46558,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Acid 2OP set" PC="10">
-				<Bank Name="MA-2 Acid 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Acid 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -46487,7 +46641,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Variant 2OP set" PC="11">
-				<Bank Name="MA-2 Variant 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Variant 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -46570,7 +46724,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPNA Built-in set" PC="12">
-				<Bank Name="OPNA Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPNA Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -46592,7 +46746,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPLL Built-in set" PC="13">
-				<Bank Name="OPLL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPLL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -46617,7 +46771,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPL Built-in set" PC="14">
-				<Bank Name="OPL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -46642,7 +46796,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
-				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Power Kick Drum" Key="36" />
 					<Tone Name="Side Stick 2" Key="37" />
@@ -46665,7 +46819,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 GM Drum Kit (OPNB)" PC="18">
-				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -46688,7 +46842,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 GM Drum Kit (OPNB)" PC="19">
-				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -46727,7 +46881,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 GM Drum Kit (OPNB)" PC="20">
-				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -46751,7 +46905,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX11/21L GM Drum Kit (OPNB)" PC="21">
-				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -46784,7 +46938,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-560 GM Drum Kit (OPNB)" PC="22">
-				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -46814,7 +46968,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 Extra Kit (OPNB)" PC="23">
-				<Bank Name="RX5 Extra Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 Extra Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Kick 03" Key="36" />
 					<Tone Name="Kick 04" Key="37" />
@@ -46841,7 +46995,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Electronic Kit (OPNB)" PC="25">
-				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -46864,7 +47018,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
-				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -46905,7 +47059,7 @@
 		</Map>
 		<Map Name="FITOM_X OPN Emulator">
 			<PC Name="GM2 Standard Kit" PC="1">
-				<Bank Name="GM2 Standard Kit" MSB="112" LSB="0">
+				<Bank Name="GM2 Standard Kit" MSB="120" LSB="0">
 					<Tone Name="High Q" Key="27" />
 					<Tone Name="Slap" Key="28" />
 					<Tone Name="Scratch Push" Key="29" />
@@ -46970,7 +47124,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 2OP set" PC="3">
-				<Bank Name="ALSA Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -47021,7 +47175,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 4OP set" PC="4">
-				<Bank Name="ALSA Preset 4OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 4OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -47072,7 +47226,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Preset 2OP set" PC="5">
-				<Bank Name="MA-2 Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -47155,7 +47309,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Basic 2OP set" PC="6">
-				<Bank Name="MA-2 Basic 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Basic 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -47238,7 +47392,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Luminous 2OP set" PC="7">
-				<Bank Name="MA-2 Luminous 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Luminous 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -47321,7 +47475,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 MicroComputer 2OP set" PC="8">
-				<Bank Name="MA-2 MicroComputer 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 MicroComputer 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -47404,7 +47558,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Digital 2OP set" PC="9">
-				<Bank Name="MA-2 Digital 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Digital 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -47487,7 +47641,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Acid 2OP set" PC="10">
-				<Bank Name="MA-2 Acid 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Acid 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -47570,7 +47724,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Variant 2OP set" PC="11">
-				<Bank Name="MA-2 Variant 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Variant 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -47653,7 +47807,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPNA Built-in set" PC="12">
-				<Bank Name="OPNA Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPNA Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -47675,7 +47829,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPLL Built-in set" PC="13">
-				<Bank Name="OPLL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPLL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -47700,7 +47854,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPL Built-in set" PC="14">
-				<Bank Name="OPL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -47725,7 +47879,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
-				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Power Kick Drum" Key="36" />
 					<Tone Name="Side Stick 2" Key="37" />
@@ -47748,7 +47902,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 GM Drum Kit (OPNB)" PC="18">
-				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -47771,7 +47925,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 GM Drum Kit (OPNB)" PC="19">
-				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -47810,7 +47964,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 GM Drum Kit (OPNB)" PC="20">
-				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -47834,7 +47988,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX11/21L GM Drum Kit (OPNB)" PC="21">
-				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -47867,7 +48021,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-560 GM Drum Kit (OPNB)" PC="22">
-				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -47897,7 +48051,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 Extra Kit (OPNB)" PC="23">
-				<Bank Name="RX5 Extra Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 Extra Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Kick 03" Key="36" />
 					<Tone Name="Kick 04" Key="37" />
@@ -47924,7 +48078,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Electronic Kit (OPNB)" PC="25">
-				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -47947,7 +48101,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
-				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -47988,7 +48142,7 @@
 		</Map>
 		<Map Name="FITOM_X OPN Emulator (FmGen)">
 			<PC Name="GM2 Standard Kit" PC="1">
-				<Bank Name="GM2 Standard Kit" MSB="112" LSB="0">
+				<Bank Name="GM2 Standard Kit" MSB="120" LSB="0">
 					<Tone Name="High Q" Key="27" />
 					<Tone Name="Slap" Key="28" />
 					<Tone Name="Scratch Push" Key="29" />
@@ -48053,7 +48207,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 2OP set" PC="3">
-				<Bank Name="ALSA Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -48104,7 +48258,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 4OP set" PC="4">
-				<Bank Name="ALSA Preset 4OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 4OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -48155,7 +48309,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Preset 2OP set" PC="5">
-				<Bank Name="MA-2 Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -48238,7 +48392,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Basic 2OP set" PC="6">
-				<Bank Name="MA-2 Basic 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Basic 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -48321,7 +48475,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Luminous 2OP set" PC="7">
-				<Bank Name="MA-2 Luminous 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Luminous 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -48404,7 +48558,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 MicroComputer 2OP set" PC="8">
-				<Bank Name="MA-2 MicroComputer 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 MicroComputer 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -48487,7 +48641,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Digital 2OP set" PC="9">
-				<Bank Name="MA-2 Digital 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Digital 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -48570,7 +48724,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Acid 2OP set" PC="10">
-				<Bank Name="MA-2 Acid 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Acid 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -48653,7 +48807,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Variant 2OP set" PC="11">
-				<Bank Name="MA-2 Variant 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Variant 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -48736,7 +48890,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPNA Built-in set" PC="12">
-				<Bank Name="OPNA Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPNA Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -48758,7 +48912,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPLL Built-in set" PC="13">
-				<Bank Name="OPLL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPLL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -48783,7 +48937,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPL Built-in set" PC="14">
-				<Bank Name="OPL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -48808,7 +48962,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
-				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Power Kick Drum" Key="36" />
 					<Tone Name="Side Stick 2" Key="37" />
@@ -48831,7 +48985,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 GM Drum Kit (OPNB)" PC="18">
-				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -48854,7 +49008,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 GM Drum Kit (OPNB)" PC="19">
-				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -48893,7 +49047,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 GM Drum Kit (OPNB)" PC="20">
-				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -48917,7 +49071,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX11/21L GM Drum Kit (OPNB)" PC="21">
-				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -48950,7 +49104,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-560 GM Drum Kit (OPNB)" PC="22">
-				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -48980,7 +49134,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 Extra Kit (OPNB)" PC="23">
-				<Bank Name="RX5 Extra Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 Extra Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Kick 03" Key="36" />
 					<Tone Name="Kick 04" Key="37" />
@@ -49007,7 +49161,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Electronic Kit (OPNB)" PC="25">
-				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -49030,7 +49184,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
-				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -49071,7 +49225,7 @@
 		</Map>
 		<Map Name="FITOM_X OPL Emulator">
 			<PC Name="GM2 Standard Kit" PC="1">
-				<Bank Name="GM2 Standard Kit" MSB="112" LSB="0">
+				<Bank Name="GM2 Standard Kit" MSB="120" LSB="0">
 					<Tone Name="High Q" Key="27" />
 					<Tone Name="Slap" Key="28" />
 					<Tone Name="Scratch Push" Key="29" />
@@ -49136,7 +49290,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 2OP set" PC="3">
-				<Bank Name="ALSA Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -49187,7 +49341,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 4OP set" PC="4">
-				<Bank Name="ALSA Preset 4OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 4OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -49238,7 +49392,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Preset 2OP set" PC="5">
-				<Bank Name="MA-2 Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -49321,7 +49475,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Basic 2OP set" PC="6">
-				<Bank Name="MA-2 Basic 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Basic 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -49404,7 +49558,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Luminous 2OP set" PC="7">
-				<Bank Name="MA-2 Luminous 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Luminous 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -49487,7 +49641,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 MicroComputer 2OP set" PC="8">
-				<Bank Name="MA-2 MicroComputer 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 MicroComputer 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -49570,7 +49724,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Digital 2OP set" PC="9">
-				<Bank Name="MA-2 Digital 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Digital 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -49653,7 +49807,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Acid 2OP set" PC="10">
-				<Bank Name="MA-2 Acid 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Acid 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -49736,7 +49890,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Variant 2OP set" PC="11">
-				<Bank Name="MA-2 Variant 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Variant 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -49819,7 +49973,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPNA Built-in set" PC="12">
-				<Bank Name="OPNA Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPNA Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -49841,7 +49995,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPLL Built-in set" PC="13">
-				<Bank Name="OPLL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPLL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -49866,7 +50020,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPL Built-in set" PC="14">
-				<Bank Name="OPL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -49891,7 +50045,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
-				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Power Kick Drum" Key="36" />
 					<Tone Name="Side Stick 2" Key="37" />
@@ -49914,7 +50068,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 GM Drum Kit (OPNB)" PC="18">
-				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -49937,7 +50091,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 GM Drum Kit (OPNB)" PC="19">
-				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -49976,7 +50130,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 GM Drum Kit (OPNB)" PC="20">
-				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -50000,7 +50154,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX11/21L GM Drum Kit (OPNB)" PC="21">
-				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -50033,7 +50187,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-560 GM Drum Kit (OPNB)" PC="22">
-				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -50063,7 +50217,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 Extra Kit (OPNB)" PC="23">
-				<Bank Name="RX5 Extra Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 Extra Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Kick 03" Key="36" />
 					<Tone Name="Kick 04" Key="37" />
@@ -50090,7 +50244,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Electronic Kit (OPNB)" PC="25">
-				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -50113,7 +50267,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
-				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -50154,7 +50308,7 @@
 		</Map>
 		<Map Name="FITOM_X OPM Emulator">
 			<PC Name="GM2 Standard Kit" PC="1">
-				<Bank Name="GM2 Standard Kit" MSB="112" LSB="0">
+				<Bank Name="GM2 Standard Kit" MSB="120" LSB="0">
 					<Tone Name="High Q" Key="27" />
 					<Tone Name="Slap" Key="28" />
 					<Tone Name="Scratch Push" Key="29" />
@@ -50219,7 +50373,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 2OP set" PC="3">
-				<Bank Name="ALSA Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -50270,7 +50424,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 4OP set" PC="4">
-				<Bank Name="ALSA Preset 4OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 4OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -50321,7 +50475,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Preset 2OP set" PC="5">
-				<Bank Name="MA-2 Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -50404,7 +50558,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Basic 2OP set" PC="6">
-				<Bank Name="MA-2 Basic 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Basic 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -50487,7 +50641,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Luminous 2OP set" PC="7">
-				<Bank Name="MA-2 Luminous 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Luminous 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -50570,7 +50724,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 MicroComputer 2OP set" PC="8">
-				<Bank Name="MA-2 MicroComputer 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 MicroComputer 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -50653,7 +50807,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Digital 2OP set" PC="9">
-				<Bank Name="MA-2 Digital 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Digital 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -50736,7 +50890,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Acid 2OP set" PC="10">
-				<Bank Name="MA-2 Acid 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Acid 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -50819,7 +50973,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Variant 2OP set" PC="11">
-				<Bank Name="MA-2 Variant 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Variant 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -50902,7 +51056,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPNA Built-in set" PC="12">
-				<Bank Name="OPNA Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPNA Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -50924,7 +51078,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPLL Built-in set" PC="13">
-				<Bank Name="OPLL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPLL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -50949,7 +51103,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPL Built-in set" PC="14">
-				<Bank Name="OPL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -50974,7 +51128,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
-				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Power Kick Drum" Key="36" />
 					<Tone Name="Side Stick 2" Key="37" />
@@ -50997,7 +51151,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 GM Drum Kit (OPNB)" PC="18">
-				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -51020,7 +51174,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 GM Drum Kit (OPNB)" PC="19">
-				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -51059,7 +51213,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 GM Drum Kit (OPNB)" PC="20">
-				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -51083,7 +51237,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX11/21L GM Drum Kit (OPNB)" PC="21">
-				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -51116,7 +51270,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-560 GM Drum Kit (OPNB)" PC="22">
-				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -51146,7 +51300,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 Extra Kit (OPNB)" PC="23">
-				<Bank Name="RX5 Extra Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 Extra Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Kick 03" Key="36" />
 					<Tone Name="Kick 04" Key="37" />
@@ -51173,7 +51327,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Electronic Kit (OPNB)" PC="25">
-				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -51196,7 +51350,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
-				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -51237,7 +51391,7 @@
 		</Map>
 		<Map Name="FITOM_X OPLL Emulator">
 			<PC Name="GM2 Standard Kit" PC="1">
-				<Bank Name="GM2 Standard Kit" MSB="112" LSB="0">
+				<Bank Name="GM2 Standard Kit" MSB="120" LSB="0">
 					<Tone Name="High Q" Key="27" />
 					<Tone Name="Slap" Key="28" />
 					<Tone Name="Scratch Push" Key="29" />
@@ -51302,7 +51456,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 2OP set" PC="3">
-				<Bank Name="ALSA Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -51353,7 +51507,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 4OP set" PC="4">
-				<Bank Name="ALSA Preset 4OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 4OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -51404,7 +51558,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Preset 2OP set" PC="5">
-				<Bank Name="MA-2 Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -51487,7 +51641,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Basic 2OP set" PC="6">
-				<Bank Name="MA-2 Basic 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Basic 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -51570,7 +51724,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Luminous 2OP set" PC="7">
-				<Bank Name="MA-2 Luminous 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Luminous 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -51653,7 +51807,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 MicroComputer 2OP set" PC="8">
-				<Bank Name="MA-2 MicroComputer 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 MicroComputer 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -51736,7 +51890,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Digital 2OP set" PC="9">
-				<Bank Name="MA-2 Digital 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Digital 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -51819,7 +51973,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Acid 2OP set" PC="10">
-				<Bank Name="MA-2 Acid 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Acid 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -51902,7 +52056,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Variant 2OP set" PC="11">
-				<Bank Name="MA-2 Variant 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Variant 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -51985,7 +52139,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPNA Built-in set" PC="12">
-				<Bank Name="OPNA Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPNA Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -52007,7 +52161,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPLL Built-in set" PC="13">
-				<Bank Name="OPLL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPLL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -52032,7 +52186,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPL Built-in set" PC="14">
-				<Bank Name="OPL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -52057,7 +52211,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
-				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Power Kick Drum" Key="36" />
 					<Tone Name="Side Stick 2" Key="37" />
@@ -52080,7 +52234,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 GM Drum Kit (OPNB)" PC="18">
-				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -52103,7 +52257,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 GM Drum Kit (OPNB)" PC="19">
-				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -52142,7 +52296,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 GM Drum Kit (OPNB)" PC="20">
-				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -52166,7 +52320,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX11/21L GM Drum Kit (OPNB)" PC="21">
-				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -52199,7 +52353,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-560 GM Drum Kit (OPNB)" PC="22">
-				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -52229,7 +52383,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 Extra Kit (OPNB)" PC="23">
-				<Bank Name="RX5 Extra Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 Extra Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Kick 03" Key="36" />
 					<Tone Name="Kick 04" Key="37" />
@@ -52256,7 +52410,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Electronic Kit (OPNB)" PC="25">
-				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -52279,7 +52433,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
-				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -52320,7 +52474,7 @@
 		</Map>
 		<Map Name="FITOM_X FM All">
 			<PC Name="GM2 Standard Kit" PC="1">
-				<Bank Name="GM2 Standard Kit" MSB="112" LSB="0">
+				<Bank Name="GM2 Standard Kit" MSB="120" LSB="0">
 					<Tone Name="High Q" Key="27" />
 					<Tone Name="Slap" Key="28" />
 					<Tone Name="Scratch Push" Key="29" />
@@ -52385,7 +52539,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 2OP set" PC="3">
-				<Bank Name="ALSA Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -52436,7 +52590,7 @@
 				</Bank>
 			</PC>
 			<PC Name="ALSA Preset 4OP set" PC="4">
-				<Bank Name="ALSA Preset 4OP set" MSB="112" LSB="0">
+				<Bank Name="ALSA Preset 4OP set" MSB="120" LSB="0">
 					<Tone Name="Ac Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -52487,7 +52641,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Preset 2OP set" PC="5">
-				<Bank Name="MA-2 Preset 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Preset 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -52570,7 +52724,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Basic 2OP set" PC="6">
-				<Bank Name="MA-2 Basic 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Basic 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -52653,7 +52807,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Luminous 2OP set" PC="7">
-				<Bank Name="MA-2 Luminous 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Luminous 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -52736,7 +52890,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 MicroComputer 2OP set" PC="8">
-				<Bank Name="MA-2 MicroComputer 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 MicroComputer 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -52819,7 +52973,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Digital 2OP set" PC="9">
-				<Bank Name="MA-2 Digital 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Digital 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -52902,7 +53056,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Acid 2OP set" PC="10">
-				<Bank Name="MA-2 Acid 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Acid 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum" Key="27" />
 					<Tone Name="Drum" Key="28" />
 					<Tone Name="Drum" Key="29" />
@@ -52985,7 +53139,7 @@
 				</Bank>
 			</PC>
 			<PC Name="MA-2 Variant 2OP set" PC="11">
-				<Bank Name="MA-2 Variant 2OP set" MSB="112" LSB="0">
+				<Bank Name="MA-2 Variant 2OP set" MSB="120" LSB="0">
 					<Tone Name="Drum Note 27" Key="27" />
 					<Tone Name="Drum Note 28" Key="28" />
 					<Tone Name="Hi-Q" Key="29" />
@@ -53068,7 +53222,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPNA Built-in set" PC="12">
-				<Bank Name="OPNA Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPNA Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -53090,7 +53244,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPLL Built-in set" PC="13">
-				<Bank Name="OPLL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPLL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -53115,7 +53269,7 @@
 				</Bank>
 			</PC>
 			<PC Name="OPL Built-in set" PC="14">
-				<Bank Name="OPL Built-in set" MSB="112" LSB="0">
+				<Bank Name="OPL Built-in set" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Acoustic Snare" Key="38" />
@@ -53140,7 +53294,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
-				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Power Kick Drum" Key="36" />
 					<Tone Name="Side Stick 2" Key="37" />
@@ -53163,7 +53317,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 GM Drum Kit (OPNB)" PC="18">
-				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -53186,7 +53340,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 GM Drum Kit (OPNB)" PC="19">
-				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -53225,7 +53379,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 GM Drum Kit (OPNB)" PC="20">
-				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -53249,7 +53403,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX11/21L GM Drum Kit (OPNB)" PC="21">
-				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX11/21L GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -53282,7 +53436,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-560 GM Drum Kit (OPNB)" PC="22">
-				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-560 GM Drum Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -53312,7 +53466,7 @@
 				</Bank>
 			</PC>
 			<PC Name="RX5 Extra Kit (OPNB)" PC="23">
-				<Bank Name="RX5 Extra Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="RX5 Extra Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Kick 03" Key="36" />
 					<Tone Name="Kick 04" Key="37" />
@@ -53339,7 +53493,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Electronic Kit (OPNB)" PC="25">
-				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-590 Electronic Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
@@ -53362,7 +53516,7 @@
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
-				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="112" LSB="0">
+				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
 					<Tone Name="Bass Drum 1" Key="36" />
 					<Tone Name="Side Stick" Key="37" />
