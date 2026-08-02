@@ -1156,6 +1156,9 @@ FITOM_XにSF2(SoundFont2)/FluidSynth統合機能が追加された(設計検討�
   MIDIメッセージ自体が届かず機能しないため除外)。既存のCC#0ベースの
   ネイティブ経路(ch0-11)との衝突を避けるための控えめな初期値であり、
   実際の運用(同時に何パート鳴らすか等)に応じて要調整。
+  **【2026年8月2日、3.36で変更】** ユーザー指示によりデフォルトを
+  ch14/15(0起算)の2chのみに変更した。本節(3.31)のch12-15/4chという
+  記述は初版時点の記録としてそのまま残してある。
 
 **未検証**: `FitomSf2IF`プラグイン本体は`../FitomSf2IF`側で設計・実装
 済みだが、本リポジトリに`FitomSf2IF.dll`としてビルド・配置されていない
@@ -1400,6 +1403,66 @@ JSON例に差し替えた。あわせて、2026年7月の`sw_bank`/`sw_prog`新�
 
 ---
 
+### 3.36 全7プロファイルにSF2(FluidSynth)デバイス定義を配線 + sf2_channel_windowsのデフォルトをch14/15の2chに変更（2026年8月2日）
+3.32で`banks`が`unified.bankset.json`への共有参照に統一されたことで、
+全7プロファイル(emu_fmgen_opn追加済み、3.34参照)が`sf2_banks`(10件)を
+間接的に持つ状態になっていたが、`devices[chip="SF2"]`エントリを実際に
+持つのは`unified_preset.profile.json`のみだった。設計ドキュメント
+(`../FITOM_X/docs/sf2-fluidsynth-integration.md`4節⑦)により、
+`sf2_banks`/`sf2_channel_windows`に何らかのエントリがあるにもかかわらず
+`chip=="SF2"`のdevices[]エントリが存在しない場合はFITOM_X起動時エラーに
+なる仕様のため、この状態のままでは`unified_preset`以外の6プロファイルは
+いずれも起動できない可能性が高かった。
+
+ユーザー指示により、まず`emu_opll`/`emu_opm`の2件へSF2デバイス定義を
+追加し、続けて残り`emu_opl`/`emu_opn`/`fmall`/`emu_fmgen_opn`の4件にも
+同様の対応を行い、これで全7プロファイルが`devices[chip="SF2"]`を持つ
+状態になった。
+
+- `emu_opll.profile.json`: `hw_plugins[]`には既に`FitomSf2IF`が登録済み
+  だった(登録時期・経緯不明、`devices[]`側の対応するエントリが欠落した
+  半端な状態だったと見られる)。既存の`devices[]`(OPLL/OPLL2[rhythm]/
+  OPLLP/VRC7/OPLLXの5件、3.28コミット`00eea3c`で明示化済み)に
+  `{chip:"SF2", plugin:"FitomSf2IF"}`を追加。
+- `emu_opm.profile.json`/`emu_opn.profile.json`/`fmall.profile.json`/
+  `emu_fmgen_opn.profile.json`: いずれも`hw_plugins[]`に`FitomSf2IF`が
+  未登録だったため新規追加。`devices[]`自体がこれらのプロファイルには
+  存在しなかった(FitomEmuIF側`auto_devices:true`のみでチップ構成を
+  自動生成する設計、3.32時点から変更なし)ため、SF2用の1エントリのみを
+  持つ`devices[]`を新設した(unified_presetの前例と同じく、
+  `auto_devices`と明示`devices[]`の併用はスキーマ上許容されている)。
+- `emu_opl.profile.json`: 既存の`devices[]`(Y8950[rhythm]/OPL3/OPL4の
+  3件)に`{chip:"SF2", plugin:"FitomSf2IF"}`を追加。
+
+**`sf2_channel_windows`はch14/15(0起算)の2chをデフォルトとする方針に
+変更**(ユーザー指示。3.31/3.36初版ではch12-15の4chを割り当てていたが、
+「MIDI CH14, 15をデフォルトでsf2チャンネルに割り当てる」という指示に
+伴い、`unified_preset`/`emu_opll`/`emu_opm`を含む全7プロファイルで
+ch14→`fluidsynth_chan`0、ch15→`fluidsynth_chan`1の2エントリに統一)。
+割り当て先MPUは、各プロファイルの`midi_inputs`で"loopMIDI Port 1"
+(DAW/シーケンサー想定)が指すMPU番号に合わせた(プロファイルごとに
+`midi_inputs`配列内の並び順が異なるため、MPU番号もプロファイルごとに
+異なる):
+
+| プロファイル | loopMIDIのMPU番号 | sf2_channel_windowsのmpu |
+|---|---|---|
+| `unified_preset` | 不明(`__LOCAL__`×2) | 0(暫定) |
+| `emu_opl` | 1(`midi_inputs[1]`) | 1 |
+| `emu_opll` | 1(`midi_inputs[1]`) | 1 |
+| `emu_opm` | 不明(`__LOCAL__`×2) | 0(暫定) |
+| `emu_opn` | 不明(`__LOCAL__`×4) | 0(暫定) |
+| `fmall` | 不明(`__LOCAL__`×2) | 0(暫定) |
+| `emu_fmgen_opn` | 0(`midi_inputs[0]`) | 0 |
+
+`midi_inputs`が`__LOCAL__`(3.28のgit clean/smudgeフィルタによる環境
+依存値のプレースホルダ)のプロファイルは、どちらがDAW側か本リポジトリ
+からは判別できないためMPU0を暫定値とした。
+
+**検証**: 全7プロファイルとも`jsonschema`で`profile.schema.json`に対して
+再検証しVALID。ただし`chip=="SF2"`デバイス存在チェック自体はJSON Schema
+では表現できないFITOM_Xローダー側の実行時バリデーションのため、本
+リポジトリからは検証できない(4節参照)。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
@@ -1465,9 +1528,6 @@ JSON例に差し替えた。あわせて、2026年7月の`sw_bank`/`sw_prog`新�
 - `GeneralUser GS v1.471.sf2`のGS variationバンク（sf2_bank 1-16, 120）は
   `sf2_banks`未登録（3.31参照）。必要になった場合は`bank=10`以降に追加
   すること。
-- 3.31の`sf2_channel_windows`（MPU0 ch12-15→fluidsynth_chan0-3の4ch）は
-  暫定値。実際にSF2で同時に鳴らしたいパート数・既存ネイティブ経路との
-  ch使用状況を踏まえて要調整。
 - 3.35でスキーマ・実データを同期したAWMの波形ごとピッチ/音量校正
   (`pitch_offset`/`key_scaling`/`tone_attenuate`/`volume_factor`)は、
   対応する本体側修正(FITOM_X側コミット`830e59a`、`COPL4AWM::getFnumber()`
@@ -1482,6 +1542,11 @@ JSON例に差し替えた。あわせて、2026年7月の`sw_bank`/`sw_prog`新�
   スキーマ検証、参照ファイル実在確認のみ済み）。`bank_overrides`対応版
   バイナリに更新後、実機/実エンジン環境で実際に音が出ることの確認が
   必要。
+- 3.36で全7プロファイルに配線した`sf2_channel_windows`（ch14/15の2ch）
+  も3.31と同様、`FitomSf2IF.dll`が本リポジトリに未ビルド・未配置のため
+  実機能未検証。特に`unified_preset`/`emu_opm`/`emu_opn`/`fmall`の
+  `mpu`値は`midi_inputs`が`__LOCAL__`(環境依存)でDAW側MPUを判別できず
+  MPU0を暫定的に採用しているため、実際の接続環境によっては調整が必要。
 
 ---
 
