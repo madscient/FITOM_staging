@@ -8,7 +8,6 @@
       "dll": "engines/YMFMEngine",
       "chips": [
         { "chip": "OPLL",  "clock": 3579545, "pan": 0 },
-        { "chip": "OPLL2", "clock": 3579545, "pan": 0 },
         { "chip": "OPLLP", "clock": 3579545, "pan": 0 },
         { "chip": "VRC7",  "clock": 3579545, "pan": 0 },
         { "chip": "OPLLX", "clock": 3579545, "pan": 0 }
