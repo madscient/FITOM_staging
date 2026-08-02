@@ -1492,6 +1492,70 @@ ch14→`fluidsynth_chan`0、ch15→`fluidsynth_chan`1の2エントリに統一)�
   特定プロファイルがそのチップを構成に含むかどうかとは別の話のため
   (本体側にドライバ自体は引き続き存在する)。
 
+### 3.38 OPLLビルトイン音色・OPLLビルトインリズム・OPNAビルトインリズムをインストゥルメントリストに追加（2026年8月4日、ユーザー指摘）
+`generate_instruments.py`(3.29/3.30/3.34)は`hw_banks[]`/`drum_banks[]`を
+走査してバンク一覧を組み立てるため、これら配列に一切現れない「ファイルを
+持たない機械合成バンク」3種類(3.6節のOPLL Built-In ROM音色、3.5節の
+内蔵リズム音源)がインストゥルメントリストから漏れていた。実際のパッチ名/
+楽器名はFITOM_X本体(`../FITOM_X`)のC++ソースにハードコードされている
+ため、本体を調査の上、名前を転記して追加した。
+
+- **OPLLビルトイン音色**(CC#0=40・CC#32=0固定、`core/src/
+  PatchManager.cpp`の`initOpllRomPatches()`内`kNames[4][16]`): variant
+  (0=OPLL/OPLL2, 1=OPLLX, 2=OPLLP, 3=VRC7)ごとに15音色(index1-15、
+  index0は各variant共通で無音のダミーのため未収録)。`Prog =
+  (variant<<4)|instIndex`。ソースコメントには「非公式・耳コピ由来の
+  近似データ」との注記があり、正式なROM名と異なる可能性がある。
+- **OPLLビルトインリズム**(CC#0=112・CC#32=40固定、`gui/bridge/
+  FITOMBridge.cpp`の`kOpllRhythmNames[]`): Prog(楽器番号)0-4 =
+  Hi-Hat/Top Cymbal/Tom/Snare Drum/Bass Drum。
+- **OPNAビルトインリズム**(CC#0=112・CC#32=17固定、同ファイルの
+  `kOpnaRhythmNames[]`): Prog(楽器番号)0-5 = Bass Drum/Snare Drum/
+  Top Cymbal/Hi-Hat/Tom/Rim Shot。
+- これら2つのビルトインリズムは、CC#0=112配下の内蔵リズム音源専用選択
+  であり、`drum_banks[]`由来の通常ドラムキット(CC#0=120固定・CC#32=0
+  固定、Progでキット選択。3.39節参照)とは全く別のCC#0を使う別軸
+  (3.5節・`docs/manuals/builtin_rhythm.md`参照)。
+- どのプロファイルにどのvariant/チップを追加するかは決め打ちにせず、
+  `collect_engine_chips()`で`hw_plugins[].profile`(`fmemuif_*.profile.
+  json`等)が実際に搭載しているチップ(`engines[].chips[].chip`)を読み、
+  `OPLL_CHIP_TO_VARIANT`で対応するvariantのみを動的に追加するようにした
+  (プロファイル構成が将来変わっても自動的に追従する)。結果:
+  `emu_opl`/`emu_opm`は3種類とも追加なし、`emu_opll`はOPLLビルトイン
+  音色・リズムのみ、`unified_preset`/`emu_opn`/`emu_fmgen_opn`はOPNA
+  ビルトインリズムのみ、両方搭載する`fmall`は3種類とも追加。
+- `hw_plugins[].profile`はプロセスのCWD(=リポジトリルート想定)相対で
+  書かれる規約(3.14節)であり、プロファイル自身のディレクトリ相対では
+  ない点に注意(実装時に一度取り違えて`FileNotFoundError`になった)。
+- 詳細・対応表は`tools/instrument_export/README.md`「ファイルを持たない
+  機械合成バンク」節参照。
+
+### 3.39 通常ドラムキットのバンクをCC#0=112から120へ訂正（2026年8月4日、ユーザー指摘）
+3.29以来、`generate_instruments.py`は`drum_banks[]`由来の通常ドラムキット
+(GM2ノートマッピング済み、Progでキット選択)を**CC#0=112**の1バンクとして
+出力していたが、これは誤りだった。**CC#0=112はOPNA/OPLL内蔵リズム音源の
+直接選択専用**(3.5節、3.38節のOPLLビルトインリズム・OPNAビルトイン
+リズム)であり、通常ドラムキットとは意味が異なる別のCC#0を使うべき
+だった。3.38でビルトインリズム2種を追加した際、両者が同じCC#0=112を
+共有する形になり誤りが露見した。
+
+実機のGM2規格・`Sekaiju8.3/instrument/GM1_GM2.ins`(`Patch[15360]`=
+`120<<7`の`[General MIDI Level 2 Drumsets]`)に倣い、通常ドラムキットの
+CC#0は**120**(GM2 Percussion Bank相当)に変更した。
+
+- `generate_instruments.py`: `CC0_RHYTHM = 112`という単一定数を
+  `CC0_DRUM_KIT = 120`(通常ドラムキット)・`CC0_BUILTIN_RHYTHM = 112`
+  (内蔵リズム音源直接選択)の2つに分離。ドラムキット用の`Patch[]`/
+  `Key[]`/`Drum[]`(Sekaiju)・`<Bank MSB>`(DOMINO)は`CC0_DRUM_KIT`
+  (120)を、OPLL/OPNAビルトインリズムのエントリ(`collect_builtin_
+  entries()`)は引き続き`CC0_BUILTIN_RHYTHM`(112)を使うよう修正した。
+- `tools/instrument_export/README.md`のドラムキット関連記述も
+  CC#0=112→120へ訂正(ビルトインリズムの記述はCC#0=112のまま変更なし)。
+- 再生成後、Sekaiju側`Patch[15360]=<profile> Drum Kits`・
+  `Key[15360,<prog>]=...`・DOMINO側`<Bank MSB="120" LSB="0">`に
+  切り替わったこと、ビルトインリズム側(`CC0=112 CC32=17/40`)が
+  影響を受けていないことをプログラム的に検証済み。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）

@@ -94,8 +94,51 @@ GROUP_CC0_PCM = {
     "ADPCMB": 81,
     "ADPCMA": 82,
 }
-CC0_NORMAL = 0     # patch_banks[] (通常モード)
-CC0_RHYTHM = 112   # drum_banks[] (ドラムキット)
+CC0_NORMAL = 0        # patch_banks[] (通常モード)
+CC0_DRUM_KIT = 120    # drum_banks[] (通常ドラムキット、GM2 Percussion Bank相当)
+CC0_BUILTIN_RHYTHM = 112  # OPNA/OPLL内蔵リズム音源の直接選択専用(ドラムキットとは別軸、
+                          # docs/manuals/README.md「1.音源選択モードの概要」参照)
+
+# 以下3種類は「ファイルを持たない機械合成バンク」のため、hw_banks[]/
+# drum_banks[]には現れず、プロファイルJSONの走査だけでは拾えない。
+# 実際の名前はFITOM_X本体(../FITOM_X)のC++ソースにハードコードされて
+# いるため、ここに転記する(2026年8月4日、ユーザー指摘によりFITOM_X本体
+# 調査の上追加。docs/CLAUDE.md 3.31節参照)。
+
+# core/src/PatchManager.cpp initOpllRomPatches() のROM音色名(kNames[4][16])。
+# voice_patch_type=0x28(OPLL)・hw_bank=0固定、hwProg = (variant<<4)|instIndex
+# (variant: 0=OPLL/OPLL2, 1=OPLLX, 2=OPLLP, 3=VRC7)。instIndex=0は各variant
+# 共通で無音のダミーのため未収録(1-15のみ)。出典はソースコメントによれば
+# https://github.com/plgDavid/misc/wiki/Copyright-free-OPLL(x)-ROM-patches
+# (非公式・耳コピ由来の近似データである旨、本体側コメントに明記あり)。
+OPLL_ROM_NAMES: dict[int, list[str]] = {
+    0: ["Violin", "Guitar", "Piano", "Flute", "Clarinet", "Oboe", "Trumpet",
+        "Organ", "Horn", "Synthesizer", "Harpsichord", "Vibraphone",
+        "Synthesizer Bass", "Acoustic Bass", "Electric Guitar"],
+    1: ["Strings", "Guitar", "Electric Guitar", "Electric Piano 2", "Flute",
+        "Marimba", "Trumpet", "Harmonica", "Tuba", "Synth Brass 2",
+        "Short Saw", "Vibraphone", "Electric Guitar 2", "Synth Bass 2",
+        "Sitar"],
+    2: ["Electric Strings", "Bow Wow", "Electric Guitar", "Organ", "Clarinet",
+        "Saxophone", "Trumpet", "Street Organ", "Synth Brass",
+        "Electric Piano", "Bass", "Vibraphone", "Chime", "Tom Tom 2",
+        "Noise and Tone"],
+    3: ["Buzzy Bell", "Guitar", "Wurly", "Flute", "Clarinet", "Synth",
+        "Trumpet", "Organ", "Bells", "Vibes", "Vibraphone", "Tutti",
+        "Fretless", "Synth Bass", "Sweep"],
+}
+# fmemuif_*.profile.json の engines[].chips[].chip 名 -> OPLL_ROM_NAMESのvariant番号
+OPLL_CHIP_TO_VARIANT = {"OPLL": 0, "OPLL2": 0, "OPLLX": 1, "OPLLP": 2, "VRC7": 3}
+
+# gui/bridge/FITOMBridge.cpp kOpllRhythmNames/kOpnaRhythmNames。
+# CC#0=112(内蔵リズム音源モード)でCC#32=40(OPLL)/17(OPNA)を選んだときの
+# 楽器(物理チャンネル)名。Prog(patch_prog)がそのまま楽器番号になる
+# (通常のドラムキット選択(CC#32=0固定+Progでキット選択)とは別の軸、
+# docs/manuals/builtin_rhythm.md参照)。
+OPLL_RHYTHM_NAMES = ["Hi-Hat", "Top Cymbal", "Tom", "Snare Drum", "Bass Drum"]
+OPNA_RHYTHM_NAMES = ["Bass Drum", "Snare Drum", "Top Cymbal", "Hi-Hat", "Tom", "Rim Shot"]
+CC32_OPLL_RHYTHM = 40
+CC32_OPNA_RHYTHM = 17
 
 
 @dataclass(frozen=True)
@@ -237,6 +280,45 @@ def collect_melodic_entries(profile: dict, profile_dir: Path, warn) -> list[Entr
     return entries
 
 
+def collect_engine_chips(profile: dict, profile_dir: Path) -> set[str]:
+    """hw_plugins[].profileが指すサブプロファイル(fmemuif_*.profile.json等)
+    を読み、engines[].chips[].chip の集合を返す(実際に搭載されている
+    チップを判定するため。OPLLビルトイン音色/リズムの対象variant、
+    OPNAビルトインリズムの有無を決めるのに使う)。"""
+    chips: set[str] = set()
+    for hp in profile.get("hw_plugins", []):
+        sub_path = hp.get("profile")
+        if not sub_path:
+            continue
+        # hw_plugins[].profileはプロセスのCWD(=リポジトリルート想定)相対で
+        # 書かれる規約(docs/CLAUDE.md 3.14節)。profile_dir相対ではない。
+        sub = load_json(resolve(REPO_ROOT, sub_path))
+        for eng in sub.get("engines", []):
+            for c in eng.get("chips", []):
+                if c.get("chip"):
+                    chips.add(c["chip"])
+    return chips
+
+
+def collect_builtin_entries(chips: set[str]) -> list[Entry]:
+    """OPLLビルトイン音色バンク・OPLLビルトインリズム・OPNAビルトイン
+    リズムは、ファイルを持たずFITOM_X本体にハードコードされているため、
+    実際に搭載されているチップ(collect_engine_chipsで判定)に応じて
+    手動で組み立てる。"""
+    entries: list[Entry] = []
+    variants = sorted({OPLL_CHIP_TO_VARIANT[c] for c in chips if c in OPLL_CHIP_TO_VARIANT})
+    for variant in variants:
+        for idx, name in enumerate(OPLL_ROM_NAMES[variant], start=1):
+            entries.append(Entry(GROUP_CC0_HW["OPLL"], 0, (variant << 4) | idx, name))
+    if variants:
+        for prog, name in enumerate(OPLL_RHYTHM_NAMES):
+            entries.append(Entry(CC0_BUILTIN_RHYTHM, CC32_OPLL_RHYTHM, prog, name))
+    if "OPNA" in chips:
+        for prog, name in enumerate(OPNA_RHYTHM_NAMES):
+            entries.append(Entry(CC0_BUILTIN_RHYTHM, CC32_OPNA_RHYTHM, prog, name))
+    return entries
+
+
 def collect_drum_kits(profile: dict, profile_dir: Path) -> list[DrumKit]:
     kits: list[DrumKit] = []
     for db in profile.get("banks", {}).get("drum_banks", []):
@@ -268,6 +350,8 @@ def load_profiles(warn) -> list[Profile]:
         data = {**data, "banks": banks}
 
         melodic = collect_melodic_entries(data, profile_dir, lambda m, k=key: warn(f"{k}: {m}"))
+        chips = collect_engine_chips(data, profile_dir)
+        melodic += collect_builtin_entries(chips)
         drums = collect_drum_kits(data, profile_dir)
         profiles.append(Profile(key, display_name, melodic, drums))
     return profiles
@@ -398,10 +482,12 @@ def build_ins(profiles: list[Profile]) -> str:
         for (cc0, cc32), _items in sorted(by_bank.items()):
             patch_index = (cc0 << 7) | cc32
             lines.append(f"Patch[{patch_index}]={_bank_section_name(prof.key, cc0, cc32)}")
-        # ドラムキットはCC#0=112・CC#32=0固定の1バンクのみ(Patch[]添字は
-        # 1個だけ)。GM1_GM2.insの[General MIDI Level 2 Drumsets]と同じく、
-        # Key[]の第二引数(PC)でキットの種類を切り替える。
-        drum_patch_index = (CC0_RHYTHM << 7) | 0
+        # ドラムキットはCC#0=120(GM2 Percussion Bank相当)・CC#32=0固定の
+        # 1バンクのみ(Patch[]添字は1個だけ)。CC#0=112はOPNA/OPLL内蔵リズム
+        # 音源の直接選択専用であり、通常ドラムキットとは別軸なので使わない。
+        # GM1_GM2.insの[General MIDI Level 2 Drumsets](Patch[15360]=120<<7)
+        # と同じく、Key[]の第二引数(PC)でキットの種類を切り替える。
+        drum_patch_index = (CC0_DRUM_KIT << 7) | 0
         if prof.drums:
             lines.append(f"Patch[{drum_patch_index}]={_drum_patch_names_section(prof.key)}")
         lines.append("Patch[*]=1..128")
@@ -466,14 +552,16 @@ def build_domino_xml(profiles: list[Profile]) -> str:
         for prof in profiles_with_drums:
             kits_with_notes = [k for k in prof.drums if k.notes]
             out.append(f'\t\t<Map Name="{xml_escape(prof.display_name)}">')
-            # ドラムキットはCC#0=112・CC#32=0固定の1バンク内でProgram Changeに
-            # よって切り替わる(drum_banks[].progはCC#32ではなくProg)ため、
-            # キットごとに別のPCタグ(PC=prog+1)を作り、Bankは常にLSB=0固定。
+            # ドラムキットはCC#0=120(GM2 Percussion Bank相当)・CC#32=0固定の
+            # 1バンク内でProgram Changeによって切り替わる(drum_banks[].prog
+            # はCC#32ではなくProg)ため、キットごとに別のPCタグ(PC=prog+1)を
+            # 作り、Bankは常にLSB=0固定。CC#0=112はOPNA/OPLL内蔵リズム音源の
+            # 直接選択専用のため使わない。
             for kit in sorted(kits_with_notes, key=lambda k: k.prog):
                 out.append(f'\t\t\t<PC Name="{xml_escape(kit.name)}" PC="{kit.prog + 1}">')
                 out.append(
                     f'\t\t\t\t<Bank Name="{xml_escape(kit.name)}" '
-                    f'MSB="{CC0_RHYTHM}" LSB="0">'
+                    f'MSB="{CC0_DRUM_KIT}" LSB="0">'
                 )
                 for note, name in sorted(kit.notes):
                     out.append(f'\t\t\t\t\t<Tone Name="{xml_escape(name)}" Key="{note}" />')
