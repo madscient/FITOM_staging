@@ -1556,6 +1556,36 @@ CC#0は**120**(GM2 Percussion Bank相当)に変更した。
   切り替わったこと、ビルトインリズム側(`CC0=112 CC32=17/40`)が
   影響を受けていないことをプログラム的に検証済み。
 
+### 3.40 SF2(SoundFont2)バンクをインストゥルメントリストに追加（2026年8月4日、ユーザー指示）
+`sf2_banks[]`(`FitomSf2IF`/FluidSynth経由、3.31/3.36節)は`hw_banks[]`/
+`patch_banks[]`と異なりFITOM_X独自のJSON音色定義を持たず、実体である
+`sf2/*.sf2`ファイル(RIFF/SoundFont2形式、`sf2/`ディレクトリにリポジトリ
+同梱)自身にバンク名・パッチ名が埋め込まれているため、これまで
+インストゥルメントリストに反映されていなかった。
+
+- **CC#0=127を割り当て**(ユーザー指示。3.2節のVoicePatchType対応表は
+  0-127の空間のうち0/17/26/34/35/40/48/64/81/82/84/112/120を使用済みで、
+  127はFITOM_X側で特に意味を持たない値のため、SF2バンク用に便宜的に
+  使用する)。
+- **SF2ファイル自体をパースしてバンク名・パッチ名を取得**:
+  `generate_instruments.py`に`parse_sf2_presets()`を新設し、外部
+  ライブラリに依存せず標準ライブラリの`struct`のみでSF2(RIFF形式)の
+  `pdta`チャンク内`phdr`(Preset Headers、38byte固定長レコード配列、
+  `achPresetName[20]`/`wPreset`/`wBank`等)を直接パースする実装にした。
+  `sf2_banks[].sf2_bank`(SF2ファイル自身が内部で持つバンク番号)と
+  一致するプリセットのみを抽出し、`wPreset`をProg、`achPresetName`を
+  音色名として`CC0=127, CC#32=sf2_banks[].bank`のバンクへ割り当てる。
+  同一SF2ファイル(例: `GeneralUser GS v1.471.sf2`、全7プロファイル
+  共通参照)を複数プロファイル・複数`sf2_banks[]`エントリから読む
+  ケースが多いため、ファイルパス単位で`functools.lru_cache`により
+  パース結果をキャッシュしている(最大31MB程度のファイルを都度
+  読み直すコストを避けるため)。
+- 再生成後、`unified_preset`の`CC0=127 CC32=0`バンクが
+  `GeneralUser GS v1.471.sf2`のGM128名(`Stereo Grand`等)と一致する
+  こと、XML well-formed性・`.ins`側`Patch[]`一意性を再検証済み。
+- 詳細は`tools/instrument_export/README.md`「SF2(SoundFont2)バンク」節
+  参照。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）

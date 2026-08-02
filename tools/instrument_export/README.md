@@ -65,6 +65,7 @@ python3 generate_instruments.py --out-dir /path/to/out
 | `hw_banks[]` | `group`から決定(下表) | `bank` | `patches[].prog` | `*.hwbank.json` / `*.samplezonebank.json`(AWM) |
 | `pcm_banks[]` | `group`から決定(ADPCMB=81/ADPCMA=82) | `bank` | `entries[].entry_no`(またはインデックス) | `*.pcmbank.json` |
 | `drum_banks[]` | 120(ドラムキット、GM2 Percussion Bank相当) | 0固定 | `drum_banks[].prog`(キット選択) | `*.drumkit.json` |
+| `sf2_banks[]` | 127(便宜的に割当。CC#0規約上の空き値) | `bank` | SF2ファイル内`preset`番号 | `*.sf2`(RIFF/SoundFont2) |
 
 `drum_banks[]`だけは他と軸が異なる点に注意: `prog`フィールドは**CC#32
 ではなくProgram Change値**です(`profile.schema.json`が`drum_banks[]`を
@@ -101,6 +102,28 @@ Bank MSB=120/121固定・PC違いでキット切替、という仕様と同型)�
 個別の楽器名を持たないため、音色選択(1エントリ)のみ出力します。
 
 `sw_banks[]`(パフォーマンスパッチ)は音色選択そのものではないため対象外です。
+
+### SF2(SoundFont2)バンク
+
+`sf2_banks[]`(`FitomSf2IF`/FluidSynth経由)の各エントリは`{bank, file,
+sf2_bank}`の3フィールドを持ち、`file`(SF2ファイルへのパス、実体は
+`sf2/`ディレクトリ配下、リポジトリ内に同梱)・`sf2_bank`(そのSF2ファイル
+自身が内部で持つバンク番号、GM相当=0・ドラム慣習=128等)・`bank`(FITOM_X
+側でのCC#32相当のインデックス)という構造です(3.31/3.36節参照)。
+
+バンク名・パッチ名はSF2ファイル自体(RIFF形式)の`pdta`チャンク内
+`phdr`(Preset Headers、各38byte固定長のレコード配列)を直接パースして
+取得しています(`parse_sf2_presets()`、外部ライブラリ非依存、標準
+ライブラリの`struct`のみ使用)。`sf2_bank`と一致する`wBank`を持つ
+プリセットのみを抽出し、`wPreset`をProg、`achPresetName`を音色名として
+使います。同じSF2ファイルを複数の`sf2_banks[]`エントリ・複数プロファイル
+から参照するケースが多い(例: `GeneralUser GS v1.471.sf2`は全7
+プロファイル共通)ため、ファイルパス単位で`functools.lru_cache`により
+パース結果をキャッシュしています(最大31MB程度のファイルを都度読み直す
+のを避けるため)。
+
+CC#0は127を割り当てています(2026年8月4日、ユーザー指示。FITOM_Xの
+CC#0規約(3.2節)で未使用の値を便宜的に使用)。
 
 ### ファイルを持たない機械合成バンク(OPLLビルトイン音色・OPLLビルトイン
 リズム・OPNAビルトインリズム)

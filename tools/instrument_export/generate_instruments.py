@@ -23,8 +23,10 @@ docs/manuals/README.md の対応表を参照。
 from __future__ import annotations
 
 import argparse
-import sys
+import functools
 import json
+import struct
+import sys
 from dataclasses import dataclass
 from pathlib import Path
 from xml.sax.saxutils import escape as _xml_escape_text
@@ -98,6 +100,7 @@ CC0_NORMAL = 0        # patch_banks[] (通常モード)
 CC0_DRUM_KIT = 120    # drum_banks[] (通常ドラムキット、GM2 Percussion Bank相当)
 CC0_BUILTIN_RHYTHM = 112  # OPNA/OPLL内蔵リズム音源の直接選択専用(ドラムキットとは別軸、
                           # docs/manuals/README.md「1.音源選択モードの概要」参照)
+CC0_SF2 = 127         # sf2_banks[] (FitomSf2IF/FluidSynth、CC#0規約上未使用の値を便宜的に割当)
 
 # 以下3種類は「ファイルを持たない機械合成バンク」のため、hw_banks[]/
 # drum_banks[]には現れず、プロファイルJSONの走査だけでは拾えない。
@@ -241,6 +244,65 @@ def resolve_pcm_entries(data: dict, bank_dir: Path) -> list[tuple[int, str]]:
     return []
 
 
+@functools.lru_cache(maxsize=None)
+def parse_sf2_presets(path: Path) -> tuple[tuple[int, int, str], ...]:
+    """SF2(SoundFont2、RIFF形式)ファイルの`pdta`チャンク内`phdr`
+    (Preset Headers)を読み、(bank, preset, name)のタプル一覧を返す。
+    サウンドフォント本体はサイズが大きい(数十MBに及ぶ)ため、必要な
+    ヘッダ部分のみを読み、複数の`sf2_banks[]`エントリで同じファイルを
+    参照する場合に備えてlru_cacheでファイル単位にキャッシュする。
+
+    sfPresetHeader構造体(SoundFont 2.0仕様、38byte固定長):
+        achPresetName[20] (ASCII, NUL終端) / wPreset(u16) / wBank(u16) /
+        wPresetBagNdx(u16) / dwLibrary(u32) / dwGenre(u32) / dwMorphology(u32)
+    配列の最終要素は常に"EOP"ダミーレコードのため除外する。
+    """
+    with path.open("rb") as f:
+        data = f.read()
+    if data[0:4] != b"RIFF" or data[8:12] != b"sfbk":
+        raise ValueError(f"{path} はSF2(RIFF/sfbk)形式ではありません")
+    presets: list[tuple[int, int, str]] = []
+    pos = 12
+    end = len(data)
+    while pos < end:
+        chunk_id = data[pos:pos + 4]
+        chunk_size = struct.unpack_from("<I", data, pos + 4)[0]
+        body_start = pos + 8
+        if chunk_id == b"LIST" and data[body_start:body_start + 4] == b"pdta":
+            sub_pos = body_start + 4
+            sub_end = body_start + chunk_size
+            while sub_pos < sub_end:
+                sub_id = data[sub_pos:sub_pos + 4]
+                sub_size = struct.unpack_from("<I", data, sub_pos + 4)[0]
+                sub_body = sub_pos + 8
+                if sub_id == b"phdr":
+                    for i in range(sub_size // 38):
+                        rec = data[sub_body + i * 38: sub_body + (i + 1) * 38]
+                        name = rec[0:20].split(b"\x00", 1)[0].decode("ascii", errors="replace")
+                        preset, bank = struct.unpack_from("<HH", rec, 20)
+                        presets.append((bank, preset, name))
+                sub_pos = sub_body + sub_size + (sub_size & 1)  # 奇数長チャンクは1byteパディング
+        pos = body_start + chunk_size + (chunk_size & 1)
+    return tuple(presets[:-1])  # 末尾のEOPダミーレコードを除外
+
+
+def collect_sf2_entries(profile: dict, profile_dir: Path, warn) -> list[Entry]:
+    entries: list[Entry] = []
+    for sb in profile.get("banks", {}).get("sf2_banks", []):
+        path = resolve(profile_dir, sb["file"])
+        try:
+            presets = parse_sf2_presets(path)
+        except (FileNotFoundError, ValueError) as e:
+            warn(f"sf2_banks bank={sb.get('bank')} '{path.name}' の読み込みに失敗: {e}")
+            continue
+        target_bank = sb["sf2_bank"]
+        for bank, preset, name in presets:
+            if bank == target_bank:
+                entries.append(Entry(CC0_SF2, sb["bank"], preset,
+                                      name or fallback_name("Preset", preset)))
+    return entries
+
+
 def collect_melodic_entries(profile: dict, profile_dir: Path, warn) -> list[Entry]:
     entries: list[Entry] = []
     banks = profile.get("banks", {})
@@ -352,6 +414,7 @@ def load_profiles(warn) -> list[Profile]:
         melodic = collect_melodic_entries(data, profile_dir, lambda m, k=key: warn(f"{k}: {m}"))
         chips = collect_engine_chips(data, profile_dir)
         melodic += collect_builtin_entries(chips)
+        melodic += collect_sf2_entries(data, profile_dir, lambda m, k=key: warn(f"{k}: {m}"))
         drums = collect_drum_kits(data, profile_dir)
         profiles.append(Profile(key, display_name, melodic, drums))
     return profiles
