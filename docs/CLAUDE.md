@@ -55,7 +55,7 @@ drum_banks 21件, pcm_banks 3件）を共有参照している（2026年7月29�
 | `emu_opn.profile.json` | OPN専用（OPN/OPN2/OPNA/OPNB/OPNBB×1ずつ） |
 | `emu_opl.profile.json` | OPL専用（OPL[rhythm]/Y8950/OPL2/OPL3/OPL4×1ずつ） |
 | `emu_opm.profile.json` | OPM専用（OPM×2/OPZ×2） |
-| `emu_opll.profile.json` | OPLL専用（OPLL/OPLL2[rhythm]/OPLLP/VRC7/OPLLX×1ずつ） |
+| `emu_opll.profile.json` | OPLL専用（OPLL[rhythm]/OPLLP/VRC7/OPLLX×1ずつ。OPLL2は3.37でエンジン非対応のため削除） |
 | `fmall.profile.json` | OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7構成（2026年7月19日新設） |
 旧・個別プロファイル（`emulator_opm.profile.json`ほか計6件、統合前からの
 遺産）は、誰もメンテナンスしておらず統合後の構成と矛盾していたため
@@ -1421,9 +1421,10 @@ JSON例に差し替えた。あわせて、2026年7月の`sw_bank`/`sw_prog`新�
 
 - `emu_opll.profile.json`: `hw_plugins[]`には既に`FitomSf2IF`が登録済み
   だった(登録時期・経緯不明、`devices[]`側の対応するエントリが欠落した
-  半端な状態だったと見られる)。既存の`devices[]`(OPLL/OPLL2[rhythm]/
-  OPLLP/VRC7/OPLLXの5件、3.28コミット`00eea3c`で明示化済み)に
-  `{chip:"SF2", plugin:"FitomSf2IF"}`を追加。
+  半端な状態だったと見られる)。既存の`devices[]`(当時はOPLL/OPLL2
+  [rhythm]/OPLLP/VRC7/OPLLXの5件、3.28コミット`00eea3c`で明示化済み。
+  OPLL2はこの直後に3.37で削除)に`{chip:"SF2", plugin:"FitomSf2IF"}`を
+  追加。
 - `emu_opm.profile.json`/`emu_opn.profile.json`/`fmall.profile.json`/
   `emu_fmgen_opn.profile.json`: いずれも`hw_plugins[]`に`FitomSf2IF`が
   未登録だったため新規追加。`devices[]`自体がこれらのプロファイルには
@@ -1462,6 +1463,34 @@ ch14→`fluidsynth_chan`0、ch15→`fluidsynth_chan`1の2エントリに統一)�
 再検証しVALID。ただし`chip=="SF2"`デバイス存在チェック自体はJSON Schema
 では表現できないFITOM_Xローダー側の実行時バリデーションのため、本
 リポジトリからは検証できない(4節参照)。
+
+### 3.37 OPLLエミュプロファイルからOPLL2を削除（2026年8月2日）
+`emu_opll`のOPLL系チップ構成を5チップから4チップ(OPLL/OPLLP/VRC7/OPLLX)へ
+変更した。**エミュレーションエンジン(YMFMEngine)がOPLL2に対応していない**
+ためで、意図的な削除である(ユーザー判断)。
+
+- `config/profiles/hw_plugins/fmemuif_opll5.profile.json`: `chips[]`から
+  `{chip:"OPLL2", clock:3579545}`を削除。
+- `config/profiles/emu_opll.profile.json`: `devices[]`からOPLL2の独立
+  エントリを削除し、**ビルトインリズムはOPLL側の`rhythm_mode: true`へ
+  移した**(従来はOPLL=リズム無効・OPLL2=リズム有効という2デバイス構成で
+  役割を分けていた。3.5節のOPLLビルトインリズム、および`rhythm_mode`
+  プロファイル設定によるOPLL系リズム制御は、この1デバイス構成でも
+  そのまま有効)。
+- ファイル名`fmemuif_opll5.profile.json`の"5"は5チップ構成に由来するが、
+  参照元(`emu_opll.profile.json`の`hw_plugins[].profile`)の書き換えを伴う
+  改名はリスクに見合わないため、名前はそのままとした。
+
+**追従した記述**(いずれもOPLL2を含む5チップ構成のままだった):
+`config/profiles/emu_opll.profile.json`の`profile_name`・`README.md`の
+ディレクトリ構成図・`setup.ps1`のプロファイル一覧・`docs/CLAUDE.md`2節の
+プロファイル一覧表および3.36節・`docs/manuals/emu_profiles.md`の
+「OPLLエミュプロファイル」節のチップ構成。
+- `docs/voice-parameter-reference.md`の`COPLL2`に関する記述(165行目付近の
+  見出し・212行目のFnumberビット配置の注記)は**変更していない**。これらは
+  FITOM_X本体側のチップドライバクラスの仕様説明であり、本リポジトリの
+  特定プロファイルがそのチップを構成に含むかどうかとは別の話のため
+  (本体側にドライバ自体は引き続き存在する)。
 
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション

@@ -23,7 +23,7 @@ FITOM_staging/
 │   │   ├── emu_opn.profile.json             OPNエミュプロファイル (OPN/OPN2/OPNA/OPNB/OPNBB)
 │   │   ├── emu_opl.profile.json             OPLエミュプロファイル (OPL[rhythm]/Y8950/OPL2/OPL3/OPL4)
 │   │   ├── emu_opm.profile.json             OPMエミュプロファイル (OPM×2/OPZ×2)
-│   │   ├── emu_opll.profile.json            OPLLエミュプロファイル (OPLL/OPLL2[rhythm]/OPLLP/VRC7/OPLLX)
+│   │   ├── emu_opll.profile.json            OPLLエミュプロファイル (OPLL[rhythm]/OPLLP/VRC7/OPLLX)
 │   │   ├── fmall.profile.json               FMALL (OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7)
 │   │   │
 │   │   └── hw_plugins/     上記プロファイルの hw_plugins[].profile が指す
