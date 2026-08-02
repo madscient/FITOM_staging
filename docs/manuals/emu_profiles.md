@@ -87,8 +87,7 @@ Power/Electronic Kit(prog16,24)・PSS-680 Brush Kit(prog40)を収録。
 設定ファイル: `config/profiles/emu_opll.profile.json`
 
 **チップ構成:**
-- OPLL(3,579,545Hz)
-- OPLL2(3,579,545Hz)
+- OPLL(3,579,545Hz、ビルトインリズム有効)
 - OPLLP(3,579,545Hz)
 - VRC7(3,579,545Hz)
 - OPLLX(3,579,545Hz)

@@ -105,7 +105,7 @@ Write-Host "     unified_preset.profile.json  : 全チップ統合プロファ�
 Write-Host "     emu_opn.profile.json         : OPNエミュプロファイル (OPN/OPN2/OPNA/OPNB/OPNBB)"
 Write-Host "     emu_opl.profile.json         : OPLエミュプロファイル (OPL/Y8950/OPL2/OPL3/OPL4)"
 Write-Host "     emu_opm.profile.json         : OPMエミュプロファイル (OPM×2/OPZ×2)"
-Write-Host "     emu_opll.profile.json        : OPLLエミュプロファイル (OPLL/OPLL2/OPLLP/VRC7/OPLLX)"
+Write-Host "     emu_opll.profile.json        : OPLLエミュプロファイル (OPLL[rhythm]/OPLLP/VRC7/OPLLX)"
 Write-Host "     fmall.profile.json           : FMALL (10チップ統合)"
 Write-Host "  2. 起動:"
 Write-Host "     bin\fitom_core.exe --profile config\profiles\<プロファイル名>"

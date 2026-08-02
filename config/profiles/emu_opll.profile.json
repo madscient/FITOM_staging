@@ -89,5 +89,5 @@
     { "mpu": 1, "ch": 14, "fluidsynth_chan": 0 },
     { "mpu": 1, "ch": 15, "fluidsynth_chan": 1 }
   ],
-  "profile_name": "OPLLエミュプロファイル (OPLL/OPLL2[rhythm]/OPLLP/VRC7/OPLLX)"
+  "profile_name": "OPLLエミュプロファイル (OPLL[rhythm]/OPLLP/VRC7/OPLLX)"
 }
