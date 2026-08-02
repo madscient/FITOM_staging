@@ -8,9 +8,7 @@
     {
       "dll": "engines/YMFMEngine",
       "chips": [
-        { "chip": "OPL",   "clock": 3579545,  "pan": 0 },
         { "chip": "Y8950", "clock": 3579545,  "pan": 0 },
-        { "chip": "OPL2",  "clock": 3579545,  "pan": 0 },
         { "chip": "OPL3",  "clock": 14318180, "pan": 0 },
         { "chip": "OPL4",  "clock": 33868800, "pan": 0 }
       ]

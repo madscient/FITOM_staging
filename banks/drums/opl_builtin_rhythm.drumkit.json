@@ -69,12 +69,12 @@
       "name": "Electric Snare",
       "note": 40,
       "pan": 0,
-      "patch_bank": 0,
-      "patch_prog": 2,
-      "play_note": 48,
+      "patch_bank": 19,
+      "patch_prog": 30,
+      "play_note": 45,
       "sw_bank": 0,
       "sw_prog": 10,
-      "voice_patch_type": 35
+      "voice_patch_type": 34
     },
     {
       "fine_tune": 0,
