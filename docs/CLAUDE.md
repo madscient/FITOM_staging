@@ -1339,6 +1339,65 @@ has no attribute 'get'`で停止する状態になっていた。ユーザー指
   設計(3.32)のため、バンク一覧自体は各プロファイルで同一内容になる)。
 - 詳細は`tools/instrument_export/README.md`参照。
 
+### 3.35 AWMサンプルゾーンに波形ごとのピッチ/音量校正フィールドを追加（2026年8月2日、FITOM_X側コミット830e59aに追従）
+FITOM_X本体側で「OPL4 AWMのFnumber/Octave計算式がAWM用でなく、波形ごとの
+ピッチ/音量校正データも欠落していた」バグが修正されたのを受け、5.5節の
+運用ルール通り`config_schema/samplezonebank.schema.json`を本体側から
+丸ごとコピーし、あわせて実データ2件も同期した。
+
+**本体側で判明していた根本原因**（詳細は`../FITOM_X/docs/chip-driver-architecture.md`
+「Fnumber/Octave計算式と波形ごとのピッチ/音量校正」節）:
+1. `COPL4AWM::getFnumber()`がOPN/OPM系FM合成用の`getFnumberFromHz()`を
+   誤って流用しており、AWMエンジン(ymfm)の
+   `step=((0x400|fnum)<<(octave+7))>>2`という別の式・符号付き4bit Octave
+   (-8〜+7)と噛み合っていなかった。
+2. YRW801のROM波形は実測でないと絶対ピッチ・音量が分からない(ウェーブ
+   テーブルヘッダに情報が無い)ため、1を直しても波形ごとの校正データが
+   無いと数オクターブ単位でピッチがずれる。
+
+**スキーマ差分**（`SampleZone`=`zones[]`の各要素に4フィールド追加、いずれも
+既定値を持つ任意フィールドのため既存データは無変更でも引き続きvalid）:
+
+| フィールド | 型/範囲 | 既定 | 意味 |
+|---|---|---|---|
+| `pitch_offset` | integer -32768〜32767 | 0 | 波形ごとのピッチ校正値(100/128セント単位) |
+| `key_scaling` | integer 0〜1000 | 100 | ノート追従率(%、100=通常追従、0=固定ピッチ) |
+| `tone_attenuate` | integer 0〜127 | 0 | 追加減衰量(7bit、加算) |
+| `volume_factor` | integer 0〜254 | 254 | 音量スケール(254=無補正、実装側は`(254-att)*volume_factor/254`と適用) |
+
+いずれもALSA `sound/drivers/opl4/yrw801.c`の`opl4_sound`構造体の同名
+メンバーと**同一規約**（本体実装もALSAの`snd_opl4_update_pitch()`/
+`snd_opl4_update_volume()`と同じ適用式）。**OPL4AWM以外のチップ
+(ADPCM-B/PCMD8等、`root_note`ベースでピッチを計算する)では未使用**。
+`root_note`の説明も「Fnumber計算がチップ側で完結するため未使用」から
+「`pitch_offset`/`key_scaling`ベースの計算を使うため未使用」に改められている。
+
+**実データの同期**: `banks/OPL4AWM/opl4awm_yrw801_gm.samplezonebank.json`
+(128パッチ/553ゾーン)・`opl4awm_yrw801_drum.samplezonebank.json`
+(1パッチ/57ゾーン)を、本体側の`config/profiles/`配下の原本
+（yrw801.cから機械抽出した校正値を`wave_index`完全一致でマージ済み、
+欠落・曖昧一致ゼロで全件マッチ）から上書きコピーした。
+- 差分は**全ゾーンへの上記4フィールド追加のみ**で、`wave_index`/`key_min`/
+  `key_max`/`name`等の既存フィールドに変更は無いことを確認済み。
+- 全610ゾーンに4フィールドが揃っていること、および両ファイルが更新後の
+  `samplezonebank.schema.json`でvalidであることを`jsonschema`で検証済み。
+- 実測値の分布(参考): GM側は`pitch_offset` -750〜9853 / `key_scaling`
+  5〜100(固定ピッチ系の波形を含む) / `tone_attenuate` 0〜68 /
+  `volume_factor` 40〜254。ドラム側は`key_scaling`=100・
+  `tone_attenuate`=0で一律、`volume_factor`は204〜244。
+
+**`docs/voice-parameter-reference.md`のOPL4 AWM節も更新**: `SampleZone`
+フィールド表に上記4フィールドを追加し、校正の必要性の説明・4フィールド入りの
+JSON例に差し替えた。あわせて、2026年7月の`sw_bank`/`sw_prog`新設
+(`SampleZonePatch`へのSwPatch紐づけ)が本リポジトリ側の同節に未反映だった
+のも同時に追従した。バンクファイルのパスは本体側原本の`config/profiles/...`
+ではなく、本リポジトリの実配置である`banks/OPL4AWM/...`に書き換えている
+(本体側原本との意図的な差分。同節に注記済み)。
+
+**未検証**: 本体側の`getFnumber()`/`updateVolExp()`修正込みのバイナリが
+本リポジトリの`bin/`にビルド・配置されていないため、実際にAWMが正しい
+音高・音量で鳴ることは未確認（JSON構文・スキーマ検証のみ済み）。4節に記載。
+
 ---
 
 ## 4. 未解決・要確認事項
@@ -1409,6 +1468,13 @@ has no attribute 'get'`で停止する状態になっていた。ユーザー指
 - 3.31の`sf2_channel_windows`（MPU0 ch12-15→fluidsynth_chan0-3の4ch）は
   暫定値。実際にSF2で同時に鳴らしたいパート数・既存ネイティブ経路との
   ch使用状況を踏まえて要調整。
+- 3.35でスキーマ・実データを同期したAWMの波形ごとピッチ/音量校正
+  (`pitch_offset`/`key_scaling`/`tone_attenuate`/`volume_factor`)は、
+  対応する本体側修正(FITOM_X側コミット`830e59a`、`COPL4AWM::getFnumber()`
+  の式差し替えと`updateVolExp()`での校正値適用)込みのバイナリが`bin/`に
+  未配置のため、実際にAWMが意図した音高・音量で鳴ることは未検証
+  (JSON構文・スキーマ検証、全610ゾーンのフィールド充足確認のみ済み)。
+  本体側の対応版ビルド後に実機/実エンジン環境での確認が必要。
 - 3.33で6プロファイルに追加した`bank_overrides`（レイヤードバンク0/
   ドラムキット0の無音解消）は、`bin/fitom_cli.exe`が対応コミット
   （FITOM_X側`c2bbe83`）より前のビルド（2026年7月28日）のため、この
