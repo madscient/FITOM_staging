@@ -20,7 +20,7 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)とProgram Changeによる
 | CC#0の値 | モード | CC#32の意味 | Program Chg.の意味 |
 |---|---|---|---|
 | 0 | 通常モード | PatchBank番号 | 選択したPatchBank内のパッチ番号 |
-| 17,26,34,35,40,48,64,81,82,84 | 直接モード | 音源チップ内のバンク番号 | 選択したバンク内のパッチ番号 |
+| 17,26,34,35,40,41,42,43,48,64,81,82,84 | 直接モード | 音源チップ内のバンク番号 | 選択したバンク内のパッチ番号 |
 | 112 | 内蔵リズム音源 | 対象チップ選択(17=OPNA, 40=OPLL) | 楽器(チャンネル)番号を直接指定する |
 
 > 直接モードでは、CC#0の値自体が「どの音源チップを使うか」を指定します。
@@ -29,6 +29,20 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)とProgram Changeによる
 > 例外として CC#0=40(OPLL), CC#32=0 の「OPLL Built-In」は、バンクファイルを
 > 使わず Program Change 番号から機械的にチップ種別と音色が決まる特殊な
 > バンクです。詳細は該当ページを参照してください。
+>
+> さらに、この「OPLL Built-In」は CC#0=41(OPLLP)/42(OPLLX)/43(VRC7)でも
+> **全く同じ内容**が選択できます。FITOM_X本体の実装上、Program Change
+> 番号自体にチップ種別ビットが埋め込まれているため、この4つのCC#0の
+> どれを使ってもCC#0自体は実際のチップ選択に影響しません(詳細は
+> [OPLL Built-Inページ](patches/opll.md#cc320)参照)。
+>
+> ただし、FITOM_X本体・パッチエディタのパッチピッカーGUIおよび
+> MIDIシーケンサー向けインストゥルメントリスト(`tools/
+> instrument_export/`)は、利便性のためCC#0ごとに対応するチップの
+> 音色のみへ絞り込んで表示します(CC#0=40→OPLL、41→OPLLP、42→OPLLX、
+> 43→VRC7)。ランタイム上はどのCC#0からでも全ての音色を選択できますが、
+> 「その音色本来のCC#0」を使うのが実用上わかりやすい、という位置づけ
+> です。
 
 ## 2. バンクマップ(CC#0 / CC#32)
 
@@ -83,7 +97,10 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)による音色バンクの一覧です。
 | 34 | 118 | OPL3_2 | [MicroComputerDrumBank](patches/opl3_2.md#cc32118) |
 | 34 | 119 | OPL3_2 | [AcidDrumBank](patches/opl3_2.md#cc32119) |
 | 35 | 0 | OPL_RHY | [MSX-AUDIO/OPLL Emulate Rhythm](patches/opl_rhy.md#cc320) |
-| 40 | 0 | OPLL | [OPLL Built-In(ROM音色)](patches/opll.md#cc320) |
+| 40 | 0 | OPLL | [OPLL Built-In(ROM音色、Prog 1-15)](patches/opll.md#cc320) |
+| 41 | 0 | OPLLP | [OPLL Built-In(ROM音色、Prog 33-47)](patches/opll.md#cc320) |
+| 42 | 0 | OPLLX | [OPLL Built-In(ROM音色、Prog 17-31)](patches/opll.md#cc320) |
+| 43 | 0 | VRC7 | [OPLL Built-In(ROM音色、Prog 49-63)](patches/opll.md#cc320) |
 | 40 | 1 | OPLL | [MSX-AUDIO + OPLL(x) ROM Preset](patches/opll.md#cc321) |
 | 40 | 2 | OPLL | [OPLL Presets (PSS-140 + SHS-10)](patches/opll.md#cc322) |
 | 40 | 3 | OPLL | [OPLL ROM Voice SwPatch Meta (Skeleton)(ユーザー設定用)](patches/opll.md#cc323) |

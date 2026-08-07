@@ -109,11 +109,33 @@ CC0_SF2 = 127         # sf2_banks[] (FitomSf2IF/FluidSynth、CC#0規約上未使
 # 調査の上追加。docs/CLAUDE.md 3.31節参照)。
 
 # core/src/PatchManager.cpp initOpllRomPatches() のROM音色名(kNames[4][16])。
-# voice_patch_type=0x28(OPLL)・hw_bank=0固定、hwProg = (variant<<4)|instIndex
+# hw_bank=0固定、hwProg = (variant<<4)|instIndex
 # (variant: 0=OPLL/OPLL2, 1=OPLLX, 2=OPLLP, 3=VRC7)。instIndex=0は各variant
 # 共通で無音のダミーのため未収録(1-15のみ)。出典はソースコメントによれば
 # https://github.com/plgDavid/misc/wiki/Copyright-free-OPLL(x)-ROM-patches
 # (非公式・耳コピ由来の近似データである旨、本体側コメントに明記あり)。
+#
+# voice_patch_type(CC#0)は40(VOICE_PATCH_OPLL)/41(VOICE_PATCH_OPLLP)/
+# 42(VOICE_PATCH_OPLLX)/43(VOICE_PATCH_VRC7)の4値が定義されている。
+# `PatchManager::resolveTriple()`はhw_bank==0でこの4値のいずれかが来ると
+# `resolveOpllRomVoice(hwProg, ...)`を呼ぶだけで、voicePatchType自体は
+# 引数として渡さない(実際の発音・モニター名前解決はhwProg内の
+# variantSel(bit4-6)だけで再決定される)ため、ランタイム上はCC#0=40/41/
+# 42/43のどれを選んでも同じProgに対して常に同じ結果になる(docs/CLAUDE.md
+# 3.41節)。
+#
+# 一方、FITOM_X本体・FITOM_patch_editorのパッチピッカーGUIは、
+# `PatchManager::getOpllRomPatches(voicePatchType)`(gui/bridge/
+# FITOMBridge.cpp)経由でCC#0ごとに対応するvariantの音色のみに絞り込んで
+# 表示している。MIDIシーケンサー側でも同じ体験(CC#0でチップを選んでいる
+# ように見せる)にするため、このGUIの絞り込みロジックに倣う
+# (2026年8月4日、ユーザー指示。docs/CLAUDE.md 3.42節)。
+# CC#0(voicePatchType) -> variant番号(OPLL_ROM_NAMESのキー)。
+# `resolveOpllRomVoice`のkVariantMap/`getOpllRomPatches`と同じ対応で、
+# `tests/test_config.cpp`のユニットテストでも検証済み。CC#0の数値順
+# (40,41,42,43=OPLL,OPLLP,OPLLX,VRC7)とvariant番号順(0,1,2,3=OPLL,OPLLX,
+# OPLLP,VRC7)でOPLLPとOPLLXの順序が入れ替わっている点に注意。
+OPLL_BUILTIN_CC0_TO_VARIANT = {40: 0, 41: 2, 42: 1, 43: 3}
 OPLL_ROM_NAMES: dict[int, list[str]] = {
     0: ["Violin", "Guitar", "Piano", "Flute", "Clarinet", "Oboe", "Trumpet",
         "Organ", "Horn", "Synthesizer", "Harpsichord", "Vibraphone",
@@ -369,9 +391,15 @@ def collect_builtin_entries(chips: set[str]) -> list[Entry]:
     手動で組み立てる。"""
     entries: list[Entry] = []
     variants = sorted({OPLL_CHIP_TO_VARIANT[c] for c in chips if c in OPLL_CHIP_TO_VARIANT})
-    for variant in variants:
+    # ランタイム上はCC#0(voicePatchType)に関わらずhwProgだけで結果が
+    # 決まるが(OPLL_BUILTIN_CC0_TO_VARIANT定義部のコメント参照)、GUIの
+    # パッチピッカーに倣い、CC#0ごとに対応するvariantの音色のみを載せる
+    # (MIDIシーケンサー側でチップが選択されているように見せるため)。
+    for cc0, variant in sorted(OPLL_BUILTIN_CC0_TO_VARIANT.items()):
+        if variant not in variants:
+            continue
         for idx, name in enumerate(OPLL_ROM_NAMES[variant], start=1):
-            entries.append(Entry(GROUP_CC0_HW["OPLL"], 0, (variant << 4) | idx, name))
+            entries.append(Entry(cc0, 0, (variant << 4) | idx, name))
     if variants:
         for prog, name in enumerate(OPLL_RHYTHM_NAMES):
             entries.append(Entry(CC0_BUILTIN_RHYTHM, CC32_OPLL_RHYTHM, prog, name))
