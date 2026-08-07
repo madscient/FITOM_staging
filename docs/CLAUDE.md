@@ -1586,6 +1586,98 @@ CC#0は**120**(GM2 Percussion Bank相当)に変更した。
 - 詳細は`tools/instrument_export/README.md`「SF2(SoundFont2)バンク」節
   参照。
 
+### 3.41 OPLLビルトイン音色はCC#0=40だけでなく41/42/43でも同一内容と判明、インストゥルメントリストを訂正（2026年8月4日、ユーザー指摘）
+3.38でOPLLビルトイン音色をCC#0=40(OPLL)固定の1バンクとして追加したが、
+ユーザーから「CC#0=40-43/CC#32=0がハードコーディングでOPLL系ビルトイン
+パッチとして解決される」との指摘を受け、`../FITOM_X/core/src/
+PatchManager.cpp`を直接確認したところ、以下が判明した。
+
+- `core/include/fitom/FITOMdefine.h`は`VOICE_PATCH_OPLL`(0x28=40)・
+  `VOICE_PATCH_OPLLP`(0x29=41)・`VOICE_PATCH_OPLLX`(0x2a=42)・
+  `VOICE_PATCH_VRC7`(0x2b=43)という**4つの独立したvoicePatchType定数**
+  を持つ(3.6節・3.38節では「CC#0=40固定、hwProgの上位3bitでチップ種別を
+  切替」とだけ記載しており、CC#0自体が4値に分かれていることに触れて
+  いなかった)。
+- `PatchManager::resolveTriple()`は`hw_bank(CC#32)==0`かつ
+  `voicePatchType`がこの4値のいずれかであれば、`resolveOpllRomVoice(
+  hwProg, config, logContext)`を呼ぶだけで、**voicePatchType自体は
+  引数として渡していない**(該当箇所: `if (hwBank == 0 && (voicePatchType
+  == VOICE_PATCH_OPLL || ... == VOICE_PATCH_VRC7)) { return
+  resolveOpllRomVoice(hwProg, config, logContext); }`)。
+- `resolveOpllRomVoice()`内では、hwProgの上位3bit(`variantSel = (hwProg
+  >> 4) & 0x7`)を`kVariantMap[8] = {VOICE_PATCH_OPLL, VOICE_PATCH_OPLLX,
+  VOICE_PATCH_OPLLP, VOICE_PATCH_VRC7, 0,0,0,0}`で実際のvoicePatchType
+  (`actualVpt`)へ変換し直し、`config.findDeviceIndexByVoicePatchType(
+  actualVpt)`でデバイスを検索する。つまり呼び出し時のCC#0(voicePatchType)
+  は「hw_bank=0のOPLL系ビルトイン音色バンクへの入口かどうか」の判定
+  にしか使われず、実際にどのチップの音色が鳴るかはhwProg自体が完全に
+  決定する。
+- 結果として、**CC#0=40/41/42/43のどれを選んでも、同じProg番号なら
+  常に同じ音・同じチップが鳴る**(FITOM_X本体の実装上の仕様であり、
+  バグではない)。
+
+これを受け、`generate_instruments.py`の`collect_builtin_entries()`を、
+OPLLビルトイン音色についてはCC#0=40/41/42/43の4バンク全てに同じ内容
+(搭載チップに応じたvariantの音色一覧)を出力するよう修正した
+(`OPLL_BUILTIN_CC0_VALUES = [40, 41, 42, 43]`)。OPLLビルトインリズム・
+OPNAビルトインリズム(CC#0=112固定)は今回の対象外(変更なし)。
+
+`docs/manuals/README.md`(「1.音源選択モードの概要」の直接モードCC#0
+一覧・「2.バンクマップ」表)・`docs/manuals/patches/opll.md`(CC#32=0節)
+も、CC#0=41/42/43でも同一内容になる旨を追記して訂正した。
+`tools/instrument_export/README.md`にも同様の説明を追記。
+
+### 3.42 OPLLビルトイン音色は「CC#0でチップが選択されているように見える」表示に変更（2026年8月4日、ユーザー指示）
+3.41の対応（CC#0=40/41/42/43の4バンク全てに同じ内容を出力）に対し、
+ユーザーから「FITOM_Xの実動作としてはCC#0の値はチップ選択に使用され
+ないが、MIDIシーケンサーでのパッチ選択の便宜上、CC#0でチップが選択
+されているように見せたい。FITOM_X本体やパッチエディタのパッチピッカー
+もそのような動作をしている」との指示を受けた。
+
+`../FITOM_X`本体・`../FITOM_patch_editor`を調査した結果:
+- FITOM_X本体のパッチピッカー(`apps/fitom_gui/PatchPickerDialog.cpp`)・
+  モニター表示(`gui/bridge/FITOMBridge.cpp`の`getHwBankPatches()`)は、
+  いずれも`PatchManager::getOpllRomPatches(voicePatchType)`経由で
+  CC#0(voicePatchType)ごとに対応するvariantの音色のみへ絞り込んで表示
+  している。FITOM_patch_editor側も同じロジックを移植済み
+  (`src/BuiltinVoices.cpp`の`opllRomVariantSel()`/`opllRomVoices()`)。
+- 3.41で「ランタイム上はCC#0に関わらずhwProgだけで結果が決まる」とした
+  事実自体は正しい(`resolveOpllRomVoice()`はvoicePatchTypeを引数に
+  取らない)が、GUI側の「音色選択の絞り込み表示」段階と「実際の発音
+  解決」段階は意図的に分離された設計であり、両者は矛盾しない。
+- **CC#0→variant番号の対応**(`kVariantMap`/`getOpllRomPatches`と同一、
+  `tests/test_config.cpp`のユニットテストでも検証済み):
+
+  | CC#0 | チップ | variant | Prog範囲(instIndex 1-15) |
+  |---|---|---|---|
+  | 40 | OPLL(/OPLL2) | 0 | 1-15 |
+  | 41 | OPLLP | 2 | 33-47 |
+  | 42 | OPLLX | 1 | 17-31 |
+  | 43 | VRC7 | 3 | 49-63 |
+
+  CC#0の数値順(40,41,42,43=OPLL,OPLLP,OPLLX,VRC7)とvariant番号順
+  (0,1,2,3=OPLL,OPLLX,OPLLP,VRC7)で**OPLLPとOPLLXの順序が入れ替わって
+  いる**点に注意(3.41時点で「CC#0=41→prog17-31」というユーザーの
+  当初の想定を検証エージェントで確認したところ、これは誤りで正しくは
+  「CC#0=41→OPLLP→prog33-47、CC#0=42→OPLLX→prog17-31」だった)。
+
+対応:
+- `generate_instruments.py`の`collect_builtin_entries()`を、
+  `OPLL_BUILTIN_CC0_VALUES`(4バンク全てに同一内容)から
+  `OPLL_BUILTIN_CC0_TO_VARIANT = {40: 0, 41: 2, 42: 1, 43: 3}`
+  (CC#0ごとに対応するvariantのみ)へ変更。Prog番号は絞り込み後も
+  実際のhwProgエンコード値((variant<<4)|instIndex)をそのまま使う
+  (0始まりの連番に振り直さない。GUI側`FITOMBridge.cpp`の
+  `info.prog = static_cast<int>(p.id)`と同じ扱い)。
+- `docs/manuals/README.md`・`docs/manuals/patches/opll.md`・
+  `tools/instrument_export/README.md`に、CC#0→variant対応表と
+  「ランタイムは無関係だがGUI/インストゥルメントリストは絞り込む」旨を
+  追記。
+- 再生成後、CC#0=40が`1=Violin`〜`15=Electric Guitar`、CC#0=41が
+  `33=Electric Strings`〜`47=Noise and Tone`、CC#0=42が`17=Strings`〜
+  `31=Sitar`、CC#0=43が`49=Buzzy Bell`〜`63=Sweep`になっていること、
+  XML well-formed性・`.ins`側`Patch[]`/`Key[]`一意性を再検証済み。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）

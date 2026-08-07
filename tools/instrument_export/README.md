@@ -137,9 +137,44 @@ FITOM_X本体(`../FITOM_X`)のC++ソースにハードコードされていま�
 
 | バンク | CC#0 | CC#32 | Prog | 本体ソースの定義箇所 |
 |---|---|---|---|---|
-| OPLLビルトイン音色 | 40(OPLL) | 0固定 | `(variant<<4)\|instIndex`(1-15、0は無音のため未収録) | `core/src/PatchManager.cpp` `initOpllRomPatches()` の `kNames[4][16]` |
+| OPLLビルトイン音色 | 40/41/42/43(下記参照) | 0固定 | `(variant<<4)\|instIndex`(0は無音のため未収録) | `core/src/PatchManager.cpp` `initOpllRomPatches()` の `kNames[4][16]` |
 | OPLLビルトインリズム | 112 | 40固定 | 0-4(楽器番号) | `gui/bridge/FITOMBridge.cpp` `kOpllRhythmNames[]` |
 | OPNAビルトインリズム | 112 | 17固定 | 0-5(楽器番号) | `gui/bridge/FITOMBridge.cpp` `kOpnaRhythmNames[]` |
+
+**OPLLビルトイン音色はCC#0ごとに対応するチップの音色のみを出力します**
+(`OPLL_BUILTIN_CC0_TO_VARIANT`、2026年8月4日ユーザー指示により訂正)。
+
+`VOICE_PATCH_OPLL`(0x28=40)/`VOICE_PATCH_OPLLP`(0x29=41)/
+`VOICE_PATCH_OPLLX`(0x2a=42)/`VOICE_PATCH_VRC7`(0x2b=43)は別々の
+voicePatchType定数として定義されている一方、`PatchManager::
+resolveTriple()`はhw_bank(CC#32)==0でこの4値のいずれかが来ると
+`resolveOpllRomVoice(hwProg, ...)`を呼ぶだけで、呼び出し時の
+voicePatchType自体は関数に渡さない。実際に鳴らすチップはhwProgに
+埋め込まれたvariantSel(bit4-6)だけで再決定されるため、**ランタイム上は
+CC#0=40/41/42/43のどれを選んでも同じProgに対して常に同じ結果**になる
+(コード上の事実)。
+
+しかし、FITOM_X本体・FITOM_patch_editorのパッチピッカーGUIは
+`PatchManager::getOpllRomPatches(voicePatchType)`経由でCC#0ごとに
+対応するvariantの音色のみへ絞り込んで表示しており、ユーザーから
+「MIDIシーケンサーでもこのGUIと同じ体験(CC#0でチップが選択されている
+ように見せる)にしてほしい」との指示を受け、これに倣った。CC#0→variant
+の対応は`resolveOpllRomVoice`の`kVariantMap`/`getOpllRomPatches`と同じ
+(`tests/test_config.cpp`のユニットテストでも検証済み):
+
+| CC#0 | チップ | variant | Prog範囲 |
+|---|---|---|---|
+| 40 | OPLL(/OPLL2) | 0 | 1-15 |
+| 41 | OPLLP | 2 | 33-47 |
+| 42 | OPLLX | 1 | 17-31 |
+| 43 | VRC7 | 3 | 49-63 |
+
+CC#0の数値順(40,41,42,43=OPLL,OPLLP,OPLLX,VRC7)とvariant番号順
+(0,1,2,3=OPLL,OPLLX,OPLLP,VRC7)で**OPLLPとOPLLXの順序が入れ替わって
+いる**点に注意(単純にCC#0の並び順通りにvariantが割り当たっているわけ
+ではない)。Prog番号自体は絞り込み後も実際のhwProgエンコード値
+((variant<<4)|instIndex)をそのまま使う(0始まりの連番に振り直さない。
+GUI側`FITOMBridge.cpp`の`info.prog = static_cast<int>(p.id)`と同じ扱い)。
 
 OPLLビルトインリズム・OPNAビルトインリズムは、CC#0=112配下でも
 `drum_banks[]`由来の通常ドラムキット(CC#32=0固定、Progでキット選択)とは

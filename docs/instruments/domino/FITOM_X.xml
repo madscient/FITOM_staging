@@ -35431,10 +35431,10 @@
 				<Bank Name="Di-Castanet" MSB="34" LSB="117" />
 				<Bank Name="Mi-Castanet" MSB="34" LSB="118" />
 				<Bank Name="Ac-Castanet" MSB="34" LSB="119" />
-				<Bank Name="Strings" MSB="40" LSB="0" />
 				<Bank Name="Koto" MSB="40" LSB="1" />
 				<Bank Name="Clavi 1" MSB="40" LSB="2" />
 				<Bank Name="PercOrgn" MSB="40" LSB="4" />
+				<Bank Name="Strings" MSB="42" LSB="0" />
 				<Bank Name="Percussive Organ" MSB="48" LSB="0" />
 				<Bank Name="PercOrgn" MSB="48" LSB="1" />
 				<Bank Name="Mi-PercOxDi-PercO" MSB="48" LSB="2" />
@@ -35489,10 +35489,10 @@
 				<Bank Name="Di-Snare L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare L" MSB="34" LSB="119" />
-				<Bank Name="Guitar" MSB="40" LSB="0" />
 				<Bank Name="Taiko" MSB="40" LSB="1" />
 				<Bank Name="Clavi 2" MSB="40" LSB="2" />
 				<Bank Name="RockOrgn" MSB="40" LSB="4" />
+				<Bank Name="Guitar" MSB="42" LSB="0" />
 				<Bank Name="Rock Organ" MSB="48" LSB="0" />
 				<Bank Name="RockOrgn" MSB="48" LSB="1" />
 				<Bank Name="Mi-RockOxDi-RockO" MSB="48" LSB="2" />
@@ -35544,10 +35544,10 @@
 				<Bank Name="Di-Sticks" MSB="34" LSB="117" />
 				<Bank Name="Mi-Sticks" MSB="34" LSB="118" />
 				<Bank Name="Ac-Sticks" MSB="34" LSB="119" />
-				<Bank Name="Electric Guitar" MSB="40" LSB="0" />
 				<Bank Name="Engine" MSB="40" LSB="1" />
 				<Bank Name="Drip" MSB="40" LSB="2" />
 				<Bank Name="ChrchOrg" MSB="40" LSB="4" />
+				<Bank Name="Electric Guitar" MSB="42" LSB="0" />
 				<Bank Name="Church Organ" MSB="48" LSB="0" />
 				<Bank Name="ChrchOrg" MSB="48" LSB="1" />
 				<Bank Name="Mi-ChrchxDi-Chrch" MSB="48" LSB="2" />
@@ -35603,10 +35603,10 @@
 				<Bank Name="Di-Bass Drum L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum L" MSB="34" LSB="119" />
-				<Bank Name="Electric Piano 2" MSB="40" LSB="0" />
 				<Bank Name="UFO" MSB="40" LSB="1" />
 				<Bank Name="Electric Bass" MSB="40" LSB="2" />
 				<Bank Name="ReedOrgn" MSB="40" LSB="4" />
+				<Bank Name="Electric Piano 2" MSB="42" LSB="0" />
 				<Bank Name="Reed Organ" MSB="48" LSB="0" />
 				<Bank Name="ReedOrgn" MSB="48" LSB="1" />
 				<Bank Name="Mi-ReedOxDi-ReedO" MSB="48" LSB="2" />
@@ -35663,10 +35663,10 @@
 				<Bank Name="Di-Open Rim Shot" MSB="34" LSB="117" />
 				<Bank Name="Mi-Open Rim Shot" MSB="34" LSB="118" />
 				<Bank Name="Ac-Open Rim Shot" MSB="34" LSB="119" />
-				<Bank Name="Flute" MSB="40" LSB="0" />
 				<Bank Name="SynBell" MSB="40" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="40" LSB="2" />
 				<Bank Name="Acordion" MSB="40" LSB="4" />
+				<Bank Name="Flute" MSB="42" LSB="0" />
 				<Bank Name="Accordion" MSB="48" LSB="0" />
 				<Bank Name="Acordion" MSB="48" LSB="1" />
 				<Bank Name="Mi-AcordxDi-Acord" MSB="48" LSB="2" />
@@ -35721,10 +35721,10 @@
 				<Bank Name="Di-Bass Drum M" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum M" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum M" MSB="34" LSB="119" />
-				<Bank Name="Marimba" MSB="40" LSB="0" />
 				<Bank Name="Chime" MSB="40" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="40" LSB="2" />
 				<Bank Name="Harmnica" MSB="40" LSB="4" />
+				<Bank Name="Marimba" MSB="42" LSB="0" />
 				<Bank Name="Harmonica" MSB="48" LSB="0" />
 				<Bank Name="Harmnica" MSB="48" LSB="1" />
 				<Bank Name="Mi-HarmnxDi-Harmn" MSB="48" LSB="2" />
@@ -35778,10 +35778,10 @@
 				<Bank Name="Di-Bass Drum H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum H" MSB="34" LSB="119" />
-				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="SynBass" MSB="40" LSB="1" />
 				<Bank Name="Electric Trumpet" MSB="40" LSB="2" />
 				<Bank Name="TangoAcd" MSB="40" LSB="4" />
+				<Bank Name="Trumpet" MSB="42" LSB="0" />
 				<Bank Name="Tango Accordion" MSB="48" LSB="0" />
 				<Bank Name="TangoAcd" MSB="48" LSB="1" />
 				<Bank Name="Mi-TangoxDi-Tango" MSB="48" LSB="2" />
@@ -35834,10 +35834,10 @@
 				<Bank Name="Di-ClosedRimShot" MSB="34" LSB="117" />
 				<Bank Name="Mi-ClosedRimShot" MSB="34" LSB="118" />
 				<Bank Name="Ac-ClosedRimShot" MSB="34" LSB="119" />
-				<Bank Name="Harmonica" MSB="40" LSB="0" />
 				<Bank Name="Synthsiz" MSB="40" LSB="1" />
 				<Bank Name="Electron Organ" MSB="40" LSB="2" />
 				<Bank Name="NylonGtr" MSB="40" LSB="4" />
+				<Bank Name="Harmonica" MSB="42" LSB="0" />
 				<Bank Name="Nylon Guitar" MSB="48" LSB="0" />
 				<Bank Name="NylonGtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-NylonxDi-Nylon" MSB="48" LSB="2" />
@@ -35899,10 +35899,10 @@
 				<Bank Name="Di-Snare M" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare M" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare M" MSB="34" LSB="119" />
-				<Bank Name="Tuba" MSB="40" LSB="0" />
 				<Bank Name="SynPercu" MSB="40" LSB="1" />
 				<Bank Name="Fantastic Piano" MSB="40" LSB="2" />
 				<Bank Name="SteelGtr" MSB="40" LSB="4" />
+				<Bank Name="Tuba" MSB="42" LSB="0" />
 				<Bank Name="Steel Guitar" MSB="48" LSB="0" />
 				<Bank Name="SteelGtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-SteelxDi-Steel" MSB="48" LSB="2" />
@@ -35967,10 +35967,10 @@
 				<Bank Name="Di-Hand Clap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hand Clap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hand Clap" MSB="34" LSB="119" />
-				<Bank Name="Synth Brass 2" MSB="40" LSB="0" />
 				<Bank Name="SynRhyth" MSB="40" LSB="1" />
 				<Bank Name="Fireworks" MSB="40" LSB="2" />
 				<Bank Name="JazzGtr" MSB="40" LSB="4" />
+				<Bank Name="Synth Brass 2" MSB="42" LSB="0" />
 				<Bank Name="Jazz Guitar" MSB="48" LSB="0" />
 				<Bank Name="JazzGtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-JazzGxDi-JazzG" MSB="48" LSB="2" />
@@ -36034,10 +36034,10 @@
 				<Bank Name="Di-Snare H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare H" MSB="34" LSB="119" />
-				<Bank Name="Short Saw" MSB="40" LSB="0" />
 				<Bank Name="HarmDrum" MSB="40" LSB="1" />
 				<Bank Name="Flute" MSB="40" LSB="2" />
 				<Bank Name="CleanGtr" MSB="40" LSB="4" />
+				<Bank Name="Short Saw" MSB="42" LSB="0" />
 				<Bank Name="Clean Guitar" MSB="48" LSB="0" />
 				<Bank Name="CleanGtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-CleanxDi-Clean" MSB="48" LSB="2" />
@@ -36093,10 +36093,10 @@
 				<Bank Name="Di-Floor Tom L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Floor Tom L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Floor Tom L" MSB="34" LSB="119" />
-				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="Cowbell" MSB="40" LSB="1" />
 				<Bank Name="Fork Guitar 1" MSB="40" LSB="2" />
 				<Bank Name="Mute.Gtr" MSB="40" LSB="4" />
+				<Bank Name="Vibraphone" MSB="42" LSB="0" />
 				<Bank Name="Muted Guitar" MSB="48" LSB="0" />
 				<Bank Name="Mute.Gtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-Mute.xDi-Mute." MSB="48" LSB="2" />
@@ -36150,10 +36150,10 @@
 				<Bank Name="Di-Hi-Hat Closed" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Closed" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Closed" MSB="34" LSB="119" />
-				<Bank Name="Electric Guitar 2" MSB="40" LSB="0" />
 				<Bank Name="ClseHiht" MSB="40" LSB="1" />
 				<Bank Name="Fork Guitar 2" MSB="40" LSB="2" />
 				<Bank Name="Ovrdrive" MSB="40" LSB="4" />
+				<Bank Name="Electric Guitar 2" MSB="42" LSB="0" />
 				<Bank Name="OverdrivenGuitar" MSB="48" LSB="0" />
 				<Bank Name="Ovrdrive" MSB="48" LSB="1" />
 				<Bank Name="Mi-OvrdrxDi-Ovrdr" MSB="48" LSB="2" />
@@ -36213,10 +36213,10 @@
 				<Bank Name="Di-Floor Tom H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Floor Tom H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Floor Tom H" MSB="34" LSB="119" />
-				<Bank Name="Synth Bass 2" MSB="40" LSB="0" />
 				<Bank Name="SnareDrm" MSB="40" LSB="1" />
 				<Bank Name="Funky Marimba" MSB="40" LSB="2" />
 				<Bank Name="Dist.Gtr" MSB="40" LSB="4" />
+				<Bank Name="Synth Bass 2" MSB="42" LSB="0" />
 				<Bank Name="Distortion Guitar" MSB="48" LSB="0" />
 				<Bank Name="Dist.Gtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-Dist.xDi-Dist." MSB="48" LSB="2" />
@@ -36277,10 +36277,10 @@
 				<Bank Name="Di-Hi-Hat Pedal" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Pedal" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Pedal" MSB="34" LSB="119" />
-				<Bank Name="Sitar" MSB="40" LSB="0" />
 				<Bank Name="BassDrum" MSB="40" LSB="1" />
 				<Bank Name="Glass Celesta" MSB="40" LSB="2" />
 				<Bank Name="GtrHarmo" MSB="40" LSB="4" />
+				<Bank Name="Sitar" MSB="42" LSB="0" />
 				<Bank Name="Guitar Harmonics" MSB="48" LSB="0" />
 				<Bank Name="GtrHarmo" MSB="48" LSB="1" />
 				<Bank Name="Mi-GtrHaxDi-GtrHa" MSB="48" LSB="2" />
@@ -36400,10 +36400,10 @@
 				<Bank Name="Di-Hi-Hat Open" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Open" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Open" MSB="34" LSB="119" />
-				<Bank Name="Electric Strings" MSB="40" LSB="0" />
 				<Bank Name="Elecpia2" MSB="40" LSB="1" />
 				<Bank Name="Gurgle" MSB="40" LSB="2" />
 				<Bank Name="FngrBass" MSB="40" LSB="4" />
+				<Bank Name="Electric Strings" MSB="41" LSB="0" />
 				<Bank Name="Finger Bass" MSB="48" LSB="0" />
 				<Bank Name="FngrBass" MSB="48" LSB="1" />
 				<Bank Name="Mi-FngrBxDi-FngrB" MSB="48" LSB="2" />
@@ -36456,10 +36456,10 @@
 				<Bank Name="Di-Mid Tom L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Mid Tom L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Mid Tom L" MSB="34" LSB="119" />
-				<Bank Name="Bow Wow" MSB="40" LSB="0" />
 				<Bank Name="Santool2" MSB="40" LSB="1" />
 				<Bank Name="Hand Bell" MSB="40" LSB="2" />
 				<Bank Name="PickBass" MSB="40" LSB="4" />
+				<Bank Name="Bow Wow" MSB="41" LSB="0" />
 				<Bank Name="Pick Bass" MSB="48" LSB="0" />
 				<Bank Name="PickBass" MSB="48" LSB="1" />
 				<Bank Name="Mi-PickBxDi-PickB" MSB="48" LSB="2" />
@@ -36518,10 +36518,10 @@
 				<Bank Name="Di-Mid Tom H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Mid Tom H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Mid Tom H" MSB="34" LSB="119" />
-				<Bank Name="Electric Guitar" MSB="40" LSB="0" />
 				<Bank Name="Brass" MSB="40" LSB="1" />
 				<Bank Name="Handsaw" MSB="40" LSB="2" />
 				<Bank Name="Fretless" MSB="40" LSB="4" />
+				<Bank Name="Electric Guitar" MSB="41" LSB="0" />
 				<Bank Name="Fretless Bass" MSB="48" LSB="0" />
 				<Bank Name="Fretless" MSB="48" LSB="1" />
 				<Bank Name="Mi-FretlxDi-Fretl" MSB="48" LSB="2" />
@@ -36584,10 +36584,10 @@
 				<Bank Name="Di-CrashCymbal 1" MSB="34" LSB="117" />
 				<Bank Name="Mi-CrashCymbal 1" MSB="34" LSB="118" />
 				<Bank Name="Ac-CrashCymbal 1" MSB="34" LSB="119" />
-				<Bank Name="Organ" MSB="40" LSB="0" />
 				<Bank Name="Flute 2" MSB="40" LSB="1" />
 				<Bank Name="Harmonica" MSB="40" LSB="2" />
 				<Bank Name="SlapBas1" MSB="40" LSB="4" />
+				<Bank Name="Organ" MSB="41" LSB="0" />
 				<Bank Name="Slap Bass 1" MSB="48" LSB="0" />
 				<Bank Name="SlapBas1" MSB="48" LSB="1" />
 				<Bank Name="Mi-SlapBxDi-SlapB" MSB="48" LSB="2" />
@@ -36644,10 +36644,10 @@
 				<Bank Name="Di-High Tom" MSB="34" LSB="117" />
 				<Bank Name="Mi-High Tom" MSB="34" LSB="118" />
 				<Bank Name="Ac-High Tom" MSB="34" LSB="119" />
-				<Bank Name="Clarinet" MSB="40" LSB="0" />
 				<Bank Name="Clavicd2" MSB="40" LSB="1" />
 				<Bank Name="Harp" MSB="40" LSB="2" />
 				<Bank Name="SlapBas2" MSB="40" LSB="4" />
+				<Bank Name="Clarinet" MSB="41" LSB="0" />
 				<Bank Name="Slap Bass 2" MSB="48" LSB="0" />
 				<Bank Name="SlapBas2" MSB="48" LSB="1" />
 				<Bank Name="Mi-SlapBxDi-SlapB" MSB="48" LSB="2" />
@@ -36704,10 +36704,10 @@
 				<Bank Name="Di-Ride Cymbal 1" MSB="34" LSB="117" />
 				<Bank Name="Mi-Ride Cymbal 1" MSB="34" LSB="118" />
 				<Bank Name="Ac-Ride Cymbal 1" MSB="34" LSB="119" />
-				<Bank Name="Saxophone" MSB="40" LSB="0" />
 				<Bank Name="Clavicd3" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 1" MSB="40" LSB="2" />
 				<Bank Name="SynBass1" MSB="40" LSB="4" />
+				<Bank Name="Saxophone" MSB="41" LSB="0" />
 				<Bank Name="Synth Bass 1" MSB="48" LSB="0" />
 				<Bank Name="SynBass1" MSB="48" LSB="1" />
 				<Bank Name="Mi-SynBaxDi-SynBa" MSB="48" LSB="2" />
@@ -36762,10 +36762,10 @@
 				<Bank Name="Di-ChineseCymbal" MSB="34" LSB="117" />
 				<Bank Name="Mi-ChineseCymbal" MSB="34" LSB="118" />
 				<Bank Name="Ac-ChineseCymbal" MSB="34" LSB="119" />
-				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="Koto 2" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 2" MSB="40" LSB="2" />
 				<Bank Name="SynBass2" MSB="40" LSB="4" />
+				<Bank Name="Trumpet" MSB="41" LSB="0" />
 				<Bank Name="Synth Bass 2" MSB="48" LSB="0" />
 				<Bank Name="SynBass2" MSB="48" LSB="1" />
 				<Bank Name="Mi-SynBaxDi-SynBa" MSB="48" LSB="2" />
@@ -36824,10 +36824,10 @@
 				<Bank Name="Di-RideCymbalCup" MSB="34" LSB="117" />
 				<Bank Name="Mi-RideCymbalCup" MSB="34" LSB="118" />
 				<Bank Name="Ac-RideCymbalCup" MSB="34" LSB="119" />
-				<Bank Name="Street Organ" MSB="40" LSB="0" />
 				<Bank Name="PipeOrg2" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 3" MSB="40" LSB="2" />
 				<Bank Name="Violin" MSB="40" LSB="4" />
+				<Bank Name="Street Organ" MSB="41" LSB="0" />
 				<Bank Name="Violin" MSB="48" LSB="0" />
 				<Bank Name="Violin" MSB="48" LSB="1" />
 				<Bank Name="Mi-ViolixDi-Violi" MSB="48" LSB="2" />
@@ -36890,10 +36890,10 @@
 				<Bank Name="Di-Tambourine" MSB="34" LSB="117" />
 				<Bank Name="Mi-Tambourine" MSB="34" LSB="118" />
 				<Bank Name="Ac-Tambourine" MSB="34" LSB="119" />
-				<Bank Name="Synth Brass" MSB="40" LSB="0" />
 				<Bank Name="PohdsPLA" MSB="40" LSB="1" />
 				<Bank Name="Hawaiian Guitar" MSB="40" LSB="2" />
 				<Bank Name="Viola" MSB="40" LSB="4" />
+				<Bank Name="Synth Brass" MSB="41" LSB="0" />
 				<Bank Name="Viola" MSB="48" LSB="0" />
 				<Bank Name="Viola" MSB="48" LSB="1" />
 				<Bank Name="Mi-ViolaxDi-Viola" MSB="48" LSB="2" />
@@ -36950,10 +36950,10 @@
 				<Bank Name="Di-Splash Cymbal" MSB="34" LSB="117" />
 				<Bank Name="Mi-Splash Cymbal" MSB="34" LSB="118" />
 				<Bank Name="Ac-Splash Cymbal" MSB="34" LSB="119" />
-				<Bank Name="Electric Piano" MSB="40" LSB="0" />
 				<Bank Name="RohdsPRA" MSB="40" LSB="1" />
 				<Bank Name="Honky-Tonk Piano 1" MSB="40" LSB="2" />
 				<Bank Name="Cello" MSB="40" LSB="4" />
+				<Bank Name="Electric Piano" MSB="41" LSB="0" />
 				<Bank Name="Cello" MSB="48" LSB="0" />
 				<Bank Name="Cello" MSB="48" LSB="1" />
 				<Bank Name="Mi-CelloxDi-Cello" MSB="48" LSB="2" />
@@ -37006,10 +37006,10 @@
 				<Bank Name="Di-Cowbell" MSB="34" LSB="117" />
 				<Bank Name="Mi-Cowbell" MSB="34" LSB="118" />
 				<Bank Name="Ac-Cowbell" MSB="34" LSB="119" />
-				<Bank Name="Bass" MSB="40" LSB="0" />
 				<Bank Name="Orch L" MSB="40" LSB="1" />
 				<Bank Name="Honky-Tonk Piano 2" MSB="40" LSB="2" />
 				<Bank Name="Contrabs" MSB="40" LSB="4" />
+				<Bank Name="Bass" MSB="41" LSB="0" />
 				<Bank Name="Contrabass" MSB="48" LSB="0" />
 				<Bank Name="Contrabs" MSB="48" LSB="1" />
 				<Bank Name="Mi-ContrxDi-Contr" MSB="48" LSB="2" />
@@ -37060,10 +37060,10 @@
 				<Bank Name="Di-CrashCymbal 2" MSB="34" LSB="117" />
 				<Bank Name="Mi-CrashCymbal 2" MSB="34" LSB="118" />
 				<Bank Name="Ac-CrashCymbal 2" MSB="34" LSB="119" />
-				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="Orch R" MSB="40" LSB="1" />
 				<Bank Name="Horn" MSB="40" LSB="2" />
 				<Bank Name="Trem.Str" MSB="40" LSB="4" />
+				<Bank Name="Vibraphone" MSB="41" LSB="0" />
 				<Bank Name="Tremolo Strings" MSB="48" LSB="0" />
 				<Bank Name="Trem.Str" MSB="48" LSB="1" />
 				<Bank Name="Mi-Trem.xDi-Trem." MSB="48" LSB="2" />
@@ -37121,10 +37121,10 @@
 				<Bank Name="Di-Vibraslap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Vibraslap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Vibraslap" MSB="34" LSB="119" />
-				<Bank Name="Chime" MSB="40" LSB="0" />
 				<Bank Name="SynViol" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 1" MSB="40" LSB="2" />
 				<Bank Name="Pizz.Str" MSB="40" LSB="4" />
+				<Bank Name="Chime" MSB="41" LSB="0" />
 				<Bank Name="Pizzicato String" MSB="48" LSB="0" />
 				<Bank Name="Pizz.Str" MSB="48" LSB="1" />
 				<Bank Name="Mi-Pizz.xDi-Pizz." MSB="48" LSB="2" />
@@ -37185,10 +37185,10 @@
 				<Bank Name="Di-Ride Cymbal 2" MSB="34" LSB="117" />
 				<Bank Name="Mi-Ride Cymbal 2" MSB="34" LSB="118" />
 				<Bank Name="Ac-Ride Cymbal 2" MSB="34" LSB="119" />
-				<Bank Name="Tom Tom 2" MSB="40" LSB="0" />
 				<Bank Name="SynOrgan" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 2" MSB="40" LSB="2" />
 				<Bank Name="Harp" MSB="40" LSB="4" />
+				<Bank Name="Tom Tom 2" MSB="41" LSB="0" />
 				<Bank Name="Orchestral Harp" MSB="48" LSB="0" />
 				<Bank Name="Harp" MSB="48" LSB="1" />
 				<Bank Name="Mi-HarpxDi-Harp" MSB="48" LSB="2" />
@@ -37246,10 +37246,10 @@
 				<Bank Name="Di-Bongo H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bongo H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bongo H" MSB="34" LSB="119" />
-				<Bank Name="Noise and Tone" MSB="40" LSB="0" />
 				<Bank Name="SynBrass" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 3" MSB="40" LSB="2" />
 				<Bank Name="Timpani" MSB="40" LSB="4" />
+				<Bank Name="Noise and Tone" MSB="41" LSB="0" />
 				<Bank Name="Timpani" MSB="48" LSB="0" />
 				<Bank Name="Timpani" MSB="48" LSB="1" />
 				<Bank Name="Mi-TimpaxDi-Timpa" MSB="48" LSB="2" />
@@ -37365,10 +37365,10 @@
 				<Bank Name="Di-Conga H Mute" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga H Mute" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga H Mute" MSB="34" LSB="119" />
-				<Bank Name="Buzzy Bell" MSB="40" LSB="0" />
 				<Bank Name="Shamisen" MSB="40" LSB="1" />
 				<Bank Name="Jamisen" MSB="40" LSB="2" />
 				<Bank Name="Strings2" MSB="40" LSB="4" />
+				<Bank Name="Buzzy Bell" MSB="43" LSB="0" />
 				<Bank Name="String Ensemble2" MSB="48" LSB="0" />
 				<Bank Name="Strings2" MSB="48" LSB="1" />
 				<Bank Name="Mi-StrinxDi-Strin" MSB="48" LSB="2" />
@@ -37426,10 +37426,10 @@
 				<Bank Name="Di-Conga H Open" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga H Open" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga H Open" MSB="34" LSB="119" />
-				<Bank Name="Guitar" MSB="40" LSB="0" />
 				<Bank Name="Magical" MSB="40" LSB="1" />
 				<Bank Name="Jazz Guitar" MSB="40" LSB="2" />
 				<Bank Name="Syn.Str1" MSB="40" LSB="4" />
+				<Bank Name="Guitar" MSB="43" LSB="0" />
 				<Bank Name="SynthStrings 1" MSB="48" LSB="0" />
 				<Bank Name="Syn.Str1" MSB="48" LSB="1" />
 				<Bank Name="Mi-Syn.SxDi-Syn.S" MSB="48" LSB="2" />
@@ -37490,10 +37490,10 @@
 				<Bank Name="Di-Conga L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga L" MSB="34" LSB="119" />
-				<Bank Name="Wurly" MSB="40" LSB="0" />
 				<Bank Name="Huwawa" MSB="40" LSB="1" />
 				<Bank Name="Jazz Organ" MSB="40" LSB="2" />
 				<Bank Name="Syn.Str2" MSB="40" LSB="4" />
+				<Bank Name="Wurly" MSB="43" LSB="0" />
 				<Bank Name="SynthStrings 2" MSB="48" LSB="0" />
 				<Bank Name="Syn.Str2" MSB="48" LSB="1" />
 				<Bank Name="Mi-Syn.SxDi-Syn.S" MSB="48" LSB="2" />
@@ -37550,10 +37550,10 @@
 				<Bank Name="Di-Timbale H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Timbale H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Timbale H" MSB="34" LSB="119" />
-				<Bank Name="Flute" MSB="40" LSB="0" />
 				<Bank Name="WnderFlt" MSB="40" LSB="1" />
 				<Bank Name="Jug" MSB="40" LSB="2" />
 				<Bank Name="ChoirAah" MSB="40" LSB="4" />
+				<Bank Name="Flute" MSB="43" LSB="0" />
 				<Bank Name="Choir Aahs" MSB="48" LSB="0" />
 				<Bank Name="ChoirAah" MSB="48" LSB="1" />
 				<Bank Name="Mi-ChoirxDi-Choir" MSB="48" LSB="2" />
@@ -37609,10 +37609,10 @@
 				<Bank Name="Di-Timbale L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Timbale L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Timbale L" MSB="34" LSB="119" />
-				<Bank Name="Clarinet" MSB="40" LSB="0" />
 				<Bank Name="Hardrock" MSB="40" LSB="1" />
 				<Bank Name="Koto" MSB="40" LSB="2" />
 				<Bank Name="VoiceOoh" MSB="40" LSB="4" />
+				<Bank Name="Clarinet" MSB="43" LSB="0" />
 				<Bank Name="Voice Oohs" MSB="48" LSB="0" />
 				<Bank Name="VoiceOoh" MSB="48" LSB="1" />
 				<Bank Name="Mi-VoicexDi-Voice" MSB="48" LSB="2" />
@@ -37664,10 +37664,10 @@
 				<Bank Name="Di-Agogo H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Agogo H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Agogo H" MSB="34" LSB="119" />
-				<Bank Name="Synth" MSB="40" LSB="0" />
 				<Bank Name="Machine" MSB="40" LSB="1" />
 				<Bank Name="Leaf Spring" MSB="40" LSB="2" />
 				<Bank Name="SynVoice" MSB="40" LSB="4" />
+				<Bank Name="Synth" MSB="43" LSB="0" />
 				<Bank Name="Synth Voice" MSB="48" LSB="0" />
 				<Bank Name="SynVoice" MSB="48" LSB="1" />
 				<Bank Name="Mi-SynVoxDi-SynVo" MSB="48" LSB="2" />
@@ -37726,10 +37726,10 @@
 				<Bank Name="Di-Agogo L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Agogo L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Agogo L" MSB="34" LSB="119" />
-				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="MachineV" MSB="40" LSB="1" />
 				<Bank Name="Marimba" MSB="40" LSB="2" />
 				<Bank Name="Orch.Hit" MSB="40" LSB="4" />
+				<Bank Name="Trumpet" MSB="43" LSB="0" />
 				<Bank Name="Orchestra Hit" MSB="48" LSB="0" />
 				<Bank Name="Orch.Hit" MSB="48" LSB="1" />
 				<Bank Name="Mi-Orch.xDi-Orch." MSB="48" LSB="2" />
@@ -37792,10 +37792,10 @@
 				<Bank Name="Di-Cabasa" MSB="34" LSB="117" />
 				<Bank Name="Mi-Cabasa" MSB="34" LSB="118" />
 				<Bank Name="Ac-Cabasa" MSB="34" LSB="119" />
-				<Bank Name="Organ" MSB="40" LSB="0" />
 				<Bank Name="Comic" MSB="40" LSB="1" />
 				<Bank Name="Metallic Synth" MSB="40" LSB="2" />
 				<Bank Name="Trumpet" MSB="40" LSB="4" />
+				<Bank Name="Organ" MSB="43" LSB="0" />
 				<Bank Name="Trumpet" MSB="48" LSB="0" />
 				<Bank Name="Trumpet" MSB="48" LSB="1" />
 				<Bank Name="Mi-TrumpxDi-Trump" MSB="48" LSB="2" />
@@ -37856,10 +37856,10 @@
 				<Bank Name="Di-Maracas" MSB="34" LSB="117" />
 				<Bank Name="Mi-Maracas" MSB="34" LSB="118" />
 				<Bank Name="Ac-Maracas" MSB="34" LSB="119" />
-				<Bank Name="Bells" MSB="40" LSB="0" />
 				<Bank Name="SE_Comic" MSB="40" LSB="1" />
 				<Bank Name="Music Box" MSB="40" LSB="2" />
 				<Bank Name="Trombone" MSB="40" LSB="4" />
+				<Bank Name="Bells" MSB="43" LSB="0" />
 				<Bank Name="Trombone" MSB="48" LSB="0" />
 				<Bank Name="Trombone" MSB="48" LSB="1" />
 				<Bank Name="Mi-TrombxDi-Tromb" MSB="48" LSB="2" />
@@ -37915,10 +37915,10 @@
 				<Bank Name="Di-SambaWhistleH" MSB="34" LSB="117" />
 				<Bank Name="Mi-SambaWhistleH" MSB="34" LSB="118" />
 				<Bank Name="Ac-SambaWhistleH" MSB="34" LSB="119" />
-				<Bank Name="Vibes" MSB="40" LSB="0" />
 				<Bank Name="SE_Laser" MSB="40" LSB="1" />
 				<Bank Name="Mute Bass" MSB="40" LSB="2" />
 				<Bank Name="Tuba" MSB="40" LSB="4" />
+				<Bank Name="Vibes" MSB="43" LSB="0" />
 				<Bank Name="Tuba" MSB="48" LSB="0" />
 				<Bank Name="Tuba" MSB="48" LSB="1" />
 				<Bank Name="Mi-TubaxDi-Tuba" MSB="48" LSB="2" />
@@ -37971,10 +37971,10 @@
 				<Bank Name="Di-SambaWhistleL" MSB="34" LSB="117" />
 				<Bank Name="Mi-SambaWhistleL" MSB="34" LSB="118" />
 				<Bank Name="Ac-SambaWhistleL" MSB="34" LSB="119" />
-				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="SE_Noise" MSB="40" LSB="1" />
 				<Bank Name="Mute Trumpet" MSB="40" LSB="2" />
 				<Bank Name="Mute.Trp" MSB="40" LSB="4" />
+				<Bank Name="Vibraphone" MSB="43" LSB="0" />
 				<Bank Name="Muted Trumpet" MSB="48" LSB="0" />
 				<Bank Name="Mute.Trp" MSB="48" LSB="1" />
 				<Bank Name="Mi-Mute.xDi-Mute." MSB="48" LSB="2" />
@@ -38031,10 +38031,10 @@
 				<Bank Name="Di-Guiro Short" MSB="34" LSB="117" />
 				<Bank Name="Mi-Guiro Short" MSB="34" LSB="118" />
 				<Bank Name="Ac-Guiro Short" MSB="34" LSB="119" />
-				<Bank Name="Tutti" MSB="40" LSB="0" />
 				<Bank Name="SE_Star" MSB="40" LSB="1" />
 				<Bank Name="Oboe" MSB="40" LSB="2" />
 				<Bank Name="Fr.Horn" MSB="40" LSB="4" />
+				<Bank Name="Tutti" MSB="43" LSB="0" />
 				<Bank Name="French Horn" MSB="48" LSB="0" />
 				<Bank Name="Fr.Horn" MSB="48" LSB="1" />
 				<Bank Name="Mi-Fr.HoxDi-Fr.Ho" MSB="48" LSB="2" />
@@ -38096,10 +38096,10 @@
 				<Bank Name="Di-Guiro Long" MSB="34" LSB="117" />
 				<Bank Name="Mi-Guiro Long" MSB="34" LSB="118" />
 				<Bank Name="Ac-Guiro Long" MSB="34" LSB="119" />
-				<Bank Name="Fretless" MSB="40" LSB="0" />
 				<Bank Name="SE_Star2" MSB="40" LSB="1" />
 				<Bank Name="Panflute" MSB="40" LSB="2" />
 				<Bank Name="BrasSect" MSB="40" LSB="4" />
+				<Bank Name="Fretless" MSB="43" LSB="0" />
 				<Bank Name="Brass Section" MSB="48" LSB="0" />
 				<Bank Name="BrasSect" MSB="48" LSB="1" />
 				<Bank Name="Mi-BrasSxDi-BrasS" MSB="48" LSB="2" />
@@ -38157,10 +38157,10 @@
 				<Bank Name="Di-Claves" MSB="34" LSB="117" />
 				<Bank Name="Mi-Claves" MSB="34" LSB="118" />
 				<Bank Name="Ac-Claves" MSB="34" LSB="119" />
-				<Bank Name="Synth Bass" MSB="40" LSB="0" />
 				<Bank Name="Engine 2" MSB="40" LSB="1" />
 				<Bank Name="Piano 1" MSB="40" LSB="2" />
 				<Bank Name="SynBras1" MSB="40" LSB="4" />
+				<Bank Name="Synth Bass" MSB="43" LSB="0" />
 				<Bank Name="Synth Brass 1" MSB="48" LSB="0" />
 				<Bank Name="SynBras1" MSB="48" LSB="1" />
 				<Bank Name="Mi-SynBrxDi-SynBr" MSB="48" LSB="2" />
@@ -38215,10 +38215,10 @@
 				<Bank Name="Di-Wood Block H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Wood Block H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Wood Block H" MSB="34" LSB="119" />
-				<Bank Name="Sweep" MSB="40" LSB="0" />
 				<Bank Name="Silence" MSB="40" LSB="1" />
 				<Bank Name="Piano 2" MSB="40" LSB="2" />
 				<Bank Name="SynBras2" MSB="40" LSB="4" />
+				<Bank Name="Sweep" MSB="43" LSB="0" />
 				<Bank Name="Synth Brass 2" MSB="48" LSB="0" />
 				<Bank Name="SynBras2" MSB="48" LSB="1" />
 				<Bank Name="Mi-SynBrxDi-SynBr" MSB="48" LSB="2" />
@@ -42353,10 +42353,10 @@
 				<Bank Name="Di-Castanet" MSB="34" LSB="117" />
 				<Bank Name="Mi-Castanet" MSB="34" LSB="118" />
 				<Bank Name="Ac-Castanet" MSB="34" LSB="119" />
-				<Bank Name="Strings" MSB="40" LSB="0" />
 				<Bank Name="Koto" MSB="40" LSB="1" />
 				<Bank Name="Clavi 1" MSB="40" LSB="2" />
 				<Bank Name="PercOrgn" MSB="40" LSB="4" />
+				<Bank Name="Strings" MSB="42" LSB="0" />
 				<Bank Name="Percussive Organ" MSB="48" LSB="0" />
 				<Bank Name="PercOrgn" MSB="48" LSB="1" />
 				<Bank Name="Mi-PercOxDi-PercO" MSB="48" LSB="2" />
@@ -42411,10 +42411,10 @@
 				<Bank Name="Di-Snare L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare L" MSB="34" LSB="119" />
-				<Bank Name="Guitar" MSB="40" LSB="0" />
 				<Bank Name="Taiko" MSB="40" LSB="1" />
 				<Bank Name="Clavi 2" MSB="40" LSB="2" />
 				<Bank Name="RockOrgn" MSB="40" LSB="4" />
+				<Bank Name="Guitar" MSB="42" LSB="0" />
 				<Bank Name="Rock Organ" MSB="48" LSB="0" />
 				<Bank Name="RockOrgn" MSB="48" LSB="1" />
 				<Bank Name="Mi-RockOxDi-RockO" MSB="48" LSB="2" />
@@ -42466,10 +42466,10 @@
 				<Bank Name="Di-Sticks" MSB="34" LSB="117" />
 				<Bank Name="Mi-Sticks" MSB="34" LSB="118" />
 				<Bank Name="Ac-Sticks" MSB="34" LSB="119" />
-				<Bank Name="Electric Guitar" MSB="40" LSB="0" />
 				<Bank Name="Engine" MSB="40" LSB="1" />
 				<Bank Name="Drip" MSB="40" LSB="2" />
 				<Bank Name="ChrchOrg" MSB="40" LSB="4" />
+				<Bank Name="Electric Guitar" MSB="42" LSB="0" />
 				<Bank Name="Church Organ" MSB="48" LSB="0" />
 				<Bank Name="ChrchOrg" MSB="48" LSB="1" />
 				<Bank Name="Mi-ChrchxDi-Chrch" MSB="48" LSB="2" />
@@ -42525,10 +42525,10 @@
 				<Bank Name="Di-Bass Drum L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum L" MSB="34" LSB="119" />
-				<Bank Name="Electric Piano 2" MSB="40" LSB="0" />
 				<Bank Name="UFO" MSB="40" LSB="1" />
 				<Bank Name="Electric Bass" MSB="40" LSB="2" />
 				<Bank Name="ReedOrgn" MSB="40" LSB="4" />
+				<Bank Name="Electric Piano 2" MSB="42" LSB="0" />
 				<Bank Name="Reed Organ" MSB="48" LSB="0" />
 				<Bank Name="ReedOrgn" MSB="48" LSB="1" />
 				<Bank Name="Mi-ReedOxDi-ReedO" MSB="48" LSB="2" />
@@ -42585,10 +42585,10 @@
 				<Bank Name="Di-Open Rim Shot" MSB="34" LSB="117" />
 				<Bank Name="Mi-Open Rim Shot" MSB="34" LSB="118" />
 				<Bank Name="Ac-Open Rim Shot" MSB="34" LSB="119" />
-				<Bank Name="Flute" MSB="40" LSB="0" />
 				<Bank Name="SynBell" MSB="40" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="40" LSB="2" />
 				<Bank Name="Acordion" MSB="40" LSB="4" />
+				<Bank Name="Flute" MSB="42" LSB="0" />
 				<Bank Name="Accordion" MSB="48" LSB="0" />
 				<Bank Name="Acordion" MSB="48" LSB="1" />
 				<Bank Name="Mi-AcordxDi-Acord" MSB="48" LSB="2" />
@@ -42643,10 +42643,10 @@
 				<Bank Name="Di-Bass Drum M" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum M" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum M" MSB="34" LSB="119" />
-				<Bank Name="Marimba" MSB="40" LSB="0" />
 				<Bank Name="Chime" MSB="40" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="40" LSB="2" />
 				<Bank Name="Harmnica" MSB="40" LSB="4" />
+				<Bank Name="Marimba" MSB="42" LSB="0" />
 				<Bank Name="Harmonica" MSB="48" LSB="0" />
 				<Bank Name="Harmnica" MSB="48" LSB="1" />
 				<Bank Name="Mi-HarmnxDi-Harmn" MSB="48" LSB="2" />
@@ -42700,10 +42700,10 @@
 				<Bank Name="Di-Bass Drum H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bass Drum H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bass Drum H" MSB="34" LSB="119" />
-				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="SynBass" MSB="40" LSB="1" />
 				<Bank Name="Electric Trumpet" MSB="40" LSB="2" />
 				<Bank Name="TangoAcd" MSB="40" LSB="4" />
+				<Bank Name="Trumpet" MSB="42" LSB="0" />
 				<Bank Name="Tango Accordion" MSB="48" LSB="0" />
 				<Bank Name="TangoAcd" MSB="48" LSB="1" />
 				<Bank Name="Mi-TangoxDi-Tango" MSB="48" LSB="2" />
@@ -42756,10 +42756,10 @@
 				<Bank Name="Di-ClosedRimShot" MSB="34" LSB="117" />
 				<Bank Name="Mi-ClosedRimShot" MSB="34" LSB="118" />
 				<Bank Name="Ac-ClosedRimShot" MSB="34" LSB="119" />
-				<Bank Name="Harmonica" MSB="40" LSB="0" />
 				<Bank Name="Synthsiz" MSB="40" LSB="1" />
 				<Bank Name="Electron Organ" MSB="40" LSB="2" />
 				<Bank Name="NylonGtr" MSB="40" LSB="4" />
+				<Bank Name="Harmonica" MSB="42" LSB="0" />
 				<Bank Name="Nylon Guitar" MSB="48" LSB="0" />
 				<Bank Name="NylonGtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-NylonxDi-Nylon" MSB="48" LSB="2" />
@@ -42821,10 +42821,10 @@
 				<Bank Name="Di-Snare M" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare M" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare M" MSB="34" LSB="119" />
-				<Bank Name="Tuba" MSB="40" LSB="0" />
 				<Bank Name="SynPercu" MSB="40" LSB="1" />
 				<Bank Name="Fantastic Piano" MSB="40" LSB="2" />
 				<Bank Name="SteelGtr" MSB="40" LSB="4" />
+				<Bank Name="Tuba" MSB="42" LSB="0" />
 				<Bank Name="Steel Guitar" MSB="48" LSB="0" />
 				<Bank Name="SteelGtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-SteelxDi-Steel" MSB="48" LSB="2" />
@@ -42889,10 +42889,10 @@
 				<Bank Name="Di-Hand Clap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hand Clap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hand Clap" MSB="34" LSB="119" />
-				<Bank Name="Synth Brass 2" MSB="40" LSB="0" />
 				<Bank Name="SynRhyth" MSB="40" LSB="1" />
 				<Bank Name="Fireworks" MSB="40" LSB="2" />
 				<Bank Name="JazzGtr" MSB="40" LSB="4" />
+				<Bank Name="Synth Brass 2" MSB="42" LSB="0" />
 				<Bank Name="Jazz Guitar" MSB="48" LSB="0" />
 				<Bank Name="JazzGtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-JazzGxDi-JazzG" MSB="48" LSB="2" />
@@ -42956,10 +42956,10 @@
 				<Bank Name="Di-Snare H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Snare H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Snare H" MSB="34" LSB="119" />
-				<Bank Name="Short Saw" MSB="40" LSB="0" />
 				<Bank Name="HarmDrum" MSB="40" LSB="1" />
 				<Bank Name="Flute" MSB="40" LSB="2" />
 				<Bank Name="CleanGtr" MSB="40" LSB="4" />
+				<Bank Name="Short Saw" MSB="42" LSB="0" />
 				<Bank Name="Clean Guitar" MSB="48" LSB="0" />
 				<Bank Name="CleanGtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-CleanxDi-Clean" MSB="48" LSB="2" />
@@ -43015,10 +43015,10 @@
 				<Bank Name="Di-Floor Tom L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Floor Tom L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Floor Tom L" MSB="34" LSB="119" />
-				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="Cowbell" MSB="40" LSB="1" />
 				<Bank Name="Fork Guitar 1" MSB="40" LSB="2" />
 				<Bank Name="Mute.Gtr" MSB="40" LSB="4" />
+				<Bank Name="Vibraphone" MSB="42" LSB="0" />
 				<Bank Name="Muted Guitar" MSB="48" LSB="0" />
 				<Bank Name="Mute.Gtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-Mute.xDi-Mute." MSB="48" LSB="2" />
@@ -43072,10 +43072,10 @@
 				<Bank Name="Di-Hi-Hat Closed" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Closed" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Closed" MSB="34" LSB="119" />
-				<Bank Name="Electric Guitar 2" MSB="40" LSB="0" />
 				<Bank Name="ClseHiht" MSB="40" LSB="1" />
 				<Bank Name="Fork Guitar 2" MSB="40" LSB="2" />
 				<Bank Name="Ovrdrive" MSB="40" LSB="4" />
+				<Bank Name="Electric Guitar 2" MSB="42" LSB="0" />
 				<Bank Name="OverdrivenGuitar" MSB="48" LSB="0" />
 				<Bank Name="Ovrdrive" MSB="48" LSB="1" />
 				<Bank Name="Mi-OvrdrxDi-Ovrdr" MSB="48" LSB="2" />
@@ -43135,10 +43135,10 @@
 				<Bank Name="Di-Floor Tom H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Floor Tom H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Floor Tom H" MSB="34" LSB="119" />
-				<Bank Name="Synth Bass 2" MSB="40" LSB="0" />
 				<Bank Name="SnareDrm" MSB="40" LSB="1" />
 				<Bank Name="Funky Marimba" MSB="40" LSB="2" />
 				<Bank Name="Dist.Gtr" MSB="40" LSB="4" />
+				<Bank Name="Synth Bass 2" MSB="42" LSB="0" />
 				<Bank Name="Distortion Guitar" MSB="48" LSB="0" />
 				<Bank Name="Dist.Gtr" MSB="48" LSB="1" />
 				<Bank Name="Mi-Dist.xDi-Dist." MSB="48" LSB="2" />
@@ -43199,10 +43199,10 @@
 				<Bank Name="Di-Hi-Hat Pedal" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Pedal" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Pedal" MSB="34" LSB="119" />
-				<Bank Name="Sitar" MSB="40" LSB="0" />
 				<Bank Name="BassDrum" MSB="40" LSB="1" />
 				<Bank Name="Glass Celesta" MSB="40" LSB="2" />
 				<Bank Name="GtrHarmo" MSB="40" LSB="4" />
+				<Bank Name="Sitar" MSB="42" LSB="0" />
 				<Bank Name="Guitar Harmonics" MSB="48" LSB="0" />
 				<Bank Name="GtrHarmo" MSB="48" LSB="1" />
 				<Bank Name="Mi-GtrHaxDi-GtrHa" MSB="48" LSB="2" />
@@ -43322,10 +43322,10 @@
 				<Bank Name="Di-Hi-Hat Open" MSB="34" LSB="117" />
 				<Bank Name="Mi-Hi-Hat Open" MSB="34" LSB="118" />
 				<Bank Name="Ac-Hi-Hat Open" MSB="34" LSB="119" />
-				<Bank Name="Electric Strings" MSB="40" LSB="0" />
 				<Bank Name="Elecpia2" MSB="40" LSB="1" />
 				<Bank Name="Gurgle" MSB="40" LSB="2" />
 				<Bank Name="FngrBass" MSB="40" LSB="4" />
+				<Bank Name="Electric Strings" MSB="41" LSB="0" />
 				<Bank Name="Finger Bass" MSB="48" LSB="0" />
 				<Bank Name="FngrBass" MSB="48" LSB="1" />
 				<Bank Name="Mi-FngrBxDi-FngrB" MSB="48" LSB="2" />
@@ -43378,10 +43378,10 @@
 				<Bank Name="Di-Mid Tom L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Mid Tom L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Mid Tom L" MSB="34" LSB="119" />
-				<Bank Name="Bow Wow" MSB="40" LSB="0" />
 				<Bank Name="Santool2" MSB="40" LSB="1" />
 				<Bank Name="Hand Bell" MSB="40" LSB="2" />
 				<Bank Name="PickBass" MSB="40" LSB="4" />
+				<Bank Name="Bow Wow" MSB="41" LSB="0" />
 				<Bank Name="Pick Bass" MSB="48" LSB="0" />
 				<Bank Name="PickBass" MSB="48" LSB="1" />
 				<Bank Name="Mi-PickBxDi-PickB" MSB="48" LSB="2" />
@@ -43440,10 +43440,10 @@
 				<Bank Name="Di-Mid Tom H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Mid Tom H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Mid Tom H" MSB="34" LSB="119" />
-				<Bank Name="Electric Guitar" MSB="40" LSB="0" />
 				<Bank Name="Brass" MSB="40" LSB="1" />
 				<Bank Name="Handsaw" MSB="40" LSB="2" />
 				<Bank Name="Fretless" MSB="40" LSB="4" />
+				<Bank Name="Electric Guitar" MSB="41" LSB="0" />
 				<Bank Name="Fretless Bass" MSB="48" LSB="0" />
 				<Bank Name="Fretless" MSB="48" LSB="1" />
 				<Bank Name="Mi-FretlxDi-Fretl" MSB="48" LSB="2" />
@@ -43506,10 +43506,10 @@
 				<Bank Name="Di-CrashCymbal 1" MSB="34" LSB="117" />
 				<Bank Name="Mi-CrashCymbal 1" MSB="34" LSB="118" />
 				<Bank Name="Ac-CrashCymbal 1" MSB="34" LSB="119" />
-				<Bank Name="Organ" MSB="40" LSB="0" />
 				<Bank Name="Flute 2" MSB="40" LSB="1" />
 				<Bank Name="Harmonica" MSB="40" LSB="2" />
 				<Bank Name="SlapBas1" MSB="40" LSB="4" />
+				<Bank Name="Organ" MSB="41" LSB="0" />
 				<Bank Name="Slap Bass 1" MSB="48" LSB="0" />
 				<Bank Name="SlapBas1" MSB="48" LSB="1" />
 				<Bank Name="Mi-SlapBxDi-SlapB" MSB="48" LSB="2" />
@@ -43566,10 +43566,10 @@
 				<Bank Name="Di-High Tom" MSB="34" LSB="117" />
 				<Bank Name="Mi-High Tom" MSB="34" LSB="118" />
 				<Bank Name="Ac-High Tom" MSB="34" LSB="119" />
-				<Bank Name="Clarinet" MSB="40" LSB="0" />
 				<Bank Name="Clavicd2" MSB="40" LSB="1" />
 				<Bank Name="Harp" MSB="40" LSB="2" />
 				<Bank Name="SlapBas2" MSB="40" LSB="4" />
+				<Bank Name="Clarinet" MSB="41" LSB="0" />
 				<Bank Name="Slap Bass 2" MSB="48" LSB="0" />
 				<Bank Name="SlapBas2" MSB="48" LSB="1" />
 				<Bank Name="Mi-SlapBxDi-SlapB" MSB="48" LSB="2" />
@@ -43626,10 +43626,10 @@
 				<Bank Name="Di-Ride Cymbal 1" MSB="34" LSB="117" />
 				<Bank Name="Mi-Ride Cymbal 1" MSB="34" LSB="118" />
 				<Bank Name="Ac-Ride Cymbal 1" MSB="34" LSB="119" />
-				<Bank Name="Saxophone" MSB="40" LSB="0" />
 				<Bank Name="Clavicd3" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 1" MSB="40" LSB="2" />
 				<Bank Name="SynBass1" MSB="40" LSB="4" />
+				<Bank Name="Saxophone" MSB="41" LSB="0" />
 				<Bank Name="Synth Bass 1" MSB="48" LSB="0" />
 				<Bank Name="SynBass1" MSB="48" LSB="1" />
 				<Bank Name="Mi-SynBaxDi-SynBa" MSB="48" LSB="2" />
@@ -43684,10 +43684,10 @@
 				<Bank Name="Di-ChineseCymbal" MSB="34" LSB="117" />
 				<Bank Name="Mi-ChineseCymbal" MSB="34" LSB="118" />
 				<Bank Name="Ac-ChineseCymbal" MSB="34" LSB="119" />
-				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="Koto 2" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 2" MSB="40" LSB="2" />
 				<Bank Name="SynBass2" MSB="40" LSB="4" />
+				<Bank Name="Trumpet" MSB="41" LSB="0" />
 				<Bank Name="Synth Bass 2" MSB="48" LSB="0" />
 				<Bank Name="SynBass2" MSB="48" LSB="1" />
 				<Bank Name="Mi-SynBaxDi-SynBa" MSB="48" LSB="2" />
@@ -43746,10 +43746,10 @@
 				<Bank Name="Di-RideCymbalCup" MSB="34" LSB="117" />
 				<Bank Name="Mi-RideCymbalCup" MSB="34" LSB="118" />
 				<Bank Name="Ac-RideCymbalCup" MSB="34" LSB="119" />
-				<Bank Name="Street Organ" MSB="40" LSB="0" />
 				<Bank Name="PipeOrg2" MSB="40" LSB="1" />
 				<Bank Name="Harpsichord 3" MSB="40" LSB="2" />
 				<Bank Name="Violin" MSB="40" LSB="4" />
+				<Bank Name="Street Organ" MSB="41" LSB="0" />
 				<Bank Name="Violin" MSB="48" LSB="0" />
 				<Bank Name="Violin" MSB="48" LSB="1" />
 				<Bank Name="Mi-ViolixDi-Violi" MSB="48" LSB="2" />
@@ -43812,10 +43812,10 @@
 				<Bank Name="Di-Tambourine" MSB="34" LSB="117" />
 				<Bank Name="Mi-Tambourine" MSB="34" LSB="118" />
 				<Bank Name="Ac-Tambourine" MSB="34" LSB="119" />
-				<Bank Name="Synth Brass" MSB="40" LSB="0" />
 				<Bank Name="PohdsPLA" MSB="40" LSB="1" />
 				<Bank Name="Hawaiian Guitar" MSB="40" LSB="2" />
 				<Bank Name="Viola" MSB="40" LSB="4" />
+				<Bank Name="Synth Brass" MSB="41" LSB="0" />
 				<Bank Name="Viola" MSB="48" LSB="0" />
 				<Bank Name="Viola" MSB="48" LSB="1" />
 				<Bank Name="Mi-ViolaxDi-Viola" MSB="48" LSB="2" />
@@ -43872,10 +43872,10 @@
 				<Bank Name="Di-Splash Cymbal" MSB="34" LSB="117" />
 				<Bank Name="Mi-Splash Cymbal" MSB="34" LSB="118" />
 				<Bank Name="Ac-Splash Cymbal" MSB="34" LSB="119" />
-				<Bank Name="Electric Piano" MSB="40" LSB="0" />
 				<Bank Name="RohdsPRA" MSB="40" LSB="1" />
 				<Bank Name="Honky-Tonk Piano 1" MSB="40" LSB="2" />
 				<Bank Name="Cello" MSB="40" LSB="4" />
+				<Bank Name="Electric Piano" MSB="41" LSB="0" />
 				<Bank Name="Cello" MSB="48" LSB="0" />
 				<Bank Name="Cello" MSB="48" LSB="1" />
 				<Bank Name="Mi-CelloxDi-Cello" MSB="48" LSB="2" />
@@ -43928,10 +43928,10 @@
 				<Bank Name="Di-Cowbell" MSB="34" LSB="117" />
 				<Bank Name="Mi-Cowbell" MSB="34" LSB="118" />
 				<Bank Name="Ac-Cowbell" MSB="34" LSB="119" />
-				<Bank Name="Bass" MSB="40" LSB="0" />
 				<Bank Name="Orch L" MSB="40" LSB="1" />
 				<Bank Name="Honky-Tonk Piano 2" MSB="40" LSB="2" />
 				<Bank Name="Contrabs" MSB="40" LSB="4" />
+				<Bank Name="Bass" MSB="41" LSB="0" />
 				<Bank Name="Contrabass" MSB="48" LSB="0" />
 				<Bank Name="Contrabs" MSB="48" LSB="1" />
 				<Bank Name="Mi-ContrxDi-Contr" MSB="48" LSB="2" />
@@ -43982,10 +43982,10 @@
 				<Bank Name="Di-CrashCymbal 2" MSB="34" LSB="117" />
 				<Bank Name="Mi-CrashCymbal 2" MSB="34" LSB="118" />
 				<Bank Name="Ac-CrashCymbal 2" MSB="34" LSB="119" />
-				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="Orch R" MSB="40" LSB="1" />
 				<Bank Name="Horn" MSB="40" LSB="2" />
 				<Bank Name="Trem.Str" MSB="40" LSB="4" />
+				<Bank Name="Vibraphone" MSB="41" LSB="0" />
 				<Bank Name="Tremolo Strings" MSB="48" LSB="0" />
 				<Bank Name="Trem.Str" MSB="48" LSB="1" />
 				<Bank Name="Mi-Trem.xDi-Trem." MSB="48" LSB="2" />
@@ -44043,10 +44043,10 @@
 				<Bank Name="Di-Vibraslap" MSB="34" LSB="117" />
 				<Bank Name="Mi-Vibraslap" MSB="34" LSB="118" />
 				<Bank Name="Ac-Vibraslap" MSB="34" LSB="119" />
-				<Bank Name="Chime" MSB="40" LSB="0" />
 				<Bank Name="SynViol" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 1" MSB="40" LSB="2" />
 				<Bank Name="Pizz.Str" MSB="40" LSB="4" />
+				<Bank Name="Chime" MSB="41" LSB="0" />
 				<Bank Name="Pizzicato String" MSB="48" LSB="0" />
 				<Bank Name="Pizz.Str" MSB="48" LSB="1" />
 				<Bank Name="Mi-Pizz.xDi-Pizz." MSB="48" LSB="2" />
@@ -44107,10 +44107,10 @@
 				<Bank Name="Di-Ride Cymbal 2" MSB="34" LSB="117" />
 				<Bank Name="Mi-Ride Cymbal 2" MSB="34" LSB="118" />
 				<Bank Name="Ac-Ride Cymbal 2" MSB="34" LSB="119" />
-				<Bank Name="Tom Tom 2" MSB="40" LSB="0" />
 				<Bank Name="SynOrgan" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 2" MSB="40" LSB="2" />
 				<Bank Name="Harp" MSB="40" LSB="4" />
+				<Bank Name="Tom Tom 2" MSB="41" LSB="0" />
 				<Bank Name="Orchestral Harp" MSB="48" LSB="0" />
 				<Bank Name="Harp" MSB="48" LSB="1" />
 				<Bank Name="Mi-HarpxDi-Harp" MSB="48" LSB="2" />
@@ -44168,10 +44168,10 @@
 				<Bank Name="Di-Bongo H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Bongo H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Bongo H" MSB="34" LSB="119" />
-				<Bank Name="Noise and Tone" MSB="40" LSB="0" />
 				<Bank Name="SynBrass" MSB="40" LSB="1" />
 				<Bank Name="Human Voice 3" MSB="40" LSB="2" />
 				<Bank Name="Timpani" MSB="40" LSB="4" />
+				<Bank Name="Noise and Tone" MSB="41" LSB="0" />
 				<Bank Name="Timpani" MSB="48" LSB="0" />
 				<Bank Name="Timpani" MSB="48" LSB="1" />
 				<Bank Name="Mi-TimpaxDi-Timpa" MSB="48" LSB="2" />
@@ -44287,10 +44287,10 @@
 				<Bank Name="Di-Conga H Mute" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga H Mute" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga H Mute" MSB="34" LSB="119" />
-				<Bank Name="Buzzy Bell" MSB="40" LSB="0" />
 				<Bank Name="Shamisen" MSB="40" LSB="1" />
 				<Bank Name="Jamisen" MSB="40" LSB="2" />
 				<Bank Name="Strings2" MSB="40" LSB="4" />
+				<Bank Name="Buzzy Bell" MSB="43" LSB="0" />
 				<Bank Name="String Ensemble2" MSB="48" LSB="0" />
 				<Bank Name="Strings2" MSB="48" LSB="1" />
 				<Bank Name="Mi-StrinxDi-Strin" MSB="48" LSB="2" />
@@ -44348,10 +44348,10 @@
 				<Bank Name="Di-Conga H Open" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga H Open" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga H Open" MSB="34" LSB="119" />
-				<Bank Name="Guitar" MSB="40" LSB="0" />
 				<Bank Name="Magical" MSB="40" LSB="1" />
 				<Bank Name="Jazz Guitar" MSB="40" LSB="2" />
 				<Bank Name="Syn.Str1" MSB="40" LSB="4" />
+				<Bank Name="Guitar" MSB="43" LSB="0" />
 				<Bank Name="SynthStrings 1" MSB="48" LSB="0" />
 				<Bank Name="Syn.Str1" MSB="48" LSB="1" />
 				<Bank Name="Mi-Syn.SxDi-Syn.S" MSB="48" LSB="2" />
@@ -44412,10 +44412,10 @@
 				<Bank Name="Di-Conga L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Conga L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Conga L" MSB="34" LSB="119" />
-				<Bank Name="Wurly" MSB="40" LSB="0" />
 				<Bank Name="Huwawa" MSB="40" LSB="1" />
 				<Bank Name="Jazz Organ" MSB="40" LSB="2" />
 				<Bank Name="Syn.Str2" MSB="40" LSB="4" />
+				<Bank Name="Wurly" MSB="43" LSB="0" />
 				<Bank Name="SynthStrings 2" MSB="48" LSB="0" />
 				<Bank Name="Syn.Str2" MSB="48" LSB="1" />
 				<Bank Name="Mi-Syn.SxDi-Syn.S" MSB="48" LSB="2" />
@@ -44472,10 +44472,10 @@
 				<Bank Name="Di-Timbale H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Timbale H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Timbale H" MSB="34" LSB="119" />
-				<Bank Name="Flute" MSB="40" LSB="0" />
 				<Bank Name="WnderFlt" MSB="40" LSB="1" />
 				<Bank Name="Jug" MSB="40" LSB="2" />
 				<Bank Name="ChoirAah" MSB="40" LSB="4" />
+				<Bank Name="Flute" MSB="43" LSB="0" />
 				<Bank Name="Choir Aahs" MSB="48" LSB="0" />
 				<Bank Name="ChoirAah" MSB="48" LSB="1" />
 				<Bank Name="Mi-ChoirxDi-Choir" MSB="48" LSB="2" />
@@ -44531,10 +44531,10 @@
 				<Bank Name="Di-Timbale L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Timbale L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Timbale L" MSB="34" LSB="119" />
-				<Bank Name="Clarinet" MSB="40" LSB="0" />
 				<Bank Name="Hardrock" MSB="40" LSB="1" />
 				<Bank Name="Koto" MSB="40" LSB="2" />
 				<Bank Name="VoiceOoh" MSB="40" LSB="4" />
+				<Bank Name="Clarinet" MSB="43" LSB="0" />
 				<Bank Name="Voice Oohs" MSB="48" LSB="0" />
 				<Bank Name="VoiceOoh" MSB="48" LSB="1" />
 				<Bank Name="Mi-VoicexDi-Voice" MSB="48" LSB="2" />
@@ -44586,10 +44586,10 @@
 				<Bank Name="Di-Agogo H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Agogo H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Agogo H" MSB="34" LSB="119" />
-				<Bank Name="Synth" MSB="40" LSB="0" />
 				<Bank Name="Machine" MSB="40" LSB="1" />
 				<Bank Name="Leaf Spring" MSB="40" LSB="2" />
 				<Bank Name="SynVoice" MSB="40" LSB="4" />
+				<Bank Name="Synth" MSB="43" LSB="0" />
 				<Bank Name="Synth Voice" MSB="48" LSB="0" />
 				<Bank Name="SynVoice" MSB="48" LSB="1" />
 				<Bank Name="Mi-SynVoxDi-SynVo" MSB="48" LSB="2" />
@@ -44648,10 +44648,10 @@
 				<Bank Name="Di-Agogo L" MSB="34" LSB="117" />
 				<Bank Name="Mi-Agogo L" MSB="34" LSB="118" />
 				<Bank Name="Ac-Agogo L" MSB="34" LSB="119" />
-				<Bank Name="Trumpet" MSB="40" LSB="0" />
 				<Bank Name="MachineV" MSB="40" LSB="1" />
 				<Bank Name="Marimba" MSB="40" LSB="2" />
 				<Bank Name="Orch.Hit" MSB="40" LSB="4" />
+				<Bank Name="Trumpet" MSB="43" LSB="0" />
 				<Bank Name="Orchestra Hit" MSB="48" LSB="0" />
 				<Bank Name="Orch.Hit" MSB="48" LSB="1" />
 				<Bank Name="Mi-Orch.xDi-Orch." MSB="48" LSB="2" />
@@ -44714,10 +44714,10 @@
 				<Bank Name="Di-Cabasa" MSB="34" LSB="117" />
 				<Bank Name="Mi-Cabasa" MSB="34" LSB="118" />
 				<Bank Name="Ac-Cabasa" MSB="34" LSB="119" />
-				<Bank Name="Organ" MSB="40" LSB="0" />
 				<Bank Name="Comic" MSB="40" LSB="1" />
 				<Bank Name="Metallic Synth" MSB="40" LSB="2" />
 				<Bank Name="Trumpet" MSB="40" LSB="4" />
+				<Bank Name="Organ" MSB="43" LSB="0" />
 				<Bank Name="Trumpet" MSB="48" LSB="0" />
 				<Bank Name="Trumpet" MSB="48" LSB="1" />
 				<Bank Name="Mi-TrumpxDi-Trump" MSB="48" LSB="2" />
@@ -44778,10 +44778,10 @@
 				<Bank Name="Di-Maracas" MSB="34" LSB="117" />
 				<Bank Name="Mi-Maracas" MSB="34" LSB="118" />
 				<Bank Name="Ac-Maracas" MSB="34" LSB="119" />
-				<Bank Name="Bells" MSB="40" LSB="0" />
 				<Bank Name="SE_Comic" MSB="40" LSB="1" />
 				<Bank Name="Music Box" MSB="40" LSB="2" />
 				<Bank Name="Trombone" MSB="40" LSB="4" />
+				<Bank Name="Bells" MSB="43" LSB="0" />
 				<Bank Name="Trombone" MSB="48" LSB="0" />
 				<Bank Name="Trombone" MSB="48" LSB="1" />
 				<Bank Name="Mi-TrombxDi-Tromb" MSB="48" LSB="2" />
@@ -44837,10 +44837,10 @@
 				<Bank Name="Di-SambaWhistleH" MSB="34" LSB="117" />
 				<Bank Name="Mi-SambaWhistleH" MSB="34" LSB="118" />
 				<Bank Name="Ac-SambaWhistleH" MSB="34" LSB="119" />
-				<Bank Name="Vibes" MSB="40" LSB="0" />
 				<Bank Name="SE_Laser" MSB="40" LSB="1" />
 				<Bank Name="Mute Bass" MSB="40" LSB="2" />
 				<Bank Name="Tuba" MSB="40" LSB="4" />
+				<Bank Name="Vibes" MSB="43" LSB="0" />
 				<Bank Name="Tuba" MSB="48" LSB="0" />
 				<Bank Name="Tuba" MSB="48" LSB="1" />
 				<Bank Name="Mi-TubaxDi-Tuba" MSB="48" LSB="2" />
@@ -44893,10 +44893,10 @@
 				<Bank Name="Di-SambaWhistleL" MSB="34" LSB="117" />
 				<Bank Name="Mi-SambaWhistleL" MSB="34" LSB="118" />
 				<Bank Name="Ac-SambaWhistleL" MSB="34" LSB="119" />
-				<Bank Name="Vibraphone" MSB="40" LSB="0" />
 				<Bank Name="SE_Noise" MSB="40" LSB="1" />
 				<Bank Name="Mute Trumpet" MSB="40" LSB="2" />
 				<Bank Name="Mute.Trp" MSB="40" LSB="4" />
+				<Bank Name="Vibraphone" MSB="43" LSB="0" />
 				<Bank Name="Muted Trumpet" MSB="48" LSB="0" />
 				<Bank Name="Mute.Trp" MSB="48" LSB="1" />
 				<Bank Name="Mi-Mute.xDi-Mute." MSB="48" LSB="2" />
@@ -44953,10 +44953,10 @@
 				<Bank Name="Di-Guiro Short" MSB="34" LSB="117" />
 				<Bank Name="Mi-Guiro Short" MSB="34" LSB="118" />
 				<Bank Name="Ac-Guiro Short" MSB="34" LSB="119" />
-				<Bank Name="Tutti" MSB="40" LSB="0" />
 				<Bank Name="SE_Star" MSB="40" LSB="1" />
 				<Bank Name="Oboe" MSB="40" LSB="2" />
 				<Bank Name="Fr.Horn" MSB="40" LSB="4" />
+				<Bank Name="Tutti" MSB="43" LSB="0" />
 				<Bank Name="French Horn" MSB="48" LSB="0" />
 				<Bank Name="Fr.Horn" MSB="48" LSB="1" />
 				<Bank Name="Mi-Fr.HoxDi-Fr.Ho" MSB="48" LSB="2" />
@@ -45018,10 +45018,10 @@
 				<Bank Name="Di-Guiro Long" MSB="34" LSB="117" />
 				<Bank Name="Mi-Guiro Long" MSB="34" LSB="118" />
 				<Bank Name="Ac-Guiro Long" MSB="34" LSB="119" />
-				<Bank Name="Fretless" MSB="40" LSB="0" />
 				<Bank Name="SE_Star2" MSB="40" LSB="1" />
 				<Bank Name="Panflute" MSB="40" LSB="2" />
 				<Bank Name="BrasSect" MSB="40" LSB="4" />
+				<Bank Name="Fretless" MSB="43" LSB="0" />
 				<Bank Name="Brass Section" MSB="48" LSB="0" />
 				<Bank Name="BrasSect" MSB="48" LSB="1" />
 				<Bank Name="Mi-BrasSxDi-BrasS" MSB="48" LSB="2" />
@@ -45079,10 +45079,10 @@
 				<Bank Name="Di-Claves" MSB="34" LSB="117" />
 				<Bank Name="Mi-Claves" MSB="34" LSB="118" />
 				<Bank Name="Ac-Claves" MSB="34" LSB="119" />
-				<Bank Name="Synth Bass" MSB="40" LSB="0" />
 				<Bank Name="Engine 2" MSB="40" LSB="1" />
 				<Bank Name="Piano 1" MSB="40" LSB="2" />
 				<Bank Name="SynBras1" MSB="40" LSB="4" />
+				<Bank Name="Synth Bass" MSB="43" LSB="0" />
 				<Bank Name="Synth Brass 1" MSB="48" LSB="0" />
 				<Bank Name="SynBras1" MSB="48" LSB="1" />
 				<Bank Name="Mi-SynBrxDi-SynBr" MSB="48" LSB="2" />
@@ -45137,10 +45137,10 @@
 				<Bank Name="Di-Wood Block H" MSB="34" LSB="117" />
 				<Bank Name="Mi-Wood Block H" MSB="34" LSB="118" />
 				<Bank Name="Ac-Wood Block H" MSB="34" LSB="119" />
-				<Bank Name="Sweep" MSB="40" LSB="0" />
 				<Bank Name="Silence" MSB="40" LSB="1" />
 				<Bank Name="Piano 2" MSB="40" LSB="2" />
 				<Bank Name="SynBras2" MSB="40" LSB="4" />
+				<Bank Name="Sweep" MSB="43" LSB="0" />
 				<Bank Name="Synth Brass 2" MSB="48" LSB="0" />
 				<Bank Name="SynBras2" MSB="48" LSB="1" />
 				<Bank Name="Mi-SynBrxDi-SynBr" MSB="48" LSB="2" />

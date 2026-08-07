@@ -10,6 +10,25 @@ OPLL/OPLLX/OPLLP/VRC7系 2オペレータFM音源
 存在せず、Program Change番号から機械的にチップ種別と音色が
 決まります。
 
+**CC#0は40(OPLL)だけでなく41(OPLLP)/42(OPLLX)/43(VRC7)でも同じ
+動作になります**。`PatchManager::resolveTriple()`はCC#0の値が
+40/41/42/43のいずれであってもhw_bank(CC#32)=0であれば同じ
+`resolveOpllRomVoice()`を呼び出すだけで、CC#0自体(呼び出し時の
+`voicePatchType`)は実際のチップ選択には使われません。実際に
+鳴らすチップはProgram Change番号に埋め込まれたチップ種別ビット
+だけで再決定されるため、CC#0=40/41/42/43のどれを選んでも
+Prog番号が同じなら常に同じ音色が鳴ります(`../FITOM_X/core/src/
+PatchManager.cpp`の`resolveOpllRomVoice()`/`kVariantMap`参照、
+2026年8月4日確認)。
+
+ただし、FITOM_X本体・パッチエディタのパッチピッカーGUI(`PatchManager::
+getOpllRomPatches(voicePatchType)`経由)は、利便性のためCC#0ごとに
+対応するチップの音色のみへ絞り込んで表示します。MIDIシーケンサー向け
+インストゥルメントリスト(`tools/instrument_export/`)もこれに倣い、
+CC#0=40では下表のOPLL(Prog 1-15)のみ、CC#0=41ではOPLLP(Prog 33-47)
+のみ、CC#0=42ではOPLLX(Prog 17-31)のみ、CC#0=43ではVRC7(Prog 49-63)
+のみを表示します。
+
 ```
 Program Change番号の内訳:
   上位3bit(Prog >> 4): チップ種別 (0=OPLL, 1=OPLLX, 2=OPLLP, 3=VRC7)
