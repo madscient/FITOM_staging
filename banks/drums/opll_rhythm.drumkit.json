@@ -32,9 +32,9 @@
       "pan": 0,
       "patch_bank": 40,
       "patch_prog": 4,
-      "play_note": 17,
-      "sw_bank": -1,
-      "sw_prog": -1,
+      "play_note": 57,
+      "sw_bank": 0,
+      "sw_prog": 9,
       "voice_patch_type": 112
     },
     {
@@ -71,9 +71,9 @@
       "pan": 0,
       "patch_bank": 40,
       "patch_prog": 3,
-      "play_note": 21,
+      "play_note": 47,
       "sw_bank": 0,
-      "sw_prog": 10,
+      "sw_prog": 11,
       "voice_patch_type": 112
     },
     {
@@ -134,12 +134,12 @@
       "name": "Low Tom",
       "note": 45,
       "pan": 0,
-      "patch_bank": 40,
-      "patch_prog": 2,
-      "play_note": 37,
+      "patch_bank": 0,
+      "patch_prog": 46,
+      "play_note": 52,
       "sw_bank": 0,
-      "sw_prog": 10,
-      "voice_patch_type": 112
+      "sw_prog": 11,
+      "voice_patch_type": 41
     },
     {
       "fine_tune": 0,
@@ -148,7 +148,7 @@
       "note": 46,
       "pan": 0,
       "patch_bank": 40,
-      "patch_prog": 0,
+      "patch_prog": 1,
       "play_note": 48,
       "sw_bank": -1,
       "sw_prog": -1,
@@ -160,12 +160,12 @@
       "name": "Low-Mid Tom",
       "note": 47,
       "pan": 0,
-      "patch_bank": 40,
-      "patch_prog": 2,
-      "play_note": 37,
+      "patch_bank": 0,
+      "patch_prog": 46,
+      "play_note": 55,
       "sw_bank": 0,
-      "sw_prog": 10,
-      "voice_patch_type": 112
+      "sw_prog": 11,
+      "voice_patch_type": 41
     },
     {
       "fine_tune": 0,
@@ -173,12 +173,12 @@
       "name": "Hi-Mid Tom",
       "note": 48,
       "pan": 0,
-      "patch_bank": 40,
-      "patch_prog": 2,
-      "play_note": 41,
+      "patch_bank": 0,
+      "patch_prog": 46,
+      "play_note": 57,
       "sw_bank": 0,
-      "sw_prog": 10,
-      "voice_patch_type": 112
+      "sw_prog": 11,
+      "voice_patch_type": 41
     },
     {
       "fine_tune": 0,
@@ -186,12 +186,12 @@
       "name": "Crash Cymbal 1",
       "note": 49,
       "pan": 0,
-      "patch_bank": 40,
-      "patch_prog": 1,
+      "patch_bank": 0,
+      "patch_prog": 47,
       "play_note": 29,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 41
     },
     {
       "fine_tune": 0,
@@ -199,12 +199,12 @@
       "name": "High Tom",
       "note": 50,
       "pan": 0,
-      "patch_bank": 40,
-      "patch_prog": 2,
-      "play_note": 41,
+      "patch_bank": 0,
+      "patch_prog": 46,
+      "play_note": 60,
       "sw_bank": 0,
-      "sw_prog": 10,
-      "voice_patch_type": 112
+      "sw_prog": 11,
+      "voice_patch_type": 41
     },
     {
       "fine_tune": 0,
@@ -225,12 +225,12 @@
       "name": "Chinese Cymbal",
       "note": 52,
       "pan": 0,
-      "patch_bank": 40,
-      "patch_prog": 1,
+      "patch_bank": 0,
+      "patch_prog": 47,
       "play_note": 29,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 41
     },
     {
       "fine_tune": 0,
@@ -238,12 +238,12 @@
       "name": "Splash Cymbal",
       "note": 55,
       "pan": 0,
-      "patch_bank": 40,
-      "patch_prog": 1,
+      "patch_bank": 0,
+      "patch_prog": 47,
       "play_note": 29,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 41
     },
     {
       "fine_tune": 0,
@@ -264,12 +264,12 @@
       "name": "Ride Cymbal 2",
       "note": 59,
       "pan": 0,
-      "patch_bank": 40,
-      "patch_prog": 1,
-      "play_note": 29,
+      "patch_bank": 0,
+      "patch_prog": 47,
+      "play_note": 108,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 41
     },
     {
       "fine_tune": 0,
@@ -279,7 +279,7 @@
       "pan": 0,
       "patch_bank": 40,
       "patch_prog": 2,
-      "play_note": 32,
+      "play_note": 17,
       "sw_bank": -1,
       "sw_prog": -1,
       "voice_patch_type": 112
@@ -292,7 +292,7 @@
       "pan": 0,
       "patch_bank": 40,
       "patch_prog": 2,
-      "play_note": 26,
+      "play_note": 12,
       "sw_bank": -1,
       "sw_prog": -1,
       "voice_patch_type": 112
