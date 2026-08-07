@@ -152,9 +152,6 @@ OPLL_ROM_NAMES: dict[int, list[str]] = {
         "Trumpet", "Organ", "Bells", "Vibes", "Vibraphone", "Tutti",
         "Fretless", "Synth Bass", "Sweep"],
 }
-# fmemuif_*.profile.json の engines[].chips[].chip 名 -> OPLL_ROM_NAMESのvariant番号
-OPLL_CHIP_TO_VARIANT = {"OPLL": 0, "OPLL2": 0, "OPLLX": 1, "OPLLP": 2, "VRC7": 3}
-
 # gui/bridge/FITOMBridge.cpp kOpllRhythmNames/kOpnaRhythmNames。
 # CC#0=112(内蔵リズム音源モード)でCC#32=40(OPLL)/17(OPNA)を選んだときの
 # 楽器(物理チャンネル)名。Prog(patch_prog)がそのまま楽器番号になる
@@ -364,48 +361,32 @@ def collect_melodic_entries(profile: dict, profile_dir: Path, warn) -> list[Entr
     return entries
 
 
-def collect_engine_chips(profile: dict, profile_dir: Path) -> set[str]:
-    """hw_plugins[].profileが指すサブプロファイル(fmemuif_*.profile.json等)
-    を読み、engines[].chips[].chip の集合を返す(実際に搭載されている
-    チップを判定するため。OPLLビルトイン音色/リズムの対象variant、
-    OPNAビルトインリズムの有無を決めるのに使う)。"""
-    chips: set[str] = set()
-    for hp in profile.get("hw_plugins", []):
-        sub_path = hp.get("profile")
-        if not sub_path:
-            continue
-        # hw_plugins[].profileはプロセスのCWD(=リポジトリルート想定)相対で
-        # 書かれる規約(docs/CLAUDE.md 3.14節)。profile_dir相対ではない。
-        sub = load_json(resolve(REPO_ROOT, sub_path))
-        for eng in sub.get("engines", []):
-            for c in eng.get("chips", []):
-                if c.get("chip"):
-                    chips.add(c["chip"])
-    return chips
-
-
-def collect_builtin_entries(chips: set[str]) -> list[Entry]:
+def collect_builtin_entries() -> list[Entry]:
     """OPLLビルトイン音色バンク・OPLLビルトインリズム・OPNAビルトイン
     リズムは、ファイルを持たずFITOM_X本体にハードコードされているため、
-    実際に搭載されているチップ(collect_engine_chipsで判定)に応じて
-    手動で組み立てる。"""
+    プロファイルJSONの走査だけでは拾えない。
+
+    全プロファイルが共通の`unified.bankset.json`を参照し、実際の
+    デバイス構成(搭載チップ)に含まれないバンクエントリも変わらず表示
+    する(単に発音しないだけで実害がない)という設計原則(docs/CLAUDE.md
+    3.32節)に合わせ、当初実装していた「実際に搭載されているチップで
+    絞り込む」判定は撤廃し、他のhw_banks[]由来エントリ(例: OPLL専用
+    チップを持たないunified_presetでも通常のOPLLプリセットバンクは
+    表示される)と同じく、全プロファイル共通で常に追加する
+    (2026年8月8日、ユーザー指摘「Unified presetに登録されていない」
+    により訂正。docs/CLAUDE.md 3.43節)。"""
     entries: list[Entry] = []
-    variants = sorted({OPLL_CHIP_TO_VARIANT[c] for c in chips if c in OPLL_CHIP_TO_VARIANT})
     # ランタイム上はCC#0(voicePatchType)に関わらずhwProgだけで結果が
     # 決まるが(OPLL_BUILTIN_CC0_TO_VARIANT定義部のコメント参照)、GUIの
     # パッチピッカーに倣い、CC#0ごとに対応するvariantの音色のみを載せる
     # (MIDIシーケンサー側でチップが選択されているように見せるため)。
     for cc0, variant in sorted(OPLL_BUILTIN_CC0_TO_VARIANT.items()):
-        if variant not in variants:
-            continue
         for idx, name in enumerate(OPLL_ROM_NAMES[variant], start=1):
             entries.append(Entry(cc0, 0, (variant << 4) | idx, name))
-    if variants:
-        for prog, name in enumerate(OPLL_RHYTHM_NAMES):
-            entries.append(Entry(CC0_BUILTIN_RHYTHM, CC32_OPLL_RHYTHM, prog, name))
-    if "OPNA" in chips:
-        for prog, name in enumerate(OPNA_RHYTHM_NAMES):
-            entries.append(Entry(CC0_BUILTIN_RHYTHM, CC32_OPNA_RHYTHM, prog, name))
+    for prog, name in enumerate(OPLL_RHYTHM_NAMES):
+        entries.append(Entry(CC0_BUILTIN_RHYTHM, CC32_OPLL_RHYTHM, prog, name))
+    for prog, name in enumerate(OPNA_RHYTHM_NAMES):
+        entries.append(Entry(CC0_BUILTIN_RHYTHM, CC32_OPNA_RHYTHM, prog, name))
     return entries
 
 
@@ -440,8 +421,7 @@ def load_profiles(warn) -> list[Profile]:
         data = {**data, "banks": banks}
 
         melodic = collect_melodic_entries(data, profile_dir, lambda m, k=key: warn(f"{k}: {m}"))
-        chips = collect_engine_chips(data, profile_dir)
-        melodic += collect_builtin_entries(chips)
+        melodic += collect_builtin_entries()
         melodic += collect_sf2_entries(data, profile_dir, lambda m, k=key: warn(f"{k}: {m}"))
         drums = collect_drum_kits(data, profile_dir)
         profiles.append(Profile(key, display_name, melodic, drums))

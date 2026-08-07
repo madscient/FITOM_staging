@@ -182,16 +182,18 @@ OPLLビルトインリズム・OPNAビルトインリズムは、CC#0=112配下�
 CC#32の意味が「対象チップ選択」に、Progの意味が「楽器(物理チャンネル)
 直接指定」に変わります(`docs/manuals/builtin_rhythm.md`参照)。
 
-`variant`(OPLLビルトイン音色の上位3bit)は0=OPLL/OPLL2、1=OPLLX、
-2=OPLLP、3=VRC7に対応します。どのvariantを含めるかは、プロファイルの
-`hw_plugins[].profile`(`fmemuif_*.profile.json`等)が実際に搭載している
-チップ(`engines[].chips[].chip`)を`collect_engine_chips()`で読み取って
-動的に判定しています(`OPLL_CHIP_TO_VARIANT`)。OPNAビルトインリズムも
-同様に、搭載チップに`"OPNA"`が含まれるプロファイルのみに追加されます。
-これによって、たとえば`emu_opl`/`emu_opm`(OPLL/OPNAどちらも非搭載)には
-これら3種類のバンクは一切追加されず、`emu_opll`にはOPLLビルトイン音色・
-OPLLビルトインリズムのみ、`unified_preset`/`emu_opn`/`emu_fmgen_opn`には
-OPNAビルトインリズムのみ、両方搭載する`fmall`には3種類とも追加されます。
+この3種類は**プロファイルの実際のデバイス構成(搭載チップ)に関わらず、
+全対象プロファイル共通で常に追加します**(`collect_builtin_entries()`
+はプロファイルに依存する引数を取らない)。当初は`hw_plugins[].profile`
+(`fmemuif_*.profile.json`等)が実際に搭載しているチップ
+(`engines[].chips[].chip`)で絞り込む実装にしていたが、「`unified_preset`
+に登録されていない」というユーザー指摘を受けて撤廃した(2026年8月8日、
+docs/CLAUDE.md 3.43節)。全対象プロファイルが共通の`unified.bankset.json`
+を参照し、実際のデバイス構成に含まれないバンクエントリも変わらず表示
+する(単に発音しないだけで実害がない)という設計原則(docs/CLAUDE.md
+3.32節)に、他のhw_banks[]由来エントリ(例: OPLL専用チップを持たない
+`unified_preset`でも通常のOPLLプリセットバンクCC#0=40 CC#32=1/2/4は
+表示される)と同じ扱いに揃えている。
 
 ## 出力フォーマットの設計・制約・未検証事項
 
