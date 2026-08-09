@@ -29,7 +29,7 @@
       "auto_devices": true,
       "dll": "FitomEmuIF.dll",
       "name": "FitomEmuIF",
-      "profile": "config/profiles/hw_plugins/fmemuif_opm.profile.json"
+      "profile": "config/profiles/hw_plugins/fmemuif_opz.profile.json"
     },
     {
       "dll": "FitomSf2IF.dll",
@@ -45,7 +45,7 @@
     "__LOCAL__",
     "__LOCAL__"
   ],
-  "profile_name": "OPMエミュプロファイル (OPM×4)",
+  "profile_name": "OPZエミュプロファイル (OPZ×4)",
   "sf2_channel_windows": [
     {
       "ch": 14,
