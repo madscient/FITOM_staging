@@ -46,7 +46,8 @@ OP VCED 10バイト:
       VMEMはパネル上の「レベル」(大きいほど大音量)を格納するが、OPMの
       D1Lレジスタは「減衰量」(0=減衰なし)であり極性が逆のため反転する。
   +5: LS(0-99) keyboard level scaling
-  +6: [AME:1][EBS:3][KVS:3]
+  +6: [0:1][AME:1][EBS:3][KVS:3]  AME=bit6, EBS=bits5-3, KVS=bits2-0
+      実データ全2560オペレータの分布から確定(bit7は一度も立たない)。
   +7: OUT(0-99) → TL: OUT 20-99 は `99 - OUT`、OUT 0-19 はルックアップテーブル
       さらにキャリアのTLには A_alg(キャリア本数による音量正規化: 1本=0/2本=8/
       3本=13/4本=16) を加算する。モジュレータは対象外。
@@ -106,6 +107,28 @@ CARRIER_OPS_BY_ALG = {
 #  OP1=C2/OP2=M2/OP3=C1/OP4=M1で読み替えるとキャリア集合と完全に一致する)
 A_ALG_BY_CARRIER_COUNT = {1: 0, 2: 8, 3: 13, 4: 16}
 
+# キャリアのベロシティ→TL感度 (汎用デフォルト固定)。実機のKVSはキャリアにも
+# 設定されているが、キャリアのベロシティ応答は演奏性を優先して全パッチ均一に
+# するというプロジェクトの方針を優先する。
+CARRIER_VTL = 80
+
+# モジュレータのベロシティ→TL感度: VCEDのKVS(0-7)から換算する。
+# 実機のA_kvs(velocity依存の減衰量)のスイング分を、FITOM_XのVTL補正
+# (-kGM2dB[vel] * VTL/254 / 0.75、VoiceProcessor.cpp)でvelocity 32-127の
+# 範囲について最小二乗近似した値。KVS 1-2は残差±0.5ステップ以内でほぼ一致
+# するが、FITOM_XのVTLは変動幅をVTL/2に抑える設計のためKVS>=3はVTL=127で
+# 飽和し、実機ほど深い感度は表現できない(KVS=7・velocity32で約17dB不足)。
+# 出典: https://nornand.hatenablog.com/entry/2021/01/01/153911
+KVS_TO_VTL = {0: 0, 1: 42, 2: 89, 3: 127, 4: 127, 5: 127, 6: 127, 7: 127}
+
+def kvs_tl_floor(kvs):
+    """A_kvsのうちvelocity=127でも残る定数床[TLステップ]。
+    実機は `attKVS = ((KVS*table[vel-1] + (7-KVS)*16) >> 3) + 1` (7bit整数+1bit小数)
+    で、table[126]=0のためvelocity=127では `(7-KVS)*2+1` が残る。その半分(=TL
+    ステップ)を四捨五入すると `8 - KVS` になる。ベロシティに依存しない静的な
+    減衰なのでTLへ加算する(スイング分はVTLが受け持つ)。"""
+    return (8 - kvs) if kvs else 0
+
 def apply_alg_attenuation(alg, ops, tl_key="TL"):
     """キャリアのTLにA_alg(キャリア本数による音量正規化)を加算する。
     モジュレータのTLは変調指数を決めるもので合成後の音量に寄与しないため対象外。"""
@@ -143,12 +166,12 @@ def parse_op(vp, ap):
         "D2R": vp[2] & 0x1F,
         "RR":  vp[3] & 0x0F,
         "D1L": 15 - (vp[4] & 0x0F),
-        "TL":  out_to_tl(vp[7]),
+        "TL":  min(127, out_to_tl(vp[7]) + kvs_tl_floor(vp[6] & 7)),
         "MUL": mul,
         "DT1": dt1,
         "DT2": dt2,
         "KS":  rs,
-        "AM":  (vp[6] >> 7) & 1,
+        "AM":  (vp[6] >> 6) & 1,   # AME (bit7ではなくbit6。実データで確認)
         "WS":  opw,               # TX81Z波形 (OPZ拡張)
         # TX81Z固有拡張
         "FIX":   fix,
@@ -180,6 +203,11 @@ def parse_voice(vbytes):
 
     apply_alg_attenuation(b40 & 7, ops)
 
+    # SwPatch側のops: キャリアは汎用デフォルト固定、モジュレータはKVS由来
+    carriers = CARRIER_OPS_BY_ALG[b40 & 7]
+    sw_ops = [{"VTL": CARRIER_VTL if i in carriers else KVS_TO_VTL[ops[i]["KVS"]]}
+              for i in range(4)]
+
     # addr40 bit7(SY=LFO sync) / addr41(LFO speed) / addr42(LFO delay) /
     # addr43(PMD) / addr44(AMD) / addr45下位2bit(LFW=LFO波形)は、TX81Z実機の
     # 内蔵(ハードウェア)LFOを駆動するパラメータ。FITOM_XはHW LFOを使用せず
@@ -200,6 +228,7 @@ def parse_voice(vbytes):
             "REV": vbytes[81],
         },
         "ops": ops,
+        "sw_ops": sw_ops,
         "sw": {
             "transpose":  vbytes[46] - 24,  # 0-48 → -24〜+24
             "pitch_bend": vbytes[47] & 0xF,

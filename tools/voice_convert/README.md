@@ -91,6 +91,9 @@ DX21/DX27/DX100/DX11 のパネル表記 OP1-4 は OPM のチェーン順 (op1=M1
 |---|---|---|---|
 | OUTPUT LEVEL | 0-99 | TL (0-127) | OL 20-99: `99 - OL` / OL 0-19: ルックアップ表 |
 | （ALG由来） | — | TL に加算 | キャリアのみ `A_alg`（キャリア数 1/2/3/4 → 0/8/13/16） |
+| KVS | P6[2:0] = 0-7 | TL に加算 / `VTL` | `A_kvs` 定数床 `8-KVS` を TL に加算。スイング分はモジュレータの `VTL` へ |
+| AME | P6[6] | AM (0-1) | 直接 |
+| EBS | P6[5:3] = 0-7 | `ops[].EGS` | 直接（下位3bitにそのまま格納する近似） |
 | DECAY 1 LEVEL | 0-15 (15=減衰なし) | SL (0=減衰なし) | `15 - D1L` (極性反転) |
 | FREQUENCY COARSE | P8[5:2] | MUL (0-15) | 直接 |
 | DT2 | P8[1:0] | DT2 (0-3) | 直接 |
@@ -204,18 +207,35 @@ CC#1 Modulation として別途実装されている」と明記されている�
 
 ## 共通仕様: ベロシティ感度 (`ops[].VTL`)
 
-DX/TX81Z/FB-01 由来の swbank は、全パッチ・全 4 オペレータに汎用デフォルトの
-`VTL = 80`（`performance_presets.swbank.json` の "VelScale Mid" と同値）を与える。
-それ以外の `ops[]` フィールドは `FmSwOp` の既定値（すべて 0）に任せるため出力しない
-（`jsonToSwOp` は JSON に存在するキーだけを上書きする）。
+swbank の `ops[]` は `VTL` のみを出力する。他のフィールドは `FmSwOp` の既定値
+（すべて 0）に任せる（`jsonToSwOp` は JSON に存在するキーだけを上書きする）。
 
-変換元 VCED の `KVS`（Key Velocity Sensitivity、0-7、オペレータ単位）は変換しない。
-[実機の減衰量算出](https://nornand.hatenablog.com/entry/2021/01/01/153911) は
-`A_kvs = ((KVS × table[velocity-1] + (7-KVS)×16) >> 3) + 1` という velocity 依存の
-減衰量を `V_TL` の総和に加算する方式で、FITOM_X の `VTL`（NoteOn 時に TL を動的補正
-する感度係数）とはモデルが異なり、換算の妥当性を裏付ける材料がない。
-同じ記事の `A_ls`（Level Scaling、ノート番号依存）に相当するフィールドも FITOM_X には
-存在しないため、`LS` も同様に破棄する。
+| オペレータ | VTL |
+|---|---|
+| キャリア | `80` 固定（`performance_presets.swbank.json` の "VelScale Mid" と同値） |
+| モジュレータ | VCED の `KVS`(0-7) から換算: `0, 42, 89, 127, 127, 127, 127, 127` |
+
+キャリアのベロシティ応答は全パッチ均一にする（演奏性優先）というプロジェクトの
+方針を優先し、キャリアでは `KVS` を使わない。モジュレータの `KVS` は音色の明るさの
+ベロシティ追従そのものなので変換する。
+
+`KVS` → `VTL` の値は、実機の
+[`A_kvs = ((KVS × table[velocity-1] + (7-KVS)×16) >> 3) + 1`](https://nornand.hatenablog.com/entry/2021/01/01/153911)
+（7bit整数+1bit小数、`table` は velocity 1-127 の 127 要素）のうち **velocity 依存の
+スイング分**を、FITOM_X の VTL 補正
+`-kGM2dB[vel] × VTL/254 ÷ 0.75`（`VoiceProcessor.cpp`）で velocity 32-127 の範囲に
+ついて最小二乗近似したもの。`KVS` 1-2 は残差 ±0.5 ステップ以内でほぼ一致するが、
+FITOM_X の VTL は変動幅を `VTL/2` に抑える設計のため **`KVS`≥3 は `VTL=127` で飽和**
+し、実機ほど深い感度は表現できない（`KVS=7`・velocity 32 で約 17dB 不足）。
+
+`A_kvs` には velocity=127 でも残る**定数床**がある（`table[126]=0` なので
+`(7-KVS)×2+1` が残り、TL ステップに直すと `8 - KVS`）。これはベロシティに依存しない
+静的な減衰なので、`KVS`>0 のオペレータの **TL に加算**する（スイング分は VTL が
+受け持つ）。
+
+`A_ls`（Level Scaling、ノート番号依存）に相当するフィールドは FITOM_X に存在しない
+ため、`LS` は破棄する。FB-01 の `VEL_TL`（velocity sensitivity、3bit）は `KVS` とは
+別パラメータで換算カーブが不明なため未変換（FB-01 は全 op で `VTL=80`）。
 
 ## 出力フォーマット: hwbank.json
 
