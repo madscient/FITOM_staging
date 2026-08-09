@@ -76,19 +76,45 @@ python3 vmem_convert.py /path/to/syx/ /path/to/out/
 
 **VMEM 1音色 (128バイト)**:
 - P0-9: OP4 → M1 → ops[0]
-- P10-19: OP2 → C1 → ops[1]
-- P20-29: OP3 → M2 → ops[2]
+- P10-19: OP2 → M2 → ops[2]
+- P20-29: OP3 → C1 → ops[1]
 - P30-39: OP1 → C2 → ops[3]
 - P40-72: 共通パラメータ / 音色名 (10文字)
+
+VMEM はオペレータを **OPM のレジスタスロット順 (M1,M2,C1,C2)** で格納する。
+DX21/DX27/DX100/DX11 のパネル表記 OP1-4 は OPM のチェーン順 (op1=M1〜op4=C2) と
+逆順であり、`OP4=M1 / OP3=C1 / OP2=M2 / OP1=C2` に対応する。
 
 **主要変換**:
 
 | VMEM パラメータ | 範囲 | OPM レジスタ | 変換式 |
 |---|---|---|---|
-| OUTPUT LEVEL | 0-99 | TL (0-127) | `127 - round(OL×127/99)` |
+| OUTPUT LEVEL | 0-99 | TL (0-127) | OL 20-99: `99 - OL` / OL 0-19: ルックアップ表 |
+| （ALG由来） | — | TL に加算 | キャリアのみ `A_alg`（キャリア数 1/2/3/4 → 0/8/13/16） |
+| DECAY 1 LEVEL | 0-15 (15=減衰なし) | SL (0=減衰なし) | `15 - D1L` (極性反転) |
 | FREQUENCY COARSE | P8[5:2] | MUL (0-15) | 直接 |
 | DT2 | P8[1:0] | DT2 (0-3) | 直接 |
-| DETUNE | 0-14 (中央7) | DT1 (0-7) | 差分→OPM符号付き変換 |
+| RS | P9[4:3] | KSR (0-3) | 直接 |
+| DETUNE | P9[2:0] = 0-6 (中央3) | DT1 (3bit、bit2が符号) | `3→0, 4/5/6→1/2/3, 2/1/0→5/6/7` |
+
+`P+9` のビット配置は `[0:3][RS:2][DETUNE:3]`。DX21/DX100/DX11/TX81Z の実データ
+全2560オペレータで最大値30(`0b11110`)・bit7-5が常に0・下位3bitに7が出現しない
+ことから確定している。`P+8` の上位2bitも同様に常に0(固定周波数フラグではない)。
+
+OUTPUT LEVEL → TL の対応表は
+[この記事](https://nornand.hatenablog.com/entry/2020/11/21/201911)が出典。
+OL 0-19 の非線形域は
+`127,122,118,114,110,107,104,102,100,98,96,94,92,90,88,86,85,84,82,81`。
+**同じブログのVolumeパラメータ用テーブルは別カーブなので流用してはならない**
+(流用すると減衰量が最大30dB以上不足し、モジュレータが過大変調になる)。
+
+`A_alg` は同記事の `V_TL = A_vol + A_alg + A_ol + A_ls + A_kvs + A_ebs` のうち
+アルゴリズム由来の項で、**キャリアを N 本合成したときの振幅 N 倍を打ち消す
+1/N 正規化**（TL は 0.75dB/step: 2本=8→6.00dB, 3本=13→9.75dB, 4本=16→12.00dB、
+それぞれ `20·log₁₀(N)` = 6.02/9.54/12.04dB に対応）。合成後の音量に寄与するのは
+キャリアだけなので**モジュレータには加算しない**。記事は TX81Z のパネル表記
+op 番号で「ALG5 は op1,3 が 8」等と記述しているが、`OP1=C2 / OP2=M2 / OP3=C1 /
+OP4=M1` で読み替えると OPM のキャリア集合と厳密に一致する。
 
 ---
 
@@ -103,8 +129,9 @@ python3 fb01_convert.py /path/to/dmp/ /path/to/out/
 
 **ファイル構造**: 32バイトヘッダ + 64スロット × 48バイト
 
-**OP順序**: `OP#0(M1)→ops[0], OP#2(C1)→ops[1], OP#1(M2)→ops[2], OP#3(C2)→ops[3]`
-(OP#1 と OP#2 が入れ替わる点に注意)
+**OP順序**: `OP#0(M1)→ops[0], OP#1(C1)→ops[1], OP#2(M2)→ops[2], OP#3(C2)→ops[3]`
+FB-01 の voice data はレジスタ生値をチェーン順で持つため、並び替えも値の
+極性反転も不要（VMEM系のようなパネル値変換が入らない）。
 
 ---
 
@@ -119,6 +146,10 @@ python3 tx81z_convert.py /path/to/syx/ /path/to/out/
 
 **SysEx フォーマット**: `F0 43 0n 04 [SH] [SL] [4096バイト] CS F7`
 サイズは MIDI 7bit エンコード: `(SH<<7)|SL = 4096`
+
+**OP順序**: VCED部・ACED部とも `vmem_convert.py` と同じレジスタスロット順
+(`addr0/73→ops[0]`, `addr10/75→ops[2]`, `addr20/77→ops[1]`, `addr30/79→ops[3]`)。
+D1L の極性反転・`P+9` のビット配置も VMEM 系と共通。
 
 **TX81Z 固有拡張 (ACED)**:
 
@@ -142,6 +173,49 @@ ops[1] = C1 (Carrier 1   / Operator 2)
 ops[2] = M2 (Modulator 2 / Operator 3)
 ops[3] = C2 (Carrier 2   / Operator 4)  ← 2OP グループでは使用しない
 ```
+
+これは**アルゴリズム図のチェーン順**（ALG=0 なら `ops[0]→ops[1]→ops[2]→ops[3]`）
+であり、**実機のレジスタスロット順 (M1,M2,C1,C2) とは異なる**。チップドライバ側
+(`COPM::kMap = {0,2,1,3}`) がレジスタ書き込み時に並び替える。キャリア判定
+(`kCarrierMask`) もこのチェーン順の添字で定義されているため、変換元が
+レジスタスロット順で格納しているフォーマット（DX/TX81Z の VMEM 等）は
+`ops[1]` と `ops[2]` を入れ替えて格納する必要がある。
+
+## 共通仕様: ハードウェアLFOパラメータは変換しない
+
+変換元が持つ **内蔵(ハードウェア)LFO のパラメータは swbank へ変換しない**。
+対象は DX/TX81Z VMEM の LFO SYNC / LFO SPEED / LFO DELAY / PMD / AMD /
+LFO WAVE、FB-01 の LFO speed / AMD / PMD / LFO wave / LFO sync / LFO enable。
+
+FITOM_X は HW LFO を使用しない（`COPM::updateVoice` がレジスタ `$38+ch` に 0 を
+書いて無効化する）。swbank の `sw.*` はこれとは別機構の**ソフトLFO**の設定で、
+`swbank.schema.json` の `sw` 説明にも「HW LFO はボイスパラメータから切り離され、
+CC#1 Modulation として別途実装されている」と明記されている。さらに `sw.LFR>0` の
+音色は **CC#1（モジュレーションホイール）が作用しなくなる**仕様
+（`ISoundDevice.h` の `setCC1Modulation`）。HW LFO 設定を `sw.*` に流し込むと
+「常時ビブラートが掛かり、かつモジュレーションが効かない」状態になる。
+
+`SwPatch` のデフォルトは全フィールド 0（ソフトLFO無効）なので、swbank 側は
+`sw` オブジェクトを出力しないのが正しい。TRANSPOSE のような HW LFO と無関係の
+演奏パラメータ（→ `fine_transpose`）は従来どおり変換する。
+
+`hw.PMS`/`hw.AMS`（レジスタ `$38+ch` の HW LFO 感度）は変換元の情報を保つため
+値としては格納するが、上記の理由で OPM/OPZ では実際には参照されない。
+
+## 共通仕様: ベロシティ感度 (`ops[].VTL`)
+
+DX/TX81Z/FB-01 由来の swbank は、全パッチ・全 4 オペレータに汎用デフォルトの
+`VTL = 80`（`performance_presets.swbank.json` の "VelScale Mid" と同値）を与える。
+それ以外の `ops[]` フィールドは `FmSwOp` の既定値（すべて 0）に任せるため出力しない
+（`jsonToSwOp` は JSON に存在するキーだけを上書きする）。
+
+変換元 VCED の `KVS`（Key Velocity Sensitivity、0-7、オペレータ単位）は変換しない。
+[実機の減衰量算出](https://nornand.hatenablog.com/entry/2021/01/01/153911) は
+`A_kvs = ((KVS × table[velocity-1] + (7-KVS)×16) >> 3) + 1` という velocity 依存の
+減衰量を `V_TL` の総和に加算する方式で、FITOM_X の `VTL`（NoteOn 時に TL を動的補正
+する感度係数）とはモデルが異なり、換算の妥当性を裏付ける材料がない。
+同じ記事の `A_ls`（Level Scaling、ノート番号依存）に相当するフィールドも FITOM_X には
+存在しないため、`LS` も同様に破棄する。
 
 ## 出力フォーマット: hwbank.json
 
