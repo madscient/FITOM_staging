@@ -18,8 +18,8 @@ Voice Data ($00-$2F, 48バイト):
   $0E:     %0xx00000  x=LFO wave(2bit)
   $0F:     transpose (signed byte, 100 cents resolution)
   $10-$17: OP#0 block (→ OPM M1 → ops[0])
-  $18-$1F: OP#1 block (→ OPM M2 → ops[2])
-  $20-$27: OP#2 block (→ OPM C1 → ops[1])
+  $18-$1F: OP#1 block (→ OPM C1 → ops[1])
+  $20-$27: OP#2 block (→ OPM M2 → ops[2])
   $28-$2F: OP#3 block (→ OPM C2 → ops[3])
 
 Operator Block (8バイト):
@@ -34,8 +34,8 @@ Operator Block (8バイト):
 
 OP番号→OPMスロット→FITOM_X ops[]対応:
   FB-01 OP#0 → OPM M1 → ops[0]
-  FB-01 OP#2 → OPM C1 → ops[1]
-  FB-01 OP#1 → OPM M2 → ops[2]
+  FB-01 OP#1 → OPM C1 → ops[1]
+  FB-01 OP#2 → OPM M2 → ops[2]
   FB-01 OP#3 → OPM C2 → ops[3]
 """
 
@@ -46,9 +46,13 @@ HEADER_SIZE  = 32
 VOICE_SIZE   = 48
 VOICE_COUNT  = 64
 
-# FB-01 OP格納順 → FITOM_X ops[M1,C1,M2,C2] へのインデックス
-# ops[0]=M1=OP#0, ops[1]=C1=OP#2, ops[2]=M2=OP#1, ops[3]=C2=OP#3
-OP_SLOT_ORDER = [0, 2, 1, 3]  # OP#インデックス順: [M1,C1,M2,C2]
+# 汎用デフォルトのベロシティ→TL感度 (banks/sw/performance_presets.swbank.json の
+# "VelScale Mid" と同値)
+DEFAULT_VTL = 80
+
+# FB-01のvoice dataはオペレータをOPMのチェーン順(M1,C1,M2,C2)で格納しており、
+# FITOM_Xのops[]と同順のため並び替えは不要。
+OP_SLOT_ORDER = [0, 1, 2, 3]  # OP#インデックス順: [M1,C1,M2,C2]
 
 def is_valid_name(name_bytes):
     """音色名が有効(ASCII印刷可能で最初の文字がアルファベット/数字)か判定"""
@@ -83,26 +87,26 @@ def parse_voice(vbytes):
     """48バイトのvoice dataを解析"""
     name = vbytes[:7].decode('ascii', errors='replace').rstrip()
 
-    lfo_speed    = vbytes[7]
-    enable_lfo   = (vbytes[8] >> 7) & 1
-    amd          =  vbytes[8] & 0x7F
-    sync_lfo     = (vbytes[9] >> 7) & 1
-    pmd          =  vbytes[9] & 0x7F
-
+    # $07(LFO speed) / $08(enable_lfo, AMD) / $09(sync_lfo, PMD) / $0E(LFO wave)
+    # はFB-01実機の内蔵(ハードウェア)LFOを駆動するパラメータ。FITOM_XはHW LFOを
+    # 使用せず(`COPM::updateVoice`がレジスタ$38+chに0を書いて無効化する)、swbankの
+    # `sw.*`は別機構であるソフトLFOの設定であるため変換しない。さらに`sw.LFR>0`の
+    # 音色はCC#1(モジュレーションホイール)が作用しなくなる仕様
+    # (`ISoundDevice.h`の`setCC1Modulation`)のため、流し込むと「常時ビブラートが
+    # 掛かりモジュレーションが効かない」状態になる。
     op_enable = [(vbytes[11] >> (3 + i)) & 1 for i in range(4)]  # OP#0-3
 
     fb          = (vbytes[12] >> 3) & 0x07
     alg         =  vbytes[12] & 0x07
+    # PMS/AMSは実機レジスタ$38+chのHW LFO感度。値は保持するがFITOM_Xが
+    # HW LFOを無効化するため実際には参照されない。
     pms         = (vbytes[13] >> 4) & 0x07
     ams         = (vbytes[13] >> 2) & 0x03
-    lfo_wave    = (vbytes[14] >> 1) & 0x03
     transpose   =  vbytes[15] if vbytes[15] < 128 else vbytes[15] - 256
 
     # 4OP blocks: OP#0=$10, OP#1=$18, OP#2=$20, OP#3=$28
     raw_ops = [parse_op_block(vbytes[16 + i*8 : 24 + i*8]) for i in range(4)]
 
-    # FITOM_X ops[M1,C1,M2,C2] 順に並べ替え
-    # OP#0=M1→[0], OP#2=C1→[1], OP#1=M2→[2], OP#3=C2→[3]
     ops = [raw_ops[OP_SLOT_ORDER[i]] for i in range(4)]
 
     return {
@@ -113,26 +117,10 @@ def parse_voice(vbytes):
         "PMS":  pms,
         "ops":  ops,
         "sw": {
-            "lfo_speed":  lfo_speed,
-            "amd":        amd,
-            "pmd":        pmd,
             "transpose":  transpose,
             "op_enable":  op_enable,
-            "lfo_wave":   lfo_wave,
-            "lfo_sync":   sync_lfo,
-            "lfo_enable": enable_lfo,
         },
     }
-
-def lfospeed_to_rate(speed_0_255, enabled):
-    """FB-01 LFO SPEED(0-255) → swbank LFR(1-127,対数カーブ0.5-50Hz)への近似変換"""
-    if not enabled or speed_0_255 <= 0:
-        return 0
-    return max(1, min(127, round(speed_0_255 * 127 / 255)))
-
-def pmd_to_depth_cents(pmd_0_127):
-    """FB-01 PMD(0-127) → swbank depth_cents への近似変換(0-600セント)"""
-    return round(pmd_0_127 * 600 / 127)
 
 def transpose_to_fine(transpose_signed):
     """FB-01 transpose(signed byte, 100cents単位) → fine_transpose(セント、±1200でクリップ)"""
@@ -172,20 +160,14 @@ def convert(src_path, dst_hwbank_path, dst_swbank_path, bank_no=0):
             "sw_bank": bank_no,
             "sw_prog": prog_no,
         })
-        sw = voice["sw"]
         sw_patches.append({
             "prog": prog_no,
             "name": pname,
-            "sw": {
-                "LWF": sw["lfo_wave"],
-                "LFS": sw["lfo_sync"],
-                "LFM": 0,
-                "LFD": 0,   # FB-01データに遅延情報なし
-                "LFR": lfospeed_to_rate(sw["lfo_speed"], sw["lfo_enable"]),
-                "LFI": 0,
-                "depth_cents": pmd_to_depth_cents(sw["pmd"]),
-            },
-            "fine_transpose": transpose_to_fine(sw["transpose"]),
+            # 変換元のVEL_TL(ベロシティ感度)は対応フィールドの解釈が未確定のため
+            # 変換せず、パフォーマンス情報を持たない変換元と同じ扱いで汎用
+            # デフォルトのVTLのみを与える。他はFmSwOpの既定値(0)のまま。
+            "ops": [{"VTL": DEFAULT_VTL} for _ in range(4)],
+            "fine_transpose": transpose_to_fine(voice["sw"]["transpose"]),
         })
         prog_no += 1
 
@@ -195,17 +177,23 @@ def convert(src_path, dst_hwbank_path, dst_swbank_path, bank_no=0):
         "op_count": 4,
         "source":   f"{Path(src_path).name} (Yamaha FB-01 ROM dump)",
         "note":     "FB-01系最上位(OPZ2)として宣言。ops[]=[M1,C1,M2,C2]順"
-                    "(FB-01格納順OP#0,OP#2,OP#1,OP#3から並び替え済み)。"
+                    "(FB-01格納順OP#0-#3がこの順と一致するため並び替え無し)。"
                     "sw_bank/sw_progで対になるswbank(同名.swbank.json)を参照。"
                     "VEL_TL/VEL_AR/KLS_type/KLS_depth/TL_adjは対応フィールドが"
-                    "存在しないため破棄。",
+                    "存在しないため破棄。hw.PMS/AMSは実機レジスタ値として格納して"
+                    "いるが、FITOM_XはHW LFOを無効化するため実際には参照されない。",
         "patches": hw_patches,
     }
     sw_out = {
         "name": f"{src_name} (Performance)",
         "bank": bank_no,
-        "note": "FB-01のLFO速度/PMD/transposeから変換。速度・深さの換算式は"
-                "実機の正確なカーブが不明なため線形近似。AMDは対応フィールドなし破棄。",
+        "note": "FB-01のtransposeをfine_transpose(セント)へ変換したもの。"
+                f"opsのVTL={DEFAULT_VTL}はパフォーマンス情報を持たない変換元向けの"
+                "汎用デフォルト。"
+                "FB-01のLFO速度/AMD/PMD/LFO波形/LFO sync/LFO enableはFB-01実機の"
+                "ハードウェアLFO用パラメータであり、FITOM_XはHW LFOを使用せず、"
+                "swbankのsw.*は別機構のソフトLFO設定であるため変換しない"
+                "(sw.LFR>0にするとCC#1モジュレーションが効かなくなる)。",
         "patches": sw_patches,
     }
 
