@@ -1,0 +1,143 @@
+{
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルに必ず存在するOPLL系デバイス向けのバンクで上書きする(2026年7月新設のbank_overrides機構、既存bank/progとの重複可)。",
+    "drum_banks": [
+      {
+        "file": "../../banks/drums/opll_rhythm.drumkit.json",
+        "name": "OPLL Built-in set",
+        "prog": 0
+      }
+    ],
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/gm_layered_opll.patchbank.json"
+      }
+    ]
+  },
+  "banks": "unified.bankset.json",
+  "devices": [
+    {
+      "chip": "OPLL",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPLL",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPLL",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "OPLL",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPLLP",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPLLP",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPLLP",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "OPLLP",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "VRC7",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "VRC7",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "VRC7",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "VRC7",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPLLX",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPLLX",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPLLX",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "OPLLX",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SF2",
+      "if": "HW",
+      "label": "SF2 (FluidSynth)",
+      "stereo_pair": true,
+      "plugin": "FitomSf2IF"
+    }
+  ],
+  "hw_plugins": [
+    {
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_opll_stereo.profile.json"
+    },
+    {
+      "dll": "FitomSf2IF.dll",
+      "name": "FitomSf2IF",
+      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
+    }
+  ],
+  "master_pitch": 440.0,
+  "master_volume": 100,
+  "midi_inputs": [
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
+  ],
+  "sf2_channel_windows": [
+    { "mpu": 1, "ch": 14, "fluidsynth_chan": 0 },
+    { "mpu": 1, "ch": 15, "fluidsynth_chan": 1 }
+  ],
+  "profile_name": "OPLLエミュプロファイル (OPLL[rhythm]/OPLLP/VRC7/OPLLX)"
+}

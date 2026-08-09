@@ -1,0 +1,120 @@
+{
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルに必ず存在するOPL系デバイス向けのバンクで上書きする(2026年7月新設のbank_overrides機構、既存bank/progとの重複可)。",
+    "drum_banks": [
+      {
+        "file": "../../banks/drums/opl_builtin_rhythm.drumkit.json",
+        "name": "OPL Built-in set",
+        "prog": 0
+      }
+    ],
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/gm_layered_opl2.patchbank.json"
+      }
+    ]
+  },
+  "banks": "unified.bankset.json",
+  "devices": [
+    {
+      "chip": "Y8950",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "Y8950",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "Y8950",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "Y8950",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL3",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPL3",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "L",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL3",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "OPL3",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "R",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL3",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 2,
+      "label": "OPL3",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "L",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL4",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPL4",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "R",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SF2",
+      "if": "HW",
+      "label": "SF2 (FluidSynth)",
+      "plugin": "FitomSf2IF"
+    }
+  ],
+  "hw_plugins": [
+    {
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_opl_stereo.profile.json"
+    },
+    {
+      "dll": "FitomSf2IF.dll",
+      "name": "FitomSf2IF",
+      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
+    }
+  ],
+  "master_pitch": 440.0,
+  "master_volume": 100,
+  "midi_inputs": [
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
+  ],
+  "sf2_channel_windows": [
+    { "mpu": 1, "ch": 14, "fluidsynth_chan": 0 },
+    { "mpu": 1, "ch": 15, "fluidsynth_chan": 1 }
+  ],
+  "profile_name": "OPLエミュプロファイル (OPL[rhythm]/Y8950/OPL2/OPL3/OPL4)"
+}
