@@ -24,9 +24,12 @@ VMEM構造 (128バイト/音色):
          D1Lレジスタは「減衰量」(0=減衰なし)であり極性が逆のため反転する。
     P+5: KEYBOARD SCALING LEVEL (0-99) ← DX21/DX100固有のソフトパラメータ。
          FITOM_X hwbank.schema.jsonに対応フィールドが存在しないため出力しない。
-    P+6: [AM:1][EG_BIAS_SENS:3][KEY_VEL:2][?:2]
-         AM/EG_BIAS_SENSはhw.ops[].AM / hw.ext.EGSに変換する。
-         KEY_VELは対応フィールドが存在しないため出力しない。
+    P+6: [0:1][AME:1][EBS:3][KVS:3]
+         AME=bit6(AM有効フラグ)、EBS=bits5-3(EG Bias Sensitivity 0-7)、
+         KVS=bits2-0(Key Velocity Sensitivity 0-7)。
+         実データ全2560オペレータの分布から確定したビット配置(bit7は一度も
+         立たず、bit6は281opで立ち、bits2-0は0-7の滑らかな分布)。
+         AME→ops[].AM、EBS→ops[].EGSに変換する。
     P+7: OUTPUT LEVEL (0-99)
     P+8: [0:2][COARSE:4][DT2:2]
          上位2bitは実データ(dx21/dx100/dx11/tx81z 全2560オペレータ)で常に0。
@@ -75,6 +78,8 @@ VMEM構造 (128バイト/音色):
   OL:   0-99 → OPM TL = OL 20-99 は `99 - OL`、OL 0-19 はルックアップテーブル
     さらにキャリアのTLには A_alg(キャリア本数による音量正規化: 1本=0/2本=8/
     3本=13/4本=16) を加算する。モジュレータは対象外。
+    KVS>0のopには A_kvs の定数床(`8 - KVS`) も加算する。
+  KVS:  0-7 → swbank ops[].VTL (モジュレータのみ。キャリアは汎用デフォルト固定)
   COARSE: P8[5:2] (4bit) → OPM MUL = 直接 (0-15)
   DT2:   P8[1:0] (2bit) → OPM DT2 = 直接 (0-3)
   DETUNE: 0-6(中央3) → OPM DT1 (3bit、bit2が符号、0と4はいずれも無デチューン)
@@ -106,9 +111,29 @@ from pathlib import Path
 # で格納するが、FITOM_Xのops[]はチェーン順[M1,C1,M2,C2]。P10とP20を入れ替える。
 VMEM_OP_BASES = [0, 20, 10, 30]   # ops[0]=P0(M1), ops[1]=P20(C1), ops[2]=P10(M2), ops[3]=P30(C2)
 
-# 汎用デフォルトのベロシティ→TL感度 (banks/sw/performance_presets.swbank.json の
-# "VelScale Mid" と同値)。VCEDのKVSは変換しないため全パッチ一律で与える。
-DEFAULT_VTL = 80
+# キャリアのベロシティ→TL感度。汎用デフォルト値で固定する
+# (banks/sw/performance_presets.swbank.json の "VelScale Mid" と同値)。
+# 実機のKVSはキャリアにも設定されているが、キャリアのベロシティ応答は
+# 演奏性を優先して全パッチ均一にするというプロジェクトの方針を優先する。
+CARRIER_VTL = 80
+
+# モジュレータのベロシティ→TL感度: VCEDのKVS(0-7)から換算する。
+# 実機のA_kvs(velocity依存の減衰量)のスイング分を、FITOM_Xの
+# VTL補正(-kGM2dB[vel] * VTL/254 / 0.75、VoiceProcessor.cpp)で
+# velocity 32-127の範囲について最小二乗近似した値。
+# KVS 1-2は残差±0.5ステップ以内でほぼ一致するが、FITOM_XのVTLは
+# 変動幅をVTL/2に抑える設計のためKVS>=3はVTL=127で飽和し、実機ほど深い
+# 感度は表現できない(KVS=7・velocity32で約17dB不足)。
+# 出典: https://nornand.hatenablog.com/entry/2021/01/01/153911
+KVS_TO_VTL = {0: 0, 1: 42, 2: 89, 3: 127, 4: 127, 5: 127, 6: 127, 7: 127}
+
+def kvs_tl_floor(kvs):
+    """A_kvsのうちvelocity=127でも残る定数床[TLステップ]。
+    実機は `attKVS = ((KVS*table[vel-1] + (7-KVS)*16) >> 3) + 1` (7bit整数+1bit小数)
+    で、table[126]=0のためvelocity=127では `(7-KVS)*2+1` が残る。その半分(=TL
+    ステップ)を四捨五入すると `8 - KVS` になる。ベロシティに依存しない静的な
+    減衰なのでTLへ加算する(スイング分はVTLが受け持つ)。"""
+    return (8 - kvs) if kvs else 0
 
 # OUTPUT LEVEL (0-99) → OPM TL(減衰量) 変換テーブル (実機ルックアップ)
 # 参考: https://nornand.hatenablog.com/entry/2020/11/21/201911
@@ -169,6 +194,7 @@ def transpose_to_fine(transpose_0_48):
 def parse_vmem_voice(vbytes):
     """128バイトのVMEMデータを解析してHwPatch(フラット構造)+SwPatchデータに変換"""
     ops = []
+    kvs_list = []
     for op_base in VMEM_OP_BASES:
         p = vbytes[op_base:op_base+10]
         ar   = p[0] & 0x1F
@@ -176,17 +202,18 @@ def parse_vmem_voice(vbytes):
         d2r  = p[2] & 0x1F
         rr   = p[3] & 0x0F
         d1l  = p[4] & 0x0F
-        am      = (p[6] >> 7) & 1
-        eg_bias = (p[6] >> 4) & 7      # EG_BIAS_SENS (0-7)
-        # key_vel = (p[6] >> 2) & 3    # 対応フィールドなし、破棄
+        am      = (p[6] >> 6) & 1      # AME
+        eg_bias = (p[6] >> 3) & 7      # EBS (0-7)
+        kvs     =  p[6] & 7            # KVS (0-7)
         ol   = p[7] & 0x7F
         mul    = (p[8] >> 2) & 0xF
         dt2    =  p[8] & 0x03
         ksr    = (p[9] >> 3) & 3
         detune =  p[9] & 0x07
 
-        tl  = ol_to_tl(ol)
+        tl  = min(127, ol_to_tl(ol) + kvs_tl_floor(kvs))
         dt1 = detune_to_dt1(detune)
+        kvs_list.append(kvs)
 
         ops.append({
             "AR": ar, "DR": d1r, "SR": d2r, "RR": rr, "SL": 15 - d1l,
@@ -201,6 +228,11 @@ def parse_vmem_voice(vbytes):
     alg      =  p40 & 7
 
     apply_alg_attenuation(alg, ops)
+
+    # SwPatch側のops: キャリアは汎用デフォルト固定、モジュレータはKVS由来
+    carriers = CARRIER_OPS_BY_ALG[alg & 7]
+    sw_ops = [{"VTL": CARRIER_VTL if i in carriers else KVS_TO_VTL[kvs_list[i]]}
+              for i in range(4)]
 
     p45 = vbytes[45]
     pms      = (p45 >> 4) & 7
@@ -223,6 +255,7 @@ def parse_vmem_voice(vbytes):
         "ext": {
             "ALG_EXT": 1 if noise else 0,  # ノイズ有効フラグ
         },
+        "sw_ops": sw_ops,
         "fine_transpose": transpose_to_fine(transpose),
     }
 
@@ -268,10 +301,8 @@ def convert_syx(src_path, dst_hwbank_path, dst_swbank_path, bank_no=0):
         })
         sw_patches.append({
             "prog": i, "name": pname,
-            # 変換元のKVS(ベロシティ感度)は変換しないため、パフォーマンス情報を
-            # 持たない変換元と同じ扱いで汎用デフォルトのVTLのみを与える。
-            # 他のフィールドはFmSwOpの既定値(0)のまま = 未設定。
-            "ops": [{"VTL": DEFAULT_VTL} for _ in range(4)],
+            # VTL以外のフィールドはFmSwOpの既定値(0)のまま = 未設定
+            "ops": voice["sw_ops"],
             "fine_transpose": voice["fine_transpose"],
         })
 
@@ -294,8 +325,8 @@ def convert_syx(src_path, dst_hwbank_path, dst_swbank_path, bank_no=0):
         "name": f"{src_name} (Performance)",
         "bank": bank_no,
         "note": "VMEMのTRANSPOSEをfine_transpose(セント)へ変換したもの。"
-                f"opsのVTL={DEFAULT_VTL}はパフォーマンス情報を持たない変換元向けの"
-                "汎用デフォルト(VCEDのKVSは変換しない)。"
+                f"opsのVTLはキャリアが汎用デフォルト固定({CARRIER_VTL})、"
+                "モジュレータはVCEDのKVS(0-7)からの換算値。"
                 "VMEMのLFO SYNC/WAVE/SPEED/DELAY/PMD/AMDはDX実機の"
                 "ハードウェアLFO用パラメータであり、FITOM_XはHW LFOを使用せず、"
                 "swbankのsw.*は別機構のソフトLFO設定であるため変換しない"

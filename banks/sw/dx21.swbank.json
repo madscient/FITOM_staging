@@ -1,7 +1,7 @@
 {
   "name": "dx21 (Performance)",
   "bank": 0,
-  "note": "VMEMのTRANSPOSEをfine_transpose(セント)へ変換したもの。opsのVTL=80はパフォーマンス情報を持たない変換元向けの汎用デフォルト(変換元のベロシティ感度は変換していない)。VMEMのLFO SYNC/WAVE/SPEED/DELAY/PMD/AMDはDX/TX81Z実機のハードウェアLFO用パラメータであり、FITOM_XはHW LFOを使用せず、swbankのsw.*は別機構のソフトLFO設定であるため変換しない(sw.LFR>0にするとCC#1モジュレーションが効かなくなる)。",
+  "note": "VMEMのTRANSPOSEをfine_transpose(セント)へ変換したもの。opsのVTLはキャリアが汎用デフォルト固定(80)、モジュレータはVCEDのKVS(0-7)からの換算値(0/42/89/127/127/127/127/127)。VMEMのLFO SYNC/WAVE/SPEED/DELAY/PMD/AMDはDX/TX81Z実機のハードウェアLFO用パラメータであり、FITOM_XはHW LFOを使用せず、swbankのsw.*は別機構のソフトLFO設定であるため変換しない(sw.LFR>0にするとCC#1モジュレーションが効かなくなる)。",
   "patches": [
     {
       "prog": 0,
@@ -9,13 +9,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -28,13 +28,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -47,13 +47,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -66,13 +66,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -85,13 +85,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -104,13 +104,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -123,13 +123,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -142,13 +142,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -161,13 +161,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -180,13 +180,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -199,13 +199,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -218,13 +218,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -237,13 +237,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -256,13 +256,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -275,13 +275,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -294,13 +294,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -313,7 +313,7 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -351,13 +351,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -370,7 +370,7 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -408,7 +408,7 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -446,13 +446,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -465,13 +465,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -484,13 +484,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -503,13 +503,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -522,13 +522,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -541,13 +541,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 89
         },
         {
-          "VTL": 80
+          "VTL": 42
         },
         {
           "VTL": 80
@@ -560,13 +560,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -579,13 +579,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -598,13 +598,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -617,7 +617,7 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -636,13 +636,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -655,13 +655,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -674,13 +674,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -693,13 +693,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -712,13 +712,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -731,13 +731,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -750,13 +750,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -769,13 +769,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -788,13 +788,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -807,13 +807,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -826,13 +826,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -845,13 +845,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -864,13 +864,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -883,13 +883,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -902,13 +902,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -921,13 +921,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -940,13 +940,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -959,13 +959,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -978,13 +978,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -997,13 +997,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1016,7 +1016,7 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1035,13 +1035,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1054,13 +1054,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1073,13 +1073,13 @@
       "fine_transpose": 1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1092,13 +1092,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1111,13 +1111,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1130,13 +1130,13 @@
       "fine_transpose": 1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1149,13 +1149,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1168,13 +1168,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1206,7 +1206,7 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 42
         },
         {
           "VTL": 80
@@ -1225,13 +1225,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1244,13 +1244,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1263,13 +1263,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1282,13 +1282,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1301,7 +1301,7 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1320,13 +1320,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1339,13 +1339,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1358,13 +1358,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1377,13 +1377,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1396,13 +1396,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1415,13 +1415,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1434,13 +1434,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1453,13 +1453,13 @@
       "fine_transpose": -900,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1472,13 +1472,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1491,7 +1491,7 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1510,13 +1510,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1529,13 +1529,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1548,13 +1548,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1567,13 +1567,13 @@
       "fine_transpose": 200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1586,13 +1586,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1605,13 +1605,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1624,13 +1624,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1643,13 +1643,13 @@
       "fine_transpose": 1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1662,13 +1662,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1681,13 +1681,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1700,13 +1700,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1719,13 +1719,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1738,13 +1738,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 127
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1757,13 +1757,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1776,13 +1776,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1795,13 +1795,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1814,13 +1814,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1833,13 +1833,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1852,13 +1852,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1871,13 +1871,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1890,13 +1890,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1909,13 +1909,13 @@
       "fine_transpose": -600,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1928,13 +1928,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1947,13 +1947,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1966,13 +1966,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -1985,13 +1985,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2004,13 +2004,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2023,13 +2023,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2042,7 +2042,7 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2061,7 +2061,7 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2080,13 +2080,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2099,13 +2099,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2118,13 +2118,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2137,13 +2137,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2156,13 +2156,13 @@
       "fine_transpose": 1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2175,13 +2175,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2194,13 +2194,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2213,13 +2213,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2232,13 +2232,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2251,13 +2251,13 @@
       "fine_transpose": 1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2270,13 +2270,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2289,13 +2289,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2308,13 +2308,13 @@
       "fine_transpose": -1200,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2327,13 +2327,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2346,13 +2346,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2365,13 +2365,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2384,13 +2384,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2403,13 +2403,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
@@ -2422,13 +2422,13 @@
       "fine_transpose": 0,
       "ops": [
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
-          "VTL": 80
+          "VTL": 0
         },
         {
           "VTL": 80
