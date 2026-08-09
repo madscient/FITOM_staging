@@ -1,0 +1,141 @@
+{
+  "banks": "unified.bankset.json",
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルに必ず存在するOPN系デバイス向けのバンクで上書きする(2026年7月新設のbank_overrides機構、既存bank/progとの重複可)。",
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/necopn_gm.patchbank.json"
+      }
+    ],
+    "drum_banks": [
+      {
+        "prog": 0,
+        "name": "PSS-560 GM Drum Kit (OPNB)",
+        "file": "../../banks/drums/pss560_opnb.drumkit.json"
+      }
+    ]
+  },
+  "devices": [
+    {
+      "chip": "SF2",
+      "if": "HW",
+      "label": "SF2 (FluidSynth)",
+      "plugin": "FitomSf2IF"
+    },
+    {
+      "chip": "OPN2",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPN2",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "L",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPN2",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "OPN2",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "R",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPNA",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPNA",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "L",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPNA",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "OPNA",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "R",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPNB",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPNB",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "L",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPNB",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "OPNB",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "R",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPNBB",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPNBB",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "L",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPNBB",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "OPNBB",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "R",
+      "type": "FMHWIF"
+    }
+  ],
+  "hw_plugins": [
+    {
+      "auto_devices": false,
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_opn_stereo.profile.json"
+    },
+    {
+      "dll": "FitomSf2IF.dll",
+      "name": "FitomSf2IF",
+      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
+    }
+  ],
+  "master_pitch": 442.0,
+  "master_volume": 127,
+  "midi_inputs": [
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
+  ],
+  "sf2_channel_windows": [
+    { "mpu": 0, "ch": 14, "fluidsynth_chan": 0 },
+    { "mpu": 0, "ch": 15, "fluidsynth_chan": 1 }
+  ],
+  "profile_name": "OPNエミュプロファイル (OPN/OPN2/OPNA/OPNB/OPNBB)"
+}
