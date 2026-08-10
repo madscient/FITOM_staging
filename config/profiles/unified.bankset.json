@@ -1,6 +1,31 @@
 {
   "hw_banks": [
     {
+      "group": "OPN",
+      "bank": 0,
+      "file": "../../banks/OPN/gm/necopn_gm.hwbank.json"
+    },
+    {
+      "group": "OPN",
+      "bank": 1,
+      "file": "../../banks/OPN/n88basic/n88basic_preset.hwbank.json"
+    },
+    {
+      "group": "OPN",
+      "bank": 2,
+      "file": "../../banks/OPN/music_lalf/music_lalf_1.hwbank.json"
+    },
+    {
+      "group": "OPN",
+      "bank": 3,
+      "file": "../../banks/OPN/music_lalf/music_lalf_2.hwbank.json"
+    },
+    {
+      "group": "OPN",
+      "bank": 4,
+      "file": "../../banks/OPN/valsound/valsound_1.hwbank.json"
+    },
+    {
       "group": "OPN2",
       "bank": 0,
       "file": "../../banks/OPN/gm/necopn_gm.hwbank.json"
@@ -24,6 +49,46 @@
       "group": "OPN2",
       "bank": 4,
       "file": "../../banks/OPN/valsound/valsound_1.hwbank.json"
+    },
+    {
+      "group": "OPM",
+      "bank": 0,
+      "file": "../../banks/OPZ/gm128/gm128_preset.hwbank.json"
+    },
+    {
+      "group": "OPM",
+      "bank": 1,
+      "file": "../../banks/OPM/opmdrv/opmdrv_preset.hwbank.json"
+    },
+    {
+      "group": "OPM",
+      "bank": 2,
+      "file": "../../banks/OPM/fb01/fb01.hwbank.json"
+    },
+    {
+      "group": "OPM",
+      "bank": 3,
+      "file": "../../banks/OPM/dx11/dx11.hwbank.json"
+    },
+    {
+      "group": "OPM",
+      "bank": 4,
+      "file": "../../banks/OPM/dx27_dx100/dx21.hwbank.json"
+    },
+    {
+      "group": "OPM",
+      "bank": 5,
+      "file": "../../banks/OPM/dx27_dx100/dx100_1.hwbank.json"
+    },
+    {
+      "group": "OPM",
+      "bank": 6,
+      "file": "../../banks/OPM/dx27_dx100/dx100_2.hwbank.json"
+    },
+    {
+      "group": "OPM",
+      "bank": 7,
+      "file": "../../banks/OPZ/tx81z/tx81z.hwbank.json"
     },
     {
       "group": "OPZ",
