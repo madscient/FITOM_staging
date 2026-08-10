@@ -36,12 +36,16 @@ MA-2 OP 5バイト:
 FITOM_X hwbank.schema.json (フラット構造)へのマッピング:
   MULT→MUL, VIB→VIB, EGT→EGT, KSR→KSR, SL→SL, KSL→KSL, AM→AM, WS→WS
   は直接対応。
-  AR/DR/TLは実機レジスタ値(4bit/4bit/6bit)をそのまま格納すると、FITOM_X
-  ランタイム側の読み出し(OPL_new.cpp/OPLL_new.cpp ar4()/tl6()、格納値を
-  >>1して5bit/5bit/7bit相当の「上位ビット表現」から実際のレジスタ幅を
-  切り出す設計)によって値が半分になってしまうため、変換時に<<1して格納
-  する(2026年7月18日修正。それ以前の変換はこの<<1が抜けており、生成済み
-  hwbank.jsonは別途一括修正済み。docs/CLAUDE.md 3.17参照)。
+  AR/DRは実機レジスタ値(4bit)をそのまま格納すると、FITOM_Xランタイム側の
+  読み出し(OPL_new.cpp/OPLL_new.cpp ar4()、格納値を>>1して5bit相当の
+  「上位ビット表現」から実際のレジスタ幅を切り出す設計)によって値が半分に
+  なってしまうため、変換時に<<1して格納する(docs/CLAUDE.md 3.17参照)。
+  TLは<<1してはならない。TLはチップを問わず0.75dB/stepの減衰量空間で保持
+  する共通仕様で、OPL系はレンジが6bit(47.25dB)に狭いだけであり、ランタイム
+  側(effTLToReg=linear2dB(...,RANGE48DB,STEP075DB,6))はクランプのみで
+  スケーリングを行わない。<<1するとステップ幅が1.5dBに読み替わって減衰量が
+  2倍になり、レジスタ値32以上のオペレータは飽和して消音する
+  (docs/CLAUDE.md 3.51参照)。
   SUS(Sustain)/DVB(Delayed Vibrato)/DAM(Delayed AM)/LFOは対応フィールドが
   存在しないため破棄する。
   MA-2形式のEGT[2]ビットは実機OPLレジスタのEGTビットと**同じ極性**
@@ -176,12 +180,15 @@ def parse_ma2_op(b5):
         "KSR":   b5[0] & 1,
         "SR":    sr,
         "RR":    rr,
-        # AR/DR/TLはFITOM_X側で読み出し時に>>1されるため(OPL_new.cpp ar4()/tl6())、
-        # 実機レジスタ値(4bit/4bit/6bit)を<<1して格納する(上位ビット表現)。
+        # AR/DRはFITOM_X側で読み出し時に>>1されるため(OPL_new.cpp ar4())、
+        # 実機レジスタ値(4bit)を<<1して格納する(上位ビット表現)。TLは同じ
+        # 0.75dB/stepの減衰量空間をレンジだけ狭めた形(6bit)で共有しており、
+        # ランタイム側(effTLToReg)はクランプのみでスケーリングしないため、
+        # 実機レジスタ値(0-63)をそのまま格納する。
         "DR":   (b5[1] & 0xF) << 1,
         "AR":  ((b5[2] >> 4) & 0xF) << 1,
         "SL":    b5[2] & 0xF,
-        "TL":  ((b5[3] >> 2) & 0x3F) << 1,
+        "TL":   (b5[3] >> 2) & 0x3F,
         "KSL":   b5[3] & 3,
         "AM":    (b5[4] >> 3) & 1,
         "WS":     b5[4] & 7,
