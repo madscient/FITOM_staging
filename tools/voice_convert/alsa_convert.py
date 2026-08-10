@@ -30,12 +30,16 @@ drums.sb/.o3: prog番号 = MIDIノート番号 (35-81に実データあり)
 
 FITOM_X hwbank.schema.json (フラット構造) へのマッピング:
   MULT→MUL, KSR/VIB/AM/KSL/SL/WS は直接対応。
-  AR/DR/TLは実機レジスタ値(4bit/4bit/6bit)をそのまま格納すると、FITOM_X
-  ランタイム側の読み出し(OPL_new.cpp ar4()/tl6()、格納値を>>1して5bit/5bit/
-  7bit相当の「上位ビット表現」から実際のレジスタ幅を切り出す設計)によって
-  値が半分になってしまうため、変換時に<<1して格納する(2026年7月18日修正。
-  それ以前の変換はこの<<1が抜けており、生成済みhwbank.jsonは別途一括修正
-  済み。docs/CLAUDE.md 3.17参照)。
+  AR/DRは実機レジスタ値(4bit)をそのまま格納すると、FITOM_Xランタイム側の
+  読み出し(OPL_new.cpp ar4()、格納値を>>1して5bit相当の「上位ビット表現」
+  から実際のレジスタ幅を切り出す設計)によって値が半分になってしまうため、
+  変換時に<<1して格納する(docs/CLAUDE.md 3.17参照)。
+  TLは<<1してはならない。TLはチップを問わず0.75dB/stepの減衰量空間で保持
+  する共通仕様で、OPL系はレンジが6bit(47.25dB)に狭いだけであり、ランタイム
+  側(effTLToReg=linear2dB(...,RANGE48DB,STEP075DB,6))はクランプのみで
+  スケーリングを行わない。<<1するとステップ幅が1.5dBに読み替わって減衰量が
+  2倍になり、レジスタ値32以上のオペレータは飽和して消音する
+  (docs/CLAUDE.md 3.51参照)。
   実機EGTビット(bit5)とRRレジスタ(下位4bit)は、docs/voice-parameter-reference.md
   の変換規則に従いFITOMのSR/RRへ変換する(ops[i].EGT自体はOPL系では無関係のため
   常に0):
@@ -167,9 +171,12 @@ def decode_op(char, scale, ar_dr, sl_rr, wave):
         "VIB": (char >> 6) & 1,
         "AM":  (char >> 7) & 1,
         "KSL": (scale >> 6) & 3,
-        # AR/DR/TLはFITOM_X側で読み出し時に>>1されるため(OPL_new.cpp ar4()/tl6())、
-        # 実機レジスタ値(4bit/4bit/6bit)を<<1して格納する(上位ビット表現)。
-        "TL":  (scale & 0x3F) << 1,
+        # AR/DRはFITOM_X側で読み出し時に>>1されるため(OPL_new.cpp ar4())、
+        # 実機レジスタ値(4bit)を<<1して格納する(上位ビット表現)。TLは同じ
+        # 0.75dB/stepの減衰量空間をレンジだけ狭めた形(6bit)で共有しており、
+        # ランタイム側(effTLToReg)はクランプのみでスケーリングしないため、
+        # 実機レジスタ値(0-63)をそのまま格納する。
+        "TL":   scale & 0x3F,
         "AR": ((ar_dr >> 4) & 0xF) << 1,
         "DR":  (ar_dr & 0xF) << 1,
         "SL":  (sl_rr >> 4) & 0xF,
