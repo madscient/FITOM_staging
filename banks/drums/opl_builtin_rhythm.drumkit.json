@@ -58,7 +58,7 @@
       "pan": 0,
       "patch_bank": 0,
       "patch_prog": 2,
-      "play_note": 60,
+      "play_note": 52,
       "sw_bank": 0,
       "sw_prog": 11,
       "voice_patch_type": 35
@@ -71,10 +71,10 @@
       "pan": 0,
       "patch_bank": 19,
       "patch_prog": 30,
-      "play_note": 69,
+      "play_note": 64,
       "sw_bank": 0,
       "sw_prog": 11,
-      "voice_patch_type": 34
+      "voice_patch_type": 32
     },
     {
       "fine_tune": 0,
@@ -87,7 +87,7 @@
       "play_note": 45,
       "sw_bank": 0,
       "sw_prog": 11,
-      "voice_patch_type": 34
+      "voice_patch_type": 32
     },
     {
       "fine_tune": 0,
@@ -113,7 +113,7 @@
       "play_note": 48,
       "sw_bank": 0,
       "sw_prog": 11,
-      "voice_patch_type": 34
+      "voice_patch_type": 32
     },
     {
       "fine_tune": 0,
@@ -139,7 +139,7 @@
       "play_note": 50,
       "sw_bank": 0,
       "sw_prog": 11,
-      "voice_patch_type": 34
+      "voice_patch_type": 32
     },
     {
       "fine_tune": 0,
@@ -165,7 +165,7 @@
       "play_note": 53,
       "sw_bank": 0,
       "sw_prog": 11,
-      "voice_patch_type": 34
+      "voice_patch_type": 32
     },
     {
       "fine_tune": 0,
@@ -178,7 +178,7 @@
       "play_note": 55,
       "sw_bank": 0,
       "sw_prog": 11,
-      "voice_patch_type": 34
+      "voice_patch_type": 32
     },
     {
       "fine_tune": 0,
@@ -204,7 +204,7 @@
       "play_note": 57,
       "sw_bank": 0,
       "sw_prog": 11,
-      "voice_patch_type": 34
+      "voice_patch_type": 32
     },
     {
       "fine_tune": 0,
@@ -230,7 +230,7 @@
       "play_note": 29,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 34
+      "voice_patch_type": 32
     },
     {
       "fine_tune": 0,
@@ -243,7 +243,7 @@
       "play_note": 89,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 34
+      "voice_patch_type": 32
     },
     {
       "fine_tune": 0,
@@ -256,7 +256,7 @@
       "play_note": 89,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 34
+      "voice_patch_type": 32
     },
     {
       "fine_tune": 0,
