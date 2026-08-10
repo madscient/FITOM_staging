@@ -18,8 +18,14 @@ python3 generate_instruments.py --out-dir /path/to/out
 ```
 
 **対象プロファイル**: `TARGET_PROFILES`(スクリプト冒頭)で固定リスト
-指定している統合設計プロファイル7件(`unified_preset`/`emu_opn`/
-`emu_fmgen_opn`/`emu_opl`/`emu_opm`/`emu_opll`/`fmall`)のみが対象です。
+指定している統合設計プロファイル8件(`unified_preset`/`emu_opn`/
+`emu_fmgen_opn`/`emu_opl`/`emu_opm`/`emu_opz`/`emu_opll`/`fmall`)のみが
+対象です。`emu_opz`(旧`emu_opm`からOPM/OPZを分離)は2026年8月11日に
+追加(`docs/CLAUDE.md` 3.49節参照)。`emu_opn_stereo`/`emu_opl_stereo`/
+`emu_opll_stereo`(リニアステレオ化プロファイル)は意図的に対象外
+(banks/bank_overridesが対応する非ステレオ版と完全に同一で、ステレオ化は
+エンジン側の音声処理設定の違いのみのため、インストゥルメントリストの
+内容が重複するだけになる。2026年8月11日、ユーザー指摘)。
 統合前の個別プロファイル(旧`emulator_*`/`hw_*`)は誰もメンテナンスして
 おらず統合後の構成と矛盾していたため、2026年7月26日に
 `config/profiles/`ごと削除済みです(`docs/CLAUDE.md` 3.30節参照)。
@@ -78,15 +84,23 @@ Bank MSB=120/121固定・PC違いでキット切替、という仕様と同型)�
 (2026年8月4日、ユーザー指摘により訂正。それ以前の版ではCC#0=112を
 誤って両方の意味に使っていました)。
 
-`hw_banks[].group` → CC#0 対応表:
+`hw_banks[].group` → CC#0 対応表(`../FITOM_X/core/include/fitom/
+FITOMdefine.h`のVOICE_PATCH_*定数、2026年8月11日確認):
 
 | group | CC#0 | 備考 |
 |---|---|---|
-| `OPN2` | 17 | |
-| `OPZ` | 26 | |
-| `OPL3_2` | 34 | |
+| `OPN` | 16 | VOICE_PATCH_OPN(YM2203等)。2026年8月、同種チップのフォールバックルート新設で追加 |
+| `OPN2` | 17 | VOICE_PATCH_OPN2(YM2612/YM2608等) |
+| `OPM` | 25 | VOICE_PATCH_OPM(YM2151等)。2026年8月、OPM/OPZプロファイル分離で追加 |
+| `OPZ` | 26 | VOICE_PATCH_OPZ(YM2414) |
+| `OPL` | 32 | VOICE_PATCH_OPL(YM3526等)。2026年8月、フォールバックルート新設で追加 |
+| `OPL2` | 33 | VOICE_PATCH_OPL2(YM3812) |
+| `OPL3_2` | 34 | VOICE_PATCH_OPL3_2(YMF262の2opモード) |
 | `OPL_RHY` | 35 | |
 | `OPLL` | 40 | `role: "builtin_swpatch_meta"`のバンクは音色として選択不可のため除外 |
+| `OPLLP` | 41 | VOICE_PATCH_OPLLP(YMF281)。2026年8月、フォールバックルート新設で追加 |
+| `OPLLX` | 42 | VOICE_PATCH_OPLLX(YM2423) |
+| `VRC7` | 43 | VOICE_PATCH_VRC7(FS1001) |
 | `OPL3` | 48 | |
 | `SSG` | 64 | EPSG/DCSG/SAA/SCCも同じCC#0を共有(パッチ名の`[EPSG]`等プレフィックスで区別) |
 | `AWM` | 84 | `*.samplezonebank.json` |
@@ -212,9 +226,9 @@ docs/CLAUDE.md 3.43節)。全対象プロファイルが共通の`unified.bankse
   複数のドラムセットNote Namesを`Key[MSB,PC]`で切り替える構成──と
   同型)。`Drum[(120<<7)|0,*]=1`はドラムキットを持つプロファイルのみ
   1行だけ追加します。Sekaiju本体での実際の動作は未検証です。
-- 対象プロファイル7件は、Sekaiju側は1つの`.ins`ファイルの中に7つの
-  `.Instrument Definitions`セクション(=7つの機材)として、DOMINO側は
-  1つの`.xml`ファイルの中に7つの`<Map>`要素として、まとめて出力します。
+- 対象プロファイル8件は、Sekaiju側は1つの`.ins`ファイルの中に8個の
+  `.Instrument Definitions`セクション(=8個の機材)として、DOMINO側は
+  1つの`.xml`ファイルの中に8個の`<Map>`要素として、まとめて出力します。
   `.Instrument Definitions`は1セクション=1機材である以上、プロファイル
   ごとにファイルを分ける必要はなく、DOMINOも`<Map>`タグを複数持てる
   仕様のため、1ファイルにまとめることでシーケンサー側に読み込む音源
