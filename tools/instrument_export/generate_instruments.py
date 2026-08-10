@@ -46,12 +46,20 @@ OUTPUT_STEM = "FITOM_X"
 # Sekaiju/CakewalkのInstrument Definitionセクション名にマルチバイト文字は
 # 使えないため、config/profiles/*.profile.jsonの日本語profile_nameは使わず
 # ここで別途ASCII名を割り当てる。
+#
+# `emu_opn_stereo`/`emu_opl_stereo`/`emu_opll_stereo`(リニアステレオ化
+# プロファイル)は意図的に対象外(2026年8月11日、ユーザー指摘)。
+# banks/bank_overridesが対応する非ステレオ版(emu_opn/emu_opl/emu_opll)
+# と完全に同一で、ステレオ化はエンジン側(fmemuif_*_stereo.profile.json)
+# の音声処理設定の違いのみのため、インストゥルメントリストとしては
+# 増やしても内容が重複するだけで意味がない。
 TARGET_PROFILES: dict[str, str] = {
     "unified_preset": "FITOM_X Unified Profile",
     "emu_opn": "FITOM_X OPN Emulator",
     "emu_fmgen_opn": "FITOM_X OPN Emulator (FmGen)",
     "emu_opl": "FITOM_X OPL Emulator",
     "emu_opm": "FITOM_X OPM Emulator",
+    "emu_opz": "FITOM_X OPZ Emulator",
     "emu_opll": "FITOM_X OPLL Emulator",
     "fmall": "FITOM_X FM All",
 }
@@ -80,13 +88,24 @@ def _override_key(section: str, entry: dict):
 GM_STANDARD_MELODIC_FILE = "../../banks/patches/necopn_gm.patchbank.json"
 GM_STANDARD_DRUM_FILE = "../../banks/drums/gm2_standard.drumkit.json"
 
-# docs/CLAUDE.md 3.2節 VoicePatchType(CC#0直接モード値)
+# VoicePatchType(CC#0直接モード値)。docs/CLAUDE.md 3.2節の対応表に加え、
+# 2026年8月のステレオ化プロファイル追加(OPM/OPZ分離、同種チップの
+# フォールバックルート新設)で新規に使われるようになったgroup(OPN/OPM/
+# OPL/OPL2/OPLLP/OPLLX/VRC7)を、`../FITOM_X/core/include/fitom/
+# FITOMdefine.h`のVOICE_PATCH_*定数から追加(2026年8月11日確認)。
 GROUP_CC0_HW = {
-    "OPN2": 17,
-    "OPZ": 26,
-    "OPL3_2": 34,
+    "OPN": 16,      # VOICE_PATCH_OPN (YM2203等)
+    "OPN2": 17,     # VOICE_PATCH_OPN2 (YM2612/YM2608等)
+    "OPM": 25,      # VOICE_PATCH_OPM (YM2151等)
+    "OPZ": 26,      # VOICE_PATCH_OPZ (YM2414)
+    "OPL": 32,      # VOICE_PATCH_OPL (YM3526等)
+    "OPL2": 33,     # VOICE_PATCH_OPL2 (YM3812)
+    "OPL3_2": 34,   # VOICE_PATCH_OPL3_2 (YMF262の2opモード)
     "OPL_RHY": 35,
-    "OPLL": 40,
+    "OPLL": 40,     # VOICE_PATCH_OPLL (YM2413/OPLL2)
+    "OPLLP": 41,    # VOICE_PATCH_OPLLP (YMF281)
+    "OPLLX": 42,    # VOICE_PATCH_OPLLX (YM2423)
+    "VRC7": 43,     # VOICE_PATCH_VRC7 (FS1001)
     "OPL3": 48,
     "SSG": 64,
     "AWM": 84,

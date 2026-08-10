@@ -1997,6 +1997,66 @@ KVSが設定されているが(640音色中200音色)、キャリアのベロシ
   再変換でhwbank/swbankとも不一致0件、git HEADとの差分が`AM`/`EGS`/`TL`/`VTL`のみ、
   hwbank/swbankスキーマで13ファイルVALID。
 
+### 3.49 ステレオ化プロファイル3件・emu_opz新設に伴いインストゥルメントリスト生成を追随（2026年8月11日、ユーザー指摘）
+`config/profiles/`配下に、ユーザーが手動で以下4件のプロファイルを追加
+していた(このセッションの前段、コミット履歴は`c0ba64a`「OPL, OPN,
+OPLLのステレオ化プロファイルを追加」・`fc1db48`「リニアステレオ化
+プロファイル、およびOPM/OPZプロファイルを分離」等。CLAUDE.mdへの
+記録なしに行われていた作業だったため、以下は`tools/instrument_export/
+generate_instruments.py`をユーザー指摘「いくつかのバンクセットを手動で
+更新したのでインストゥルメント定義を追随して修正してください」に応じて
+追いかけた際に判明した内容):
+- `emu_opn_stereo`/`emu_opl_stereo`/`emu_opll_stereo`: 既存の
+  `emu_opn`/`emu_opl`/`emu_opll`のリニアステレオ化版
+  (`fmemuif_*_stereo.profile.json`を参照)。
+- `emu_opz`: 旧`emu_opm`(OPM×2/OPZ×2の4チップ構成)からOPZ×4のみを
+  切り出して新設。`emu_opm`自身は`OPM×4`に変更された
+  (`profile_name`の記載より)。
+
+対応:
+- `generate_instruments.py`の`TARGET_PROFILES`に4件を追加(計11件)。
+  ASCII表示名は既存の命名規則に倣い`"FITOM_X OPN Emulator (Stereo)"`
+  等、`emu_opz`は`"FITOM_X OPZ Emulator"`とした。
+- 再生成した結果、新規group名(`OPN`/`OPM`/`OPL`/`OPL2`/`OPLLP`/
+  `OPLLX`/`VRC7`、いずれも`../FITOM_X/core/include/fitom/
+  FITOMdefine.h`のVOICE_PATCH_*定数に対応)で「未知のhw_banks group」
+  警告が大量発生することが判明。`unified.bankset.json`のhw_banksを
+  調査したところ、これらは既存group(`OPN2`/`OPZ`/`OPL3_2`/`OPLL`)と
+  **同一のバンクファイルを複数のgroup名から共有参照**する構成になって
+  いた(例: `OPN`も`OPN2`も同じ`necopn_gm.hwbank.json`を参照)。これは
+  「同種チップのフォールバックルートにも同じバンクを設置」
+  (コミット`0938cc0`)による意図的な追加であり、3.6節・3.42節で扱った
+  OPLLビルトイン音色の「同じ音色データを複数のCC#0から選べるようにする」
+  設計と同じ考え方の応用と見られる。
+- `FITOMdefine.h`から正確な値を確認し、`GROUP_CC0_HW`に追加:
+  `OPN`=16(VOICE_PATCH_OPN)、`OPM`=25(VOICE_PATCH_OPM)、
+  `OPL`=32(VOICE_PATCH_OPL)、`OPL2`=33(VOICE_PATCH_OPL2)、
+  `OPLLP`=41(VOICE_PATCH_OPLLP)、`OPLLX`=42(VOICE_PATCH_OPLLX)、
+  `VRC7`=43(VOICE_PATCH_VRC7)。3.2節の対応表はこれらの新規group値を
+  含んでいないため、必要に応じて別途同期すること。
+- 再生成後、11プロファイル全件が警告無しで生成されること、XML
+  well-formed性・`.ins`側`Patch[]`/`Key[]`一意性を再検証済み。
+  `tools/instrument_export/README.md`も追従(対象プロファイル数・
+  `hw_banks[].group`対応表を更新)。
+
+### 3.50 ステレオ化3プロファイルをインストゥルメントリスト対象から除外（2026年8月11日、ユーザー指摘）
+3.49で追加した`emu_opn_stereo`/`emu_opl_stereo`/`emu_opll_stereo`を、
+ユーザーから「emu_opnとemu_opn_stereoなどは実質同一の内容になるので
+増やさなくても良かった」との指摘を受け、対象から除外した。
+
+`banks`(`unified.bankset.json`への参照)・`bank_overrides`の内容を
+非ステレオ版と実際に比較したところ、3プロファイルとも完全に一致して
+いた(例: `emu_opn`/`emu_opn_stereo`はどちらも`bank_overrides`の
+`patch_banks`/`drum_banks`が一字一句同一)。ステレオ化は
+`fmemuif_*_stereo.profile.json`側のエンジン音声処理設定の違いのみで、
+音色データ(バンク一覧)には一切影響しないため、インストゥルメント
+リストとしては非ステレオ版と全く同じ内容が重複して増えるだけだった。
+
+対応: `generate_instruments.py`の`TARGET_PROFILES`から3件を削除し
+8件に戻した(`emu_opz`は音色データ自体が旧`emu_opm`と異なる正当な
+新規プロファイルのため維持)。再生成後、8機材・XML well-formed性・
+`.ins`側一意性を再検証済み。`tools/instrument_export/README.md`も追従。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
