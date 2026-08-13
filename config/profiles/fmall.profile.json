@@ -1,5 +1,4 @@
 {
-  "profile_name": "FMALL (OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7)",
   "_comment": [
     "統合プリセットプロファイル(unified_preset.profile.json)をベースに、",
     "OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7のみを抜き出した構成。",
@@ -7,106 +6,137 @@
     "hw_banks/sw_banksのbank番号はhwbank.json内部のsw_bank/sw_prog参照と",
     "常に一致する(手動でのコピー・番号合わせは不要)。"
   ],
-  "hw_plugins": [
-    {
-      "name": "FitomEmuIF",
-      "dll": "FitomEmuIF.dll",
-      "profile": "config/profiles/hw_plugins/fmemuif_fmall.profile.json",
-      "auto_devices": true
-    },
-    {
-      "name": "FitomSf2IF",
-      "dll": "FitomSf2IF.dll",
-      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
-    }
-  ],
-  "devices": [
-    {
-      "if": "HW",
-      "label": "OPNBB",
-      "chip": "OPNBB",
-      "plugin": "FitomEmuIF",
-      "index" : 0,
-      "pan" : 0,
-      "stereo_pair" : "L"
-    },
-    {
-      "if": "HW",
-      "label": "OPNBB",
-      "chip": "OPNBB",
-      "plugin": "FitomEmuIF",
-      "index" : 1,
-      "pan" : 0,
-      "stereo_pair" : "R"
-    },
-    {
-      "if": "HW",
-      "label": "OPNL3",
-      "chip": "OPNL3",
-      "plugin": "FitomEmuIF",
-      "index" : 0,
-      "pan" : 0,
-      "stereo_pair" : "L"
-    },
-    {
-      "if": "HW",
-      "label": "OPL4",
-      "chip": "OPL4",
-      "plugin": "FitomEmuIF",
-      "index" : 1,
-      "pan" : 0,
-      "stereo_pair" : "R"
-    },
-    {
-      "if": "HW",
-      "label": "OPLLP",
-      "chip": "OPLLP",
-      "plugin": "FitomEmuIF",
-      "index" : 0,
-      "pan" : 1,
-      "rhythm_mode" : true,
-      "stereo_pair" : "L"
-    },
-    {
-      "if": "HW",
-      "label": "OPLLP",
-      "chip": "OPLLP",
-      "plugin": "FitomEmuIF",
-      "index" : 1,
-      "pan" : 2,
-      "rhythm_mode" : true,
-      "stereo_pair" : "R"
-    },
-    {
-      "if": "HW",
-      "label": "SF2 (FluidSynth)",
-      "chip": "SF2",
-      "plugin": "FitomSf2IF"
-    }
-  ],
-  "midi_inputs": [
-    "__LOCAL__",
-    "__LOCAL__"
-  ],
-  "sf2_channel_windows": [
-    { "mpu": 0, "ch": 14, "fluidsynth_chan": 0 },
-    { "mpu": 0, "ch": 15, "fluidsynth_chan": 1 }
-  ],
-  "banks": "unified.bankset.json",
   "bank_overrides": {
     "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルに必ず存在するOPL4AWM系デバイス向けのバンクで上書きする(2026年7月新設のbank_overrides機構、既存bank/progとの重複可)。",
+    "drum_banks": [
+      {
+        "file": "../../banks/drums/opl4awm.drumkit.json",
+        "name": "OPL4-AWM GM set",
+        "prog": 0
+      }
+    ],
     "patch_banks": [
       {
         "bank": 0,
         "file": "../../banks/patches/gm_layered_opl4awm.patchbank.json"
       }
-    ],
-    "drum_banks": [
-      {
-        "prog": 0,
-        "name": "OPL4-AWM GM set",
-        "file": "../../banks/drums/opl4awm.drumkit.json"
-      }
     ]
-  }
+  },
+  "banks": "unified.bankset.json",
+  "devices": [
+    {
+      "chip": "OPNZ",
+      "if": "HW",
+      "index": 0,
+      "label": "OPZ",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "L"
+    },
+    {
+      "chip": "OPNZ",
+      "if": "HW",
+      "index": 1,
+      "label": "OPNZ",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "R"
+    },
+    {
+      "chip": "OPNBB",
+      "if": "HW",
+      "index": 0,
+      "label": "OPNBB",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "L"
+    },
+    {
+      "chip": "OPNBB",
+      "if": "HW",
+      "index": 1,
+      "label": "OPNBB",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "R"
+    },
+    {
+      "chip": "OPL3",
+      "if": "HW",
+      "index": 0,
+      "label": "OPL3",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "L"
+    },
+    {
+      "chip": "OPL4",
+      "if": "HW",
+      "index": 1,
+      "label": "OPL4",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": "R"
+    },
+    {
+      "chip": "OPLLP",
+      "if": "HW",
+      "index": 0,
+      "label": "OPLLP",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "stereo_pair": "L"
+    },
+    {
+      "chip": "OPLLP",
+      "if": "HW",
+      "index": 1,
+      "label": "OPLLP",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "stereo_pair": "R"
+    },
+    {
+      "chip": "SF2",
+      "if": "HW",
+      "label": "SF2 (FluidSynth)",
+      "plugin": "FitomSf2IF"
+    }
+  ],
+  "hw_plugins": [
+    {
+      "auto_devices": true,
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_fmall.profile.json"
+    },
+    {
+      "dll": "FitomSf2IF.dll",
+      "name": "FitomSf2IF",
+      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
+    }
+  ],
+  "master_pitch": 440.0,
+  "master_volume": 100,
+  "midi_inputs": [
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
+  ],
+  "profile_name": "FMALL (OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7)",
+  "sf2_channel_windows": [
+    {
+      "ch": 14,
+      "fluidsynth_chan": 0,
+      "mpu": 0
+    },
+    {
+      "ch": 15,
+      "fluidsynth_chan": 1,
+      "mpu": 0
+    }
+  ]
 }
