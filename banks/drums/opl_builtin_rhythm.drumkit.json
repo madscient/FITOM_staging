@@ -65,7 +65,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 1000,
       "name": "Electric Snare",
       "note": 40,
       "pan": 0,
@@ -78,7 +78,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 200,
       "name": "Low Floor Tom",
       "note": 41,
       "pan": 0,
@@ -104,7 +104,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 200,
       "name": "High Floor Tom",
       "note": 43,
       "pan": 0,
@@ -117,7 +117,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 10,
+      "gate_time": 500,
       "name": "Pedal Hi-Hat",
       "note": 44,
       "pan": 0,
@@ -130,7 +130,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 200,
       "name": "Low Tom",
       "note": 45,
       "pan": 0,
@@ -143,7 +143,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 1000,
       "name": "Open Hi-Hat",
       "note": 46,
       "pan": 0,
@@ -156,7 +156,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 200,
       "name": "Low-Mid Tom",
       "note": 47,
       "pan": 0,
@@ -169,7 +169,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 200,
       "name": "Hi-Mid Tom",
       "note": 48,
       "pan": 0,
@@ -195,7 +195,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 200,
       "name": "High Tom",
       "note": 50,
       "pan": 0,
@@ -221,7 +221,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 2000,
       "name": "Chinese Cymbal",
       "note": 52,
       "pan": 0,
@@ -234,7 +234,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 2000,
       "name": "Splash Cymbal",
       "note": 55,
       "pan": 0,
@@ -247,7 +247,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 2000,
       "name": "Crash Cymbal 2",
       "note": 57,
       "pan": 0,
