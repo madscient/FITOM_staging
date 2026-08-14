@@ -4,7 +4,7 @@
   "devices": [
     {
       "chip": "SSG",
-      "engine": "engines/DSAEngine",
+      "engine": "engines/DSAemuEngine",
       "if": "HW",
       "index": 0,
       "label": "SSG",
@@ -15,7 +15,7 @@
     },
     {
       "chip": "SSG",
-      "engine": "engines/DSAEngine",
+      "engine": "engines/DSAemuEngine",
       "if": "HW",
       "index": 1,
       "label": "SSG",
@@ -26,7 +26,7 @@
     },
     {
       "chip": "DCSG",
-      "engine": "engines/DSAEngine",
+      "engine": "engines/DSAemuEngine",
       "if": "HW",
       "index": 0,
       "label": "DCSG",
@@ -37,7 +37,7 @@
     },
     {
       "chip": "DCSG",
-      "engine": "engines/DSAEngine",
+      "engine": "engines/DSAemuEngine",
       "if": "HW",
       "index": 1,
       "label": "DCSG",
@@ -48,7 +48,7 @@
     },
     {
       "chip": "SCC",
-      "engine": "engines/DSAEngine",
+      "engine": "engines/DSAemuEngine",
       "if": "HW",
       "index": 0,
       "label": "SCC",
@@ -59,7 +59,7 @@
     },
     {
       "chip": "SCC",
-      "engine": "engines/DSAEngine",
+      "engine": "engines/DSAemuEngine",
       "if": "HW",
       "index": 1,
       "label": "SCC",

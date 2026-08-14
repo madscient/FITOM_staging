@@ -13,7 +13,7 @@
       fitom_hw.dll        物理チップ用プラグイン (FitomHwIF)
       engines/
         YMFMEngine.dll    FM音源エミュレーター
-        DSAEngine.dll     PSG系エミュレーター (SSG/DCSG/SCC/OPLL/OPL)
+        DSAemuEngine.dll  PSG系エミュレーター (SSG/DCSG/SCC/OPLL/OPL)
         SAASoundEngine.dll  SAA1099 エミュレーター
 
   プラグインDLLの検索パスは実行ファイルからの相対パスで解決される。
@@ -47,7 +47,7 @@ $Projects = @{
     FitomSf2IF = "..\FitomSf2IF\build\$BuildType"
     YMEngine   = "..\YMEngine\build\bin\$BuildType"
     FmGenEngine  = "..\FmGenEngine\build\bin\$BuildType"
-    DSAEngine  = "..\DSAemuEngine\build\bin\$BuildType"
+    DSAemuEngine = "..\DSAemuEngine\build\bin\$BuildType"
     SAASoundEngine = "..\SAASoundEngine\build\bin\$BuildType"
 }
 
@@ -95,10 +95,7 @@ Copy-IfExists "$($Projects.FitomSf2IF)\*.dll"    "$Bin\"
 # FM エンジン DLL
 Copy-IfExists "$($Projects.YMEngine)\YMFMEngine.dll" "$Bin\engines\"
 Copy-IfExists "$($Projects.FmGenEngine)\FmGenEngineApi.dll" "$Bin\engines\"
-# DSAemuEngineの成果物名は汎用の FmEngineApi.dll で、engines/ 配下で他エンジンと
-# 衝突しうるためエンジン名でリネームして配置する (プロファイル側の
-# "dll": "engines/DSAEngine" はこのリネーム後の名前を指す)
-Copy-IfExists "$($Projects.DSAEngine)\FmEngineApi.dll" "$Bin\engines\DSAEngine.dll"
+Copy-IfExists "$($Projects.DSAemuEngine)\DSAemuEngine.dll" "$Bin\engines\"
 Copy-IfExists "$($Projects.SAASoundEngine)\SAASoundEngine.dll" "$Bin\engines\"
 
 # ── その他 ───────────────────────────────────────────────────────────────────

@@ -5,7 +5,7 @@
   "audio_device":  "",
   "engines": [
     {
-      "dll": "engines/DSAEngine",
+      "dll": "engines/DSAemuEngine",
       "chips": [
         { "chip": "SSG",  "clock": 2000000, "pan": 1 },
         { "chip": "SSG",  "clock": 2000000, "pan": 2 },
