@@ -1,4 +1,10 @@
 {
+  "scc_wave_banks": [
+    {
+      "bank": 0,
+      "file": "../../banks/scc/basic_waveforms.sccwave.json"
+    }
+  ],
   "hw_banks": [
     {
       "group": "OPN",
