@@ -1,0 +1,25 @@
+{
+  "sample_rate":   44100,
+  "buffer_frames": 512,
+  "audio_api":     "auto",
+  "audio_device":  "",
+  "engines": [
+    {
+      "dll": "engines/DSAEngine",
+      "chips": [
+        { "chip": "SSG",  "clock": 2000000, "pan": 1 },
+        { "chip": "SSG",  "clock": 2000000, "pan": 2 },
+        { "chip": "DCSG", "clock": 3579545, "pan": 1 },
+        { "chip": "DCSG", "clock": 3579545, "pan": 2 },
+        { "chip": "SCC",  "clock": 3579545, "pan": 1 },
+        { "chip": "SCC",  "clock": 3579545, "pan": 2 }
+      ]
+    },
+    {
+      "dll": "engines/SAASoundEngine",
+      "chips": [
+        { "chip": "SAA",  "clock": 8000000, "pan": 0 }
+      ]
+    }
+  ]
+}
