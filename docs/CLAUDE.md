@@ -2164,19 +2164,16 @@ SAA1099も追加した。
   PSG系共有バンク(3.4節、`ext.target_voice_patch_type=0x43`)に既に含まれる
   ため、バンク側の追加は不要。
 - `config/profiles/hw_plugins/fmemuif_psg_stereo.profile.json`(新規):
-  `engines[]`は`engines/DSAEngine`(SSG/DCSG/SCCを各pan=1/pan=2で2エントリずつ)
+  `engines[]`は`engines/DSAemuEngine`(SSG/DCSG/SCCを各pan=1/pan=2で2エントリずつ)
   と`engines/SAASoundEngine`(SAA×1、pan=0)の2エンジン構成。FitomEmuIFは
   `HWPlugin_Open`のparams_jsonの`engine`を`engines[].dll`の記載文字列と
   完全一致で照合するため、プロファイル側`devices[].engine`はここの`dll`と
   同じ文字列(`engines/SAASoundEngine`)でなければならない。
-- エンジンDLLの配置名: DSAemuEngineのビルド成果物は汎用名の
-  `FmEngineApi.dll`(Linuxは`libFmEngineApi.so`)で、`bin/engines/`配下で
-  他エンジンと衝突しうるため、`setup.ps1`/`setup.sh`が`DSAEngine.dll`/
-  `DSAEngine.so`へリネームして配置する(`FmGenEngine`のように上流側が
-  固有名で出力していないため、staging側でリネームする方式を採った)。
-  探索元ディレクトリはユーザー指示の`..\DSAEngine`ではなく実在する
-  `..\DSAemuEngine`。SAASoundEngineは上流側が既に固有名
-  (`SAASoundEngine.dll` / `libSAASoundEngine.so`)で出力するためリネーム不要。
+- エンジンDLLの配置名: 両エンジンとも上流側が固有名で出力する
+  (`DSAemuEngine.dll` / `libDSAemuEngine.so`、`SAASoundEngine.dll` /
+  `libSAASoundEngine.so`)ため、`setup.ps1`/`setup.sh`はそのままの名前で
+  `bin/engines/`へ配置する。探索元ディレクトリはユーザー指示の
+  `..\DSAEngine`ではなく実在する`..\DSAemuEngine`。
 
 **PSG系のステレオ化は`stereo_pair: true`+`pan: 1`/`pan: 2`でなければならない**:
 `FITOMConfig::getChipPanType()`(FITOM_X `core/src/Config.cpp`)はSSG系・OPLL系・
@@ -2218,7 +2215,7 @@ TonePeriod型=`master/(32*freq*divide)`)。この実クロックは
 (A4=440Hzでの周期レジスタ値が実チップ式と一致することを算術確認済み)。
 
 **検証**: `bin/fitom_cli.exe config/profiles/emu_psg_stereo.profile.json`で
-起動し、6チップが`engines/DSAEngine`経由・SAAが`engines/SAASoundEngine`経由で
+起動し、6チップが`engines/DSAemuEngine`経由・SAAが`engines/SAASoundEngine`経由で
 HWPort openされること、SSG/DCSG/SCCの3ペアが
 `mergeStereoPairDevices: ... merged ... [plugin-routed L/R]`として
 CLinearPanDeviceに束ねられること(SAAは単独デバイスのまま)をログで確認。
