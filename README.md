@@ -58,6 +58,7 @@ FITOM_staging/
 │   └── engines/
 │       ├── YMFMEngine.dll/.so
 │       ├── DSAemuEngine.dll/.so
+│       ├── EPSGemuEngine.dll/.so
 │       └── SAASoundEngine.dll/.so
 ├── dist/                   インストールパッケージ成果物 (.gitignore 対象)
 └── logs/                   ログ出力先 (.gitignore 対象)
@@ -71,7 +72,8 @@ FITOM_X (config/profiles/*.profile.json)
         ├── FitomEmuIF.dll  ← hw_plugins[].profile (config/profiles/hw_plugins/
         │     │                fmemuif_*.profile.json) でチップ構成を管理
         │     └── YMFMEngine.dll / DSAemuEngine.dll /
-        │         SAASoundEngine.dll (bin/engines/ に配置)
+        │         EPSGemuEngine.dll / SAASoundEngine.dll
+        │         (bin/engines/ に配置)
         └── fitom_hw.dll    ← hw_plugins[].profile (config/profiles/hw_plugins/
                                fitom_hw_*.profile.json) で実機構成を管理
 ```
@@ -117,6 +119,7 @@ FitomHwIF実機構成を含む)は誰もメンテナンスしておらず統合�
 | FitomEmuIF | FMエンジン内蔵 hwif DLL (`FitomEmuIF.dll`) | IHWPlugin 実装 |
 | YMEngine | FM音源エミュレーター (`YMFMEngine.dll`、旧名`YMEngine.dll`から改称) | engines/ に配置 |
 | DSAemuEngine | digital-sound-antiques系エミュレーター (`DSAemuEngine.dll`) | engines/ に配置 |
+| EPSGemuEngine | AY8930(EPSG)エミュレーター (`EPSGemuEngine.dll`) | engines/ に配置 |
 | SAASoundEngine | SAA1099エミュレーター (`SAASoundEngine.dll`) | engines/ に配置 |
 
 ## 初回セットアップ

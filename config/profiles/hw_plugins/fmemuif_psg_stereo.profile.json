@@ -16,6 +16,13 @@
       ]
     },
     {
+      "dll": "engines/EPSGemuEngine",
+      "chips": [
+        { "chip": "EPSG", "clock": 2000000, "pan": 1 },
+        { "chip": "EPSG", "clock": 2000000, "pan": 2 }
+      ]
+    },
+    {
       "dll": "engines/SAASoundEngine",
       "chips": [
         { "chip": "SAA",  "clock": 8000000, "pan": 0 }

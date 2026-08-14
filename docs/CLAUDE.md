@@ -57,7 +57,7 @@ drum_banks 21件, pcm_banks 3件）を共有参照している（2026年7月29�
 | `emu_opm.profile.json` | OPM専用（OPM×2/OPZ×2） |
 | `emu_opll.profile.json` | OPLL専用（OPLL[rhythm]/OPLLP/VRC7/OPLLX×1ずつ。OPLL2は3.37でエンジン非対応のため削除） |
 | `fmall.profile.json` | OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7構成（2026年7月19日新設） |
-| `emu_psg_stereo.profile.json` | PSG専用（SSG/DCSG/SCC×2ずつ=DSAemuEngineでリニアステレオ + SAA×1=SAASoundEngine。2026年8月14日新設、3.53参照） |
+| `emu_psg_stereo.profile.json` | PSG専用（SSG/DCSG/SCC×2ずつ=DSAemuEngine、EPSG×2=EPSGemuEngineでリニアステレオ + SAA×1=SAASoundEngine。2026年8月14日新設、3.53参照） |
 旧・個別プロファイル（`emulator_opm.profile.json`ほか計6件、統合前からの
 遺産）は、誰もメンテナンスしておらず統合後の構成と矛盾していたため
 2026年7月26日に削除した（3.30節参照）。
@@ -2149,31 +2149,34 @@ Bank-Bの`ops[0/1]`)。
 `hwbank.schema.json`で7ファイルVALID。3.51と併せて実機/エミュレータでの
 聴感確認もユーザーにより完了している。
 
-### 3.53 DSAemuEngine/SAASoundEngineを使うPSG系ステレオプロファイルを新設（2026年8月14日、ユーザー指示）
+### 3.53 DSAemuEngine/EPSGemuEngine/SAASoundEngineを使うPSG系ステレオプロファイルを新設（2026年8月14日、ユーザー指示）
 隣接リポジトリ`../DSAemuEngine`(digital-sound-antiquesの各エミュレーションコアを
 FmEngineApi準拠でまとめた共有ライブラリ)をエミュレーションエンジンとして使い、
 SSG/DCSG/SCCを2個ずつリニアステレオ化するプロファイルを新設した。
 
-同じプロファイルに`../SAASoundEngine`(stripwax/SAASoundのFmEngineApiラッパー)の
+同じプロファイルに`../EPSGemuEngine`(MAME/furnace由来のay8910コアを使うAY8930
+エンジン)のEPSGと、`../SAASoundEngine`(stripwax/SAASoundのFmEngineApiラッパー)の
 SAA1099も追加した。
 
-- `config/profiles/emu_psg_stereo.profile.json`(新規): SSG×2/DCSG×2/SCC×2 +
-  SAA×1 + SF2(3.36の全プロファイル共通配線)。`banks`は他プロファイルと同じく
-  `unified.bankset.json`をそのまま参照し、`bank_overrides`は持たない
-  (PSG系向けのレイヤードpatchbankが存在しないため。後述)。SAAの音色は
-  PSG系共有バンク(3.4節、`ext.target_voice_patch_type=0x43`)に既に含まれる
-  ため、バンク側の追加は不要。
+- `config/profiles/emu_psg_stereo.profile.json`(新規): SSG×2/DCSG×2/SCC×2/
+  EPSG×2 + SAA×1 + SF2(3.36の全プロファイル共通配線)。`banks`は他プロファイルと
+  同じく`unified.bankset.json`をそのまま参照し、`bank_overrides`は持たない
+  (PSG系向けのレイヤードpatchbankが存在しないため。後述)。EPSG
+  (`banks/PSG/epsg_preset.hwbank.json`、group=SSG bank=1)もSAA
+  (PSG系共有バンク、3.4節の`ext.target_voice_patch_type=0x43`)も既存の
+  バンクセットに含まれるため、バンク側の追加は一切不要。
 - `config/profiles/hw_plugins/fmemuif_psg_stereo.profile.json`(新規):
-  `engines[]`は`engines/DSAemuEngine`(SSG/DCSG/SCCを各pan=1/pan=2で2エントリずつ)
-  と`engines/SAASoundEngine`(SAA×1、pan=0)の2エンジン構成。FitomEmuIFは
-  `HWPlugin_Open`のparams_jsonの`engine`を`engines[].dll`の記載文字列と
-  完全一致で照合するため、プロファイル側`devices[].engine`はここの`dll`と
-  同じ文字列(`engines/SAASoundEngine`)でなければならない。
-- エンジンDLLの配置名: 両エンジンとも上流側が固有名で出力する
-  (`DSAemuEngine.dll` / `libDSAemuEngine.so`、`SAASoundEngine.dll` /
-  `libSAASoundEngine.so`)ため、`setup.ps1`/`setup.sh`はそのままの名前で
-  `bin/engines/`へ配置する。探索元ディレクトリはユーザー指示の
-  `..\DSAEngine`ではなく実在する`..\DSAemuEngine`。
+  `engines[]`は`engines/DSAemuEngine`(SSG/DCSG/SCCを各pan=1/pan=2で2エントリずつ)、
+  `engines/EPSGemuEngine`(EPSG×2、pan=1/2)、`engines/SAASoundEngine`(SAA×1、pan=0)
+  の3エンジン構成。FitomEmuIFは`HWPlugin_Open`のparams_jsonの`engine`を
+  `engines[].dll`の記載文字列と完全一致で照合するため、プロファイル側
+  `devices[].engine`はここの`dll`と同じ文字列でなければならない。
+- エンジンDLLの配置名: 3エンジンとも上流側が固有名で出力する
+  (`DSAemuEngine.dll` / `libDSAemuEngine.so`、`EPSGemuEngine.dll` /
+  `libEPSGemuEngine.so`、`SAASoundEngine.dll` / `libSAASoundEngine.so`)ため、
+  `setup.ps1`/`setup.sh`はそのままの名前で`bin/engines/`へ配置する。
+  探索元ディレクトリはユーザー指示の`..\DSAEngine`ではなく実在する
+  `..\DSAemuEngine`。
 
 **PSG系のステレオ化は`stereo_pair: true`+`pan: 1`/`pan: 2`でなければならない**:
 `FITOMConfig::getChipPanType()`(FITOM_X `core/src/Config.cpp`)はSSG系・OPLL系・
@@ -2211,12 +2214,19 @@ TonePeriod型=`master/(32*freq*divide)`)。この実クロックは
 `IPort::getClock()`→`HWPlugin_GetClock()`→FitomEmuIFの`ChipSlot::clock`、
 すなわち**`fmemuif_*.profile.json`の`chips[].clock`**から来るため、
 プロファイル側で明示した値がそのまま音程計算に効く。DSAemuEngineの
-デフォルトと揃えてSSG=2000000、DCSG=3579545、SCC=3579545とした
+デフォルトと揃えてSSG=2000000、DCSG=3579545、SCC=3579545、EPSG=2000000とした
 (A4=440Hzでの周期レジスタ値が実チップ式と一致することを算術確認済み)。
+EPSGは`CEPSG`が`tonePeriod(..., -1)`でSSGテーブル値を2倍して使う
+(AY8930のExpand Modeは分周比が1/16ではなく1/8)ため、実クロックをそのまま
+渡せば合う。`CEPSG`はExpand Mode常時有効で、レジスタ`0x0D`の上位ニブル
+`0xA`/`0xB`でバンクを切り替えながら`0x00`-`0x0F`の範囲しか書かないため、
+EPSGemuEngine側の「上位ニブルが0以外のアドレスを書くとチップが非選択になる」
+制約とも矛盾しない。
 
 **検証**: `bin/fitom_cli.exe config/profiles/emu_psg_stereo.profile.json`で
-起動し、6チップが`engines/DSAemuEngine`経由・SAAが`engines/SAASoundEngine`経由で
-HWPort openされること、SSG/DCSG/SCCの3ペアが
+起動し、6チップが`engines/DSAemuEngine`経由・EPSG2個が`engines/EPSGemuEngine`
+経由・SAAが`engines/SAASoundEngine`経由でHWPort openされること、
+SSG/DCSG/SCC/EPSGの4ペアが
 `mergeStereoPairDevices: ... merged ... [plugin-routed L/R]`として
 CLinearPanDeviceに束ねられること(SAAは単独デバイスのまま)をログで確認。
 `profile.schema.json`でVALID。バンクロードのエラーなし。

@@ -12,6 +12,7 @@
 #     engines/
 #       YMFMEngine.so     FM音源エミュレーター
 #       DSAemuEngine.so   PSG系エミュレーター (SSG/DCSG/SCC/OPLL/OPL)
+#       EPSGemuEngine.so  AY8930 (EPSG) エミュレーター
 #       SAASoundEngine.so SAA1099 エミュレーター
 #
 # プラグインDLLの検索パスは実行ファイルからの相対パスで解決される。
@@ -27,6 +28,7 @@ FITOM_EMUIF_BUILD="../FitomEmuIF/build/linux-ninja"
 FITOM_HWIF_BUILD="../FitomHwIF/build/linux-ninja"
 YMENGINE_BUILD="../YMEngine/build/linux-ninja"
 DSAENGINE_BUILD="../DSAemuEngine/build/bin"
+EPSGENGINE_BUILD="../EPSGemuEngine/build/bin"
 SAAENGINE_BUILD="../SAASoundEngine/build/bin"
 
 copy_if_exists() {
@@ -64,6 +66,7 @@ copy_if_exists "$FITOM_HWIF_BUILD/fitom_hw.so"      "$STAGE/bin/fitom_hw.so"
 # FM エンジン
 copy_if_exists "$YMENGINE_BUILD/YMFMEngine.so"      "$STAGE/bin/engines/YMFMEngine.so"
 copy_if_exists "$DSAENGINE_BUILD/libDSAemuEngine.so" "$STAGE/bin/engines/DSAemuEngine.so"
+copy_if_exists "$EPSGENGINE_BUILD/libEPSGemuEngine.so" "$STAGE/bin/engines/EPSGemuEngine.so"
 copy_if_exists "$SAAENGINE_BUILD/libSAASoundEngine.so" "$STAGE/bin/engines/SAASoundEngine.so"
 
 # ── その他 ───────────────────────────────────────────────────────────────────

@@ -69,6 +69,28 @@
       "type": "FMHWIF"
     },
     {
+      "chip": "EPSG",
+      "engine": "engines/EPSGemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "EPSG",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "EPSG",
+      "engine": "engines/EPSGemuEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "EPSG",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
       "chip": "SAA",
       "engine": "engines/SAASoundEngine",
       "if": "HW",
