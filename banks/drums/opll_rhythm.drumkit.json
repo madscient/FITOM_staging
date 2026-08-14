@@ -32,7 +32,7 @@
       "pan": 0,
       "patch_bank": 40,
       "patch_prog": 4,
-      "play_note": 57,
+      "play_note": 24,
       "sw_bank": 0,
       "sw_prog": 9,
       "voice_patch_type": 112
@@ -45,7 +45,7 @@
       "pan": 0,
       "patch_bank": 40,
       "patch_prog": 4,
-      "play_note": 47,
+      "play_note": 24,
       "sw_bank": -1,
       "sw_prog": -1,
       "voice_patch_type": 112
@@ -78,7 +78,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 1000,
       "name": "Low Floor Tom",
       "note": 41,
       "pan": 0,
@@ -104,7 +104,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 1000,
       "name": "High Floor Tom",
       "note": 43,
       "pan": 0,
@@ -130,7 +130,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 1000,
       "name": "Low Tom",
       "note": 45,
       "pan": 0,
@@ -156,7 +156,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 1000,
       "name": "Low-Mid Tom",
       "note": 47,
       "pan": 0,
@@ -169,7 +169,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 1000,
       "name": "Hi-Mid Tom",
       "note": 48,
       "pan": 0,
@@ -195,7 +195,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 1000,
       "name": "High Tom",
       "note": 50,
       "pan": 0,
@@ -221,7 +221,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 2000,
       "name": "Chinese Cymbal",
       "note": 52,
       "pan": 0,
@@ -234,7 +234,7 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 2000,
       "name": "Splash Cymbal",
       "note": 55,
       "pan": 0,
@@ -247,16 +247,16 @@
     },
     {
       "fine_tune": 0,
-      "gate_time": 0,
+      "gate_time": 2000,
       "name": "Crash Cymbal 2",
       "note": 57,
       "pan": 0,
-      "patch_bank": 40,
-      "patch_prog": 1,
+      "patch_bank": 0,
+      "patch_prog": 47,
       "play_note": 29,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 41
     },
     {
       "fine_tune": 0,
@@ -264,12 +264,12 @@
       "name": "Ride Cymbal 2",
       "note": 59,
       "pan": 0,
-      "patch_bank": 0,
-      "patch_prog": 47,
-      "play_note": 108,
+      "patch_bank": 40,
+      "patch_prog": 1,
+      "play_note": 84,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 41
+      "voice_patch_type": 112
     },
     {
       "fine_tune": 0,
