@@ -11,6 +11,8 @@
 #     fitom_hw.so         物理チップ用プラグイン (FitomHwIF)
 #     engines/
 #       YMFMEngine.so     FM音源エミュレーター
+#       DSAEngine.so      PSG系エミュレーター (SSG/DCSG/SCC/OPLL/OPL)
+#       SAASoundEngine.so SAA1099 エミュレーター
 #
 # プラグインDLLの検索パスは実行ファイルからの相対パスで解決される。
 # デフォルトでは実行ファイルと同階層 (bin/) を探索する。
@@ -24,6 +26,8 @@ FITOM_X_BUILD="../FITOM_X/build/linux-ninja"
 FITOM_EMUIF_BUILD="../FitomEmuIF/build/linux-ninja"
 FITOM_HWIF_BUILD="../FitomHwIF/build/linux-ninja"
 YMENGINE_BUILD="../YMEngine/build/linux-ninja"
+DSAENGINE_BUILD="../DSAemuEngine/build/bin"
+SAAENGINE_BUILD="../SAASoundEngine/build/bin"
 
 copy_if_exists() {
     local src="$1" dst="$2"
@@ -59,6 +63,11 @@ copy_if_exists "$FITOM_HWIF_BUILD/fitom_hw.so"      "$STAGE/bin/fitom_hw.so"
 
 # FM エンジン
 copy_if_exists "$YMENGINE_BUILD/YMFMEngine.so"      "$STAGE/bin/engines/YMFMEngine.so"
+# DSAemuEngineの成果物名は汎用の libFmEngineApi.so で、engines/ 配下で他エンジンと
+# 衝突しうるためエンジン名でリネームして配置する (プロファイル側の
+# "dll": "engines/DSAEngine" はこのリネーム後の名前を指す)
+copy_if_exists "$DSAENGINE_BUILD/libFmEngineApi.so" "$STAGE/bin/engines/DSAEngine.so"
+copy_if_exists "$SAAENGINE_BUILD/libSAASoundEngine.so" "$STAGE/bin/engines/SAASoundEngine.so"
 
 # ── その他 ───────────────────────────────────────────────────────────────────
 mkdir -p "$STAGE/dist"

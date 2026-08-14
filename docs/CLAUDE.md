@@ -57,6 +57,7 @@ drum_banks 21件, pcm_banks 3件）を共有参照している（2026年7月29�
 | `emu_opm.profile.json` | OPM専用（OPM×2/OPZ×2） |
 | `emu_opll.profile.json` | OPLL専用（OPLL[rhythm]/OPLLP/VRC7/OPLLX×1ずつ。OPLL2は3.37でエンジン非対応のため削除） |
 | `fmall.profile.json` | OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7構成（2026年7月19日新設） |
+| `emu_psg_stereo.profile.json` | PSG専用（SSG/DCSG/SCC×2ずつ=DSAemuEngineでリニアステレオ + SAA×1=SAASoundEngine。2026年8月14日新設、3.53参照） |
 旧・個別プロファイル（`emulator_opm.profile.json`ほか計6件、統合前からの
 遺産）は、誰もメンテナンスしておらず統合後の構成と矛盾していたため
 2026年7月26日に削除した（3.30節参照）。
@@ -2148,10 +2149,114 @@ Bank-Bの`ops[0/1]`)。
 `hwbank.schema.json`で7ファイルVALID。3.51と併せて実機/エミュレータでの
 聴感確認もユーザーにより完了している。
 
+### 3.53 DSAemuEngine/SAASoundEngineを使うPSG系ステレオプロファイルを新設（2026年8月14日、ユーザー指示）
+隣接リポジトリ`../DSAemuEngine`(digital-sound-antiquesの各エミュレーションコアを
+FmEngineApi準拠でまとめた共有ライブラリ)をエミュレーションエンジンとして使い、
+SSG/DCSG/SCCを2個ずつリニアステレオ化するプロファイルを新設した。
+
+同じプロファイルに`../SAASoundEngine`(stripwax/SAASoundのFmEngineApiラッパー)の
+SAA1099も追加した。
+
+- `config/profiles/emu_psg_stereo.profile.json`(新規): SSG×2/DCSG×2/SCC×2 +
+  SAA×1 + SF2(3.36の全プロファイル共通配線)。`banks`は他プロファイルと同じく
+  `unified.bankset.json`をそのまま参照し、`bank_overrides`は持たない
+  (PSG系向けのレイヤードpatchbankが存在しないため。後述)。SAAの音色は
+  PSG系共有バンク(3.4節、`ext.target_voice_patch_type=0x43`)に既に含まれる
+  ため、バンク側の追加は不要。
+- `config/profiles/hw_plugins/fmemuif_psg_stereo.profile.json`(新規):
+  `engines[]`は`engines/DSAEngine`(SSG/DCSG/SCCを各pan=1/pan=2で2エントリずつ)
+  と`engines/SAASoundEngine`(SAA×1、pan=0)の2エンジン構成。FitomEmuIFは
+  `HWPlugin_Open`のparams_jsonの`engine`を`engines[].dll`の記載文字列と
+  完全一致で照合するため、プロファイル側`devices[].engine`はここの`dll`と
+  同じ文字列(`engines/SAASoundEngine`)でなければならない。
+- エンジンDLLの配置名: DSAemuEngineのビルド成果物は汎用名の
+  `FmEngineApi.dll`(Linuxは`libFmEngineApi.so`)で、`bin/engines/`配下で
+  他エンジンと衝突しうるため、`setup.ps1`/`setup.sh`が`DSAEngine.dll`/
+  `DSAEngine.so`へリネームして配置する(`FmGenEngine`のように上流側が
+  固有名で出力していないため、staging側でリネームする方式を採った)。
+  探索元ディレクトリはユーザー指示の`..\DSAEngine`ではなく実在する
+  `..\DSAemuEngine`。SAASoundEngineは上流側が既に固有名
+  (`SAASoundEngine.dll` / `libSAASoundEngine.so`)で出力するためリネーム不要。
+
+**PSG系のステレオ化は`stereo_pair: true`+`pan: 1`/`pan: 2`でなければならない**:
+`FITOMConfig::getChipPanType()`(FITOM_X `core/src/Config.cpp`)はSSG系・OPLL系・
+OPL/OPL2/Y8950等を`ChipPanType::Mono`に分類しており、これらは
+`updatePanpot()`がno-opでチップ内L/R分離ができない。したがって
+`emu_opn_stereo`/`emu_opl_stereo`が使っている「チップ自身のL/R出力ビットで
+分離する」方式(`stereo_pair: "L"`/`"R"`、pan=0)は指定しても読み込み時警告に
+なるだけで効かない。プラグイン側のpanでL/Rへ振り分ける`emu_opll_stereo`と
+同じ方式(`stereo_pair: true`、pan=1/2)を採る必要がある。
+(なお`config_schema/profile.schema.json`の`stereo_pair`は`boolean`のままで、
+本体側で2026年8月に追加された`"L"`/`"R"`表記に追従していない。5.5に従い
+本体側から同期すること。)
+
+**SAAだけはステレオ化しない**: SAA1099はチャンネルごとに左右独立の4bit音量
+レジスタを持ち、`getChipPanType()`でも`Continuous`(連続的なパンポットを持つ
+チップ)に分類される。2個をL/Rに固定してCLinearPanDeviceで束ねると、
+OPL4のAWM部を`subDeviceAcceptsStereoPair()`から除外しているのと同じ理由で
+本来のパンポットを潰した上でチップを2倍消費することになるため、
+`stereo_pair`を付けずpan=0(Stereo)の1個構成とした。この判断理由は
+プロファイルのトップレベル`_comment`にも記載してある(`devices[]`要素に
+`_comment`を置くと`extra_slot`/`rhythm_mode`/`stereo_pair`以外の全フィールドが
+`HWPlugin_Open`のparams_jsonへそのまま転送される仕様のため、長文コメントが
+起動ログに出てしまう)。
+
+**SAAのクロックはドライバ側の固定値と合わせる必要がある**: SSG/DCSG/SCCと
+違い、`DeviceFactory`はSAAに`psgMasterClock()`(=`IPort::getClock()`)を渡さず
+`createCSAA1099(port, sampleRate)`を呼ぶだけで、`CSAA1099`のマスタークロックは
+コンストラクタのデフォルト引数8MHz固定である。したがってエンジン側の
+`clock`を8000000以外にすると音程がずれる。SAASoundEngineのデフォルトも8MHzで
+一致するが、明示的に`8000000`と書いてある。
+
+**クロック値の決め方**: PSG系ドライバ(`core/src/PSG_new.cpp`)は音程テーブルを
+実クロックから生成する(`FnumRegistry::generateTable`のSSG型=`master/(16*freq)`、
+TonePeriod型=`master/(32*freq*divide)`)。この実クロックは
+`IPort::getClock()`→`HWPlugin_GetClock()`→FitomEmuIFの`ChipSlot::clock`、
+すなわち**`fmemuif_*.profile.json`の`chips[].clock`**から来るため、
+プロファイル側で明示した値がそのまま音程計算に効く。DSAemuEngineの
+デフォルトと揃えてSSG=2000000、DCSG=3579545、SCC=3579545とした
+(A4=440Hzでの周期レジスタ値が実チップ式と一致することを算術確認済み)。
+
+**検証**: `bin/fitom_cli.exe config/profiles/emu_psg_stereo.profile.json`で
+起動し、6チップが`engines/DSAEngine`経由・SAAが`engines/SAASoundEngine`経由で
+HWPort openされること、SSG/DCSG/SCCの3ペアが
+`mergeStereoPairDevices: ... merged ... [plugin-routed L/R]`として
+CLinearPanDeviceに束ねられること(SAAは単独デバイスのまま)をログで確認。
+`profile.schema.json`でVALID。バンクロードのエラーなし。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
 
+- **【DSAemuEngine側の修正待ち】SCCが発音しない**: 3.53の`emu_psg_stereo`の
+  SCCは、現状のDSAemuEngineでは無音になる。`DSAemuEngine.cpp`が
+  `SCC_write(scc, 0xC000 + reg, val)`を呼ぶが、emu2212の`SCC_write()`は
+  `adr -= base_adr`(既定`base_adr=0x9000`)した上で`0x800 <= adr <= 0x8FF`かつ
+  `scc->active`のときしかレジスタへ届かない。`0xC000+reg`はこの窓の外である上、
+  `active`を立てる書き込み(`base_adr+0`へ`0x3F`)も行われないため全書き込みが
+  破棄される。レジスタ番号を直接扱う`SCC_writeReg()`(波形`0x00-0x7F`、
+  周波数`0xC0-0xC9`、音量`0xD0-0xD4`、イネーブル`0xE1`)を使うか、
+  `0x9800+reg`へ書く前に`SCC_write(scc, 0x9000, 0x3F)`で有効化する必要がある。
+- **【本体側の確認待ち】CSCCのレジスタマップが自己矛盾している**:
+  `core/src/PSG_new.cpp`の`CSCC`は周波数を`0xA0+ch*2`/`0xA1+ch*2`(ch0-4で
+  `0xA0`-`0xA9`)、音量を`0xA8+ch`(`0xA8`-`0xAC`)、chイネーブルを`0xAA`へ書くため、
+  `0xA8`/`0xA9`/`0xAA`が周波数・音量・イネーブルで重複している。実機K051649の
+  配置(波形`0x00-0x9F`、周波数`0xA0-0xA9`、音量`0xAA-0xAE`、イネーブル`0xAF`)に
+  照らすと音量とイネーブルが2バイトずつ手前にずれていると見られる。上記の
+  DSAemuEngine側を直しても、こちらを直さないとSCCは正しく鳴らない。
+- 3.53の`emu_psg_stereo`は`bank_overrides`を持たないため、CC#0=0(通常モード)の
+  bank 0が`gm_layered_skeleton.patchbank.json`(空)のままで
+  「Patch bank=0 prog=0 is empty」警告が出る。演奏はCC#0=0x40(SSG共有バンク、
+  3.4節)直接モードで行う前提。他プロファイルと揃えるならPSG系向けの
+  レイヤードpatchbank(`banks/patches/gm_layered_psg.patchbank.json`相当)を
+  新規作成して`bank_overrides`で差し替えることになるが、今回は
+  「バンクセットはunifiedをそのまま、追加バンクなし」というユーザー指示に
+  従い作成していない。
+- 3.53のプロファイルは`tools/instrument_export/generate_instruments.py`の
+  `TARGET_PROFILES`に追加していない(3.50でステレオ版は非ステレオ版と
+  バンク構成が同一のため除外した経緯があるが、`emu_psg_stereo`はPSG系
+  単独構成で既存8機材のいずれとも異なる。インストゥルメントリストに
+  載せるかは要判断)。
 - 3.44〜3.47の修正は、実機/エミュレータで実際に鳴らした聴感確認が未実施
   (データ側の整合性検証のみ済み)。特にDT1(デチューン)とSL(D1L極性)は音の
   印象を大きく変えるため、実際に発音させての確認が望ましい。

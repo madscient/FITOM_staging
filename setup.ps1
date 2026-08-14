@@ -13,6 +13,8 @@
       fitom_hw.dll        物理チップ用プラグイン (FitomHwIF)
       engines/
         YMFMEngine.dll    FM音源エミュレーター
+        DSAEngine.dll     PSG系エミュレーター (SSG/DCSG/SCC/OPLL/OPL)
+        SAASoundEngine.dll  SAA1099 エミュレーター
 
   プラグインDLLの検索パスは実行ファイルからの相対パスで解決される。
   デフォルトでは実行ファイルと同階層 (bin/) を探索する。
@@ -45,6 +47,8 @@ $Projects = @{
     FitomSf2IF = "..\FitomSf2IF\build\$BuildType"
     YMEngine   = "..\YMEngine\build\bin\$BuildType"
     FmGenEngine  = "..\FmGenEngine\build\bin\$BuildType"
+    DSAEngine  = "..\DSAemuEngine\build\bin\$BuildType"
+    SAASoundEngine = "..\SAASoundEngine\build\bin\$BuildType"
 }
 
 function Copy-IfExists($src, $dst) {
@@ -91,6 +95,11 @@ Copy-IfExists "$($Projects.FitomSf2IF)\*.dll"    "$Bin\"
 # FM エンジン DLL
 Copy-IfExists "$($Projects.YMEngine)\YMFMEngine.dll" "$Bin\engines\"
 Copy-IfExists "$($Projects.FmGenEngine)\FmGenEngineApi.dll" "$Bin\engines\"
+# DSAemuEngineの成果物名は汎用の FmEngineApi.dll で、engines/ 配下で他エンジンと
+# 衝突しうるためエンジン名でリネームして配置する (プロファイル側の
+# "dll": "engines/DSAEngine" はこのリネーム後の名前を指す)
+Copy-IfExists "$($Projects.DSAEngine)\FmEngineApi.dll" "$Bin\engines\DSAEngine.dll"
+Copy-IfExists "$($Projects.SAASoundEngine)\SAASoundEngine.dll" "$Bin\engines\"
 
 # ── その他 ───────────────────────────────────────────────────────────────────
 New-Item -ItemType Directory -Force -Path "$Stage\dist" | Out-Null
@@ -106,6 +115,7 @@ Write-Host "     emu_opn.profile.json         : OPNエミュプロファイル (
 Write-Host "     emu_opl.profile.json         : OPLエミュプロファイル (OPL/Y8950/OPL2/OPL3/OPL4)"
 Write-Host "     emu_opm.profile.json         : OPMエミュプロファイル (OPM×2/OPZ×2)"
 Write-Host "     emu_opll.profile.json        : OPLLエミュプロファイル (OPLL[rhythm]/OPLLP/VRC7/OPLLX)"
+Write-Host "     emu_psg_stereo.profile.json  : PSGエミュプロファイル (SSG/DCSG/SCC 各2 リニアステレオ + SAA)"
 Write-Host "     fmall.profile.json           : FMALL (10チップ統合)"
 Write-Host "  2. 起動:"
 Write-Host "     bin\fitom_core.exe --profile config\profiles\<プロファイル名>"

@@ -1,0 +1,114 @@
+{
+  "_comment": "SAAだけstereo_pairを使わずpan=0(Stereo)の1個構成なのは、SAA1099がチャンネルごとに左右独立の音量レジスタを持つ(FITOMConfig::getChipPanType()のContinuous分類)ため。2個をL/Rに固定してCLinearPanDeviceで束ねると本来のパンポットを潰した上でチップを2倍消費する。devices[]側に書くとHWPlugin_Openのparams_jsonへそのまま転送されログを汚すため、ここに置いている。",
+  "banks": "unified.bankset.json",
+  "devices": [
+    {
+      "chip": "SSG",
+      "engine": "engines/DSAEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SSG",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SSG",
+      "engine": "engines/DSAEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "SSG",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "DCSG",
+      "engine": "engines/DSAEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "DCSG",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "DCSG",
+      "engine": "engines/DSAEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "DCSG",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SCC",
+      "engine": "engines/DSAEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SCC",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SCC",
+      "engine": "engines/DSAEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "SCC",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SAA",
+      "engine": "engines/SAASoundEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SAA",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SF2",
+      "if": "HW",
+      "label": "SF2 (FluidSynth)",
+      "plugin": "FitomSf2IF",
+      "stereo_pair": true
+    }
+  ],
+  "hw_plugins": [
+    {
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_psg_stereo.profile.json"
+    },
+    {
+      "dll": "FitomSf2IF.dll",
+      "name": "FitomSf2IF",
+      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
+    }
+  ],
+  "master_pitch": 440.0,
+  "master_volume": 100,
+  "midi_inputs": [
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
+  ],
+  "sf2_channel_windows": [
+    { "mpu": 1, "ch": 14, "fluidsynth_chan": 0 },
+    { "mpu": 1, "ch": 15, "fluidsynth_chan": 1 }
+  ],
+  "profile_name": "PSGエミュプロファイル (SSG/DCSG/SCC 各2、リニアステレオ)"
+}
