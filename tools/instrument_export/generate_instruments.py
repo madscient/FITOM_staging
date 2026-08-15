@@ -181,6 +181,24 @@ OPNA_RHYTHM_NAMES = ["Bass Drum", "Snare Drum", "Top Cymbal", "Hi-Hat", "Tom", "
 CC32_OPLL_RHYTHM = 40
 CC32_OPNA_RHYTHM = 17
 
+# core/src/PatchManager.cpp initDsgBuiltinPatches() のビルトイン音色。
+# DSG(YM2163)はユーザー音色を一切持たず、ROM固定の「波形5種×エンベロープ
+# 4種」の20音色がProgram Changeだけで選ばれる。CC#32(hw_bank)は
+# `resolveDsgBuiltinVoice()`が値を読まずに捨てるため意味を持たない
+# (OPLL ROM音色がbank=0のみ予約領域なのとは異なる)が、リスト上は0に固定
+# して掲載する。
+# prog = 波形index*4 + エンベロープindex、音色名は"<波形名>.<エンベロープ名>"。
+DSG_WAVE_NAMES = ["St", "Or", "Cl", "Pf", "Hc"]
+DSG_ENV_NAMES = ["Percussive", "Wind", "Sustain", "Plateau"]
+CC0_DSG_BUILTIN = 68   # VOICE_PATCH_DSG (0x44)
+
+# gui/bridge/FITOMBridge.cpp kDsgRhythmNames。パート番号はリズムトリガー
+# (reg 0x90)のビット位置そのもの(core/src/DSG_new.cpp CDSGRhythm::kTriggerBit
+# と同じ並び)。HHO/HHDは実機で同一の発振器・同一のレベルレジスタを共有する。
+DSG_RHYTHM_NAMES = ["Bass Drum", "Hi Conga", "Snare Drum",
+                    "Hi-Hat Open", "Hi-Hat Close"]
+CC32_DSG_RHYTHM = 68   # 内蔵リズムモードのCC#32はチップ選択値=VoicePatchType
+
 
 @dataclass(frozen=True)
 class Entry:
@@ -381,9 +399,9 @@ def collect_melodic_entries(profile: dict, profile_dir: Path, warn) -> list[Entr
 
 
 def collect_builtin_entries() -> list[Entry]:
-    """OPLLビルトイン音色バンク・OPLLビルトインリズム・OPNAビルトイン
-    リズムは、ファイルを持たずFITOM_X本体にハードコードされているため、
-    プロファイルJSONの走査だけでは拾えない。
+    """OPLLビルトイン音色バンク・DSGビルトイン音色バンク・OPLL/OPNA/DSG
+    ビルトインリズムは、ファイルを持たずFITOM_X本体にハードコードされて
+    いるため、プロファイルJSONの走査だけでは拾えない。
 
     全プロファイルが共通の`unified.bankset.json`を参照し、実際の
     デバイス構成(搭載チップ)に含まれないバンクエントリも変わらず表示
@@ -402,10 +420,16 @@ def collect_builtin_entries() -> list[Entry]:
     for cc0, variant in sorted(OPLL_BUILTIN_CC0_TO_VARIANT.items()):
         for idx, name in enumerate(OPLL_ROM_NAMES[variant], start=1):
             entries.append(Entry(cc0, 0, (variant << 4) | idx, name))
+    for wave, wave_name in enumerate(DSG_WAVE_NAMES):
+        for env, env_name in enumerate(DSG_ENV_NAMES):
+            prog = wave * len(DSG_ENV_NAMES) + env
+            entries.append(Entry(CC0_DSG_BUILTIN, 0, prog, f"{wave_name}.{env_name}"))
     for prog, name in enumerate(OPLL_RHYTHM_NAMES):
         entries.append(Entry(CC0_BUILTIN_RHYTHM, CC32_OPLL_RHYTHM, prog, name))
     for prog, name in enumerate(OPNA_RHYTHM_NAMES):
         entries.append(Entry(CC0_BUILTIN_RHYTHM, CC32_OPNA_RHYTHM, prog, name))
+    for prog, name in enumerate(DSG_RHYTHM_NAMES):
+        entries.append(Entry(CC0_BUILTIN_RHYTHM, CC32_DSG_RHYTHM, prog, name))
     return entries
 
 

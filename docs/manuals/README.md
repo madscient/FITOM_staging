@@ -20,8 +20,8 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)とProgram Changeによる
 | CC#0の値 | モード | CC#32の意味 | Program Chg.の意味 |
 |---|---|---|---|
 | 0 | 通常モード | PatchBank番号 | 選択したPatchBank内のパッチ番号 |
-| 17,26,34,35,40,41,42,43,48,64,81,82,84 | 直接モード | 音源チップ内のバンク番号 | 選択したバンク内のパッチ番号 |
-| 112 | 内蔵リズム音源 | 対象チップ選択(17=OPNA, 40=OPLL) | 楽器(チャンネル)番号を直接指定する |
+| 17,26,34,35,40,41,42,43,48,64,68,81,82,84 | 直接モード | 音源チップ内のバンク番号 | 選択したバンク内のパッチ番号 |
+| 112 | 内蔵リズム音源 | 対象チップ選択(17=OPNA, 40=OPLL, 68=DSG) | 楽器(チャンネル)番号を直接指定する |
 
 > 直接モードでは、CC#0の値自体が「どの音源チップを使うか」を指定します。
 > 対応していないチップ/バンク番号を指定した場合は無音になります。
@@ -43,6 +43,10 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)とProgram Changeによる
 > 43→VRC7)。ランタイム上はどのCC#0からでも全ての音色を選択できますが、
 > 「その音色本来のCC#0」を使うのが実用上わかりやすい、という位置づけ
 > です。
+>
+> CC#0=68(DSG)もバンクファイルを使わない特殊なバンクです。DSGは
+> ユーザー音色を持たないチップで、CC#32の値に関わらず常に同じ20音色の
+> ビルトインバンクが選ばれます(詳細は[DSGページ](patches/dsg.md)参照)。
 
 ## 2. バンクマップ(CC#0 / CC#32)
 
@@ -103,7 +107,7 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)による音色バンクの一覧です。
 | 43 | 0 | VRC7 | [OPLL Built-In(ROM音色、Prog 49-63)](patches/opll.md#cc320) |
 | 40 | 1 | OPLL | [MSX-AUDIO + OPLL(x) ROM Preset](patches/opll.md#cc321) |
 | 40 | 2 | OPLL | [OPLL Presets (PSS-140 + SHS-10)](patches/opll.md#cc322) |
-| 40 | 3 | OPLL | [OPLL ROM Voice SwPatch Meta (Skeleton)(ユーザー設定用)](patches/opll.md#cc323) |
+| 40 | 3 | OPLL/DSG共有 | [Built-In Voice SwPatch Meta (Skeleton)(ユーザー設定用)](patches/opll.md#cc323) |
 | 40 | 4 | OPLL | [MA-2 Preset2OP (OPLLとして参照)](patches/opll.md#cc324) |
 | 48 | 0 | OPL3 | [ALSA std (OPL3)](patches/opl3.md#cc320) |
 | 48 | 1 | OPL3 | [Preset4OP](patches/opl3.md#cc321) |
@@ -119,9 +123,11 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)による音色バンクの一覧です。
 | 64 | 1 | SSG | [EPSG (AY8930) Preset](patches/ssg.md#cc321) |
 | 64 | 2 | SSG | [SCC Preset (wave 0-7: Duty系)](patches/ssg.md#cc322) |
 | 64 | 3 | SSG | [SCC Preset (wave 8-15: Duty96.875+Triangle+Downsaw+Upsaw+Sine+Harpsi+Piano+Organ)](patches/ssg.md#cc323) |
+| 68 | (任意) | DSG | [DSG Built-In(ROM音色、Prog 0-19)](patches/dsg.md#cc320) |
 | 81 | 0 | ADPCMB | [wavs/melodic ADPCM-B (OPNA)](patches/adpcmb.md#cc320) |
 | 82 | 1 | ADPCMA | [wavs/rhythm ADPCM-A (OPNB)](patches/adpcma.md#cc321) |
 | 84 | 0 | AWM | [YRW801 GM (melodic)](patches/awm.md#cc320) |
 | 84 | 1 | AWM | [YRW801 GM (drum, ws>=128 fixed table)](patches/awm.md#cc321) |
 | 112 | 17 | 内蔵リズム(OPNA) | [OPNA内蔵リズム](builtin_rhythm.md#opna-rhythm) |
 | 112 | 40 | 内蔵リズム(OPLL) | [OPLL内蔵リズム](builtin_rhythm.md#opll-rhythm) |
+| 112 | 68 | 内蔵リズム(DSG) | [DSG内蔵リズム](builtin_rhythm.md#dsg-rhythm) |
