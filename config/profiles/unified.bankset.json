@@ -867,6 +867,11 @@
       "file": "../../banks/drums/opl_builtin_rhythm.drumkit.json"
     },
     {
+      "prog": 14,
+      "name": "DSG Built-in set",
+      "file": "../../banks/drums/dsg_builtin_rhythm.drumkit.json"
+    },
+    {
       "prog": 15,
       "name": "OPL4-AWM GM set",
       "file": "../../banks/drums/opl4awm.drumkit.json"

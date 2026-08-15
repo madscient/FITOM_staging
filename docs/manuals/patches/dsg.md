@@ -96,3 +96,7 @@ DSGは楽音部とは独立したレジスタ空間に5パートの内蔵リズ�
 楽音の4chを潰すことなく同時に使えます。CC#0=112・CC#32=68で選択します。
 詳細は[内蔵リズム音源の楽器選択方法](../builtin_rhythm.md#dsg-rhythm)を
 参照してください。
+
+GM2ドラムノートへ割り当て済みの
+[DSG Built-in set](../drumkits.md#prog14-dsg-built-in-set)(通常の
+ドラムキット、CC#0=120・Prog=14)からも鳴らせます。

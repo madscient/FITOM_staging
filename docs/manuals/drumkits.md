@@ -20,6 +20,7 @@ Change)で以下のキットを選択します(CC#0=112は内蔵リズム音源�
 | 11 | [OPNA Built-in set](#prog11-opna-built-in-set) |
 | 12 | [OPLL Built-in set](#prog12-opll-built-in-set) |
 | 13 | [OPL Built-in set](#prog13-opl-built-in-set) |
+| 14 | [DSG Built-in set](#prog14-dsg-built-in-set) |
 | 15 | [OPL4-AWM GM set](#prog15-opl4-awm-gm-set) |
 | 16 | [PSS-590 Power Kit](#prog16-pss-590-power-kit) |
 | 17 | [PSS-590 GM Drum Kit](#prog17-pss-590-gm-drum-kit) |
@@ -806,6 +807,38 @@ Change)で以下のキットを選択します(CC#0=112は内蔵リズム音源�
 | 59 | Ride Cymbal 2 | OPL_RHY | 0/4 | 29 |
 | 60 | Hi Bongo | OPL_RHY | 0/3 | 32 |
 | 61 | Low Bongo | OPL_RHY | 0/3 | 26 |
+
+### Prog=14: DSG Built-in set
+
+DSGの内蔵リズムは**5音のみ**(BD/HC/SDN/HHO/HHD)です。打楽器の
+系統が一致・近接するノートだけを割り当てています。
+
+| MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 発音するDSGの音 |
+|---|---|---|---|---|
+| 35 | Acoustic Bass Drum | 内蔵リズム音源 | 68/0 | BD |
+| 36 | Bass Drum 1 | 内蔵リズム音源 | 68/0 | BD |
+| 37 | Side Stick | 内蔵リズム音源 | 68/2 | SDN |
+| 38 | Acoustic Snare | 内蔵リズム音源 | 68/2 | SDN |
+| 39 | Hand Clap | 内蔵リズム音源 | 68/2 | SDN |
+| 40 | Electric Snare | 内蔵リズム音源 | 68/2 | SDN |
+| 42 | Closed Hi-Hat | 内蔵リズム音源 | 68/4 | HHD |
+| 44 | Pedal Hi-Hat | 内蔵リズム音源 | 68/4 | HHD |
+| 46 | Open Hi-Hat | 内蔵リズム音源 | 68/3 | HHO |
+| 60 | Hi Bongo | 内蔵リズム音源 | 68/1 | HC |
+| 61 | Low Bongo | 内蔵リズム音源 | 68/1 | HC |
+| 62 | Mute Hi Conga | 内蔵リズム音源 | 68/1 | HC |
+| 63 | Open Hi Conga | 内蔵リズム音源 | 68/1 | HC |
+| 64 | Low Conga | 内蔵リズム音源 | 68/1 | HC |
+
+上記以外のノート(27-34, 41, 43, 45, 47-59, 65-87)は、DSGに対応する音が無いため
+**プレースホルダ**として枠だけが用意されており、鳴りません
+(楽器名の末尾に`(placeholder)`が付きます)。
+
+> DSGのリズム音は音程レジスタを持たないため「演奏ノート」の列が
+> ありません。ノート番号を変えても音程は変わらず、代用割り当てした
+> ノート同士(コンガとボンゴなど)は完全に同じ音になります。
+>
+> Hi-Hat OpenとHi-Hat Closeは実機で同一の発振器を共有します。
 
 ### Prog=15: OPL4-AWM GM set
 

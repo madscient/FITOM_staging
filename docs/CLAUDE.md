@@ -150,6 +150,19 @@ SCC（`ops[0].WS`=波形メモリindex、0-127）のみ。
   （後勝ちで上書きされる）。全チップ分のエントリを1ファイルにまとめること。
   `patch_no`の値域はチップごとに異なる（OPLL系=1-15、DSG=0-19）。
   `group`/`bank`フィールドはこのroleでは意味を持たない。
+- **`builtin`参照エントリでは`prog`を書かないこと**。検索は
+  `findByBuiltinRef()`が`(patch_type, patch_no)`で線形探索するため`prog`は
+  検索キーではなく、`HwBank::patches`（128要素の配列1本）の格納スロット
+  位置にすぎない。`patch_type`ごとに分かれた名前空間ではないので、
+  OPLL系とDSGで同じ`prog`を明示すると後勝ちで上書きされ片方が黙って消える
+  （FITOM_X側`2c6160f`でロード時に警告が出るようになった）。省略すれば
+  `loadBuiltinMetaBankJson()`が直前のエントリ+1で自動採番するため衝突
+  しない。スキーマ側も`builtin`参照エントリでは`prog`を任意にしている
+  （`ops`を持つ通常のパッチでは`prog`はProgram Change番号そのものなので
+  引き続き必須。`oneOf`の分岐で切り替わる。FITOM_X側`2a4ad5d`、3.56参照）。
+  あえて明示するならチップごとに範囲を分けること（例: OPLL系0-59、
+  DSG 60-79。容量はOPLL系が最大60エントリ[4バリアント×15]、DSGが20
+  エントリで128スロットに収まる）。
   通常のGM128パッチバンクでROM音色を「実際に鳴らすパッチ」として使いたい
   場合は、ToneLayerで直接`voice_patch_type=0x28, hw_bank=0, hw_prog=
   (variant<<4)|inst`を指定すればよい（`builtin`フィールドは使わない）。
@@ -2198,9 +2211,8 @@ OPL/OPL2/Y8950等を`ChipPanType::Mono`に分類しており、これらは
 分離する」方式(`stereo_pair: "L"`/`"R"`、pan=0)は指定しても読み込み時警告に
 なるだけで効かない。プラグイン側のpanでL/Rへ振り分ける`emu_opll_stereo`と
 同じ方式(`stereo_pair: true`、pan=1/2)を採る必要がある。
-(なお`config_schema/profile.schema.json`の`stereo_pair`は`boolean`のままで、
-本体側で2026年8月に追加された`"L"`/`"R"`表記に追従していない。5.5に従い
-本体側から同期すること。)
+(`config_schema/profile.schema.json`の`stereo_pair`は当時`boolean`のままで
+本体側の`"L"`/`"R"`表記に追従していなかったが、3.56で同期済み。)
 
 **SAAだけはステレオ化しない**: SAA1099はチャンネルごとに左右独立の4bit音量
 レジスタを持ち、`getChipPanType()`でも`Continuous`(連続的なパンポットを持つ
@@ -2326,8 +2338,8 @@ OPLL系ROM音色とDSGビルトイン音色が**同じ1つのメタバンクフ�
   説明が「チップへ送られるのは下位2bitのみ」へ）も取り込まれた。既存の
   `REV`保持バンク3件（`OPZ/gm128`・`OPZ/tx81z`・`OPL2/msx_audio`の
   リズム）の実データは最大値7で、新しい値域でもVALIDであることを
-  全`*.hwbank.json`スキャンで確認済み。`profile.schema.json`は今回の
-  対象外のためdriftが残っている（3.53の`stereo_pair`の件、4節）。
+  全`*.hwbank.json`スキャンで確認済み。`profile.schema.json`はこの時点では
+  同期対象外としたが、後日3.56で全面同期した。
 
 **検証**: `bin/fitom_cli.exe config/profiles/emu_psg_stereo.profile.json`で
 DSG2個が`engines/DSGemuEngine`経由でHWPort openされ、
@@ -2339,6 +2351,85 @@ CLinearPanDeviceに束ねられること(`Device[4]: DSG-TONE → Multi[DSG (YM2
 インストゥルメントリストはXML well-formed・`.ins`セクション名一意を再検証済み。
 実際に発音させた聴感確認は未実施(4節)。
 
+### 3.55 DSG内蔵リズムのGM2ドラムキットを新設（2026年8月15日、ユーザー指示）
+`banks/drums/dsg_builtin_rhythm.drumkit.json`(`type: "routed"`)を新設し、
+`unified.bankset.json`の`drum_banks[]`へ`prog=14`("DSG Built-in set")として
+追加した。他のビルトインリズム用キット(11=OPNA / 12=OPLL / 13=OPL)の
+直後の空き番号。各ノートは`voice_patch_type=112`・`patch_bank=68`
+(=`VOICE_PATCH_DSG`)・`patch_prog`=パート番号。
+
+**割当方針は「ハイブリッド」(ユーザー選択)**: DSGは5音(BD/HC/SDN/HHO/HHD)
+しか持たないため、打楽器の系統が一致・近接するGM2ノート14件のみを割り当て、
+残り47ノートは無音のプレースホルダとした。
+- BD(0): 35, 36 / SDN(2): 37, 38, 39, 40 / HHD(4): 42, 44 / HHO(3): 46 /
+  HC(1): 60, 61, 62, 63, 64
+- プレースホルダは`patch_prog=5`(パート数5の範囲外)。
+  `resolveBuiltinRhythm`が範囲外を検出して発音を中止するため無音になるが、
+  **該当ノートを叩くたびに警告ログが出る**(仕様上、`notes[]`に載せたまま
+  無音にする手段が他に無い)。楽器名は末尾に`(placeholder)`を付けて
+  区別している。後から音を割り当てる際は`patch_prog`を0-4へ変えるだけでよい。
+- シンバル類(49/51/52/55/57/59)・トム類(41/43/45/47/48/50)も
+  プレースホルダとした。DSGにシンバル・トムの音自体が無く、
+  HHOやHCで代用しても後述の通り全て同じ音になるため。
+
+**`play_note`は識別用の値ではない**: `CDSGRhythm::updateFreq()`はno-opで
+リズム音の音程レジスタが存在しないため、`play_note`は無視される。
+値としてはノート番号自身を入れてある(恒等)。同じパートへ代用割り当てした
+ノート同士(コンガとボンゴ等)は音程差を付けられず**完全に同一の音**になる。
+`gate_time`も同様に効かない(ワンショットでキーオフ機構が無い、
+`updateKey`が`keyOn==false`で即returnする)ため全て0。
+
+ベロシティは`CDSGRhythm::writeLevel()`が`calcVolExpVel()`経由で反映するため
+SwPatch無し(`sw_bank`/`sw_prog`=-1)でも効く。`choke_groups`は3.20の
+GM2標準セットをそのまま付与した(42/44/46はDSG実機でもHHO/HHDが同一の
+発振器・同一のレベルレジスタを共有するため、実態とも一致する)。
+
+**検証**: `emu_psg_stereo`で起動し`DrumKit loaded: prog=14 'DSG Built-in
+Rhythm (CDSGRhythm' type=routed`をログで確認、エラー0件。
+`drumkit.schema.json`でVALID。インストゥルメントリストを再生成し、
+全8プロファイルに`Drum Prog=14 DSG Built-in set`節が追加されたこと・
+XML well-formed・`.ins`セクション名一意を再検証済み。実際に発音させた
+聴感確認は未実施。
+
+### 3.56 config_schemaをFITOM_X側から全面同期（2026年8月15日、ユーザー指示）
+5.5節の方針に従い、`config_schema/`配下でdriftしていた2ファイルを
+FITOM_X側からverbatimコピーした。これで**全11ファイルが本体側と完全一致**
+した状態になった。
+
+- `profile.schema.json`: 主な変更は`devices[].stereo_pair`の型を
+  `boolean`から`oneOf[boolean, enum["L","R"]]`へ拡張（3.53で本体側に
+  追加されたチップ自身のL/R出力ビットで分離する方式に対応）。
+  これにより、それまで**実際にバリデーションエラーになっていた**
+  `emu_opl_stereo`/`emu_opn_stereo`/`fmall`の3プロファイルが
+  VALIDになった（データ側は元から正しく、本体側の実装でも正しく
+  読めていたためエラーはスキーマ側の同期漏れが原因だった）。
+  あわせて`hw_banks[].group`・`rhythm_mode`の説明文が具体化され、
+  `hw_plugins[].auto_devices_rhythm_mode`（`auto_devices:true`時に
+  チップ名でrhythm_modeを補うフィールド）が追加された。
+- `hwbank.schema.json`: 3.54の同期後にFITOM_X側コミット`2c6160f`で
+  `builtin`の説明文が追記されたため再同期。`prog`がチップ横断の
+  単一スロット名前空間である旨の注意（3.6参照）が加わっている。
+
+**検証**: 全12プロファイル・全60`*.hwbank.json`を同期後のスキーマで
+検証し、INVALID 0件を確認。残存するdriftは4節に記載。
+
+**追従同期（2026年8月16日、FITOM_X側コミット`2a4ad5d`）**: 上記の同期直後に
+報告した「メタバンクの`prog`を省略できない」という実装とスキーマの不整合
+（ローダは自動採番するのにスキーマが`prog`を必須にしていた）が本体側で
+修正されたため、`hwbank.schema.json`を再同期した。
+- `prog`が`patches[].items`直下の`required`から外れ、`ops`/`builtin`の
+  `oneOf`分岐へ移された。`ops`（通常のパッチ）は`prog`必須のまま
+  （`loadHwBankJson()`が`entry.value("prog", -1)`で未指定エントリを
+  読み飛ばすため、省略を許すと黙って消える）、`builtin`参照エントリは
+  `prog`任意（格納スロット番号にすぎずローダが自動採番できる）。
+- これにより**メタバンクは`prog`を書かないのが推奨運用**になった（3.6参照）。
+  `banks/OPLL/rom_sw_meta.hwbank.json`の記入例の注記もこれに合わせて
+  `prog`を含まない形へ更新した。
+- 検証: `builtin`の`prog`省略/明示がともにVALID、`ops`の`prog`省略は
+  従来どおりINVALID、`ops`と`builtin`の同時指定・どちらも無しも
+  従来どおりINVALIDであることを9パターンで確認。既存の全60
+  `*.hwbank.json`も引き続きINVALID 0件。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
@@ -2347,12 +2438,6 @@ CLinearPanDeviceに束ねられること(`Device[4]: DSG-TONE → Multi[DSG (YM2
   ままで、OPLL系ROM音色・DSGビルトイン音色のどちらにも実際の
   パフォーマンスパッチが割り当てられていない。どのビルトイン音色に
   どのSwPatchを割り当てるかはパッチ設計の判断であり、要検討。
-- 3.54のDSGは、`banks/drums/`にOPNA/OPLLの「Built-in set」に相当する
-  GM2ノートマッピング済みdrumkitを用意していない(内蔵リズムを鳴らすには
-  CC#0=112・CC#32=68でProg 0-4を直接指定する)。他チップと揃えるなら
-  `dsg_builtin.drumkit.json`相当を新規作成して`drum_banks[]`へ追加する
-  ことになるが、DSGのリズムは5パート中2つがハイハットの開閉で、
-  Hi Congaを含むためGM2の標準ドラムマップとの対応が自明でない。要判断。
 - **【DSAemuEngine側の修正待ち】SCCが発音しない**: 3.53の`emu_psg_stereo`の
   SCCは、現状のDSAemuEngineでは無音になる。`DSAemuEngine.cpp`が
   `SCC_write(scc, 0xC000 + reg, val)`を呼ぶが、emu2212の`SCC_write()`は
@@ -2462,16 +2547,14 @@ CLinearPanDeviceに束ねられること(`Device[4]: DSG-TONE → Multi[DSG (YM2
   修正できない(該当ノートの`name`も`Drum Note N`という機械生成の
   フォールバック名のままで、元々意図された楽器名の情報が無い)。
   実害の大小は未評価のため、要判断。
-- `config_schema/profile.schema.json`のFITOM_X側原本に、以下2点の
-  drift/未反映を発見済み（config_schemaは本体側から直接コピーする方針
-  のため、本リポジトリ側では未対応。本体側の更新を待って同期する）:
-  - `devices[].engine`の例が`"YMEngine"`のまま（3.18のDLL名改称が
-    schema例に未反映）。
-  - `midi_backend`の説明文が旧WinMM/ALSA/WMS個別実装の記述のままで、
-    FITOM_X本体のコミット`4a3864f`（MIDIバックエンドをRtMidi統一実装に
-    置き換え）が本リポジトリの`config_schema/profile.schema.json`に
-    未反映（2026年7月19日時点、本体側`config_schema/`と本リポジトリの
-    コピーを比較して判明）。
+- `config_schema/profile.schema.json`の`devices[].engine`の`examples`が
+  `["YMEngine", "AYEngine"]`のまま（3.18のDLL名改称が例に未反映。
+  現行の正しい値は`"engines/YMFMEngine"`等）。これは**FITOM_X側原本
+  自体のdrift**であり、3.56の全面同期後も残っている（config_schemaは
+  本体側から直接コピーする方針のため、本リポジトリ側では修正しない。
+  本体側の更新を待って再同期すること）。なお同じ項目に併記していた
+  `midi_backend`の説明文の未反映は、本体側で修正済みのため3.56の同期で
+  解消した。
 - `fmemuif_opl5.profile.json`/`fmemuif_opm_opz4.profile.json`/
   `fmemuif_opll5.profile.json`（新規作成した4チップ構成サブプロファイル）
   の**クロック値は一般的な標準値からの推測**（特にOPL4=33,868,800Hzは
