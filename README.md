@@ -59,7 +59,8 @@ FITOM_staging/
 │       ├── YMFMEngine.dll/.so
 │       ├── DSAemuEngine.dll/.so
 │       ├── EPSGemuEngine.dll/.so
-│       └── SAASoundEngine.dll/.so
+│       ├── SAASoundEngine.dll/.so
+│       └── DSGemuEngine.dll/.so
 ├── dist/                   インストールパッケージ成果物 (.gitignore 対象)
 └── logs/                   ログ出力先 (.gitignore 対象)
 ```
@@ -72,7 +73,8 @@ FITOM_X (config/profiles/*.profile.json)
         ├── FitomEmuIF.dll  ← hw_plugins[].profile (config/profiles/hw_plugins/
         │     │                fmemuif_*.profile.json) でチップ構成を管理
         │     └── YMFMEngine.dll / DSAemuEngine.dll /
-        │         EPSGemuEngine.dll / SAASoundEngine.dll
+        │         EPSGemuEngine.dll / SAASoundEngine.dll /
+        │         DSGemuEngine.dll
         │         (bin/engines/ に配置)
         └── fitom_hw.dll    ← hw_plugins[].profile (config/profiles/hw_plugins/
                                fitom_hw_*.profile.json) で実機構成を管理
@@ -121,6 +123,7 @@ FitomHwIF実機構成を含む)は誰もメンテナンスしておらず統合�
 | DSAemuEngine | digital-sound-antiques系エミュレーター (`DSAemuEngine.dll`) | engines/ に配置 |
 | EPSGemuEngine | AY8930(EPSG)エミュレーター (`EPSGemuEngine.dll`) | engines/ に配置 |
 | SAASoundEngine | SAA1099エミュレーター (`SAASoundEngine.dll`) | engines/ に配置 |
+| DSGemuEngine | YM2163(DSG)エミュレーター (`DSGemuEngine.dll`) | engines/ に配置 |
 
 ## 初回セットアップ
 

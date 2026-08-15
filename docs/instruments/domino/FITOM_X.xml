@@ -137,6 +137,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Percussive" MSB="68" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
@@ -144,6 +145,7 @@
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
+				<Bank Name="Bass Drum" MSB="112" LSB="68" />
 				<Bank Name="Stereo Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard" MSB="127" LSB="1" />
 				<Bank Name="RX5_Standard" MSB="127" LSB="4" />
@@ -276,12 +278,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Wind" MSB="68" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
+				<Bank Name="Hi Conga" MSB="112" LSB="68" />
 				<Bank Name="Bright Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard 2" MSB="127" LSB="1" />
 				<Bank Name="Acou Piano 2" MSB="127" LSB="7" />
@@ -411,12 +415,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Sustain" MSB="68" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
+				<Bank Name="Snare Drum" MSB="112" LSB="68" />
 				<Bank Name="Electric Grand" MSB="127" LSB="0" />
 				<Bank Name="Acou Piano 3" MSB="127" LSB="7" />
 			</PC>
@@ -531,12 +537,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Plateau" MSB="68" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
 				<Bank Name="Honky-Tonk" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 1" MSB="127" LSB="7" />
 			</PC>
@@ -660,12 +668,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Percussive" MSB="68" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
 				<Bank Name="Tine Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 2" MSB="127" LSB="7" />
 			</PC>
@@ -798,6 +808,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Wind" MSB="68" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
@@ -928,6 +939,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Sustain" MSB="68" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
@@ -1053,6 +1065,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
@@ -1174,6 +1187,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
@@ -1301,6 +1315,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Wind" MSB="68" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
@@ -1437,6 +1452,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Sustain" MSB="68" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
@@ -1568,6 +1584,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Plateau" MSB="68" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
@@ -1693,6 +1710,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
@@ -1804,6 +1822,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
@@ -1920,6 +1939,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
@@ -2054,6 +2074,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
@@ -2175,6 +2196,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
@@ -2291,6 +2313,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
@@ -2406,6 +2429,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
@@ -2512,6 +2536,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
@@ -13563,6 +13588,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Percussive" MSB="68" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
@@ -13570,6 +13596,7 @@
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
+				<Bank Name="Bass Drum" MSB="112" LSB="68" />
 				<Bank Name="Stereo Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard" MSB="127" LSB="1" />
 				<Bank Name="RX5_Standard" MSB="127" LSB="4" />
@@ -13702,12 +13729,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Wind" MSB="68" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
+				<Bank Name="Hi Conga" MSB="112" LSB="68" />
 				<Bank Name="Bright Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard 2" MSB="127" LSB="1" />
 				<Bank Name="Acou Piano 2" MSB="127" LSB="7" />
@@ -13837,12 +13866,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Sustain" MSB="68" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
+				<Bank Name="Snare Drum" MSB="112" LSB="68" />
 				<Bank Name="Electric Grand" MSB="127" LSB="0" />
 				<Bank Name="Acou Piano 3" MSB="127" LSB="7" />
 			</PC>
@@ -13957,12 +13988,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Plateau" MSB="68" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
 				<Bank Name="Honky-Tonk" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 1" MSB="127" LSB="7" />
 			</PC>
@@ -14086,12 +14119,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Percussive" MSB="68" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
 				<Bank Name="Tine Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 2" MSB="127" LSB="7" />
 			</PC>
@@ -14224,6 +14259,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Wind" MSB="68" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
@@ -14354,6 +14390,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Sustain" MSB="68" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
@@ -14479,6 +14516,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
@@ -14600,6 +14638,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
@@ -14727,6 +14766,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Wind" MSB="68" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
@@ -14863,6 +14903,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Sustain" MSB="68" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
@@ -14994,6 +15035,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Plateau" MSB="68" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
@@ -15119,6 +15161,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
@@ -15230,6 +15273,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
@@ -15346,6 +15390,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
@@ -15480,6 +15525,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
@@ -15601,6 +15647,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
@@ -15717,6 +15764,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
@@ -15832,6 +15880,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
@@ -15938,6 +15987,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
@@ -26989,6 +27039,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Percussive" MSB="68" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
@@ -26996,6 +27047,7 @@
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
+				<Bank Name="Bass Drum" MSB="112" LSB="68" />
 				<Bank Name="Stereo Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard" MSB="127" LSB="1" />
 				<Bank Name="RX5_Standard" MSB="127" LSB="4" />
@@ -27128,12 +27180,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Wind" MSB="68" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
+				<Bank Name="Hi Conga" MSB="112" LSB="68" />
 				<Bank Name="Bright Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard 2" MSB="127" LSB="1" />
 				<Bank Name="Acou Piano 2" MSB="127" LSB="7" />
@@ -27263,12 +27317,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Sustain" MSB="68" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
+				<Bank Name="Snare Drum" MSB="112" LSB="68" />
 				<Bank Name="Electric Grand" MSB="127" LSB="0" />
 				<Bank Name="Acou Piano 3" MSB="127" LSB="7" />
 			</PC>
@@ -27383,12 +27439,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Plateau" MSB="68" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
 				<Bank Name="Honky-Tonk" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 1" MSB="127" LSB="7" />
 			</PC>
@@ -27512,12 +27570,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Percussive" MSB="68" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
 				<Bank Name="Tine Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 2" MSB="127" LSB="7" />
 			</PC>
@@ -27650,6 +27710,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Wind" MSB="68" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
@@ -27780,6 +27841,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Sustain" MSB="68" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
@@ -27905,6 +27967,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
@@ -28026,6 +28089,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
@@ -28153,6 +28217,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Wind" MSB="68" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
@@ -28289,6 +28354,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Sustain" MSB="68" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
@@ -28420,6 +28486,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Plateau" MSB="68" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
@@ -28545,6 +28612,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
@@ -28656,6 +28724,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
@@ -28772,6 +28841,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
@@ -28906,6 +28976,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
@@ -29027,6 +29098,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
@@ -29143,6 +29215,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
@@ -29258,6 +29331,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
@@ -29364,6 +29438,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
@@ -40415,6 +40490,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Percussive" MSB="68" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
@@ -40422,6 +40498,7 @@
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
+				<Bank Name="Bass Drum" MSB="112" LSB="68" />
 				<Bank Name="Stereo Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard" MSB="127" LSB="1" />
 				<Bank Name="RX5_Standard" MSB="127" LSB="4" />
@@ -40554,12 +40631,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Wind" MSB="68" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
+				<Bank Name="Hi Conga" MSB="112" LSB="68" />
 				<Bank Name="Bright Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard 2" MSB="127" LSB="1" />
 				<Bank Name="Acou Piano 2" MSB="127" LSB="7" />
@@ -40689,12 +40768,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Sustain" MSB="68" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
+				<Bank Name="Snare Drum" MSB="112" LSB="68" />
 				<Bank Name="Electric Grand" MSB="127" LSB="0" />
 				<Bank Name="Acou Piano 3" MSB="127" LSB="7" />
 			</PC>
@@ -40809,12 +40890,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Plateau" MSB="68" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
 				<Bank Name="Honky-Tonk" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 1" MSB="127" LSB="7" />
 			</PC>
@@ -40938,12 +41021,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Percussive" MSB="68" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
 				<Bank Name="Tine Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 2" MSB="127" LSB="7" />
 			</PC>
@@ -41076,6 +41161,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Wind" MSB="68" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
@@ -41206,6 +41292,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Sustain" MSB="68" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
@@ -41331,6 +41418,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
@@ -41452,6 +41540,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
@@ -41579,6 +41668,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Wind" MSB="68" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
@@ -41715,6 +41805,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Sustain" MSB="68" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
@@ -41846,6 +41937,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Plateau" MSB="68" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
@@ -41971,6 +42063,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
@@ -42082,6 +42175,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
@@ -42198,6 +42292,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
@@ -42332,6 +42427,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
@@ -42453,6 +42549,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
@@ -42569,6 +42666,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
@@ -42684,6 +42782,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
@@ -42790,6 +42889,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
@@ -53841,6 +53941,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Percussive" MSB="68" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
@@ -53848,6 +53949,7 @@
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
+				<Bank Name="Bass Drum" MSB="112" LSB="68" />
 				<Bank Name="Stereo Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard" MSB="127" LSB="1" />
 				<Bank Name="RX5_Standard" MSB="127" LSB="4" />
@@ -53980,12 +54082,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Wind" MSB="68" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
+				<Bank Name="Hi Conga" MSB="112" LSB="68" />
 				<Bank Name="Bright Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard 2" MSB="127" LSB="1" />
 				<Bank Name="Acou Piano 2" MSB="127" LSB="7" />
@@ -54115,12 +54219,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Sustain" MSB="68" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
+				<Bank Name="Snare Drum" MSB="112" LSB="68" />
 				<Bank Name="Electric Grand" MSB="127" LSB="0" />
 				<Bank Name="Acou Piano 3" MSB="127" LSB="7" />
 			</PC>
@@ -54235,12 +54341,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Plateau" MSB="68" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
 				<Bank Name="Honky-Tonk" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 1" MSB="127" LSB="7" />
 			</PC>
@@ -54364,12 +54472,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Percussive" MSB="68" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
 				<Bank Name="Tine Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 2" MSB="127" LSB="7" />
 			</PC>
@@ -54502,6 +54612,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Wind" MSB="68" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
@@ -54632,6 +54743,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Sustain" MSB="68" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
@@ -54757,6 +54869,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
@@ -54878,6 +54991,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
@@ -55005,6 +55119,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Wind" MSB="68" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
@@ -55141,6 +55256,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Sustain" MSB="68" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
@@ -55272,6 +55388,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Plateau" MSB="68" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
@@ -55397,6 +55514,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
@@ -55508,6 +55626,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
@@ -55624,6 +55743,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
@@ -55758,6 +55878,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
@@ -55879,6 +56000,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
@@ -55995,6 +56117,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
@@ -56110,6 +56233,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
@@ -56216,6 +56340,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
@@ -67267,6 +67392,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Percussive" MSB="68" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
@@ -67274,6 +67400,7 @@
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
+				<Bank Name="Bass Drum" MSB="112" LSB="68" />
 				<Bank Name="Stereo Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard" MSB="127" LSB="1" />
 				<Bank Name="RX5_Standard" MSB="127" LSB="4" />
@@ -67406,12 +67533,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Wind" MSB="68" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
+				<Bank Name="Hi Conga" MSB="112" LSB="68" />
 				<Bank Name="Bright Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard 2" MSB="127" LSB="1" />
 				<Bank Name="Acou Piano 2" MSB="127" LSB="7" />
@@ -67541,12 +67670,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Sustain" MSB="68" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
+				<Bank Name="Snare Drum" MSB="112" LSB="68" />
 				<Bank Name="Electric Grand" MSB="127" LSB="0" />
 				<Bank Name="Acou Piano 3" MSB="127" LSB="7" />
 			</PC>
@@ -67661,12 +67792,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Plateau" MSB="68" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
 				<Bank Name="Honky-Tonk" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 1" MSB="127" LSB="7" />
 			</PC>
@@ -67790,12 +67923,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Percussive" MSB="68" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
 				<Bank Name="Tine Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 2" MSB="127" LSB="7" />
 			</PC>
@@ -67928,6 +68063,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Wind" MSB="68" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
@@ -68058,6 +68194,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Sustain" MSB="68" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
@@ -68183,6 +68320,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
@@ -68304,6 +68442,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
@@ -68431,6 +68570,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Wind" MSB="68" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
@@ -68567,6 +68707,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Sustain" MSB="68" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
@@ -68698,6 +68839,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Plateau" MSB="68" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
@@ -68823,6 +68965,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
@@ -68934,6 +69077,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
@@ -69050,6 +69194,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
@@ -69184,6 +69329,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
@@ -69305,6 +69451,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
@@ -69421,6 +69568,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
@@ -69536,6 +69684,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
@@ -69642,6 +69791,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
@@ -80693,6 +80843,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Percussive" MSB="68" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
@@ -80700,6 +80851,7 @@
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
+				<Bank Name="Bass Drum" MSB="112" LSB="68" />
 				<Bank Name="Stereo Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard" MSB="127" LSB="1" />
 				<Bank Name="RX5_Standard" MSB="127" LSB="4" />
@@ -80832,12 +80984,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Wind" MSB="68" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
+				<Bank Name="Hi Conga" MSB="112" LSB="68" />
 				<Bank Name="Bright Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard 2" MSB="127" LSB="1" />
 				<Bank Name="Acou Piano 2" MSB="127" LSB="7" />
@@ -80967,12 +81121,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Sustain" MSB="68" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
+				<Bank Name="Snare Drum" MSB="112" LSB="68" />
 				<Bank Name="Electric Grand" MSB="127" LSB="0" />
 				<Bank Name="Acou Piano 3" MSB="127" LSB="7" />
 			</PC>
@@ -81087,12 +81243,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Plateau" MSB="68" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
 				<Bank Name="Honky-Tonk" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 1" MSB="127" LSB="7" />
 			</PC>
@@ -81216,12 +81374,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Percussive" MSB="68" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
 				<Bank Name="Tine Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 2" MSB="127" LSB="7" />
 			</PC>
@@ -81354,6 +81514,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Wind" MSB="68" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
@@ -81484,6 +81645,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Sustain" MSB="68" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
@@ -81609,6 +81771,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
@@ -81730,6 +81893,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
@@ -81857,6 +82021,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Wind" MSB="68" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
@@ -81993,6 +82158,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Sustain" MSB="68" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
@@ -82124,6 +82290,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Plateau" MSB="68" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
@@ -82249,6 +82416,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
@@ -82360,6 +82528,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
@@ -82476,6 +82645,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
@@ -82610,6 +82780,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
@@ -82731,6 +82902,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
@@ -82847,6 +83019,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
@@ -82962,6 +83135,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
@@ -83068,6 +83242,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
@@ -94119,6 +94294,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Percussive" MSB="68" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="0" />
 				<Bank Name="BrassHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
@@ -94126,6 +94302,7 @@
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
+				<Bank Name="Bass Drum" MSB="112" LSB="68" />
 				<Bank Name="Stereo Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard" MSB="127" LSB="1" />
 				<Bank Name="RX5_Standard" MSB="127" LSB="4" />
@@ -94258,12 +94435,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Wind" MSB="68" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
+				<Bank Name="Hi Conga" MSB="112" LSB="68" />
 				<Bank Name="Bright Grand" MSB="127" LSB="0" />
 				<Bank Name="Standard 2" MSB="127" LSB="1" />
 				<Bank Name="Acou Piano 2" MSB="127" LSB="7" />
@@ -94393,12 +94572,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="St.Sustain" MSB="68" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="0" />
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
+				<Bank Name="Snare Drum" MSB="112" LSB="68" />
 				<Bank Name="Electric Grand" MSB="127" LSB="0" />
 				<Bank Name="Acou Piano 3" MSB="127" LSB="7" />
 			</PC>
@@ -94513,12 +94694,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="St.Plateau" MSB="68" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="0" />
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
 				<Bank Name="Honky-Tonk" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 1" MSB="127" LSB="7" />
 			</PC>
@@ -94642,12 +94825,14 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Percussive" MSB="68" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
+				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
 				<Bank Name="Tine Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 2" MSB="127" LSB="7" />
 			</PC>
@@ -94780,6 +94965,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Wind" MSB="68" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
@@ -94910,6 +95096,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Or.Sustain" MSB="68" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
@@ -95035,6 +95222,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Or.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
@@ -95156,6 +95344,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
@@ -95283,6 +95472,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Wind" MSB="68" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="0" />
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
@@ -95419,6 +95609,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Sustain" MSB="68" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="0" />
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
@@ -95550,6 +95741,7 @@
 				<Bank Name="[EPSG] Duty3.125 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty03.125 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Duty96.875 [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Cl.Plateau" MSB="68" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="0" />
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
@@ -95675,6 +95867,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="0" />
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
@@ -95786,6 +95979,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="0" />
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
@@ -95902,6 +96096,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
@@ -96036,6 +96231,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
@@ -96157,6 +96353,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
@@ -96273,6 +96470,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
@@ -96388,6 +96586,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:4]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:4]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
@@ -96494,6 +96693,7 @@
 				<Bank Name="[EPSG] Duty6.25 [0:6]" MSB="64" LSB="1" />
 				<Bank Name="[SCC] Duty06.250 [0:6]" MSB="64" LSB="2" />
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
+				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />

@@ -91,6 +91,28 @@
       "type": "FMHWIF"
     },
     {
+      "chip": "DSG",
+      "engine": "engines/DSGemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "DSG",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "DSG",
+      "engine": "engines/DSGemuEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "DSG",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
       "chip": "SAA",
       "engine": "engines/SAASoundEngine",
       "if": "HW",
@@ -132,5 +154,5 @@
     { "mpu": 1, "ch": 14, "fluidsynth_chan": 0 },
     { "mpu": 1, "ch": 15, "fluidsynth_chan": 1 }
   ],
-  "profile_name": "PSGエミュプロファイル (SSG/DCSG/SCC 各2、リニアステレオ)"
+  "profile_name": "PSGエミュプロファイル (SSG/DCSG/SCC/EPSG/DSG 各2、リニアステレオ + SAA)"
 }

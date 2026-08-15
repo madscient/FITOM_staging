@@ -57,7 +57,7 @@ drum_banks 21件, pcm_banks 3件）を共有参照している（2026年7月29�
 | `emu_opm.profile.json` | OPM専用（OPM×2/OPZ×2） |
 | `emu_opll.profile.json` | OPLL専用（OPLL[rhythm]/OPLLP/VRC7/OPLLX×1ずつ。OPLL2は3.37でエンジン非対応のため削除） |
 | `fmall.profile.json` | OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7構成（2026年7月19日新設） |
-| `emu_psg_stereo.profile.json` | PSG専用（SSG/DCSG/SCC×2ずつ=DSAemuEngine、EPSG×2=EPSGemuEngineでリニアステレオ + SAA×1=SAASoundEngine。2026年8月14日新設、3.53参照） |
+| `emu_psg_stereo.profile.json` | PSG専用（SSG/DCSG/SCC×2ずつ=DSAemuEngine、EPSG×2=EPSGemuEngine、DSG×2=DSGemuEngineでリニアステレオ + SAA×1=SAASoundEngine。2026年8月14日新設、3.53/3.54参照） |
 旧・個別プロファイル（`emulator_opm.profile.json`ほか計6件、統合前からの
 遺産）は、誰もメンテナンスしておらず統合後の構成と矛盾していたため
 2026年7月26日に削除した（3.30節参照）。
@@ -90,6 +90,7 @@ drum_banks 21件, pcm_banks 3件）を共有参照している（2026年7月29�
 | 40 | 0x28 | OPLL |
 | 48 | 0x30 | OPL3 |
 | 64 | 0x40 | SSG（PSG系共有バンクの入口） |
+| 68 | 0x44 | DSG（YM2163、ビルトイン音色専用。3.54参照） |
 | 81 | 0x51 | ADPCMB |
 | 82 | 0x52 | ADPCMA |
 | 84 | 0x54 | AWM |
@@ -116,6 +117,9 @@ drum_banks 21件, pcm_banks 3件）を共有参照している（2026年7月29�
 （`0x40`=SSG/`0x41`=EPSG/`0x42`=DCSG/`0x43`=SAA/`0x48`=SCC）で実際の対象
 チップを指定する。波形選択があるのはEPSG（`ops[0].WS`=デューティ比0-8）と
 SCC（`ops[0].WS`=波形メモリindex、0-127）のみ。
+- **DSG(YM2163)はこの共有バンクの対象外**。PSG系ではあるが音色パラメータを
+  一切受け付けないため、専用の`voice_patch_type=0x44`とビルトイン音色バンクを
+  持つ（3.54参照）。
 
 ### 3.5 内蔵リズム音源（CC#0=112, `0x70`）— 2026年7月に`fixed_ch`廃止
 - **旧**: `DrumNote::fixed_ch`で楽器（物理チャンネル）を指定
@@ -137,7 +141,15 @@ SCC（`ops[0].WS`=波形メモリindex、0-127）のみ。
   下位4bit=ROM音色番号（0=無音,1-15=音色）。
 - `patches[i].builtin`フィールドは**`role="builtin_swpatch_meta"`の
   バンクでのみ意味を持つ**（ユーザーがパフォーマンスパッチを紐づけるための
-  領域、`unified_preset.profile.json`では`hw_banks[group=OPLL,bank=3]`）。
+  領域、`unified.bankset.json`では`hw_banks[group=OPLL,bank=3]`=
+  `banks/OPLL/rom_sw_meta.hwbank.json`）。このメタバンクは
+  **OPLL系ROM音色とDSGビルトイン音色で共有される**チップ非依存の機構で、
+  `builtin.patch_type`（`OPLL`/`OPLLX`/`OPLLP`/`VRC7`/`DSG`）が対象を
+  区別する。保持スロット（`PatchManager::builtinMetaBank_`）は1つだけの
+  ため、**`hw_banks[]`にこのroleのエントリを複数書いてはならない**
+  （後勝ちで上書きされる）。全チップ分のエントリを1ファイルにまとめること。
+  `patch_no`の値域はチップごとに異なる（OPLL系=1-15、DSG=0-19）。
+  `group`/`bank`フィールドはこのroleでは意味を持たない。
   通常のGM128パッチバンクでROM音色を「実際に鳴らすパッチ」として使いたい
   場合は、ToneLayerで直接`voice_patch_type=0x28, hw_bank=0, hw_prog=
   (variant<<4)|inst`を指定すればよい（`builtin`フィールドは使わない）。
@@ -2231,10 +2243,116 @@ SSG/DCSG/SCC/EPSGの4ペアが
 CLinearPanDeviceに束ねられること(SAAは単独デバイスのまま)をログで確認。
 `profile.schema.json`でVALID。バンクロードのエラーなし。
 
+### 3.54 YM2163(DSG)対応: emu_psg_stereoへ2個追加 + ビルトイン音色/リズムのインストゥルメント定義（2026年8月15日、ユーザー指示）
+FITOM_X側コミット`d882d82`(`core/src/DSG_new.cpp`、`CDSG`/`CDSGRhythm`)で
+YM2163(DSG: Digital Sound Generator)がチップドライバとして追加された。
+隣接リポジトリ`../DSGemuEngine`(FmEngineApi準拠、`core/ym2163.c`)を
+エミュレーションエンジンとして`emu_psg_stereo`へ2個(リニアステレオ)追加した。
+
+**DSGは全音色がビルトイン**: ユーザー音色を一切持たないチップで、
+`PatchManager::initDsgBuiltinPatches()`が「波形5種 × エンベロープ4種」の
+20音色を機械生成する(`prog = 波形index*4 + エンベロープindex`、音色名は
+`<波形名>.<エンベロープ名>` = `St`/`Or`/`Cl`/`Pf`/`Hc` × `Percussive`/
+`Wind`/`Sustain`/`Plateau`)。`hwbank.json`を作ることはできない。
+- `VOICE_PATCH_DSG` = `0x44`(68)。3.2節の対応表に追加される新しいCC#0値。
+- **CC#32(hw_bank)は値を問わず無視される**。`resolveTriple()`は
+  `voicePatchType == VOICE_PATCH_DSG`なら`hwBank`を読まずに
+  `resolveDsgBuiltinVoice(hwProg, ...)`を呼ぶだけで、OPLL ROM音色のように
+  「bank 0のみ予約領域」という区別を持たない。したがって
+  `unified.bankset.json`へのDSG用`hw_banks[]`エントリは**不要**
+  (登録しても引かれない)。
+- 内蔵リズム(`CDSGRhythm`、5パート)はCC#0=112・**CC#32=68**
+  (`resolveBuiltinRhythm`のchipSelが`VOICE_PATCH_DSG`)。
+  パート番号は`0=BD, 1=HC, 2=SDN, 3=HHO, 4=HHD`。
+  レジスタ空間が楽音部(0x80-0x8F)と完全に独立しているため、OPL/OPLL系と
+  違い`rhythm_mode`による出し分けが無く、`Config::resolveCompositeSpec`が
+  `DEVICE_DSG`から`DSG-TONE`/`DSG-RHYTHM`を**常時**composite展開する。
+
+**ステレオ化方式は3.53と同じ**: `getChipPanType()`はDSGを明示的に分類して
+おらず`default`(Mono)扱いのため、チップ内L/R分離はできない。
+`stereo_pair: true` + `pan: 1`/`pan: 2`(プラグイン側で振り分け)を採る。
+composite展開されたサブデバイスもペアリング対象で、`DSG-TONE`・
+`DSG-RHYTHM`がそれぞれ独立にCLinearPanDeviceへ束ねられる。
+
+**クロックは1MHz固定にする理由**: `CDSG::getFnumber()`は共有の周期テーブルを
+使わず`f = clock / (DV * 2^(3-oct))`を実クロックから直接解いており、この
+実クロックは`fmemuif_psg_stereo.profile.json`の`chips[].clock`から来る
+(3.53の「クロック値の決め方」と同じ経路)。YM2163の標準クロックは1MHzで
+`YM2163_DEFAULT_CLOCK`もこれに一致するため`1000000`を明示した。
+最低音は`DV=1023, oct=0`のとき`1e6/(1023*8)`≒122.19Hzになる。
+
+**インストゥルメント定義**: `tools/instrument_export/generate_instruments.py`の
+`collect_builtin_entries()`へ、DSGビルトイン音色20件(CC#0=68/CC#32=0)と
+DSG内蔵リズム5件(CC#0=112/CC#32=68)を追加した。3.43の方針通り
+プロファイルの搭載チップで絞り込まず全8対象プロファイル共通で追加する
+(`emu_psg_stereo`自体は`TARGET_PROFILES`未登録のまま。4節参照)。
+- ビルトイン音色名の生成元は`PatchManager::initDsgBuiltinPatches()`の
+  `kWaveNames`/`kEnvNames`、リズムのパート名は
+  `gui/bridge/FITOMBridge.cpp`の`kDsgRhythmNames`
+  (`Bass Drum`/`Hi Conga`/`Snare Drum`/`Hi-Hat Open`/`Hi-Hat Close`)。
+  OPNA/OPLLと同じく**GUIブリッジ側のテーブルが名前の正**。
+  本体側のFITOM_Xコミット`54830f3`でDSGがパッチピッカー・MIDIモニターへ
+  接続され、この5件がハードコードされた。本リポジトリ側の値は
+  ブリッジ・PatchManagerの各テーブルと文字列単位で一致することを
+  ソース突き合わせで検証済み(OPLL/OPNAのリズム名も同時に照合、全一致)。
+- CC#32=0でリストに載せている点も本体側と整合する。
+  `FITOMBridge::getHwBankList(VOICE_PATCH_DSG)`は`bankNo=0`・
+  `name="Builtin"`の単一バンクだけを返す(`hwBank`の値自体は
+  `resolveDsgBuiltinVoice()`が参照しないため意味を持たない)。
+
+**メタバンクは既存の`rom_sw_meta.hwbank.json`を共有する（新規ファイルは作らない）**:
+FITOM_X側コミット`228c3d0`で`role="builtin_swpatch_meta"`の機構が
+チップ非依存化され（`opllBuiltinMetaBank_`→`builtinMetaBank_`に改名、
+`BuiltinRef::patchType`に`4=DSG`を追加、`resolveDsgBuiltinVoice()`が
+`(BUILTIN_TYPE_DSG, hwProg)`で`findByBuiltinRef()`を引くようになった）、
+OPLL系ROM音色とDSGビルトイン音色が**同じ1つのメタバンクファイル**を
+共有するようになった。保持スロットは1つだけで`hw_banks[]`にこのroleの
+エントリを複数書くと後勝ちで上書きされるため、DSG専用ファイルを作っては
+ならない（当初作成した`banks/PSG/dsg_builtin_sw_meta.hwbank.json`は
+この方針決定を受けて削除済み）。
+- 既に配線済みの`banks/OPLL/rom_sw_meta.hwbank.json`
+  （`unified.bankset.json`の`hw_banks[group=OPLL,bank=3]`）にDSGの
+  エントリも書く。`name`を`Built-In Voice SwPatch Meta (Skeleton)`へ、
+  `note`をチップ非依存の記述へ更新した（中身は引き続き空のスケルトン。
+  ファイル名・配置パスは配線済みの参照を変えないためそのまま）。
+- `BuiltinRef::isValid()`の`patchNo`条件が`>=1`から`>=0`へ緩和された点に
+  注意。DSGは`prog 0`(`St.Percussive`)が正規の音色であり、未設定の
+  センチネルは`0`ではなく`-1`。OPLL系は`instIndex 0`を無音予約に
+  しているため影響しない。
+- `config_schema/hwbank.schema.json`をFITOM_X側からverbatim同期した
+  （5.5節）。`builtin.patch_type`のenumに`DSG`が追加され、`patch_no`の
+  値域が`1-15`から`0-19`へ拡張されている。同期のついでに、以前からの
+  drift（`ops[].REV`の`maximum`が`15`→`3bit`の正である`7`へ、`ops[].EGS`の
+  説明が「チップへ送られるのは下位2bitのみ」へ）も取り込まれた。既存の
+  `REV`保持バンク3件（`OPZ/gm128`・`OPZ/tx81z`・`OPL2/msx_audio`の
+  リズム）の実データは最大値7で、新しい値域でもVALIDであることを
+  全`*.hwbank.json`スキャンで確認済み。`profile.schema.json`は今回の
+  対象外のためdriftが残っている（3.53の`stereo_pair`の件、4節）。
+
+**検証**: `bin/fitom_cli.exe config/profiles/emu_psg_stereo.profile.json`で
+DSG2個が`engines/DSGemuEngine`経由でHWPort openされ、
+`DSG-TONE`(type=0xd)/`DSG-RHYTHM`(type=0x4d)へcomposite展開された上で
+両者とも`mergeStereoPairDevices: ... [plugin-routed L/R]`として
+CLinearPanDeviceに束ねられること(`Device[4]: DSG-TONE → Multi[DSG (YM2163)
+4ch x2]`、`Device[5]: DSG-RHYTHM → Multi[DSG Rhythm 5ch x2]`)をログで確認。
+`profile.schema.json`でVALID、バンクロードのエラーなし。再生成した
+インストゥルメントリストはXML well-formed・`.ins`セクション名一意を再検証済み。
+実際に発音させた聴感確認は未実施(4節)。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
 
+- 3.54のメタバンク(`banks/OPLL/rom_sw_meta.hwbank.json`)は空のスケルトンの
+  ままで、OPLL系ROM音色・DSGビルトイン音色のどちらにも実際の
+  パフォーマンスパッチが割り当てられていない。どのビルトイン音色に
+  どのSwPatchを割り当てるかはパッチ設計の判断であり、要検討。
+- 3.54のDSGは、`banks/drums/`にOPNA/OPLLの「Built-in set」に相当する
+  GM2ノートマッピング済みdrumkitを用意していない(内蔵リズムを鳴らすには
+  CC#0=112・CC#32=68でProg 0-4を直接指定する)。他チップと揃えるなら
+  `dsg_builtin.drumkit.json`相当を新規作成して`drum_banks[]`へ追加する
+  ことになるが、DSGのリズムは5パート中2つがハイハットの開閉で、
+  Hi Congaを含むためGM2の標準ドラムマップとの対応が自明でない。要判断。
 - **【DSAemuEngine側の修正待ち】SCCが発音しない**: 3.53の`emu_psg_stereo`の
   SCCは、現状のDSAemuEngineでは無音になる。`DSAemuEngine.cpp`が
   `SCC_write(scc, 0xC000 + reg, val)`を呼ぶが、emu2212の`SCC_write()`は
