@@ -108371,6 +108371,71 @@
 					<Tone Name="Low Bongo" Key="61" />
 				</Bank>
 			</PC>
+			<PC Name="DSG Built-in set" PC="15">
+				<Bank Name="DSG Built-in set" MSB="120" LSB="0">
+					<Tone Name="High Q (placeholder)" Key="27" />
+					<Tone Name="Slap (placeholder)" Key="28" />
+					<Tone Name="Scratch Push (placeholder)" Key="29" />
+					<Tone Name="Scratch Pull (placeholder)" Key="30" />
+					<Tone Name="Sticks (placeholder)" Key="31" />
+					<Tone Name="Square Click (placeholder)" Key="32" />
+					<Tone Name="Metronome Click (placeholder)" Key="33" />
+					<Tone Name="Metronome Bell (placeholder)" Key="34" />
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom (placeholder)" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom (placeholder)" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom (placeholder)" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom (placeholder)" Key="47" />
+					<Tone Name="Hi-Mid Tom (placeholder)" Key="48" />
+					<Tone Name="Crash Cymbal 1 (placeholder)" Key="49" />
+					<Tone Name="High Tom (placeholder)" Key="50" />
+					<Tone Name="Ride Cymbal 1 (placeholder)" Key="51" />
+					<Tone Name="Chinese Cymbal (placeholder)" Key="52" />
+					<Tone Name="Ride Bell (placeholder)" Key="53" />
+					<Tone Name="Tambourine (placeholder)" Key="54" />
+					<Tone Name="Splash Cymbal (placeholder)" Key="55" />
+					<Tone Name="Cowbell (placeholder)" Key="56" />
+					<Tone Name="Crash Cymbal 2 (placeholder)" Key="57" />
+					<Tone Name="Vibraslap (placeholder)" Key="58" />
+					<Tone Name="Ride Cymbal 2 (placeholder)" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale (placeholder)" Key="65" />
+					<Tone Name="Low Timbale (placeholder)" Key="66" />
+					<Tone Name="High Agogo (placeholder)" Key="67" />
+					<Tone Name="Low Agogo (placeholder)" Key="68" />
+					<Tone Name="Cabasa (placeholder)" Key="69" />
+					<Tone Name="Maracas (placeholder)" Key="70" />
+					<Tone Name="Short Whistle (placeholder)" Key="71" />
+					<Tone Name="Long Whistle (placeholder)" Key="72" />
+					<Tone Name="Short Guiro (placeholder)" Key="73" />
+					<Tone Name="Long Guiro (placeholder)" Key="74" />
+					<Tone Name="Claves (placeholder)" Key="75" />
+					<Tone Name="Hi Wood Block (placeholder)" Key="76" />
+					<Tone Name="Low Wood Block (placeholder)" Key="77" />
+					<Tone Name="Mute Cuica (placeholder)" Key="78" />
+					<Tone Name="Open Cuica (placeholder)" Key="79" />
+					<Tone Name="Mute Triangle (placeholder)" Key="80" />
+					<Tone Name="Open Triangle (placeholder)" Key="81" />
+					<Tone Name="Shaker (placeholder)" Key="82" />
+					<Tone Name="Jingle Bell (placeholder)" Key="83" />
+					<Tone Name="Bell Tree (placeholder)" Key="84" />
+					<Tone Name="Castanets (placeholder)" Key="85" />
+					<Tone Name="Mute Surdo (placeholder)" Key="86" />
+					<Tone Name="Open Surdo (placeholder)" Key="87" />
+				</Bank>
+			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
 				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
@@ -109452,6 +109517,71 @@
 					<Tone Name="Ride Cymbal 2" Key="59" />
 					<Tone Name="Hi Bongo" Key="60" />
 					<Tone Name="Low Bongo" Key="61" />
+				</Bank>
+			</PC>
+			<PC Name="DSG Built-in set" PC="15">
+				<Bank Name="DSG Built-in set" MSB="120" LSB="0">
+					<Tone Name="High Q (placeholder)" Key="27" />
+					<Tone Name="Slap (placeholder)" Key="28" />
+					<Tone Name="Scratch Push (placeholder)" Key="29" />
+					<Tone Name="Scratch Pull (placeholder)" Key="30" />
+					<Tone Name="Sticks (placeholder)" Key="31" />
+					<Tone Name="Square Click (placeholder)" Key="32" />
+					<Tone Name="Metronome Click (placeholder)" Key="33" />
+					<Tone Name="Metronome Bell (placeholder)" Key="34" />
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom (placeholder)" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom (placeholder)" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom (placeholder)" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom (placeholder)" Key="47" />
+					<Tone Name="Hi-Mid Tom (placeholder)" Key="48" />
+					<Tone Name="Crash Cymbal 1 (placeholder)" Key="49" />
+					<Tone Name="High Tom (placeholder)" Key="50" />
+					<Tone Name="Ride Cymbal 1 (placeholder)" Key="51" />
+					<Tone Name="Chinese Cymbal (placeholder)" Key="52" />
+					<Tone Name="Ride Bell (placeholder)" Key="53" />
+					<Tone Name="Tambourine (placeholder)" Key="54" />
+					<Tone Name="Splash Cymbal (placeholder)" Key="55" />
+					<Tone Name="Cowbell (placeholder)" Key="56" />
+					<Tone Name="Crash Cymbal 2 (placeholder)" Key="57" />
+					<Tone Name="Vibraslap (placeholder)" Key="58" />
+					<Tone Name="Ride Cymbal 2 (placeholder)" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale (placeholder)" Key="65" />
+					<Tone Name="Low Timbale (placeholder)" Key="66" />
+					<Tone Name="High Agogo (placeholder)" Key="67" />
+					<Tone Name="Low Agogo (placeholder)" Key="68" />
+					<Tone Name="Cabasa (placeholder)" Key="69" />
+					<Tone Name="Maracas (placeholder)" Key="70" />
+					<Tone Name="Short Whistle (placeholder)" Key="71" />
+					<Tone Name="Long Whistle (placeholder)" Key="72" />
+					<Tone Name="Short Guiro (placeholder)" Key="73" />
+					<Tone Name="Long Guiro (placeholder)" Key="74" />
+					<Tone Name="Claves (placeholder)" Key="75" />
+					<Tone Name="Hi Wood Block (placeholder)" Key="76" />
+					<Tone Name="Low Wood Block (placeholder)" Key="77" />
+					<Tone Name="Mute Cuica (placeholder)" Key="78" />
+					<Tone Name="Open Cuica (placeholder)" Key="79" />
+					<Tone Name="Mute Triangle (placeholder)" Key="80" />
+					<Tone Name="Open Triangle (placeholder)" Key="81" />
+					<Tone Name="Shaker (placeholder)" Key="82" />
+					<Tone Name="Jingle Bell (placeholder)" Key="83" />
+					<Tone Name="Bell Tree (placeholder)" Key="84" />
+					<Tone Name="Castanets (placeholder)" Key="85" />
+					<Tone Name="Mute Surdo (placeholder)" Key="86" />
+					<Tone Name="Open Surdo (placeholder)" Key="87" />
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
@@ -110537,6 +110667,71 @@
 					<Tone Name="Low Bongo" Key="61" />
 				</Bank>
 			</PC>
+			<PC Name="DSG Built-in set" PC="15">
+				<Bank Name="DSG Built-in set" MSB="120" LSB="0">
+					<Tone Name="High Q (placeholder)" Key="27" />
+					<Tone Name="Slap (placeholder)" Key="28" />
+					<Tone Name="Scratch Push (placeholder)" Key="29" />
+					<Tone Name="Scratch Pull (placeholder)" Key="30" />
+					<Tone Name="Sticks (placeholder)" Key="31" />
+					<Tone Name="Square Click (placeholder)" Key="32" />
+					<Tone Name="Metronome Click (placeholder)" Key="33" />
+					<Tone Name="Metronome Bell (placeholder)" Key="34" />
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom (placeholder)" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom (placeholder)" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom (placeholder)" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom (placeholder)" Key="47" />
+					<Tone Name="Hi-Mid Tom (placeholder)" Key="48" />
+					<Tone Name="Crash Cymbal 1 (placeholder)" Key="49" />
+					<Tone Name="High Tom (placeholder)" Key="50" />
+					<Tone Name="Ride Cymbal 1 (placeholder)" Key="51" />
+					<Tone Name="Chinese Cymbal (placeholder)" Key="52" />
+					<Tone Name="Ride Bell (placeholder)" Key="53" />
+					<Tone Name="Tambourine (placeholder)" Key="54" />
+					<Tone Name="Splash Cymbal (placeholder)" Key="55" />
+					<Tone Name="Cowbell (placeholder)" Key="56" />
+					<Tone Name="Crash Cymbal 2 (placeholder)" Key="57" />
+					<Tone Name="Vibraslap (placeholder)" Key="58" />
+					<Tone Name="Ride Cymbal 2 (placeholder)" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale (placeholder)" Key="65" />
+					<Tone Name="Low Timbale (placeholder)" Key="66" />
+					<Tone Name="High Agogo (placeholder)" Key="67" />
+					<Tone Name="Low Agogo (placeholder)" Key="68" />
+					<Tone Name="Cabasa (placeholder)" Key="69" />
+					<Tone Name="Maracas (placeholder)" Key="70" />
+					<Tone Name="Short Whistle (placeholder)" Key="71" />
+					<Tone Name="Long Whistle (placeholder)" Key="72" />
+					<Tone Name="Short Guiro (placeholder)" Key="73" />
+					<Tone Name="Long Guiro (placeholder)" Key="74" />
+					<Tone Name="Claves (placeholder)" Key="75" />
+					<Tone Name="Hi Wood Block (placeholder)" Key="76" />
+					<Tone Name="Low Wood Block (placeholder)" Key="77" />
+					<Tone Name="Mute Cuica (placeholder)" Key="78" />
+					<Tone Name="Open Cuica (placeholder)" Key="79" />
+					<Tone Name="Mute Triangle (placeholder)" Key="80" />
+					<Tone Name="Open Triangle (placeholder)" Key="81" />
+					<Tone Name="Shaker (placeholder)" Key="82" />
+					<Tone Name="Jingle Bell (placeholder)" Key="83" />
+					<Tone Name="Bell Tree (placeholder)" Key="84" />
+					<Tone Name="Castanets (placeholder)" Key="85" />
+					<Tone Name="Mute Surdo (placeholder)" Key="86" />
+					<Tone Name="Open Surdo (placeholder)" Key="87" />
+				</Bank>
+			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
 				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
@@ -111618,6 +111813,71 @@
 					<Tone Name="Ride Cymbal 2" Key="59" />
 					<Tone Name="Hi Bongo" Key="60" />
 					<Tone Name="Low Bongo" Key="61" />
+				</Bank>
+			</PC>
+			<PC Name="DSG Built-in set" PC="15">
+				<Bank Name="DSG Built-in set" MSB="120" LSB="0">
+					<Tone Name="High Q (placeholder)" Key="27" />
+					<Tone Name="Slap (placeholder)" Key="28" />
+					<Tone Name="Scratch Push (placeholder)" Key="29" />
+					<Tone Name="Scratch Pull (placeholder)" Key="30" />
+					<Tone Name="Sticks (placeholder)" Key="31" />
+					<Tone Name="Square Click (placeholder)" Key="32" />
+					<Tone Name="Metronome Click (placeholder)" Key="33" />
+					<Tone Name="Metronome Bell (placeholder)" Key="34" />
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom (placeholder)" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom (placeholder)" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom (placeholder)" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom (placeholder)" Key="47" />
+					<Tone Name="Hi-Mid Tom (placeholder)" Key="48" />
+					<Tone Name="Crash Cymbal 1 (placeholder)" Key="49" />
+					<Tone Name="High Tom (placeholder)" Key="50" />
+					<Tone Name="Ride Cymbal 1 (placeholder)" Key="51" />
+					<Tone Name="Chinese Cymbal (placeholder)" Key="52" />
+					<Tone Name="Ride Bell (placeholder)" Key="53" />
+					<Tone Name="Tambourine (placeholder)" Key="54" />
+					<Tone Name="Splash Cymbal (placeholder)" Key="55" />
+					<Tone Name="Cowbell (placeholder)" Key="56" />
+					<Tone Name="Crash Cymbal 2 (placeholder)" Key="57" />
+					<Tone Name="Vibraslap (placeholder)" Key="58" />
+					<Tone Name="Ride Cymbal 2 (placeholder)" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale (placeholder)" Key="65" />
+					<Tone Name="Low Timbale (placeholder)" Key="66" />
+					<Tone Name="High Agogo (placeholder)" Key="67" />
+					<Tone Name="Low Agogo (placeholder)" Key="68" />
+					<Tone Name="Cabasa (placeholder)" Key="69" />
+					<Tone Name="Maracas (placeholder)" Key="70" />
+					<Tone Name="Short Whistle (placeholder)" Key="71" />
+					<Tone Name="Long Whistle (placeholder)" Key="72" />
+					<Tone Name="Short Guiro (placeholder)" Key="73" />
+					<Tone Name="Long Guiro (placeholder)" Key="74" />
+					<Tone Name="Claves (placeholder)" Key="75" />
+					<Tone Name="Hi Wood Block (placeholder)" Key="76" />
+					<Tone Name="Low Wood Block (placeholder)" Key="77" />
+					<Tone Name="Mute Cuica (placeholder)" Key="78" />
+					<Tone Name="Open Cuica (placeholder)" Key="79" />
+					<Tone Name="Mute Triangle (placeholder)" Key="80" />
+					<Tone Name="Open Triangle (placeholder)" Key="81" />
+					<Tone Name="Shaker (placeholder)" Key="82" />
+					<Tone Name="Jingle Bell (placeholder)" Key="83" />
+					<Tone Name="Bell Tree (placeholder)" Key="84" />
+					<Tone Name="Castanets (placeholder)" Key="85" />
+					<Tone Name="Mute Surdo (placeholder)" Key="86" />
+					<Tone Name="Open Surdo (placeholder)" Key="87" />
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
@@ -112703,6 +112963,71 @@
 					<Tone Name="Low Bongo" Key="61" />
 				</Bank>
 			</PC>
+			<PC Name="DSG Built-in set" PC="15">
+				<Bank Name="DSG Built-in set" MSB="120" LSB="0">
+					<Tone Name="High Q (placeholder)" Key="27" />
+					<Tone Name="Slap (placeholder)" Key="28" />
+					<Tone Name="Scratch Push (placeholder)" Key="29" />
+					<Tone Name="Scratch Pull (placeholder)" Key="30" />
+					<Tone Name="Sticks (placeholder)" Key="31" />
+					<Tone Name="Square Click (placeholder)" Key="32" />
+					<Tone Name="Metronome Click (placeholder)" Key="33" />
+					<Tone Name="Metronome Bell (placeholder)" Key="34" />
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom (placeholder)" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom (placeholder)" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom (placeholder)" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom (placeholder)" Key="47" />
+					<Tone Name="Hi-Mid Tom (placeholder)" Key="48" />
+					<Tone Name="Crash Cymbal 1 (placeholder)" Key="49" />
+					<Tone Name="High Tom (placeholder)" Key="50" />
+					<Tone Name="Ride Cymbal 1 (placeholder)" Key="51" />
+					<Tone Name="Chinese Cymbal (placeholder)" Key="52" />
+					<Tone Name="Ride Bell (placeholder)" Key="53" />
+					<Tone Name="Tambourine (placeholder)" Key="54" />
+					<Tone Name="Splash Cymbal (placeholder)" Key="55" />
+					<Tone Name="Cowbell (placeholder)" Key="56" />
+					<Tone Name="Crash Cymbal 2 (placeholder)" Key="57" />
+					<Tone Name="Vibraslap (placeholder)" Key="58" />
+					<Tone Name="Ride Cymbal 2 (placeholder)" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale (placeholder)" Key="65" />
+					<Tone Name="Low Timbale (placeholder)" Key="66" />
+					<Tone Name="High Agogo (placeholder)" Key="67" />
+					<Tone Name="Low Agogo (placeholder)" Key="68" />
+					<Tone Name="Cabasa (placeholder)" Key="69" />
+					<Tone Name="Maracas (placeholder)" Key="70" />
+					<Tone Name="Short Whistle (placeholder)" Key="71" />
+					<Tone Name="Long Whistle (placeholder)" Key="72" />
+					<Tone Name="Short Guiro (placeholder)" Key="73" />
+					<Tone Name="Long Guiro (placeholder)" Key="74" />
+					<Tone Name="Claves (placeholder)" Key="75" />
+					<Tone Name="Hi Wood Block (placeholder)" Key="76" />
+					<Tone Name="Low Wood Block (placeholder)" Key="77" />
+					<Tone Name="Mute Cuica (placeholder)" Key="78" />
+					<Tone Name="Open Cuica (placeholder)" Key="79" />
+					<Tone Name="Mute Triangle (placeholder)" Key="80" />
+					<Tone Name="Open Triangle (placeholder)" Key="81" />
+					<Tone Name="Shaker (placeholder)" Key="82" />
+					<Tone Name="Jingle Bell (placeholder)" Key="83" />
+					<Tone Name="Bell Tree (placeholder)" Key="84" />
+					<Tone Name="Castanets (placeholder)" Key="85" />
+					<Tone Name="Mute Surdo (placeholder)" Key="86" />
+					<Tone Name="Open Surdo (placeholder)" Key="87" />
+				</Bank>
+			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
 				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
@@ -113784,6 +114109,71 @@
 					<Tone Name="Ride Cymbal 2" Key="59" />
 					<Tone Name="Hi Bongo" Key="60" />
 					<Tone Name="Low Bongo" Key="61" />
+				</Bank>
+			</PC>
+			<PC Name="DSG Built-in set" PC="15">
+				<Bank Name="DSG Built-in set" MSB="120" LSB="0">
+					<Tone Name="High Q (placeholder)" Key="27" />
+					<Tone Name="Slap (placeholder)" Key="28" />
+					<Tone Name="Scratch Push (placeholder)" Key="29" />
+					<Tone Name="Scratch Pull (placeholder)" Key="30" />
+					<Tone Name="Sticks (placeholder)" Key="31" />
+					<Tone Name="Square Click (placeholder)" Key="32" />
+					<Tone Name="Metronome Click (placeholder)" Key="33" />
+					<Tone Name="Metronome Bell (placeholder)" Key="34" />
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom (placeholder)" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom (placeholder)" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom (placeholder)" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom (placeholder)" Key="47" />
+					<Tone Name="Hi-Mid Tom (placeholder)" Key="48" />
+					<Tone Name="Crash Cymbal 1 (placeholder)" Key="49" />
+					<Tone Name="High Tom (placeholder)" Key="50" />
+					<Tone Name="Ride Cymbal 1 (placeholder)" Key="51" />
+					<Tone Name="Chinese Cymbal (placeholder)" Key="52" />
+					<Tone Name="Ride Bell (placeholder)" Key="53" />
+					<Tone Name="Tambourine (placeholder)" Key="54" />
+					<Tone Name="Splash Cymbal (placeholder)" Key="55" />
+					<Tone Name="Cowbell (placeholder)" Key="56" />
+					<Tone Name="Crash Cymbal 2 (placeholder)" Key="57" />
+					<Tone Name="Vibraslap (placeholder)" Key="58" />
+					<Tone Name="Ride Cymbal 2 (placeholder)" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale (placeholder)" Key="65" />
+					<Tone Name="Low Timbale (placeholder)" Key="66" />
+					<Tone Name="High Agogo (placeholder)" Key="67" />
+					<Tone Name="Low Agogo (placeholder)" Key="68" />
+					<Tone Name="Cabasa (placeholder)" Key="69" />
+					<Tone Name="Maracas (placeholder)" Key="70" />
+					<Tone Name="Short Whistle (placeholder)" Key="71" />
+					<Tone Name="Long Whistle (placeholder)" Key="72" />
+					<Tone Name="Short Guiro (placeholder)" Key="73" />
+					<Tone Name="Long Guiro (placeholder)" Key="74" />
+					<Tone Name="Claves (placeholder)" Key="75" />
+					<Tone Name="Hi Wood Block (placeholder)" Key="76" />
+					<Tone Name="Low Wood Block (placeholder)" Key="77" />
+					<Tone Name="Mute Cuica (placeholder)" Key="78" />
+					<Tone Name="Open Cuica (placeholder)" Key="79" />
+					<Tone Name="Mute Triangle (placeholder)" Key="80" />
+					<Tone Name="Open Triangle (placeholder)" Key="81" />
+					<Tone Name="Shaker (placeholder)" Key="82" />
+					<Tone Name="Jingle Bell (placeholder)" Key="83" />
+					<Tone Name="Bell Tree (placeholder)" Key="84" />
+					<Tone Name="Castanets (placeholder)" Key="85" />
+					<Tone Name="Mute Surdo (placeholder)" Key="86" />
+					<Tone Name="Open Surdo (placeholder)" Key="87" />
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
@@ -114869,6 +115259,71 @@
 					<Tone Name="Low Bongo" Key="61" />
 				</Bank>
 			</PC>
+			<PC Name="DSG Built-in set" PC="15">
+				<Bank Name="DSG Built-in set" MSB="120" LSB="0">
+					<Tone Name="High Q (placeholder)" Key="27" />
+					<Tone Name="Slap (placeholder)" Key="28" />
+					<Tone Name="Scratch Push (placeholder)" Key="29" />
+					<Tone Name="Scratch Pull (placeholder)" Key="30" />
+					<Tone Name="Sticks (placeholder)" Key="31" />
+					<Tone Name="Square Click (placeholder)" Key="32" />
+					<Tone Name="Metronome Click (placeholder)" Key="33" />
+					<Tone Name="Metronome Bell (placeholder)" Key="34" />
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom (placeholder)" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom (placeholder)" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom (placeholder)" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom (placeholder)" Key="47" />
+					<Tone Name="Hi-Mid Tom (placeholder)" Key="48" />
+					<Tone Name="Crash Cymbal 1 (placeholder)" Key="49" />
+					<Tone Name="High Tom (placeholder)" Key="50" />
+					<Tone Name="Ride Cymbal 1 (placeholder)" Key="51" />
+					<Tone Name="Chinese Cymbal (placeholder)" Key="52" />
+					<Tone Name="Ride Bell (placeholder)" Key="53" />
+					<Tone Name="Tambourine (placeholder)" Key="54" />
+					<Tone Name="Splash Cymbal (placeholder)" Key="55" />
+					<Tone Name="Cowbell (placeholder)" Key="56" />
+					<Tone Name="Crash Cymbal 2 (placeholder)" Key="57" />
+					<Tone Name="Vibraslap (placeholder)" Key="58" />
+					<Tone Name="Ride Cymbal 2 (placeholder)" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale (placeholder)" Key="65" />
+					<Tone Name="Low Timbale (placeholder)" Key="66" />
+					<Tone Name="High Agogo (placeholder)" Key="67" />
+					<Tone Name="Low Agogo (placeholder)" Key="68" />
+					<Tone Name="Cabasa (placeholder)" Key="69" />
+					<Tone Name="Maracas (placeholder)" Key="70" />
+					<Tone Name="Short Whistle (placeholder)" Key="71" />
+					<Tone Name="Long Whistle (placeholder)" Key="72" />
+					<Tone Name="Short Guiro (placeholder)" Key="73" />
+					<Tone Name="Long Guiro (placeholder)" Key="74" />
+					<Tone Name="Claves (placeholder)" Key="75" />
+					<Tone Name="Hi Wood Block (placeholder)" Key="76" />
+					<Tone Name="Low Wood Block (placeholder)" Key="77" />
+					<Tone Name="Mute Cuica (placeholder)" Key="78" />
+					<Tone Name="Open Cuica (placeholder)" Key="79" />
+					<Tone Name="Mute Triangle (placeholder)" Key="80" />
+					<Tone Name="Open Triangle (placeholder)" Key="81" />
+					<Tone Name="Shaker (placeholder)" Key="82" />
+					<Tone Name="Jingle Bell (placeholder)" Key="83" />
+					<Tone Name="Bell Tree (placeholder)" Key="84" />
+					<Tone Name="Castanets (placeholder)" Key="85" />
+					<Tone Name="Mute Surdo (placeholder)" Key="86" />
+					<Tone Name="Open Surdo (placeholder)" Key="87" />
+				</Bank>
+			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
 				<Bank Name="PSS-590 Power Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
@@ -115950,6 +116405,71 @@
 					<Tone Name="Ride Cymbal 2" Key="59" />
 					<Tone Name="Hi Bongo" Key="60" />
 					<Tone Name="Low Bongo" Key="61" />
+				</Bank>
+			</PC>
+			<PC Name="DSG Built-in set" PC="15">
+				<Bank Name="DSG Built-in set" MSB="120" LSB="0">
+					<Tone Name="High Q (placeholder)" Key="27" />
+					<Tone Name="Slap (placeholder)" Key="28" />
+					<Tone Name="Scratch Push (placeholder)" Key="29" />
+					<Tone Name="Scratch Pull (placeholder)" Key="30" />
+					<Tone Name="Sticks (placeholder)" Key="31" />
+					<Tone Name="Square Click (placeholder)" Key="32" />
+					<Tone Name="Metronome Click (placeholder)" Key="33" />
+					<Tone Name="Metronome Bell (placeholder)" Key="34" />
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom (placeholder)" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom (placeholder)" Key="43" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Low Tom (placeholder)" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom (placeholder)" Key="47" />
+					<Tone Name="Hi-Mid Tom (placeholder)" Key="48" />
+					<Tone Name="Crash Cymbal 1 (placeholder)" Key="49" />
+					<Tone Name="High Tom (placeholder)" Key="50" />
+					<Tone Name="Ride Cymbal 1 (placeholder)" Key="51" />
+					<Tone Name="Chinese Cymbal (placeholder)" Key="52" />
+					<Tone Name="Ride Bell (placeholder)" Key="53" />
+					<Tone Name="Tambourine (placeholder)" Key="54" />
+					<Tone Name="Splash Cymbal (placeholder)" Key="55" />
+					<Tone Name="Cowbell (placeholder)" Key="56" />
+					<Tone Name="Crash Cymbal 2 (placeholder)" Key="57" />
+					<Tone Name="Vibraslap (placeholder)" Key="58" />
+					<Tone Name="Ride Cymbal 2 (placeholder)" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale (placeholder)" Key="65" />
+					<Tone Name="Low Timbale (placeholder)" Key="66" />
+					<Tone Name="High Agogo (placeholder)" Key="67" />
+					<Tone Name="Low Agogo (placeholder)" Key="68" />
+					<Tone Name="Cabasa (placeholder)" Key="69" />
+					<Tone Name="Maracas (placeholder)" Key="70" />
+					<Tone Name="Short Whistle (placeholder)" Key="71" />
+					<Tone Name="Long Whistle (placeholder)" Key="72" />
+					<Tone Name="Short Guiro (placeholder)" Key="73" />
+					<Tone Name="Long Guiro (placeholder)" Key="74" />
+					<Tone Name="Claves (placeholder)" Key="75" />
+					<Tone Name="Hi Wood Block (placeholder)" Key="76" />
+					<Tone Name="Low Wood Block (placeholder)" Key="77" />
+					<Tone Name="Mute Cuica (placeholder)" Key="78" />
+					<Tone Name="Open Cuica (placeholder)" Key="79" />
+					<Tone Name="Mute Triangle (placeholder)" Key="80" />
+					<Tone Name="Open Triangle (placeholder)" Key="81" />
+					<Tone Name="Shaker (placeholder)" Key="82" />
+					<Tone Name="Jingle Bell (placeholder)" Key="83" />
+					<Tone Name="Bell Tree (placeholder)" Key="84" />
+					<Tone Name="Castanets (placeholder)" Key="85" />
+					<Tone Name="Mute Surdo (placeholder)" Key="86" />
+					<Tone Name="Open Surdo (placeholder)" Key="87" />
 				</Bank>
 			</PC>
 			<PC Name="PSS-590 Power Kit (OPNB)" PC="17">
