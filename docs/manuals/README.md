@@ -20,7 +20,7 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)とProgram Changeによる
 | CC#0の値 | モード | CC#32の意味 | Program Chg.の意味 |
 |---|---|---|---|
 | 0 | 通常モード | PatchBank番号 | 選択したPatchBank内のパッチ番号 |
-| 17,26,34,35,40,41,42,43,48,64,68,81,82,84 | 直接モード | 音源チップ内のバンク番号 | 選択したバンク内のパッチ番号 |
+| 17,26,34,35,40,41,42,43,48,64,68,81,82,84,85 | 直接モード | 音源チップ内のバンク番号 | 選択したバンク内のパッチ番号 |
 | 112 | 内蔵リズム音源 | 対象チップ選択(17=OPNA, 40=OPLL, 68=DSG) | 楽器(チャンネル)番号を直接指定する |
 
 > 直接モードでは、CC#0の値自体が「どの音源チップを使うか」を指定します。
@@ -128,6 +128,7 @@ MIDI Bank Select(CC#0=MSB, CC#32=LSB)による音色バンクの一覧です。
 | 82 | 1 | ADPCMA | [wavs/rhythm ADPCM-A (OPNB)](patches/adpcma.md#cc321) |
 | 84 | 0 | AWM | [YRW801 GM (melodic)](patches/awm.md#cc320) |
 | 84 | 1 | AWM | [YRW801 GM (drum, ws>=128 fixed table)](patches/awm.md#cc321) |
+| 85 | 3 | SSGS_ADPCM | [wavs/rhythm ADPCM (SSGS)](patches/ssgs.md#cc323) |
 | 112 | 17 | 内蔵リズム(OPNA) | [OPNA内蔵リズム](builtin_rhythm.md#opna-rhythm) |
 | 112 | 40 | 内蔵リズム(OPLL) | [OPLL内蔵リズム](builtin_rhythm.md#opll-rhythm) |
 | 112 | 68 | 内蔵リズム(DSG) | [DSG内蔵リズム](builtin_rhythm.md#dsg-rhythm) |
