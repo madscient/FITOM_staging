@@ -7,8 +7,6 @@
     {
       "dll": "engines/DSAemuEngine",
       "chips": [
-        { "chip": "SSG",  "clock": 2000000, "pan": 1 },
-        { "chip": "SSG",  "clock": 2000000, "pan": 2 },
         { "chip": "DCSG", "clock": 3579545, "pan": 1 },
         { "chip": "DCSG", "clock": 3579545, "pan": 2 },
         { "chip": "SCC",  "clock": 3579545, "pan": 1 },
@@ -19,7 +17,10 @@
       "dll": "engines/EPSGemuEngine",
       "chips": [
         { "chip": "EPSG", "clock": 2000000, "pan": 1 },
-        { "chip": "EPSG", "clock": 2000000, "pan": 2 }
+        { "chip": "EPSG", "clock": 2000000, "pan": 2 },
+        { "chip": "SSGS", "clock": 4096000, "pan": 0 },
+        { "chip": "SSGS2", "clock": 12288000, "pan": 0 },
+        { "chip": "SSGS3", "clock": 16384000, "pan": 0 }
       ]
     },
     {
