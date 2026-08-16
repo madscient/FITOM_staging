@@ -3,28 +3,6 @@
   "banks": "unified.bankset.json",
   "devices": [
     {
-      "chip": "SSG",
-      "engine": "engines/DSAemuEngine",
-      "if": "HW",
-      "index": 0,
-      "label": "SSG",
-      "pan": 1,
-      "plugin": "FitomEmuIF",
-      "stereo_pair": true,
-      "type": "FMHWIF"
-    },
-    {
-      "chip": "SSG",
-      "engine": "engines/DSAemuEngine",
-      "if": "HW",
-      "index": 1,
-      "label": "SSG",
-      "pan": 2,
-      "plugin": "FitomEmuIF",
-      "stereo_pair": true,
-      "type": "FMHWIF"
-    },
-    {
       "chip": "DCSG",
       "engine": "engines/DSAemuEngine",
       "if": "HW",
@@ -118,6 +96,36 @@
       "if": "HW",
       "index": 0,
       "label": "SAA",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SSGS",
+      "engine": "engines/EPSGemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SSGS",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SSGS2",
+      "engine": "engines/EPSGemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SSGS2",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SSGS3",
+      "engine": "engines/EPSGemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SSGS3",
       "pan": 0,
       "plugin": "FitomEmuIF",
       "type": "FMHWIF"
