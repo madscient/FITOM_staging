@@ -1,0 +1,299 @@
+{
+  "codec": "ssgs",
+  "sample_rate": 32000,
+  "boundary": 32,
+  "output_bin": "banks/PCM/common/wavs_ssgs_adpcm.bin",
+  "output_json": "banks/PCM/common/wavs_ssgs_adpcm.json",
+  "wav_files": [
+    {
+      "path": "wavs/rhythm/PSS-680/bass.wav",
+      "name": "PSS_680_bass",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/brush.wav",
+      "name": "PSS_680_brush",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/brush_hit.wav",
+      "name": "PSS_680_brush_hit",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/cavasa.wav",
+      "name": "PSS_680_cavasa",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/closehh.wav",
+      "name": "PSS_680_closehh",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/cowbell.wav",
+      "name": "PSS_680_cowbell",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/crash.wav",
+      "name": "PSS_680_crash",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/handclap.wav",
+      "name": "PSS_680_handclap",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/hiagogo.wav",
+      "name": "PSS_680_hiagogo",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/hibongo.wav",
+      "name": "PSS_680_hibongo",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/hiconga.wav",
+      "name": "PSS_680_hiconga",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/hicuica.wav",
+      "name": "PSS_680_hicuica",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/hitimbaless.wav",
+      "name": "PSS_680_hitimbaless",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/hitom.wav",
+      "name": "PSS_680_hitom",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/hitom2.wav",
+      "name": "PSS_680_hitom2",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/loagogo.wav",
+      "name": "PSS_680_loagogo",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/lobongo.wav",
+      "name": "PSS_680_lobongo",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/loconga.wav",
+      "name": "PSS_680_loconga",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/locuica.wav",
+      "name": "PSS_680_locuica",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/lotimbaless.wav",
+      "name": "PSS_680_lotimbaless",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/lotom.wav",
+      "name": "PSS_680_lotom",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/lotom2.wav",
+      "name": "PSS_680_lotom2",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/midtom.wav",
+      "name": "PSS_680_midtom",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/midtom2.wav",
+      "name": "PSS_680_midtom2",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/mutetambarine.wav",
+      "name": "PSS_680_mutetambarine",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/openhh.wav",
+      "name": "PSS_680_openhh",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/ride.wav",
+      "name": "PSS_680_ride",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/rimshot.wav",
+      "name": "PSS_680_rimshot",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/snare.wav",
+      "name": "PSS_680_snare",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/snare2.wav",
+      "name": "PSS_680_snare2",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/splash.wav",
+      "name": "PSS_680_splash",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/PSS-680/whistle.wav",
+      "name": "PSS_680_whistle",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX11/RX11Clap.wav",
+      "name": "RX11_RX11Clap",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX11/RX11Crash.wav",
+      "name": "RX11_RX11Crash",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX11/RX11Hat_C.wav",
+      "name": "RX11_RX11Hat_C",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX11/RX11Hat_O.wav",
+      "name": "RX11_RX11Hat_O",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX11/RX11Hat_P.wav",
+      "name": "RX11_RX11Hat_P",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX11/RX11Kick.wav",
+      "name": "RX11_RX11Kick",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX11/RX11Ride.wav",
+      "name": "RX11_RX11Ride",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX11/RX11Rimshot.wav",
+      "name": "RX11_RX11Rimshot",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX11/RX11Snare01.wav",
+      "name": "RX11_RX11Snare01",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX11/RX11Snare02.wav",
+      "name": "RX11_RX11Snare02",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LAgogoHi.wav",
+      "name": "RX21L_RX21LAgogoHi",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LAgogoLo.wav",
+      "name": "RX21L_RX21LAgogoLo",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LBongoHi.wav",
+      "name": "RX21L_RX21LBongoHi",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LBongoLo.wav",
+      "name": "RX21L_RX21LBongoLo",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LClaves.wav",
+      "name": "RX21L_RX21LClaves",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LCongaHi.wav",
+      "name": "RX21L_RX21LCongaHi",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LCongaLo.wav",
+      "name": "RX21L_RX21LCongaLo",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LCongaM.wav",
+      "name": "RX21L_RX21LCongaM",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LCowbell.wav",
+      "name": "RX21L_RX21LCowbell",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LCuicaHi.wav",
+      "name": "RX21L_RX21LCuicaHi",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LCuicaLo.wav",
+      "name": "RX21L_RX21LCuicaLo",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LTambourine.wav",
+      "name": "RX21L_RX21LTambourine",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LTimbaleHi.wav",
+      "name": "RX21L_RX21LTimbaleHi",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LTimbaleLo.wav",
+      "name": "RX21L_RX21LTimbaleLo",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LWhistleL.wav",
+      "name": "RX21L_RX21LWhistleL",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21L/RX21LWhistleS.wav",
+      "name": "RX21L_RX21LWhistleS",
+      "root_note": "none"
+    }
+  ]
+}
