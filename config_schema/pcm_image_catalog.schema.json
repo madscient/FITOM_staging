@@ -43,6 +43,10 @@
         "OPL4AWM": {
           "type": "string",
           "description": "YMF278(OPL4)のAWM(PCM/波形メモリ)音源部のイメージファイルへのパス。"
+        },
+        "SSGS_ADPCM": {
+          "type": "string",
+          "description": "YMZ705(SSGS)/YMZ732(SSGS2)のADPCMサンプルメモリのイメージファイルへのパス。先頭$000000〜$00023Fにチップが直接読み出すボイス/曲アドレステーブルを含み、ボイスデータは$000240から始まる(adpcm_packerのcodec:\"ssgs\"が生成するレイアウト)。"
         }
       }
     }

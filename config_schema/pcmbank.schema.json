@@ -12,13 +12,13 @@
     },
     "codec": {
       "type": "string",
-      "enum": ["adpcm-b", "adpcm-a", "pcmd8"],
-      "description": "コーデック種別。adpcm-b=YM Delta-T(YM2608/2610B), adpcm-a=YM2610A, pcmd8=YMZ280B"
+      "enum": ["adpcm-b", "adpcm-a", "pcmd8", "ssgs"],
+      "description": "コーデック種別。adpcm-b=YM Delta-T(YM2608/2610B), adpcm-a=YM2610A, pcmd8=YMZ280B, ssgs=YMZ705(SSGS)/YMZ732(SSGS2)"
     },
     "sample_rate": {
       "type": "integer",
-      "enum": [8000, 16000, 24000, 32000],
-      "description": "ADPCM-B のサンプルレート。adpcm-a / pcmd8 では不要。"
+      "enum": [4000, 8000, 16000, 24000, 32000],
+      "description": "ADPCM-B のサンプルレート(8000/16000/24000/32000)。adpcm-a / pcmd8 では不要。ssgs では音指定レジスタの S1,S0 に対応する再生レート(4000/8000/16000/32000)を指す。codec 別の有効値は列挙では区別していないため、値の妥当性は codec と合わせて確認すること。"
     },
     "boundary": {
       "type": "integer",

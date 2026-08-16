@@ -66,10 +66,14 @@ banks/
 ├── OPL4AWM/              opl4awm_yrw801_gm/drum.samplezonebank.json
 ├── PCM/
 │   └── common/           wavs/配下をadpcm_packerでパックしたADPCM-A/B/YMZ280
-│                         (pcmd8)バンク(*.pcmbank.json + 付随bin/json)
+│                         (pcmd8)/SSGSバンク(*.pcmbank.json + 付随bin/json)
 │                         wavs/rhythm → ADPCM-A(wavs_opnb_adpcma)。
 │                         wavs/melodic → ADPCM-B(OPNA/OPNB、wavs_opna/opnb_adpcmb)。
 │                         rhythm+melodic統合 → YMZ280(wavs_ymz280_adpcm)。
+│                         SSGS(YMZ705/YMZ732、wavs_ssgs_adpcm)はボイス上限64音
+│                         のためPSS-680/RX11/RX21Lの58音に絞る。binはアドレス
+│                         テーブルを含むROMイメージそのもので、チップ種別
+│                         SSGS_ADPCMとしてpcm_image_catalog.jsonにも登録する。
 │                         melodicはOrchestra Hit系→Timpani系の順にグループ化
 │                         して整列。root_noteはファイル名プリフィクスで判定
 │                         (PSS-/PSR-由来はA3、他はC3)。
@@ -78,6 +82,20 @@ banks/
 ├── sw/                   SwPatch(*.swbank.json、ベロシティ感度/LFO。README.md参照)
 └── scc/                  SCC波形テーブル(*.sccwave.json)
 ```
+
+## PCMバンクの再生成
+
+`PCM/common/params_*.json` が adpcm_packer の入力です。パス指定はすべて
+**リポジトリルートからの相対パス**なので、リポジトリルートをカレント
+ディレクトリにして実行します(adpcm_packerはパラメータファイルの位置では
+なくカレントディレクトリを基準にパスを解決する)。
+
+```
+adpcm_packer banks/PCM/common/params_ssgs_adpcm.json
+```
+
+`output_bin` / `output_json` も同じ規約で、`PCM/common/` 配下へ直接
+生成されます。
 
 ## プロファイルからの参照方法
 

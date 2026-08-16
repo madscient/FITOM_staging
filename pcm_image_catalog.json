@@ -19,6 +19,7 @@
     "ADPCM-B":      "banks/PCM/common/wavs_opna_adpcmb.bin",
     "OPNB_ADPCM-B": "banks/PCM/common/wavs_opnb_adpcmb.bin",
     "OPNA_RHYTHM":  "roms/ym2608_rhythm.rom",
-    "OPL4AWM":      "roms/yrw801.rom"
+    "OPL4AWM":      "roms/yrw801.rom",
+    "SSGS_ADPCM":   "banks/PCM/common/wavs_ssgs_adpcm.bin"
   }
 }
