@@ -4,6 +4,94 @@
   "choke_groups": [[42, 44, 46], [71, 72], [73, 74], [78, 79], [80, 81]],
   "notes": [
     {
+      "note": 27,
+      "name": "High Q (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 27,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 28,
+      "name": "Slap (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 28,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 29,
+      "name": "Scratch Push (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 29,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 30,
+      "name": "Scratch Pull (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 30,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 31,
+      "name": "Sticks (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 31,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 32,
+      "name": "Square Click (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 32,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 33,
+      "name": "Metronome Click (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 33,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 34,
+      "name": "Metronome Bell (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 34,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
       "note": 35,
       "name": "Ac Bass Drum",
       "voice_patch_type": 48,
@@ -516,6 +604,72 @@
       "patch_bank": 112,
       "patch_prog": 81,
       "play_note": 81,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 82,
+      "name": "Shaker (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 82,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 83,
+      "name": "Jingle Bell (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 83,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 84,
+      "name": "Bell Tree (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 84,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 85,
+      "name": "Castanets (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 85,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 86,
+      "name": "Mute Surdo (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 86,
+      "fine_tune": 0,
+      "pan": 0,
+      "gate_time": 0
+    },
+    {
+      "note": 87,
+      "name": "Open Surdo (placeholder)",
+      "voice_patch_type": 127,
+      "patch_bank": 0,
+      "patch_prog": 0,
+      "play_note": 87,
       "fine_tune": 0,
       "pan": 0,
       "gate_time": 0
