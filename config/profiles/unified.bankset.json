@@ -920,6 +920,16 @@
       "prog": 40,
       "name": "PSS-680 Brush Kit (OPNB)",
       "file": "../../banks/drums/pss680_brush_opnb.drumkit.json"
+    },
+    {
+      "prog": 25,
+      "name": "PSS-680 GM Drum Kit (SSGS)",
+      "file": "../../banks/drums/pss680_ssgs.drumkit.json"
+    },
+    {
+      "prog": 26,
+      "name": "RX11/21L GM Drum Kit (SSGS)",
+      "file": "../../banks/drums/rx11_21l_ssgs.drumkit.json"
     }
   ],
   "pcm_banks": [

@@ -52,6 +52,7 @@
                   "ADPCMA",
                   "PCMD8",
                   "AWM",
+                  "SSGS_ADPCM",
                   "PSG",
                   "PCM"
                 ],

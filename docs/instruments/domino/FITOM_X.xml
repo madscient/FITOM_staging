@@ -143,6 +143,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="PSS_680_bass" MSB="85" LSB="3" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
 				<Bank Name="Bass Drum" MSB="112" LSB="68" />
@@ -283,6 +284,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush" MSB="85" LSB="3" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
 				<Bank Name="Hi Conga" MSB="112" LSB="68" />
@@ -420,6 +422,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush_hit" MSB="85" LSB="3" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
 				<Bank Name="Snare Drum" MSB="112" LSB="68" />
@@ -542,6 +545,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cavasa" MSB="85" LSB="3" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
@@ -673,6 +677,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_closehh" MSB="85" LSB="3" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
@@ -813,6 +818,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cowbell" MSB="85" LSB="3" />
 				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 				<Bank Name="FM Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 3" MSB="127" LSB="7" />
@@ -944,6 +950,7 @@
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
 				<Bank Name="Harpsichord" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_crash" MSB="85" LSB="3" />
 				<Bank Name="Harpsichord" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 4" MSB="127" LSB="7" />
 			</PC>
@@ -1070,6 +1077,7 @@
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
 				<Bank Name="Clavinet" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_handclap" MSB="85" LSB="3" />
 				<Bank Name="Clavinet" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_CLAV" MSB="127" LSB="3" />
 				<Bank Name="Honkytonk" MSB="127" LSB="7" />
@@ -1192,6 +1200,7 @@
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
 				<Bank Name="Celesta" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiagogo" MSB="85" LSB="3" />
 				<Bank Name="Celeste" MSB="127" LSB="0" />
 				<Bank Name="Room" MSB="127" LSB="1" />
 				<Bank Name="RX5_IncludeRom" MSB="127" LSB="4" />
@@ -1320,6 +1329,7 @@
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
 				<Bank Name="Glockenspiel" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hibongo" MSB="85" LSB="3" />
 				<Bank Name="Glockenspiel" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -1457,6 +1467,7 @@
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
 				<Bank Name="Music Box" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiconga" MSB="85" LSB="3" />
 				<Bank Name="Music Box" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -1589,6 +1600,7 @@
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
 				<Bank Name="Vibraphone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hicuica" MSB="85" LSB="3" />
 				<Bank Name="Vibraphone" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 4" MSB="127" LSB="7" />
 			</PC>
@@ -1715,6 +1727,7 @@
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
 				<Bank Name="Marimba" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitimbaless" MSB="85" LSB="3" />
 				<Bank Name="Marimba" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_MARIMBA" MSB="127" LSB="3" />
 				<Bank Name="Pipe Organ 1" MSB="127" LSB="7" />
@@ -1827,6 +1840,7 @@
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
 				<Bank Name="Xylophone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom" MSB="85" LSB="3" />
 				<Bank Name="Xylophone" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -1942,6 +1956,7 @@
 				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom2" MSB="85" LSB="3" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -2077,6 +2092,7 @@
 				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loagogo" MSB="85" LSB="3" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
 				<Bank Name="Accordion MT" MSB="127" LSB="7" />
 			</PC>
@@ -2199,6 +2215,7 @@
 				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lobongo" MSB="85" LSB="3" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
 				<Bank Name="Power" MSB="127" LSB="1" />
 				<Bank Name="RX5_Power" MSB="127" LSB="4" />
@@ -2316,6 +2333,7 @@
 				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loconga" MSB="85" LSB="3" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 2" MSB="127" LSB="7" />
 			</PC>
@@ -2432,6 +2450,7 @@
 				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_locuica" MSB="85" LSB="3" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 3" MSB="127" LSB="7" />
 			</PC>
@@ -2539,6 +2558,7 @@
 				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotimbaless" MSB="85" LSB="3" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 1" MSB="127" LSB="7" />
 			</PC>
@@ -2660,6 +2680,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_fltom" MSB="82" LSB="1" />
 				<Bank Name="Reed Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom" MSB="85" LSB="3" />
 				<Bank Name="Reed Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 2" MSB="127" LSB="7" />
 			</PC>
@@ -2773,6 +2794,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_gate_snare" MSB="82" LSB="1" />
 				<Bank Name="Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom2" MSB="85" LSB="3" />
 				<Bank Name="Accordian" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 3" MSB="127" LSB="7" />
 			</PC>
@@ -2885,6 +2907,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hibass" MSB="82" LSB="1" />
 				<Bank Name="Harmonica" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom" MSB="85" LSB="3" />
 				<Bank Name="Harmonica" MSB="127" LSB="0" />
 				<Bank Name="Celesta 1" MSB="127" LSB="7" />
 			</PC>
@@ -2997,6 +3020,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hisnare" MSB="82" LSB="1" />
 				<Bank Name="Tango Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom2" MSB="85" LSB="3" />
 				<Bank Name="Bandoneon" MSB="127" LSB="0" />
 				<Bank Name="Celesta 2" MSB="127" LSB="7" />
 			</PC>
@@ -3106,6 +3130,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hitom" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (nylon)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_mutetambarine" MSB="85" LSB="3" />
 				<Bank Name="Nylon Guitar" MSB="127" LSB="0" />
 				<Bank Name="Electronic" MSB="127" LSB="1" />
 				<Bank Name="RX5_Electric" MSB="127" LSB="4" />
@@ -3237,6 +3262,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lobass" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (steel)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_openhh" MSB="85" LSB="3" />
 				<Bank Name="Steel Guitar" MSB="127" LSB="0" />
 				<Bank Name="808/909" MSB="127" LSB="1" />
 				<Bank Name="Standart 5" MSB="127" LSB="5" />
@@ -3370,6 +3396,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_losnare" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (jazz)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_ride" MSB="85" LSB="3" />
 				<Bank Name="Jazz Guitar" MSB="127" LSB="0" />
 				<Bank Name="Dance" MSB="127" LSB="1" />
 				<Bank Name="Synth Brass 3 MT" MSB="127" LSB="7" />
@@ -3501,6 +3528,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lotom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (clean)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_rimshot" MSB="85" LSB="3" />
 				<Bank Name="Clean Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Brass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -3613,6 +3641,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_midtom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (muted)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare" MSB="85" LSB="3" />
 				<Bank Name="Muted Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 1 MT" MSB="127" LSB="7" />
 			</PC>
@@ -3724,6 +3753,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_openhh" MSB="82" LSB="1" />
 				<Bank Name="Overdriven Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare2" MSB="85" LSB="3" />
 				<Bank Name="Overdrive Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 2 MT" MSB="127" LSB="7" />
 			</PC>
@@ -3861,6 +3891,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_pedalhh" MSB="82" LSB="1" />
 				<Bank Name="Distortion Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_splash" MSB="85" LSB="3" />
 				<Bank Name="Distortion Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 3 MT" MSB="127" LSB="7" />
 			</PC>
@@ -3985,6 +4016,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rev_bass" MSB="82" LSB="1" />
 				<Bank Name="Guitar Harmonics" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_whistle" MSB="85" LSB="3" />
 				<Bank Name="Guitar Harmonics" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -4104,6 +4136,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_ride_edge" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Clap" MSB="85" LSB="3" />
 				<Bank Name="Acoustic Bass" MSB="127" LSB="0" />
 				<Bank Name="Jazz" MSB="127" LSB="1" />
 				<Bank Name="RX5_Rock" MSB="127" LSB="4" />
@@ -4220,6 +4253,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (finger)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Crash" MSB="85" LSB="3" />
 				<Bank Name="Finger Bass" MSB="127" LSB="0" />
 				<Bank Name="Harmo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -4325,6 +4359,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot2" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (pick)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_C" MSB="85" LSB="3" />
 				<Bank Name="Pick Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Low" MSB="127" LSB="3" />
 				<Bank Name="Chorale" MSB="127" LSB="7" />
@@ -4458,6 +4493,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_splash" MSB="82" LSB="1" />
 				<Bank Name="Fretless Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_O" MSB="85" LSB="3" />
 				<Bank Name="Fretless Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Hi" MSB="127" LSB="3" />
 				<Bank Name="Glasses" MSB="127" LSB="7" />
@@ -4582,6 +4618,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_fltom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_P" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Soundtrack MT" MSB="127" LSB="7" />
 			</PC>
@@ -4698,6 +4735,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_hitom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Kick" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Atmosphere MT" MSB="127" LSB="7" />
 			</PC>
@@ -4815,6 +4853,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_lotom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Ride" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Warm Bell" MSB="127" LSB="7" />
 			</PC>
@@ -4932,6 +4971,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_midtom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Rimshot" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Funny Vox" MSB="127" LSB="7" />
 			</PC>
@@ -5066,6 +5106,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_snare" MSB="82" LSB="1" />
 				<Bank Name="Violin" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare01" MSB="85" LSB="3" />
 				<Bank Name="Violin" MSB="127" LSB="0" />
 				<Bank Name="Brush" MSB="127" LSB="1" />
 				<Bank Name="Echo Bell" MSB="127" LSB="7" />
@@ -5192,6 +5233,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_bass" MSB="82" LSB="1" />
 				<Bank Name="Viola" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare02" MSB="85" LSB="3" />
 				<Bank Name="Viola" MSB="127" LSB="0" />
 				<Bank Name="Ice Rain MT" MSB="127" LSB="7" />
 			</PC>
@@ -5304,6 +5346,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush" MSB="82" LSB="1" />
 				<Bank Name="Cello" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoHi" MSB="85" LSB="3" />
 				<Bank Name="Cello" MSB="127" LSB="0" />
 				<Bank Name="Oboe 2001" MSB="127" LSB="7" />
 			</PC>
@@ -5412,6 +5455,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush_hit" MSB="82" LSB="1" />
 				<Bank Name="Contrabass" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoLo" MSB="85" LSB="3" />
 				<Bank Name="Double Bass" MSB="127" LSB="0" />
 				<Bank Name="Echo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -5517,6 +5561,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cavasa" MSB="82" LSB="1" />
 				<Bank Name="Tremolo Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoHi" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Trem" MSB="127" LSB="0" />
 				<Bank Name="Doctor Solo" MSB="127" LSB="7" />
 			</PC>
@@ -5648,6 +5693,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_closehh" MSB="82" LSB="1" />
 				<Bank Name="Pizzicato Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoLo" MSB="85" LSB="3" />
 				<Bank Name="Pizzicato Strings" MSB="127" LSB="0" />
 				<Bank Name="School Daze" MSB="127" LSB="7" />
 			</PC>
@@ -5772,6 +5818,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cowbell" MSB="82" LSB="1" />
 				<Bank Name="Orchestral Harp" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LClaves" MSB="85" LSB="3" />
 				<Bank Name="Orchestral Harp" MSB="127" LSB="0" />
 				<Bank Name="Bell Singer" MSB="127" LSB="7" />
 			</PC>
@@ -5888,6 +5935,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_crash" MSB="82" LSB="1" />
 				<Bank Name="Timpani" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaHi" MSB="85" LSB="3" />
 				<Bank Name="Timpani" MSB="127" LSB="0" />
 				<Bank Name="RX5_Timpani" MSB="127" LSB="2" />
 				<Bank Name="Square Wave MT" MSB="127" LSB="7" />
@@ -6003,6 +6051,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_handclap" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaLo" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Fast" MSB="127" LSB="0" />
 				<Bank Name="Orchestral" MSB="127" LSB="1" />
 				<Bank Name="String Section 1" MSB="127" LSB="7" />
@@ -6119,6 +6168,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiagogo" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaM" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Slow" MSB="127" LSB="0" />
 				<Bank Name="String Section 2" MSB="127" LSB="7" />
 			</PC>
@@ -6250,6 +6300,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hibongo" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCowbell" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 1" MSB="127" LSB="0" />
 				<Bank Name="String Section 3" MSB="127" LSB="7" />
 			</PC>
@@ -6373,6 +6424,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiconga" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 2" MSB="127" LSB="0" />
 				<Bank Name="Pizzicato MT" MSB="127" LSB="7" />
 			</PC>
@@ -6489,6 +6541,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hicuica" MSB="82" LSB="1" />
 				<Bank Name="Choir Aahs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaLo" MSB="85" LSB="3" />
 				<Bank Name="Concert Choir" MSB="127" LSB="0" />
 				<Bank Name="Violin 1" MSB="127" LSB="7" />
 			</PC>
@@ -6604,6 +6657,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitimbaless" MSB="82" LSB="1" />
 				<Bank Name="Voice Oohs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTambourine" MSB="85" LSB="3" />
 				<Bank Name="Voice Oohs" MSB="127" LSB="0" />
 				<Bank Name="Violin 2" MSB="127" LSB="7" />
 			</PC>
@@ -6709,6 +6763,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom" MSB="82" LSB="1" />
 				<Bank Name="Synth Voice" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Voice" MSB="127" LSB="0" />
 				<Bank Name="Cello 1" MSB="127" LSB="7" />
 			</PC>
@@ -6843,6 +6898,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom2" MSB="82" LSB="1" />
 				<Bank Name="Orchestra Hit" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleLo" MSB="85" LSB="3" />
 				<Bank Name="Orchestra Hit" MSB="127" LSB="0" />
 				<Bank Name="Cello 2" MSB="127" LSB="7" />
 			</PC>
@@ -6972,6 +7028,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_loagogo" MSB="82" LSB="1" />
 				<Bank Name="Trumpet" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleL" MSB="85" LSB="3" />
 				<Bank Name="Trumpet" MSB="127" LSB="0" />
 				<Bank Name="SFX" MSB="127" LSB="1" />
 				<Bank Name="RX5_DX_ORCH" MSB="127" LSB="3" />
@@ -7093,6 +7150,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_lobongo" MSB="82" LSB="1" />
 				<Bank Name="Trombone" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleS" MSB="85" LSB="3" />
 				<Bank Name="Trombone" MSB="127" LSB="0" />
 				<Bank Name="Harp 1" MSB="127" LSB="7" />
 			</PC>
@@ -13594,6 +13652,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="PSS_680_bass" MSB="85" LSB="3" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
 				<Bank Name="Bass Drum" MSB="112" LSB="68" />
@@ -13734,6 +13793,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush" MSB="85" LSB="3" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
 				<Bank Name="Hi Conga" MSB="112" LSB="68" />
@@ -13871,6 +13931,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush_hit" MSB="85" LSB="3" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
 				<Bank Name="Snare Drum" MSB="112" LSB="68" />
@@ -13993,6 +14054,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cavasa" MSB="85" LSB="3" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
@@ -14124,6 +14186,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_closehh" MSB="85" LSB="3" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
@@ -14264,6 +14327,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cowbell" MSB="85" LSB="3" />
 				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 				<Bank Name="FM Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 3" MSB="127" LSB="7" />
@@ -14395,6 +14459,7 @@
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
 				<Bank Name="Harpsichord" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_crash" MSB="85" LSB="3" />
 				<Bank Name="Harpsichord" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 4" MSB="127" LSB="7" />
 			</PC>
@@ -14521,6 +14586,7 @@
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
 				<Bank Name="Clavinet" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_handclap" MSB="85" LSB="3" />
 				<Bank Name="Clavinet" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_CLAV" MSB="127" LSB="3" />
 				<Bank Name="Honkytonk" MSB="127" LSB="7" />
@@ -14643,6 +14709,7 @@
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
 				<Bank Name="Celesta" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiagogo" MSB="85" LSB="3" />
 				<Bank Name="Celeste" MSB="127" LSB="0" />
 				<Bank Name="Room" MSB="127" LSB="1" />
 				<Bank Name="RX5_IncludeRom" MSB="127" LSB="4" />
@@ -14771,6 +14838,7 @@
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
 				<Bank Name="Glockenspiel" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hibongo" MSB="85" LSB="3" />
 				<Bank Name="Glockenspiel" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -14908,6 +14976,7 @@
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
 				<Bank Name="Music Box" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiconga" MSB="85" LSB="3" />
 				<Bank Name="Music Box" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -15040,6 +15109,7 @@
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
 				<Bank Name="Vibraphone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hicuica" MSB="85" LSB="3" />
 				<Bank Name="Vibraphone" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 4" MSB="127" LSB="7" />
 			</PC>
@@ -15166,6 +15236,7 @@
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
 				<Bank Name="Marimba" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitimbaless" MSB="85" LSB="3" />
 				<Bank Name="Marimba" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_MARIMBA" MSB="127" LSB="3" />
 				<Bank Name="Pipe Organ 1" MSB="127" LSB="7" />
@@ -15278,6 +15349,7 @@
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
 				<Bank Name="Xylophone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom" MSB="85" LSB="3" />
 				<Bank Name="Xylophone" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -15393,6 +15465,7 @@
 				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom2" MSB="85" LSB="3" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -15528,6 +15601,7 @@
 				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loagogo" MSB="85" LSB="3" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
 				<Bank Name="Accordion MT" MSB="127" LSB="7" />
 			</PC>
@@ -15650,6 +15724,7 @@
 				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lobongo" MSB="85" LSB="3" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
 				<Bank Name="Power" MSB="127" LSB="1" />
 				<Bank Name="RX5_Power" MSB="127" LSB="4" />
@@ -15767,6 +15842,7 @@
 				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loconga" MSB="85" LSB="3" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 2" MSB="127" LSB="7" />
 			</PC>
@@ -15883,6 +15959,7 @@
 				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_locuica" MSB="85" LSB="3" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 3" MSB="127" LSB="7" />
 			</PC>
@@ -15990,6 +16067,7 @@
 				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotimbaless" MSB="85" LSB="3" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 1" MSB="127" LSB="7" />
 			</PC>
@@ -16111,6 +16189,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_fltom" MSB="82" LSB="1" />
 				<Bank Name="Reed Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom" MSB="85" LSB="3" />
 				<Bank Name="Reed Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 2" MSB="127" LSB="7" />
 			</PC>
@@ -16224,6 +16303,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_gate_snare" MSB="82" LSB="1" />
 				<Bank Name="Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom2" MSB="85" LSB="3" />
 				<Bank Name="Accordian" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 3" MSB="127" LSB="7" />
 			</PC>
@@ -16336,6 +16416,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hibass" MSB="82" LSB="1" />
 				<Bank Name="Harmonica" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom" MSB="85" LSB="3" />
 				<Bank Name="Harmonica" MSB="127" LSB="0" />
 				<Bank Name="Celesta 1" MSB="127" LSB="7" />
 			</PC>
@@ -16448,6 +16529,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hisnare" MSB="82" LSB="1" />
 				<Bank Name="Tango Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom2" MSB="85" LSB="3" />
 				<Bank Name="Bandoneon" MSB="127" LSB="0" />
 				<Bank Name="Celesta 2" MSB="127" LSB="7" />
 			</PC>
@@ -16557,6 +16639,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hitom" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (nylon)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_mutetambarine" MSB="85" LSB="3" />
 				<Bank Name="Nylon Guitar" MSB="127" LSB="0" />
 				<Bank Name="Electronic" MSB="127" LSB="1" />
 				<Bank Name="RX5_Electric" MSB="127" LSB="4" />
@@ -16688,6 +16771,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lobass" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (steel)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_openhh" MSB="85" LSB="3" />
 				<Bank Name="Steel Guitar" MSB="127" LSB="0" />
 				<Bank Name="808/909" MSB="127" LSB="1" />
 				<Bank Name="Standart 5" MSB="127" LSB="5" />
@@ -16821,6 +16905,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_losnare" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (jazz)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_ride" MSB="85" LSB="3" />
 				<Bank Name="Jazz Guitar" MSB="127" LSB="0" />
 				<Bank Name="Dance" MSB="127" LSB="1" />
 				<Bank Name="Synth Brass 3 MT" MSB="127" LSB="7" />
@@ -16952,6 +17037,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lotom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (clean)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_rimshot" MSB="85" LSB="3" />
 				<Bank Name="Clean Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Brass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -17064,6 +17150,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_midtom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (muted)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare" MSB="85" LSB="3" />
 				<Bank Name="Muted Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 1 MT" MSB="127" LSB="7" />
 			</PC>
@@ -17175,6 +17262,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_openhh" MSB="82" LSB="1" />
 				<Bank Name="Overdriven Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare2" MSB="85" LSB="3" />
 				<Bank Name="Overdrive Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 2 MT" MSB="127" LSB="7" />
 			</PC>
@@ -17312,6 +17400,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_pedalhh" MSB="82" LSB="1" />
 				<Bank Name="Distortion Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_splash" MSB="85" LSB="3" />
 				<Bank Name="Distortion Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 3 MT" MSB="127" LSB="7" />
 			</PC>
@@ -17436,6 +17525,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rev_bass" MSB="82" LSB="1" />
 				<Bank Name="Guitar Harmonics" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_whistle" MSB="85" LSB="3" />
 				<Bank Name="Guitar Harmonics" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -17555,6 +17645,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_ride_edge" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Clap" MSB="85" LSB="3" />
 				<Bank Name="Acoustic Bass" MSB="127" LSB="0" />
 				<Bank Name="Jazz" MSB="127" LSB="1" />
 				<Bank Name="RX5_Rock" MSB="127" LSB="4" />
@@ -17671,6 +17762,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (finger)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Crash" MSB="85" LSB="3" />
 				<Bank Name="Finger Bass" MSB="127" LSB="0" />
 				<Bank Name="Harmo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -17776,6 +17868,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot2" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (pick)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_C" MSB="85" LSB="3" />
 				<Bank Name="Pick Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Low" MSB="127" LSB="3" />
 				<Bank Name="Chorale" MSB="127" LSB="7" />
@@ -17909,6 +18002,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_splash" MSB="82" LSB="1" />
 				<Bank Name="Fretless Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_O" MSB="85" LSB="3" />
 				<Bank Name="Fretless Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Hi" MSB="127" LSB="3" />
 				<Bank Name="Glasses" MSB="127" LSB="7" />
@@ -18033,6 +18127,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_fltom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_P" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Soundtrack MT" MSB="127" LSB="7" />
 			</PC>
@@ -18149,6 +18244,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_hitom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Kick" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Atmosphere MT" MSB="127" LSB="7" />
 			</PC>
@@ -18266,6 +18362,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_lotom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Ride" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Warm Bell" MSB="127" LSB="7" />
 			</PC>
@@ -18383,6 +18480,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_midtom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Rimshot" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Funny Vox" MSB="127" LSB="7" />
 			</PC>
@@ -18517,6 +18615,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_snare" MSB="82" LSB="1" />
 				<Bank Name="Violin" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare01" MSB="85" LSB="3" />
 				<Bank Name="Violin" MSB="127" LSB="0" />
 				<Bank Name="Brush" MSB="127" LSB="1" />
 				<Bank Name="Echo Bell" MSB="127" LSB="7" />
@@ -18643,6 +18742,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_bass" MSB="82" LSB="1" />
 				<Bank Name="Viola" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare02" MSB="85" LSB="3" />
 				<Bank Name="Viola" MSB="127" LSB="0" />
 				<Bank Name="Ice Rain MT" MSB="127" LSB="7" />
 			</PC>
@@ -18755,6 +18855,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush" MSB="82" LSB="1" />
 				<Bank Name="Cello" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoHi" MSB="85" LSB="3" />
 				<Bank Name="Cello" MSB="127" LSB="0" />
 				<Bank Name="Oboe 2001" MSB="127" LSB="7" />
 			</PC>
@@ -18863,6 +18964,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush_hit" MSB="82" LSB="1" />
 				<Bank Name="Contrabass" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoLo" MSB="85" LSB="3" />
 				<Bank Name="Double Bass" MSB="127" LSB="0" />
 				<Bank Name="Echo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -18968,6 +19070,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cavasa" MSB="82" LSB="1" />
 				<Bank Name="Tremolo Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoHi" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Trem" MSB="127" LSB="0" />
 				<Bank Name="Doctor Solo" MSB="127" LSB="7" />
 			</PC>
@@ -19099,6 +19202,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_closehh" MSB="82" LSB="1" />
 				<Bank Name="Pizzicato Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoLo" MSB="85" LSB="3" />
 				<Bank Name="Pizzicato Strings" MSB="127" LSB="0" />
 				<Bank Name="School Daze" MSB="127" LSB="7" />
 			</PC>
@@ -19223,6 +19327,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cowbell" MSB="82" LSB="1" />
 				<Bank Name="Orchestral Harp" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LClaves" MSB="85" LSB="3" />
 				<Bank Name="Orchestral Harp" MSB="127" LSB="0" />
 				<Bank Name="Bell Singer" MSB="127" LSB="7" />
 			</PC>
@@ -19339,6 +19444,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_crash" MSB="82" LSB="1" />
 				<Bank Name="Timpani" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaHi" MSB="85" LSB="3" />
 				<Bank Name="Timpani" MSB="127" LSB="0" />
 				<Bank Name="RX5_Timpani" MSB="127" LSB="2" />
 				<Bank Name="Square Wave MT" MSB="127" LSB="7" />
@@ -19454,6 +19560,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_handclap" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaLo" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Fast" MSB="127" LSB="0" />
 				<Bank Name="Orchestral" MSB="127" LSB="1" />
 				<Bank Name="String Section 1" MSB="127" LSB="7" />
@@ -19570,6 +19677,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiagogo" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaM" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Slow" MSB="127" LSB="0" />
 				<Bank Name="String Section 2" MSB="127" LSB="7" />
 			</PC>
@@ -19701,6 +19809,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hibongo" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCowbell" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 1" MSB="127" LSB="0" />
 				<Bank Name="String Section 3" MSB="127" LSB="7" />
 			</PC>
@@ -19824,6 +19933,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiconga" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 2" MSB="127" LSB="0" />
 				<Bank Name="Pizzicato MT" MSB="127" LSB="7" />
 			</PC>
@@ -19940,6 +20050,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hicuica" MSB="82" LSB="1" />
 				<Bank Name="Choir Aahs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaLo" MSB="85" LSB="3" />
 				<Bank Name="Concert Choir" MSB="127" LSB="0" />
 				<Bank Name="Violin 1" MSB="127" LSB="7" />
 			</PC>
@@ -20055,6 +20166,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitimbaless" MSB="82" LSB="1" />
 				<Bank Name="Voice Oohs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTambourine" MSB="85" LSB="3" />
 				<Bank Name="Voice Oohs" MSB="127" LSB="0" />
 				<Bank Name="Violin 2" MSB="127" LSB="7" />
 			</PC>
@@ -20160,6 +20272,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom" MSB="82" LSB="1" />
 				<Bank Name="Synth Voice" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Voice" MSB="127" LSB="0" />
 				<Bank Name="Cello 1" MSB="127" LSB="7" />
 			</PC>
@@ -20294,6 +20407,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom2" MSB="82" LSB="1" />
 				<Bank Name="Orchestra Hit" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleLo" MSB="85" LSB="3" />
 				<Bank Name="Orchestra Hit" MSB="127" LSB="0" />
 				<Bank Name="Cello 2" MSB="127" LSB="7" />
 			</PC>
@@ -20423,6 +20537,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_loagogo" MSB="82" LSB="1" />
 				<Bank Name="Trumpet" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleL" MSB="85" LSB="3" />
 				<Bank Name="Trumpet" MSB="127" LSB="0" />
 				<Bank Name="SFX" MSB="127" LSB="1" />
 				<Bank Name="RX5_DX_ORCH" MSB="127" LSB="3" />
@@ -20544,6 +20659,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_lobongo" MSB="82" LSB="1" />
 				<Bank Name="Trombone" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleS" MSB="85" LSB="3" />
 				<Bank Name="Trombone" MSB="127" LSB="0" />
 				<Bank Name="Harp 1" MSB="127" LSB="7" />
 			</PC>
@@ -27045,6 +27161,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="PSS_680_bass" MSB="85" LSB="3" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
 				<Bank Name="Bass Drum" MSB="112" LSB="68" />
@@ -27185,6 +27302,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush" MSB="85" LSB="3" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
 				<Bank Name="Hi Conga" MSB="112" LSB="68" />
@@ -27322,6 +27440,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush_hit" MSB="85" LSB="3" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
 				<Bank Name="Snare Drum" MSB="112" LSB="68" />
@@ -27444,6 +27563,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cavasa" MSB="85" LSB="3" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
@@ -27575,6 +27695,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_closehh" MSB="85" LSB="3" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
@@ -27715,6 +27836,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cowbell" MSB="85" LSB="3" />
 				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 				<Bank Name="FM Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 3" MSB="127" LSB="7" />
@@ -27846,6 +27968,7 @@
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
 				<Bank Name="Harpsichord" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_crash" MSB="85" LSB="3" />
 				<Bank Name="Harpsichord" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 4" MSB="127" LSB="7" />
 			</PC>
@@ -27972,6 +28095,7 @@
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
 				<Bank Name="Clavinet" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_handclap" MSB="85" LSB="3" />
 				<Bank Name="Clavinet" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_CLAV" MSB="127" LSB="3" />
 				<Bank Name="Honkytonk" MSB="127" LSB="7" />
@@ -28094,6 +28218,7 @@
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
 				<Bank Name="Celesta" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiagogo" MSB="85" LSB="3" />
 				<Bank Name="Celeste" MSB="127" LSB="0" />
 				<Bank Name="Room" MSB="127" LSB="1" />
 				<Bank Name="RX5_IncludeRom" MSB="127" LSB="4" />
@@ -28222,6 +28347,7 @@
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
 				<Bank Name="Glockenspiel" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hibongo" MSB="85" LSB="3" />
 				<Bank Name="Glockenspiel" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -28359,6 +28485,7 @@
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
 				<Bank Name="Music Box" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiconga" MSB="85" LSB="3" />
 				<Bank Name="Music Box" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -28491,6 +28618,7 @@
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
 				<Bank Name="Vibraphone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hicuica" MSB="85" LSB="3" />
 				<Bank Name="Vibraphone" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 4" MSB="127" LSB="7" />
 			</PC>
@@ -28617,6 +28745,7 @@
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
 				<Bank Name="Marimba" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitimbaless" MSB="85" LSB="3" />
 				<Bank Name="Marimba" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_MARIMBA" MSB="127" LSB="3" />
 				<Bank Name="Pipe Organ 1" MSB="127" LSB="7" />
@@ -28729,6 +28858,7 @@
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
 				<Bank Name="Xylophone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom" MSB="85" LSB="3" />
 				<Bank Name="Xylophone" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -28844,6 +28974,7 @@
 				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom2" MSB="85" LSB="3" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -28979,6 +29110,7 @@
 				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loagogo" MSB="85" LSB="3" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
 				<Bank Name="Accordion MT" MSB="127" LSB="7" />
 			</PC>
@@ -29101,6 +29233,7 @@
 				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lobongo" MSB="85" LSB="3" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
 				<Bank Name="Power" MSB="127" LSB="1" />
 				<Bank Name="RX5_Power" MSB="127" LSB="4" />
@@ -29218,6 +29351,7 @@
 				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loconga" MSB="85" LSB="3" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 2" MSB="127" LSB="7" />
 			</PC>
@@ -29334,6 +29468,7 @@
 				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_locuica" MSB="85" LSB="3" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 3" MSB="127" LSB="7" />
 			</PC>
@@ -29441,6 +29576,7 @@
 				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotimbaless" MSB="85" LSB="3" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 1" MSB="127" LSB="7" />
 			</PC>
@@ -29562,6 +29698,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_fltom" MSB="82" LSB="1" />
 				<Bank Name="Reed Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom" MSB="85" LSB="3" />
 				<Bank Name="Reed Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 2" MSB="127" LSB="7" />
 			</PC>
@@ -29675,6 +29812,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_gate_snare" MSB="82" LSB="1" />
 				<Bank Name="Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom2" MSB="85" LSB="3" />
 				<Bank Name="Accordian" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 3" MSB="127" LSB="7" />
 			</PC>
@@ -29787,6 +29925,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hibass" MSB="82" LSB="1" />
 				<Bank Name="Harmonica" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom" MSB="85" LSB="3" />
 				<Bank Name="Harmonica" MSB="127" LSB="0" />
 				<Bank Name="Celesta 1" MSB="127" LSB="7" />
 			</PC>
@@ -29899,6 +30038,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hisnare" MSB="82" LSB="1" />
 				<Bank Name="Tango Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom2" MSB="85" LSB="3" />
 				<Bank Name="Bandoneon" MSB="127" LSB="0" />
 				<Bank Name="Celesta 2" MSB="127" LSB="7" />
 			</PC>
@@ -30008,6 +30148,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hitom" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (nylon)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_mutetambarine" MSB="85" LSB="3" />
 				<Bank Name="Nylon Guitar" MSB="127" LSB="0" />
 				<Bank Name="Electronic" MSB="127" LSB="1" />
 				<Bank Name="RX5_Electric" MSB="127" LSB="4" />
@@ -30139,6 +30280,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lobass" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (steel)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_openhh" MSB="85" LSB="3" />
 				<Bank Name="Steel Guitar" MSB="127" LSB="0" />
 				<Bank Name="808/909" MSB="127" LSB="1" />
 				<Bank Name="Standart 5" MSB="127" LSB="5" />
@@ -30272,6 +30414,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_losnare" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (jazz)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_ride" MSB="85" LSB="3" />
 				<Bank Name="Jazz Guitar" MSB="127" LSB="0" />
 				<Bank Name="Dance" MSB="127" LSB="1" />
 				<Bank Name="Synth Brass 3 MT" MSB="127" LSB="7" />
@@ -30403,6 +30546,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lotom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (clean)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_rimshot" MSB="85" LSB="3" />
 				<Bank Name="Clean Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Brass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -30515,6 +30659,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_midtom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (muted)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare" MSB="85" LSB="3" />
 				<Bank Name="Muted Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 1 MT" MSB="127" LSB="7" />
 			</PC>
@@ -30626,6 +30771,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_openhh" MSB="82" LSB="1" />
 				<Bank Name="Overdriven Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare2" MSB="85" LSB="3" />
 				<Bank Name="Overdrive Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 2 MT" MSB="127" LSB="7" />
 			</PC>
@@ -30763,6 +30909,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_pedalhh" MSB="82" LSB="1" />
 				<Bank Name="Distortion Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_splash" MSB="85" LSB="3" />
 				<Bank Name="Distortion Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 3 MT" MSB="127" LSB="7" />
 			</PC>
@@ -30887,6 +31034,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rev_bass" MSB="82" LSB="1" />
 				<Bank Name="Guitar Harmonics" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_whistle" MSB="85" LSB="3" />
 				<Bank Name="Guitar Harmonics" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -31006,6 +31154,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_ride_edge" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Clap" MSB="85" LSB="3" />
 				<Bank Name="Acoustic Bass" MSB="127" LSB="0" />
 				<Bank Name="Jazz" MSB="127" LSB="1" />
 				<Bank Name="RX5_Rock" MSB="127" LSB="4" />
@@ -31122,6 +31271,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (finger)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Crash" MSB="85" LSB="3" />
 				<Bank Name="Finger Bass" MSB="127" LSB="0" />
 				<Bank Name="Harmo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -31227,6 +31377,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot2" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (pick)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_C" MSB="85" LSB="3" />
 				<Bank Name="Pick Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Low" MSB="127" LSB="3" />
 				<Bank Name="Chorale" MSB="127" LSB="7" />
@@ -31360,6 +31511,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_splash" MSB="82" LSB="1" />
 				<Bank Name="Fretless Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_O" MSB="85" LSB="3" />
 				<Bank Name="Fretless Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Hi" MSB="127" LSB="3" />
 				<Bank Name="Glasses" MSB="127" LSB="7" />
@@ -31484,6 +31636,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_fltom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_P" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Soundtrack MT" MSB="127" LSB="7" />
 			</PC>
@@ -31600,6 +31753,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_hitom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Kick" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Atmosphere MT" MSB="127" LSB="7" />
 			</PC>
@@ -31717,6 +31871,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_lotom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Ride" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Warm Bell" MSB="127" LSB="7" />
 			</PC>
@@ -31834,6 +31989,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_midtom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Rimshot" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Funny Vox" MSB="127" LSB="7" />
 			</PC>
@@ -31968,6 +32124,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_snare" MSB="82" LSB="1" />
 				<Bank Name="Violin" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare01" MSB="85" LSB="3" />
 				<Bank Name="Violin" MSB="127" LSB="0" />
 				<Bank Name="Brush" MSB="127" LSB="1" />
 				<Bank Name="Echo Bell" MSB="127" LSB="7" />
@@ -32094,6 +32251,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_bass" MSB="82" LSB="1" />
 				<Bank Name="Viola" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare02" MSB="85" LSB="3" />
 				<Bank Name="Viola" MSB="127" LSB="0" />
 				<Bank Name="Ice Rain MT" MSB="127" LSB="7" />
 			</PC>
@@ -32206,6 +32364,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush" MSB="82" LSB="1" />
 				<Bank Name="Cello" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoHi" MSB="85" LSB="3" />
 				<Bank Name="Cello" MSB="127" LSB="0" />
 				<Bank Name="Oboe 2001" MSB="127" LSB="7" />
 			</PC>
@@ -32314,6 +32473,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush_hit" MSB="82" LSB="1" />
 				<Bank Name="Contrabass" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoLo" MSB="85" LSB="3" />
 				<Bank Name="Double Bass" MSB="127" LSB="0" />
 				<Bank Name="Echo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -32419,6 +32579,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cavasa" MSB="82" LSB="1" />
 				<Bank Name="Tremolo Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoHi" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Trem" MSB="127" LSB="0" />
 				<Bank Name="Doctor Solo" MSB="127" LSB="7" />
 			</PC>
@@ -32550,6 +32711,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_closehh" MSB="82" LSB="1" />
 				<Bank Name="Pizzicato Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoLo" MSB="85" LSB="3" />
 				<Bank Name="Pizzicato Strings" MSB="127" LSB="0" />
 				<Bank Name="School Daze" MSB="127" LSB="7" />
 			</PC>
@@ -32674,6 +32836,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cowbell" MSB="82" LSB="1" />
 				<Bank Name="Orchestral Harp" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LClaves" MSB="85" LSB="3" />
 				<Bank Name="Orchestral Harp" MSB="127" LSB="0" />
 				<Bank Name="Bell Singer" MSB="127" LSB="7" />
 			</PC>
@@ -32790,6 +32953,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_crash" MSB="82" LSB="1" />
 				<Bank Name="Timpani" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaHi" MSB="85" LSB="3" />
 				<Bank Name="Timpani" MSB="127" LSB="0" />
 				<Bank Name="RX5_Timpani" MSB="127" LSB="2" />
 				<Bank Name="Square Wave MT" MSB="127" LSB="7" />
@@ -32905,6 +33069,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_handclap" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaLo" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Fast" MSB="127" LSB="0" />
 				<Bank Name="Orchestral" MSB="127" LSB="1" />
 				<Bank Name="String Section 1" MSB="127" LSB="7" />
@@ -33021,6 +33186,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiagogo" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaM" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Slow" MSB="127" LSB="0" />
 				<Bank Name="String Section 2" MSB="127" LSB="7" />
 			</PC>
@@ -33152,6 +33318,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hibongo" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCowbell" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 1" MSB="127" LSB="0" />
 				<Bank Name="String Section 3" MSB="127" LSB="7" />
 			</PC>
@@ -33275,6 +33442,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiconga" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 2" MSB="127" LSB="0" />
 				<Bank Name="Pizzicato MT" MSB="127" LSB="7" />
 			</PC>
@@ -33391,6 +33559,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hicuica" MSB="82" LSB="1" />
 				<Bank Name="Choir Aahs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaLo" MSB="85" LSB="3" />
 				<Bank Name="Concert Choir" MSB="127" LSB="0" />
 				<Bank Name="Violin 1" MSB="127" LSB="7" />
 			</PC>
@@ -33506,6 +33675,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitimbaless" MSB="82" LSB="1" />
 				<Bank Name="Voice Oohs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTambourine" MSB="85" LSB="3" />
 				<Bank Name="Voice Oohs" MSB="127" LSB="0" />
 				<Bank Name="Violin 2" MSB="127" LSB="7" />
 			</PC>
@@ -33611,6 +33781,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom" MSB="82" LSB="1" />
 				<Bank Name="Synth Voice" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Voice" MSB="127" LSB="0" />
 				<Bank Name="Cello 1" MSB="127" LSB="7" />
 			</PC>
@@ -33745,6 +33916,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom2" MSB="82" LSB="1" />
 				<Bank Name="Orchestra Hit" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleLo" MSB="85" LSB="3" />
 				<Bank Name="Orchestra Hit" MSB="127" LSB="0" />
 				<Bank Name="Cello 2" MSB="127" LSB="7" />
 			</PC>
@@ -33874,6 +34046,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_loagogo" MSB="82" LSB="1" />
 				<Bank Name="Trumpet" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleL" MSB="85" LSB="3" />
 				<Bank Name="Trumpet" MSB="127" LSB="0" />
 				<Bank Name="SFX" MSB="127" LSB="1" />
 				<Bank Name="RX5_DX_ORCH" MSB="127" LSB="3" />
@@ -33995,6 +34168,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_lobongo" MSB="82" LSB="1" />
 				<Bank Name="Trombone" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleS" MSB="85" LSB="3" />
 				<Bank Name="Trombone" MSB="127" LSB="0" />
 				<Bank Name="Harp 1" MSB="127" LSB="7" />
 			</PC>
@@ -40496,6 +40670,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="PSS_680_bass" MSB="85" LSB="3" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
 				<Bank Name="Bass Drum" MSB="112" LSB="68" />
@@ -40636,6 +40811,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush" MSB="85" LSB="3" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
 				<Bank Name="Hi Conga" MSB="112" LSB="68" />
@@ -40773,6 +40949,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush_hit" MSB="85" LSB="3" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
 				<Bank Name="Snare Drum" MSB="112" LSB="68" />
@@ -40895,6 +41072,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cavasa" MSB="85" LSB="3" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
@@ -41026,6 +41204,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_closehh" MSB="85" LSB="3" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
@@ -41166,6 +41345,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cowbell" MSB="85" LSB="3" />
 				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 				<Bank Name="FM Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 3" MSB="127" LSB="7" />
@@ -41297,6 +41477,7 @@
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
 				<Bank Name="Harpsichord" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_crash" MSB="85" LSB="3" />
 				<Bank Name="Harpsichord" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 4" MSB="127" LSB="7" />
 			</PC>
@@ -41423,6 +41604,7 @@
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
 				<Bank Name="Clavinet" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_handclap" MSB="85" LSB="3" />
 				<Bank Name="Clavinet" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_CLAV" MSB="127" LSB="3" />
 				<Bank Name="Honkytonk" MSB="127" LSB="7" />
@@ -41545,6 +41727,7 @@
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
 				<Bank Name="Celesta" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiagogo" MSB="85" LSB="3" />
 				<Bank Name="Celeste" MSB="127" LSB="0" />
 				<Bank Name="Room" MSB="127" LSB="1" />
 				<Bank Name="RX5_IncludeRom" MSB="127" LSB="4" />
@@ -41673,6 +41856,7 @@
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
 				<Bank Name="Glockenspiel" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hibongo" MSB="85" LSB="3" />
 				<Bank Name="Glockenspiel" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -41810,6 +41994,7 @@
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
 				<Bank Name="Music Box" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiconga" MSB="85" LSB="3" />
 				<Bank Name="Music Box" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -41942,6 +42127,7 @@
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
 				<Bank Name="Vibraphone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hicuica" MSB="85" LSB="3" />
 				<Bank Name="Vibraphone" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 4" MSB="127" LSB="7" />
 			</PC>
@@ -42068,6 +42254,7 @@
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
 				<Bank Name="Marimba" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitimbaless" MSB="85" LSB="3" />
 				<Bank Name="Marimba" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_MARIMBA" MSB="127" LSB="3" />
 				<Bank Name="Pipe Organ 1" MSB="127" LSB="7" />
@@ -42180,6 +42367,7 @@
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
 				<Bank Name="Xylophone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom" MSB="85" LSB="3" />
 				<Bank Name="Xylophone" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -42295,6 +42483,7 @@
 				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom2" MSB="85" LSB="3" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -42430,6 +42619,7 @@
 				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loagogo" MSB="85" LSB="3" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
 				<Bank Name="Accordion MT" MSB="127" LSB="7" />
 			</PC>
@@ -42552,6 +42742,7 @@
 				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lobongo" MSB="85" LSB="3" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
 				<Bank Name="Power" MSB="127" LSB="1" />
 				<Bank Name="RX5_Power" MSB="127" LSB="4" />
@@ -42669,6 +42860,7 @@
 				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loconga" MSB="85" LSB="3" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 2" MSB="127" LSB="7" />
 			</PC>
@@ -42785,6 +42977,7 @@
 				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_locuica" MSB="85" LSB="3" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 3" MSB="127" LSB="7" />
 			</PC>
@@ -42892,6 +43085,7 @@
 				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotimbaless" MSB="85" LSB="3" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 1" MSB="127" LSB="7" />
 			</PC>
@@ -43013,6 +43207,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_fltom" MSB="82" LSB="1" />
 				<Bank Name="Reed Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom" MSB="85" LSB="3" />
 				<Bank Name="Reed Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 2" MSB="127" LSB="7" />
 			</PC>
@@ -43126,6 +43321,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_gate_snare" MSB="82" LSB="1" />
 				<Bank Name="Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom2" MSB="85" LSB="3" />
 				<Bank Name="Accordian" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 3" MSB="127" LSB="7" />
 			</PC>
@@ -43238,6 +43434,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hibass" MSB="82" LSB="1" />
 				<Bank Name="Harmonica" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom" MSB="85" LSB="3" />
 				<Bank Name="Harmonica" MSB="127" LSB="0" />
 				<Bank Name="Celesta 1" MSB="127" LSB="7" />
 			</PC>
@@ -43350,6 +43547,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hisnare" MSB="82" LSB="1" />
 				<Bank Name="Tango Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom2" MSB="85" LSB="3" />
 				<Bank Name="Bandoneon" MSB="127" LSB="0" />
 				<Bank Name="Celesta 2" MSB="127" LSB="7" />
 			</PC>
@@ -43459,6 +43657,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hitom" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (nylon)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_mutetambarine" MSB="85" LSB="3" />
 				<Bank Name="Nylon Guitar" MSB="127" LSB="0" />
 				<Bank Name="Electronic" MSB="127" LSB="1" />
 				<Bank Name="RX5_Electric" MSB="127" LSB="4" />
@@ -43590,6 +43789,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lobass" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (steel)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_openhh" MSB="85" LSB="3" />
 				<Bank Name="Steel Guitar" MSB="127" LSB="0" />
 				<Bank Name="808/909" MSB="127" LSB="1" />
 				<Bank Name="Standart 5" MSB="127" LSB="5" />
@@ -43723,6 +43923,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_losnare" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (jazz)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_ride" MSB="85" LSB="3" />
 				<Bank Name="Jazz Guitar" MSB="127" LSB="0" />
 				<Bank Name="Dance" MSB="127" LSB="1" />
 				<Bank Name="Synth Brass 3 MT" MSB="127" LSB="7" />
@@ -43854,6 +44055,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lotom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (clean)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_rimshot" MSB="85" LSB="3" />
 				<Bank Name="Clean Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Brass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -43966,6 +44168,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_midtom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (muted)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare" MSB="85" LSB="3" />
 				<Bank Name="Muted Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 1 MT" MSB="127" LSB="7" />
 			</PC>
@@ -44077,6 +44280,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_openhh" MSB="82" LSB="1" />
 				<Bank Name="Overdriven Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare2" MSB="85" LSB="3" />
 				<Bank Name="Overdrive Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 2 MT" MSB="127" LSB="7" />
 			</PC>
@@ -44214,6 +44418,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_pedalhh" MSB="82" LSB="1" />
 				<Bank Name="Distortion Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_splash" MSB="85" LSB="3" />
 				<Bank Name="Distortion Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 3 MT" MSB="127" LSB="7" />
 			</PC>
@@ -44338,6 +44543,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rev_bass" MSB="82" LSB="1" />
 				<Bank Name="Guitar Harmonics" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_whistle" MSB="85" LSB="3" />
 				<Bank Name="Guitar Harmonics" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -44457,6 +44663,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_ride_edge" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Clap" MSB="85" LSB="3" />
 				<Bank Name="Acoustic Bass" MSB="127" LSB="0" />
 				<Bank Name="Jazz" MSB="127" LSB="1" />
 				<Bank Name="RX5_Rock" MSB="127" LSB="4" />
@@ -44573,6 +44780,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (finger)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Crash" MSB="85" LSB="3" />
 				<Bank Name="Finger Bass" MSB="127" LSB="0" />
 				<Bank Name="Harmo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -44678,6 +44886,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot2" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (pick)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_C" MSB="85" LSB="3" />
 				<Bank Name="Pick Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Low" MSB="127" LSB="3" />
 				<Bank Name="Chorale" MSB="127" LSB="7" />
@@ -44811,6 +45020,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_splash" MSB="82" LSB="1" />
 				<Bank Name="Fretless Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_O" MSB="85" LSB="3" />
 				<Bank Name="Fretless Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Hi" MSB="127" LSB="3" />
 				<Bank Name="Glasses" MSB="127" LSB="7" />
@@ -44935,6 +45145,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_fltom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_P" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Soundtrack MT" MSB="127" LSB="7" />
 			</PC>
@@ -45051,6 +45262,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_hitom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Kick" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Atmosphere MT" MSB="127" LSB="7" />
 			</PC>
@@ -45168,6 +45380,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_lotom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Ride" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Warm Bell" MSB="127" LSB="7" />
 			</PC>
@@ -45285,6 +45498,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_midtom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Rimshot" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Funny Vox" MSB="127" LSB="7" />
 			</PC>
@@ -45419,6 +45633,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_snare" MSB="82" LSB="1" />
 				<Bank Name="Violin" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare01" MSB="85" LSB="3" />
 				<Bank Name="Violin" MSB="127" LSB="0" />
 				<Bank Name="Brush" MSB="127" LSB="1" />
 				<Bank Name="Echo Bell" MSB="127" LSB="7" />
@@ -45545,6 +45760,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_bass" MSB="82" LSB="1" />
 				<Bank Name="Viola" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare02" MSB="85" LSB="3" />
 				<Bank Name="Viola" MSB="127" LSB="0" />
 				<Bank Name="Ice Rain MT" MSB="127" LSB="7" />
 			</PC>
@@ -45657,6 +45873,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush" MSB="82" LSB="1" />
 				<Bank Name="Cello" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoHi" MSB="85" LSB="3" />
 				<Bank Name="Cello" MSB="127" LSB="0" />
 				<Bank Name="Oboe 2001" MSB="127" LSB="7" />
 			</PC>
@@ -45765,6 +45982,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush_hit" MSB="82" LSB="1" />
 				<Bank Name="Contrabass" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoLo" MSB="85" LSB="3" />
 				<Bank Name="Double Bass" MSB="127" LSB="0" />
 				<Bank Name="Echo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -45870,6 +46088,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cavasa" MSB="82" LSB="1" />
 				<Bank Name="Tremolo Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoHi" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Trem" MSB="127" LSB="0" />
 				<Bank Name="Doctor Solo" MSB="127" LSB="7" />
 			</PC>
@@ -46001,6 +46220,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_closehh" MSB="82" LSB="1" />
 				<Bank Name="Pizzicato Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoLo" MSB="85" LSB="3" />
 				<Bank Name="Pizzicato Strings" MSB="127" LSB="0" />
 				<Bank Name="School Daze" MSB="127" LSB="7" />
 			</PC>
@@ -46125,6 +46345,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cowbell" MSB="82" LSB="1" />
 				<Bank Name="Orchestral Harp" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LClaves" MSB="85" LSB="3" />
 				<Bank Name="Orchestral Harp" MSB="127" LSB="0" />
 				<Bank Name="Bell Singer" MSB="127" LSB="7" />
 			</PC>
@@ -46241,6 +46462,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_crash" MSB="82" LSB="1" />
 				<Bank Name="Timpani" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaHi" MSB="85" LSB="3" />
 				<Bank Name="Timpani" MSB="127" LSB="0" />
 				<Bank Name="RX5_Timpani" MSB="127" LSB="2" />
 				<Bank Name="Square Wave MT" MSB="127" LSB="7" />
@@ -46356,6 +46578,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_handclap" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaLo" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Fast" MSB="127" LSB="0" />
 				<Bank Name="Orchestral" MSB="127" LSB="1" />
 				<Bank Name="String Section 1" MSB="127" LSB="7" />
@@ -46472,6 +46695,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiagogo" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaM" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Slow" MSB="127" LSB="0" />
 				<Bank Name="String Section 2" MSB="127" LSB="7" />
 			</PC>
@@ -46603,6 +46827,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hibongo" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCowbell" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 1" MSB="127" LSB="0" />
 				<Bank Name="String Section 3" MSB="127" LSB="7" />
 			</PC>
@@ -46726,6 +46951,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiconga" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 2" MSB="127" LSB="0" />
 				<Bank Name="Pizzicato MT" MSB="127" LSB="7" />
 			</PC>
@@ -46842,6 +47068,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hicuica" MSB="82" LSB="1" />
 				<Bank Name="Choir Aahs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaLo" MSB="85" LSB="3" />
 				<Bank Name="Concert Choir" MSB="127" LSB="0" />
 				<Bank Name="Violin 1" MSB="127" LSB="7" />
 			</PC>
@@ -46957,6 +47184,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitimbaless" MSB="82" LSB="1" />
 				<Bank Name="Voice Oohs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTambourine" MSB="85" LSB="3" />
 				<Bank Name="Voice Oohs" MSB="127" LSB="0" />
 				<Bank Name="Violin 2" MSB="127" LSB="7" />
 			</PC>
@@ -47062,6 +47290,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom" MSB="82" LSB="1" />
 				<Bank Name="Synth Voice" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Voice" MSB="127" LSB="0" />
 				<Bank Name="Cello 1" MSB="127" LSB="7" />
 			</PC>
@@ -47196,6 +47425,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom2" MSB="82" LSB="1" />
 				<Bank Name="Orchestra Hit" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleLo" MSB="85" LSB="3" />
 				<Bank Name="Orchestra Hit" MSB="127" LSB="0" />
 				<Bank Name="Cello 2" MSB="127" LSB="7" />
 			</PC>
@@ -47325,6 +47555,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_loagogo" MSB="82" LSB="1" />
 				<Bank Name="Trumpet" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleL" MSB="85" LSB="3" />
 				<Bank Name="Trumpet" MSB="127" LSB="0" />
 				<Bank Name="SFX" MSB="127" LSB="1" />
 				<Bank Name="RX5_DX_ORCH" MSB="127" LSB="3" />
@@ -47446,6 +47677,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_lobongo" MSB="82" LSB="1" />
 				<Bank Name="Trombone" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleS" MSB="85" LSB="3" />
 				<Bank Name="Trombone" MSB="127" LSB="0" />
 				<Bank Name="Harp 1" MSB="127" LSB="7" />
 			</PC>
@@ -53947,6 +54179,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="PSS_680_bass" MSB="85" LSB="3" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
 				<Bank Name="Bass Drum" MSB="112" LSB="68" />
@@ -54087,6 +54320,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush" MSB="85" LSB="3" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
 				<Bank Name="Hi Conga" MSB="112" LSB="68" />
@@ -54224,6 +54458,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush_hit" MSB="85" LSB="3" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
 				<Bank Name="Snare Drum" MSB="112" LSB="68" />
@@ -54346,6 +54581,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cavasa" MSB="85" LSB="3" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
@@ -54477,6 +54713,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_closehh" MSB="85" LSB="3" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
@@ -54617,6 +54854,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cowbell" MSB="85" LSB="3" />
 				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 				<Bank Name="FM Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 3" MSB="127" LSB="7" />
@@ -54748,6 +54986,7 @@
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
 				<Bank Name="Harpsichord" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_crash" MSB="85" LSB="3" />
 				<Bank Name="Harpsichord" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 4" MSB="127" LSB="7" />
 			</PC>
@@ -54874,6 +55113,7 @@
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
 				<Bank Name="Clavinet" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_handclap" MSB="85" LSB="3" />
 				<Bank Name="Clavinet" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_CLAV" MSB="127" LSB="3" />
 				<Bank Name="Honkytonk" MSB="127" LSB="7" />
@@ -54996,6 +55236,7 @@
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
 				<Bank Name="Celesta" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiagogo" MSB="85" LSB="3" />
 				<Bank Name="Celeste" MSB="127" LSB="0" />
 				<Bank Name="Room" MSB="127" LSB="1" />
 				<Bank Name="RX5_IncludeRom" MSB="127" LSB="4" />
@@ -55124,6 +55365,7 @@
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
 				<Bank Name="Glockenspiel" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hibongo" MSB="85" LSB="3" />
 				<Bank Name="Glockenspiel" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -55261,6 +55503,7 @@
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
 				<Bank Name="Music Box" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiconga" MSB="85" LSB="3" />
 				<Bank Name="Music Box" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -55393,6 +55636,7 @@
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
 				<Bank Name="Vibraphone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hicuica" MSB="85" LSB="3" />
 				<Bank Name="Vibraphone" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 4" MSB="127" LSB="7" />
 			</PC>
@@ -55519,6 +55763,7 @@
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
 				<Bank Name="Marimba" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitimbaless" MSB="85" LSB="3" />
 				<Bank Name="Marimba" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_MARIMBA" MSB="127" LSB="3" />
 				<Bank Name="Pipe Organ 1" MSB="127" LSB="7" />
@@ -55631,6 +55876,7 @@
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
 				<Bank Name="Xylophone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom" MSB="85" LSB="3" />
 				<Bank Name="Xylophone" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -55746,6 +55992,7 @@
 				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom2" MSB="85" LSB="3" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -55881,6 +56128,7 @@
 				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loagogo" MSB="85" LSB="3" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
 				<Bank Name="Accordion MT" MSB="127" LSB="7" />
 			</PC>
@@ -56003,6 +56251,7 @@
 				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lobongo" MSB="85" LSB="3" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
 				<Bank Name="Power" MSB="127" LSB="1" />
 				<Bank Name="RX5_Power" MSB="127" LSB="4" />
@@ -56120,6 +56369,7 @@
 				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loconga" MSB="85" LSB="3" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 2" MSB="127" LSB="7" />
 			</PC>
@@ -56236,6 +56486,7 @@
 				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_locuica" MSB="85" LSB="3" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 3" MSB="127" LSB="7" />
 			</PC>
@@ -56343,6 +56594,7 @@
 				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotimbaless" MSB="85" LSB="3" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 1" MSB="127" LSB="7" />
 			</PC>
@@ -56464,6 +56716,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_fltom" MSB="82" LSB="1" />
 				<Bank Name="Reed Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom" MSB="85" LSB="3" />
 				<Bank Name="Reed Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 2" MSB="127" LSB="7" />
 			</PC>
@@ -56577,6 +56830,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_gate_snare" MSB="82" LSB="1" />
 				<Bank Name="Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom2" MSB="85" LSB="3" />
 				<Bank Name="Accordian" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 3" MSB="127" LSB="7" />
 			</PC>
@@ -56689,6 +56943,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hibass" MSB="82" LSB="1" />
 				<Bank Name="Harmonica" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom" MSB="85" LSB="3" />
 				<Bank Name="Harmonica" MSB="127" LSB="0" />
 				<Bank Name="Celesta 1" MSB="127" LSB="7" />
 			</PC>
@@ -56801,6 +57056,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hisnare" MSB="82" LSB="1" />
 				<Bank Name="Tango Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom2" MSB="85" LSB="3" />
 				<Bank Name="Bandoneon" MSB="127" LSB="0" />
 				<Bank Name="Celesta 2" MSB="127" LSB="7" />
 			</PC>
@@ -56910,6 +57166,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hitom" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (nylon)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_mutetambarine" MSB="85" LSB="3" />
 				<Bank Name="Nylon Guitar" MSB="127" LSB="0" />
 				<Bank Name="Electronic" MSB="127" LSB="1" />
 				<Bank Name="RX5_Electric" MSB="127" LSB="4" />
@@ -57041,6 +57298,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lobass" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (steel)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_openhh" MSB="85" LSB="3" />
 				<Bank Name="Steel Guitar" MSB="127" LSB="0" />
 				<Bank Name="808/909" MSB="127" LSB="1" />
 				<Bank Name="Standart 5" MSB="127" LSB="5" />
@@ -57174,6 +57432,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_losnare" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (jazz)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_ride" MSB="85" LSB="3" />
 				<Bank Name="Jazz Guitar" MSB="127" LSB="0" />
 				<Bank Name="Dance" MSB="127" LSB="1" />
 				<Bank Name="Synth Brass 3 MT" MSB="127" LSB="7" />
@@ -57305,6 +57564,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lotom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (clean)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_rimshot" MSB="85" LSB="3" />
 				<Bank Name="Clean Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Brass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -57417,6 +57677,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_midtom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (muted)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare" MSB="85" LSB="3" />
 				<Bank Name="Muted Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 1 MT" MSB="127" LSB="7" />
 			</PC>
@@ -57528,6 +57789,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_openhh" MSB="82" LSB="1" />
 				<Bank Name="Overdriven Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare2" MSB="85" LSB="3" />
 				<Bank Name="Overdrive Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 2 MT" MSB="127" LSB="7" />
 			</PC>
@@ -57665,6 +57927,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_pedalhh" MSB="82" LSB="1" />
 				<Bank Name="Distortion Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_splash" MSB="85" LSB="3" />
 				<Bank Name="Distortion Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 3 MT" MSB="127" LSB="7" />
 			</PC>
@@ -57789,6 +58052,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rev_bass" MSB="82" LSB="1" />
 				<Bank Name="Guitar Harmonics" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_whistle" MSB="85" LSB="3" />
 				<Bank Name="Guitar Harmonics" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -57908,6 +58172,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_ride_edge" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Clap" MSB="85" LSB="3" />
 				<Bank Name="Acoustic Bass" MSB="127" LSB="0" />
 				<Bank Name="Jazz" MSB="127" LSB="1" />
 				<Bank Name="RX5_Rock" MSB="127" LSB="4" />
@@ -58024,6 +58289,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (finger)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Crash" MSB="85" LSB="3" />
 				<Bank Name="Finger Bass" MSB="127" LSB="0" />
 				<Bank Name="Harmo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -58129,6 +58395,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot2" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (pick)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_C" MSB="85" LSB="3" />
 				<Bank Name="Pick Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Low" MSB="127" LSB="3" />
 				<Bank Name="Chorale" MSB="127" LSB="7" />
@@ -58262,6 +58529,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_splash" MSB="82" LSB="1" />
 				<Bank Name="Fretless Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_O" MSB="85" LSB="3" />
 				<Bank Name="Fretless Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Hi" MSB="127" LSB="3" />
 				<Bank Name="Glasses" MSB="127" LSB="7" />
@@ -58386,6 +58654,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_fltom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_P" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Soundtrack MT" MSB="127" LSB="7" />
 			</PC>
@@ -58502,6 +58771,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_hitom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Kick" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Atmosphere MT" MSB="127" LSB="7" />
 			</PC>
@@ -58619,6 +58889,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_lotom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Ride" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Warm Bell" MSB="127" LSB="7" />
 			</PC>
@@ -58736,6 +59007,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_midtom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Rimshot" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Funny Vox" MSB="127" LSB="7" />
 			</PC>
@@ -58870,6 +59142,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_snare" MSB="82" LSB="1" />
 				<Bank Name="Violin" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare01" MSB="85" LSB="3" />
 				<Bank Name="Violin" MSB="127" LSB="0" />
 				<Bank Name="Brush" MSB="127" LSB="1" />
 				<Bank Name="Echo Bell" MSB="127" LSB="7" />
@@ -58996,6 +59269,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_bass" MSB="82" LSB="1" />
 				<Bank Name="Viola" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare02" MSB="85" LSB="3" />
 				<Bank Name="Viola" MSB="127" LSB="0" />
 				<Bank Name="Ice Rain MT" MSB="127" LSB="7" />
 			</PC>
@@ -59108,6 +59382,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush" MSB="82" LSB="1" />
 				<Bank Name="Cello" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoHi" MSB="85" LSB="3" />
 				<Bank Name="Cello" MSB="127" LSB="0" />
 				<Bank Name="Oboe 2001" MSB="127" LSB="7" />
 			</PC>
@@ -59216,6 +59491,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush_hit" MSB="82" LSB="1" />
 				<Bank Name="Contrabass" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoLo" MSB="85" LSB="3" />
 				<Bank Name="Double Bass" MSB="127" LSB="0" />
 				<Bank Name="Echo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -59321,6 +59597,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cavasa" MSB="82" LSB="1" />
 				<Bank Name="Tremolo Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoHi" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Trem" MSB="127" LSB="0" />
 				<Bank Name="Doctor Solo" MSB="127" LSB="7" />
 			</PC>
@@ -59452,6 +59729,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_closehh" MSB="82" LSB="1" />
 				<Bank Name="Pizzicato Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoLo" MSB="85" LSB="3" />
 				<Bank Name="Pizzicato Strings" MSB="127" LSB="0" />
 				<Bank Name="School Daze" MSB="127" LSB="7" />
 			</PC>
@@ -59576,6 +59854,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cowbell" MSB="82" LSB="1" />
 				<Bank Name="Orchestral Harp" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LClaves" MSB="85" LSB="3" />
 				<Bank Name="Orchestral Harp" MSB="127" LSB="0" />
 				<Bank Name="Bell Singer" MSB="127" LSB="7" />
 			</PC>
@@ -59692,6 +59971,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_crash" MSB="82" LSB="1" />
 				<Bank Name="Timpani" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaHi" MSB="85" LSB="3" />
 				<Bank Name="Timpani" MSB="127" LSB="0" />
 				<Bank Name="RX5_Timpani" MSB="127" LSB="2" />
 				<Bank Name="Square Wave MT" MSB="127" LSB="7" />
@@ -59807,6 +60087,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_handclap" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaLo" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Fast" MSB="127" LSB="0" />
 				<Bank Name="Orchestral" MSB="127" LSB="1" />
 				<Bank Name="String Section 1" MSB="127" LSB="7" />
@@ -59923,6 +60204,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiagogo" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaM" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Slow" MSB="127" LSB="0" />
 				<Bank Name="String Section 2" MSB="127" LSB="7" />
 			</PC>
@@ -60054,6 +60336,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hibongo" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCowbell" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 1" MSB="127" LSB="0" />
 				<Bank Name="String Section 3" MSB="127" LSB="7" />
 			</PC>
@@ -60177,6 +60460,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiconga" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 2" MSB="127" LSB="0" />
 				<Bank Name="Pizzicato MT" MSB="127" LSB="7" />
 			</PC>
@@ -60293,6 +60577,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hicuica" MSB="82" LSB="1" />
 				<Bank Name="Choir Aahs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaLo" MSB="85" LSB="3" />
 				<Bank Name="Concert Choir" MSB="127" LSB="0" />
 				<Bank Name="Violin 1" MSB="127" LSB="7" />
 			</PC>
@@ -60408,6 +60693,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitimbaless" MSB="82" LSB="1" />
 				<Bank Name="Voice Oohs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTambourine" MSB="85" LSB="3" />
 				<Bank Name="Voice Oohs" MSB="127" LSB="0" />
 				<Bank Name="Violin 2" MSB="127" LSB="7" />
 			</PC>
@@ -60513,6 +60799,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom" MSB="82" LSB="1" />
 				<Bank Name="Synth Voice" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Voice" MSB="127" LSB="0" />
 				<Bank Name="Cello 1" MSB="127" LSB="7" />
 			</PC>
@@ -60647,6 +60934,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom2" MSB="82" LSB="1" />
 				<Bank Name="Orchestra Hit" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleLo" MSB="85" LSB="3" />
 				<Bank Name="Orchestra Hit" MSB="127" LSB="0" />
 				<Bank Name="Cello 2" MSB="127" LSB="7" />
 			</PC>
@@ -60776,6 +61064,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_loagogo" MSB="82" LSB="1" />
 				<Bank Name="Trumpet" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleL" MSB="85" LSB="3" />
 				<Bank Name="Trumpet" MSB="127" LSB="0" />
 				<Bank Name="SFX" MSB="127" LSB="1" />
 				<Bank Name="RX5_DX_ORCH" MSB="127" LSB="3" />
@@ -60897,6 +61186,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_lobongo" MSB="82" LSB="1" />
 				<Bank Name="Trombone" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleS" MSB="85" LSB="3" />
 				<Bank Name="Trombone" MSB="127" LSB="0" />
 				<Bank Name="Harp 1" MSB="127" LSB="7" />
 			</PC>
@@ -67398,6 +67688,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="PSS_680_bass" MSB="85" LSB="3" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
 				<Bank Name="Bass Drum" MSB="112" LSB="68" />
@@ -67538,6 +67829,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush" MSB="85" LSB="3" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
 				<Bank Name="Hi Conga" MSB="112" LSB="68" />
@@ -67675,6 +67967,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush_hit" MSB="85" LSB="3" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
 				<Bank Name="Snare Drum" MSB="112" LSB="68" />
@@ -67797,6 +68090,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cavasa" MSB="85" LSB="3" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
@@ -67928,6 +68222,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_closehh" MSB="85" LSB="3" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
@@ -68068,6 +68363,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cowbell" MSB="85" LSB="3" />
 				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 				<Bank Name="FM Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 3" MSB="127" LSB="7" />
@@ -68199,6 +68495,7 @@
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
 				<Bank Name="Harpsichord" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_crash" MSB="85" LSB="3" />
 				<Bank Name="Harpsichord" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 4" MSB="127" LSB="7" />
 			</PC>
@@ -68325,6 +68622,7 @@
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
 				<Bank Name="Clavinet" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_handclap" MSB="85" LSB="3" />
 				<Bank Name="Clavinet" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_CLAV" MSB="127" LSB="3" />
 				<Bank Name="Honkytonk" MSB="127" LSB="7" />
@@ -68447,6 +68745,7 @@
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
 				<Bank Name="Celesta" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiagogo" MSB="85" LSB="3" />
 				<Bank Name="Celeste" MSB="127" LSB="0" />
 				<Bank Name="Room" MSB="127" LSB="1" />
 				<Bank Name="RX5_IncludeRom" MSB="127" LSB="4" />
@@ -68575,6 +68874,7 @@
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
 				<Bank Name="Glockenspiel" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hibongo" MSB="85" LSB="3" />
 				<Bank Name="Glockenspiel" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -68712,6 +69012,7 @@
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
 				<Bank Name="Music Box" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiconga" MSB="85" LSB="3" />
 				<Bank Name="Music Box" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -68844,6 +69145,7 @@
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
 				<Bank Name="Vibraphone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hicuica" MSB="85" LSB="3" />
 				<Bank Name="Vibraphone" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 4" MSB="127" LSB="7" />
 			</PC>
@@ -68970,6 +69272,7 @@
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
 				<Bank Name="Marimba" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitimbaless" MSB="85" LSB="3" />
 				<Bank Name="Marimba" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_MARIMBA" MSB="127" LSB="3" />
 				<Bank Name="Pipe Organ 1" MSB="127" LSB="7" />
@@ -69082,6 +69385,7 @@
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
 				<Bank Name="Xylophone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom" MSB="85" LSB="3" />
 				<Bank Name="Xylophone" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -69197,6 +69501,7 @@
 				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom2" MSB="85" LSB="3" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -69332,6 +69637,7 @@
 				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loagogo" MSB="85" LSB="3" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
 				<Bank Name="Accordion MT" MSB="127" LSB="7" />
 			</PC>
@@ -69454,6 +69760,7 @@
 				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lobongo" MSB="85" LSB="3" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
 				<Bank Name="Power" MSB="127" LSB="1" />
 				<Bank Name="RX5_Power" MSB="127" LSB="4" />
@@ -69571,6 +69878,7 @@
 				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loconga" MSB="85" LSB="3" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 2" MSB="127" LSB="7" />
 			</PC>
@@ -69687,6 +69995,7 @@
 				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_locuica" MSB="85" LSB="3" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 3" MSB="127" LSB="7" />
 			</PC>
@@ -69794,6 +70103,7 @@
 				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotimbaless" MSB="85" LSB="3" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 1" MSB="127" LSB="7" />
 			</PC>
@@ -69915,6 +70225,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_fltom" MSB="82" LSB="1" />
 				<Bank Name="Reed Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom" MSB="85" LSB="3" />
 				<Bank Name="Reed Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 2" MSB="127" LSB="7" />
 			</PC>
@@ -70028,6 +70339,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_gate_snare" MSB="82" LSB="1" />
 				<Bank Name="Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom2" MSB="85" LSB="3" />
 				<Bank Name="Accordian" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 3" MSB="127" LSB="7" />
 			</PC>
@@ -70140,6 +70452,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hibass" MSB="82" LSB="1" />
 				<Bank Name="Harmonica" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom" MSB="85" LSB="3" />
 				<Bank Name="Harmonica" MSB="127" LSB="0" />
 				<Bank Name="Celesta 1" MSB="127" LSB="7" />
 			</PC>
@@ -70252,6 +70565,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hisnare" MSB="82" LSB="1" />
 				<Bank Name="Tango Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom2" MSB="85" LSB="3" />
 				<Bank Name="Bandoneon" MSB="127" LSB="0" />
 				<Bank Name="Celesta 2" MSB="127" LSB="7" />
 			</PC>
@@ -70361,6 +70675,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hitom" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (nylon)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_mutetambarine" MSB="85" LSB="3" />
 				<Bank Name="Nylon Guitar" MSB="127" LSB="0" />
 				<Bank Name="Electronic" MSB="127" LSB="1" />
 				<Bank Name="RX5_Electric" MSB="127" LSB="4" />
@@ -70492,6 +70807,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lobass" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (steel)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_openhh" MSB="85" LSB="3" />
 				<Bank Name="Steel Guitar" MSB="127" LSB="0" />
 				<Bank Name="808/909" MSB="127" LSB="1" />
 				<Bank Name="Standart 5" MSB="127" LSB="5" />
@@ -70625,6 +70941,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_losnare" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (jazz)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_ride" MSB="85" LSB="3" />
 				<Bank Name="Jazz Guitar" MSB="127" LSB="0" />
 				<Bank Name="Dance" MSB="127" LSB="1" />
 				<Bank Name="Synth Brass 3 MT" MSB="127" LSB="7" />
@@ -70756,6 +71073,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lotom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (clean)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_rimshot" MSB="85" LSB="3" />
 				<Bank Name="Clean Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Brass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -70868,6 +71186,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_midtom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (muted)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare" MSB="85" LSB="3" />
 				<Bank Name="Muted Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 1 MT" MSB="127" LSB="7" />
 			</PC>
@@ -70979,6 +71298,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_openhh" MSB="82" LSB="1" />
 				<Bank Name="Overdriven Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare2" MSB="85" LSB="3" />
 				<Bank Name="Overdrive Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 2 MT" MSB="127" LSB="7" />
 			</PC>
@@ -71116,6 +71436,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_pedalhh" MSB="82" LSB="1" />
 				<Bank Name="Distortion Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_splash" MSB="85" LSB="3" />
 				<Bank Name="Distortion Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 3 MT" MSB="127" LSB="7" />
 			</PC>
@@ -71240,6 +71561,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rev_bass" MSB="82" LSB="1" />
 				<Bank Name="Guitar Harmonics" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_whistle" MSB="85" LSB="3" />
 				<Bank Name="Guitar Harmonics" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -71359,6 +71681,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_ride_edge" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Clap" MSB="85" LSB="3" />
 				<Bank Name="Acoustic Bass" MSB="127" LSB="0" />
 				<Bank Name="Jazz" MSB="127" LSB="1" />
 				<Bank Name="RX5_Rock" MSB="127" LSB="4" />
@@ -71475,6 +71798,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (finger)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Crash" MSB="85" LSB="3" />
 				<Bank Name="Finger Bass" MSB="127" LSB="0" />
 				<Bank Name="Harmo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -71580,6 +71904,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot2" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (pick)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_C" MSB="85" LSB="3" />
 				<Bank Name="Pick Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Low" MSB="127" LSB="3" />
 				<Bank Name="Chorale" MSB="127" LSB="7" />
@@ -71713,6 +72038,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_splash" MSB="82" LSB="1" />
 				<Bank Name="Fretless Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_O" MSB="85" LSB="3" />
 				<Bank Name="Fretless Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Hi" MSB="127" LSB="3" />
 				<Bank Name="Glasses" MSB="127" LSB="7" />
@@ -71837,6 +72163,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_fltom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_P" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Soundtrack MT" MSB="127" LSB="7" />
 			</PC>
@@ -71953,6 +72280,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_hitom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Kick" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Atmosphere MT" MSB="127" LSB="7" />
 			</PC>
@@ -72070,6 +72398,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_lotom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Ride" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Warm Bell" MSB="127" LSB="7" />
 			</PC>
@@ -72187,6 +72516,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_midtom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Rimshot" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Funny Vox" MSB="127" LSB="7" />
 			</PC>
@@ -72321,6 +72651,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_snare" MSB="82" LSB="1" />
 				<Bank Name="Violin" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare01" MSB="85" LSB="3" />
 				<Bank Name="Violin" MSB="127" LSB="0" />
 				<Bank Name="Brush" MSB="127" LSB="1" />
 				<Bank Name="Echo Bell" MSB="127" LSB="7" />
@@ -72447,6 +72778,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_bass" MSB="82" LSB="1" />
 				<Bank Name="Viola" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare02" MSB="85" LSB="3" />
 				<Bank Name="Viola" MSB="127" LSB="0" />
 				<Bank Name="Ice Rain MT" MSB="127" LSB="7" />
 			</PC>
@@ -72559,6 +72891,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush" MSB="82" LSB="1" />
 				<Bank Name="Cello" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoHi" MSB="85" LSB="3" />
 				<Bank Name="Cello" MSB="127" LSB="0" />
 				<Bank Name="Oboe 2001" MSB="127" LSB="7" />
 			</PC>
@@ -72667,6 +73000,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush_hit" MSB="82" LSB="1" />
 				<Bank Name="Contrabass" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoLo" MSB="85" LSB="3" />
 				<Bank Name="Double Bass" MSB="127" LSB="0" />
 				<Bank Name="Echo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -72772,6 +73106,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cavasa" MSB="82" LSB="1" />
 				<Bank Name="Tremolo Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoHi" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Trem" MSB="127" LSB="0" />
 				<Bank Name="Doctor Solo" MSB="127" LSB="7" />
 			</PC>
@@ -72903,6 +73238,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_closehh" MSB="82" LSB="1" />
 				<Bank Name="Pizzicato Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoLo" MSB="85" LSB="3" />
 				<Bank Name="Pizzicato Strings" MSB="127" LSB="0" />
 				<Bank Name="School Daze" MSB="127" LSB="7" />
 			</PC>
@@ -73027,6 +73363,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cowbell" MSB="82" LSB="1" />
 				<Bank Name="Orchestral Harp" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LClaves" MSB="85" LSB="3" />
 				<Bank Name="Orchestral Harp" MSB="127" LSB="0" />
 				<Bank Name="Bell Singer" MSB="127" LSB="7" />
 			</PC>
@@ -73143,6 +73480,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_crash" MSB="82" LSB="1" />
 				<Bank Name="Timpani" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaHi" MSB="85" LSB="3" />
 				<Bank Name="Timpani" MSB="127" LSB="0" />
 				<Bank Name="RX5_Timpani" MSB="127" LSB="2" />
 				<Bank Name="Square Wave MT" MSB="127" LSB="7" />
@@ -73258,6 +73596,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_handclap" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaLo" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Fast" MSB="127" LSB="0" />
 				<Bank Name="Orchestral" MSB="127" LSB="1" />
 				<Bank Name="String Section 1" MSB="127" LSB="7" />
@@ -73374,6 +73713,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiagogo" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaM" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Slow" MSB="127" LSB="0" />
 				<Bank Name="String Section 2" MSB="127" LSB="7" />
 			</PC>
@@ -73505,6 +73845,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hibongo" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCowbell" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 1" MSB="127" LSB="0" />
 				<Bank Name="String Section 3" MSB="127" LSB="7" />
 			</PC>
@@ -73628,6 +73969,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiconga" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 2" MSB="127" LSB="0" />
 				<Bank Name="Pizzicato MT" MSB="127" LSB="7" />
 			</PC>
@@ -73744,6 +74086,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hicuica" MSB="82" LSB="1" />
 				<Bank Name="Choir Aahs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaLo" MSB="85" LSB="3" />
 				<Bank Name="Concert Choir" MSB="127" LSB="0" />
 				<Bank Name="Violin 1" MSB="127" LSB="7" />
 			</PC>
@@ -73859,6 +74202,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitimbaless" MSB="82" LSB="1" />
 				<Bank Name="Voice Oohs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTambourine" MSB="85" LSB="3" />
 				<Bank Name="Voice Oohs" MSB="127" LSB="0" />
 				<Bank Name="Violin 2" MSB="127" LSB="7" />
 			</PC>
@@ -73964,6 +74308,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom" MSB="82" LSB="1" />
 				<Bank Name="Synth Voice" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Voice" MSB="127" LSB="0" />
 				<Bank Name="Cello 1" MSB="127" LSB="7" />
 			</PC>
@@ -74098,6 +74443,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom2" MSB="82" LSB="1" />
 				<Bank Name="Orchestra Hit" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleLo" MSB="85" LSB="3" />
 				<Bank Name="Orchestra Hit" MSB="127" LSB="0" />
 				<Bank Name="Cello 2" MSB="127" LSB="7" />
 			</PC>
@@ -74227,6 +74573,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_loagogo" MSB="82" LSB="1" />
 				<Bank Name="Trumpet" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleL" MSB="85" LSB="3" />
 				<Bank Name="Trumpet" MSB="127" LSB="0" />
 				<Bank Name="SFX" MSB="127" LSB="1" />
 				<Bank Name="RX5_DX_ORCH" MSB="127" LSB="3" />
@@ -74348,6 +74695,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_lobongo" MSB="82" LSB="1" />
 				<Bank Name="Trombone" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleS" MSB="85" LSB="3" />
 				<Bank Name="Trombone" MSB="127" LSB="0" />
 				<Bank Name="Harp 1" MSB="127" LSB="7" />
 			</PC>
@@ -80849,6 +81197,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="PSS_680_bass" MSB="85" LSB="3" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
 				<Bank Name="Bass Drum" MSB="112" LSB="68" />
@@ -80989,6 +81338,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush" MSB="85" LSB="3" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
 				<Bank Name="Hi Conga" MSB="112" LSB="68" />
@@ -81126,6 +81476,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush_hit" MSB="85" LSB="3" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
 				<Bank Name="Snare Drum" MSB="112" LSB="68" />
@@ -81248,6 +81599,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cavasa" MSB="85" LSB="3" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
@@ -81379,6 +81731,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_closehh" MSB="85" LSB="3" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
@@ -81519,6 +81872,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cowbell" MSB="85" LSB="3" />
 				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 				<Bank Name="FM Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 3" MSB="127" LSB="7" />
@@ -81650,6 +82004,7 @@
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
 				<Bank Name="Harpsichord" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_crash" MSB="85" LSB="3" />
 				<Bank Name="Harpsichord" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 4" MSB="127" LSB="7" />
 			</PC>
@@ -81776,6 +82131,7 @@
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
 				<Bank Name="Clavinet" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_handclap" MSB="85" LSB="3" />
 				<Bank Name="Clavinet" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_CLAV" MSB="127" LSB="3" />
 				<Bank Name="Honkytonk" MSB="127" LSB="7" />
@@ -81898,6 +82254,7 @@
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
 				<Bank Name="Celesta" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiagogo" MSB="85" LSB="3" />
 				<Bank Name="Celeste" MSB="127" LSB="0" />
 				<Bank Name="Room" MSB="127" LSB="1" />
 				<Bank Name="RX5_IncludeRom" MSB="127" LSB="4" />
@@ -82026,6 +82383,7 @@
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
 				<Bank Name="Glockenspiel" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hibongo" MSB="85" LSB="3" />
 				<Bank Name="Glockenspiel" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -82163,6 +82521,7 @@
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
 				<Bank Name="Music Box" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiconga" MSB="85" LSB="3" />
 				<Bank Name="Music Box" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -82295,6 +82654,7 @@
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
 				<Bank Name="Vibraphone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hicuica" MSB="85" LSB="3" />
 				<Bank Name="Vibraphone" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 4" MSB="127" LSB="7" />
 			</PC>
@@ -82421,6 +82781,7 @@
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
 				<Bank Name="Marimba" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitimbaless" MSB="85" LSB="3" />
 				<Bank Name="Marimba" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_MARIMBA" MSB="127" LSB="3" />
 				<Bank Name="Pipe Organ 1" MSB="127" LSB="7" />
@@ -82533,6 +82894,7 @@
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
 				<Bank Name="Xylophone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom" MSB="85" LSB="3" />
 				<Bank Name="Xylophone" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -82648,6 +83010,7 @@
 				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom2" MSB="85" LSB="3" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -82783,6 +83146,7 @@
 				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loagogo" MSB="85" LSB="3" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
 				<Bank Name="Accordion MT" MSB="127" LSB="7" />
 			</PC>
@@ -82905,6 +83269,7 @@
 				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lobongo" MSB="85" LSB="3" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
 				<Bank Name="Power" MSB="127" LSB="1" />
 				<Bank Name="RX5_Power" MSB="127" LSB="4" />
@@ -83022,6 +83387,7 @@
 				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loconga" MSB="85" LSB="3" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 2" MSB="127" LSB="7" />
 			</PC>
@@ -83138,6 +83504,7 @@
 				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_locuica" MSB="85" LSB="3" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 3" MSB="127" LSB="7" />
 			</PC>
@@ -83245,6 +83612,7 @@
 				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotimbaless" MSB="85" LSB="3" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 1" MSB="127" LSB="7" />
 			</PC>
@@ -83366,6 +83734,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_fltom" MSB="82" LSB="1" />
 				<Bank Name="Reed Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom" MSB="85" LSB="3" />
 				<Bank Name="Reed Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 2" MSB="127" LSB="7" />
 			</PC>
@@ -83479,6 +83848,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_gate_snare" MSB="82" LSB="1" />
 				<Bank Name="Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom2" MSB="85" LSB="3" />
 				<Bank Name="Accordian" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 3" MSB="127" LSB="7" />
 			</PC>
@@ -83591,6 +83961,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hibass" MSB="82" LSB="1" />
 				<Bank Name="Harmonica" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom" MSB="85" LSB="3" />
 				<Bank Name="Harmonica" MSB="127" LSB="0" />
 				<Bank Name="Celesta 1" MSB="127" LSB="7" />
 			</PC>
@@ -83703,6 +84074,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hisnare" MSB="82" LSB="1" />
 				<Bank Name="Tango Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom2" MSB="85" LSB="3" />
 				<Bank Name="Bandoneon" MSB="127" LSB="0" />
 				<Bank Name="Celesta 2" MSB="127" LSB="7" />
 			</PC>
@@ -83812,6 +84184,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hitom" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (nylon)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_mutetambarine" MSB="85" LSB="3" />
 				<Bank Name="Nylon Guitar" MSB="127" LSB="0" />
 				<Bank Name="Electronic" MSB="127" LSB="1" />
 				<Bank Name="RX5_Electric" MSB="127" LSB="4" />
@@ -83943,6 +84316,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lobass" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (steel)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_openhh" MSB="85" LSB="3" />
 				<Bank Name="Steel Guitar" MSB="127" LSB="0" />
 				<Bank Name="808/909" MSB="127" LSB="1" />
 				<Bank Name="Standart 5" MSB="127" LSB="5" />
@@ -84076,6 +84450,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_losnare" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (jazz)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_ride" MSB="85" LSB="3" />
 				<Bank Name="Jazz Guitar" MSB="127" LSB="0" />
 				<Bank Name="Dance" MSB="127" LSB="1" />
 				<Bank Name="Synth Brass 3 MT" MSB="127" LSB="7" />
@@ -84207,6 +84582,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lotom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (clean)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_rimshot" MSB="85" LSB="3" />
 				<Bank Name="Clean Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Brass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -84319,6 +84695,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_midtom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (muted)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare" MSB="85" LSB="3" />
 				<Bank Name="Muted Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 1 MT" MSB="127" LSB="7" />
 			</PC>
@@ -84430,6 +84807,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_openhh" MSB="82" LSB="1" />
 				<Bank Name="Overdriven Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare2" MSB="85" LSB="3" />
 				<Bank Name="Overdrive Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 2 MT" MSB="127" LSB="7" />
 			</PC>
@@ -84567,6 +84945,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_pedalhh" MSB="82" LSB="1" />
 				<Bank Name="Distortion Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_splash" MSB="85" LSB="3" />
 				<Bank Name="Distortion Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 3 MT" MSB="127" LSB="7" />
 			</PC>
@@ -84691,6 +85070,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rev_bass" MSB="82" LSB="1" />
 				<Bank Name="Guitar Harmonics" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_whistle" MSB="85" LSB="3" />
 				<Bank Name="Guitar Harmonics" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -84810,6 +85190,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_ride_edge" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Clap" MSB="85" LSB="3" />
 				<Bank Name="Acoustic Bass" MSB="127" LSB="0" />
 				<Bank Name="Jazz" MSB="127" LSB="1" />
 				<Bank Name="RX5_Rock" MSB="127" LSB="4" />
@@ -84926,6 +85307,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (finger)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Crash" MSB="85" LSB="3" />
 				<Bank Name="Finger Bass" MSB="127" LSB="0" />
 				<Bank Name="Harmo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -85031,6 +85413,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot2" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (pick)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_C" MSB="85" LSB="3" />
 				<Bank Name="Pick Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Low" MSB="127" LSB="3" />
 				<Bank Name="Chorale" MSB="127" LSB="7" />
@@ -85164,6 +85547,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_splash" MSB="82" LSB="1" />
 				<Bank Name="Fretless Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_O" MSB="85" LSB="3" />
 				<Bank Name="Fretless Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Hi" MSB="127" LSB="3" />
 				<Bank Name="Glasses" MSB="127" LSB="7" />
@@ -85288,6 +85672,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_fltom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_P" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Soundtrack MT" MSB="127" LSB="7" />
 			</PC>
@@ -85404,6 +85789,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_hitom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Kick" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Atmosphere MT" MSB="127" LSB="7" />
 			</PC>
@@ -85521,6 +85907,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_lotom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Ride" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Warm Bell" MSB="127" LSB="7" />
 			</PC>
@@ -85638,6 +86025,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_midtom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Rimshot" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Funny Vox" MSB="127" LSB="7" />
 			</PC>
@@ -85772,6 +86160,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_snare" MSB="82" LSB="1" />
 				<Bank Name="Violin" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare01" MSB="85" LSB="3" />
 				<Bank Name="Violin" MSB="127" LSB="0" />
 				<Bank Name="Brush" MSB="127" LSB="1" />
 				<Bank Name="Echo Bell" MSB="127" LSB="7" />
@@ -85898,6 +86287,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_bass" MSB="82" LSB="1" />
 				<Bank Name="Viola" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare02" MSB="85" LSB="3" />
 				<Bank Name="Viola" MSB="127" LSB="0" />
 				<Bank Name="Ice Rain MT" MSB="127" LSB="7" />
 			</PC>
@@ -86010,6 +86400,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush" MSB="82" LSB="1" />
 				<Bank Name="Cello" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoHi" MSB="85" LSB="3" />
 				<Bank Name="Cello" MSB="127" LSB="0" />
 				<Bank Name="Oboe 2001" MSB="127" LSB="7" />
 			</PC>
@@ -86118,6 +86509,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush_hit" MSB="82" LSB="1" />
 				<Bank Name="Contrabass" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoLo" MSB="85" LSB="3" />
 				<Bank Name="Double Bass" MSB="127" LSB="0" />
 				<Bank Name="Echo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -86223,6 +86615,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cavasa" MSB="82" LSB="1" />
 				<Bank Name="Tremolo Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoHi" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Trem" MSB="127" LSB="0" />
 				<Bank Name="Doctor Solo" MSB="127" LSB="7" />
 			</PC>
@@ -86354,6 +86747,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_closehh" MSB="82" LSB="1" />
 				<Bank Name="Pizzicato Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoLo" MSB="85" LSB="3" />
 				<Bank Name="Pizzicato Strings" MSB="127" LSB="0" />
 				<Bank Name="School Daze" MSB="127" LSB="7" />
 			</PC>
@@ -86478,6 +86872,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cowbell" MSB="82" LSB="1" />
 				<Bank Name="Orchestral Harp" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LClaves" MSB="85" LSB="3" />
 				<Bank Name="Orchestral Harp" MSB="127" LSB="0" />
 				<Bank Name="Bell Singer" MSB="127" LSB="7" />
 			</PC>
@@ -86594,6 +86989,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_crash" MSB="82" LSB="1" />
 				<Bank Name="Timpani" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaHi" MSB="85" LSB="3" />
 				<Bank Name="Timpani" MSB="127" LSB="0" />
 				<Bank Name="RX5_Timpani" MSB="127" LSB="2" />
 				<Bank Name="Square Wave MT" MSB="127" LSB="7" />
@@ -86709,6 +87105,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_handclap" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaLo" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Fast" MSB="127" LSB="0" />
 				<Bank Name="Orchestral" MSB="127" LSB="1" />
 				<Bank Name="String Section 1" MSB="127" LSB="7" />
@@ -86825,6 +87222,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiagogo" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaM" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Slow" MSB="127" LSB="0" />
 				<Bank Name="String Section 2" MSB="127" LSB="7" />
 			</PC>
@@ -86956,6 +87354,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hibongo" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCowbell" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 1" MSB="127" LSB="0" />
 				<Bank Name="String Section 3" MSB="127" LSB="7" />
 			</PC>
@@ -87079,6 +87478,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiconga" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 2" MSB="127" LSB="0" />
 				<Bank Name="Pizzicato MT" MSB="127" LSB="7" />
 			</PC>
@@ -87195,6 +87595,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hicuica" MSB="82" LSB="1" />
 				<Bank Name="Choir Aahs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaLo" MSB="85" LSB="3" />
 				<Bank Name="Concert Choir" MSB="127" LSB="0" />
 				<Bank Name="Violin 1" MSB="127" LSB="7" />
 			</PC>
@@ -87310,6 +87711,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitimbaless" MSB="82" LSB="1" />
 				<Bank Name="Voice Oohs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTambourine" MSB="85" LSB="3" />
 				<Bank Name="Voice Oohs" MSB="127" LSB="0" />
 				<Bank Name="Violin 2" MSB="127" LSB="7" />
 			</PC>
@@ -87415,6 +87817,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom" MSB="82" LSB="1" />
 				<Bank Name="Synth Voice" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Voice" MSB="127" LSB="0" />
 				<Bank Name="Cello 1" MSB="127" LSB="7" />
 			</PC>
@@ -87549,6 +87952,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom2" MSB="82" LSB="1" />
 				<Bank Name="Orchestra Hit" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleLo" MSB="85" LSB="3" />
 				<Bank Name="Orchestra Hit" MSB="127" LSB="0" />
 				<Bank Name="Cello 2" MSB="127" LSB="7" />
 			</PC>
@@ -87678,6 +88082,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_loagogo" MSB="82" LSB="1" />
 				<Bank Name="Trumpet" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleL" MSB="85" LSB="3" />
 				<Bank Name="Trumpet" MSB="127" LSB="0" />
 				<Bank Name="SFX" MSB="127" LSB="1" />
 				<Bank Name="RX5_DX_ORCH" MSB="127" LSB="3" />
@@ -87799,6 +88204,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_lobongo" MSB="82" LSB="1" />
 				<Bank Name="Trombone" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleS" MSB="85" LSB="3" />
 				<Bank Name="Trombone" MSB="127" LSB="0" />
 				<Bank Name="Harp 1" MSB="127" LSB="7" />
 			</PC>
@@ -94300,6 +94706,7 @@
 				<Bank Name="PSS_560_PSS_560_AgogoHi" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Grand Piano" MSB="84" LSB="0" />
 				<Bank Name="GM Drum Kit (ws&gt;=128)" MSB="84" LSB="1" />
+				<Bank Name="PSS_680_bass" MSB="85" LSB="3" />
 				<Bank Name="Bass Drum" MSB="112" LSB="17" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="40" />
 				<Bank Name="Bass Drum" MSB="112" LSB="68" />
@@ -94440,6 +94847,7 @@
 				<Bank Name="BrightOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_AgogoLow" MSB="82" LSB="1" />
 				<Bank Name="Bright Acoustic Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush" MSB="85" LSB="3" />
 				<Bank Name="Snare Drum" MSB="112" LSB="17" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="40" />
 				<Bank Name="Hi Conga" MSB="112" LSB="68" />
@@ -94577,6 +94985,7 @@
 				<Bank Name="CinematicHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_BassDrum" MSB="82" LSB="1" />
 				<Bank Name="Electric Grand Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_brush_hit" MSB="85" LSB="3" />
 				<Bank Name="Top Cymbal" MSB="112" LSB="17" />
 				<Bank Name="Tom" MSB="112" LSB="40" />
 				<Bank Name="Snare Drum" MSB="112" LSB="68" />
@@ -94699,6 +95108,7 @@
 				<Bank Name="ExplosionHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Bongo" MSB="82" LSB="1" />
 				<Bank Name="Honky-tonk Piano" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cavasa" MSB="85" LSB="3" />
 				<Bank Name="Hi-Hat" MSB="112" LSB="17" />
 				<Bank Name="Snare Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Open" MSB="112" LSB="68" />
@@ -94830,6 +95240,7 @@
 				<Bank Name="HiPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cavasa" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 1" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_closehh" MSB="85" LSB="3" />
 				<Bank Name="Tom" MSB="112" LSB="17" />
 				<Bank Name="Bass Drum" MSB="112" LSB="40" />
 				<Bank Name="Hi-Hat Close" MSB="112" LSB="68" />
@@ -94970,6 +95381,7 @@
 				<Bank Name="LoPitchOrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Claves" MSB="82" LSB="1" />
 				<Bank Name="Electric Piano 2" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_cowbell" MSB="85" LSB="3" />
 				<Bank Name="Rim Shot" MSB="112" LSB="17" />
 				<Bank Name="FM Electric Piano" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 3" MSB="127" LSB="7" />
@@ -95101,6 +95513,7 @@
 				<Bank Name="OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CloseHH" MSB="82" LSB="1" />
 				<Bank Name="Harpsichord" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_crash" MSB="85" LSB="3" />
 				<Bank Name="Harpsichord" MSB="127" LSB="0" />
 				<Bank Name="Elec Piano 4" MSB="127" LSB="7" />
 			</PC>
@@ -95227,6 +95640,7 @@
 				<Bank Name="PSR_38_ORCHESTRA_HIT" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaHi" MSB="82" LSB="1" />
 				<Bank Name="Clavinet" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_handclap" MSB="85" LSB="3" />
 				<Bank Name="Clavinet" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_CLAV" MSB="127" LSB="3" />
 				<Bank Name="Honkytonk" MSB="127" LSB="7" />
@@ -95349,6 +95763,7 @@
 				<Bank Name="PSS_590_OrchestraHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_CongaLow" MSB="82" LSB="1" />
 				<Bank Name="Celesta" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiagogo" MSB="85" LSB="3" />
 				<Bank Name="Celeste" MSB="127" LSB="0" />
 				<Bank Name="Room" MSB="127" LSB="1" />
 				<Bank Name="RX5_IncludeRom" MSB="127" LSB="4" />
@@ -95477,6 +95892,7 @@
 				<Bank Name="TenseStringHit" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_Cymbal" MSB="82" LSB="1" />
 				<Bank Name="Glockenspiel" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hibongo" MSB="85" LSB="3" />
 				<Bank Name="Glockenspiel" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -95614,6 +96030,7 @@
 				<Bank Name="WarmOrchestraHit_C" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_HandClap" MSB="82" LSB="1" />
 				<Bank Name="Music Box" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hiconga" MSB="85" LSB="3" />
 				<Bank Name="Music Box" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -95746,6 +96163,7 @@
 				<Bank Name="MassiveTimpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_OpenHH" MSB="82" LSB="1" />
 				<Bank Name="Vibraphone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hicuica" MSB="85" LSB="3" />
 				<Bank Name="Vibraphone" MSB="127" LSB="0" />
 				<Bank Name="Elec Organ 4" MSB="127" LSB="7" />
 			</PC>
@@ -95872,6 +96290,7 @@
 				<Bank Name="PSR_38_TIMPANI" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_RimShot" MSB="82" LSB="1" />
 				<Bank Name="Marimba" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitimbaless" MSB="85" LSB="3" />
 				<Bank Name="Marimba" MSB="127" LSB="0" />
 				<Bank Name="RX5_DX_MARIMBA" MSB="127" LSB="3" />
 				<Bank Name="Pipe Organ 1" MSB="127" LSB="7" />
@@ -95984,6 +96403,7 @@
 				<Bank Name="PSS_590_Timpani" MSB="81" LSB="2" />
 				<Bank Name="PSS_560_PSS_560_SnareDrum" MSB="82" LSB="1" />
 				<Bank Name="Xylophone" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom" MSB="85" LSB="3" />
 				<Bank Name="Xylophone" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 2" MSB="127" LSB="7" />
 			</PC>
@@ -96099,6 +96519,7 @@
 				<Bank Name="Pf.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom1" MSB="82" LSB="1" />
 				<Bank Name="Tubular Bells" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_hitom2" MSB="85" LSB="3" />
 				<Bank Name="Tubular Bells" MSB="127" LSB="0" />
 				<Bank Name="Pipe Organ 3" MSB="127" LSB="7" />
 			</PC>
@@ -96234,6 +96655,7 @@
 				<Bank Name="Pf.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom2" MSB="82" LSB="1" />
 				<Bank Name="Dulcimer" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loagogo" MSB="85" LSB="3" />
 				<Bank Name="Dulcimer" MSB="127" LSB="0" />
 				<Bank Name="Accordion MT" MSB="127" LSB="7" />
 			</PC>
@@ -96356,6 +96778,7 @@
 				<Bank Name="Hc.Percussive" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom3" MSB="82" LSB="1" />
 				<Bank Name="Drawbar Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lobongo" MSB="85" LSB="3" />
 				<Bank Name="Tonewheel Organ" MSB="127" LSB="0" />
 				<Bank Name="Power" MSB="127" LSB="1" />
 				<Bank Name="RX5_Power" MSB="127" LSB="4" />
@@ -96473,6 +96896,7 @@
 				<Bank Name="Hc.Wind" MSB="68" LSB="0" />
 				<Bank Name="PSS_560_PSS_560_Tom4" MSB="82" LSB="1" />
 				<Bank Name="Percussive Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_loconga" MSB="85" LSB="3" />
 				<Bank Name="Percussive Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 2" MSB="127" LSB="7" />
 			</PC>
@@ -96589,6 +97013,7 @@
 				<Bank Name="Hc.Sustain" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_closehh" MSB="82" LSB="1" />
 				<Bank Name="Rock Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_locuica" MSB="85" LSB="3" />
 				<Bank Name="Rock Organ" MSB="127" LSB="0" />
 				<Bank Name="Harpsichord 3" MSB="127" LSB="7" />
 			</PC>
@@ -96696,6 +97121,7 @@
 				<Bank Name="Hc.Plateau" MSB="68" LSB="0" />
 				<Bank Name="PSS_590_crash" MSB="82" LSB="1" />
 				<Bank Name="Church Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotimbaless" MSB="85" LSB="3" />
 				<Bank Name="Pipe Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 1" MSB="127" LSB="7" />
 			</PC>
@@ -96817,6 +97243,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_fltom" MSB="82" LSB="1" />
 				<Bank Name="Reed Organ" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom" MSB="85" LSB="3" />
 				<Bank Name="Reed Organ" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 2" MSB="127" LSB="7" />
 			</PC>
@@ -96930,6 +97357,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_gate_snare" MSB="82" LSB="1" />
 				<Bank Name="Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_lotom2" MSB="85" LSB="3" />
 				<Bank Name="Accordian" MSB="127" LSB="0" />
 				<Bank Name="Clavinet 3" MSB="127" LSB="7" />
 			</PC>
@@ -97042,6 +97470,7 @@
 				<Bank Name="[SCC] Triangle [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hibass" MSB="82" LSB="1" />
 				<Bank Name="Harmonica" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom" MSB="85" LSB="3" />
 				<Bank Name="Harmonica" MSB="127" LSB="0" />
 				<Bank Name="Celesta 1" MSB="127" LSB="7" />
 			</PC>
@@ -97154,6 +97583,7 @@
 				<Bank Name="[SCC] Triangle [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hisnare" MSB="82" LSB="1" />
 				<Bank Name="Tango Accordion" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_midtom2" MSB="85" LSB="3" />
 				<Bank Name="Bandoneon" MSB="127" LSB="0" />
 				<Bank Name="Celesta 2" MSB="127" LSB="7" />
 			</PC>
@@ -97263,6 +97693,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_hitom" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (nylon)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_mutetambarine" MSB="85" LSB="3" />
 				<Bank Name="Nylon Guitar" MSB="127" LSB="0" />
 				<Bank Name="Electronic" MSB="127" LSB="1" />
 				<Bank Name="RX5_Electric" MSB="127" LSB="4" />
@@ -97394,6 +97825,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lobass" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Guitar (steel)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_openhh" MSB="85" LSB="3" />
 				<Bank Name="Steel Guitar" MSB="127" LSB="0" />
 				<Bank Name="808/909" MSB="127" LSB="1" />
 				<Bank Name="Standart 5" MSB="127" LSB="5" />
@@ -97527,6 +97959,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_losnare" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (jazz)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_ride" MSB="85" LSB="3" />
 				<Bank Name="Jazz Guitar" MSB="127" LSB="0" />
 				<Bank Name="Dance" MSB="127" LSB="1" />
 				<Bank Name="Synth Brass 3 MT" MSB="127" LSB="7" />
@@ -97658,6 +98091,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_lotom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (clean)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_rimshot" MSB="85" LSB="3" />
 				<Bank Name="Clean Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Brass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -97770,6 +98204,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_midtom" MSB="82" LSB="1" />
 				<Bank Name="Electric Guitar (muted)" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare" MSB="85" LSB="3" />
 				<Bank Name="Muted Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 1 MT" MSB="127" LSB="7" />
 			</PC>
@@ -97881,6 +98316,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_openhh" MSB="82" LSB="1" />
 				<Bank Name="Overdriven Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_snare2" MSB="85" LSB="3" />
 				<Bank Name="Overdrive Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 2 MT" MSB="127" LSB="7" />
 			</PC>
@@ -98018,6 +98454,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_pedalhh" MSB="82" LSB="1" />
 				<Bank Name="Distortion Guitar" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_splash" MSB="85" LSB="3" />
 				<Bank Name="Distortion Guitar" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 3 MT" MSB="127" LSB="7" />
 			</PC>
@@ -98142,6 +98579,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rev_bass" MSB="82" LSB="1" />
 				<Bank Name="Guitar Harmonics" MSB="84" LSB="0" />
+				<Bank Name="PSS_680_whistle" MSB="85" LSB="3" />
 				<Bank Name="Guitar Harmonics" MSB="127" LSB="0" />
 				<Bank Name="Synth Bass 4 MT" MSB="127" LSB="7" />
 			</PC>
@@ -98261,6 +98699,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_ride_edge" MSB="82" LSB="1" />
 				<Bank Name="Acoustic Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Clap" MSB="85" LSB="3" />
 				<Bank Name="Acoustic Bass" MSB="127" LSB="0" />
 				<Bank Name="Jazz" MSB="127" LSB="1" />
 				<Bank Name="RX5_Rock" MSB="127" LSB="4" />
@@ -98377,6 +98816,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (finger)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Crash" MSB="85" LSB="3" />
 				<Bank Name="Finger Bass" MSB="127" LSB="0" />
 				<Bank Name="Harmo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -98482,6 +98922,7 @@
 				<Bank Name="[SCC] Downsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_rimshot2" MSB="82" LSB="1" />
 				<Bank Name="Electric Bass (pick)" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_C" MSB="85" LSB="3" />
 				<Bank Name="Pick Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Low" MSB="127" LSB="3" />
 				<Bank Name="Chorale" MSB="127" LSB="7" />
@@ -98615,6 +99056,7 @@
 				<Bank Name="[SCC] Downsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_splash" MSB="82" LSB="1" />
 				<Bank Name="Fretless Bass" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_O" MSB="85" LSB="3" />
 				<Bank Name="Fretless Bass" MSB="127" LSB="0" />
 				<Bank Name="RX5_EBass_Hi" MSB="127" LSB="3" />
 				<Bank Name="Glasses" MSB="127" LSB="7" />
@@ -98739,6 +99181,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_fltom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Hat_P" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Soundtrack MT" MSB="127" LSB="7" />
 			</PC>
@@ -98855,6 +99298,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_hitom" MSB="82" LSB="1" />
 				<Bank Name="Slap Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Kick" MSB="85" LSB="3" />
 				<Bank Name="Slap Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Atmosphere MT" MSB="127" LSB="7" />
 			</PC>
@@ -98972,6 +99416,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_lotom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 1" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Ride" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 1" MSB="127" LSB="0" />
 				<Bank Name="Warm Bell" MSB="127" LSB="7" />
 			</PC>
@@ -99089,6 +99534,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_midtom" MSB="82" LSB="1" />
 				<Bank Name="Synth Bass 2" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Rimshot" MSB="85" LSB="3" />
 				<Bank Name="Synth Bass 2" MSB="127" LSB="0" />
 				<Bank Name="Funny Vox" MSB="127" LSB="7" />
 			</PC>
@@ -99223,6 +99669,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_590_syn_snare" MSB="82" LSB="1" />
 				<Bank Name="Violin" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare01" MSB="85" LSB="3" />
 				<Bank Name="Violin" MSB="127" LSB="0" />
 				<Bank Name="Brush" MSB="127" LSB="1" />
 				<Bank Name="Echo Bell" MSB="127" LSB="7" />
@@ -99349,6 +99796,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_bass" MSB="82" LSB="1" />
 				<Bank Name="Viola" MSB="84" LSB="0" />
+				<Bank Name="RX11_RX11Snare02" MSB="85" LSB="3" />
 				<Bank Name="Viola" MSB="127" LSB="0" />
 				<Bank Name="Ice Rain MT" MSB="127" LSB="7" />
 			</PC>
@@ -99461,6 +99909,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush" MSB="82" LSB="1" />
 				<Bank Name="Cello" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoHi" MSB="85" LSB="3" />
 				<Bank Name="Cello" MSB="127" LSB="0" />
 				<Bank Name="Oboe 2001" MSB="127" LSB="7" />
 			</PC>
@@ -99569,6 +100018,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_brush_hit" MSB="82" LSB="1" />
 				<Bank Name="Contrabass" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LAgogoLo" MSB="85" LSB="3" />
 				<Bank Name="Double Bass" MSB="127" LSB="0" />
 				<Bank Name="Echo Pan" MSB="127" LSB="7" />
 			</PC>
@@ -99674,6 +100124,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cavasa" MSB="82" LSB="1" />
 				<Bank Name="Tremolo Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoHi" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Trem" MSB="127" LSB="0" />
 				<Bank Name="Doctor Solo" MSB="127" LSB="7" />
 			</PC>
@@ -99805,6 +100256,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_closehh" MSB="82" LSB="1" />
 				<Bank Name="Pizzicato Strings" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LBongoLo" MSB="85" LSB="3" />
 				<Bank Name="Pizzicato Strings" MSB="127" LSB="0" />
 				<Bank Name="School Daze" MSB="127" LSB="7" />
 			</PC>
@@ -99929,6 +100381,7 @@
 				<Bank Name="[SCC] Upsaw [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_cowbell" MSB="82" LSB="1" />
 				<Bank Name="Orchestral Harp" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LClaves" MSB="85" LSB="3" />
 				<Bank Name="Orchestral Harp" MSB="127" LSB="0" />
 				<Bank Name="Bell Singer" MSB="127" LSB="7" />
 			</PC>
@@ -100045,6 +100498,7 @@
 				<Bank Name="[SCC] Upsaw [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_crash" MSB="82" LSB="1" />
 				<Bank Name="Timpani" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaHi" MSB="85" LSB="3" />
 				<Bank Name="Timpani" MSB="127" LSB="0" />
 				<Bank Name="RX5_Timpani" MSB="127" LSB="2" />
 				<Bank Name="Square Wave MT" MSB="127" LSB="7" />
@@ -100160,6 +100614,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_handclap" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaLo" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Fast" MSB="127" LSB="0" />
 				<Bank Name="Orchestral" MSB="127" LSB="1" />
 				<Bank Name="String Section 1" MSB="127" LSB="7" />
@@ -100276,6 +100731,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiagogo" MSB="82" LSB="1" />
 				<Bank Name="String Ensemble 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCongaM" MSB="85" LSB="3" />
 				<Bank Name="Stereo Strings Slow" MSB="127" LSB="0" />
 				<Bank Name="String Section 2" MSB="127" LSB="7" />
 			</PC>
@@ -100407,6 +100863,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hibongo" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 1" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCowbell" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 1" MSB="127" LSB="0" />
 				<Bank Name="String Section 3" MSB="127" LSB="7" />
 			</PC>
@@ -100530,6 +100987,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hiconga" MSB="82" LSB="1" />
 				<Bank Name="Synth Strings 2" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Strings 2" MSB="127" LSB="0" />
 				<Bank Name="Pizzicato MT" MSB="127" LSB="7" />
 			</PC>
@@ -100646,6 +101104,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hicuica" MSB="82" LSB="1" />
 				<Bank Name="Choir Aahs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LCuicaLo" MSB="85" LSB="3" />
 				<Bank Name="Concert Choir" MSB="127" LSB="0" />
 				<Bank Name="Violin 1" MSB="127" LSB="7" />
 			</PC>
@@ -100761,6 +101220,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitimbaless" MSB="82" LSB="1" />
 				<Bank Name="Voice Oohs" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTambourine" MSB="85" LSB="3" />
 				<Bank Name="Voice Oohs" MSB="127" LSB="0" />
 				<Bank Name="Violin 2" MSB="127" LSB="7" />
 			</PC>
@@ -100866,6 +101326,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom" MSB="82" LSB="1" />
 				<Bank Name="Synth Voice" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleHi" MSB="85" LSB="3" />
 				<Bank Name="Synth Voice" MSB="127" LSB="0" />
 				<Bank Name="Cello 1" MSB="127" LSB="7" />
 			</PC>
@@ -101000,6 +101461,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_hitom2" MSB="82" LSB="1" />
 				<Bank Name="Orchestra Hit" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LTimbaleLo" MSB="85" LSB="3" />
 				<Bank Name="Orchestra Hit" MSB="127" LSB="0" />
 				<Bank Name="Cello 2" MSB="127" LSB="7" />
 			</PC>
@@ -101129,6 +101591,7 @@
 				<Bank Name="[SCC] Sinewave [0:4]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_loagogo" MSB="82" LSB="1" />
 				<Bank Name="Trumpet" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleL" MSB="85" LSB="3" />
 				<Bank Name="Trumpet" MSB="127" LSB="0" />
 				<Bank Name="SFX" MSB="127" LSB="1" />
 				<Bank Name="RX5_DX_ORCH" MSB="127" LSB="3" />
@@ -101250,6 +101713,7 @@
 				<Bank Name="[SCC] Sinewave [0:6]" MSB="64" LSB="3" />
 				<Bank Name="PSS_680_lobongo" MSB="82" LSB="1" />
 				<Bank Name="Trombone" MSB="84" LSB="0" />
+				<Bank Name="RX21L_RX21LWhistleS" MSB="85" LSB="3" />
 				<Bank Name="Trombone" MSB="127" LSB="0" />
 				<Bank Name="Harp 1" MSB="127" LSB="7" />
 			</PC>
@@ -108658,6 +109122,78 @@
 					<Tone Name="Ride Cymbal 2" Key="59" />
 				</Bank>
 			</PC>
+			<PC Name="PSS-680 GM Drum Kit (SSGS)" PC="26">
+				<Bank Name="PSS-680 GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
+			<PC Name="RX11/21L GM Drum Kit (SSGS)" PC="27">
+				<Bank Name="RX11/21L GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
 				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
@@ -109804,6 +110340,78 @@
 					<Tone Name="Splash Cymbal" Key="55" />
 					<Tone Name="Crash Cymbal 2" Key="57" />
 					<Tone Name="Ride Cymbal 2" Key="59" />
+				</Bank>
+			</PC>
+			<PC Name="PSS-680 GM Drum Kit (SSGS)" PC="26">
+				<Bank Name="PSS-680 GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
+			<PC Name="RX11/21L GM Drum Kit (SSGS)" PC="27">
+				<Bank Name="RX11/21L GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
@@ -110954,6 +111562,78 @@
 					<Tone Name="Ride Cymbal 2" Key="59" />
 				</Bank>
 			</PC>
+			<PC Name="PSS-680 GM Drum Kit (SSGS)" PC="26">
+				<Bank Name="PSS-680 GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
+			<PC Name="RX11/21L GM Drum Kit (SSGS)" PC="27">
+				<Bank Name="RX11/21L GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
 				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
@@ -112100,6 +112780,78 @@
 					<Tone Name="Splash Cymbal" Key="55" />
 					<Tone Name="Crash Cymbal 2" Key="57" />
 					<Tone Name="Ride Cymbal 2" Key="59" />
+				</Bank>
+			</PC>
+			<PC Name="PSS-680 GM Drum Kit (SSGS)" PC="26">
+				<Bank Name="PSS-680 GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
+			<PC Name="RX11/21L GM Drum Kit (SSGS)" PC="27">
+				<Bank Name="RX11/21L GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
@@ -113250,6 +114002,78 @@
 					<Tone Name="Ride Cymbal 2" Key="59" />
 				</Bank>
 			</PC>
+			<PC Name="PSS-680 GM Drum Kit (SSGS)" PC="26">
+				<Bank Name="PSS-680 GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
+			<PC Name="RX11/21L GM Drum Kit (SSGS)" PC="27">
+				<Bank Name="RX11/21L GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
 				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
@@ -114396,6 +115220,78 @@
 					<Tone Name="Splash Cymbal" Key="55" />
 					<Tone Name="Crash Cymbal 2" Key="57" />
 					<Tone Name="Ride Cymbal 2" Key="59" />
+				</Bank>
+			</PC>
+			<PC Name="PSS-680 GM Drum Kit (SSGS)" PC="26">
+				<Bank Name="PSS-680 GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
+			<PC Name="RX11/21L GM Drum Kit (SSGS)" PC="27">
+				<Bank Name="RX11/21L GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
@@ -115546,6 +116442,78 @@
 					<Tone Name="Ride Cymbal 2" Key="59" />
 				</Bank>
 			</PC>
+			<PC Name="PSS-680 GM Drum Kit (SSGS)" PC="26">
+				<Bank Name="PSS-680 GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
+			<PC Name="RX11/21L GM Drum Kit (SSGS)" PC="27">
+				<Bank Name="RX11/21L GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">
 				<Bank Name="PSS-680 Brush Kit (OPNB)" MSB="120" LSB="0">
 					<Tone Name="Acoustic Bass Drum" Key="35" />
@@ -116692,6 +117660,78 @@
 					<Tone Name="Splash Cymbal" Key="55" />
 					<Tone Name="Crash Cymbal 2" Key="57" />
 					<Tone Name="Ride Cymbal 2" Key="59" />
+				</Bank>
+			</PC>
+			<PC Name="PSS-680 GM Drum Kit (SSGS)" PC="26">
+				<Bank Name="PSS-680 GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Low Floor Tom" Key="41" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="High Floor Tom" Key="43" />
+					<Tone Name="Low Tom" Key="45" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Low-Mid Tom" Key="47" />
+					<Tone Name="Hi-Mid Tom" Key="48" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="High Tom" Key="50" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Splash Cymbal" Key="55" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Cabasa" Key="69" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
+				</Bank>
+			</PC>
+			<PC Name="RX11/21L GM Drum Kit (SSGS)" PC="27">
+				<Bank Name="RX11/21L GM Drum Kit (SSGS)" MSB="120" LSB="0">
+					<Tone Name="Acoustic Bass Drum" Key="35" />
+					<Tone Name="Bass Drum 1" Key="36" />
+					<Tone Name="Side Stick" Key="37" />
+					<Tone Name="Acoustic Snare" Key="38" />
+					<Tone Name="Hand Clap" Key="39" />
+					<Tone Name="Electric Snare" Key="40" />
+					<Tone Name="Closed Hi-Hat" Key="42" />
+					<Tone Name="Pedal Hi-Hat" Key="44" />
+					<Tone Name="Open Hi-Hat" Key="46" />
+					<Tone Name="Crash Cymbal 1" Key="49" />
+					<Tone Name="Ride Cymbal 1" Key="51" />
+					<Tone Name="Tambourine" Key="54" />
+					<Tone Name="Cowbell" Key="56" />
+					<Tone Name="Crash Cymbal 2" Key="57" />
+					<Tone Name="Ride Cymbal 2" Key="59" />
+					<Tone Name="Hi Bongo" Key="60" />
+					<Tone Name="Low Bongo" Key="61" />
+					<Tone Name="Mute Hi Conga" Key="62" />
+					<Tone Name="Open Hi Conga" Key="63" />
+					<Tone Name="Low Conga" Key="64" />
+					<Tone Name="High Timbale" Key="65" />
+					<Tone Name="Low Timbale" Key="66" />
+					<Tone Name="High Agogo" Key="67" />
+					<Tone Name="Low Agogo" Key="68" />
+					<Tone Name="Short Whistle" Key="71" />
+					<Tone Name="Long Whistle" Key="72" />
+					<Tone Name="Claves" Key="75" />
+					<Tone Name="Mute Cuica" Key="78" />
+					<Tone Name="Open Cuica" Key="79" />
 				</Bank>
 			</PC>
 			<PC Name="PSS-680 Brush Kit (OPNB)" PC="41">

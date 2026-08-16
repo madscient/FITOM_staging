@@ -30,6 +30,8 @@ Change)で以下のキットを選択します(CC#0=112は内蔵リズム音源�
 | 21 | [PSS-560 GM Drum Kit](#prog21-pss-560-gm-drum-kit) |
 | 22 | [RX5 Extra Kit](#prog22-rx5-extra-kit) |
 | 24 | [PSS-590 Electronic Kit](#prog24-pss-590-electronic-kit) |
+| 25 | [PSS-680 GM Drum Kit (SSGS)](#prog25-pss-680-gm-drum-kit-ssgs) |
+| 26 | [RX11/21L GM Drum Kit (SSGS)](#prog26-rx1121l-gm-drum-kit-ssgs) |
 | 40 | [PSS-680 Brush Kit](#prog40-pss-680-brush-kit) |
 
 ## ノートマップ
@@ -1076,6 +1078,80 @@ DSGの内蔵リズムは**5音のみ**(BD/HC/SDN/HHO/HHD)です。打楽器の
 | 55 | Splash Cymbal | ADPCMA | 1/35 | 55 |
 | 57 | Crash Cymbal 2 | ADPCMA | 1/19 | 57 |
 | 59 | Ride Cymbal 2 | ADPCMA | 1/32 | 59 |
+
+### Prog=25: PSS-680 GM Drum Kit (SSGS)
+
+| MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
+|---|---|---|---|---|
+| 35 | Acoustic Bass Drum | SSGS_ADPCM | 3/0 | 35 |
+| 36 | Bass Drum 1 | SSGS_ADPCM | 3/0 | 36 |
+| 37 | Side Stick | SSGS_ADPCM | 3/27 | 37 |
+| 38 | Acoustic Snare | SSGS_ADPCM | 3/28 | 38 |
+| 39 | Hand Clap | SSGS_ADPCM | 3/7 | 39 |
+| 40 | Electric Snare | SSGS_ADPCM | 3/29 | 40 |
+| 41 | Low Floor Tom | SSGS_ADPCM | 3/21 | 41 |
+| 42 | Closed Hi-Hat | SSGS_ADPCM | 3/4 | 42 |
+| 43 | High Floor Tom | SSGS_ADPCM | 3/14 | 43 |
+| 45 | Low Tom | SSGS_ADPCM | 3/20 | 45 |
+| 46 | Open Hi-Hat | SSGS_ADPCM | 3/25 | 46 |
+| 47 | Low-Mid Tom | SSGS_ADPCM | 3/23 | 47 |
+| 48 | Hi-Mid Tom | SSGS_ADPCM | 3/22 | 48 |
+| 49 | Crash Cymbal 1 | SSGS_ADPCM | 3/6 | 49 |
+| 50 | High Tom | SSGS_ADPCM | 3/13 | 50 |
+| 51 | Ride Cymbal 1 | SSGS_ADPCM | 3/26 | 51 |
+| 54 | Tambourine | SSGS_ADPCM | 3/24 | 54 |
+| 55 | Splash Cymbal | SSGS_ADPCM | 3/30 | 55 |
+| 56 | Cowbell | SSGS_ADPCM | 3/5 | 56 |
+| 57 | Crash Cymbal 2 | SSGS_ADPCM | 3/6 | 57 |
+| 59 | Ride Cymbal 2 | SSGS_ADPCM | 3/26 | 59 |
+| 60 | Hi Bongo | SSGS_ADPCM | 3/9 | 60 |
+| 61 | Low Bongo | SSGS_ADPCM | 3/16 | 61 |
+| 62 | Mute Hi Conga | SSGS_ADPCM | 3/10 | 62 |
+| 63 | Open Hi Conga | SSGS_ADPCM | 3/10 | 63 |
+| 64 | Low Conga | SSGS_ADPCM | 3/17 | 64 |
+| 65 | High Timbale | SSGS_ADPCM | 3/12 | 65 |
+| 66 | Low Timbale | SSGS_ADPCM | 3/19 | 66 |
+| 67 | High Agogo | SSGS_ADPCM | 3/8 | 67 |
+| 68 | Low Agogo | SSGS_ADPCM | 3/15 | 68 |
+| 69 | Cabasa | SSGS_ADPCM | 3/3 | 69 |
+| 71 | Short Whistle | SSGS_ADPCM | 3/31 | 71 |
+| 72 | Long Whistle | SSGS_ADPCM | 3/31 | 72 |
+| 78 | Mute Cuica | SSGS_ADPCM | 3/18 | 78 |
+| 79 | Open Cuica | SSGS_ADPCM | 3/11 | 79 |
+
+### Prog=26: RX11/21L GM Drum Kit (SSGS)
+
+| MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
+|---|---|---|---|---|
+| 35 | Acoustic Bass Drum | SSGS_ADPCM | 3/37 | 35 |
+| 36 | Bass Drum 1 | SSGS_ADPCM | 3/37 | 36 |
+| 37 | Side Stick | SSGS_ADPCM | 3/39 | 37 |
+| 38 | Acoustic Snare | SSGS_ADPCM | 3/40 | 38 |
+| 39 | Hand Clap | SSGS_ADPCM | 3/32 | 39 |
+| 40 | Electric Snare | SSGS_ADPCM | 3/41 | 40 |
+| 42 | Closed Hi-Hat | SSGS_ADPCM | 3/34 | 42 |
+| 44 | Pedal Hi-Hat | SSGS_ADPCM | 3/36 | 44 |
+| 46 | Open Hi-Hat | SSGS_ADPCM | 3/35 | 46 |
+| 49 | Crash Cymbal 1 | SSGS_ADPCM | 3/33 | 49 |
+| 51 | Ride Cymbal 1 | SSGS_ADPCM | 3/38 | 51 |
+| 54 | Tambourine | SSGS_ADPCM | 3/53 | 54 |
+| 56 | Cowbell | SSGS_ADPCM | 3/50 | 56 |
+| 57 | Crash Cymbal 2 | SSGS_ADPCM | 3/33 | 57 |
+| 59 | Ride Cymbal 2 | SSGS_ADPCM | 3/38 | 59 |
+| 60 | Hi Bongo | SSGS_ADPCM | 3/44 | 60 |
+| 61 | Low Bongo | SSGS_ADPCM | 3/45 | 61 |
+| 62 | Mute Hi Conga | SSGS_ADPCM | 3/47 | 62 |
+| 63 | Open Hi Conga | SSGS_ADPCM | 3/49 | 63 |
+| 64 | Low Conga | SSGS_ADPCM | 3/48 | 64 |
+| 65 | High Timbale | SSGS_ADPCM | 3/54 | 65 |
+| 66 | Low Timbale | SSGS_ADPCM | 3/55 | 66 |
+| 67 | High Agogo | SSGS_ADPCM | 3/42 | 67 |
+| 68 | Low Agogo | SSGS_ADPCM | 3/43 | 68 |
+| 71 | Short Whistle | SSGS_ADPCM | 3/57 | 71 |
+| 72 | Long Whistle | SSGS_ADPCM | 3/56 | 72 |
+| 75 | Claves | SSGS_ADPCM | 3/46 | 75 |
+| 78 | Mute Cuica | SSGS_ADPCM | 3/52 | 78 |
+| 79 | Open Cuica | SSGS_ADPCM | 3/51 | 79 |
 
 ### Prog=40: PSS-680 Brush Kit
 

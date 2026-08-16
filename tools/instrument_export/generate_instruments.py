@@ -114,6 +114,7 @@ GROUP_CC0_HW = {
 GROUP_CC0_PCM = {
     "ADPCMB": 81,
     "ADPCMA": 82,
+    "SSGS_ADPCM": 85,  # VOICE_PATCH_SSGS_ADPCM (YMZ705/YMZ732)
 }
 CC0_NORMAL = 0        # patch_banks[] (通常モード)
 CC0_DRUM_KIT = 120    # drum_banks[] (通常ドラムキット、GM2 Percussion Bank相当)

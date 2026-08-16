@@ -69,7 +69,7 @@ python3 generate_instruments.py --out-dir /path/to/out
 |---|---|---|---|---|
 | `patch_banks[]` | 0(通常モード) | `bank` | `patches[].prog` | `*.patchbank.json` |
 | `hw_banks[]` | `group`から決定(下表) | `bank` | `patches[].prog` | `*.hwbank.json` / `*.samplezonebank.json`(AWM) |
-| `pcm_banks[]` | `group`から決定(ADPCMB=81/ADPCMA=82) | `bank` | `entries[].entry_no`(またはインデックス) | `*.pcmbank.json` |
+| `pcm_banks[]` | `group`から決定(ADPCMB=81/ADPCMA=82/SSGS_ADPCM=85) | `bank` | `entries[].entry_no`(またはインデックス) | `*.pcmbank.json` |
 | `drum_banks[]` | 120(ドラムキット、GM2 Percussion Bank相当) | 0固定 | `drum_banks[].prog`(キット選択) | `*.drumkit.json` |
 | `sf2_banks[]` | 127(便宜的に割当。CC#0規約上の空き値) | `bank` | SF2ファイル内`preset`番号 | `*.sf2`(RIFF/SoundFont2) |
 
@@ -105,7 +105,7 @@ FITOMdefine.h`のVOICE_PATCH_*定数、2026年8月11日確認):
 | `SSG` | 64 | EPSG/DCSG/SAA/SCCも同じCC#0を共有(パッチ名の`[EPSG]`等プレフィックスで区別) |
 | `AWM` | 84 | `*.samplezonebank.json` |
 
-`pcm_banks[]`(ADPCMB/ADPCMA)は`*.pcmbank.json`が`entries[]`を直接持つ場合と
+`pcm_banks[]`(ADPCMB/ADPCMA/SSGS_ADPCM)は`*.pcmbank.json`が`entries[]`を直接持つ場合と
 `adpcm_json`で外部JSONを参照する場合(`banks/PCM/`配下の実データはこちらの
 形式)があり、後者は参照先JSONの`entries`配列インデックスを`entry_no`として
 自動採番します(`PatchManager`の実装に合わせた挙動)。
