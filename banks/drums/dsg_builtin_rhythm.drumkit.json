@@ -30,12 +30,12 @@
       "name": "High Q (placeholder)",
       "note": 27,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 27,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -43,12 +43,12 @@
       "name": "Slap (placeholder)",
       "note": 28,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 28,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -56,12 +56,12 @@
       "name": "Scratch Push (placeholder)",
       "note": 29,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 29,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -69,12 +69,12 @@
       "name": "Scratch Pull (placeholder)",
       "note": 30,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 30,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -82,12 +82,12 @@
       "name": "Sticks (placeholder)",
       "note": 31,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 31,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -95,12 +95,12 @@
       "name": "Square Click (placeholder)",
       "note": 32,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 32,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -108,12 +108,12 @@
       "name": "Metronome Click (placeholder)",
       "note": 33,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 33,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -121,12 +121,12 @@
       "name": "Metronome Bell (placeholder)",
       "note": 34,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 34,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -212,12 +212,12 @@
       "name": "Low Floor Tom (placeholder)",
       "note": 41,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 41,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -238,12 +238,12 @@
       "name": "High Floor Tom (placeholder)",
       "note": 43,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 43,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -264,12 +264,12 @@
       "name": "Low Tom (placeholder)",
       "note": 45,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 45,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -290,12 +290,12 @@
       "name": "Low-Mid Tom (placeholder)",
       "note": 47,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 47,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -303,12 +303,12 @@
       "name": "Hi-Mid Tom (placeholder)",
       "note": 48,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 48,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -316,12 +316,12 @@
       "name": "Crash Cymbal 1 (placeholder)",
       "note": 49,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 49,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -329,12 +329,12 @@
       "name": "High Tom (placeholder)",
       "note": 50,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 50,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -342,12 +342,12 @@
       "name": "Ride Cymbal 1 (placeholder)",
       "note": 51,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 51,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -355,12 +355,12 @@
       "name": "Chinese Cymbal (placeholder)",
       "note": 52,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 52,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -368,12 +368,12 @@
       "name": "Ride Bell (placeholder)",
       "note": 53,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 53,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -381,12 +381,12 @@
       "name": "Tambourine (placeholder)",
       "note": 54,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 54,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -394,12 +394,12 @@
       "name": "Splash Cymbal (placeholder)",
       "note": 55,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 55,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -407,12 +407,12 @@
       "name": "Cowbell (placeholder)",
       "note": 56,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 56,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -420,12 +420,12 @@
       "name": "Crash Cymbal 2 (placeholder)",
       "note": 57,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 57,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -433,12 +433,12 @@
       "name": "Vibraslap (placeholder)",
       "note": 58,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 58,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -446,12 +446,12 @@
       "name": "Ride Cymbal 2 (placeholder)",
       "note": 59,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 59,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -524,12 +524,12 @@
       "name": "High Timbale (placeholder)",
       "note": 65,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 65,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -537,12 +537,12 @@
       "name": "Low Timbale (placeholder)",
       "note": 66,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 66,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -550,12 +550,12 @@
       "name": "High Agogo (placeholder)",
       "note": 67,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 67,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -563,12 +563,12 @@
       "name": "Low Agogo (placeholder)",
       "note": 68,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 68,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -576,12 +576,12 @@
       "name": "Cabasa (placeholder)",
       "note": 69,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 69,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -589,12 +589,12 @@
       "name": "Maracas (placeholder)",
       "note": 70,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 70,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -602,12 +602,12 @@
       "name": "Short Whistle (placeholder)",
       "note": 71,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 71,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -615,12 +615,12 @@
       "name": "Long Whistle (placeholder)",
       "note": 72,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 72,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -628,12 +628,12 @@
       "name": "Short Guiro (placeholder)",
       "note": 73,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 73,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -641,12 +641,12 @@
       "name": "Long Guiro (placeholder)",
       "note": 74,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 74,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -654,12 +654,12 @@
       "name": "Claves (placeholder)",
       "note": 75,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 75,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -667,12 +667,12 @@
       "name": "Hi Wood Block (placeholder)",
       "note": 76,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 76,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -680,12 +680,12 @@
       "name": "Low Wood Block (placeholder)",
       "note": 77,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 77,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -693,12 +693,12 @@
       "name": "Mute Cuica (placeholder)",
       "note": 78,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 78,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -706,12 +706,12 @@
       "name": "Open Cuica (placeholder)",
       "note": 79,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 79,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -719,12 +719,12 @@
       "name": "Mute Triangle (placeholder)",
       "note": 80,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 80,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -732,12 +732,12 @@
       "name": "Open Triangle (placeholder)",
       "note": 81,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 81,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -745,12 +745,12 @@
       "name": "Shaker (placeholder)",
       "note": 82,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 82,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -758,12 +758,12 @@
       "name": "Jingle Bell (placeholder)",
       "note": 83,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 83,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -771,12 +771,12 @@
       "name": "Bell Tree (placeholder)",
       "note": 84,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 84,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -784,12 +784,12 @@
       "name": "Castanets (placeholder)",
       "note": 85,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 85,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -797,12 +797,12 @@
       "name": "Mute Surdo (placeholder)",
       "note": 86,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 86,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     },
     {
       "fine_tune": 0,
@@ -810,12 +810,12 @@
       "name": "Open Surdo (placeholder)",
       "note": 87,
       "pan": 0,
-      "patch_bank": 68,
-      "patch_prog": 5,
+      "patch_bank": 0,
+      "patch_prog": 0,
       "play_note": 87,
       "sw_bank": -1,
       "sw_prog": -1,
-      "voice_patch_type": 112
+      "voice_patch_type": 127
     }
   ],
   "type": "routed"
