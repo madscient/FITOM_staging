@@ -101,6 +101,7 @@ FITOMdefine.h`のVOICE_PATCH_*定数、2026年8月11日確認):
 | `OPLLP` | 41 | VOICE_PATCH_OPLLP(YMF281)。2026年8月、フォールバックルート新設で追加 |
 | `OPLLX` | 42 | VOICE_PATCH_OPLLX(YM2423) |
 | `VRC7` | 43 | VOICE_PATCH_VRC7(FS1001) |
+| `OPLLEX` | 44 | VOICE_PATCH_OPLLEX(Y8960拡張OPLL部)。標準OPLL系とは別のHwBank名前空間で、`unified.bankset.json`側にこのgroupのプリセットバンクは現在ありません(OPLLEXは`opllFamilyAcceptsFallback()`によりOPLL/OPLLP/OPLLX/VRC7のユーザー音色バンクをフォールバックで受け入れるため) |
 | `OPL3` | 48 | |
 | `SSG` | 64 | EPSG/DCSG/SAA/SCCも同じCC#0を共有(パッチ名の`[EPSG]`等プレフィックスで区別) |
 | `AWM` | 84 | `*.samplezonebank.json` |
@@ -142,7 +143,7 @@ CC#0規約(3.2節)で未使用の値を便宜的に使用)。
 ### ファイルを持たない機械合成バンク(OPLLビルトイン音色・OPLLビルトイン
 リズム・OPNAビルトインリズム)
 
-以下3種類は`hw_banks[]`/`drum_banks[]`のいずれにも現れない
+以下は`hw_banks[]`/`drum_banks[]`のいずれにも現れない
 「ファイルを持たない機械合成バンク」で、実際のパッチ名/楽器名は
 FITOM_X本体(`../FITOM_X`)のC++ソースにハードコードされています。
 プロファイルJSONの走査だけでは拾えないため、本スクリプトの
@@ -152,6 +153,7 @@ FITOM_X本体(`../FITOM_X`)のC++ソースにハードコードされていま�
 | バンク | CC#0 | CC#32 | Prog | 本体ソースの定義箇所 |
 |---|---|---|---|---|
 | OPLLビルトイン音色 | 40/41/42/43(下記参照) | 0固定 | `(variant<<4)\|instIndex`(0は無音のため未収録) | `core/src/PatchManager.cpp` `initOpllRomPatches()` の `kNames[4][16]` |
+| OPLLEXビルトイン音色 | 44 | 0固定 | `(BANK<<4)\|instIndex`(BANK=0-3の4バンク全て、0は無音のため未収録) | 同上(音色データはOPLL系と同じ`kNames[4][16]`を共有) |
 | OPLLビルトインリズム | 112 | 40固定 | 0-4(楽器番号) | `gui/bridge/FITOMBridge.cpp` `kOpllRhythmNames[]` |
 | OPNAビルトインリズム | 112 | 17固定 | 0-5(楽器番号) | `gui/bridge/FITOMBridge.cpp` `kOpnaRhythmNames[]` |
 
@@ -162,11 +164,12 @@ FITOM_X本体(`../FITOM_X`)のC++ソースにハードコードされていま�
 `VOICE_PATCH_OPLLX`(0x2a=42)/`VOICE_PATCH_VRC7`(0x2b=43)は別々の
 voicePatchType定数として定義されている一方、`PatchManager::
 resolveTriple()`はhw_bank(CC#32)==0でこの4値のいずれかが来ると
-`resolveOpllRomVoice(hwProg, ...)`を呼ぶだけで、呼び出し時の
-voicePatchType自体は関数に渡さない。実際に鳴らすチップはhwProgに
+`resolveOpllRomVoice()`へそのまま委譲し、委譲先はこの4値については
+渡されたvoicePatchTypeを捨てる。実際に鳴らすチップはhwProgに
 埋め込まれたvariantSel(bit4-6)だけで再決定されるため、**ランタイム上は
 CC#0=40/41/42/43のどれを選んでも同じProgに対して常に同じ結果**になる
-(コード上の事実)。
+(コード上の事実。CC#0=44のOPLLEXだけは例外で、後述の通り
+voicePatchTypeの値そのものが解決結果を変える)。
 
 しかし、FITOM_X本体・FITOM_patch_editorのパッチピッカーGUIは
 `PatchManager::getOpllRomPatches(voicePatchType)`経由でCC#0ごとに
@@ -190,13 +193,34 @@ CC#0の数値順(40,41,42,43=OPLL,OPLLP,OPLLX,VRC7)とvariant番号順
 ((variant<<4)|instIndex)をそのまま使う(0始まりの連番に振り直さない。
 GUI側`FITOMBridge.cpp`の`info.prog = static_cast<int>(p.id)`と同じ扱い)。
 
+#### OPLLEX(CC#0=44)だけは4バンクすべてを1バンクに並べる
+
+`VOICE_PATCH_OPLLEX`(0x2c=44)はY8960の拡張OPLL部で、OPLL/OPLL-X/OPLL-P/
+VRC7の4バンク分のROMを1チップに内蔵しています(実機レジスタ0x40-0x48の
+チャンネル別BANK選択)。`resolveOpllRomVoice()`はCC#0=44の場合に限り
+hwProgのvariantSelを「他チップへの迂回先」ではなく「OPLLEX自身のどの
+BANKか」として解釈し、常にOPLLEX自身で発音します。
+
+このためCC#0=44では上表のようなvariant絞り込みを行わず、4バンク
+60音色(Prog 1-15/17-31/33-47/49-63)すべてを1つのバンク(CC#32=0)に
+並べます。同一バンク内で同名の音色(`Vibraphone`等)が衝突するため、
+音色名にはBANK名(`[OPLL]`/`[OPLL-X]`/`[OPLL-P]`/`[VRC7]`)を前置して
+区別しています(PSG系が共有CC#0内で`[EPSG]`等のプレフィックスにより
+区別しているのと同じ方式。`.ins`側は書式上`[`が使えないため
+`_ins_sanitize()`により`(OPLL)`のような丸括弧へ置換されます)。
+
+なお標準4チップ側(CC#0=40/41/42/43)からも、対象チップが接続されて
+いない場合はOPLLEXへフォールバックして発音されます(`ext.ALG_EXT`の
+bit2-1へBANK値が生成時点で焼き込まれているため、HwPatchの書き換えは
+不要)。CC#0=44は「必ずOPLLEXで鳴らす」明示ルートという位置づけです。
+
 OPLLビルトインリズム・OPNAビルトインリズムは、CC#0=112配下でも
 `drum_banks[]`由来の通常ドラムキット(CC#32=0固定、Progでキット選択)とは
 **別軸**である点に注意してください。CC#32=17/40を選んだ場合のみ、
 CC#32の意味が「対象チップ選択」に、Progの意味が「楽器(物理チャンネル)
 直接指定」に変わります(`docs/manuals/builtin_rhythm.md`参照)。
 
-この3種類は**プロファイルの実際のデバイス構成(搭載チップ)に関わらず、
+これらは**プロファイルの実際のデバイス構成(搭載チップ)に関わらず、
 全対象プロファイル共通で常に追加します**(`collect_builtin_entries()`
 はプロファイルに依存する引数を取らない)。当初は`hw_plugins[].profile`
 (`fmemuif_*.profile.json`等)が実際に搭載しているチップ
