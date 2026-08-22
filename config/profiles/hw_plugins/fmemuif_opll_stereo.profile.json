@@ -16,6 +16,13 @@
         { "chip": "VRC7",  "clock": 3579545, "pan": 2 },
         { "chip": "OPLLX", "clock": 3579545, "pan": 2 }
       ]
+    },
+    {
+      "dll": "engines/Y8960EngineApi",
+      "chips": [
+        { "chip": "OPLLEX", "clock": 3579545, "pan": 1 },
+        { "chip": "OPLLEX", "clock": 3579545, "pan": 2 }
+      ]
     }
   ]
 }

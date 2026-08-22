@@ -23,8 +23,8 @@ FITOM_staging/
 │   │   ├── emu_opn.profile.json             OPNエミュプロファイル (OPN/OPN2/OPNA/OPNB/OPNBB)
 │   │   ├── emu_opl.profile.json             OPLエミュプロファイル (OPL[rhythm]/Y8950/OPL2/OPL3/OPL4)
 │   │   ├── emu_opm.profile.json             OPMエミュプロファイル (OPM×2/OPZ×2)
-│   │   ├── emu_opll.profile.json            OPLLエミュプロファイル (OPLL[rhythm]/OPLLP/VRC7/OPLLX)
-│   │   ├── fmall.profile.json               FMALL (OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7)
+│   │   ├── emu_opll.profile.json            OPLLエミュプロファイル (OPLL[rhythm]/OPLLP/VRC7/OPLLX/OPLLEX)
+│   │   ├── fmall.profile.json               FMALL (OPZ/OPL3/OPL4AWM/OPNBB/OPLLEX、各L/R2枚)
 │   │   │
 │   │   └── hw_plugins/     上記プロファイルの hw_plugins[].profile が指す
 │   │       │               プラグイン固有サブプロファイル (第2階層)
@@ -32,7 +32,8 @@ FITOM_staging/
 │   │       ├── fmemuif_opl5.profile.json   FitomEmuIF 用 (OPL系 5チップ)
 │   │       ├── fmemuif_opm_opz4.profile.json FitomEmuIF 用 (OPM/OPZ 4チップ)
 │   │       ├── fmemuif_opll5.profile.json  FitomEmuIF 用 (OPLL系 5チップ)
-│   │       └── fmemuif_fmall.profile.json  FitomEmuIF 用 (FMALL 10チップ)
+│   │       └── fmemuif_fmall_stereo_lite.profile.json
+│   │                                       FitomEmuIF 用 (FMALL 8チップ、L/R2枚ずつ)
 │
 ├── config_schema/          JSON Schema 定義
 │   ├── profile.schema.json
@@ -60,7 +61,8 @@ FITOM_staging/
 │       ├── DSAemuEngine.dll/.so
 │       ├── EPSGemuEngine.dll/.so
 │       ├── SAASoundEngine.dll/.so
-│       └── DSGemuEngine.dll/.so
+│       ├── DSGemuEngine.dll/.so
+│       └── Y8960EngineApi.dll/.so
 ├── dist/                   インストールパッケージ成果物 (.gitignore 対象)
 └── logs/                   ログ出力先 (.gitignore 対象)
 ```
@@ -74,7 +76,7 @@ FITOM_X (config/profiles/*.profile.json)
         │     │                fmemuif_*.profile.json) でチップ構成を管理
         │     └── YMFMEngine.dll / DSAemuEngine.dll /
         │         EPSGemuEngine.dll / SAASoundEngine.dll /
-        │         DSGemuEngine.dll
+        │         DSGemuEngine.dll / Y8960EngineApi.dll
         │         (bin/engines/ に配置)
         └── fitom_hw.dll    ← hw_plugins[].profile (config/profiles/hw_plugins/
                                fitom_hw_*.profile.json) で実機構成を管理
@@ -98,9 +100,10 @@ FITOM_X 本体はエミュレーターか実機かを区別しない。
 | unified_preset | fmemuif_opn_profile.json |
 | emu_opn | fmemuif_opn_profile.json |
 | emu_opl | fmemuif_opl5.profile.json |
-| emu_opm | fmemuif_opm_opz4.profile.json |
+| emu_opm | fmemuif_opm.profile.json |
+| emu_opz | fmemuif_opz.profile.json |
 | emu_opll | fmemuif_opll5.profile.json |
-| fmall | fmemuif_fmall.profile.json |
+| fmall | fmemuif_fmall_stereo_lite.profile.json |
 | emu_psg_stereo | fmemuif_psg_stereo.profile.json |
 
 (いずれも `config/profiles/hw_plugins/` 配下)
@@ -124,6 +127,7 @@ FitomHwIF実機構成を含む)は誰もメンテナンスしておらず統合�
 | EPSGemuEngine | AY8930(EPSG)エミュレーター (`EPSGemuEngine.dll`) | engines/ に配置 |
 | SAASoundEngine | SAA1099エミュレーター (`SAASoundEngine.dll`) | engines/ に配置 |
 | DSGemuEngine | YM2163(DSG)エミュレーター (`DSGemuEngine.dll`) | engines/ に配置 |
+| Y8960emu | Y8960(拡張OPLL部/拡張OPL2部)エミュレーター (`Y8960EngineApi.dll`) | engines/ に配置 |
 
 ## 初回セットアップ
 

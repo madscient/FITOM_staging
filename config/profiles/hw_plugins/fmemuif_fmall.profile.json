@@ -8,16 +8,16 @@
     {
       "dll": "engines/YMFMEngine",
       "chips": [
-        { "chip": "OPNA",  "clock": 7159090, "pan": 0 },
         { "chip": "OPNBB", "clock": 7159090, "pan": 0 },
-        { "chip": "OPM",   "clock": 3579545,  "pan": 0 },
         { "chip": "OPZ",   "clock": 3579545,  "pan": 0 },
         { "chip": "OPL3",  "clock": 14318180, "pan": 0 },
-        { "chip": "OPL4",  "clock": 33868800, "pan": 0 },
-        { "chip": "OPLL",  "clock": 3579545,  "pan": 0 },
-        { "chip": "OPLLP", "clock": 3579545,  "pan": 0 },
-        { "chip": "OPLLX", "clock": 3579545,  "pan": 0 },
-        { "chip": "VRC7",  "clock": 3579545,  "pan": 0 }
+        { "chip": "OPL4",  "clock": 33868800, "pan": 0 }
+      ]
+    },
+    {
+      "dll": "engines/Y8960EngineApi",
+      "chips": [
+        { "chip": "OPLLEX", "clock": 3579545, "pan": 0 }
       ]
     }
   ]

@@ -1,7 +1,8 @@
 {
   "_comment": [
     "統合プリセットプロファイル(unified_preset.profile.json)をベースに、",
-    "OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7のみを抜き出した構成。",
+    "OPZ/OPL3/OPL4AWM/OPNBB/OPLLEXのみを抜き出し、それぞれL/R2枚の",
+    "リニアステレオ構成にしたもの。",
     "banksはunified.bankset.jsonを他プロファイルと共有参照しており、",
     "hw_banks/sw_banksのbank番号はhwbank.json内部のsw_bank/sw_prog参照と",
     "常に一致する(手動でのコピー・番号合わせは不要)。"
@@ -25,78 +26,94 @@
   "banks": "unified.bankset.json",
   "devices": [
     {
-      "chip": "OPNZ",
+      "chip": "OPZ",
+      "engine": "engines/YMFMEngine",
       "if": "HW",
       "index": 0,
       "label": "OPZ",
       "pan": 0,
       "plugin": "FitomEmuIF",
-      "stereo_pair": "L"
+      "stereo_pair": "L",
+      "type": "FMHWIF"
     },
     {
-      "chip": "OPNZ",
+      "chip": "OPZ",
+      "engine": "engines/YMFMEngine",
       "if": "HW",
       "index": 1,
-      "label": "OPNZ",
+      "label": "OPZ",
       "pan": 0,
       "plugin": "FitomEmuIF",
-      "stereo_pair": "R"
+      "stereo_pair": "R",
+      "type": "FMHWIF"
     },
     {
       "chip": "OPNBB",
+      "engine": "engines/YMFMEngine",
       "if": "HW",
       "index": 0,
       "label": "OPNBB",
       "pan": 0,
       "plugin": "FitomEmuIF",
-      "stereo_pair": "L"
+      "stereo_pair": "L",
+      "type": "FMHWIF"
     },
     {
       "chip": "OPNBB",
+      "engine": "engines/YMFMEngine",
       "if": "HW",
       "index": 1,
       "label": "OPNBB",
       "pan": 0,
       "plugin": "FitomEmuIF",
-      "stereo_pair": "R"
+      "stereo_pair": "R",
+      "type": "FMHWIF"
     },
     {
       "chip": "OPL3",
+      "engine": "engines/YMFMEngine",
       "if": "HW",
       "index": 0,
       "label": "OPL3",
       "pan": 0,
       "plugin": "FitomEmuIF",
-      "stereo_pair": "L"
+      "stereo_pair": "L",
+      "type": "FMHWIF"
     },
     {
       "chip": "OPL4",
+      "engine": "engines/YMFMEngine",
       "if": "HW",
-      "index": 1,
+      "index": 0,
       "label": "OPL4",
       "pan": 0,
       "plugin": "FitomEmuIF",
-      "stereo_pair": "R"
+      "stereo_pair": "R",
+      "type": "FMHWIF"
     },
     {
-      "chip": "OPLLP",
+      "chip": "OPLLEX",
+      "engine": "engines/Y8960EngineApi",
       "if": "HW",
       "index": 0,
-      "label": "OPLLP",
+      "label": "OPLLEX",
       "pan": 1,
       "plugin": "FitomEmuIF",
       "rhythm_mode": true,
-      "stereo_pair": "L"
+      "stereo_pair": true,
+      "type": "FMHWIF"
     },
     {
-      "chip": "OPLLP",
+      "chip": "OPLLEX",
+      "engine": "engines/Y8960EngineApi",
       "if": "HW",
       "index": 1,
-      "label": "OPLLP",
+      "label": "OPLLEX",
       "pan": 2,
       "plugin": "FitomEmuIF",
       "rhythm_mode": true,
-      "stereo_pair": "R"
+      "stereo_pair": true,
+      "type": "FMHWIF"
     },
     {
       "chip": "SF2",
@@ -107,10 +124,10 @@
   ],
   "hw_plugins": [
     {
-      "auto_devices": true,
+      "auto_devices": false,
       "dll": "FitomEmuIF.dll",
       "name": "FitomEmuIF",
-      "profile": "config/profiles/hw_plugins/fmemuif_fmall.profile.json"
+      "profile": "config/profiles/hw_plugins/fmemuif_fmall_stereo_lite.profile.json"
     },
     {
       "dll": "FitomSf2IF.dll",
@@ -126,7 +143,7 @@
     "__LOCAL__",
     "__LOCAL__"
   ],
-  "profile_name": "FMALL (OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7)",
+  "profile_name": "FMALL (OPZ/OPL3/OPL4AWM/OPNBB/OPLLEX)",
   "sf2_channel_windows": [
     {
       "ch": 14,
