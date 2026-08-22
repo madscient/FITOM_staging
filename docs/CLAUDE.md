@@ -2481,10 +2481,81 @@ GM2ノート27-87の欠落0件。インストゥルメントリストを再生�
 199あるドラム節すべてで既存ノート名の消失・変更が0件(追加のみ)で
 あることをプログラム的に確認済み。実際に発音させた聴感確認は未実施。
 
+### 3.58 OPLLEX(Y8960拡張OPLL部)のインストゥルメント定義を追加（2026年8月22日、ユーザー指示）
+FITOM_X側コミット`746431e`(`core/src/OPLL_new.cpp` `COPLLEX`、Y8960の
+拡張OPLL部/拡張OPL2部のチップドライバ追加)・`58b6d63`(OPLLEXもprogだけで
+暗黙のROMプリセットバンクを解決できるようにする)に追従し、
+`tools/instrument_export/generate_instruments.py`へOPLLEXを追加した。
+エミュレーターは隣接リポジトリ`../Y8960emu`(FmEngineApi準拠、
+`Y8960EngineApi`、チップ名`Y8960_OPLLX`/`Y8960_OPL2`)。
+
+**`VOICE_PATCH_OPLLEX` = `0x2c`(44)**。3.2節の対応表に追加される新しい
+CC#0値で、標準OPLL系(40-43)とは**別のHwBank名前空間**になる
+(`voicePatchTypeToVoiceGroup`では`VOICE_GROUP_OPLL`を共有するが、
+`hw_banks[].group`文字列は`"OPLLEX"`を別に用意する必要がある)。
+`ext.ALG_EXT`がOPLLEXでだけ3bit(bit0=preset選択、bit2-1=チャンネル別
+ROMプリセットバンク選択、実機レジスタ0x40-0x48)になるのが差分の実体。
+
+**CC#0=44だけはvariant絞り込みをしない**(3.42の方針の例外):
+OPLLEXはOPLL/OPLL-X/OPLL-P/VRC7の4バンク分のROMを1チップに内蔵して
+いるため、`resolveOpllRomVoice()`は`requestedVoicePatchType ==
+VOICE_PATCH_OPLLEX`の場合に限りhwProgのvariantSel(bit4-6)を
+「他チップへの迂回先」ではなく「OPLLEX自身のどのBANKか」として解釈し、
+ターゲットデバイスを常にOPLLEX自身にする。したがって
+インストゥルメントリストでも4バンク60音色(Prog 1-15/17-31/33-47/49-63)
+すべてを1バンク(CC#32=0)に並べる。同一バンク内で同名の音色
+(`Vibraphone`等)が衝突するため、音色名にBANK名(`[OPLL]`/`[OPLL-X]`/
+`[OPLL-P]`/`[VRC7]`)を前置して区別した(PSG系が共有CC#0内で`[EPSG]`等の
+プレフィックスで区別しているのと同じ方式。`.ins`側は書式上`[`が使えず
+`_ins_sanitize()`が`(OPLL)`へ置換する)。音色名テーブル自体は
+`OPLL_ROM_NAMES`(`initOpllRomPatches()`の`kNames[4][16]`)をそのまま
+再利用しており、新たな転記は無い。
+
+**`unified.bankset.json`へOPLLEX用`hw_banks[]`は追加しない**:
+`opllFamilyAcceptsFallback()`(`core/src/OPLL_new.cpp`)がOPLLファミリー間の
+**ユーザー音色**(`ext.ALG_EXT & 1 == 0`)の相互フォールバックを許可して
+おり、OPLLEXもその対象に含まれる。既存のCC#0=40/41/42/43 CC#32=1/2の
+プリセットバンクは、対象チップが未接続でOPLLEXが接続されていれば
+そのままOPLLEXで鳴る。OPLLEX名前空間へ同じファイルを二重登録しても
+リストが重複するだけで得るものが無いため見送った。ROM音色側
+(CC#32=0)も同様に40-43からOPLLEXへフォールバックするので、
+CC#0=44は「必ずOPLLEXで鳴らす」明示ルートという位置づけになる。
+
+**内蔵リズムは変更不要**: OPLLEXのリズム(0x0E, 0x36-0x38)は標準OPLLと
+完全に同一のレジスタ体系で、`Config::resolveCompositeSpec`は
+`DEVICE_OPLLEX`から専用RHYTHM deviceTypeを作らず`DEVICE_OPLL_RHY`を
+共用する。したがって既存のCC#0=112 CC#32=40がそのままOPLLEXの内蔵
+リズムにも対応する。
+
+**あわせてスキーマを再同期**(5.5節): `hwbank.schema.json`
+(`ext.ALG_EXT`の`maximum`が`1`→`7`、AMS/PMSの説明拡充)・
+`profile.schema.json`(`hw_banks[].group`のenumへ`OPLLEX`、
+`pcm_banks[].chip`のenumへ`OPL2EX`、`rhythm_mode`系の説明更新)・
+`pcmbank.schema.json`(ssgsのサンプルレート説明)の3ファイルをFITOM_X側から
+verbatimコピーし、再び全11ファイル一致状態へ戻した。**`ALG_EXT`の値域
+拡張は既存バンクへの影響なし**(全`*.hwbank.json`の実データは0か1)。
+
+**検証**: インストゥルメントリストを再生成し、CC#0=44が全8プロファイルに
+60件ずつ(計480件)・すべてCC#32=0で出ること、`.ins`のセクション名重複0件、
+DOMINO XMLがwell-formedであることを確認。**再生成前後の差分は追加504行
+(`.ins`)のみで既存エントリの消失・変更は0件**(コミット済み出力との差分に
+含まれる`(SSG) (0:4)`8行の消失は、8月16日以降のPSGバンク変更が
+リストへ未反映だったための追従であり、本変更とは無関係)。
+実際に発音させた聴感確認は未実施(4節)。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
 
+- **OPLLEX/OPL2EXを載せたプロファイルが無い**(3.58): インストゥルメント
+  リストにはCC#0=44のOPLLEXビルトイン音色を載せたが、`config/profiles/`の
+  どのプロファイルにも`DEVICE_OPLLEX`/`DEVICE_OPL2EX`のデバイスが無く、
+  `../Y8960emu`(`Y8960EngineApi`)も`bin/engines/`へ配置していないため、
+  現時点では鳴らない(全プロファイル共通で機械合成バンクを載せる3.43の
+  方針通りで、リスト側は実害なし)。Y8960エミュを載せたプロファイル新設と
+  `setup.ps1`/`setup.sh`への追加、拡張OPL2部(`DEVICE_OPL2EX`、
+  VoicePatchTypeはOPL2と共用・内蔵ADPCM-Bは`DEVICE_ADPCMB_OPL2EX`)の
+  扱いは未着手。
 - **CC#0=127の二重の意味**(3.57): FITOM_X本体では`VOICE_PATCH_SILENCE`
   (無音バンク)だが、インストゥルメントリスト(3.40)ではSF2バンクの表示に
   使っている。SF2直行パスは`sf2_channel_windows`で切り分けられCC#0を見ない

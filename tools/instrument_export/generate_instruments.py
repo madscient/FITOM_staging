@@ -106,6 +106,7 @@ GROUP_CC0_HW = {
     "OPLLP": 41,    # VOICE_PATCH_OPLLP (YMF281)
     "OPLLX": 42,    # VOICE_PATCH_OPLLX (YM2423)
     "VRC7": 43,     # VOICE_PATCH_VRC7 (FS1001)
+    "OPLLEX": 44,   # VOICE_PATCH_OPLLEX (Y8960拡張OPLL部)
     "OPL3": 48,
     "SSG": 64,
     "AWM": 84,
@@ -136,13 +137,14 @@ CC0_SF2 = 127         # sf2_banks[] (FitomSf2IF/FluidSynth、CC#0規約上未使
 # (非公式・耳コピ由来の近似データである旨、本体側コメントに明記あり)。
 #
 # voice_patch_type(CC#0)は40(VOICE_PATCH_OPLL)/41(VOICE_PATCH_OPLLP)/
-# 42(VOICE_PATCH_OPLLX)/43(VOICE_PATCH_VRC7)の4値が定義されている。
-# `PatchManager::resolveTriple()`はhw_bank==0でこの4値のいずれかが来ると
-# `resolveOpllRomVoice(hwProg, ...)`を呼ぶだけで、voicePatchType自体は
-# 引数として渡さない(実際の発音・モニター名前解決はhwProg内の
-# variantSel(bit4-6)だけで再決定される)ため、ランタイム上はCC#0=40/41/
-# 42/43のどれを選んでも同じProgに対して常に同じ結果になる(docs/CLAUDE.md
-# 3.41節)。
+# 42(VOICE_PATCH_OPLLX)/43(VOICE_PATCH_VRC7)/44(VOICE_PATCH_OPLLEX)の
+# 5値が定義されている。`PatchManager::resolveTriple()`はhw_bank==0で
+# このいずれかが来ると`resolveOpllRomVoice()`へ委譲するが、標準4チップ
+# (40-43)についてはCC#0の値そのものが捨てられ、実際の発音・モニター
+# 名前解決はhwProg内のvariantSel(bit4-6)だけで再決定される。このため
+# ランタイム上はCC#0=40/41/42/43のどれを選んでも同じProgに対して常に
+# 同じ結果になる(docs/CLAUDE.md 3.41節)。CC#0=44(OPLLEX)だけは例外で
+# CC#0の値が意味を持つ(OPLLEX_BANK_LABELS定義部のコメント参照)。
 #
 # 一方、FITOM_X本体・FITOM_patch_editorのパッチピッカーGUIは、
 # `PatchManager::getOpllRomPatches(voicePatchType)`(gui/bridge/
@@ -172,6 +174,19 @@ OPLL_ROM_NAMES: dict[int, list[str]] = {
         "Trumpet", "Organ", "Bells", "Vibes", "Vibraphone", "Tutti",
         "Fretless", "Synth Bass", "Sweep"],
 }
+# Y8960拡張OPLL部(VOICE_PATCH_OPLLEX)のROM音色。OPLLEXはOPLL/OPLL-X/
+# OPLL-P/VRC7の4バンク分のROMを1チップに内蔵しており、hwProgの上位3bitは
+# 「どのチップへ迂回するか」ではなく「OPLLEX自身のどのBANKか」を選ぶ
+# (`PatchManager::resolveOpllRomVoice()`のVOICE_PATCH_OPLLEX分岐。実機
+# レジスタ0x40-0x48のチャンネル別BANK選択に対応する)。したがってCC#0=44
+# だけは他の4値のようにvariantで絞り込まず、4バンク60音色すべてを
+# 1バンク(CC#32=0)に並べる。同一バンク内で同名の音色(Vibraphone等)が
+# 衝突するため、音色名にはBANK名を前置して区別する(PSG系の共有CC#0で
+# パッチ名の[EPSG]等プレフィックスにより区別しているのと同じ方式)。
+# BANK名はFITOMdefine.hのDEVICE_OPLLEX説明にある実機BANK値の呼称に合わせる。
+CC0_OPLLEX_BUILTIN = 44   # VOICE_PATCH_OPLLEX (0x2c)
+OPLLEX_BANK_LABELS = {0: "OPLL", 1: "OPLL-X", 2: "OPLL-P", 3: "VRC7"}
+
 # gui/bridge/FITOMBridge.cpp kOpllRhythmNames/kOpnaRhythmNames。
 # CC#0=112(内蔵リズム音源モード)でCC#32=40(OPLL)/17(OPNA)を選んだときの
 # 楽器(物理チャンネル)名。Prog(patch_prog)がそのまま楽器番号になる
@@ -400,9 +415,10 @@ def collect_melodic_entries(profile: dict, profile_dir: Path, warn) -> list[Entr
 
 
 def collect_builtin_entries() -> list[Entry]:
-    """OPLLビルトイン音色バンク・DSGビルトイン音色バンク・OPLL/OPNA/DSG
-    ビルトインリズムは、ファイルを持たずFITOM_X本体にハードコードされて
-    いるため、プロファイルJSONの走査だけでは拾えない。
+    """OPLLビルトイン音色バンク(OPLLEXの4バンク分を含む)・DSGビルトイン
+    音色バンク・OPLL/OPNA/DSGビルトインリズムは、ファイルを持たず
+    FITOM_X本体にハードコードされているため、プロファイルJSONの走査だけ
+    では拾えない。
 
     全プロファイルが共通の`unified.bankset.json`を参照し、実際の
     デバイス構成(搭載チップ)に含まれないバンクエントリも変わらず表示
@@ -421,6 +437,12 @@ def collect_builtin_entries() -> list[Entry]:
     for cc0, variant in sorted(OPLL_BUILTIN_CC0_TO_VARIANT.items()):
         for idx, name in enumerate(OPLL_ROM_NAMES[variant], start=1):
             entries.append(Entry(cc0, 0, (variant << 4) | idx, name))
+    # OPLLEXだけは自分自身が4バンク分のROMを内蔵しているため、CC#0=44の
+    # 1バンクに全variantを並べる(OPLLEX_BANK_LABELS定義部のコメント参照)。
+    for variant, label in sorted(OPLLEX_BANK_LABELS.items()):
+        for idx, name in enumerate(OPLL_ROM_NAMES[variant], start=1):
+            entries.append(Entry(CC0_OPLLEX_BUILTIN, 0, (variant << 4) | idx,
+                                 f"[{label}] {name}"))
     for wave, wave_name in enumerate(DSG_WAVE_NAMES):
         for env, env_name in enumerate(DSG_ENV_NAMES):
             prog = wave * len(DSG_ENV_NAMES) + env
