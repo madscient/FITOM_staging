@@ -55,8 +55,8 @@ drum_banks 21件, pcm_banks 3件）を共有参照している（2026年7月29�
 | `emu_opn.profile.json` | OPN専用（OPN/OPN2/OPNA/OPNB/OPNBB×1ずつ） |
 | `emu_opl.profile.json` | OPL専用（OPL[rhythm]/Y8950/OPL2/OPL3/OPL4×1ずつ） |
 | `emu_opm.profile.json` | OPM専用（OPM×2/OPZ×2） |
-| `emu_opll.profile.json` | OPLL専用（OPLL[rhythm]/OPLLP/VRC7/OPLLX×1ずつ。OPLL2は3.37でエンジン非対応のため削除） |
-| `fmall.profile.json` | OPM/OPZ/OPL3/OPL4AWM/OPNA/OPNBB/OPLL/OPLLP/OPLLX/VRC7構成（2026年7月19日新設） |
+| `emu_opll.profile.json` | OPLL専用（OPLL[rhythm]/OPLLP/VRC7/OPLLX/OPLLEX×1ずつ。OPLL2は3.37でエンジン非対応のため削除、OPLLEXは3.59で追加） |
+| `fmall.profile.json` | OPZ/OPL3/OPL4AWM/OPNBB/OPLLEXをL/R2枚ずつのリニアステレオで載せた構成（2026年7月19日新設、3.59で現構成へ） |
 | `emu_psg_stereo.profile.json` | PSG専用（SSG/DCSG/SCC×2ずつ=DSAemuEngine、EPSG×2=EPSGemuEngine、DSG×2=DSGemuEngineでリニアステレオ + SAA×1=SAASoundEngine。2026年8月14日新設、3.53/3.54参照） |
 旧・個別プロファイル（`emulator_opm.profile.json`ほか計6件、統合前からの
 遺産）は、誰もメンテナンスしておらず統合後の構成と矛盾していたため
@@ -2543,19 +2543,91 @@ DOMINO XMLがwell-formedであることを確認。**再生成前後の差分は
 リストへ未反映だったための追従であり、本変更とは無関係)。
 実際に発音させた聴感確認は未実施(4節)。
 
+### 3.59 OPLLEXをプロファイルへ配線（2026年8月23日、ユーザー指示）
+3.58でインストゥルメント定義だけ追加していたOPLLEX(Y8960拡張OPLL部)を、
+`emu_opll`/`emu_opll_stereo`/`fmall`の3プロファイルへ実デバイスとして
+配線した。エミュレーターは`../Y8960emu`(`Y8960EngineApi`、FmEngineApi準拠)。
+
+**プロファイルの`chip`文字列はFITOM_Xとエンジンの両方が解釈する**:
+FitomEmuIFは`engines[].chips[].chip`を**そのまま**`FmEngine_AddChip()`へ
+渡し(`FmEmuIfImpl.cpp` `load_engine()`)、`HWPlugin_Enumerate()`でも
+`e["chip"] = slot.chip_name`と素通しする。FITOM_X側は同じ文字列を
+`resolveChipDeviceId()`で`DEVICE_*`へ解決する。したがって
+**1つの文字列がエンジンの受理名とFITOM_Xの正式名を同時に満たす必要がある**。
+YMFMEngineが`"OPLL"`/`"OPLLX"`、DSGemuEngineが`"DSG"`とFITOM_X正式名を
+公開しているのはこのため。Y8960emuは現在`"Y8960_OPLLX"`/`"Y8960_OPL2"`
+しか受け付けないため、本リポジトリ側は正式名`"OPLLEX"`で書き、
+Y8960emu側に別名追加を依頼する方針とした(4節)。
+
+**`devices[]`には`type`と`engine`が必須**: `HWPlugin_Open()`は
+params_jsonに`type=="FMHWIF"`と`engine`(サブプロファイルの`dll`文字列と
+完全一致)が無いと`HW_ERR_INVALID_ARG`を返す。`auto_devices`経由だと
+`HWPlugin_Enumerate()`がこの2つを自動で載せるため露見しないが、
+明示`devices[]`では自分で書く必要がある。
+
+**`auto_devices: true`は`devices[]`を置き換えない**: FITOM_Xは
+hw_plugins走査時に列挙結果を`buildDevice()`へ流し(`Config.cpp`)、その後
+`devices[]`も**追加で**処理する。列挙側が先に`slot.in_use`を立てるため、
+同じチップを指す`devices[]`エントリは`HW_ERR_OPEN_FAILED`で黙って
+スキップされる。`fmall`はこれで`devices[]`に書いたステレオペア・
+`rhythm_mode`が丸ごと無効化されていたため、`auto_devices: false`へ変更し、
+`devices[]`の内容と一致するサブプロファイル
+`fmemuif_fmall_stereo_lite.profile.json`(OPZ×2/OPNBB×2/OPL3/OPL4/OPLLEX×2)
+へ参照を付け替えた(それまで参照元の無い孤児ファイルだった)。入れ替わりで
+`fmemuif_fmall.profile.json`が未参照になるが、モノラル1枚ずつの構成として
+再利用しうるため削除はしていない(`fmemuif_opm_opz4.profile.json`も同様に
+未参照のまま残っている)。
+`auto_devices`のまま`rhythm_mode`を効かせたい場合は、hw_plugins側の
+`auto_devices_rhythm_mode: ["OPLLEX"]`に列挙する必要がある。
+
+**OPLL系に`stereo_pair: "L"/"R"`は使えない**: `"L"`/`"R"`は
+「チップ自身のL/R出力ビットで分離する」方式で、対応は
+`getChipPanType()`が`Mono`以外を返すチップ(OPM/OPZ/OPL3/OPL4/OPN2系)に
+限られる。`DEVICE_OPLLEX`はモノラル出力(default分岐)のため、指定すると
+ペア自体は成立するが「パンを振っても定位は変わらず音量のみ変化」に
+なり読み込み時に警告が出る。`emu_opll_stereo`と同じく
+`"stereo_pair": true` + `pan: 1`/`2`(プラグイン側で分離)を使う。
+
+**内蔵リズムの扱い**: `Config::resolveCompositeSpec()`は`DEVICE_OPLLEX`を
+標準OPLL系と同じ分岐で処理し、`rhythm_mode: true`なら`DEVICE_OPLL_RHY`を
+composite展開する(専用RHYTHM deviceTypeは無い)。`emu_opll`では既に
+OPLLインスタンスが`rhythm_mode: true`でリズムデバイスを持ち、
+`resolveBuiltinRhythm()`は`findDeviceIndexByDeviceType()`の**最初の1件**
+しか使わないため、OPLLEX側には付けていない。`fmall`はOPLLEXが唯一の
+OPLL系のため両チャンネル(L/R)に付けている。
+
+**配線内容**:
+
+| プロファイル | サブプロファイル | OPLLEX |
+|---|---|---|
+| `emu_opll` | `fmemuif_opll5.profile.json` | ×1(pan 0)。Y8960EngineApiを2つ目の`engines[]`エントリとして追加 |
+| `emu_opll_stereo` | `fmemuif_opll_stereo.profile.json` | ×2(pan 1/2)。同上 |
+| `fmall` | `fmemuif_fmall_stereo_lite.profile.json` | ×2(pan 1/2)、`rhythm_mode: true` |
+
+**検証**: 全12プロファイルについて、`devices[]`の
+(engine, chip, index)がサブプロファイルのスロットと1:1で対応すること
+(必須キー欠落・該当スロット無し・同一スロットの二重オープン・未使用
+スロットが全て0件)をスクリプトで確認。`profile.schema.json`で全件VALID、
+`setup.ps1`はPowerShellパーサ、`setup.sh`は`bash -n`で構文確認済み。
+**実際の起動確認はY8960emu側のチップ名別名追加待ち**(4節)。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
 
-- **OPLLEX/OPL2EXを載せたプロファイルが無い**(3.58): インストゥルメント
-  リストにはCC#0=44のOPLLEXビルトイン音色を載せたが、`config/profiles/`の
-  どのプロファイルにも`DEVICE_OPLLEX`/`DEVICE_OPL2EX`のデバイスが無く、
-  `../Y8960emu`(`Y8960EngineApi`)も`bin/engines/`へ配置していないため、
-  現時点では鳴らない(全プロファイル共通で機械合成バンクを載せる3.43の
-  方針通りで、リスト側は実害なし)。Y8960エミュを載せたプロファイル新設と
-  `setup.ps1`/`setup.sh`への追加、拡張OPL2部(`DEVICE_OPL2EX`、
-  VoicePatchTypeはOPL2と共用・内蔵ADPCM-Bは`DEVICE_ADPCMB_OPL2EX`)の
-  扱いは未着手。
+- **【Y8960emu側の対応待ち】OPLLEXのチップ名別名**(3.59): プロファイルの
+  `chip`文字列はFITOM_X(`resolveChipDeviceId()`)とエンジン
+  (`FmEngine_AddChip()`)の両方が解釈するため、両者が同じ名前を受け付ける
+  必要がある。`../Y8960emu`の`chipTable()`は現在`"Y8960_OPLLX"`/
+  `"Y8960_OPL2"`しか受け付けず、FITOM_X側の正式名`"OPLLEX"`を渡すと
+  `FM_ERR_UNKNOWN_CHIP`→FitomEmuIFの`load_engine()`がthrow→
+  `HWPlugin_Init`全体が失敗し、**そのプロファイルのFM音源が全滅**する。
+  Y8960emu側に`"OPLLEX"`/`"OPL2EX"`の別名を追加してもらうまで、3.59で
+  配線した3プロファイルは起動できない(Y8960emu側のセッションで対応予定)。
+- **拡張OPL2部(OPL2EX)が未配線**(3.58/3.59): `DEVICE_OPL2EX`(VoicePatchTypeは
+  OPL2と共用)・内蔵ADPCM-B(`DEVICE_ADPCMB_OPL2EX`)を載せたプロファイルは
+  まだ無い。実機Y8960は拡張OPL2部を2回路搭載しており、PCMイメージカタログ
+  (`pcm_image_catalog.json`)への配線も含めて未着手。
 - **CC#0=127の二重の意味**(3.57): FITOM_X本体では`VOICE_PATCH_SILENCE`
   (無音バンク)だが、インストゥルメントリスト(3.40)ではSF2バンクの表示に
   使っている。SF2直行パスは`sf2_channel_windows`で切り分けられCC#0を見ない

@@ -15,6 +15,7 @@
 #       EPSGemuEngine.so  AY8930 (EPSG) エミュレーター
 #       SAASoundEngine.so SAA1099 エミュレーター
 #       DSGemuEngine.so   YM2163 (DSG) エミュレーター
+#       Y8960EngineApi.so Y8960 (拡張OPLL部/拡張OPL2部) エミュレーター
 #
 # プラグインDLLの検索パスは実行ファイルからの相対パスで解決される。
 # デフォルトでは実行ファイルと同階層 (bin/) を探索する。
@@ -32,6 +33,7 @@ DSAENGINE_BUILD="../DSAemuEngine/build/bin"
 EPSGENGINE_BUILD="../EPSGemuEngine/build/bin"
 SAAENGINE_BUILD="../SAASoundEngine/build/bin"
 DSGENGINE_BUILD="../DSGemuEngine/build/bin"
+Y8960ENGINE_BUILD="../Y8960emu/build/bin"
 
 copy_if_exists() {
     local src="$1" dst="$2"
@@ -71,6 +73,7 @@ copy_if_exists "$DSAENGINE_BUILD/libDSAemuEngine.so" "$STAGE/bin/engines/DSAemuE
 copy_if_exists "$EPSGENGINE_BUILD/libEPSGemuEngine.so" "$STAGE/bin/engines/EPSGemuEngine.so"
 copy_if_exists "$SAAENGINE_BUILD/libSAASoundEngine.so" "$STAGE/bin/engines/SAASoundEngine.so"
 copy_if_exists "$DSGENGINE_BUILD/libDSGemuEngine.so" "$STAGE/bin/engines/DSGemuEngine.so"
+copy_if_exists "$Y8960ENGINE_BUILD/libY8960EngineApi.so" "$STAGE/bin/engines/Y8960EngineApi.so"
 
 # ── その他 ───────────────────────────────────────────────────────────────────
 mkdir -p "$STAGE/dist"
