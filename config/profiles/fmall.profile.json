@@ -93,7 +93,7 @@
     },
     {
       "chip": "OPLLEX",
-      "engine": "engines/Y8960EngineApi",
+      "engine": "engines/Y8960emuEngine",
       "if": "HW",
       "index": 0,
       "label": "OPLLEX",
@@ -105,7 +105,7 @@
     },
     {
       "chip": "OPLLEX",
-      "engine": "engines/Y8960EngineApi",
+      "engine": "engines/Y8960emuEngine",
       "if": "HW",
       "index": 1,
       "label": "OPLLEX",

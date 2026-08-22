@@ -17,7 +17,7 @@
         EPSGemuEngine.dll AY8930 (EPSG) エミュレーター
         SAASoundEngine.dll  SAA1099 エミュレーター
         DSGemuEngine.dll  YM2163 (DSG) エミュレーター
-        Y8960EngineApi.dll  Y8960 (拡張OPLL部/拡張OPL2部) エミュレーター
+        Y8960emuEngine.dll  Y8960 (拡張OPLL部/拡張OPL2部) エミュレーター
 
   プラグインDLLの検索パスは実行ファイルからの相対パスで解決される。
   デフォルトでは実行ファイルと同階層 (bin/) を探索する。
@@ -105,7 +105,7 @@ Copy-IfExists "$($Projects.DSAemuEngine)\DSAemuEngine.dll" "$Bin\engines\"
 Copy-IfExists "$($Projects.EPSGemuEngine)\EPSGemuEngine.dll" "$Bin\engines\"
 Copy-IfExists "$($Projects.SAASoundEngine)\SAASoundEngine.dll" "$Bin\engines\"
 Copy-IfExists "$($Projects.DSGemuEngine)\DSGemuEngine.dll" "$Bin\engines\"
-Copy-IfExists "$($Projects.Y8960emu)\Y8960EngineApi.dll" "$Bin\engines\"
+Copy-IfExists "$($Projects.Y8960emu)\Y8960emuEngine.dll" "$Bin\engines\"
 
 # ── その他 ───────────────────────────────────────────────────────────────────
 New-Item -ItemType Directory -Force -Path "$Stage\dist" | Out-Null
