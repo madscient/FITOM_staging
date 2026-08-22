@@ -62,7 +62,7 @@ FITOM_staging/
 │       ├── EPSGemuEngine.dll/.so
 │       ├── SAASoundEngine.dll/.so
 │       ├── DSGemuEngine.dll/.so
-│       └── Y8960EngineApi.dll/.so
+│       └── Y8960emuEngine.dll/.so
 ├── dist/                   インストールパッケージ成果物 (.gitignore 対象)
 └── logs/                   ログ出力先 (.gitignore 対象)
 ```
@@ -76,7 +76,7 @@ FITOM_X (config/profiles/*.profile.json)
         │     │                fmemuif_*.profile.json) でチップ構成を管理
         │     └── YMFMEngine.dll / DSAemuEngine.dll /
         │         EPSGemuEngine.dll / SAASoundEngine.dll /
-        │         DSGemuEngine.dll / Y8960EngineApi.dll
+        │         DSGemuEngine.dll / Y8960emuEngine.dll
         │         (bin/engines/ に配置)
         └── fitom_hw.dll    ← hw_plugins[].profile (config/profiles/hw_plugins/
                                fitom_hw_*.profile.json) で実機構成を管理
@@ -127,7 +127,7 @@ FitomHwIF実機構成を含む)は誰もメンテナンスしておらず統合�
 | EPSGemuEngine | AY8930(EPSG)エミュレーター (`EPSGemuEngine.dll`) | engines/ に配置 |
 | SAASoundEngine | SAA1099エミュレーター (`SAASoundEngine.dll`) | engines/ に配置 |
 | DSGemuEngine | YM2163(DSG)エミュレーター (`DSGemuEngine.dll`) | engines/ に配置 |
-| Y8960emu | Y8960(拡張OPLL部/拡張OPL2部)エミュレーター (`Y8960EngineApi.dll`) | engines/ に配置 |
+| Y8960emu | Y8960(拡張OPLL部/拡張OPL2部)エミュレーター (`Y8960emuEngine.dll`) | engines/ に配置 |
 
 ## 初回セットアップ
 
