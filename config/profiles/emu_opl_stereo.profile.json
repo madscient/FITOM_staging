@@ -116,5 +116,5 @@
     { "mpu": 1, "ch": 14, "fluidsynth_chan": 0 },
     { "mpu": 1, "ch": 15, "fluidsynth_chan": 1 }
   ],
-  "profile_name": "OPLエミュプロファイル (OPL[rhythm]/Y8950/OPL2/OPL3/OPL4)"
+  "profile_name": "OPLエミュプロファイル・リニアステレオ (OPL[rhythm]/Y8950/OPL2/OPL3/OPL4)"
 }

@@ -84,7 +84,8 @@ New-Item -ItemType Directory -Force -Path $Bin | Out-Null
 New-Item -ItemType Directory -Force -Path "$Bin\engines" | Out-Null
 
 # FITOM_X 本体
-Copy-IfExists "$($Projects.FitomX)\*.exe" "$Bin\"
+Copy-IfExists "$($Projects.FitomX)\fitom_gui.exe" "$Bin\"
+Copy-IfExists "$($Projects.FitomX)\fitom_cli.exe" "$Bin\"
 Copy-IfExists "$($Projects.FitomX)\*.dll" "$Bin\"
 Copy-IfExists "$($Projects.FitomX)\assets" "$Bin\"
 
@@ -108,6 +109,7 @@ Copy-IfExists "$($Projects.DSGemuEngine)\DSGemuEngine.dll" "$Bin\engines\"
 Copy-IfExists "$($Projects.Y8960emu)\Y8960emuEngine.dll" "$Bin\engines\"
 
 # ── その他 ───────────────────────────────────────────────────────────────────
+Copy-IfExists ".\config\fitom.conf.json" "$Bin\"
 New-Item -ItemType Directory -Force -Path "$Stage\dist" | Out-Null
 New-Item -ItemType Directory -Force -Path "$Stage\logs" | Out-Null
 

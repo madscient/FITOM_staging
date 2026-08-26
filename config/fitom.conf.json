@@ -8,5 +8,8 @@
   "log": {
     "level": "trace",
     "file":  "logs/fitom.log"
+  },
+  "profiles": {
+    "root": "./config/profiles"
   }
 }

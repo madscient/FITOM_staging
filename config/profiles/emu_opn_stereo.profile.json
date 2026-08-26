@@ -137,5 +137,5 @@
     { "mpu": 0, "ch": 14, "fluidsynth_chan": 0 },
     { "mpu": 0, "ch": 15, "fluidsynth_chan": 1 }
   ],
-  "profile_name": "OPNエミュプロファイル (OPN/OPN2/OPNA/OPNB/OPNBB)"
+  "profile_name": "OPNエミュプロファイル・リニアステレオ (OPN/OPN2/OPNA/OPNB/OPNBB)"
 }
