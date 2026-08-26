@@ -116,3 +116,103 @@ OPLLエミュプロファイルの通常モードパッチバンク
 | OPLL Built-In ROM | `hw_bank=0`(チップ内蔵、機械合成) | 37 |
 | SHS-10/PSS-170 | `hw_bank=2` | 24 |
 | MA-2 Preset2OP | `hw_bank=4`(OPL2用バンクをOPLLとして直接参照) | 67 |
+
+## 機種別プロファイル
+
+実在した機種のサウンド構成を模したプロファイルです。搭載チップに応じて
+複数のエミュレーションエンジンを組み合わせています。
+
+### MSXプロファイル
+
+設定ファイル: `config/profiles/emu_msx.profile.json`
+
+**チップ構成:**
+
+| チップ | クロック | エンジン | 備考 |
+|---|---|---|---|
+| OPLL | 3,579,545Hz | DSAemuEngine | MSX-MUSIC、ビルトインリズム有効 |
+| Y8950 | 3,579,545Hz | DSAemuEngine | MSX-AUDIO、ビルトインリズム有効 |
+| SSG | 2,000,000Hz | DSAemuEngine | 本体内蔵PSG |
+| SCC+ | 3,579,545Hz | DSAemuEngine | SCC-I |
+| OPM | 3,579,545Hz | YMFMEngine | SFG-05 |
+
+**通常モード(CC#0=0, CC#32=0)のパッチバンク:** `gm_layered_opll.patchbank.json`
+
+**ドラムキット(prog0):** OPLL Built-in set
+
+OPLL-P/OPLL-X/VRC7のROM音色を参照するパッチは、対応するチップを
+搭載していないため発音しません。
+
+### MSX2++プロファイル
+
+設定ファイル: `config/profiles/emu_msx2pp.profile.json`
+
+**チップ構成:**
+
+| チップ | クロック | エンジン | 備考 |
+|---|---|---|---|
+| OPLLEX×2 | 3,579,545Hz | Y8960emuEngine | リニアステレオ、ビルトインリズム有効 |
+| OPL2EX×2 | 3,579,545Hz | Y8960emuEngine | リニアステレオ |
+| SSG×2 | 2,000,000Hz | DSAemuEngine | リニアステレオ |
+| DCSG×2 | 3,579,545Hz | DSAemuEngine | リニアステレオ |
+| SCC | 3,579,545Hz | DSAemuEngine | |
+
+**通常モード(CC#0=0, CC#32=0)のパッチバンク:** `gm_layered_opll.patchbank.json`
+
+**ドラムキット(prog0):** OPLL Built-in set
+
+OPLL系ROM音色(CC#0=40-43, CC#32=0)はOPLLEXへフォールバックしないため
+発音しません。OPLLEX自身のROM音色はCC#0=44で選択します。
+
+### PC-88プロファイル
+
+設定ファイル: `config/profiles/emu_pc88.profile.json`
+
+**チップ構成:**
+
+| チップ | クロック | エンジン | 備考 |
+|---|---|---|---|
+| OPN | 3,993,600Hz | YMFMEngine | サウンドボード |
+| OPNA | 7,987,200Hz | YMFMEngine | サウンドボードII、ビルトインリズム/ADPCM-B付き |
+| OPM | 3,579,545Hz | YMFMEngine | |
+
+**通常モード(CC#0=0, CC#32=0)のパッチバンク:** `necopn_gm.patchbank.json`
+
+**ドラムキット(prog0):** OPNA Built-in set
+
+### PC-98プロファイル
+
+設定ファイル: `config/profiles/emu_pc98.profile.json`
+
+**チップ構成:**
+
+| チップ | クロック | エンジン | 備考 |
+|---|---|---|---|
+| OPN | 3,993,600Hz | YMFMEngine | PC-9801-26K |
+| OPNA | 7,987,200Hz | YMFMEngine | PC-9801-86、ビルトインリズム/ADPCM-B付き |
+| OPL3 | 14,318,180Hz | YMFMEngine | |
+| Y8950 | 3,579,545Hz | YMFMEngine | ビルトインリズム有効 |
+
+**通常モード(CC#0=0, CC#32=0)のパッチバンク:** `necopn_gm.patchbank.json`
+
+**ドラムキット(prog0):** OPNA Built-in set
+
+ADPCM-B(CC#0=81)はOPNAとY8950の2チップにまたがる1デバイスとして扱われます。
+
+### IBM PCプロファイル
+
+設定ファイル: `config/profiles/emu_ibmpc.profile.json`
+
+**チップ構成:**
+
+| チップ | クロック | エンジン | 備考 |
+|---|---|---|---|
+| SAA×2 | 8,000,000Hz | SAASoundEngine | Game Blaster/CMS、2枚で12ch1デバイス |
+| OPL2 | 3,579,545Hz | YMFMEngine | AdLib、ビルトインリズム有効 |
+| OPL3 | 14,318,180Hz | YMFMEngine | Sound Blaster Pro2以降 |
+| OPM | 3,579,545Hz | YMFMEngine | IBM Music Feature Card |
+| DCSG | 3,579,545Hz | DSAemuEngine | PCjr/Tandy |
+
+**通常モード(CC#0=0, CC#32=0)のパッチバンク:** `gm_layered_opl3.patchbank.json`
+
+**ドラムキット(prog0):** OPL Built-in set

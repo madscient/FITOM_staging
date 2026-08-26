@@ -1,0 +1,126 @@
+{
+  "_comment": [
+    "MSX実機の音源構成を模したプロファイル。OPLL(MSX-MUSIC)/Y8950(MSX-AUDIO)/",
+    "SSG(AY-3-8910)/SCC+(SCC-I)はいずれもdigital-sound-antiques系コアを束ねた",
+    "DSAemuEngineが対応しており、1エンジンで賄える。OPM(YAMAHA SFG-05)だけは",
+    "DSAemuEngineが持たないためYMFMEngineを併用する。",
+    "SSGのclockはDSAemuEngineの既定値と揃えた2000000(3.53参照、音程テーブルは",
+    "この実クロックから生成されるためMSX実機の1.7897725MHzでなくても調律は合う)。",
+    "SCC+は現状DSAemuEngine側のレジスタ窓の不整合で無音(docs/CLAUDE.md 4節)。",
+    "bank_overridesで敷くgm_layered_opllのROM音色レイヤー(hw_bank=0)には",
+    "OPLL-P/OPLL-X/VRC7のROMを指すものが含まれ、ROM音色はフォールバック",
+    "非対応のためOPLL1枚だけのこのプロファイルでは発音しない(ユーザーバンクを",
+    "指すhw_bank=2/4のレイヤーはopllFamilyAcceptsFallback()でOPLLへ落ちる)。"
+  ],
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルの主役であるOPLL向けのバンクで上書きする。",
+    "drum_banks": [
+      {
+        "file": "../../banks/drums/opll_rhythm.drumkit.json",
+        "name": "OPLL Built-in set",
+        "prog": 0
+      }
+    ],
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/gm_layered_opll.patchbank.json"
+      }
+    ]
+  },
+  "banks": "unified.bankset.json",
+  "devices": [
+    {
+      "chip": "OPLL",
+      "engine": "engines/DSAemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPLL (MSX-MUSIC)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "Y8950",
+      "engine": "engines/DSAemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "Y8950 (MSX-AUDIO)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SSG",
+      "engine": "engines/DSAemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SSG (PSG)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SCCP",
+      "engine": "engines/DSAemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SCC+ (SCC-I)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPM",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPM (SFG-05)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SF2",
+      "if": "HW",
+      "label": "SF2 (FluidSynth)",
+      "plugin": "FitomSf2IF"
+    }
+  ],
+  "hw_plugins": [
+    {
+      "auto_devices": false,
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_msx.profile.json"
+    },
+    {
+      "dll": "FitomSf2IF.dll",
+      "name": "FitomSf2IF",
+      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
+    }
+  ],
+  "master_pitch": 440.0,
+  "master_volume": 100,
+  "midi_inputs": [
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
+  ],
+  "profile_name": "MSXプロファイル (OPLL[rhythm]/Y8950[rhythm]/SSG/SCC+/OPM)",
+  "sf2_channel_windows": [
+    {
+      "ch": 14,
+      "fluidsynth_chan": 0,
+      "mpu": 0
+    },
+    {
+      "ch": 15,
+      "fluidsynth_chan": 1,
+      "mpu": 0
+    }
+  ]
+}

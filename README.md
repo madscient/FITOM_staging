@@ -25,6 +25,11 @@ FITOM_staging/
 │   │   ├── emu_opm.profile.json             OPMエミュプロファイル (OPM×2/OPZ×2)
 │   │   ├── emu_opll.profile.json            OPLLエミュプロファイル (OPLL[rhythm]/OPLLP/VRC7/OPLLX/OPLLEX)
 │   │   ├── fmall.profile.json               FMALL (OPZ/OPL3/OPL4AWM/OPNBB/OPLLEX、各L/R2枚)
+│   │   ├── emu_msx.profile.json             MSXプロファイル (OPLL[rhythm]/Y8950[rhythm]/SSG/SCC+/OPM)
+│   │   ├── emu_msx2pp.profile.json          MSX2++プロファイル (OPLLEX[rhythm]/OPL2EX/SSG/DCSG 各2 リニアステレオ + SCC)
+│   │   ├── emu_pc88.profile.json            PC-88プロファイル (OPN/OPNA/OPM)
+│   │   ├── emu_pc98.profile.json            PC-98プロファイル (OPN/OPNA/OPL3/Y8950[rhythm])
+│   │   ├── emu_ibmpc.profile.json           IBM PCプロファイル (SAA×2/OPL2[rhythm]/OPL3/OPM/DCSG)
 │   │   │
 │   │   └── hw_plugins/     上記プロファイルの hw_plugins[].profile が指す
 │   │       │               プラグイン固有サブプロファイル (第2階層)
@@ -32,8 +37,13 @@ FITOM_staging/
 │   │       ├── fmemuif_opl5.profile.json   FitomEmuIF 用 (OPL系 5チップ)
 │   │       ├── fmemuif_opm_opz4.profile.json FitomEmuIF 用 (OPM/OPZ 4チップ)
 │   │       ├── fmemuif_opll5.profile.json  FitomEmuIF 用 (OPLL系 5チップ)
-│   │       └── fmemuif_fmall_stereo_lite.profile.json
-│   │                                       FitomEmuIF 用 (FMALL 8チップ、L/R2枚ずつ)
+│   │       ├── fmemuif_fmall_stereo_lite.profile.json
+│   │       │                               FitomEmuIF 用 (FMALL 8チップ、L/R2枚ずつ)
+│   │       ├── fmemuif_msx.profile.json    FitomEmuIF 用 (MSX 5チップ)
+│   │       ├── fmemuif_msx2pp.profile.json FitomEmuIF 用 (MSX2++ 9チップ)
+│   │       ├── fmemuif_pc88.profile.json   FitomEmuIF 用 (PC-88 3チップ)
+│   │       ├── fmemuif_pc98.profile.json   FitomEmuIF 用 (PC-98 4チップ)
+│   │       └── fmemuif_ibmpc.profile.json  FitomEmuIF 用 (IBM PC 6チップ)
 │
 ├── config_schema/          JSON Schema 定義
 │   ├── profile.schema.json
@@ -105,6 +115,11 @@ FITOM_X 本体はエミュレーターか実機かを区別しない。
 | emu_opll | fmemuif_opll5.profile.json |
 | fmall | fmemuif_fmall_stereo_lite.profile.json |
 | emu_psg_stereo | fmemuif_psg_stereo.profile.json |
+| emu_msx | fmemuif_msx.profile.json |
+| emu_msx2pp | fmemuif_msx2pp.profile.json |
+| emu_pc88 | fmemuif_pc88.profile.json |
+| emu_pc98 | fmemuif_pc98.profile.json |
+| emu_ibmpc | fmemuif_ibmpc.profile.json |
 
 (いずれも `config/profiles/hw_plugins/` 配下)
 
@@ -123,6 +138,7 @@ FitomHwIF実機構成を含む)は誰もメンテナンスしておらず統合�
 | FitomHwIF | 物理HW I/F DLL (`fitom_hw.dll`) | IHWPlugin 実装 |
 | FitomEmuIF | FMエンジン内蔵 hwif DLL (`FitomEmuIF.dll`) | IHWPlugin 実装 |
 | YMEngine | FM音源エミュレーター (`YMFMEngine.dll`、旧名`YMEngine.dll`から改称) | engines/ に配置 |
+| FmGenEngine | fmgen系FM音源エミュレーター (`FmGenEngineApi.dll`) | engines/ に配置 |
 | DSAemuEngine | digital-sound-antiques系エミュレーター (`DSAemuEngine.dll`) | engines/ に配置 |
 | EPSGemuEngine | AY8930(EPSG)エミュレーター (`EPSGemuEngine.dll`) | engines/ に配置 |
 | SAASoundEngine | SAA1099エミュレーター (`SAASoundEngine.dll`) | engines/ に配置 |

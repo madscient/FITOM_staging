@@ -1,0 +1,181 @@
+{
+  "_comment": [
+    "MSX2++の音源構成を模したプロファイル。OPLLEX/OPL2EX(Y8960の拡張OPLL部/",
+    "拡張OPL2部)はY8960emuEngineだけが持ち、SSG/DCSG/SCCはDSAemuEngineだけが",
+    "持つため、この2エンジンの組み合わせになる。",
+    "2個載せるチップはCLinearPanDeviceでリニアステレオ化する。OPLLEX/OPL2EX/",
+    "SSG/DCSGはgetChipPanType()がMonoを返すためチップ自身のL/R出力ビットで",
+    "分離する方式(stereo_pair:\"L\"/\"R\")は使えず、プラグイン側のpanで振り分ける",
+    "stereo_pair:true + pan:1/2 でなければならない(3.53/3.59参照)。",
+    "SCCは1個のためpan:0(Stereo)。現状DSAemuEngine側のレジスタ窓の不整合で",
+    "無音になる(docs/CLAUDE.md 4節)。",
+    "ビルトインリズムはOPLLEXの2枚(=1ペア)にのみ有効化した。OPL2EXにも付ける",
+    "とch6-8を失う代わりにDEVICE_OPL_RHYが増えるだけで、リズム音源としては",
+    "OPLLEX側のDEVICE_OPLL_RHYと二重になる。",
+    "OPL2EX内蔵ADPCM-B(DEVICE_ADPCMB_OPL2EX)向けの波形イメージは",
+    "pcm_image_catalog.jsonにまだ無く、ADPCM部は発音しない。",
+    "bank_overridesで敷くgm_layered_opllのうち、ROM音色レイヤー(hw_bank=0)は",
+    "CC#0=40(OPLL)指定でROM音色はフォールバック非対応のため、OPLL系がOPLLEXしか",
+    "無いこのプロファイルでは発音しない。ユーザーバンクを指すhw_bank=2/4の",
+    "レイヤーはopllFamilyAcceptsFallback()でOPLLEXへ落ちる。"
+  ],
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルの主役であるOPLLEX(opllFamilyAcceptsFallback()によりOPLL系バンクがそのまま鳴る)向けのバンクで上書きする。",
+    "drum_banks": [
+      {
+        "file": "../../banks/drums/opll_rhythm.drumkit.json",
+        "name": "OPLL Built-in set",
+        "prog": 0
+      }
+    ],
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/gm_layered_opll.patchbank.json"
+      }
+    ]
+  },
+  "banks": "unified.bankset.json",
+  "devices": [
+    {
+      "chip": "OPLLEX",
+      "engine": "engines/Y8960emuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPLLEX",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPLLEX",
+      "engine": "engines/Y8960emuEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "OPLLEX",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL2EX",
+      "engine": "engines/Y8960emuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPL2EX",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL2EX",
+      "engine": "engines/Y8960emuEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "OPL2EX",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SSG",
+      "engine": "engines/DSAemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SSG",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SSG",
+      "engine": "engines/DSAemuEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "SSG",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "DCSG",
+      "engine": "engines/DSAemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "DCSG",
+      "pan": 1,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "DCSG",
+      "engine": "engines/DSAemuEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "DCSG",
+      "pan": 2,
+      "plugin": "FitomEmuIF",
+      "stereo_pair": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SCC",
+      "engine": "engines/DSAemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SCC",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SF2",
+      "if": "HW",
+      "label": "SF2 (FluidSynth)",
+      "plugin": "FitomSf2IF"
+    }
+  ],
+  "hw_plugins": [
+    {
+      "auto_devices": false,
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_msx2pp.profile.json"
+    },
+    {
+      "dll": "FitomSf2IF.dll",
+      "name": "FitomSf2IF",
+      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
+    }
+  ],
+  "master_pitch": 440.0,
+  "master_volume": 100,
+  "midi_inputs": [
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
+  ],
+  "profile_name": "MSX2++プロファイル (OPLLEX[rhythm]/OPL2EX/SSG/DCSG 各2 リニアステレオ + SCC)",
+  "sf2_channel_windows": [
+    {
+      "ch": 14,
+      "fluidsynth_chan": 0,
+      "mpu": 0
+    },
+    {
+      "ch": 15,
+      "fluidsynth_chan": 1,
+      "mpu": 0
+    }
+  ]
+}

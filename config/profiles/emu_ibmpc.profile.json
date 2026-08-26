@@ -1,0 +1,135 @@
+{
+  "_comment": [
+    "IBM PC/AT系サウンドカードの音源構成を模したプロファイル。SAA1099(Game",
+    "Blaster/CMS)はSAASoundEngine、SN76496系のDCSG(PCjr/Tandy)はDSAemuEngine、",
+    "OPL2(AdLib)/OPL3(Sound Blaster Pro2以降)/OPM(IBM Music Feature Card)は",
+    "YMFMEngineが対応しており、この3エンジンの組み合わせになる。",
+    "SAAはGame Blaster実機と同じく2個載せるが、チャンネルごとに左右独立の音量",
+    "レジスタを持つ(getChipPanType()のContinuous分類)ため、リニアステレオ化せず",
+    "pan:0(Stereo)の独立2デバイスとする。L/R固定で束ねると本来のパンポットを",
+    "潰した上でチップを2倍消費することになる(3.53参照)。",
+    "SAAのclockはCSAA1099のコンストラクタ既定値8MHz固定に合わせる必要がある。",
+    "2枚のSAAはmergeSpannableDevices()で1デバイス(12ch)へ統合されるため、",
+    "labelは両エントリとも同じにしてある。"
+  ],
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルの主役であるOPL3向けのバンクで上書きする。ドラムキット0はrhythm_modeを有効にしたOPL2のビルトインリズム。",
+    "drum_banks": [
+      {
+        "file": "../../banks/drums/opl_builtin_rhythm.drumkit.json",
+        "name": "OPL Built-in set",
+        "prog": 0
+      }
+    ],
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/gm_layered_opl3.patchbank.json"
+      }
+    ]
+  },
+  "banks": "unified.bankset.json",
+  "devices": [
+    {
+      "chip": "SAA",
+      "engine": "engines/SAASoundEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "SAA (Game Blaster)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SAA",
+      "engine": "engines/SAASoundEngine",
+      "if": "HW",
+      "index": 1,
+      "label": "SAA (Game Blaster)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL2",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPL2 (AdLib)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "rhythm_mode": true,
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPL3",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPL3 (Sound Blaster)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPM",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPM (Music Feature Card)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "DCSG",
+      "engine": "engines/DSAemuEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "DCSG (PCjr/Tandy)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SF2",
+      "if": "HW",
+      "label": "SF2 (FluidSynth)",
+      "plugin": "FitomSf2IF"
+    }
+  ],
+  "hw_plugins": [
+    {
+      "auto_devices": false,
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_ibmpc.profile.json"
+    },
+    {
+      "dll": "FitomSf2IF.dll",
+      "name": "FitomSf2IF",
+      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
+    }
+  ],
+  "master_pitch": 440.0,
+  "master_volume": 100,
+  "midi_inputs": [
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
+  ],
+  "profile_name": "IBM PCプロファイル (SAA×2/OPL2[rhythm]/OPL3/OPM/DCSG)",
+  "sf2_channel_windows": [
+    {
+      "ch": 14,
+      "fluidsynth_chan": 0,
+      "mpu": 0
+    },
+    {
+      "ch": 15,
+      "fluidsynth_chan": 1,
+      "mpu": 0
+    }
+  ]
+}

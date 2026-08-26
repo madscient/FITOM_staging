@@ -1,0 +1,100 @@
+{
+  "_comment": [
+    "PC-8801の音源構成を模したプロファイル。OPN(サウンドボード)/OPNA(サウンド",
+    "ボードII)/OPM(YM2151搭載ボード)の3チップはいずれもYMFMEngineが受理するため、",
+    "この1エンジンで完結する。",
+    "clockはPC-8801実機の値(YM2203=3.9936MHz、YM2608=7.9872MHz)。音程テーブルは",
+    "chips[].clockから生成されるため、他プロファイルの7159090との違いは調律では",
+    "なくOPNAのリズムROM/ADPCM再生レートに効く。",
+    "OPNAのビルトインリズムはrhythm_modeフラグの対象外で常に生成される(3.2節)。"
+  ],
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルの主役であるOPN系デバイス向けのバンクで上書きする。",
+    "drum_banks": [
+      {
+        "file": "../../banks/drums/opna_builtin.drumkit.json",
+        "name": "OPNA Built-in set",
+        "prog": 0
+      }
+    ],
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/necopn_gm.patchbank.json"
+      }
+    ]
+  },
+  "banks": "unified.bankset.json",
+  "devices": [
+    {
+      "chip": "OPN",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPN (サウンドボード)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPNA",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPNA (サウンドボードII)",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "OPM",
+      "engine": "engines/YMFMEngine",
+      "if": "HW",
+      "index": 0,
+      "label": "OPM",
+      "pan": 0,
+      "plugin": "FitomEmuIF",
+      "type": "FMHWIF"
+    },
+    {
+      "chip": "SF2",
+      "if": "HW",
+      "label": "SF2 (FluidSynth)",
+      "plugin": "FitomSf2IF"
+    }
+  ],
+  "hw_plugins": [
+    {
+      "auto_devices": false,
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_pc88.profile.json"
+    },
+    {
+      "dll": "FitomSf2IF.dll",
+      "name": "FitomSf2IF",
+      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
+    }
+  ],
+  "master_pitch": 440.0,
+  "master_volume": 100,
+  "midi_inputs": [
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__",
+    "__LOCAL__"
+  ],
+  "profile_name": "PC-88プロファイル (OPN/OPNA/OPM)",
+  "sf2_channel_windows": [
+    {
+      "ch": 14,
+      "fluidsynth_chan": 0,
+      "mpu": 0
+    },
+    {
+      "ch": 15,
+      "fluidsynth_chan": 1,
+      "mpu": 0
+    }
+  ]
+}

@@ -58,6 +58,11 @@ drum_banks 21件, pcm_banks 3件）を共有参照している（2026年7月29�
 | `emu_opll.profile.json` | OPLL専用（OPLL[rhythm]/OPLLP/VRC7/OPLLX/OPLLEX×1ずつ。OPLL2は3.37でエンジン非対応のため削除、OPLLEXは3.59で追加） |
 | `fmall.profile.json` | OPZ/OPL3/OPL4AWM/OPNBB/OPLLEXをL/R2枚ずつのリニアステレオで載せた構成（2026年7月19日新設、3.59で現構成へ） |
 | `emu_psg_stereo.profile.json` | PSG専用（SSG/DCSG/SCC×2ずつ=DSAemuEngine、EPSG×2=EPSGemuEngine、DSG×2=DSGemuEngineでリニアステレオ + SAA×1=SAASoundEngine。2026年8月14日新設、3.53/3.54参照） |
+| `emu_msx.profile.json` | MSX機種別（OPLL[rhythm]/Y8950[rhythm]/SSG/SCC+=DSAemuEngine、OPM=YMFMEngine。2026年8月27日新設、3.60参照） |
+| `emu_msx2pp.profile.json` | MSX2++機種別（OPLLEX[rhythm]/OPL2EX×2ずつ=Y8960emuEngine、SSG/DCSG×2ずつ+SCC×1=DSAemuEngineでリニアステレオ。同上） |
+| `emu_pc88.profile.json` | PC-88機種別（OPN/OPNA/OPM×1ずつ=YMFMEngine。同上） |
+| `emu_pc98.profile.json` | PC-98機種別（OPN/OPNA/OPL3/Y8950[rhythm]×1ずつ=YMFMEngine。同上） |
+| `emu_ibmpc.profile.json` | IBM PC機種別（SAA×2=SAASoundEngine、OPL2[rhythm]/OPL3/OPM=YMFMEngine、DCSG=DSAemuEngine。同上） |
 旧・個別プロファイル（`emulator_opm.profile.json`ほか計6件、統合前からの
 遺産）は、誰もメンテナンスしておらず統合後の構成と矛盾していたため
 2026年7月26日に削除した（3.30節参照）。
@@ -2627,10 +2632,79 @@ OPLL系5ペアが`[plugin-routed L/R]`で束ねられることを確認した
 デバイスが生成されない。プロファイル側の問題ではなく、FITOM_Xを
 再ビルドして`setup.ps1`を流し直せば解消する(4節)。
 
+### 3.60 機種別プロファイル5種を新設（2026年8月27日、ユーザー指示）
+「MSX/MSX2++/PC88/PC98/IBMPCの各機種の搭載チップに応じて、適切なエンジンの
+組み合わせを指定したプロファイルを作る」というユーザー指示に対応した。
+いずれもエミュレータ構成で、`config/profiles/emu_<機種>.profile.json` と
+`config/profiles/hw_plugins/fmemuif_<機種>.profile.json` の2階層。
+`banks`は他プロファイルと同じく`unified.bankset.json`をそのまま参照する。
+
+**エンジンの割り当て**: チップ名テーブルはエンジンDLLごとに固定で、
+どのチップをどのエンジンが受理するかで組み合わせが決まる。
+
+| エンジン | 受理するチップ名 |
+|---|---|
+| `YMFMEngine` | Y8950/OPL/OPL2/OPL3/OPL4/OPN/OPNA/OPNB/OPNBB/OPN2/OPM/OPLL/OPLLP/OPLLX/OPZ/VRC7 |
+| `FmGenEngineApi` | OPN/OPNA/OPNB/OPNBB/OPN2/OPM/SSG |
+| `DSAemuEngine` | SSG/OPLL/OPLLP/OPLLX/VRC7/Y8950/OPL/OPL2/SCC/SCCP/DCSG |
+| `EPSGemuEngine` | EPSG/SSG/SSGS/SSGS2/SSGS3 |
+| `Y8960emuEngine` | OPL2EX/OPLLEX |
+| `SAASoundEngine` | SAA |
+| `DSGemuEngine` | DSG |
+
+これに基づき、SCC+/SCC/DCSGはDSAemuEngine、OPLLEX/OPL2EXはY8960emuEngine、
+SAAはSAASoundEngineと一意に決まる。選択の余地があったのは以下。
+- MSXのOPLL/Y8950/SSGはDSAemuEngine(digital-sound-antiques系のemu2413/
+  emu8950/emu2149)に寄せた。同エンジンでSCC+も賄えるため、MSX本体側の
+  チップが1エンジンにまとまる。OPMだけはDSAemuEngineが持たないため
+  YMFMEngineを併用。
+- PC-88(OPN/OPNA/OPM)・PC-98(OPN/OPNA/OPL3/Y8950)はどちらも全チップを
+  YMFMEngineが受理するため、1エンジンで完結させた(FmGenEngineApiも
+  OPN/OPNA/OPMを受理するが、PC-98のOPL3/Y8950を賄えず2エンジンになる)。
+
+**クロック**: PSG系は3.53で検証済みの値(SSG=2000000、DCSG=3579545、
+SCC/SCCP=3579545、SAA=8000000)をそのまま使う。OPN/OPNAはPC-88/PC-98実機の
+値(YM2203=3993600、YM2608=7987200)とした。音程テーブルは`chips[].clock`から
+生成されるため調律には影響せず、OPNAのリズムROM/ADPCM再生レートに効く。
+
+**判明した挙動**:
+- 素のOPN(YM2203)は`resolveCompositeSpec()`でcomposite展開されず、SSG部の
+  サブデバイスが生成されない(FM 3chのみ)。OPNAは従来通りFM/SSG/ADPCM-B/
+  RHYTHMの4サブデバイスに展開される。
+- 同一VoicePatchTypeのチップを複数枚載せると`mergeSpannableDevices()`が
+  1デバイスへ統合する。`emu_ibmpc`のSAA×2は12ch1デバイス(Game Blaster相当)、
+  `emu_pc98`のOPNA/Y8950のADPCM-Bは2ch1デバイスになる。後者は
+  `pcm_banks`のADPCM-B bank0が`chip=OPNA`(32byteバウンダリ)で登録されて
+  いるため、Y8950側(4byteバウンダリ)へ回ったボイスは意図した波形にならない
+  可能性がある(4節)。
+- `gm_layered_opll.patchbank.json`のROM音色レイヤー(hw_bank=0)は
+  OPLL/OPLL-P/OPLL-X/VRC7それぞれの実デバイスを要求し、
+  `resolveOpllRomVoice()`はROM音色のフォールバックを許さない。OPLL1枚の
+  `emu_msx`ではOPLL-P/OPLL-X/VRC7由来の24パッチ(prog0の`[OPLLP] Piano`を
+  含む)が、OPLL系がOPLLEXしか無い`emu_msx2pp`ではROM音色37パッチ全てが
+  発音しない。ユーザーバンクを指すhw_bank=2/4のレイヤーは
+  `opllFamilyAcceptsFallback()`で落ちるため発音する(4節)。
+
+**検証**: 5プロファイルとも`profile.schema.json`でVALID、`devices[]`の
+(engine, chip, index)とサブプロファイルのスロットが1:1(未使用スロット・
+重複オープン0件)。`bin/fitom_cli.exe`で5本とも実起動し、`HWPort opened`が
+期待数出て`Failed to create HWPort`が0件、`emu_msx2pp`のSSG/DCSGペアが
+`[plugin-routed L/R]`で束ねられることを確認した。ただし`bin/`のFITOM_X本体が
+8月16日ビルドのままのため、`emu_msx2pp`のOPLLEX/OPL2EXは
+`resolveChipDeviceId: unknown chip`でスキップされ発音まで到達していない
+(3.59と同じ原因、4節)。聴感確認は全プロファイル未実施。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
 
+- **機種別プロファイルのROM音色/ADPCM-Bの制約**(3.60): `emu_msx`は
+  OPLL-P/OPLL-X/VRC7のROM音色24パッチ、`emu_msx2pp`はOPLL系ROM音色37パッチが
+  発音しない。指定されたチップ構成の範囲で直すにはOPLLEX専用(CC#0=44)の
+  レイヤードpatchbankを新設して`bank_overrides`で差し替えることになるが、
+  今回は既存バンクの範囲に留めた。また`emu_pc98`はOPNAとY8950のADPCM-Bが
+  1デバイスへ統合されるため、Y8950側へ回ったボイスがOPNA基準のオフセット
+  テーブルで再生される可能性がある。いずれも実際に鳴らしての確認が必要。
 - **`bin/`のFITOM_X本体を再ビルドする必要がある**(3.59): 配置済みの
   `bin/fitom_cli.exe`/`fitom_gui.exe`は8月16日ビルドでOPLLEXを知らないため
   (`unknown chip 'OPLLEX'`)、3プロファイルとも**OPLLEXデバイスだけが
