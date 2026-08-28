@@ -13,6 +13,7 @@
       fitom_hw.dll        物理チップ用プラグイン (FitomHwIF)
       engines/
         YMFMEngine.dll    FM音源エミュレーター
+        FmGenEngine.dll   fmgen系FM音源エミュレーター
         DSAemuEngine.dll  PSG系エミュレーター (SSG/DCSG/SCC/OPLL/OPL)
         EPSGemuEngine.dll AY8930 (EPSG) エミュレーター
         SAASoundEngine.dll  SAA1099 エミュレーター
@@ -101,7 +102,7 @@ Copy-IfExists "$($Projects.FitomSf2IF)\*.dll"    "$Bin\"
 
 # FM エンジン DLL
 Copy-IfExists "$($Projects.YMEngine)\YMFMEngine.dll" "$Bin\engines\"
-Copy-IfExists "$($Projects.FmGenEngine)\FmGenEngineApi.dll" "$Bin\engines\"
+Copy-IfExists "$($Projects.FmGenEngine)\FmGenEngine.dll" "$Bin\engines\"
 Copy-IfExists "$($Projects.DSAemuEngine)\DSAemuEngine.dll" "$Bin\engines\"
 Copy-IfExists "$($Projects.EPSGemuEngine)\EPSGemuEngine.dll" "$Bin\engines\"
 Copy-IfExists "$($Projects.SAASoundEngine)\SAASoundEngine.dll" "$Bin\engines\"

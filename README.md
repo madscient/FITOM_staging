@@ -138,7 +138,7 @@ FitomHwIF実機構成を含む)は誰もメンテナンスしておらず統合�
 | FitomHwIF | 物理HW I/F DLL (`fitom_hw.dll`) | IHWPlugin 実装 |
 | FitomEmuIF | FMエンジン内蔵 hwif DLL (`FitomEmuIF.dll`) | IHWPlugin 実装 |
 | YMEngine | FM音源エミュレーター (`YMFMEngine.dll`、旧名`YMEngine.dll`から改称) | engines/ に配置 |
-| FmGenEngine | fmgen系FM音源エミュレーター (`FmGenEngineApi.dll`) | engines/ に配置 |
+| FmGenEngine | fmgen系FM音源エミュレーター (`FmGenEngine.dll`) | engines/ に配置 |
 | DSAemuEngine | digital-sound-antiques系エミュレーター (`DSAemuEngine.dll`) | engines/ に配置 |
 | EPSGemuEngine | AY8930(EPSG)エミュレーター (`EPSGemuEngine.dll`) | engines/ に配置 |
 | SAASoundEngine | SAA1099エミュレーター (`SAASoundEngine.dll`) | engines/ に配置 |
