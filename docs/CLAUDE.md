@@ -2645,7 +2645,7 @@ OPLL系5ペアが`[plugin-routed L/R]`で束ねられることを確認した
 | エンジン | 受理するチップ名 |
 |---|---|
 | `YMFMEngine` | Y8950/OPL/OPL2/OPL3/OPL4/OPN/OPNA/OPNB/OPNBB/OPN2/OPM/OPLL/OPLLP/OPLLX/OPZ/VRC7 |
-| `FmGenEngineApi` | OPN/OPNA/OPNB/OPNBB/OPN2/OPM/SSG |
+| `FmGenEngine` | OPN/OPNA/OPNB/OPNBB/OPN2/OPM/SSG |
 | `DSAemuEngine` | SSG/OPLL/OPLLP/OPLLX/VRC7/Y8950/OPL/OPL2/SCC/SCCP/DCSG |
 | `EPSGemuEngine` | EPSG/SSG/SSGS/SSGS2/SSGS3 |
 | `Y8960emuEngine` | OPL2EX/OPLLEX |
@@ -2659,7 +2659,7 @@ SAAはSAASoundEngineと一意に決まる。選択の余地があったのは以
   チップが1エンジンにまとまる。OPMだけはDSAemuEngineが持たないため
   YMFMEngineを併用。
 - PC-88(OPN/OPNA/OPM)・PC-98(OPN/OPNA/OPL3/Y8950)はどちらも全チップを
-  YMFMEngineが受理するため、1エンジンで完結させた(FmGenEngineApiも
+  YMFMEngineが受理するため、1エンジンで完結させた(FmGenEngineも
   OPN/OPNA/OPMを受理するが、PC-98のOPL3/Y8950を賄えず2エンジンになる)。
 
 **クロック**: PSG系は3.53で検証済みの値(SSG=2000000、DCSG=3579545、
@@ -2694,7 +2694,25 @@ SCC/SCCP=3579545、SAA=8000000)をそのまま使う。OPN/OPNAはPC-88/PC-98実
 `resolveChipDeviceId: unknown chip`でスキップされ発音まで到達していない
 (3.59と同じ原因、4節)。聴感確認は全プロファイル未実施。
 
-### 3.61 ADPCM-Aバンクの機種入れ替え（PSS-560→PSS-480/RX21）（2026年9月18日、ユーザー指示）
+### 3.61 FmGenEngineのDLL名改称(FmGenEngineApi→FmGenEngine)へ追従（2026年8月28日）
+FmGenEngine側で出力DLL名が`FmGenEngineApi.dll`から`FmGenEngine.dll`へ改称
+された(CMake内部ターゲット名`FmEngineApi`自体は変更なし。これは
+`FmEngineApi`準拠ABIを指す共通の型名であり、各エンジンDLLの実ファイル名
+とは別物)。これに伴い`engines[].dll`の参照名と`setup.ps1`のコピー行・
+ヘッダーコメント、`README.md`・本ドキュメントの対応表を追従させた。
+- `config/profiles/hw_plugins/fmgenif_opn_profile.json`:
+  `engines/FmGenEngineApi` → `engines/FmGenEngine`
+- `setup.ps1`: `FmGenEngineApi.dll` → `FmGenEngine.dll`(コピー行・
+  ヘッダーコメント両方)。`setup.sh`側にFmGenEngine関連の記載は元々なく
+  対応不要(fmgenバックエンドはWindows専用ビルドのため)。
+- `README.md`/本ドキュメント3.60節のエンジン対応表・注釈も同様に更新。
+
+**未確認事項**: 前回のY8960emu改称時と異なり、実機起動での動作確認は
+未実施(手元に`../FmGenEngine`の再ビルド成果物がなかったため)。次回
+`setup.ps1`実行後、`fmgenif_opn_profile.json`を使うプロファイルで
+`engines/FmGenEngine.dll`が正しくロードされることを確認すること(4節)。
+
+### 3.62 ADPCM-Aバンクの機種入れ替え（PSS-560→PSS-480/RX21）（2026年9月18日、ユーザー指示）
 
 `wavs/rhythm ADPCM-A (OPNB)`(CC#0=82/CC#32=1)からPSS-560の18音を外し、
 PSS-480の9音とRX21のタム3音を追加した。127→121エントリー、
@@ -2755,7 +2773,7 @@ bankset/profileの参照ファイル実在。(3)`bin/fitom_cli.exe`に
 音色で鳴るかは未確認)。
 
 
-### 3.62 ADPCM-B単独チップ構成用の抜粋バンクを新設（2026年9月18日、ユーザー指示）
+### 3.63 ADPCM-B単独チップ構成用の抜粋バンクを新設（2026年9月18日、ユーザー指示）
 
 ADPCM-Bしか持たないチップ(Y8950等)だけで構成したプロファイルでもリズムが
 鳴るように、`banks/PCM/common/params_y8950_adpcmb_excerpt.json`と
@@ -2807,11 +2825,17 @@ git管理下という違いもある。PSR-38の2音は`wavs/melodic/`側が元�
 チップ側の制約ではなく、FITOMはMSX-AUDIOを鳴らすわけではないので考慮不要
 (ユーザー指摘)。
 
-
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
 
+- **FmGenEngine改称後の実機起動確認が未実施**(3.61): `FmGenEngineApi.dll`→
+  `FmGenEngine.dll`への追従はプロファイル・スクリプト・ドキュメントの
+  文字列置換のみで、`../FmGenEngine`の再ビルド成果物が手元になく
+  `setup.ps1`実行や`bin/fitom_cli.exe`での実起動確認ができていない。
+  `FmGenEngine`側を再ビルドし`setup.ps1`を流した上で、
+  `fmgenif_opn_profile.json`を使うプロファイルでOPN2/OPNA/OPNB/OPNBBの
+  HWPortが期待数開くことを確認すること。
 - **機種別プロファイルのROM音色/ADPCM-Bの制約**(3.60): `emu_msx`は
   OPLL-P/OPLL-X/VRC7のROM音色24パッチ、`emu_msx2pp`はOPLL系ROM音色37パッチが
   発音しない。指定されたチップ構成の範囲で直すにはOPLLEX専用(CC#0=44)の

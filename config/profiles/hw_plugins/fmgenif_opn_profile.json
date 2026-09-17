@@ -6,7 +6,7 @@
   "pcm_catalog":   "../../../pcm_image_catalog.json",
   "engines": [
     {
-      "dll": "engines/FmGenEngineApi",
+      "dll": "engines/FmGenEngine",
       "chips": [
         { "chip": "OPN2",  "clock": 7159090, "pan": 0 },
         { "chip": "OPNA",  "clock": 7159090, "pan": 0 },
