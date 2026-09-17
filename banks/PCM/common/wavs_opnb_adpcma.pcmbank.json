@@ -125,12 +125,6 @@
     { "entry_no": 117, "sw_bank": 0, "sw_prog": 2 },
     { "entry_no": 118, "sw_bank": 0, "sw_prog": 2 },
     { "entry_no": 119, "sw_bank": 0, "sw_prog": 2 },
-    { "entry_no": 120, "sw_bank": 0, "sw_prog": 2 },
-    { "entry_no": 121, "sw_bank": 0, "sw_prog": 2 },
-    { "entry_no": 122, "sw_bank": 0, "sw_prog": 2 },
-    { "entry_no": 123, "sw_bank": 0, "sw_prog": 2 },
-    { "entry_no": 124, "sw_bank": 0, "sw_prog": 2 },
-    { "entry_no": 125, "sw_bank": 0, "sw_prog": 2 },
-    { "entry_no": 126, "sw_bank": 0, "sw_prog": 2 }
+    { "entry_no": 120, "sw_bank": 0, "sw_prog": 2 }
   ]
 }

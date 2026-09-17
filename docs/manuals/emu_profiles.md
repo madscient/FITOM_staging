@@ -31,7 +31,7 @@
 - `necopn_gm.patchbank.json`
 
 **ドラムキット(prog16-22, 24, 40のうち以下9種):**
-- PSS-560 GM Drum Kit (OPNB) [prog21]
+- PSS-480 GM Drum Kit (OPNB) [prog21]
 - PSS-590 GM Drum Kit (OPNB) [prog17]
 - PSS-680 GM Drum Kit (OPNB) [prog18]
 - RX5 GM Drum Kit (OPNB) [prog19]
@@ -76,7 +76,7 @@
 - `gm_layered_opm.patchbank.json`
 
 **ドラムキット:** ALSA/MA-2/OPNA/OPLL/OPL Built-in/OPL4-AWM各種
-(prog2-13,15)に加え、PSS-590/680・RX5・RX11/21L・PSS-560のADPCM-A GM
+(prog2-13,15)に加え、PSS-590/680・RX5・RX11/21L・PSS-480のADPCM-A GM
 ドラムキット(prog17-22)、およびGM2バリエーション相当のPSS-590
 Power/Electronic Kit(prog16,24)・PSS-680 Brush Kit(prog40)を収録。
 
@@ -97,7 +97,7 @@ Power/Electronic Kit(prog16,24)・PSS-680 Brush Kit(prog40)を収録。
 
 **ドラムキット:** OPLL Built-in set(prog12)に加え、ALSA/MA-2/OPNA/OPL
 Built-in/OPL4-AWM各種(prog2-13,15)、PSS-590/680・RX5・RX11/21L・
-PSS-560のADPCM-A GMドラムキット(prog17-22)、およびGM2バリエーション
+PSS-480のADPCM-A GMドラムキット(prog17-22)、およびGM2バリエーション
 相当のPSS-590 Power/Electronic Kit(prog16,24)・PSS-680 Brush
 Kit(prog40)を収録。
 

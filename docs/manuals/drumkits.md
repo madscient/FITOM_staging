@@ -27,7 +27,7 @@ Change)で以下のキットを選択します(CC#0=112は内蔵リズム音源�
 | 18 | [PSS-680 GM Drum Kit](#prog18-pss-680-gm-drum-kit) |
 | 19 | [RX5 GM Drum Kit](#prog19-rx5-gm-drum-kit) |
 | 20 | [RX11/21L GM Drum Kit](#prog20-rx1121l-gm-drum-kit) |
-| 21 | [PSS-560 GM Drum Kit](#prog21-pss-560-gm-drum-kit) |
+| 21 | [PSS-480 GM Drum Kit](#prog21-pss-480-gm-drum-kit) |
 | 22 | [RX5 Extra Kit](#prog22-rx5-extra-kit) |
 | 24 | [PSS-590 Electronic Kit](#prog24-pss-590-electronic-kit) |
 | 25 | [PSS-680 GM Drum Kit (SSGS)](#prog25-pss-680-gm-drum-kit-ssgs) |
@@ -858,231 +858,229 @@ DSGの内蔵リズムは**5音のみ**(BD/HC/SDN/HHO/HHD)です。打楽器の
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
 |---|---|---|---|---|
-| 35 | Acoustic Bass Drum | ADPCMA | 1/25 | 35 |
-| 36 | Power Kick Drum | ADPCMA | 1/31 | 36 |
-| 37 | Side Stick 2 | ADPCMA | 1/34 | 37 |
-| 38 | Power Snare Drum | ADPCMA | 1/21 | 38 |
-| 40 | Electric Snare | ADPCMA | 1/26 | 40 |
-| 41 | Low Floor Tom | ADPCMA | 1/27 | 41 |
-| 42 | Closed Hi-Hat | ADPCMA | 1/18 | 42 |
-| 43 | High Floor Tom | ADPCMA | 1/20 | 43 |
-| 44 | Pedal Hi-Hat | ADPCMA | 1/30 | 44 |
-| 45 | Low Tom | ADPCMA | 1/27 | 45 |
-| 46 | Open Hi-Hat | ADPCMA | 1/29 | 46 |
-| 47 | Low-Mid Tom | ADPCMA | 1/28 | 47 |
-| 48 | Hi-Mid Tom | ADPCMA | 1/28 | 48 |
-| 49 | Crash Cymbal 1 | ADPCMA | 1/19 | 49 |
-| 50 | High Tom | ADPCMA | 1/24 | 50 |
-| 51 | Ride Cymbal 1 | ADPCMA | 1/32 | 51 |
-| 55 | Splash Cymbal | ADPCMA | 1/35 | 55 |
-| 57 | Crash Cymbal 2 | ADPCMA | 1/19 | 57 |
-| 59 | Ride Cymbal 2 | ADPCMA | 1/32 | 59 |
+| 35 | Acoustic Bass Drum | ADPCMA | 1/16 | 35 |
+| 36 | Power Kick Drum | ADPCMA | 1/22 | 36 |
+| 37 | Side Stick 2 | ADPCMA | 1/25 | 37 |
+| 38 | Power Snare Drum | ADPCMA | 1/12 | 38 |
+| 40 | Electric Snare | ADPCMA | 1/17 | 40 |
+| 41 | Low Floor Tom | ADPCMA | 1/18 | 41 |
+| 42 | Closed Hi-Hat | ADPCMA | 1/9 | 42 |
+| 43 | High Floor Tom | ADPCMA | 1/11 | 43 |
+| 44 | Pedal Hi-Hat | ADPCMA | 1/21 | 44 |
+| 45 | Low Tom | ADPCMA | 1/18 | 45 |
+| 46 | Open Hi-Hat | ADPCMA | 1/20 | 46 |
+| 47 | Low-Mid Tom | ADPCMA | 1/19 | 47 |
+| 48 | Hi-Mid Tom | ADPCMA | 1/19 | 48 |
+| 49 | Crash Cymbal 1 | ADPCMA | 1/10 | 49 |
+| 50 | High Tom | ADPCMA | 1/15 | 50 |
+| 51 | Ride Cymbal 1 | ADPCMA | 1/23 | 51 |
+| 55 | Splash Cymbal | ADPCMA | 1/26 | 55 |
+| 57 | Crash Cymbal 2 | ADPCMA | 1/10 | 57 |
+| 59 | Ride Cymbal 2 | ADPCMA | 1/23 | 59 |
 
 ### Prog=17: PSS-590 GM Drum Kit
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
 |---|---|---|---|---|
-| 35 | Acoustic Bass Drum | ADPCMA | 1/25 | 35 |
-| 36 | Bass Drum 1 | ADPCMA | 1/22 | 36 |
-| 37 | Side Stick | ADPCMA | 1/33 | 37 |
-| 38 | Acoustic Snare | ADPCMA | 1/23 | 38 |
-| 40 | Electric Snare | ADPCMA | 1/26 | 40 |
-| 41 | Low Floor Tom | ADPCMA | 1/27 | 41 |
-| 42 | Closed Hi-Hat | ADPCMA | 1/18 | 42 |
-| 43 | High Floor Tom | ADPCMA | 1/20 | 43 |
-| 44 | Pedal Hi-Hat | ADPCMA | 1/30 | 44 |
-| 45 | Low Tom | ADPCMA | 1/27 | 45 |
-| 46 | Open Hi-Hat | ADPCMA | 1/29 | 46 |
-| 47 | Low-Mid Tom | ADPCMA | 1/28 | 47 |
-| 48 | Hi-Mid Tom | ADPCMA | 1/28 | 48 |
-| 49 | Crash Cymbal 1 | ADPCMA | 1/19 | 49 |
-| 50 | High Tom | ADPCMA | 1/24 | 50 |
-| 51 | Ride Cymbal 1 | ADPCMA | 1/32 | 51 |
-| 55 | Splash Cymbal | ADPCMA | 1/35 | 55 |
-| 57 | Crash Cymbal 2 | ADPCMA | 1/19 | 57 |
-| 59 | Ride Cymbal 2 | ADPCMA | 1/32 | 59 |
+| 35 | Acoustic Bass Drum | ADPCMA | 1/16 | 35 |
+| 36 | Bass Drum 1 | ADPCMA | 1/13 | 36 |
+| 37 | Side Stick | ADPCMA | 1/24 | 37 |
+| 38 | Acoustic Snare | ADPCMA | 1/14 | 38 |
+| 40 | Electric Snare | ADPCMA | 1/17 | 40 |
+| 41 | Low Floor Tom | ADPCMA | 1/18 | 41 |
+| 42 | Closed Hi-Hat | ADPCMA | 1/9 | 42 |
+| 43 | High Floor Tom | ADPCMA | 1/11 | 43 |
+| 44 | Pedal Hi-Hat | ADPCMA | 1/21 | 44 |
+| 45 | Low Tom | ADPCMA | 1/18 | 45 |
+| 46 | Open Hi-Hat | ADPCMA | 1/20 | 46 |
+| 47 | Low-Mid Tom | ADPCMA | 1/19 | 47 |
+| 48 | Hi-Mid Tom | ADPCMA | 1/19 | 48 |
+| 49 | Crash Cymbal 1 | ADPCMA | 1/10 | 49 |
+| 50 | High Tom | ADPCMA | 1/15 | 50 |
+| 51 | Ride Cymbal 1 | ADPCMA | 1/23 | 51 |
+| 55 | Splash Cymbal | ADPCMA | 1/26 | 55 |
+| 57 | Crash Cymbal 2 | ADPCMA | 1/10 | 57 |
+| 59 | Ride Cymbal 2 | ADPCMA | 1/23 | 59 |
 
 ### Prog=18: PSS-680 GM Drum Kit
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
 |---|---|---|---|---|
-| 35 | Acoustic Bass Drum | ADPCMA | 1/41 | 35 |
-| 36 | Bass Drum 1 | ADPCMA | 1/41 | 36 |
-| 37 | Side Stick | ADPCMA | 1/68 | 37 |
-| 38 | Acoustic Snare | ADPCMA | 1/69 | 38 |
-| 39 | Hand Clap | ADPCMA | 1/48 | 39 |
-| 40 | Electric Snare | ADPCMA | 1/70 | 40 |
-| 41 | Low Floor Tom | ADPCMA | 1/62 | 41 |
-| 42 | Closed Hi-Hat | ADPCMA | 1/45 | 42 |
-| 43 | High Floor Tom | ADPCMA | 1/55 | 43 |
-| 45 | Low Tom | ADPCMA | 1/61 | 45 |
-| 46 | Open Hi-Hat | ADPCMA | 1/66 | 46 |
-| 47 | Low-Mid Tom | ADPCMA | 1/64 | 47 |
-| 48 | Hi-Mid Tom | ADPCMA | 1/63 | 48 |
-| 49 | Crash Cymbal 1 | ADPCMA | 1/47 | 49 |
-| 50 | High Tom | ADPCMA | 1/54 | 50 |
-| 51 | Ride Cymbal 1 | ADPCMA | 1/67 | 51 |
-| 54 | Tambourine | ADPCMA | 1/65 | 54 |
-| 55 | Splash Cymbal | ADPCMA | 1/71 | 55 |
-| 56 | Cowbell | ADPCMA | 1/46 | 56 |
-| 57 | Crash Cymbal 2 | ADPCMA | 1/47 | 57 |
-| 59 | Ride Cymbal 2 | ADPCMA | 1/67 | 59 |
-| 60 | Hi Bongo | ADPCMA | 1/50 | 60 |
-| 61 | Low Bongo | ADPCMA | 1/57 | 61 |
-| 62 | Mute Hi Conga | ADPCMA | 1/51 | 62 |
-| 63 | Open Hi Conga | ADPCMA | 1/51 | 63 |
-| 64 | Low Conga | ADPCMA | 1/58 | 64 |
-| 65 | High Timbale | ADPCMA | 1/53 | 65 |
-| 66 | Low Timbale | ADPCMA | 1/60 | 66 |
-| 67 | High Agogo | ADPCMA | 1/49 | 67 |
-| 68 | Low Agogo | ADPCMA | 1/56 | 68 |
-| 69 | Cabasa | ADPCMA | 1/44 | 69 |
-| 71 | Short Whistle | ADPCMA | 1/72 | 71 |
-| 72 | Long Whistle | ADPCMA | 1/72 | 72 |
-| 78 | Mute Cuica | ADPCMA | 1/59 | 78 |
-| 79 | Open Cuica | ADPCMA | 1/52 | 79 |
+| 35 | Acoustic Bass Drum | ADPCMA | 1/32 | 35 |
+| 36 | Bass Drum 1 | ADPCMA | 1/32 | 36 |
+| 37 | Side Stick | ADPCMA | 1/59 | 37 |
+| 38 | Acoustic Snare | ADPCMA | 1/60 | 38 |
+| 39 | Hand Clap | ADPCMA | 1/39 | 39 |
+| 40 | Electric Snare | ADPCMA | 1/61 | 40 |
+| 41 | Low Floor Tom | ADPCMA | 1/53 | 41 |
+| 42 | Closed Hi-Hat | ADPCMA | 1/36 | 42 |
+| 43 | High Floor Tom | ADPCMA | 1/46 | 43 |
+| 45 | Low Tom | ADPCMA | 1/52 | 45 |
+| 46 | Open Hi-Hat | ADPCMA | 1/57 | 46 |
+| 47 | Low-Mid Tom | ADPCMA | 1/55 | 47 |
+| 48 | Hi-Mid Tom | ADPCMA | 1/54 | 48 |
+| 49 | Crash Cymbal 1 | ADPCMA | 1/38 | 49 |
+| 50 | High Tom | ADPCMA | 1/45 | 50 |
+| 51 | Ride Cymbal 1 | ADPCMA | 1/58 | 51 |
+| 54 | Tambourine | ADPCMA | 1/56 | 54 |
+| 55 | Splash Cymbal | ADPCMA | 1/62 | 55 |
+| 56 | Cowbell | ADPCMA | 1/37 | 56 |
+| 57 | Crash Cymbal 2 | ADPCMA | 1/38 | 57 |
+| 59 | Ride Cymbal 2 | ADPCMA | 1/58 | 59 |
+| 60 | Hi Bongo | ADPCMA | 1/41 | 60 |
+| 61 | Low Bongo | ADPCMA | 1/48 | 61 |
+| 62 | Mute Hi Conga | ADPCMA | 1/42 | 62 |
+| 63 | Open Hi Conga | ADPCMA | 1/42 | 63 |
+| 64 | Low Conga | ADPCMA | 1/49 | 64 |
+| 65 | High Timbale | ADPCMA | 1/44 | 65 |
+| 66 | Low Timbale | ADPCMA | 1/51 | 66 |
+| 67 | High Agogo | ADPCMA | 1/40 | 67 |
+| 68 | Low Agogo | ADPCMA | 1/47 | 68 |
+| 69 | Cabasa | ADPCMA | 1/35 | 69 |
+| 71 | Short Whistle | ADPCMA | 1/63 | 71 |
+| 72 | Long Whistle | ADPCMA | 1/63 | 72 |
+| 78 | Mute Cuica | ADPCMA | 1/50 | 78 |
+| 79 | Open Cuica | ADPCMA | 1/43 | 79 |
 
 ### Prog=19: RX5 GM Drum Kit
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
 |---|---|---|---|---|
-| 35 | Acoustic Bass Drum | ADPCMA | 1/108 | 35 |
-| 36 | Bass Drum 1 | ADPCMA | 1/109 | 36 |
-| 37 | Side Stick | ADPCMA | 1/114 | 37 |
-| 38 | Acoustic Snare | ADPCMA | 1/116 | 38 |
-| 39 | Hand Clap | ADPCMA | 1/102 | 39 |
-| 40 | Electric Snare | ADPCMA | 1/117 | 40 |
-| 42 | Closed Hi-Hat | ADPCMA | 1/106 | 42 |
-| 44 | Pedal Hi-Hat | ADPCMA | 1/106 | 44 |
-| 46 | Open Hi-Hat | ADPCMA | 1/107 | 46 |
-| 49 | Crash Cymbal 1 | ADPCMA | 1/103 | 49 |
-| 51 | Ride Cymbal 1 | ADPCMA | 1/105 | 51 |
-| 52 | Chinese Cymbal | ADPCMA | 1/101 | 52 |
-| 53 | Ride Bell | ADPCMA | 1/104 | 53 |
-| 54 | Tambourine | ADPCMA | 1/123 | 54 |
-| 57 | Crash Cymbal 2 | ADPCMA | 1/103 | 57 |
-| 59 | Ride Cymbal 2 | ADPCMA | 1/105 | 59 |
-| 60 | Hi Bongo | ADPCMA | 1/99 | 60 |
-| 61 | Low Bongo | ADPCMA | 1/100 | 61 |
-| 65 | High Timbale | ADPCMA | 1/125 | 65 |
-| 66 | Low Timbale | ADPCMA | 1/126 | 66 |
+| 35 | Acoustic Bass Drum | ADPCMA | 1/102 | 35 |
+| 36 | Bass Drum 1 | ADPCMA | 1/103 | 36 |
+| 37 | Side Stick | ADPCMA | 1/108 | 37 |
+| 38 | Acoustic Snare | ADPCMA | 1/110 | 38 |
+| 39 | Hand Clap | ADPCMA | 1/96 | 39 |
+| 40 | Electric Snare | ADPCMA | 1/111 | 40 |
+| 42 | Closed Hi-Hat | ADPCMA | 1/100 | 42 |
+| 44 | Pedal Hi-Hat | ADPCMA | 1/100 | 44 |
+| 46 | Open Hi-Hat | ADPCMA | 1/101 | 46 |
+| 49 | Crash Cymbal 1 | ADPCMA | 1/97 | 49 |
+| 51 | Ride Cymbal 1 | ADPCMA | 1/99 | 51 |
+| 52 | Chinese Cymbal | ADPCMA | 1/95 | 52 |
+| 53 | Ride Bell | ADPCMA | 1/98 | 53 |
+| 54 | Tambourine | ADPCMA | 1/117 | 54 |
+| 57 | Crash Cymbal 2 | ADPCMA | 1/97 | 57 |
+| 59 | Ride Cymbal 2 | ADPCMA | 1/99 | 59 |
+| 60 | Hi Bongo | ADPCMA | 1/93 | 60 |
+| 61 | Low Bongo | ADPCMA | 1/94 | 61 |
+| 65 | High Timbale | ADPCMA | 1/119 | 65 |
+| 66 | Low Timbale | ADPCMA | 1/120 | 66 |
 
 ### Prog=20: RX11/21L GM Drum Kit
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
 |---|---|---|---|---|
-| 35 | Acoustic Bass Drum | ADPCMA | 1/78 | 35 |
-| 36 | Bass Drum 1 | ADPCMA | 1/78 | 36 |
-| 37 | Side Stick | ADPCMA | 1/80 | 37 |
-| 38 | Acoustic Snare | ADPCMA | 1/81 | 38 |
-| 39 | Hand Clap | ADPCMA | 1/73 | 39 |
-| 40 | Electric Snare | ADPCMA | 1/82 | 40 |
-| 42 | Closed Hi-Hat | ADPCMA | 1/75 | 42 |
-| 44 | Pedal Hi-Hat | ADPCMA | 1/77 | 44 |
-| 46 | Open Hi-Hat | ADPCMA | 1/76 | 46 |
-| 49 | Crash Cymbal 1 | ADPCMA | 1/74 | 49 |
-| 51 | Ride Cymbal 1 | ADPCMA | 1/79 | 51 |
-| 54 | Tambourine | ADPCMA | 1/94 | 54 |
-| 56 | Cowbell | ADPCMA | 1/91 | 56 |
-| 57 | Crash Cymbal 2 | ADPCMA | 1/74 | 57 |
-| 59 | Ride Cymbal 2 | ADPCMA | 1/79 | 59 |
-| 60 | Hi Bongo | ADPCMA | 1/85 | 60 |
-| 61 | Low Bongo | ADPCMA | 1/86 | 61 |
-| 62 | Mute Hi Conga | ADPCMA | 1/88 | 62 |
-| 63 | Open Hi Conga | ADPCMA | 1/90 | 63 |
-| 64 | Low Conga | ADPCMA | 1/89 | 64 |
-| 65 | High Timbale | ADPCMA | 1/95 | 65 |
-| 66 | Low Timbale | ADPCMA | 1/96 | 66 |
-| 67 | High Agogo | ADPCMA | 1/83 | 67 |
-| 68 | Low Agogo | ADPCMA | 1/84 | 68 |
-| 71 | Short Whistle | ADPCMA | 1/98 | 71 |
-| 72 | Long Whistle | ADPCMA | 1/97 | 72 |
-| 75 | Claves | ADPCMA | 1/87 | 75 |
-| 78 | Mute Cuica | ADPCMA | 1/93 | 78 |
-| 79 | Open Cuica | ADPCMA | 1/92 | 79 |
+| 35 | Acoustic Bass Drum | ADPCMA | 1/69 | 35 |
+| 36 | Bass Drum 1 | ADPCMA | 1/69 | 36 |
+| 37 | Side Stick | ADPCMA | 1/71 | 37 |
+| 38 | Acoustic Snare | ADPCMA | 1/72 | 38 |
+| 39 | Hand Clap | ADPCMA | 1/64 | 39 |
+| 40 | Electric Snare | ADPCMA | 1/73 | 40 |
+| 41 | Low Floor Tom | ADPCMA | 1/75 | 41 |
+| 42 | Closed Hi-Hat | ADPCMA | 1/66 | 42 |
+| 43 | High Floor Tom | ADPCMA | 1/75 | 43 |
+| 44 | Pedal Hi-Hat | ADPCMA | 1/68 | 44 |
+| 45 | Low Tom | ADPCMA | 1/76 | 45 |
+| 46 | Open Hi-Hat | ADPCMA | 1/67 | 46 |
+| 47 | Low-Mid Tom | ADPCMA | 1/76 | 47 |
+| 48 | Hi-Mid Tom | ADPCMA | 1/74 | 48 |
+| 49 | Crash Cymbal 1 | ADPCMA | 1/65 | 49 |
+| 50 | High Tom | ADPCMA | 1/74 | 50 |
+| 51 | Ride Cymbal 1 | ADPCMA | 1/70 | 51 |
+| 54 | Tambourine | ADPCMA | 1/88 | 54 |
+| 56 | Cowbell | ADPCMA | 1/85 | 56 |
+| 57 | Crash Cymbal 2 | ADPCMA | 1/65 | 57 |
+| 59 | Ride Cymbal 2 | ADPCMA | 1/70 | 59 |
+| 60 | Hi Bongo | ADPCMA | 1/79 | 60 |
+| 61 | Low Bongo | ADPCMA | 1/80 | 61 |
+| 62 | Mute Hi Conga | ADPCMA | 1/82 | 62 |
+| 63 | Open Hi Conga | ADPCMA | 1/84 | 63 |
+| 64 | Low Conga | ADPCMA | 1/83 | 64 |
+| 65 | High Timbale | ADPCMA | 1/89 | 65 |
+| 66 | Low Timbale | ADPCMA | 1/90 | 66 |
+| 67 | High Agogo | ADPCMA | 1/77 | 67 |
+| 68 | Low Agogo | ADPCMA | 1/78 | 68 |
+| 71 | Short Whistle | ADPCMA | 1/92 | 71 |
+| 72 | Long Whistle | ADPCMA | 1/91 | 72 |
+| 75 | Claves | ADPCMA | 1/81 | 75 |
+| 78 | Mute Cuica | ADPCMA | 1/87 | 78 |
+| 79 | Open Cuica | ADPCMA | 1/86 | 79 |
 
-### Prog=21: PSS-560 GM Drum Kit
+### Prog=21: PSS-480 GM Drum Kit
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
 |---|---|---|---|---|
-| 35 | Acoustic Bass Drum | ADPCMA | 1/2 | 35 |
-| 36 | Bass Drum 1 | ADPCMA | 1/2 | 36 |
-| 37 | Side Stick | ADPCMA | 1/12 | 37 |
-| 38 | Acoustic Snare | ADPCMA | 1/13 | 38 |
-| 39 | Hand Clap | ADPCMA | 1/10 | 39 |
-| 40 | Electric Snare | ADPCMA | 1/13 | 40 |
-| 41 | Low Floor Tom | ADPCMA | 1/17 | 41 |
-| 42 | Closed Hi-Hat | ADPCMA | 1/6 | 42 |
-| 43 | High Floor Tom | ADPCMA | 1/14 | 43 |
-| 44 | Pedal Hi-Hat | ADPCMA | 1/6 | 44 |
-| 45 | Low Tom | ADPCMA | 1/17 | 45 |
-| 46 | Open Hi-Hat | ADPCMA | 1/11 | 46 |
-| 47 | Low-Mid Tom | ADPCMA | 1/16 | 47 |
-| 48 | Hi-Mid Tom | ADPCMA | 1/15 | 48 |
-| 49 | Crash Cymbal 1 | ADPCMA | 1/9 | 49 |
-| 50 | High Tom | ADPCMA | 1/14 | 50 |
-| 57 | Crash Cymbal 2 | ADPCMA | 1/9 | 57 |
-| 60 | Hi Bongo | ADPCMA | 1/3 | 60 |
-| 61 | Low Bongo | ADPCMA | 1/3 | 61 |
-| 62 | Mute Hi Conga | ADPCMA | 1/7 | 62 |
-| 63 | Open Hi Conga | ADPCMA | 1/7 | 63 |
-| 64 | Low Conga | ADPCMA | 1/8 | 64 |
-| 67 | High Agogo | ADPCMA | 1/0 | 67 |
-| 68 | Low Agogo | ADPCMA | 1/1 | 68 |
-| 69 | Cabasa | ADPCMA | 1/4 | 69 |
-| 75 | Claves | ADPCMA | 1/5 | 75 |
+| 35 | Acoustic Bass Drum | ADPCMA | 1/0 | 35 |
+| 36 | Bass Drum 1 | ADPCMA | 1/0 | 36 |
+| 37 | Side Stick | ADPCMA | 1/7 | 37 |
+| 38 | Acoustic Snare | ADPCMA | 1/8 | 38 |
+| 40 | Electric Snare | ADPCMA | 1/8 | 40 |
+| 41 | Low Floor Tom | ADPCMA | 1/4 | 41 |
+| 42 | Closed Hi-Hat | ADPCMA | 1/1 | 42 |
+| 43 | High Floor Tom | ADPCMA | 1/4 | 43 |
+| 44 | Pedal Hi-Hat | ADPCMA | 1/1 | 44 |
+| 45 | Low Tom | ADPCMA | 1/4 | 45 |
+| 46 | Open Hi-Hat | ADPCMA | 1/5 | 46 |
+| 47 | Low-Mid Tom | ADPCMA | 1/3 | 47 |
+| 48 | Hi-Mid Tom | ADPCMA | 1/3 | 48 |
+| 49 | Crash Cymbal 1 | ADPCMA | 1/2 | 49 |
+| 50 | High Tom | ADPCMA | 1/3 | 50 |
+| 51 | Ride Cymbal 1 | ADPCMA | 1/6 | 51 |
+| 57 | Crash Cymbal 2 | ADPCMA | 1/2 | 57 |
+| 59 | Ride Cymbal 2 | ADPCMA | 1/6 | 59 |
 
 ### Prog=22: RX5 Extra Kit
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
 |---|---|---|---|---|
-| 35 | Acoustic Bass Drum | ADPCMA | 1/108 | 35 |
-| 36 | Kick 03 | ADPCMA | 1/110 | 36 |
-| 37 | Kick 04 | ADPCMA | 1/111 | 37 |
-| 38 | Kick 05 | ADPCMA | 1/112 | 38 |
-| 39 | Kick 06 | ADPCMA | 1/113 | 39 |
-| 40 | Smack | ADPCMA | 1/115 | 40 |
-| 41 | Snare 03 | ADPCMA | 1/118 | 41 |
-| 42 | Snare 04 | ADPCMA | 1/119 | 42 |
-| 43 | Snare 05 | ADPCMA | 1/120 | 43 |
-| 44 | Snare 06 | ADPCMA | 1/121 | 44 |
-| 45 | Snare 07 | ADPCMA | 1/122 | 45 |
-| 46 | Thud | ADPCMA | 1/124 | 46 |
-| 49 | Crash Cymbal 1 | ADPCMA | 1/103 | 49 |
-| 51 | Ride Cymbal 1 | ADPCMA | 1/105 | 51 |
-| 52 | Chinese Cymbal | ADPCMA | 1/101 | 52 |
-| 53 | Ride Bell | ADPCMA | 1/104 | 53 |
-| 54 | Tambourine | ADPCMA | 1/123 | 54 |
-| 57 | Crash Cymbal 2 | ADPCMA | 1/103 | 57 |
-| 59 | Ride Cymbal 2 | ADPCMA | 1/105 | 59 |
-| 60 | Hi Bongo | ADPCMA | 1/99 | 60 |
-| 61 | Low Bongo | ADPCMA | 1/100 | 61 |
-| 65 | High Timbale | ADPCMA | 1/125 | 65 |
-| 66 | Low Timbale | ADPCMA | 1/126 | 66 |
+| 35 | Acoustic Bass Drum | ADPCMA | 1/102 | 35 |
+| 36 | Kick 03 | ADPCMA | 1/104 | 36 |
+| 37 | Kick 04 | ADPCMA | 1/105 | 37 |
+| 38 | Kick 05 | ADPCMA | 1/106 | 38 |
+| 39 | Kick 06 | ADPCMA | 1/107 | 39 |
+| 40 | Smack | ADPCMA | 1/109 | 40 |
+| 41 | Snare 03 | ADPCMA | 1/112 | 41 |
+| 42 | Snare 04 | ADPCMA | 1/113 | 42 |
+| 43 | Snare 05 | ADPCMA | 1/114 | 43 |
+| 44 | Snare 06 | ADPCMA | 1/115 | 44 |
+| 45 | Snare 07 | ADPCMA | 1/116 | 45 |
+| 46 | Thud | ADPCMA | 1/118 | 46 |
+| 49 | Crash Cymbal 1 | ADPCMA | 1/97 | 49 |
+| 51 | Ride Cymbal 1 | ADPCMA | 1/99 | 51 |
+| 52 | Chinese Cymbal | ADPCMA | 1/95 | 52 |
+| 53 | Ride Bell | ADPCMA | 1/98 | 53 |
+| 54 | Tambourine | ADPCMA | 1/117 | 54 |
+| 57 | Crash Cymbal 2 | ADPCMA | 1/97 | 57 |
+| 59 | Ride Cymbal 2 | ADPCMA | 1/99 | 59 |
+| 60 | Hi Bongo | ADPCMA | 1/93 | 60 |
+| 61 | Low Bongo | ADPCMA | 1/94 | 61 |
+| 65 | High Timbale | ADPCMA | 1/119 | 65 |
+| 66 | Low Timbale | ADPCMA | 1/120 | 66 |
 
 ### Prog=24: PSS-590 Electronic Kit
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
 |---|---|---|---|---|
-| 35 | Acoustic Bass Drum | ADPCMA | 1/25 | 35 |
-| 36 | Bass Drum 1 | ADPCMA | 1/22 | 36 |
-| 37 | Side Stick | ADPCMA | 1/33 | 37 |
-| 38 | Acoustic Snare | ADPCMA | 1/23 | 38 |
-| 40 | Electric Snare 2 | ADPCMA | 1/40 | 40 |
-| 41 | Electric Low Tom 2 | ADPCMA | 1/38 | 41 |
-| 42 | Closed Hi-Hat | ADPCMA | 1/18 | 42 |
-| 43 | Electric Low Tom 1 | ADPCMA | 1/36 | 43 |
-| 44 | Pedal Hi-Hat | ADPCMA | 1/30 | 44 |
-| 45 | Electric Mid Tom 2 | ADPCMA | 1/38 | 45 |
-| 46 | Open Hi-Hat | ADPCMA | 1/29 | 46 |
-| 47 | Electric Mid Tom 1 | ADPCMA | 1/39 | 47 |
-| 48 | Electric Hi Tom 2 | ADPCMA | 1/39 | 48 |
-| 49 | Crash Cymbal 1 | ADPCMA | 1/19 | 49 |
-| 50 | Electric Hi Tom 1 | ADPCMA | 1/37 | 50 |
-| 51 | Ride Cymbal 1 | ADPCMA | 1/32 | 51 |
-| 55 | Splash Cymbal | ADPCMA | 1/35 | 55 |
-| 57 | Crash Cymbal 2 | ADPCMA | 1/19 | 57 |
-| 59 | Ride Cymbal 2 | ADPCMA | 1/32 | 59 |
+| 35 | Acoustic Bass Drum | ADPCMA | 1/16 | 35 |
+| 36 | Bass Drum 1 | ADPCMA | 1/13 | 36 |
+| 37 | Side Stick | ADPCMA | 1/24 | 37 |
+| 38 | Acoustic Snare | ADPCMA | 1/14 | 38 |
+| 40 | Electric Snare 2 | ADPCMA | 1/31 | 40 |
+| 41 | Electric Low Tom 2 | ADPCMA | 1/29 | 41 |
+| 42 | Closed Hi-Hat | ADPCMA | 1/9 | 42 |
+| 43 | Electric Low Tom 1 | ADPCMA | 1/27 | 43 |
+| 44 | Pedal Hi-Hat | ADPCMA | 1/21 | 44 |
+| 45 | Electric Mid Tom 2 | ADPCMA | 1/29 | 45 |
+| 46 | Open Hi-Hat | ADPCMA | 1/20 | 46 |
+| 47 | Electric Mid Tom 1 | ADPCMA | 1/30 | 47 |
+| 48 | Electric Hi Tom 2 | ADPCMA | 1/30 | 48 |
+| 49 | Crash Cymbal 1 | ADPCMA | 1/10 | 49 |
+| 50 | Electric Hi Tom 1 | ADPCMA | 1/28 | 50 |
+| 51 | Ride Cymbal 1 | ADPCMA | 1/23 | 51 |
+| 55 | Splash Cymbal | ADPCMA | 1/26 | 55 |
+| 57 | Crash Cymbal 2 | ADPCMA | 1/10 | 57 |
+| 59 | Ride Cymbal 2 | ADPCMA | 1/23 | 59 |
 
 ### Prog=25: PSS-680 GM Drum Kit (SSGS)
 
@@ -1162,38 +1160,38 @@ DSGの内蔵リズムは**5音のみ**(BD/HC/SDN/HHO/HHD)です。打楽器の
 
 | MIDIノート | 楽器名 | 使用音源 | バンク/Prog | 演奏ノート |
 |---|---|---|---|---|
-| 35 | Acoustic Bass Drum | ADPCMA | 1/41 | 35 |
-| 36 | Bass Drum 1 | ADPCMA | 1/41 | 36 |
-| 37 | Side Stick | ADPCMA | 1/68 | 37 |
-| 38 | Brush Tap | ADPCMA | 1/43 | 38 |
-| 39 | Hand Clap | ADPCMA | 1/48 | 39 |
-| 40 | Brush Swirl | ADPCMA | 1/42 | 40 |
-| 41 | Low Floor Tom | ADPCMA | 1/62 | 41 |
-| 42 | Closed Hi-Hat | ADPCMA | 1/45 | 42 |
-| 43 | High Floor Tom | ADPCMA | 1/55 | 43 |
-| 45 | Low Tom | ADPCMA | 1/61 | 45 |
-| 46 | Open Hi-Hat | ADPCMA | 1/66 | 46 |
-| 47 | Low-Mid Tom | ADPCMA | 1/64 | 47 |
-| 48 | Hi-Mid Tom | ADPCMA | 1/63 | 48 |
-| 49 | Crash Cymbal 1 | ADPCMA | 1/47 | 49 |
-| 50 | High Tom | ADPCMA | 1/54 | 50 |
-| 51 | Ride Cymbal 1 | ADPCMA | 1/67 | 51 |
-| 54 | Tambourine | ADPCMA | 1/65 | 54 |
-| 55 | Splash Cymbal | ADPCMA | 1/71 | 55 |
-| 56 | Cowbell | ADPCMA | 1/46 | 56 |
-| 57 | Crash Cymbal 2 | ADPCMA | 1/47 | 57 |
-| 59 | Ride Cymbal 2 | ADPCMA | 1/67 | 59 |
-| 60 | Hi Bongo | ADPCMA | 1/50 | 60 |
-| 61 | Low Bongo | ADPCMA | 1/57 | 61 |
-| 62 | Mute Hi Conga | ADPCMA | 1/51 | 62 |
-| 63 | Open Hi Conga | ADPCMA | 1/51 | 63 |
-| 64 | Low Conga | ADPCMA | 1/58 | 64 |
-| 65 | High Timbale | ADPCMA | 1/53 | 65 |
-| 66 | Low Timbale | ADPCMA | 1/60 | 66 |
-| 67 | High Agogo | ADPCMA | 1/49 | 67 |
-| 68 | Low Agogo | ADPCMA | 1/56 | 68 |
-| 69 | Cabasa | ADPCMA | 1/44 | 69 |
-| 71 | Short Whistle | ADPCMA | 1/72 | 71 |
-| 72 | Long Whistle | ADPCMA | 1/72 | 72 |
-| 78 | Mute Cuica | ADPCMA | 1/59 | 78 |
-| 79 | Open Cuica | ADPCMA | 1/52 | 79 |
+| 35 | Acoustic Bass Drum | ADPCMA | 1/32 | 35 |
+| 36 | Bass Drum 1 | ADPCMA | 1/32 | 36 |
+| 37 | Side Stick | ADPCMA | 1/59 | 37 |
+| 38 | Brush Tap | ADPCMA | 1/34 | 38 |
+| 39 | Hand Clap | ADPCMA | 1/39 | 39 |
+| 40 | Brush Swirl | ADPCMA | 1/33 | 40 |
+| 41 | Low Floor Tom | ADPCMA | 1/53 | 41 |
+| 42 | Closed Hi-Hat | ADPCMA | 1/36 | 42 |
+| 43 | High Floor Tom | ADPCMA | 1/46 | 43 |
+| 45 | Low Tom | ADPCMA | 1/52 | 45 |
+| 46 | Open Hi-Hat | ADPCMA | 1/57 | 46 |
+| 47 | Low-Mid Tom | ADPCMA | 1/55 | 47 |
+| 48 | Hi-Mid Tom | ADPCMA | 1/54 | 48 |
+| 49 | Crash Cymbal 1 | ADPCMA | 1/38 | 49 |
+| 50 | High Tom | ADPCMA | 1/45 | 50 |
+| 51 | Ride Cymbal 1 | ADPCMA | 1/58 | 51 |
+| 54 | Tambourine | ADPCMA | 1/56 | 54 |
+| 55 | Splash Cymbal | ADPCMA | 1/62 | 55 |
+| 56 | Cowbell | ADPCMA | 1/37 | 56 |
+| 57 | Crash Cymbal 2 | ADPCMA | 1/38 | 57 |
+| 59 | Ride Cymbal 2 | ADPCMA | 1/58 | 59 |
+| 60 | Hi Bongo | ADPCMA | 1/41 | 60 |
+| 61 | Low Bongo | ADPCMA | 1/48 | 61 |
+| 62 | Mute Hi Conga | ADPCMA | 1/42 | 62 |
+| 63 | Open Hi Conga | ADPCMA | 1/42 | 63 |
+| 64 | Low Conga | ADPCMA | 1/49 | 64 |
+| 65 | High Timbale | ADPCMA | 1/44 | 65 |
+| 66 | Low Timbale | ADPCMA | 1/51 | 66 |
+| 67 | High Agogo | ADPCMA | 1/40 | 67 |
+| 68 | Low Agogo | ADPCMA | 1/47 | 68 |
+| 69 | Cabasa | ADPCMA | 1/35 | 69 |
+| 71 | Short Whistle | ADPCMA | 1/63 | 71 |
+| 72 | Long Whistle | ADPCMA | 1/63 | 72 |
+| 78 | Mute Cuica | ADPCMA | 1/50 | 78 |
+| 79 | Open Cuica | ADPCMA | 1/43 | 79 |

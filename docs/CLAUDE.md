@@ -2694,6 +2694,67 @@ SCC/SCCP=3579545、SAA=8000000)をそのまま使う。OPN/OPNAはPC-88/PC-98実
 `resolveChipDeviceId: unknown chip`でスキップされ発音まで到達していない
 (3.59と同じ原因、4節)。聴感確認は全プロファイル未実施。
 
+### 3.61 ADPCM-Aバンクの機種入れ替え（PSS-560→PSS-480/RX21）（2026年9月18日、ユーザー指示）
+
+`wavs/rhythm ADPCM-A (OPNB)`(CC#0=82/CC#32=1)からPSS-560の18音を外し、
+PSS-480の9音とRX21のタム3音を追加した。127→121エントリー、
+bin 594,688→386,304バイト。
+
+**前提（これが崩れると以下の手順は成立しない）**: ADPCM-Aの`patch_prog`は
+`wavs_opnb_adpcma.json`の`entries[]`の配列インデックスそのものであり、
+`params_opnb_adpcma.json`の`wav_files[]`の並び順がそのままprog番号になる。
+配列なので**欠番を作れない**。エントリーを抜けば後続のprogは必ず繰り上がり、
+`entries[]`を参照する全ドラムキットが別の音を指す。エントリー数を変えずに
+サイズだけ削っても(長すぎるwavのトリム等)prog枠は1つも空かない。
+
+**prog再配置**（機種順を保つ配置。PSS-480を先頭、RX21をRX11とRX21Lの間へ）:
+
+| 旧prog | 機種 | 新prog | シフト |
+|---|---|---|---|
+| 0-17 | PSS-560 | — | 削除 |
+| — | PSS-480 (新規9音) | 0-8 | — |
+| 18-40 | PSS-590 | 9-31 | -9 |
+| 41-72 | PSS-680 | 32-63 | -9 |
+| 73-82 | RX11 | 64-73 | -9 |
+| — | RX21 (新規3音、タムのみ) | 74-76 | — |
+| 83-98 | RX21L | 77-92 | -6 |
+| 99-126 | RX5 | 93-120 | -6 |
+
+**波及先**（progを持つ側は全てここに含まれる）:
+- `banks/PCM/common/params_opnb_adpcma.json`(レシピ)を書き換え、別リポジトリ
+  `adpcm_packer`のビルド済み実行ファイルに食わせて`.bin`/`.json`を再生成
+- `wavs_opnb_adpcma.pcmbank.json`の`swpatches`を121件へ(`sw_bank`/`sw_prog`は
+  全エントリー0/2のまま)
+- ADPCM-Aを参照するドラムキット8本・計199ノートの`patch_prog`を上表で変換
+- `pss560_opnb.drumkit.json`を削除し`pss480_opnb.drumkit.json`を新設
+  (PSS-480に無いclap/bongo/conga/agogo/cabasa/clavesの10ノートは
+  `(placeholder)`へ戻し、`choke_groups`からconga用の`[62,63]`を削除)
+- `rx11_21l_opnb.drumkit.json`のタム6ノート(41/43/45/47/48/50)は全て
+  placeholderだった。RX21のタム3音を41,43→Lo / 45,47→Mid / 48,50→Hiで割当
+- `unified.bankset.json`と`emu_opn`/`emu_opn_stereo`/`emu_fmgen_opn`の3
+  プロファイル(drum_bank prog=21の名称とファイル参照)
+- `docs/manuals/patches/adpcma.md`(音色表121行)、`drumkits.md`(ADPCM-Aキット
+  9節の表とProg=21の見出し・目次)、`emu_profiles.md`(3箇所)
+- `docs/instruments/`の`FITOM_X.ins`/`FITOM_X.xml`を`generate_instruments.py`
+  で再生成
+
+**見送った案**: PSS-480全9+RX21全9=18でPSS-560の18枠をぴったり埋める案を
+提示したが、ユーザーの選択はRX21をタム3音のみとする12音案。6枠ぶんの
+繰り上がりと引き換えに、RX21から採るのはRX11/RX21Lで代替できないタムだけに
+絞った。残り7枠(prog 121-127)は空き。
+
+**検証**: (1)ドラムキット8本の全199ノートについて、シフト前後で参照先の
+サンプル名が一致することをgit HEADの旧`entries[]`と照合(不一致0件)。
+(2)エントリー数121の3ファイル一致、`entry_no`連番、padded_size合計=binサイズ、
+全offsetが256境界かつ範囲内、参照wavの実在、drumkitの全prog<121、
+bankset/profileの参照ファイル実在。(3)`bin/fitom_cli.exe`に
+`config/profiles/emu_opn.profile.json`を渡して実起動し、
+`PcmBank: loaded 386304 bytes`とADPCM-Aドラムキット9本(prog=21が
+`PSS-480 GM Drum Kit`)のロードをログで確認、errorレベル0件。
+**聴感確認は未実施**(ノートオンを送っていないため、割り当てた音が意図した
+音色で鳴るかは未確認)。
+
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）

@@ -898,8 +898,8 @@
     },
     {
       "prog": 21,
-      "name": "PSS-560 GM Drum Kit (OPNB)",
-      "file": "../../banks/drums/pss560_opnb.drumkit.json"
+      "name": "PSS-480 GM Drum Kit (OPNB)",
+      "file": "../../banks/drums/pss480_opnb.drumkit.json"
     },
     {
       "prog": 22,

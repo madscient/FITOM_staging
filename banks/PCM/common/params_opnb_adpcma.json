@@ -5,93 +5,48 @@
   "output_json": "banks/PCM/common/wavs_opnb_adpcma.json",
   "wav_files": [
     {
-      "path": "wavs/rhythm/PSS-560/PSS-560_AgogoHi.wav",
-      "name": "PSS_560_PSS_560_AgogoHi",
+      "path": "wavs/rhythm/PSS-480/bass.wav",
+      "name": "PSS_480_bass",
       "root_note": "none"
     },
     {
-      "path": "wavs/rhythm/PSS-560/PSS-560_AgogoLow.wav",
-      "name": "PSS_560_PSS_560_AgogoLow",
+      "path": "wavs/rhythm/PSS-480/closehh.wav",
+      "name": "PSS_480_closehh",
       "root_note": "none"
     },
     {
-      "path": "wavs/rhythm/PSS-560/PSS-560_BassDrum.wav",
-      "name": "PSS_560_PSS_560_BassDrum",
+      "path": "wavs/rhythm/PSS-480/crash.wav",
+      "name": "PSS_480_crash",
       "root_note": "none"
     },
     {
-      "path": "wavs/rhythm/PSS-560/PSS-560_Bongo.wav",
-      "name": "PSS_560_PSS_560_Bongo",
+      "path": "wavs/rhythm/PSS-480/hitom.wav",
+      "name": "PSS_480_hitom",
       "root_note": "none"
     },
     {
-      "path": "wavs/rhythm/PSS-560/PSS-560_Cavasa.wav",
-      "name": "PSS_560_PSS_560_Cavasa",
+      "path": "wavs/rhythm/PSS-480/lotom.wav",
+      "name": "PSS_480_lotom",
       "root_note": "none"
     },
     {
-      "path": "wavs/rhythm/PSS-560/PSS-560_Claves.wav",
-      "name": "PSS_560_PSS_560_Claves",
+      "path": "wavs/rhythm/PSS-480/openhh.wav",
+      "name": "PSS_480_openhh",
       "root_note": "none"
     },
     {
-      "path": "wavs/rhythm/PSS-560/PSS-560_CloseHH.wav",
-      "name": "PSS_560_PSS_560_CloseHH",
+      "path": "wavs/rhythm/PSS-480/ride.wav",
+      "name": "PSS_480_ride",
       "root_note": "none"
     },
     {
-      "path": "wavs/rhythm/PSS-560/PSS-560_CongaHi.wav",
-      "name": "PSS_560_PSS_560_CongaHi",
+      "path": "wavs/rhythm/PSS-480/rim_shot.wav",
+      "name": "PSS_480_rim_shot",
       "root_note": "none"
     },
     {
-      "path": "wavs/rhythm/PSS-560/PSS-560_CongaLow.wav",
-      "name": "PSS_560_PSS_560_CongaLow",
-      "root_note": "none"
-    },
-    {
-      "path": "wavs/rhythm/PSS-560/PSS-560_Cymbal.wav",
-      "name": "PSS_560_PSS_560_Cymbal",
-      "root_note": "none"
-    },
-    {
-      "path": "wavs/rhythm/PSS-560/PSS-560_HandClap.wav",
-      "name": "PSS_560_PSS_560_HandClap",
-      "root_note": "none"
-    },
-    {
-      "path": "wavs/rhythm/PSS-560/PSS-560_OpenHH.wav",
-      "name": "PSS_560_PSS_560_OpenHH",
-      "root_note": "none"
-    },
-    {
-      "path": "wavs/rhythm/PSS-560/PSS-560_RimShot.wav",
-      "name": "PSS_560_PSS_560_RimShot",
-      "root_note": "none"
-    },
-    {
-      "path": "wavs/rhythm/PSS-560/PSS-560_SnareDrum.wav",
-      "name": "PSS_560_PSS_560_SnareDrum",
-      "root_note": "none"
-    },
-    {
-      "path": "wavs/rhythm/PSS-560/PSS-560_Tom1.wav",
-      "name": "PSS_560_PSS_560_Tom1",
-      "root_note": "none"
-    },
-    {
-      "path": "wavs/rhythm/PSS-560/PSS-560_Tom2.wav",
-      "name": "PSS_560_PSS_560_Tom2",
-      "root_note": "none"
-    },
-    {
-      "path": "wavs/rhythm/PSS-560/PSS-560_Tom3.wav",
-      "name": "PSS_560_PSS_560_Tom3",
-      "root_note": "none"
-    },
-    {
-      "path": "wavs/rhythm/PSS-560/PSS-560_Tom4.wav",
-      "name": "PSS_560_PSS_560_Tom4",
+      "path": "wavs/rhythm/PSS-480/snare.wav",
+      "name": "PSS_480_snare",
       "root_note": "none"
     },
     {
@@ -417,6 +372,21 @@
     {
       "path": "wavs/rhythm/RX11/RX11Snare02.wav",
       "name": "RX11_RX11Snare02",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21/RX21Tom_Hi.wav",
+      "name": "RX21_RX21Tom_Hi",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21/RX21Tom_Lo.wav",
+      "name": "RX21_RX21Tom_Lo",
+      "root_note": "none"
+    },
+    {
+      "path": "wavs/rhythm/RX21/RX21Tom_Mid.wav",
+      "name": "RX21_RX21Tom_Mid",
       "root_note": "none"
     },
     {
