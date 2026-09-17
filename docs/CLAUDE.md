@@ -2755,6 +2755,59 @@ bankset/profileの参照ファイル実在。(3)`bin/fitom_cli.exe`に
 音色で鳴るかは未確認)。
 
 
+### 3.62 ADPCM-B単独チップ構成用の抜粋バンクを新設（2026年9月18日、ユーザー指示）
+
+ADPCM-Bしか持たないチップ(Y8950等)だけで構成したプロファイルでもリズムが
+鳴るように、`banks/PCM/common/params_y8950_adpcmb_excerpt.json`と
+その出力`wavs_y8950_adpcmb_excerpt.bin`/`.json`を新設した。36エントリー、
+95,360バイト。
+
+**構成**: PSS-680のリズム32音(`wavs/rhythm/PSS-680/*.wav`全部、root_noteは
+既存ADPCM-Aバンクのリズム同様`none`=69)、PSS-590とPSR-38のオーケストラ
+ヒットとティンパニ4音(root_note=`A3`→57)。並び順はリズム→オケヒ→ティンパニで、
+オケヒとティンパニを分けるのは既存`params_opna_adpcmb.json`の並びに合わせた。
+
+**PSS-590分の参照先**: `wavs/melodic/PSS-590_OrchestraHit.wav`/
+`PSS-590_Timpani.wav`は**8bit**、`banks/PCM/common/_fixed_source/`にある
+同名ファイルは同じ音の**16bit**版。既存`params_opna_adpcmb.json`/
+`params_opnb_adpcmb.json`は両方とも`_fixed_source`側を参照しているので
+本バンクもそれに倣った。`wavs/`は`.gitignore`対象で`_fixed_source`は
+git管理下という違いもある。PSR-38の2音は`wavs/melodic/`側が元から16bit
+なので直参照でよい。
+
+**boundary=32の意味**: チップのADPCMメモリのアクセスブロック単位に一致させる
+必要があり、ハードウェアからの要求で決まるパラメータである(チップによって
+単位が違う。Y8950系は32)。`pcmbank.schema.json`には「FITOM_X本体は
+`boundary`を保持するのみで発音経路(`entries[].start_offset`/`padded_size`
+のみ参照)や整合性検証には使用しない(2026年7月時点)」とあるが、これは**本体が
+検証に使わない**という話であって、値が任意でよいという意味ではない。実チップは
+指定の境界単位でアクセスするため、adpcm_packer側で正しい境界に整列させることが
+必須。チップに合わない値でパックしたbinは本体側の検証を通っても実機で正しく
+読めない。
+
+**意図的に未参照**: 現時点で`*.pcmbank.json`も`*.drumkit.json`も作っていない。
+どのプロファイルからも参照されない状態だが、これは3.16節で問題になった
+「未使用データの置き忘れ」ではなく、通常のADPCM-Bプリセットとの割り当て方を
+検討中のため保留している(ユーザー指示)。割り当てを決める際の材料:
+- **`chip`を分けても並立はできない**。FITOMではADPCM-B部分だけが束ねられるため、
+  親チップが異なっていても同一チップ扱いになる。`profile.schema.json`の
+  `pcm_banks[].chip`の列挙に`Y8950`はある(`Y8950`/`OPNA`/`OPNB`/`OPNBB`/
+  `OPL2EX`)が、`chip`を`Y8950`にして既存の`wavs_opna_adpcmb`(bank=0,
+  chip=OPNA)と別バンク番号で登録しても、2つのメモリイメージが同時に載る
+  ことはない。通常のADPCM-Bプリセットとは**排他**になる
+- `pcmbank.schema.json`の`entries[].entry_no`の上限は127。36エントリーなので
+  余裕がある
+
+**検証**: entries=36、padded_size合計=binサイズ95,360、全offsetが32境界かつ
+範囲内(違反0件)、参照wav36本すべて実在、root_noteは`A3`指定の4音が57・
+リズム32音が69。
+
+**容量は問題にならない**: Y8950のADPCMメモリは最大256KBで、95,360バイトは
+余裕で収まる。MSX-AUDIOの実装が32KB DRAMなのはあの製品の都合であって
+チップ側の制約ではなく、FITOMはMSX-AUDIOを鳴らすわけではないので考慮不要
+(ユーザー指摘)。
+
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
