@@ -3062,6 +3062,13 @@ git管理下という違いもある。PSR-38の2音は`wavs/melodic/`側が元�
 4. 作業前に`git status`でuntracked/uncommittedな変更がないか確認する
    （前回のセッションで手元に残った未コミットの変更がある場合、他マシン
    では見えないため注意）。
+5. `git config user.name`と`git config user.email`の出力が、
+   `git log -1 --format='%an <%ae>' origin/main`の出力と一致することを
+   確認する。このリポジトリのコミットはauthor/committerとも`madscient`
+   名義に統一しており、マシンのグローバル設定が別名義のままコミット
+   すると名義が混在する。一致しない場合は、コミットする前に
+   `git config --local user.name`/`git config --local user.email`で
+   合わせる。
 
 ### 5.3 セッション終了時の手順（作業を中断・完了するたびに必ず実行）
 1. 変更したすべてのファイルをコミットする。コミットメッセージには
