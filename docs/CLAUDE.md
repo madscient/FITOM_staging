@@ -332,7 +332,7 @@ scc_wave_banks/pcm_banks）の相対パス解決基点が、**カレントワー
   プロファイル書き換えは同時に反映すること）。
 - 副次的に発見: `emulator_opl3.profile.json`/`hw_opm_emu_opl3.profile.json`/
   `hw_opn_emu_opm_opl3.profile.json`の3件が、2026年7月12日のコミット
-  `5825913`（`banks/OPL2/rhythm/opll_rhythm.hwbank.json`を削除し
+  `0e402d7`（`banks/OPL2/rhythm/opll_rhythm.hwbank.json`を削除し
   `unified_preset.profile.json`側は`banks/OPL2/msx_audio/
   msx_audio_preset_rhythm.hwbank.json`に切り替え済み）に追従できておらず、
   存在しないファイルを参照したままになっていた（旧CWD相対の基点でも
@@ -715,7 +715,7 @@ verbatimコピーに置き換えた。
 
 **原因**: このファイルは3.17時点で「変換元スクリプトがこのリポジトリに
 残っていない」と記載した通り、由来不明の一括integrationデータ
-（コミット`5752665`、由来不明）だった。`note`フィールド（文字コード破損
+（コミット`e1b8e80`、由来不明）だった。`note`フィールド（文字コード破損
 していたが復元可能）から、変換時に3.3のOPL系規則（EGTビット=0/
 パーカッシブ→`RR=0`）をそのまま適用していたことが判明。しかし3.3に
 追記した通り、**OPLLはOPLと異なりキーオフ時に常に`RR`の値を直接RR
@@ -854,7 +854,7 @@ msx_audio_preset_rhythm}.hwbank.json`(3.17参照)にも同じ誤った規則で
 
 ### 3.26 vma_convert.pyのEGT極性判定が誤りだったことが判明、反転を撤回（2026年7月22日）
 3.25までのRR修正作業の副産物として温存していた「MA-2形式のEGTビットは
-実機OPLレジスタと極性が逆」という前提（2026年7月19日コミット`872caff`で
+実機OPLレジスタと極性が逆」という前提（2026年7月19日コミット`d75fcdd`で
 導入）が、**そもそも誤りだった**とユーザー指摘により判明した。
 
 **指摘内容**: 「EGT=0なら減衰音、EGT=1なら持続音が正しい」（実機OPLの
@@ -869,20 +869,20 @@ msx_audio_preset_rhythm}.hwbank.json`(3.17参照)にも同じ誤った規則で
 - 減衰音系キーワード一致(556音色): **83.5%**が生EGT=0
 
 これは実機OPLの規約(EGT=1=サステイン,EGT=0=パーカッシブ)と**そのまま
-一致**しており、反転は不要だったことを示す。872caffの反転により、
+一致**しており、反転は不要だったことを示す。d75fcddの反転により、
 実際にはオルガン等の持続音系がパーカッシブ(継続減衰)扱いに、ピアノ等の
 減衰音系がサステイン(キーオンでは無限に保持)扱いになる、逆方向の
-バグが混入していた(872caffのコミットメッセージが挙げた「GrandPiano-2が
+バグが混入していた(d75fcddのコミットメッセージが挙げた「GrandPiano-2が
 SR=0になる」という根拠自体は、当時参照したのが別バンクの別データ
 だった可能性が高いが、原因の特定はできていない。いずれにせよ統計的な
 裏付けを取らずに1音色の聴感比較だけで結論づけたことが誤りの温床
 だった)。
 
 **対応**:
-- `vma_convert.py`の`parse_ma2_op()`のSR算出条件を反転前(872caff以前)の
+- `vma_convert.py`の`parse_ma2_op()`のSR算出条件を反転前(d75fcdd以前)の
   向きに戻した(`egt_bit==1`→`SR=0`、`egt_bit==0`→`SR=変換元RR<<1`)。
   ただし`RR`は3.25で確立した規則(実機EGTビットの値に関わらず常に
-  変換元RRレジスタ値)をそのまま維持している(872caff以前の実装は
+  変換元RRレジスタ値)をそのまま維持している(d75fcdd以前の実装は
   この部分は`RR=0`にしてしまう別のバグを持っていたため、単純な
   リバートではなく現行の正しいRRロジックと組み合わせた)。
 - `banks/OPL2/ma2_vma/`(25件)・`banks/OPL3/ma2_vma/`(2件)の全27ファイルを
@@ -1313,7 +1313,7 @@ FITOM_X本体最新版から丸ごとコピー。`banks`オブジェクト形式
 | `emu_fmgen_opn` | `necopn_gm.patchbank.json`(bank1と重複) | `pss560_opnb.drumkit.json`(prog21と重複) |
 
 いずれも3.32以前（統合前）に各プロファイルがローカルで持っていた
-bank0/prog0の再番号付けと同じファイルを踏襲している（`5f2d080^`時点の
+bank0/prog0の再番号付けと同じファイルを踏襲している（`061ca80^`時点の
 各`banks.patch_banks`/`banks.drum_banks`をgit履歴から復元して確認）。
 `unified_preset.profile.json`はSF2(FluidSynth)デバイスのみでHWチップを
 一切持たないため対象外とした（`bank_overrides`のレイヤードバンク/
@@ -1461,7 +1461,7 @@ JSON例に差し替えた。あわせて、2026年7月の`sw_bank`/`sw_prog`新�
 - `emu_opll.profile.json`: `hw_plugins[]`には既に`FitomSf2IF`が登録済み
   だった(登録時期・経緯不明、`devices[]`側の対応するエントリが欠落した
   半端な状態だったと見られる)。既存の`devices[]`(当時はOPLL/OPLL2
-  [rhythm]/OPLLP/VRC7/OPLLXの5件、3.28コミット`00eea3c`で明示化済み。
+  [rhythm]/OPLLP/VRC7/OPLLXの5件、3.28コミット`fb94d27`で明示化済み。
   OPLL2はこの直後に3.37で削除)に`{chip:"SF2", plugin:"FitomSf2IF"}`を
   追加。
 - `emu_opm.profile.json`/`emu_opn.profile.json`/`fmall.profile.json`/
@@ -2038,8 +2038,8 @@ KVSが設定されているが(640音色中200音色)、キャリアのベロシ
 
 ### 3.49 ステレオ化プロファイル3件・emu_opz新設に伴いインストゥルメントリスト生成を追随（2026年8月11日、ユーザー指摘）
 `config/profiles/`配下に、ユーザーが手動で以下4件のプロファイルを追加
-していた(このセッションの前段、コミット履歴は`c0ba64a`「OPL, OPN,
-OPLLのステレオ化プロファイルを追加」・`fc1db48`「リニアステレオ化
+していた(このセッションの前段、コミット履歴は`49f065b`「OPL, OPN,
+OPLLのステレオ化プロファイルを追加」・`d5c5108`「リニアステレオ化
 プロファイル、およびOPM/OPZプロファイルを分離」等。CLAUDE.mdへの
 記録なしに行われていた作業だったため、以下は`tools/instrument_export/
 generate_instruments.py`をユーザー指摘「いくつかのバンクセットを手動で
@@ -2064,7 +2064,7 @@ generate_instruments.py`をユーザー指摘「いくつかのバンクセッ�
   **同一のバンクファイルを複数のgroup名から共有参照**する構成になって
   いた(例: `OPN`も`OPN2`も同じ`necopn_gm.hwbank.json`を参照)。これは
   「同種チップのフォールバックルートにも同じバンクを設置」
-  (コミット`0938cc0`)による意図的な追加であり、3.6節・3.42節で扱った
+  (コミット`5c6d543`)による意図的な追加であり、3.6節・3.42節で扱った
   OPLLビルトイン音色の「同じ音色データを複数のCC#0から選べるようにする」
   設計と同じ考え方の応用と見られる。
 - `FITOMdefine.h`から正確な値を確認し、`GROUP_CC0_HW`に追加:
