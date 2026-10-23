@@ -54,12 +54,12 @@ drum_banks 21件, pcm_banks 3件）を共有参照している（2026年7月29�
 | `unified_preset.profile.json` | SF2(FluidSynth)のみ（全チップ分のbanksカタログを保持する“総本山”） |
 | `emu_opn.profile.json` | OPN専用（OPN/OPN2/OPNA/OPNB/OPNBB×1ずつ） |
 | `emu_opl.profile.json` | OPL専用（OPL[rhythm]/Y8950/OPL2/OPL3/OPL4×1ずつ） |
-| `emu_opm.profile.json` | OPM専用（OPM×2/OPZ×2） |
+| `emu_opm.profile.json` | OPM専用（OPM×4。レイヤードバンクはOPZ向けのまま、4節） |
 | `emu_opll.profile.json` | OPLL専用（OPLL[rhythm]/OPLLP/VRC7/OPLLX/OPLLEX×1ずつ。OPLL2は3.37でエンジン非対応のため削除、OPLLEXは3.59で追加） |
-| `fmall.profile.json` | OPZ/OPL3/OPL4AWM/OPNBB/OPLLEXをL/R2枚ずつのリニアステレオで載せた構成（2026年7月19日新設、3.59で現構成へ） |
+| `fmall.profile.json` | OPZ/OPNBB/OPL3+OPL4をL/R2枚ずつのリニアステレオ、OPLLEX[rhythm]×1=DSAemuEngine(ハードの定位)で載せた構成（2026年7月19日新設、3.64で現構成へ） |
 | `emu_psg_stereo.profile.json` | PSG専用（SSG/DCSG/SCC×2ずつ=DSAemuEngine、EPSG×2=EPSGemuEngine、DSG×2=DSGemuEngineでリニアステレオ + SAA×1=SAASoundEngine。2026年8月14日新設、3.53/3.54参照） |
 | `emu_msx.profile.json` | MSX機種別（OPLL[rhythm]/Y8950[rhythm]/SSG/SCC+=DSAemuEngine、OPM=YMFMEngine。2026年8月27日新設、3.60参照） |
-| `emu_msx2pp.profile.json` | MSX2++機種別（OPLLEX[rhythm]/OPL2EX×2ずつ=Y8960emuEngine、SSG/DCSG×2ずつ+SCC×1=DSAemuEngineでリニアステレオ。同上） |
+| `emu_msx2pp.profile.json` | MSX2++機種別（Y8960 1基: OPLLEX[rhythm]/OPL2EX/SSGEX/SCCEX=DSAemuEngine、OPM=YMFMEngine。3.64で現構成へ） |
 | `emu_pc88.profile.json` | PC-88機種別（OPN/OPNA/OPM×1ずつ=YMFMEngine。同上） |
 | `emu_pc98.profile.json` | PC-98機種別（OPN/OPNA/OPL3/Y8950[rhythm]×1ずつ=YMFMEngine。同上） |
 | `emu_ibmpc.profile.json` | IBM PC機種別（SAA×2=SAASoundEngine、OPL2[rhythm]/OPL3/OPM=YMFMEngine、DCSG=DSAemuEngine。同上） |
@@ -2825,17 +2825,103 @@ git管理下という違いもある。PSR-38の2音は`wavs/melodic/`側が元�
 チップ側の制約ではなく、FITOMはMSX-AUDIOを鳴らすわけではないので考慮不要
 (ユーザー指摘)。
 
+### 3.64 FITOM_Xの10月の変更(部位ゲイン・Y8960新仕様)へ追従（2026年10月23日、ユーザー指示）
+FITOM_Xの`docs/STATUS.md` 5節「周辺リポジトリの追従状況」に挙がっていた
+FITOM_staging側の4件に対応した。
+
+**1. `bin/`の入れ替え**: 次のコミットでRelease版をビルドし(既存の
+`build/`をそのまま使用、12件ともエラー0)、`setup.ps1`で配置した。
+FitomEmuIF・FitomHwIF・DSAemuEngineはoriginより遅れていたため、
+作業ツリーがcleanなことを確かめて早送りしてからビルドした。
+
+| リポジトリ | コミット |
+|---|---|
+| FITOM_X | `e528e23` |
+| FitomEmuIF | `2d0e443` |
+| FitomHwIF | `a2357ea` |
+| FitomSf2IF | `ae15e91` |
+| YMEngine | `3600db7` |
+| FMgenEngine | `4e3e82e` |
+| DSAemuEngine | `46c2fbe` |
+| EPSGemuEngine | `72f70d6` |
+| SAASoundEngine | `7c30ab4` |
+| DSGemuEngine | `f7834f6` |
+| Y8960emu | `40298b9` |
+| FITOM_patch_editor | `0a98930` |
+
+`bin/`はgit管理外のため、この入れ替えはコミットに現れない。
+`fitom_hw.dll`はFitomHwIFのビルドで作られず、配置されていない(4節)。
+
+**2. `config_schema/`の同期**: `fitom.conf.schema.json`(`profiles.root`)と
+`profile.schema.json`(`part_gains`)をFITOM_Xから写し直し、11ファイル
+全てがFITOM_X `e528e23`と一致した。写しの`profile.schema.json`は
+トップレベルが`additionalProperties: false`で`part_gains`を持たなかった
+ため、GUIで部位ゲインを保存したプロファイルが検証に通らなかった。
+`part_gains`付きのプロファイルが旧スキーマでINVALID、新スキーマでVALIDに
+なること、要素が1個の`gains`は新スキーマでもINVALIDのままであることを確認した。
+
+**3. fmgenのDLL名**: `FmGenEngine`に揃えた(ユーザー判断)。プロファイルと
+`setup.ps1`は3.61で既に`FmGenEngine`を指しており、`bin/engines/`に
+6月の`FmGenEngineApi.dll`が残っていたのは`setup.ps1`を流し直していなかった
+ため。`setup.ps1`で`FmGenEngine.dll`を置き、`FmGenEngineApi.dll`を削除した。
+
+**4. Y8960新仕様への追従**: Y8960は1基でSSG×2セット・OPLL×1・
+OPL2+ADPCM×1・SCC×1・OPMを持つ(Y8960_Cartridge `f1b900a`の`readme.md`)。
+拡張ブロックはどれもchごとに8bitの定位(1=左端/128=中央/255=右端)を持つ。
+- `emu_msx2pp`は**Y8960 1基のみ**の構成にした(ユーザー判断)。
+  OPLLEX[rhythm]/OPL2EX/SSGEX/SCCEXを`DSAemuEngine`、OPMを`YMFMEngine`で
+  1個ずつ、`pan: 0`で載せる。Y8960に無いDCSG×2と、旧仕様のSSG×2・SCCは外した。
+- `emu_opll_stereo`・`fmall`のOPLLEX×2(`stereo_pair: true` + `pan: 1/2`)も
+  OPLLEX×1(`DSAemuEngine`、`pan: 0`)にした(ユーザー判断)。`fmall`は
+  OPLLEXが唯一のOPLL系なので`rhythm_mode: true`を残した。
+- **stereo_pairで束ねない理由**: FITOM_Xの
+  `FITOMConfig::subDeviceAcceptsStereoPair()`はOPL2EX/OPLLEXの
+  FM部・ADPCM部・内蔵リズムに`false`を返し、`stereo_pair`を伝播しない。
+  旧構成のままだとL/Rの束ねが外れ、2個の独立デバイスになる(**読解のみ**:
+  `Config.cpp`を読んだ見立てで、旧構成を新しいバイナリで起動してはいない)。
+- **`DSAemuEngine`に寄せた理由**: `DSAemuEngine`(`46c2fbe`)は
+  OPLLEX/OPL2EX/SSGEX/SCCEXを受け付け、chごとの定位レジスタを実装している。
+  `Y8960emuEngine`(`40298b9`)はOPLLEX/OPL2EXしか持たず、`src/`を
+  検索した範囲では定位レジスタの実装が見当たらない(**読解のみ**)。
+  この判断は`Y8960emuEngine`が定位レジスタとSSGEX/SCCEXを実装しない限り成立する。
+- **SSGEXのクロック**は1789772(SSGブロックの動作クロックそのもの。
+  DSAemuEngineの`doc/plan.md`がMSSXの`hardware.md`を出典に挙げ、FITOM_Xの
+  `tests/test_y8960.cpp`も同じ値)。Y8960の仕様書(xlsx)にクロックの記載は無い。
+- 3.60のエンジン対応表の`DSAemuEngine`行には、OPL2EX/OPLLEX/SSGEX/SCCEXが
+  加わる(DSAemuEngineの`README.md`)。
+- **見送った案**: `emu_msx2pp`にDCSG×2を残す案、`emu_msx2pp`を現状維持する案、
+  `emu_opll_stereo`/`fmall`は記録だけにする案(いずれもユーザー判断で見送り)。
+  `emu_opll`のOPLLEX(`Y8960emuEngine`)は依頼の範囲外のため変えていない(4節)。
+
+**検証**:
+- 全17プロファイル・`fitom.conf.json`・全60`*.hwbank.json`がスキーマで
+  INVALID 0件。
+- FitomEmuIFを使う12プロファイルについて、`devices[]`の(engine, chip, index)が
+  サブプロファイルのスロットと1:1で対応する(欠落・二重オープン・未使用スロット
+  0件)ことをスクリプトで確認した。スクリプトが不整合を検出できることは、
+  壊したコピー(スロット削除とchip名の書き換え)で3件検出されることで確かめた。
+- 新しい`bin/fitom_cli.exe`で全17プロファイルを1本ずつ6秒起動し、全件で
+  `Failed to create HWPort`・`unknown chip`・`skipping`が0件。
+  `emu_msx2pp`ではOPLLEX(FM+RHYTHM)/OPL2EX(FM+ADPCMB)/SSGEX/SCCEX/OPMの
+  デバイスが生成された。`fmall`のOPZ/OPNBB/OPL3+OPL4は従来どおり
+  `[chip-level L/R]`、`emu_opll_stereo`のOPLL系4種は`[plugin-routed L/R]`で
+  束ねられた。`emu_fmgen_opn`は`engines/FmGenEngine`でOPN2/OPNA/OPNB/OPNBBの
+  4ポートが開いた。
+- **fitom_cliはSIGINTで終了しない**: Git Bashの`timeout -s INT`では終わらず
+  プロセスが残る。自動で起動を確かめるときはPowerShellの
+  `Start-Process -PassThru`→`Stop-Process -Force`→`WaitForExit()`で1本ずつ
+  確実に止めてからログを読む(残ったプロセスが`logs/fitom.log`を掴んだまま
+  次のプロファイルが起動し、ログが混ざる)。
+- `generate_instruments.py`の出力は、同じ環境で変更前後を生成して差分0件
+  (`fmall`は対象だが、出力はデバイス構成ではなくバンクで決まる)。
+  `docs/instruments/`は再生成していない。`sf2/`の無い環境で再生成すると
+  SF2バンクの音色名が抜けるため、再生成は`sf2/`のあるマシンで行うこと。
+- 聴感確認は未実施(4節)。
+
 ## 4. 未解決・要確認事項
 （各節末尾で「4節に記載」とした項目をここにまとめている。本セクション
 見出しが過去のある時点で欠落していたため、2026年7月29日に補完した。）
 
-- **FmGenEngine改称後の実機起動確認が未実施**(3.61): `FmGenEngineApi.dll`→
-  `FmGenEngine.dll`への追従はプロファイル・スクリプト・ドキュメントの
-  文字列置換のみで、`../FmGenEngine`の再ビルド成果物が手元になく
-  `setup.ps1`実行や`bin/fitom_cli.exe`での実起動確認ができていない。
-  `FmGenEngine`側を再ビルドし`setup.ps1`を流した上で、
-  `fmgenif_opn_profile.json`を使うプロファイルでOPN2/OPNA/OPNB/OPNBBの
-  HWPortが期待数開くことを確認すること。
 - **機種別プロファイルのROM音色/ADPCM-Bの制約**(3.60): `emu_msx`は
   OPLL-P/OPLL-X/VRC7のROM音色24パッチ、`emu_msx2pp`はOPLL系ROM音色37パッチが
   発音しない。指定されたチップ構成の範囲で直すにはOPLLEX専用(CC#0=44)の
@@ -2843,15 +2929,32 @@ git管理下という違いもある。PSR-38の2音は`wavs/melodic/`側が元�
   今回は既存バンクの範囲に留めた。また`emu_pc98`はOPNAとY8950のADPCM-Bが
   1デバイスへ統合されるため、Y8950側へ回ったボイスがOPNA基準のオフセット
   テーブルで再生される可能性がある。いずれも実際に鳴らしての確認が必要。
-- **`bin/`のFITOM_X本体を再ビルドする必要がある**(3.59): 配置済みの
-  `bin/fitom_cli.exe`/`fitom_gui.exe`は8月16日ビルドでOPLLEXを知らないため
-  (`unknown chip 'OPLLEX'`)、3プロファイルとも**OPLLEXデバイスだけが
-  生成されない**。FITOM_Xを`746431e`以降で再ビルドし`setup.ps1`を
-  実行し直すこと。その後の発音確認(聴感)も未実施。
-- **拡張OPL2部(OPL2EX)が未配線**(3.58/3.59): `DEVICE_OPL2EX`(VoicePatchTypeは
-  OPL2と共用)・内蔵ADPCM-B(`DEVICE_ADPCMB_OPL2EX`)を載せたプロファイルは
-  まだ無い。実機Y8960は拡張OPL2部を2回路搭載しており、PCMイメージカタログ
-  (`pcm_image_catalog.json`)への配線も含めて未着手。
+- **Y8960系の聴感確認が未実施**(3.64): `emu_msx2pp`(OPLLEX/OPL2EX/SSGEX/
+  SCCEX/OPM)・`emu_opll_stereo`/`fmall`のOPLLEXは、デバイスが生成されるところ
+  までしか確認していない。MIDIのパンポットがchごとの定位として効くことも含め、
+  実際に鳴らしての確認が必要。
+- **OPL2EX内蔵ADPCM-Bの波形イメージが未登録**(3.58/3.64): `emu_msx2pp`で
+  `OPL2EX-ADPCMB`デバイスは生成されるが、`pcm_image_catalog.json`に
+  OPL2EX向けのエントリーが無いため発音しない。FitomEmuIF側はOPL2EXの
+  `ADPCM_B`へPCMイメージを渡す対応が済んでいる(FitomEmuIF `2d0e443`)。
+- **`emu_opll`のOPLLEXは定位が効かない見込み**(3.64): `emu_opll`は
+  OPLLEXを`Y8960emuEngine`で鳴らしている。`Y8960emuEngine`(`40298b9`)の
+  `src/`を検索した範囲では定位レジスタ(`0x50`-`0x58`)の実装が見当たらない
+  (**読解のみ、未実行**)。パンポットを効かせるなら`DSAemuEngine`へ
+  寄せる(他のOPLLEXと同じ)。今回は依頼の範囲外のため変えていない。
+- **`fitom_hw.dll`(FitomHwIF)が`bin/`に無い**: `../FitomHwIF/build`は
+  `fitomhwif_example.exe`しかビルドせず、`setup.ps1`の`*.dll`コピーで
+  届くのは依存DLL(`ftdi1.dll`/`libusb-1.0.dll`)だけ。実機プロファイルは
+  現状ないため実害は無いが、実機を使うときはビルド構成の確認が必要。
+- **`emu_opm`のレイヤードバンクがOPZ向けレイヤーを解決できない**:
+  `emu_opm`は現在OPM×4構成だが、`bank_overrides`で敷く
+  `gm_layered_opm.patchbank.json`は128パッチ全てが`voice_patch_type=26`
+  (`0x1a`、OPZ)のレイヤーだけでできている(スクリプトで数えて**確認済み**)。
+  起動時に`resolve: layer=0 voicePatchType=0x1a — no matching device
+  (fallback exhausted)`の警告が75件出る(2026年10月23日、新しい
+  `bin/fitom_cli.exe`のログで**確認済み**)。通常モード(CC#0=0)では
+  鳴らないと見込まれる(**未検証**: 発音させていない)。今回の変更前からの
+  構成で、プロファイルとバンクのどちらに合わせるか要判断。
 - **CC#0=127の二重の意味**(3.57): FITOM_X本体では`VOICE_PATCH_SILENCE`
   (無音バンク)だが、インストゥルメントリスト(3.40)ではSF2バンクの表示に
   使っている。SF2直行パスは`sf2_channel_windows`で切り分けられCC#0を見ない
@@ -2861,22 +2964,14 @@ git管理下という違いもある。PSR-38の2音は`wavs/melodic/`側が元�
   ままで、OPLL系ROM音色・DSGビルトイン音色のどちらにも実際の
   パフォーマンスパッチが割り当てられていない。どのビルトイン音色に
   どのSwPatchを割り当てるかはパッチ設計の判断であり、要検討。
-- **【DSAemuEngine側の修正待ち】SCCが発音しない**: 3.53の`emu_psg_stereo`の
-  SCCは、現状のDSAemuEngineでは無音になる。`DSAemuEngine.cpp`が
-  `SCC_write(scc, 0xC000 + reg, val)`を呼ぶが、emu2212の`SCC_write()`は
-  `adr -= base_adr`(既定`base_adr=0x9000`)した上で`0x800 <= adr <= 0x8FF`かつ
-  `scc->active`のときしかレジスタへ届かない。`0xC000+reg`はこの窓の外である上、
-  `active`を立てる書き込み(`base_adr+0`へ`0x3F`)も行われないため全書き込みが
-  破棄される。レジスタ番号を直接扱う`SCC_writeReg()`(波形`0x00-0x7F`、
-  周波数`0xC0-0xC9`、音量`0xD0-0xD4`、イネーブル`0xE1`)を使うか、
-  `0x9800+reg`へ書く前に`SCC_write(scc, 0x9000, 0x3F)`で有効化する必要がある。
-- **【本体側の確認待ち】CSCCのレジスタマップが自己矛盾している**:
-  `core/src/PSG_new.cpp`の`CSCC`は周波数を`0xA0+ch*2`/`0xA1+ch*2`(ch0-4で
-  `0xA0`-`0xA9`)、音量を`0xA8+ch`(`0xA8`-`0xAC`)、chイネーブルを`0xAA`へ書くため、
-  `0xA8`/`0xA9`/`0xAA`が周波数・音量・イネーブルで重複している。実機K051649の
-  配置(波形`0x00-0x9F`、周波数`0xA0-0xA9`、音量`0xAA-0xAE`、イネーブル`0xAF`)に
-  照らすと音量とイネーブルが2バイトずつ手前にずれていると見られる。上記の
-  DSAemuEngine側を直しても、こちらを直さないとSCCは正しく鳴らない。
+- **SCCの聴感確認が未実施**: 以前ここに書いていた2件(DSAemuEngineが
+  emu2212のレジスタ窓の外へ書いていた件、FITOM_Xの`CSCC`のレジスタ配置が
+  重複していた件)は、どちらもコード上は解消している(2026年10月23日、
+  **読解のみ**)。DSAemuEngine(`46c2fbe`)は`SCC_write(scc, 0x9000, 0x3F)`で
+  有効化してから`0x9800+reg`へ書き、FITOM_X(`e528e23`)の`CSCC`は
+  無印SCCを周波数`0x80`/音量`0x8A`/イネーブル`0x8F`、SCC+を`0xA0`/`0xAA`/
+  `0xAF`で書く。`emu_psg_stereo`/`emu_msx`のSCC、`emu_msx2pp`のSCCEXが
+  実際に鳴るかは未確認。
 - 3.53の`emu_psg_stereo`は`bank_overrides`を持たないため、CC#0=0(通常モード)の
   bank 0が`gm_layered_skeleton.patchbank.json`(空)のままで
   「Patch bank=0 prog=0 is empty」警告が出る。演奏はCC#0=0x40(SSG共有バンク、
@@ -3013,30 +3108,27 @@ git管理下という違いもある。PSR-38の2音は`wavs/melodic/`側が元�
   確認が望ましい（Studio One/REAPER対応の要否は3.29末尾の記述の通り
   検証環境待ちで保留中）。
 - 3.31で`unified_preset.profile.json`に追加した`sf2_banks`/
-  `sf2_channel_windows`/`devices[chip=SF2]`は、`FitomSf2IF.dll`が本
-  リポジトリに未ビルド・未配置のため実機能未検証（JSON構文・スキーマ
-  検証のみ済み）。`../FitomSf2IF`側のビルドが完了し`bin/`へ配置され
-  次第、実際にSF2が鳴るか動作確認が必要。
+  `sf2_channel_windows`/`devices[chip=SF2]`は、実際にSF2が鳴るかが未確認。
+  `FitomSf2IF.dll`は`bin/`に配置済みで、全17プロファイルでSF2のHWPortが
+  開くことは2026年10月23日に起動ログで**確認済み**。ただしこのマシンには
+  `sf2/`(配布対象外)が無く、`SF2 phdr parse: cannot open`の警告が出る。
 - `GeneralUser GS v1.471.sf2`のGS variationバンク（sf2_bank 1-16, 120）は
   `sf2_banks`未登録（3.31参照）。必要になった場合は`bank=10`以降に追加
   すること。
 - 3.35でスキーマ・実データを同期したAWMの波形ごとピッチ/音量校正
   (`pitch_offset`/`key_scaling`/`tone_attenuate`/`volume_factor`)は、
   対応する本体側修正(FITOM_X側コミット`830e59a`、`COPL4AWM::getFnumber()`
-  の式差し替えと`updateVolExp()`での校正値適用)込みのバイナリが`bin/`に
-  未配置のため、実際にAWMが意図した音高・音量で鳴ることは未検証
+  の式差し替えと`updateVolExp()`での校正値適用)込みのバイナリは2026年10月23日に
+  `bin/`へ配置したが、実際にAWMが意図した音高・音量で鳴ることは未検証
   (JSON構文・スキーマ検証、全610ゾーンのフィールド充足確認のみ済み)。
-  本体側の対応版ビルド後に実機/実エンジン環境での確認が必要。
+  聴感での確認が必要。
 - 3.33で6プロファイルに追加した`bank_overrides`（レイヤードバンク0/
-  ドラムキット0の無音解消）は、`bin/fitom_cli.exe`が対応コミット
-  （FITOM_X側`c2bbe83`）より前のビルド（2026年7月28日）のため、この
-  リポジトリの環境では実行時ロード確認ができていない（JSON構文・
-  スキーマ検証、参照ファイル実在確認のみ済み）。`bank_overrides`対応版
-  バイナリに更新後、実機/実エンジン環境で実際に音が出ることの確認が
-  必要。
+  ドラムキット0の無音解消）は、実際に音が出ることが未確認。実行時に
+  読み込まれることは2026年10月23日に**確認済み**: `bank_overrides`を持つ
+  15プロファイルは起動ログの`Patch bank=0 prog=0 is empty`が0件で、
+  持たない`emu_psg_stereo`/`unified_preset`だけが75件出る。
 - 3.36で全7プロファイルに配線した`sf2_channel_windows`（ch14/15の2ch）
-  も3.31と同様、`FitomSf2IF.dll`が本リポジトリに未ビルド・未配置のため
-  実機能未検証。特に`unified_preset`/`emu_opm`/`emu_opn`/`fmall`の
+  も3.31と同様、SF2が実際に鳴るかは未確認。特に`unified_preset`/`emu_opm`/`emu_opn`/`fmall`の
   `mpu`値は`midi_inputs`が`__LOCAL__`(環境依存)でDAW側MPUを判別できず
   MPU0を暫定的に採用しているため、実際の接続環境によっては調整が必要。
 
