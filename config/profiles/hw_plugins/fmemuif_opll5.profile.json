@@ -14,7 +14,7 @@
       ]
     },
     {
-      "dll": "engines/Y8960emuEngine",
+      "dll": "engines/DSAemuEngine",
       "chips": [
         { "chip": "OPLLEX", "clock": 3579545, "pan": 0 }
       ]

@@ -90,6 +90,7 @@ Power/Electronic Kit(prog16,24)・PSS-680 Brush Kit(prog40)を収録。
 - OPLLP(3,579,545Hz)
 - VRC7(3,579,545Hz)
 - OPLLX(3,579,545Hz)
+- OPLLEX(3,579,545Hz、Y8960のOPLL部。チャンネルごとの定位を持ち、パンポットがそのまま効きます)
 
 **通常モード(CC#0=0, CC#32=5)のパッチバンク:**
 - `gm_layered_opll.patchbank.json`

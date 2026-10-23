@@ -25,7 +25,7 @@ SF2(FitomSf2IF)デバイスを持つ。
 | `emu_opl_stereo` | Y8950[rhythm]×2/OPL3×3/OPL4×1(ペア)=YMFMEngine | あり |
 | `emu_opm` | auto: OPM×4=YMFMEngine | あり |
 | `emu_opz` | auto: OPZ×4=YMFMEngine | あり |
-| `emu_opll` | OPLL[rhythm]/OPLLP/VRC7/OPLLX=YMFMEngine、OPLLEX=Y8960emuEngine | あり |
+| `emu_opll` | OPLL[rhythm]/OPLLP/VRC7/OPLLX=YMFMEngine、OPLLEX=DSAemuEngine | あり |
 | `emu_opll_stereo` | OPLL[rhythm]/OPLLP/VRC7/OPLLX×2(ペア)=YMFMEngine、OPLLEX=DSAemuEngine | あり |
 | `fmall` | OPZ×2/OPNBB×2/OPL3+OPL4(ペア)=YMFMEngine、OPLLEX[rhythm]=DSAemuEngine | あり |
 | `emu_psg_stereo` | DCSG/SCC×2(ペア)=DSAemuEngine、EPSG×2(ペア)/SSGS/SSGS2/SSGS3=EPSGemuEngine、DSG×2(ペア)=DSGemuEngine、SAA=SAASoundEngine | なし |
@@ -73,8 +73,8 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 ### 聴感確認が未実施のもの
 
-- **Y8960系**(worklog 3.64): `emu_msx2pp`(OPLLEX/OPL2EX/SSGEX/SCCEX/OPM)、
-  `emu_opll_stereo`/`fmall`のOPLLEXは、デバイスが生成されるところまでしか
+- **Y8960系**(worklog 3.64/3.66): `emu_msx2pp`(OPLLEX/OPL2EX/SSGEX/SCCEX/OPM)、
+  `emu_opll`/`emu_opll_stereo`/`fmall`のOPLLEXは、デバイスが生成されるところまでしか
   確認していない。MIDIのパンポットがchごとの定位として効くことも含め、
   実際に鳴らしての確認が必要。
 - **SCC**: `emu_psg_stereo`/`emu_msx`のSCC、`emu_msx2pp`のSCCEXが実際に鳴るかは
@@ -145,10 +145,6 @@ SF2(FitomSf2IF)デバイスを持つ。
   `OPL2EX-ADPCMB`デバイスは生成されるが、`pcm_image_catalog.json`にOPL2EX向けの
   エントリーが無いため発音しない。FitomEmuIF側はOPL2EXの`ADPCM_B`へPCMイメージを
   渡す対応が済んでいる(FitomEmuIF `2d0e443`)。
-- **`emu_opll`のOPLLEXは定位が効かない見込み**(worklog 3.64): `Y8960emuEngine`
-  (`40298b9`)の`src/`を検索した範囲では定位レジスタ(`0x50`-`0x58`)の実装が
-  見当たらない(**読解のみ**)。パンポットを効かせるなら他のOPLLEXと同じく
-  `DSAemuEngine`へ寄せる。
 - **`fitom_hw.dll`(FitomHwIF)が`bin/`に無い**: `../FitomHwIF/build`は
   `fitomhwif_example.exe`しかビルドせず、`setup.ps1`の`*.dll`コピーで届くのは
   依存DLL(`ftdi1.dll`/`libusb-1.0.dll`)だけ。実機プロファイルは無いため実害は無いが、
