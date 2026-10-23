@@ -63,7 +63,8 @@ FITOM_staging/
 ├── tools/
 │   └── voice_convert/
 ├── bin/                    実行ファイル・プラグイン置き場 (.gitignore 対象)
-│   ├── fitom_core(.exe)    FITOM_X 本体
+│   ├── fitom_cli(.exe)     FITOM_X 本体 (コンソール版)
+│   ├── fitom_gui(.exe)     FITOM_X 本体 (GUI版)
 │   ├── FitomEmuIF.dll/.so
 │   ├── fitom_hw.dll/.so
 │   └── engines/
@@ -166,9 +167,13 @@ cd FITOM_staging
 
 ### 3. プロファイルを選択して起動
 
+リポジトリのルートで、プロファイルを引数にして起動する。
+
 ```powershell
-# FITOM_X プロファイルを指定して起動
-fitom_core.exe --profile config/profiles/unified_preset.profile.json
+# コンソール版
+bin\fitom_cli.exe config/profiles/unified_preset.profile.json
+# GUI版 (プロファイルを省略すると選択画面が出る)
+bin\fitom_gui.exe
 ```
 
 実際に読み込まれるサブプロファイルは、選択した FITOM_X プロファイルの

@@ -6,7 +6,9 @@
 #
 # bin/ レイアウト:
 #   bin/
-#     fitom_core          FITOM_X 本体
+#     fitom_cli           FITOM_X 本体 (コンソール版)
+#     fitom_gui           FITOM_X 本体 (GUI版)
+#     fitom_midi_rtmidi.so  MIDIバックエンド
 #     FitomEmuIF.so       FMエンジン内蔵エミュレーター統合プラグイン (FitomEmuIF)
 #     fitom_hw.so         物理チップ用プラグイン (FitomHwIF)
 #     engines/
@@ -60,8 +62,13 @@ echo "  OK   git filter 'envlocal' registered"
 mkdir -p "$STAGE/bin/engines"
 
 # FITOM_X 本体
-copy_if_exists "$FITOM_X_BUILD/fitom_core"          "$STAGE/bin/fitom_core"
-[ -f "$STAGE/bin/fitom_core" ] && chmod +x "$STAGE/bin/fitom_core"
+copy_if_exists "$FITOM_X_BUILD/bin/fitom_cli"       "$STAGE/bin/fitom_cli"
+copy_if_exists "$FITOM_X_BUILD/bin/fitom_gui"       "$STAGE/bin/fitom_gui"
+for exe in fitom_cli fitom_gui; do
+    if [ -f "$STAGE/bin/$exe" ]; then chmod +x "$STAGE/bin/$exe"; fi
+done
+# ビルドは lib 接頭辞付きで出力するが、fitom_cli/fitom_gui は接頭辞なしの名前で探す
+copy_if_exists "$FITOM_X_BUILD/bin/libfitom_midi_rtmidi.so" "$STAGE/bin/fitom_midi_rtmidi.so"
 
 # プラグイン
 copy_if_exists "$FITOM_EMUIF_BUILD/FitomEmuIF.so"   "$STAGE/bin/FitomEmuIF.so"
@@ -85,5 +92,6 @@ echo ""
 echo "次のステップ:"
 echo "  1. config/profiles/ からプロファイルを選択する"
 echo "  2. 実機使用時は config/profiles/hw_plugins/fitom_hw_*.profile.json の port を確認する"
-echo "  3. 起動:"
-echo "     bin/fitom_core --profile config/profiles/<プロファイル名>"
+echo "  3. 起動 (リポジトリのルートで):"
+echo "     bin/fitom_cli config/profiles/<プロファイル名>"
+echo "     bin/fitom_gui"

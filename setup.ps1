@@ -8,7 +8,8 @@
 
   bin/ レイアウト:
     bin/
-      fitom_core.exe      FITOM_X 本体
+      fitom_cli.exe       FITOM_X 本体 (コンソール版)
+      fitom_gui.exe       FITOM_X 本体 (GUI版)
       FitomEmuIF.dll      FMエンジン内蔵エミュレーター統合プラグイン (FitomEmuIF)
       fitom_hw.dll        物理チップ用プラグイン (FitomHwIF)
       engines/
@@ -131,5 +132,6 @@ Write-Host "     emu_msx2pp.profile.json      : MSX2++プロファイル (Y8960:
 Write-Host "     emu_pc88.profile.json        : PC-88プロファイル (OPN/OPNA/OPM)"
 Write-Host "     emu_pc98.profile.json        : PC-98プロファイル (OPN/OPNA/OPL3/Y8950[rhythm])"
 Write-Host "     emu_ibmpc.profile.json       : IBM PCプロファイル (SAA×2/OPL2[rhythm]/OPL3/OPM/DCSG)"
-Write-Host "  2. 起動:"
-Write-Host "     bin\fitom_core.exe --profile config\profiles\<プロファイル名>"
+Write-Host "  2. 起動 (リポジトリのルートで):"
+Write-Host "     bin\fitom_cli.exe config\profiles\<プロファイル名>"
+Write-Host "     bin\fitom_gui.exe"
