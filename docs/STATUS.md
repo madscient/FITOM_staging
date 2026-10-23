@@ -66,7 +66,9 @@ SF2(FitomSf2IF)デバイスを持つ。
 - `docs/manuals/`: 利用者向けリファレンス。`README.md`が起点
 - `docs/instruments/`: MIDIシーケンサー向けインストゥルメントリスト
   (`sekaiju/FITOM_X.ins`、`domino/FITOM_X.xml`。`tools/instrument_export/`で生成)
-- `docs/voice-parameter-reference.md`: 音色パラメータの解説(FITOM_X側の原本由来)
+- `docs/voice-parameter-reference.md`: 音色パラメータの解説(FITOM_X側の原本由来。
+  原本はFITOM_Xで分割・削除され、利用者向けの内容は`docs/manuals/hwpatch-reference.md`、
+  チップ別の内部処理は`docs/design/chip-notes.md`へ移った)
 - `docs/worklog/`: 変更・修正・調査の経緯
 
 ## 4. 未解決・要確認事項
@@ -230,7 +232,9 @@ SF2(FitomSf2IF)デバイスを持つ。
 - `docs/voice-parameter-reference.md`はFITOM_X側の原本由来だが、こちらで直した節
   (worklog 3.25/3.35/3.51)と「原本由来なので直さない」とした節(3.37/3.45)があり、
   バンクのパスは意図的に原本と変えている(3.35)。どこまでこちらで書き換えてよいかの
-  方針が決まっていない。
+  方針が決まっていない。原本がFITOM_X側で削除されたので、この写しを残すか、
+  FITOM_X側の文書(`docs/manuals/hwpatch-reference.md`等)への参照に置き換えるかも
+  合わせて未決。
 - 汎用VTLをキャリア別のprog(24-31)へ付け替えた件(worklog 3.21)は、FITOM_X本体が
   `sw_prog`で指定されたSwPatchのVTLを正しいopへ適用していることまでは、
   このリポジトリからは確認していない。
@@ -239,3 +243,10 @@ SF2(FitomSf2IF)デバイスを持つ。
   原本のdriftで、写しは直さない方針のため本体側の更新を待つ。
 - `docs/instruments/`の`.ins`/`.xml`は、Sekaiju/Cakewalk/DOMINOでの読み込み動作が
   未検証(構文検証のみ)。Studio One/REAPER対応は検証環境が無いため保留(worklog 3.29)。
+- `CLAUDE.md`3節「値の格納規約」は、FITOM_XがOPLLでもキーオン/キーオフのたびに
+  EGT/RRを書き換えるとしているが、FITOM_XのOPLL系は`updateVoice`での静的な変換
+  (`SR>0`ならEGT=0・RRレジスタ=`SR>>1`、`SR==0`ならEGT=1・RRレジスタ=`RR`)で、
+  動的に書き換えるのはOPL系だけ(FITOM_Xの`docs/design/chip-notes.md`「EGTとRRの
+  静的な変換」)。`tools/voice_convert/opll_convert.py`の冒頭コメントと
+  `docs/voice-parameter-reference.md`も同じ前提で書かれている。変換規則
+  (`apply_carrier_rr_floor()`を含む)への影響は確かめていない。

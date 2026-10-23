@@ -4,7 +4,7 @@
     "FITOM_X本体はこの内容を一切解釈せず、HWPlugin_Init()にそのまま渡すだけ。",
     "soundfontsファイル一覧はここには書かない(banks.sf2_banksから",
     "FITOM_Xコアが自動導出してparams_json経由でHWPlugin_Open()に渡す、",
-    "docs/sf2-fluidsynth-integration.md 4節⑥参照)。"
+    "FITOM_Xのdocs/design/sf2-direct-path.md「デバイスの登録と起動時の検査」参照)。"
   ],
 
   "sample_rate": 44100,

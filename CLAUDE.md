@@ -382,7 +382,7 @@ CC#0の値がそのままVoicePatchType(直接モード)になる。0は通常�
   DSAemuEngineだけで、Y8960emuEngineは`src/`を検索した範囲では定位レジスタの実装が
   見当たらない(**読解のみ**、`40298b9`)。Y8960emuEngineが定位レジスタとSSGEX/SCCEXを
   実装したら見直す。Y8960のOPMは拡張レジスタを持たない標準のYM2151で、`chip: "OPM"`で
-  載せる(FITOM_Xの`docs/chip-driver-architecture.md`)。
+  載せる(FITOM_Xの`docs/design/chip-notes.md`「Y8960 の拡張ブロック」)。
 - 音程テーブルは`chips[].clock`から作られるため、クロックはチップの実際の値を書く
   (調律はどの値でも合う。PSG系のノイズ・エンベロープ、OPN/OPNAのリズムROMや
   ADPCMの再生レートに効く)。

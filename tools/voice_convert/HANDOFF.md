@@ -31,7 +31,7 @@ FITOM_X本体（コアエンジン・チップドライバ）開発からプリ�
 2. **`config_schema/hwbank.schema.json`**
    JSON Schemaによる正式な型定義。各フィールドの`description`にも詳細説明あり。
    エディタ（VSCode等）でこのスキーマを指定すると、JSON編集時に補完・検証が効く。
-3. `docs/voice-data-design.md`（本体リポジトリ側、参考情報）
+3. `docs/design/voice-processor.md`（本体リポジトリ側、参考情報）
    設計判断の背景・経緯。保守作業では読む必要は薄いが、「なぜこのフィールドは
    このチップでは無視されるのか」等の疑問が生じた際に参照する。
 
@@ -81,7 +81,7 @@ hwbank.json
 **staging移管後、他の変換ツールも同様の不整合が将来的に発生しうる**点に注意
 してください。本体側でチップドライバのフィールド解釈が変更された場合、
 対応する変換ツールの出力ロジックも追従して修正する必要があります。
-（本体リポジトリ側の`docs/voice-parameter-reference.md`が更新された際は、
+（本体リポジトリ側の`docs/manuals/hwpatch-reference.md`・`docs/design/chip-notes.md`が更新された際は、
 このリファレンスとの整合を都度確認することを推奨します。）
 
 ---

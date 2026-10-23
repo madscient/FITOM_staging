@@ -5,8 +5,8 @@
 場合がある。本ドキュメントは、**チップを選んだときに実際に効くフィールドと
 その意味**を素早く参照するためのリファレンスである。
 
-設計の背景・経緯は`voice-data-design.md`、全チップの継承構造は
-`chip-driver-architecture.md`を参照。
+設計の背景はFITOM_Xの`docs/design/voice-processor.md`、全チップの継承構造は
+FITOM_Xの`docs/design/chip-drivers.md`を参照。
 
 ---
 
@@ -254,7 +254,7 @@ OPLLだけが動的」としていたが、実際はOPL系も同じ動的書き�
 
 2026年7月〜、PSG系は全チップが共通の入口(`VOICE_PATCH_SSG`=0x40固定)/
 HwBank名前空間を共有する設計に変更されている。詳細は
-`docs/patch-structure-design.md`の「PSG系共有バンク」参照。
+FITOM_Xの`docs/design/patch-resolution.md`の「PSG系共有バンク」参照。
 
 ---
 
@@ -456,4 +456,4 @@ OPL4指定時は`resolveCompositeSpec`により`COPL3`(4OP)+`COPL3_2`(2OP)+`COPL
 
 ## VoicePatchType 対応表
 
-正確な一覧は`chip-driver-architecture.md`の「5. VoicePatchType 対応表」を参照。
+正確な一覧はFITOM_Xの`docs/design/chip-drivers.md`の「VoicePatchType 対応表」を参照。

@@ -30,7 +30,7 @@
           },
           "sw": {
             "type": "object",
-            "description": "チャンネルソフトLFO(ビブラート)。F-numberインデックスを周期変調する(1unit≒1.5625cent)。HW LFO(OPM/OPN2内蔵)はボイスパラメータから切り離され、CC#1 Modulationとして別途実装されている(docs/voice-data-design.md参照)。",
+            "description": "チャンネルソフトLFO(ビブラート)。F-numberインデックスを周期変調する(1unit≒1.5625cent)。HW LFO(OPM等のチップ内蔵LFO)の周波数・深さはボイスパラメータに持たず、CC#14/15で演奏中に送る(docs/design/voice-processor.md参照)。",
             "properties": {
               "LWF": {
                 "type": "integer",
@@ -60,7 +60,7 @@
                 "type": "integer",
                 "minimum": 0,
                 "maximum": 127,
-                "description": "レート (0=LFO無効。1〜127は対数カーブで0.5Hz〜50Hzにマッピングされる、docs/voice-data-design.md参照)"
+                "description": "レート (0=LFO無効。1〜127は対数カーブで0.5Hz〜50Hzにマッピングされる、docs/design/voice-processor.md参照)"
               },
               "LFI": {
                 "type": "integer",
@@ -73,7 +73,7 @@
                 "minimum": -1200,
                 "maximum": 1200,
                 "default": 0,
-                "description": "LFO深さ[セント、-1200〜+1200]。旧実装はLDM/LDL(16bit値を2バイトに分割、MIDI CC制御を想定した設計)だったが、新実装ではMIDI CC制御の可否が未定のため1フィールドに統合した。ピッチLFOがドラム音の装飾に使われるケースを考慮し、±1オクターブまでの深いレンジを確保している。"
+                "description": "LFO深さ[セント、-1200〜+1200]。ピッチLFOがドラム音の装飾に使われるケースを考慮し、±1オクターブまでの深いレンジを確保している。"
               }
             }
           },
@@ -125,13 +125,13 @@
                   "type": "integer",
                   "minimum": 0,
                   "maximum": 127,
-                  "description": "ベロシティ→ソフトLFO Depth感度 (未実装・予約。値を設定しても現状は反映されない)"
+                  "description": "ベロシティ→ソフトLFO Depth感度 (予約。値を設定しても反映されない)"
                 },
                 "VLR": {
                   "type": "integer",
                   "minimum": 0,
                   "maximum": 127,
-                  "description": "ベロシティ→ソフトLFO FadeIn感度 (未実装・予約。値を設定しても現状は反映されない)"
+                  "description": "ベロシティ→ソフトLFO FadeIn感度 (予約。値を設定しても反映されない)"
                 },
                 "SLW": {
                   "type": "integer",
@@ -167,7 +167,7 @@
                   "type": "integer",
                   "minimum": 0,
                   "maximum": 127,
-                  "description": "レート (0=LFO無効。1〜127は対数カーブで0.5Hz〜50Hzにマッピングされる、docs/voice-data-design.md参照)"
+                  "description": "レート (0=LFO無効。1〜127は対数カーブで0.5Hz〜50Hzにマッピングされる、docs/design/voice-processor.md参照)"
                 },
                 "SLI": {
                   "type": "integer",
@@ -183,7 +183,7 @@
             "minimum": -1200,
             "maximum": 1200,
             "default": 0,
-            "description": "固定トランスポーズ[セント、-1200〜+1200]。ToneLayer.transpose(半音単位、レイヤードパッチのレイヤー固有パラメータ)とは独立した概念で、SwPatchが適用される全ての経路(通常モード/直接モード/内蔵リズム音源等)で効く。両方指定されている場合は加算される。適用時は「半音部分(ノート番号に加算)」と「セント端数部分(kfs単位=1半音64ステップに変換して加算。docs/terminology.mdの「kfs」参照)」に分解される。名前はDrumNote.fine_tuneと同じ命名スタイル(ToneLayer.transposeとの役割混同を避けるため\"fixed\"ではなく\"fine\"を使う)。"
+            "description": "固定トランスポーズ[セント、-1200〜+1200]。ToneLayer.transpose(半音単位、レイヤードパッチのレイヤー固有パラメータ)とは独立した概念で、SwPatchが適用される全ての経路(通常モード/直接モード/内蔵リズム音源等)で効く。両方指定されている場合は加算される。適用時は「半音部分(ノート番号に加算)」と「セント端数部分(kfs単位=1半音64ステップに変換して加算。docs/design/terminology.mdの「kfs」参照)」に分解される。名前はDrumNote.fine_tuneと同じ命名スタイル(ToneLayer.transposeとの役割混同を避けるため\"fixed\"ではなく\"fine\"を使う)。"
           }
         }
       }
