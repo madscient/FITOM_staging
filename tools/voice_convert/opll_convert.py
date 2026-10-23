@@ -33,13 +33,13 @@ FITOM_X hwbank.schema.json (フラット構造)へのマッピング:
   AR/DRは実機レジスタ値(4bit)をそのまま格納すると、FITOM_Xランタイム側の
   読み出し(OPLL_new.cpp、格納値を>>1して5bit相当の「上位ビット表現」から
   実際のレジスタ幅を切り出す設計)によって値が半分になってしまうため、<<1して
-  格納する(OPL系と同じ規約、docs/CLAUDE.md 3.17)。
+  格納する(OPL系と同じ規約、docs/worklog/2026-07.md 3.17節)。
   TLは<<1してはならない。TLはチップを問わず0.75dB/stepの減衰量空間で保持
   する共通仕様で、OPLL/OPL系はレンジが6bit(47.25dB)に狭いだけであり、
   ランタイム側(modTLToReg=linear2dB(...,RANGE48DB,STEP075DB,6))はクランプ
   のみでスケーリングを行わない。<<1するとステップ幅が1.5dBに読み替わって
   減衰量が2倍になり、レジスタ値32以上のオペレータは飽和して消音する
-  (docs/CLAUDE.md 3.51参照)。
+  (docs/worklog/2026-08.md 3.51節参照)。
 
   SR/RR/実機EGTビットの変換規則(OPLはCOPL::updateVoiceのみで完結する静的な
   一度きりの書き込みだが、OPLLはupdateVoice+updateKeyの2段階書き込みで、
@@ -123,7 +123,7 @@ def parse_instrument(b):
     # 変換元RRレジスタが0の場合、SRの値に関わらずキーオフ時に実機へ
     # RR=0が書き込まれ事実上消音しなくなるため、キャリアに限りRRへ
     # 最小値を補う(モジュレータ側は音声出力に寄与しないため対象外。
-    # 2026年7月20日追加・7月20日SR分岐を撤廃、docs/CLAUDE.md 3.24参照)。
+    # 2026年7月20日追加・7月20日SR分岐を撤廃、docs/worklog/2026-07.md 3.24節参照)。
     if car.get("AR", 0) > 0 and car["RR"] == 0:
         car["RR"] = MIN_CARRIER_RR
 

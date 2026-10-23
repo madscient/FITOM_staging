@@ -2,7 +2,7 @@
   "name": "MSX-AUDIO + OPLL(x) ROM Preset",
   "voice_patch_type": "OPL3_2",
   "source": "MSX-AUDIO Preset OPL binary files + https://github.com/plgDavid/misc/wiki/Copyright-free-OPLL(x)-ROM-patches",
-  "note": "MSX-AUDIO内蔵64音色(prog 0-63) + Copyright-free OPLL(x) ROM patches (OPLL/OPLL-X/OPLL-P/VRC7、各15音色、prog 64-123)を統合。OPLL系はレジスタダンプをOPL2用にコンバート(Carrier TLはチャンネルレジスタ管理のため0固定、WSはOPLLの0/1のみ使用)。全パッチで実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに変換(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=そのまま)。ops[i].EGTフィールド自体はOPL系では無関係のため常に0。出典: https://github.com/plgDavid/misc/wiki/Copyright-free-OPLL(x)-ROM-patches (CC BY-SA, David Viens & Hubert Lamontagne)。2026年7月20日、キャリアがEGTビット=0(パーカッシブ)のときRR=0にしていた旧変換の誤りを修正(キーオフで消音しないバグ)。変換元スクリプトが本リポジトリに存在しないため、SR(=変換元RRレジスタ<<1)から元のRR値を復元して補正(docs/CLAUDE.md 3.24参照)。",
+  "note": "MSX-AUDIO内蔵64音色(prog 0-63) + Copyright-free OPLL(x) ROM patches (OPLL/OPLL-X/OPLL-P/VRC7、各15音色、prog 64-123)を統合。OPLL系はレジスタダンプをOPL2用にコンバート(Carrier TLはチャンネルレジスタ管理のため0固定、WSはOPLLの0/1のみ使用)。全パッチで実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに変換(EGTビット=1→SR=0,RR=そのまま。EGTビット=0→SR=RRレジスタ<<1,RR=そのまま)。ops[i].EGTフィールド自体はOPL系では無関係のため常に0。出典: https://github.com/plgDavid/misc/wiki/Copyright-free-OPLL(x)-ROM-patches (CC BY-SA, David Viens & Hubert Lamontagne)。2026年7月20日、キャリアがEGTビット=0(パーカッシブ)のときRR=0にしていた旧変換の誤りを修正(キーオフで消音しないバグ)。変換元スクリプトが本リポジトリに存在しないため、SR(=変換元RRレジスタ<<1)から元のRR値を復元して補正(docs/worklog/2026-07.md 3.24節参照)。",
   "patches": [
     {
       "prog": 0,

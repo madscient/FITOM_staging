@@ -6,7 +6,7 @@
     "clockはPC-9801実機の値(YM2203=3.9936MHz、YM2608=7.9872MHz)。音程テーブルは",
     "chips[].clockから生成されるため、他プロファイルの7159090との違いは調律では",
     "なくOPNAのリズムROM/ADPCM再生レートに効く。",
-    "OPNAのビルトインリズムはrhythm_modeフラグの対象外で常に生成される(3.2節)。",
+    "OPNAのビルトインリズムはrhythm_modeフラグの対象外で常に生成される(docs/worklog/2026-08.md 3.60節)。",
     "OPNAとY8950のADPCM-Bは同一deviceTypeとして扱われmergeSpannableDevices()で",
     "1デバイス(2ch)へ統合される。pcm_banksのADPCM-B bank0はchip=OPNA(32byte",
     "バウンダリ)で登録されているため、Y8950側(4byteバウンダリ)へ回ったボイスは",

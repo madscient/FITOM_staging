@@ -6,9 +6,8 @@
 チップファミリーに絞ったプロファイルです。1つのプロファイルに
 複数の同系統チップをまとめてロードします。
 
-2026年7月29日以降、`banks`セクションは全プロファイル共通の
-`config/profiles/unified.bankset.json`を参照する構成に変更されました
-（`docs/CLAUDE.md` 3.32節参照）。これに伴い、以下のパッチバンク
+`banks`セクションは全プロファイル共通の
+`config/profiles/unified.bankset.json`を参照します。このため、以下のパッチバンク
 (CC#32)・ドラムキット(prog)の番号は、各プロファイル固有のローカル番号
 ではなく`unified.bankset.json`側の番号（全プロファイル共通）です。
 各プロファイルは実際には`unified.bankset.json`の全エントリを内部で
@@ -164,8 +163,8 @@ Y8960カートリッジ1基分の構成です。OPLLEX/OPL2EX/SSGEX/SCCEXはチ�
 
 **ドラムキット(prog0):** OPLL Built-in set
 
-OPLL系ROM音色(CC#0=40-43, CC#32=0)はOPLLEXへフォールバックしないため
-発音しません。OPLLEX自身のROM音色はCC#0=44で選択します。
+OPLL系ROM音色(CC#0=40-43, CC#32=0)はOPLLEXで鳴ります。OPLLEXのROM音色は
+CC#0=44でも選択できます。
 
 ### PC-88プロファイル
 

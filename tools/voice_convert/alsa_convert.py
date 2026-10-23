@@ -33,13 +33,13 @@ FITOM_X hwbank.schema.json (フラット構造) へのマッピング:
   AR/DRは実機レジスタ値(4bit)をそのまま格納すると、FITOM_Xランタイム側の
   読み出し(OPL_new.cpp ar4()、格納値を>>1して5bit相当の「上位ビット表現」
   から実際のレジスタ幅を切り出す設計)によって値が半分になってしまうため、
-  変換時に<<1して格納する(docs/CLAUDE.md 3.17参照)。
+  変換時に<<1して格納する(docs/worklog/2026-07.md 3.17節参照)。
   TLは<<1してはならない。TLはチップを問わず0.75dB/stepの減衰量空間で保持
   する共通仕様で、OPL系はレンジが6bit(47.25dB)に狭いだけであり、ランタイム
   側(effTLToReg=linear2dB(...,RANGE48DB,STEP075DB,6))はクランプのみで
   スケーリングを行わない。<<1するとステップ幅が1.5dBに読み替わって減衰量が
   2倍になり、レジスタ値32以上のオペレータは飽和して消音する
-  (docs/CLAUDE.md 3.51参照)。
+  (docs/worklog/2026-08.md 3.51節参照)。
   実機EGTビット(bit5)とRRレジスタ(下位4bit)は、docs/voice-parameter-reference.md
   の変換規則に従いFITOMのSR/RRへ変換する(ops[i].EGT自体はOPL系では無関係のため
   常に0):
@@ -49,7 +49,7 @@ FITOM_X hwbank.schema.json (フラット構造) へのマッピング:
   実機EGTビット1+RR値、という動的な書き込みを行うため(2026年7月20日訂正、
   旧実装は「EGTビット=0(パーカッシブ)ならRR=0」としていたが、これだと
   キーオフ時にRR=0が実機へ書き込まれ消音しなくなるバグがあった。
-  docs/CLAUDE.md 3.3/3.24参照)、`RR`は実機EGTビットの値に関わらず常に
+  CLAUDE.md「値の格納規約」節、docs/worklog/2026-07.md 3.24節参照)、`RR`は実機EGTビットの値に関わらず常に
   変換元RRレジスタ値を格納する。
   変換元のRRレジスタ自体が0の場合、キャリアオペレータのRRが0のまま
   (実機で事実上消音しない状態)になるため、キャリアに限りRRへ最小値を
@@ -148,7 +148,7 @@ def apply_carrier_rr_floor(ops, alg):
     FITOM_Xはキーオフ時に`SR`の値に関わらず常に`RR`をRRレジスタへ
     書き込むため、`SR`が非ゼロでもRR=0は消音しないバグになる。
     モジュレータ側は音声出力に寄与しないため実害が無く対象外。
-    2026年7月20日追加・7月20日`SR`分岐を撤廃、docs/CLAUDE.md 3.24参照)。
+    2026年7月20日追加・7月20日`SR`分岐を撤廃、docs/worklog/2026-07.md 3.24節参照)。
     """
     for op, is_carrier in zip(ops, carrier_flags(len(ops), alg)):
         if is_carrier and op.get("AR", 0) > 0 and op["RR"] == 0:
@@ -160,8 +160,8 @@ def decode_op(char, scale, ar_dr, sl_rr, wave):
     # FITOM_Xはキーオフ時に常に実機EGTビット=1+RRレジスタ=変換元RR値を
     # 書き込むため、EGTビットの値に関わらずRRは常に変換元RRレジスタ値
     # を格納する(2026年7月20日修正、旧実装はパーカッシブ側でRR=0に
-    # していたためキーオフで消音しないバグがあった。docs/CLAUDE.md
-    # 3.24参照)。
+    # していたためキーオフで消音しないバグがあった。docs/worklog/2026-07.md
+    # 3.24節参照)。
     sr = (rr_reg << 1) if egt_bit == 0 else 0
     rr = rr_reg
     return {

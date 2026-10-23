@@ -3,12 +3,12 @@
 インストゥルメント定義ファイル(Cakewalk/Sekaiju用 .ins、DOMINO用 .xml)を
 生成するスクリプト。
 
-対応するCC#0(Bank Select MSB)の意味は docs/CLAUDE.md 3.2節、
+対応するCC#0(Bank Select MSB)の意味は CLAUDE.md「CC#0とVoicePatchType」節、
 docs/manuals/README.md の対応表を参照。
 
 対象は統合設計プロファイル(TARGET_PROFILES参照)のみ。統合前の個別
 プロファイル(旧emulator_*/hw_*)は誰もメンテナンスしておらず統合後の
-構成と矛盾していたため2026年7月26日に削除済み(docs/CLAUDE.md 3.30節)。
+構成と矛盾していたため2026年7月26日に削除済み(docs/worklog/2026-07.md 3.30節)。
 
 実機音源の実例(Sekaiju8.3/instrument/KORG_KROME.ins・Roland_SC-8850.ins)
 に倣い、Sekaiju上で1プロファイル=1機材として認識されるよう、
@@ -65,7 +65,7 @@ TARGET_PROFILES: dict[str, str] = {
 }
 
 # 2026年7月29日、banksセクションが外部ファイル参照(文字列)+
-# bank_overrides(部分上書き)方式に変わった(docs/CLAUDE.md 3.32/3.33節)。
+# bank_overrides(部分上書き)方式に変わった(docs/worklog/2026-07.md 3.32/3.33節)。
 # 識別キーはセクションごとに異なる(profile.schema.json bank_overrides説明文参照):
 #   hw_banks: (group, bank) / pcm_banks: (bank, chip) / drum_banks: prog
 #   それ以外(sw_banks/patch_banks/sf2_banks/scc_wave_banks): bank
@@ -81,14 +81,14 @@ def _override_key(section: str, entry: dict):
 
 # 通常モード(CC#0=0,CC#32=0)のレイヤードバンク0(patch_banks bank=0)・
 # ドラムキット0(drum_banks prog=0)は、bank_overridesにより実際に鳴る
-# ファイルがプロファイルごとに異なる(docs/CLAUDE.md 3.33節)。
+# ファイルがプロファイルごとに異なる(docs/worklog/2026-07.md 3.33節)。
 # インストゥルメントリスト上はプロファイル固有の内容を反映せず、GM標準
 # (GM128メロディ名・GM2標準ドラムマップ)で統一表示する(ユーザー判断、
 # 2026年7月31日)。
 GM_STANDARD_MELODIC_FILE = "../../banks/patches/necopn_gm.patchbank.json"
 GM_STANDARD_DRUM_FILE = "../../banks/drums/gm2_standard.drumkit.json"
 
-# VoicePatchType(CC#0直接モード値)。docs/CLAUDE.md 3.2節の対応表に加え、
+# VoicePatchType(CC#0直接モード値)。CLAUDE.md「CC#0とVoicePatchType」節の対応表に加え、
 # 2026年8月のステレオ化プロファイル追加(OPM/OPZ分離、同種チップの
 # フォールバックルート新設)で新規に使われるようになったgroup(OPN/OPM/
 # OPL/OPL2/OPLLP/OPLLX/VRC7)を、`../FITOM_X/core/include/fitom/
@@ -127,7 +127,7 @@ CC0_SF2 = 127         # sf2_banks[] (FitomSf2IF/FluidSynth、CC#0規約上未使
 # drum_banks[]には現れず、プロファイルJSONの走査だけでは拾えない。
 # 実際の名前はFITOM_X本体(../FITOM_X)のC++ソースにハードコードされて
 # いるため、ここに転記する(2026年8月4日、ユーザー指摘によりFITOM_X本体
-# 調査の上追加。docs/CLAUDE.md 3.31節参照)。
+# 調査の上追加。docs/worklog/2026-07.md 3.31節参照)。
 
 # core/src/PatchManager.cpp initOpllRomPatches() のROM音色名(kNames[4][16])。
 # hw_bank=0固定、hwProg = (variant<<4)|instIndex
@@ -143,7 +143,7 @@ CC0_SF2 = 127         # sf2_banks[] (FitomSf2IF/FluidSynth、CC#0規約上未使
 # (40-43)についてはCC#0の値そのものが捨てられ、実際の発音・モニター
 # 名前解決はhwProg内のvariantSel(bit4-6)だけで再決定される。このため
 # ランタイム上はCC#0=40/41/42/43のどれを選んでも同じProgに対して常に
-# 同じ結果になる(docs/CLAUDE.md 3.41節)。CC#0=44(OPLLEX)だけは例外で
+# 同じ結果になる(docs/worklog/2026-08.md 3.41節)。CC#0=44(OPLLEX)だけは例外で
 # CC#0の値が意味を持つ(OPLLEX_BANK_LABELS定義部のコメント参照)。
 #
 # 一方、FITOM_X本体・FITOM_patch_editorのパッチピッカーGUIは、
@@ -151,7 +151,7 @@ CC0_SF2 = 127         # sf2_banks[] (FitomSf2IF/FluidSynth、CC#0規約上未使
 # FITOMBridge.cpp)経由でCC#0ごとに対応するvariantの音色のみに絞り込んで
 # 表示している。MIDIシーケンサー側でも同じ体験(CC#0でチップを選んでいる
 # ように見せる)にするため、このGUIの絞り込みロジックに倣う
-# (2026年8月4日、ユーザー指示。docs/CLAUDE.md 3.42節)。
+# (2026年8月4日、ユーザー指示。docs/worklog/2026-08.md 3.42節)。
 # CC#0(voicePatchType) -> variant番号(OPLL_ROM_NAMESのキー)。
 # `resolveOpllRomVoice`のkVariantMap/`getOpllRomPatches`と同じ対応で、
 # `tests/test_config.cpp`のユニットテストでも検証済み。CC#0の数値順
@@ -388,7 +388,7 @@ def collect_melodic_entries(profile: dict, profile_dir: Path, warn) -> list[Entr
 
     for hb in banks.get("hw_banks", []):
         if hb.get("role") == "builtin_swpatch_meta":
-            continue  # ユーザーが音色として直接選べないメタバンク(docs/CLAUDE.md 3.6)
+            continue  # ユーザーが音色として直接選べないメタバンク(CLAUDE.md「ビルトイン音色用メタバンク」節)
         group = hb["group"]
         if group not in GROUP_CC0_HW:
             warn(f"未知のhw_banks group '{group}' (bank={hb.get('bank')}) をスキップしました")
@@ -422,13 +422,13 @@ def collect_builtin_entries() -> list[Entry]:
 
     全プロファイルが共通の`unified.bankset.json`を参照し、実際の
     デバイス構成(搭載チップ)に含まれないバンクエントリも変わらず表示
-    する(単に発音しないだけで実害がない)という設計原則(docs/CLAUDE.md
+    する(単に発音しないだけで実害がない)という設計原則(docs/worklog/2026-07.md
     3.32節)に合わせ、当初実装していた「実際に搭載されているチップで
     絞り込む」判定は撤廃し、他のhw_banks[]由来エントリ(例: OPLL専用
     チップを持たないunified_presetでも通常のOPLLプリセットバンクは
     表示される)と同じく、全プロファイル共通で常に追加する
     (2026年8月8日、ユーザー指摘「Unified presetに登録されていない」
-    により訂正。docs/CLAUDE.md 3.43節)。"""
+    により訂正。docs/worklog/2026-08.md 3.43節)。"""
     entries: list[Entry] = []
     # ランタイム上はCC#0(voicePatchType)に関わらずhwProgだけで結果が
     # 決まるが(OPLL_BUILTIN_CC0_TO_VARIANT定義部のコメント参照)、GUIの

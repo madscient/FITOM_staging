@@ -21,17 +21,17 @@ python3 generate_instruments.py --out-dir /path/to/out
 指定している統合設計プロファイル8件(`unified_preset`/`emu_opn`/
 `emu_fmgen_opn`/`emu_opl`/`emu_opm`/`emu_opz`/`emu_opll`/`fmall`)のみが
 対象です。`emu_opz`(旧`emu_opm`からOPM/OPZを分離)は2026年8月11日に
-追加(`docs/CLAUDE.md` 3.49節参照)。`emu_opn_stereo`/`emu_opl_stereo`/
+追加(`docs/worklog/2026-08.md` 3.49節参照)。`emu_opn_stereo`/`emu_opl_stereo`/
 `emu_opll_stereo`(リニアステレオ化プロファイル)は意図的に対象外
 (banks/bank_overridesが対応する非ステレオ版と完全に同一で、ステレオ化は
 エンジン側の音声処理設定の違いのみのため、インストゥルメントリストの
 内容が重複するだけになる。2026年8月11日、ユーザー指摘)。
 統合前の個別プロファイル(旧`emulator_*`/`hw_*`)は誰もメンテナンスして
 おらず統合後の構成と矛盾していたため、2026年7月26日に
-`config/profiles/`ごと削除済みです(`docs/CLAUDE.md` 3.30節参照)。
+`config/profiles/`ごと削除済みです(`docs/worklog/2026-07.md` 3.30節参照)。
 
 **`banks`の外部ファイル参照 / `bank_overrides`への対応**(2026年7月29-31日、
-`docs/CLAUDE.md` 3.32/3.33節参照): 全プロファイルの`banks`は現在
+`docs/worklog/2026-07.md` 3.32/3.33節参照): 全プロファイルの`banks`は現在
 `config/profiles/unified.bankset.json`への文字列参照に統一されており、
 各プロファイル固有の差分は`bank_overrides`(`banks`と同一スキーマ、識別
 キー一致で置換・不一致で追加)で表現されます。本スクリプトは`banks`が
@@ -63,7 +63,7 @@ python3 generate_instruments.py --out-dir /path/to/out
 
 プロファイルの`banks`配下の各配列を、CC#0(Bank Select MSB)値ごとに
 以下のように読み替えて音色一覧を組み立てます(対応関係は
-`docs/CLAUDE.md` 3.2節、`docs/manuals/README.md`のバンクマップ表と同じ):
+`CLAUDE.md`「CC#0とVoicePatchType」節、`docs/manuals/README.md`のバンクマップ表と同じ):
 
 | ソース配列 | CC#0 | CC#32 | Prog | 参照ファイル形式 |
 |---|---|---|---|---|
@@ -124,7 +124,7 @@ FITOMdefine.h`のVOICE_PATCH_*定数、2026年8月11日確認):
 sf2_bank}`の3フィールドを持ち、`file`(SF2ファイルへのパス、実体は
 `sf2/`ディレクトリ配下、リポジトリ内に同梱)・`sf2_bank`(そのSF2ファイル
 自身が内部で持つバンク番号、GM相当=0・ドラム慣習=128等)・`bank`(FITOM_X
-側でのCC#32相当のインデックス)という構造です(3.31/3.36節参照)。
+側でのCC#32相当のインデックス)という構造です(`docs/worklog/` 3.31/3.36節参照)。
 
 バンク名・パッチ名はSF2ファイル自体(RIFF形式)の`pdta`チャンク内
 `phdr`(Preset Headers、各38byte固定長のレコード配列)を直接パースして
@@ -138,7 +138,7 @@ sf2_bank}`の3フィールドを持ち、`file`(SF2ファイルへのパス、�
 のを避けるため)。
 
 CC#0は127を割り当てています(2026年8月4日、ユーザー指示。FITOM_Xの
-CC#0規約(3.2節)で未使用の値を便宜的に使用)。
+CC#0規約(`CLAUDE.md`「CC#0とVoicePatchType」節)で未使用の値を便宜的に使用)。
 
 ### ファイルを持たない機械合成バンク(OPLLビルトイン音色・OPLLビルトイン
 リズム・OPNAビルトインリズム)
@@ -226,9 +226,9 @@ CC#32の意味が「対象チップ選択」に、Progの意味が「楽器(物�
 (`fmemuif_*.profile.json`等)が実際に搭載しているチップ
 (`engines[].chips[].chip`)で絞り込む実装にしていたが、「`unified_preset`
 に登録されていない」というユーザー指摘を受けて撤廃した(2026年8月8日、
-docs/CLAUDE.md 3.43節)。全対象プロファイルが共通の`unified.bankset.json`
+docs/worklog/2026-08.md 3.43節)。全対象プロファイルが共通の`unified.bankset.json`
 を参照し、実際のデバイス構成に含まれないバンクエントリも変わらず表示
-する(単に発音しないだけで実害がない)という設計原則(docs/CLAUDE.md
+する(単に発音しないだけで実害がない)という設計原則(docs/worklog/2026-07.md
 3.32節)に、他のhw_banks[]由来エントリ(例: OPLL専用チップを持たない
 `unified_preset`でも通常のOPLLプリセットバンクCC#0=40 CC#32=1/2/4は
 表示される)と同じ扱いに揃えている。

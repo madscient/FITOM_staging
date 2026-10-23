@@ -6,7 +6,7 @@
     "clockはPC-8801実機の値(YM2203=3.9936MHz、YM2608=7.9872MHz)。音程テーブルは",
     "chips[].clockから生成されるため、他プロファイルの7159090との違いは調律では",
     "なくOPNAのリズムROM/ADPCM再生レートに効く。",
-    "OPNAのビルトインリズムはrhythm_modeフラグの対象外で常に生成される(3.2節)。"
+    "OPNAのビルトインリズムはrhythm_modeフラグの対象外で常に生成される(docs/worklog/2026-08.md 3.60節)。"
   ],
   "bank_overrides": {
     "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルの主役であるOPN系デバイス向けのバンクで上書きする。",

@@ -13,10 +13,10 @@
     "二重になる。",
     "OPL2EX内蔵ADPCM-B(DEVICE_ADPCMB_OPL2EX)向けの波形イメージは",
     "pcm_image_catalog.jsonにまだ無く、ADPCM部は発音しない。",
-    "bank_overridesで敷くgm_layered_opllのうち、ROM音色レイヤー(hw_bank=0)は",
-    "CC#0=40(OPLL)指定でROM音色はフォールバック非対応のため、OPLL系がOPLLEXしか",
-    "無いこのプロファイルでは発音しない。ユーザーバンクを指すhw_bank=2/4の",
-    "レイヤーはopllFamilyAcceptsFallback()でOPLLEXへ落ちる。"
+    "bank_overridesで敷くgm_layered_opllのROM音色レイヤー(hw_bank=0)は、",
+    "標準OPLL系のチップが無いためresolveOpllRomVoice()がOPLLEXへ落とす。",
+    "ユーザーバンクを指すhw_bank=2/4のレイヤーはopllFamilyAcceptsFallback()で",
+    "OPLLEXへ落ちる。"
   ],
   "bank_overrides": {
     "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)はgm_layered_skeleton.patchbank.json(空)・未定義のままで無音のため、このプロファイルの主役であるOPLLEX(opllFamilyAcceptsFallback()によりOPLL系バンクがそのまま鳴る)向けのバンクで上書きする。",
