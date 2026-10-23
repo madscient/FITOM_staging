@@ -147,15 +147,18 @@ OPLL-P/OPLL-X/VRC7のROM音色を参照するパッチは、対応するチッ�
 
 設定ファイル: `config/profiles/emu_msx2pp.profile.json`
 
+Y8960カートリッジ1基分の構成です。OPLLEX/OPL2EX/SSGEX/SCCEXはチャンネルごとの
+定位を持ち、パンポットがそのまま効きます。
+
 **チップ構成:**
 
 | チップ | クロック | エンジン | 備考 |
 |---|---|---|---|
-| OPLLEX×2 | 3,579,545Hz | Y8960emuEngine | リニアステレオ、ビルトインリズム有効 |
-| OPL2EX×2 | 3,579,545Hz | Y8960emuEngine | リニアステレオ |
-| SSG×2 | 2,000,000Hz | DSAemuEngine | リニアステレオ |
-| DCSG×2 | 3,579,545Hz | DSAemuEngine | リニアステレオ |
-| SCC | 3,579,545Hz | DSAemuEngine | |
+| OPLLEX | 3,579,545Hz | DSAemuEngine | Y8960のOPLL部、ビルトインリズム有効 |
+| OPL2EX | 3,579,545Hz | DSAemuEngine | Y8960のOPL2部。内蔵ADPCM部は波形イメージが未登録のため発音しません |
+| SSGEX | 1,789,772Hz | DSAemuEngine | Y8960のSSG部(YM2149×2) |
+| SCCEX | 3,579,545Hz | DSAemuEngine | Y8960のSCC部 |
+| OPM | 3,579,545Hz | YMFMEngine | Y8960のOPM部 |
 
 **通常モード(CC#0=0, CC#32=0)のパッチバンク:** `gm_layered_opll.patchbank.json`
 

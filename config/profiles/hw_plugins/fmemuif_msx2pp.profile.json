@@ -6,22 +6,18 @@
   "pcm_catalog":   "../../../pcm_image_catalog.json",
   "engines": [
     {
-      "dll": "engines/Y8960emuEngine",
+      "dll": "engines/DSAemuEngine",
       "chips": [
-        { "chip": "OPLLEX", "clock": 3579545, "pan": 1 },
-        { "chip": "OPLLEX", "clock": 3579545, "pan": 2 },
-        { "chip": "OPL2EX", "clock": 3579545, "pan": 1 },
-        { "chip": "OPL2EX", "clock": 3579545, "pan": 2 }
+        { "chip": "OPLLEX", "clock": 3579545, "pan": 0 },
+        { "chip": "OPL2EX", "clock": 3579545, "pan": 0 },
+        { "chip": "SSGEX",  "clock": 1789772, "pan": 0 },
+        { "chip": "SCCEX",  "clock": 3579545, "pan": 0 }
       ]
     },
     {
-      "dll": "engines/DSAemuEngine",
+      "dll": "engines/YMFMEngine",
       "chips": [
-        { "chip": "SSG",    "clock": 2000000, "pan": 1 },
-        { "chip": "SSG",    "clock": 2000000, "pan": 2 },
-        { "chip": "DCSG",   "clock": 3579545, "pan": 1 },
-        { "chip": "DCSG",   "clock": 3579545, "pan": 2 },
-        { "chip": "SCC",    "clock": 3579545, "pan": 0 }
+        { "chip": "OPM",    "clock": 3579545, "pan": 0 }
       ]
     }
   ]

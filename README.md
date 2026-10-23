@@ -24,9 +24,9 @@ FITOM_staging/
 │   │   ├── emu_opl.profile.json             OPLエミュプロファイル (OPL[rhythm]/Y8950/OPL2/OPL3/OPL4)
 │   │   ├── emu_opm.profile.json             OPMエミュプロファイル (OPM×2/OPZ×2)
 │   │   ├── emu_opll.profile.json            OPLLエミュプロファイル (OPLL[rhythm]/OPLLP/VRC7/OPLLX/OPLLEX)
-│   │   ├── fmall.profile.json               FMALL (OPZ/OPL3/OPL4AWM/OPNBB/OPLLEX、各L/R2枚)
+│   │   ├── fmall.profile.json               FMALL (OPZ/OPNBB/OPL3+OPL4AWMをL/R2枚ずつ + OPLLEX)
 │   │   ├── emu_msx.profile.json             MSXプロファイル (OPLL[rhythm]/Y8950[rhythm]/SSG/SCC+/OPM)
-│   │   ├── emu_msx2pp.profile.json          MSX2++プロファイル (OPLLEX[rhythm]/OPL2EX/SSG/DCSG 各2 リニアステレオ + SCC)
+│   │   ├── emu_msx2pp.profile.json          MSX2++プロファイル (Y8960: OPLLEX[rhythm]/OPL2EX/SSGEX/SCCEX/OPM)
 │   │   ├── emu_pc88.profile.json            PC-88プロファイル (OPN/OPNA/OPM)
 │   │   ├── emu_pc98.profile.json            PC-98プロファイル (OPN/OPNA/OPL3/Y8950[rhythm])
 │   │   ├── emu_ibmpc.profile.json           IBM PCプロファイル (SAA×2/OPL2[rhythm]/OPL3/OPM/DCSG)
@@ -38,9 +38,9 @@ FITOM_staging/
 │   │       ├── fmemuif_opm_opz4.profile.json FitomEmuIF 用 (OPM/OPZ 4チップ)
 │   │       ├── fmemuif_opll5.profile.json  FitomEmuIF 用 (OPLL系 5チップ)
 │   │       ├── fmemuif_fmall_stereo_lite.profile.json
-│   │       │                               FitomEmuIF 用 (FMALL 8チップ、L/R2枚ずつ)
+│   │       │                               FitomEmuIF 用 (FMALL 7チップ)
 │   │       ├── fmemuif_msx.profile.json    FitomEmuIF 用 (MSX 5チップ)
-│   │       ├── fmemuif_msx2pp.profile.json FitomEmuIF 用 (MSX2++ 9チップ)
+│   │       ├── fmemuif_msx2pp.profile.json FitomEmuIF 用 (MSX2++ 5チップ)
 │   │       ├── fmemuif_pc88.profile.json   FitomEmuIF 用 (PC-88 3チップ)
 │   │       ├── fmemuif_pc98.profile.json   FitomEmuIF 用 (PC-98 4チップ)
 │   │       └── fmemuif_ibmpc.profile.json  FitomEmuIF 用 (IBM PC 6チップ)
@@ -139,7 +139,7 @@ FitomHwIF実機構成を含む)は誰もメンテナンスしておらず統合�
 | FitomEmuIF | FMエンジン内蔵 hwif DLL (`FitomEmuIF.dll`) | IHWPlugin 実装 |
 | YMEngine | FM音源エミュレーター (`YMFMEngine.dll`、旧名`YMEngine.dll`から改称) | engines/ に配置 |
 | FmGenEngine | fmgen系FM音源エミュレーター (`FmGenEngine.dll`) | engines/ に配置 |
-| DSAemuEngine | digital-sound-antiques系エミュレーター (`DSAemuEngine.dll`) | engines/ に配置 |
+| DSAemuEngine | digital-sound-antiques系エミュレーター、Y8960(OPLLEX/OPL2EX/SSGEX/SCCEX)を含む (`DSAemuEngine.dll`) | engines/ に配置 |
 | EPSGemuEngine | AY8930(EPSG)エミュレーター (`EPSGemuEngine.dll`) | engines/ に配置 |
 | SAASoundEngine | SAA1099エミュレーター (`SAASoundEngine.dll`) | engines/ に配置 |
 | DSGemuEngine | YM2163(DSG)エミュレーター (`DSGemuEngine.dll`) | engines/ に配置 |

@@ -1,8 +1,10 @@
 {
   "_comment": [
     "統合プリセットプロファイル(unified_preset.profile.json)をベースに、",
-    "OPZ/OPL3/OPL4AWM/OPNBB/OPLLEXのみを抜き出し、それぞれL/R2枚の",
-    "リニアステレオ構成にしたもの。",
+    "OPZ/OPL3/OPL4AWM/OPNBB/OPLLEXのみを抜き出し、OPZ/OPNBB/OPL3+OPL4は",
+    "L/R2枚のリニアステレオ構成にしたもの。OPLLEXはchごとの定位をハードで",
+    "持つため1個だけ載せる(FITOM_XはOPLLEXにstereo_pairを効かせない)。",
+    "定位レジスタを実装しているDSAemuEngineで鳴らす。",
     "banksはunified.bankset.jsonを他プロファイルと共有参照しており、",
     "hw_banks/sw_banksのbank番号はhwbank.json内部のsw_bank/sw_prog参照と",
     "常に一致する(手動でのコピー・番号合わせは不要)。"
@@ -93,26 +95,13 @@
     },
     {
       "chip": "OPLLEX",
-      "engine": "engines/Y8960emuEngine",
+      "engine": "engines/DSAemuEngine",
       "if": "HW",
       "index": 0,
       "label": "OPLLEX",
-      "pan": 1,
+      "pan": 0,
       "plugin": "FitomEmuIF",
       "rhythm_mode": true,
-      "stereo_pair": true,
-      "type": "FMHWIF"
-    },
-    {
-      "chip": "OPLLEX",
-      "engine": "engines/Y8960emuEngine",
-      "if": "HW",
-      "index": 1,
-      "label": "OPLLEX",
-      "pan": 2,
-      "plugin": "FitomEmuIF",
-      "rhythm_mode": true,
-      "stereo_pair": true,
       "type": "FMHWIF"
     },
     {

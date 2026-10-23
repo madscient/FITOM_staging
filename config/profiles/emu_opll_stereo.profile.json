@@ -109,24 +109,12 @@
     },
     {
       "chip": "OPLLEX",
-      "engine": "engines/Y8960emuEngine",
+      "engine": "engines/DSAemuEngine",
       "if": "HW",
       "index": 0,
       "label": "OPLLEX",
-      "pan": 1,
+      "pan": 0,
       "plugin": "FitomEmuIF",
-      "stereo_pair": true,
-      "type": "FMHWIF"
-    },
-    {
-      "chip": "OPLLEX",
-      "engine": "engines/Y8960emuEngine",
-      "if": "HW",
-      "index": 1,
-      "label": "OPLLEX",
-      "pan": 2,
-      "plugin": "FitomEmuIF",
-      "stereo_pair": true,
       "type": "FMHWIF"
     },
     {

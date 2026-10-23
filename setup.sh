@@ -11,7 +11,7 @@
 #     fitom_hw.so         物理チップ用プラグイン (FitomHwIF)
 #     engines/
 #       YMFMEngine.so     FM音源エミュレーター
-#       DSAemuEngine.so   PSG系エミュレーター (SSG/DCSG/SCC/OPLL/OPL)
+#       DSAemuEngine.so   PSG系エミュレーター (SSG/DCSG/SCC/OPLL/OPL、Y8960のOPLLEX/OPL2EX/SSGEX/SCCEX)
 #       EPSGemuEngine.so  AY8930 (EPSG) エミュレーター
 #       SAASoundEngine.so SAA1099 エミュレーター
 #       DSGemuEngine.so   YM2163 (DSG) エミュレーター
