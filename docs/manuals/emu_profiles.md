@@ -66,20 +66,34 @@
 設定ファイル: `config/profiles/emu_opm.profile.json`
 
 **チップ構成:**
-- OPM(3,579,545Hz)
-- OPM(3,579,545Hz)
-- OPZ(3,579,545Hz)
-- OPZ(3,579,545Hz)
+- OPM×4(各3,579,545Hz)
 
-**通常モード(CC#0=0, CC#32=4)のパッチバンク:**
-- `gm_layered_opm.patchbank.json`
+**通常モード(CC#0=0, CC#32=0)のパッチバンク:**
+- `gm_layered_opm.patchbank.json`(CC#32=4でも同じバンクを選べます)
 
-**ドラムキット:** ALSA/MA-2/OPNA/OPLL/OPL Built-in/OPL4-AWM各種
-(prog2-13,15)に加え、PSS-590/680・RX5・RX11/21L・PSS-480のADPCM-A GM
-ドラムキット(prog17-22)、およびGM2バリエーション相当のPSS-590
-Power/Electronic Kit(prog16,24)・PSS-680 Brush Kit(prog40)を収録。
+このバンクのうち、OPZの拡張機能(波形選択・リバーブ・EGバイアス)を使う12音色は、
+OPMでは拡張機能なしの音で鳴ります。
 
-収録ドラムキット総数: 22種類
+**ドラムキット(prog0):**
+- GM2 Standard Kit(上のパッチバンクの音色で鳴ります)
+
+収録ドラムキット総数: 1種類
+
+## OPZエミュプロファイル
+
+設定ファイル: `config/profiles/emu_opz.profile.json`
+
+**チップ構成:**
+- OPZ×4(各3,579,545Hz)
+
+**通常モード(CC#0=0, CC#32=0)のパッチバンク:**
+- `gm_layered_opm.patchbank.json`(CC#32=4でも同じバンクを選べます。OPM向けの
+  バンクですが、OPZで鳴ります)
+
+**ドラムキット(prog0):**
+- GM2 Standard Kit(上のパッチバンクの音色で鳴ります)
+
+収録ドラムキット総数: 1種類
 
 ## OPLLエミュプロファイル
 

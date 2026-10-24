@@ -75,61 +75,111 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 ## 4. 未解決・要確認事項
 
-### 聴感確認が未実施のもの
+### 聴感確認(ユーザーが確かめる)
 
-- **Y8960系**(worklog 3.64/3.66): `emu_msx2pp`(OPLLEX/OPL2EX/SSGEX/SCCEX/OPM)、
-  `emu_opll`/`emu_opll_stereo`/`fmall`のOPLLEXは、デバイスが生成されるところまでしか
-  確認していない。MIDIのパンポットがchごとの定位として効くことも含め、
-  実際に鳴らしての確認が必要。
-- **SCC**: `emu_psg_stereo`/`emu_msx`のSCC、`emu_msx2pp`のSCCEXが実際に鳴るかは
-  未確認。以前の無音の原因2件(DSAemuEngineがemu2212のレジスタ窓の外へ書いていた件、
-  FITOM_Xの`CSCC`のレジスタ配置が重複していた件)は、どちらもコード上は解消している
-  (**読解のみ**、2026年10月23日)。DSAemuEngine(`46c2fbe`)は
+起動ログで分かるのはデバイスとバンクのロードまでで、以下は実際に鳴らして確かめる
+必要がある。確かめたら行を消し、結果を`docs/worklog/`に書く(不具合が見つかったら
+下の「構成・データの問題」へ移す)。見出しのチップ構成は1節の表と同じ。
+
+**準備**
+- [ ] そのマシンの`bin/build_info.json`で、`bin/`が2節の表のコミット以降のビルドで
+  あることを確かめる(違えば`.\setup.ps1 -Pull -Build`)
+
+**プロファイルを問わないもの**
+- [ ] `bank_overrides`(worklog 3.33): `emu_psg_stereo`・`unified_preset`以外の15本で、
+  通常モード(CC#0=0, CC#32=0)の音色と、ドラムchのprog 0のキットが鳴る。読み込まれる
+  ことは**確認済み**(2026年10月23日、起動ログの`Patch bank=0 prog=0 is empty`が
+  この15本では0件)
+- [ ] SF2(worklog 3.31/3.36): MIDI ch15/16(0起算の14/15)がSF2で鳴る。全17本でSF2の
+  HWPortが開くことは**確認済み**(2026年10月23日、起動ログ)。`sf2/`(配布対象外)の無い
+  マシンでは`SF2 phdr parse: cannot open`の警告が出る。`unified_preset`/`emu_opm`/
+  `emu_opn`/`fmall`の`sf2_channel_windows`の`mpu`は、`midi_inputs`が`__LOCAL__`で
+  DAW側のMPUを判別できず0を暫定採用している。鳴らないときはこの値も確かめる
+- [ ] ドラムキットの無音プレースホルダ(worklog 3.57): `type: "routed"`のキットで、
+  割り当てる音の無いノート(名前の末尾が`(placeholder)`)が鳴らず、他のノートは鳴る
+- [ ] 汎用VTL(worklog 3.21): `sw_bank=0`の汎用パッチ(prog 2, 24-31)を割り当てた音色で、
+  ベロシティがキャリアにだけ効く。FITOM_X本体が`sw_prog`で指定されたSwPatchのVTLを
+  正しいopへ適用していることは、このリポジトリからは確かめていない
+- [ ] インストゥルメントリスト(`docs/instruments/`の`.ins`/`.xml`)がSekaiju/Cakewalk/
+  DOMINOで読み込める(構文検証のみ。Studio One/REAPERは検証環境が無いため保留、
+  worklog 3.29)
+
+**`emu_opm`(OPM×4) / `emu_opz`(OPZ×4)**
+- [ ] レイヤードバンク(worklog 3.73): OPZの拡張(WS/REV/EGS)を使う12音色(prog 0,19,20,
+  28,30,43,50,65,66,94,98,105)が、`emu_opm`では拡張の抜けた音で鳴る。これを受け入れ
+  られるか。`emu_opz`では拡張も効くはず(PatchManagerを読んだだけ。**未検証**)。
+  ドラムキット`opm_standard`(prog 0)のノート28,30,43,50,65,66も同じ12音色を指す。
+  他の116音色は両方で鳴るはず(起動時の解決はどちらも**確認済み**: 起動ログ)
+- [ ] DX/TX81Z/FB-01由来のバンク(worklog 3.44〜3.48。直接モードCC#0=25(OPM)/26(OPZ)、
+  CC#32=2 FB-01、3 DX11、4 DX21、5 DX100_1、6 DX100_2、7 TX81Z): データ側の整合性検証
+  のみ。特にDT1(デチューン)とSL(D1L極性)は音の印象を大きく変える
+- [ ] 同じバンクのモジュレータへのVTL適用(worklog 3.48): モジュレータのベロシティ追従が
+  意図どおり効く。本体側は修正済み(FITOM_X `0293740`。**読解のみ**)。KVS>=3が
+  `VTL=127`で飽和して実機より約17dB浅くなる点が聴感上問題になるかも評価する(データ側
+  では解消できない。必要なら本体側でVTLの変動幅上限`VTL/2`を見直す)
+
+**`emu_opn` / `emu_fmgen_opn` / `emu_opn_stereo`(OPN2/OPNA/OPNB/OPNBB)**
+- [ ] ADPCM-Aのドラムキット(prog 0=PSS-480、16-22・24・40)が意図した音色で鳴る。
+  機種の入れ替え(worklog 3.62)でprogがずれているため、キットごとに確かめる。
+  鳴れば`pcm_image_catalog.json`経由のADPCM-Aのイメージのロード(worklog 3.22)も
+  確かめたことになる
+- [ ] ADPCM-B(CC#0=81)と、OPNAの内蔵リズム(ドラムのprog 11、またはCC#0=112・
+  CC#32=17)が鳴る(イメージのロード、worklog 3.22)
+
+**`emu_opl` / `emu_opl_stereo`(Y8950[リズム]/OPL3/OPL4)、`fmall`**
+- [ ] OPL4のAWM(worklog 3.35): 意図した音高・音量で鳴る。`fmall`は通常モードの
+  バンク0とドラムのprog 0がAWM。`emu_opl`/`emu_opl_stereo`ではCC#0=84の直接モードか、
+  ドラムのprog 15。対応する本体側の修正(FITOM_X `830e59a`)込みのバイナリは配置済み。
+  確かめたのはJSON構文・スキーマ検証と、全610ゾーンのフィールド充足だけ。鳴れば
+  AWMのROMイメージのロード(worklog 3.22)も確かめたことになる
+- [ ] Y8950のADPCM-B(CC#0=81)が鳴る(イメージのロード、worklog 3.22)
+
+**OPLLEX: `emu_opll` / `emu_opll_stereo` / `fmall`**
+- [ ] OPLLEX(CC#0=44)が鳴り、MIDIのパンポットがchごとの定位として効く(worklog 3.64/3.66)。
+  デバイスが生成されることまでしか確かめていない
+
+**`emu_msx2pp`(Y8960: OPLLEX[リズム]/OPL2EX/SSGEX/SCCEX、OPM)**
+- [ ] OPLLEX・OPL2EX・SSGEX・SCCEX・OPMが鳴り、OPLLEX/OPL2EX/SSGEX/SCCEXでMIDIの
+  パンポットがchごとの定位として効く(worklog 3.64/3.66)。OPL2EX内蔵のADPCM-Bは波形
+  イメージが未登録のため鳴らない(下の「構成・データの問題」)
+- [ ] SCCEXが鳴る(下の`emu_msx`のSCC+と同じ経緯)
+
+**`emu_msx`(OPLL[リズム]/Y8950[リズム]/SSG/SCC+、OPM)**
+- [ ] 各チップが鳴る(worklog 3.60。起動ログでの確認のみ)
+- [ ] SCC+が鳴る。以前の無音の原因2件(DSAemuEngineがemu2212のレジスタ窓の外へ書いて
+  いた件、FITOM_Xの`CSCC`のレジスタ配置が重複していた件)は、どちらもコード上は解消
+  している(**読解のみ**、2026年10月23日)。DSAemuEngine(`46c2fbe`)は
   `SCC_write(scc, 0x9000, 0x3F)`で有効化してから`0x9800+reg`へ書き、FITOM_X
   (`e528e23`)の`CSCC`は無印SCCを周波数`0x80`/音量`0x8A`/イネーブル`0x8F`、
-  SCC+を`0xA0`/`0xAA`/`0xAF`で書く。`emu_msx`のプロファイル`_comment`にある
-  「SCC+は無音」の記述も、確認が済んだら直す。
-- **DX/TX81Z/FB-01由来のOPM/OPZバンク**(worklog 3.44〜3.48): データ側の整合性検証
-  のみ。特にDT1(デチューン)とSL(D1L極性)は音の印象を大きく変える。
-- **モジュレータへのVTL適用**(worklog 3.48): 本体側で修正済み(FITOM_X `0293740`、
-  配置済みの`e528e23`に含まれる。**読解のみ**)。モジュレータのベロシティ追従が
-  意図どおり効くかの確認が必要。KVS>=3が`VTL=127`で飽和して実機より約17dB浅くなる点が
-  聴感上問題になるかも要評価(データ側では解消できない。必要なら本体側で
-  VTLの変動幅上限`VTL/2`の見直し)。
-- **AWMの波形ごとピッチ/音量校正**(worklog 3.35): 対応する本体側修正(FITOM_X
-  `830e59a`)込みのバイナリは配置済み。AWMが意図した音高・音量で鳴ることは未確認
-  (JSON構文・スキーマ検証、全610ゾーンのフィールド充足確認のみ済み)。
-- **`bank_overrides`**(worklog 3.33): 実際に音が出ることは未確認。実行時に
-  読み込まれることは**確認済み**(2026年10月23日): `bank_overrides`を持つ15
-  プロファイルは起動ログの`Patch bank=0 prog=0 is empty`が0件で、持たない
-  `emu_psg_stereo`/`unified_preset`だけが75件出る。
-- **SF2**(worklog 3.31/3.36): 実際に鳴るかは未確認。全17プロファイルでSF2の
-  HWPortが開くことは起動ログで**確認済み**(2026年10月23日)。`sf2/`(配布対象外)の
-  無いマシンでは`SF2 phdr parse: cannot open`の警告が出る。`unified_preset`/
-  `emu_opm`/`emu_opn`/`fmall`の`sf2_channel_windows`の`mpu`は、`midi_inputs`が
-  `__LOCAL__`でDAW側のMPUを判別できず0を暫定採用している。
-- **PCMメモリイメージカタログ**(worklog 3.22): `pcm_image_catalog.json`経由で
-  ADPCM RAM/AWM ROMが正しくロードされることは未確認(JSON構文とパス実在性のみ確認済み)。
-- **ADPCM-Aバンクの機種入れ替え**(worklog 3.62): ロードはログで確認済み、
-  割り当てた音が意図した音色で鳴るかは未確認。
-- **OPM/OPZのレイヤードバンク**(worklog 3.73): `gm_layered_opm`をOPM(`0x19`)向けに
-  替えた。起動時の解決は、`emu_opm`ではOPMに一致し、`emu_opz`ではOPZへフォールバック
-  している(**確認済み**: 起動ログ)。OPZの拡張(WS/REV/EGS)を使う12音色
-  (prog 0,19,20,28,30,43,50,65,66,94,98,105)は、OPMでは拡張が抜けた音で鳴るはず。
-  OPZでは拡張も効くはず(PatchManagerを読んだだけ。**未検証**)。ドラムキット
-  `opm_standard`のノート28,30,43,50,65,66も同じ12音色を指す。
-- **DSG**(worklog 3.54/3.55): ビルトイン音色・内蔵リズムキットとも聴感確認が未実施。
-- **全ドラムキットの無音プレースホルダ**(worklog 3.57): 聴感確認が未実施。
-- **機種別プロファイルとPSG系**(worklog 3.53/3.60): `emu_msx`/`emu_pc88`/`emu_pc98`/
-  `emu_ibmpc`と、`emu_psg_stereo`のSSGS系・DCSG・EPSG・SAAは、起動ログでの確認のみ。
+  SCC+を`0xA0`/`0xAA`/`0xAF`で書く。鳴ったら、プロファイル`_comment`の「SCC+は無音」を
+  直す
+
+**`emu_pc88`(OPN/OPNA/OPM) / `emu_ibmpc`(SAA×2/OPL2[リズム]/OPL3/OPM/DCSG)**
+- [ ] 各チップが鳴る(worklog 3.60。起動ログでの確認のみ)
+
+**`emu_pc98`(OPN/OPNA/OPL3/Y8950[リズム])**
+- [ ] 各チップが鳴る(worklog 3.60。起動ログでの確認のみ)
+- [ ] ADPCM-B(CC#0=81)が、OPNAとY8950に統合された1デバイスとして正しく鳴る。
+  worklog 3.60は「Y8950側へ回ったボイスがOPNA基準のオフセット表で再生される」
+  可能性を挙げた。ただし、根拠にした「Y8950は4byte境界でOPNAと違う」は、FITOM_Xの
+  コード上は成り立たない(両者ともアドレス単位4byte、**読解のみ**)
+
+**`emu_psg_stereo`(DCSG/SCC×2/EPSG×2/SSGS/SSGS2/SSGS3/DSG×2/SAA)**
+- [ ] SSGS系・DCSG・EPSG・SAAが鳴る(worklog 3.53。起動ログでの確認のみ)
+- [ ] SCCが鳴る(上の`emu_msx`のSCC+と同じ経緯)
+- [ ] DSG(worklog 3.54/3.55): ビルトイン音色(CC#0=68、prog 0-19)と内蔵リズム
+  (ドラムのprog 14、またはCC#0=112・CC#32=68)が鳴る
 
 ### 構成・データの問題
 
-- **`docs/manuals/emu_profiles.md`の「OPMエミュプロファイル」節が古い**: チップ構成を
-  OPM×2/OPZ×2と書いているが、現在の`emu_opm`はOPM×4。`emu_opz`(OPZ×4)の節は無い。
-  ドラムキットの記述も`bank_overrides`のドラムキット0に触れていない。
-  `emu_opm`/`emu_opz`の`bank_overrides._comment`も、実際に敷いている
-  `opm_standard.drumkit.json`を`gm2_standard.drumkit.json`と書いている。
+- **`docs/manuals/emu_profiles.md`が現在のプロファイルと食い違っている**(OPM/OPZの節は
+  worklog 3.74で直した): `emu_opn`/`emu_opl`のチップ構成が1節の表と違う。
+  `emu_opll`等のドラムキットの一覧に、そのプロファイルでは鳴らないキット(他チップを
+  直接指すもの)が載っている。`unified_preset`・ステレオ版・`emu_fmgen_opn`・`fmall`・
+  `emu_psg_stereo`の節が無い。
+- **`banks/drums/gm2_standard.drumkit.json`がどこからも参照されていない**: 中身は
+  `opm_standard.drumkit.json`と同一(**確認済み**: 全61ノートを比較)。`emu_opm`/`emu_opz`の
+  参照は`opm_standard`へ付け替わっている(`3b01768`)。消すか要判断。
 - **`unified_preset`が`bank_overrides`を持たない**: worklog 3.33ではSF2のみの
   プロファイルとして対象外にしたが、現在はOPN系4チップを`auto_devices`で開く
   (1節)。通常モードのbank 0が空のskeletonのままで、起動時に
@@ -146,11 +196,6 @@ SF2(FitomSf2IF)デバイスを持つ。
   フォールバックするため該当しない(FITOM_X `e528e23`の`resolveOpllRomVoice()`を
   読んで確認。**読解のみ**。worklog 3.60の「37パッチが発音しない」はOPLLEXが
   生成されなかった古いバイナリの時点の記述)。
-- **`emu_pc98`のADPCM-B**(worklog 3.60): OPNAとY8950のADPCM-Bが1デバイスへ統合
-  される。worklog 3.60は「Y8950側へ回ったボイスがOPNA基準のオフセット表で再生される」
-  可能性を挙げたが、根拠にした「Y8950は4byte境界でOPNAと違う」は、FITOM_Xの
-  コード上は成り立たない(両者ともアドレス単位4byte、**読解のみ**)。実際に鳴らして
-  問題が無ければこの項目は消す。
 - **OPL2EX内蔵ADPCM-Bの波形イメージが未登録**(worklog 3.58/3.64): `emu_msx2pp`で
   `OPL2EX-ADPCMB`デバイスは生成されるが、`pcm_image_catalog.json`にOPL2EX向けの
   エントリーが無いため発音しない。FitomEmuIF側はOPL2EXの`ADPCM_B`へPCMイメージを
@@ -238,14 +283,9 @@ SF2(FitomSf2IF)デバイスを持つ。
   方針が決まっていない。原本がFITOM_X側で削除されたので、この写しを残すか、
   FITOM_X側の文書(`docs/manuals/hwpatch-reference.md`等)への参照に置き換えるかも
   合わせて未決。
-- 汎用VTLをキャリア別のprog(24-31)へ付け替えた件(worklog 3.21)は、FITOM_X本体が
-  `sw_prog`で指定されたSwPatchのVTLを正しいopへ適用していることまでは、
-  このリポジトリからは確認していない。
 - `config_schema/profile.schema.json`の`devices[].engine`の`examples`が
   `["YMEngine", "AYEngine"]`のまま(現行の値は`"engines/YMFMEngine"`等)。FITOM_X側の
   原本のdriftで、写しは直さない方針のため本体側の更新を待つ。
-- `docs/instruments/`の`.ins`/`.xml`は、Sekaiju/Cakewalk/DOMINOでの読み込み動作が
-  未検証(構文検証のみ)。Studio One/REAPER対応は検証環境が無いため保留(worklog 3.29)。
 - `CLAUDE.md`3節「値の格納規約」は、FITOM_XがOPLLでもキーオン/キーオフのたびに
   EGT/RRを書き換えるとしているが、FITOM_XのOPLL系は`updateVoice`での静的な変換
   (`SR>0`ならEGT=0・RRレジスタ=`SR>>1`、`SR==0`ならEGT=1・RRレジスタ=`RR`)で、
