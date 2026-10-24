@@ -1,20 +1,16 @@
 #!/usr/bin/env python3
-"""FITOM_X の config/profiles/*.profile.json から、MIDIシーケンサー用の
-インストゥルメント定義ファイル(Cakewalk/Sekaiju用 .ins、DOMINO用 .xml)を
-生成するスクリプト。
+"""全プロファイルが共有するバンクセット config/profiles/unified.bankset.json から、
+MIDIシーケンサー用のインストゥルメント定義ファイル(Cakewalk/Sekaiju用 .ins、
+DOMINO用 .xml)を生成するスクリプト。
 
 対応するCC#0(Bank Select MSB)の意味は CLAUDE.md「CC#0とVoicePatchType」節、
 docs/manuals/README.md の対応表を参照。
 
-対象は統合設計プロファイル(TARGET_PROFILES参照)のみ。統合前の個別
-プロファイル(旧emulator_*/hw_*)は誰もメンテナンスしておらず統合後の
-構成と矛盾していたため2026年7月26日に削除済み(docs/worklog/2026-07.md 3.30節)。
-
-実機音源の実例(Sekaiju8.3/instrument/KORG_KROME.ins・Roland_SC-8850.ins)
-に倣い、Sekaiju上で1プロファイル=1機材として認識されるよう、
-全対象プロファイルを1つの.Instrument Definitionsセクション群として
-1つの.ins/.xmlファイルにまとめて出力する(プロファイルごとに別ファイルには
-分けない)。
+出力は機材1つ(FITOM_X)だけ。全プロファイルが同じバンクセットを読むため、
+CC#0/CC#32/Program Changeと音色名の対応はプロファイルによらない。プロファイルの
+チップ構成によって鳴らない音色があるだけで、名前が別の音を指すことはない。
+プロファイルごとに違うレイヤードバンク0・ドラムキット0(bank_overrides)は、
+GM標準の名前で載せる(GM_STANDARD_*_FILE)。
 
 使い方:
     python3 generate_instruments.py                     # 既定の出力先に生成
@@ -39,52 +35,15 @@ def xml_escape(s: str) -> str:
 
 REPO_ROOT = Path(__file__).resolve().parents[2]
 PROFILES_DIR = REPO_ROOT / "config" / "profiles"
+BANKSET_FILE = PROFILES_DIR / "unified.bankset.json"
 DEFAULT_OUT_DIR = REPO_ROOT / "docs" / "instruments"
 OUTPUT_STEM = "FITOM_X"
+# Sekaiju/CakewalkのInstrument Definitionセクション名にマルチバイト文字は使えない
+MACHINE_NAME = "FITOM_X"
 
-# 生成対象プロファイル(profile_key -> セクション見出し用ASCII表示名)。
-# Sekaiju/CakewalkのInstrument Definitionセクション名にマルチバイト文字は
-# 使えないため、config/profiles/*.profile.jsonの日本語profile_nameは使わず
-# ここで別途ASCII名を割り当てる。
-#
-# `emu_opn_stereo`/`emu_opl_stereo`/`emu_opll_stereo`(リニアステレオ化
-# プロファイル)は意図的に対象外(2026年8月11日、ユーザー指摘)。
-# banks/bank_overridesが対応する非ステレオ版(emu_opn/emu_opl/emu_opll)
-# と完全に同一で、ステレオ化はエンジン側(fmemuif_*_stereo.profile.json)
-# の音声処理設定の違いのみのため、インストゥルメントリストとしては
-# 増やしても内容が重複するだけで意味がない。
-TARGET_PROFILES: dict[str, str] = {
-    "unified_preset": "FITOM_X Unified Profile",
-    "emu_opn": "FITOM_X OPN Emulator",
-    "emu_fmgen_opn": "FITOM_X OPN Emulator (FmGen)",
-    "emu_opl": "FITOM_X OPL Emulator",
-    "emu_opm": "FITOM_X OPM Emulator",
-    "emu_opz": "FITOM_X OPZ Emulator",
-    "emu_opll": "FITOM_X OPLL Emulator",
-    "fmall": "FITOM_X FM All",
-}
-
-# 2026年7月29日、banksセクションが外部ファイル参照(文字列)+
-# bank_overrides(部分上書き)方式に変わった(docs/worklog/2026-07.md 3.32/3.33節)。
-# 識別キーはセクションごとに異なる(profile.schema.json bank_overrides説明文参照):
-#   hw_banks: (group, bank) / pcm_banks: (bank, chip) / drum_banks: prog
-#   それ以外(sw_banks/patch_banks/sf2_banks/scc_wave_banks): bank
-def _override_key(section: str, entry: dict):
-    if section == "hw_banks":
-        return (entry.get("group"), entry.get("bank"))
-    if section == "pcm_banks":
-        return (entry.get("bank"), entry.get("chip"))
-    if section == "drum_banks":
-        return entry.get("prog")
-    return entry.get("bank")
-
-
-# 通常モード(CC#0=0,CC#32=0)のレイヤードバンク0(patch_banks bank=0)・
-# ドラムキット0(drum_banks prog=0)は、bank_overridesにより実際に鳴る
-# ファイルがプロファイルごとに異なる(docs/worklog/2026-07.md 3.33節)。
-# インストゥルメントリスト上はプロファイル固有の内容を反映せず、GM標準
-# (GM128メロディ名・GM2標準ドラムマップ)で統一表示する(ユーザー判断、
-# 2026年7月31日)。
+# レイヤードバンク0・ドラムキット0は、プロファイルごとにbank_overridesで別の
+# ファイルが敷かれる(共有バンクセット側は空)。敷かれるのはどれもGM配列の
+# 音色・キットなので、GM標準の名前で載せる(ユーザー判断)。
 GM_STANDARD_MELODIC_FILE = "../../banks/patches/necopn_gm.patchbank.json"
 GM_STANDARD_DRUM_FILE = "../../banks/drums/gm2_standard.drumkit.json"
 
@@ -253,42 +212,12 @@ def resolve(base_dir: Path, rel: str) -> Path:
     return (base_dir / rel).resolve()
 
 
-def resolve_banks_dict(value, profile_dir: Path) -> dict:
-    """banks/bank_overridesの値(オブジェクト直書き、または外部参照ファイル
-    パスの文字列)を解決してオブジェクトにする。"""
-    if isinstance(value, str):
-        return load_json(resolve(profile_dir, value))
-    return value or {}
-
-
-def apply_bank_overrides(banks: dict, overrides: dict) -> dict:
-    """bank_overridesをbanksへマージする。識別キーが一致するエントリは
-    置換、一致しなければ追加(profile.schema.json bank_overrides説明文の
-    仕様通り)。"""
-    merged = {k: list(v) for k, v in banks.items() if isinstance(v, list)}
-    for section, ov_items in overrides.items():
-        if section == "_comment" or not isinstance(ov_items, list):
-            continue
-        items = merged.setdefault(section, [])
-        for ov in ov_items:
-            key = _override_key(section, ov)
-            idx = next((i for i, e in enumerate(items)
-                        if _override_key(section, e) == key), None)
-            if idx is not None:
-                items[idx] = ov
-            else:
-                items.append(ov)
-    return merged
-
-
-def force_gm_standard_bank0(banks: dict) -> None:
-    for pb in banks.get("patch_banks", []):
-        if pb.get("bank") == 0:
-            pb["file"] = GM_STANDARD_MELODIC_FILE
-    for db in banks.get("drum_banks", []):
-        if db.get("prog") == 0:
-            db["file"] = GM_STANDARD_DRUM_FILE
-            db.pop("name", None)  # ファイル自身のname("GM2 Standard Kit")を使わせる
+def put_gm_standard_bank0(banks: dict) -> None:
+    patch_banks = [pb for pb in banks.get("patch_banks", []) if pb.get("bank") != 0]
+    drum_banks = [db for db in banks.get("drum_banks", []) if db.get("prog") != 0]
+    banks["patch_banks"] = [{"bank": 0, "file": GM_STANDARD_MELODIC_FILE}] + patch_banks
+    # nameを書かず、ファイル自身のname("GM2 Standard Kit")を使わせる
+    banks["drum_banks"] = [{"prog": 0, "file": GM_STANDARD_DRUM_FILE}] + drum_banks
 
 
 def fallback_name(prefix: str, num: int) -> str:
@@ -476,26 +405,17 @@ def collect_drum_kits(profile: dict, profile_dir: Path) -> list[DrumKit]:
     return kits
 
 
-def load_profiles(warn) -> list[Profile]:
-    profiles: list[Profile] = []
-    for key, display_name in TARGET_PROFILES.items():
-        path = PROFILES_DIR / f"{key}.profile.json"
-        profile_dir = path.parent
-        data = load_json(path)
+def load_machines(warn) -> list[Profile]:
+    banks = load_json(BANKSET_FILE)
+    put_gm_standard_bank0(banks)
+    data = {"banks": banks}
+    base_dir = BANKSET_FILE.parent
 
-        banks = resolve_banks_dict(data.get("banks"), profile_dir)
-        overrides = data.get("bank_overrides")
-        if overrides:
-            banks = apply_bank_overrides(banks, resolve_banks_dict(overrides, profile_dir))
-        force_gm_standard_bank0(banks)
-        data = {**data, "banks": banks}
-
-        melodic = collect_melodic_entries(data, profile_dir, lambda m, k=key: warn(f"{k}: {m}"))
-        melodic += collect_builtin_entries()
-        melodic += collect_sf2_entries(data, profile_dir, lambda m, k=key: warn(f"{k}: {m}"))
-        drums = collect_drum_kits(data, profile_dir)
-        profiles.append(Profile(key, display_name, melodic, drums))
-    return profiles
+    melodic = collect_melodic_entries(data, base_dir, warn)
+    melodic += collect_builtin_entries()
+    melodic += collect_sf2_entries(data, base_dir, warn)
+    drums = collect_drum_kits(data, base_dir)
+    return [Profile(MACHINE_NAME, MACHINE_NAME, melodic, drums)]
 
 
 # ---------------------------------------------------------------------------
@@ -542,7 +462,7 @@ def build_ins(profiles: list[Profile]) -> str:
     lines.append(";")
     lines.append(f"; {OUTPUT_STEM} - MIDI Instrument Definitions")
     lines.append(f"; Auto-generated by tools/instrument_export/generate_instruments.py")
-    lines.append("; source: config/profiles/*.profile.json")
+    lines.append("; source: config/profiles/unified.bankset.json")
     lines.append(";")
     lines.append("")
     lines.append("; ----------------------------------------------------------------------")
@@ -613,8 +533,7 @@ def build_ins(profiles: list[Profile]) -> str:
     # Instrument Definitionセクションであり、その中で持つ全バンクをPatch[]で
     # 列挙する構成になっている(バンクごとに別セクションを作ると、Sekaiju上で
     # バンクの数だけ別々の「機材」として扱われてしまう)。これに倣い、
-    # プロファイルごとに1つのセクションにまとめる(複数プロファイルは
-    # 同じ1ファイルの中に複数の機材として並ぶ)。
+    # 機材ごとに1つのセクションにまとめる。
     for prof in profiles:
         by_bank = by_bank_per_profile[prof.key]
         lines.append(f"[{_ins_sanitize(prof.display_name)}]")
@@ -727,7 +646,7 @@ def main() -> None:
     args = parser.parse_args()
 
     warnings: list[str] = []
-    profiles = load_profiles(lambda m: warnings.append(m))
+    profiles = load_machines(lambda m: warnings.append(m))
     for w in warnings:
         print(f"  [警告] {w}", file=sys.stderr)
 
@@ -744,7 +663,7 @@ def main() -> None:
 
     total_melodic = sum(len(p.melodic) for p in profiles)
     total_drums = sum(len(p.drums) for p in profiles)
-    print(f"{len(profiles)} profiles: melodic={total_melodic} patches, "
+    print(f"{len(profiles)} machine(s): melodic={total_melodic} patches, "
           f"drum_kits={total_drums} -> {ins_path}, {xml_path}")
 
 

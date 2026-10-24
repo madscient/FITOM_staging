@@ -67,7 +67,8 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 - `docs/manuals/`: 利用者向けリファレンス。`README.md`が起点
 - `docs/instruments/`: MIDIシーケンサー向けインストゥルメントリスト
-  (`sekaiju/FITOM_X.ins`、`domino/FITOM_X.xml`。`tools/instrument_export/`で生成)
+  (`sekaiju/FITOM_X.ins`、`domino/FITOM_X.xml`。`tools/instrument_export/`で生成。
+  機材は`FITOM_X`の1つ)
 - `docs/voice-parameter-reference.md`: 音色パラメータの解説(FITOM_X側の原本由来。
   原本はFITOM_Xで分割・削除され、利用者向けの内容は`docs/manuals/hwpatch-reference.md`、
   チップ別の内部処理は`docs/design/chip-notes.md`へ移った)
@@ -102,7 +103,8 @@ SF2(FitomSf2IF)デバイスを持つ。
   正しいopへ適用していることは、このリポジトリからは確かめていない
 - [ ] インストゥルメントリスト(`docs/instruments/`の`.ins`/`.xml`)がSekaiju/Cakewalk/
   DOMINOで読み込める(構文検証のみ。Studio One/REAPERは検証環境が無いため保留、
-  worklog 3.29)
+  worklog 3.29)。機材は`FITOM_X`の1つにまとめた(worklog 3.81)。以前の8機材の名前
+  (`FITOM_X Unified Profile`等)で音源を割り当てた曲は、選び直しになる
 
 **`emu_opm`(OPM×4) / `emu_opz`(OPZ×4)**
 - [ ] レイヤードバンク(worklog 3.73): OPZの拡張(WS/REV/EGS)を使う12音色(prog 0,19,20,
@@ -233,8 +235,6 @@ SF2(FitomSf2IF)デバイスを持つ。
 - **ビルトイン音色用メタバンクが空**(worklog 3.54): `banks/OPLL/rom_sw_meta.hwbank.json`は
   空のスケルトンで、OPLL系ROM音色・DSGビルトイン音色のどちらにも
   パフォーマンスパッチが割り当てられていない。パッチ設計の判断が必要。
-- **`emu_psg_stereo`をインストゥルメントリストに載せるか**(worklog 3.53):
-  `TARGET_PROFILES`に入れていない。PSG系単独構成で既存8機材のいずれとも異なる。
 - **【保留】PCED `LFOS=3`(Vibrato)の音色のソフトLFO変換**(worklog 3.45):
   DX/TX81Z/FB-01のLFOパラメータは一律「HW LFO用」として破棄しているが、
   TX81Z/DX11のPCEDで`LFOS=3`を選んだ場合は実機でもソフトウェアLFOとして動作する。

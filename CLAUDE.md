@@ -467,15 +467,14 @@ CC#0の値がそのままVoicePatchType(直接モード)になる。0は通常�
   分布・統計で裏付ける。
 
 ### インストゥルメントリスト(`tools/instrument_export/`)
-- `generate_instruments.py`が`TARGET_PROFILES`の固定リストから、Sekaiju/Cakewalk用
+- `generate_instruments.py`が共有バンクセット`unified.bankset.json`から、Sekaiju/Cakewalk用
   `docs/instruments/sekaiju/FITOM_X.ins`とDOMINO用`docs/instruments/domino/FITOM_X.xml`を
-  それぞれ1ファイルで生成する(1プロファイル=1機材)。機材の見出しにはASCII名を使う
-  (マルチバイト不可)。詳細は同ディレクトリの`README.md`。
-- バンクの内容が非ステレオ版と同一のステレオ版プロファイルは対象にしない。
+  生成する。機材は`FITOM_X`の1つだけ(ASCII名。マルチバイト不可)。全プロファイルが同じ
+  バンクセットを読むので、名前と音の対応はプロファイルによらない(チップが無くて鳴らない
+  音色があるだけ)。プロファイルごとの機材は作らない。詳細は同ディレクトリの`README.md`。
 - `sw_banks`は載せない。レイヤードバンク0・ドラムキット0は、プロファイルごとの
   実際の割り当てに関わらずGM標準の名前で表示する。
-- ファイルを持たないビルトインは全対象プロファイル共通で載せる(搭載チップで
-  絞らない): OPLL ROM音色(CC#0=40/41/42/43はそれぞれのvariant、CC#0=44は4バンク60音色に
+- ファイルを持たないビルトインも載せる(搭載チップで絞らない): OPLL ROM音色(CC#0=40/41/42/43はそれぞれのvariant、CC#0=44は4バンク60音色に
   `[OPLL]`等を前置)、DSGビルトイン(CC#0=68)、内蔵リズム(CC#0=112、CC#32=17=OPNA/
   40=OPLL/68=DSG)。名前の原本はFITOM_XのGUIブリッジ(`FITOMBridge.cpp`)と
   `PatchManager`のテーブル。
