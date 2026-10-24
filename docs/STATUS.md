@@ -203,10 +203,6 @@ SF2(FitomSf2IF)デバイスを持つ。
   `default_32.swbank.json`・`compat_zero.swbank.json`は、どのプロファイルの
   `sw_banks[]`からも参照されていない旧形式(`LFO`/`LDM`/`LDL`/`SLF`等)の
   ファイル(worklog 3.13/3.21)。削除するか現行スキーマへ追従させるか要判断。
-- `config/profiles/hw_plugins/fmemuif_fmall.profile.json`と
-  `fmemuif_opm_opz4.profile.json`は、どのプロファイルからも参照されていない
-  (worklog 3.59で、再利用しうるため残した)。`fmemuif_fmall`のOPLLEXは
-  旧構成(Y8960emuEngine)のまま。
 - `fmemuif_opl5.profile.json`/`fmemuif_opm_opz4.profile.json`/
   `fmemuif_opll5.profile.json`のクロック値は一般的な標準値からの推測
   (特にOPL4=33,868,800Hzは未検証)。
@@ -217,6 +213,11 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 ### 判断待ち・保留
 
+- **【保留】参照されていないサブプロファイル2本**(worklog 3.59/3.80):
+  `config/profiles/hw_plugins/fmemuif_fmall.profile.json`と`fmemuif_opm_opz4.profile.json`は、
+  どのプロファイルからも参照されていない。あとで使う可能性があるため、そのまま残す
+  (ユーザー指示)。`fmemuif_fmall`のOPLLEXは旧構成(Y8960emuEngine)のままなので、使うときは
+  DSAemuEngineへ直す(CLAUDE.md「エンジンとクロック」)。
 - **【保留】`profile_name`が実際の構成と食い違っている**(worklog 3.75): 必要ならユーザーが
   直す(ユーザー指示)。`emu_opn`/`emu_opn_stereo`/`emu_fmgen_opn`は「OPN/OPN2/OPNA/OPNB/
   OPNBB」だがOPNは載っていない。`emu_opl`/`emu_opl_stereo`は「OPL[rhythm]/Y8950/OPL2/OPL3/
