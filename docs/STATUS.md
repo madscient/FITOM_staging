@@ -39,16 +39,15 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 ## 2. `bin/`
 
-`bin/`はgit管理外で、マシンごとに中身が違う。下の表は、2026年10月23日に1台の
-マシンでRelease版をビルドし、`setup.ps1`で配置したときのコミット(worklog 3.64)。
+`bin/`はgit管理外で、マシンごとに中身が違う。下の表は、最後にビルドしたマシンで
+2026年10月24日にRelease版をビルドし、`setup.ps1`で配置したときのコミット(worklog 3.70)。
 他のマシンの`bin/`がこの状態だとは限らない。起動確認の前に、そのマシンの`bin/`の
-更新日時と各リポジトリの`HEAD`を見る。2026年10月24日時点で、FITOM_Xはこの表から
-進んでいる(`b7c1e4c`)。
+更新日時と各リポジトリの`HEAD`を見る。
 
 | リポジトリ | コミット |
 |---|---|
-| FITOM_X | `e528e23` |
-| FitomEmuIF | `2d0e443` |
+| FITOM_X | `b7c1e4c` |
+| FitomEmuIF | `87d0a6c` |
 | FitomHwIF | `a2357ea` |
 | FitomSf2IF | `ae15e91` |
 | YMEngine | `3600db7` |
@@ -58,12 +57,12 @@ SF2(FitomSf2IF)デバイスを持つ。
 | SAASoundEngine | `7c30ab4` |
 | DSGemuEngine | `f7834f6` |
 | Y8960emu | `40298b9` |
-| FITOM_patch_editor | `0a98930` |
+| FITOM_patch_editor | `e2e0ecc` |
 
 この状態で全17プロファイルを`bin/fitom_cli.exe`で起動し、`Failed to create HWPort`・
-`unknown chip`が0件であることを確認した(**確認済み**、2026年10月23日)。
-`fitom_hw.dll`は無い(4節)。
-
+`unknown chip`が0件であることを確認した(**確認済み**、2026年10月24日)。出た警告は
+4節の既知の項目(`emu_opm`・`emu_msx`・`unified_preset`・`emu_psg_stereo`)だけ。
+`fitom_hw.dll`(FitomHwIF)も配置されている。
 ## 3. ドキュメント
 
 - `docs/manuals/`: 利用者向けリファレンス。`README.md`が起点
@@ -137,7 +136,9 @@ SF2(FitomSf2IF)デバイスを持つ。
   差し替える(ユーザー指示で作成していない)。
 - **`emu_msx`のROM音色**(worklog 3.60): OPLLが1枚だけのため、
   `gm_layered_opll`のうちOPLL-P/OPLL-X/VRC7のROM音色を指す24パッチが発音しない
-  (標準OPLL系どうしではROM音色がフォールバックしない)。`emu_msx2pp`はOPLLEXへ
+  (標準OPLL系どうしではROM音色がフォールバックしない)。FITOM_X `b7c1e4c`の起動ログでは
+  `OPLL ROM voice: ... no matching device, and no OPLLEX to fall back to`の警告が
+  75件出る(**確認済み**、2026年10月24日)。`emu_msx2pp`はOPLLEXへ
   フォールバックするため該当しない(FITOM_X `e528e23`の`resolveOpllRomVoice()`を
   読んで確認。**読解のみ**。worklog 3.60の「37パッチが発音しない」はOPLLEXが
   生成されなかった古いバイナリの時点の記述)。
@@ -150,10 +151,6 @@ SF2(FitomSf2IF)デバイスを持つ。
   `OPL2EX-ADPCMB`デバイスは生成されるが、`pcm_image_catalog.json`にOPL2EX向けの
   エントリーが無いため発音しない。FitomEmuIF側はOPL2EXの`ADPCM_B`へPCMイメージを
   渡す対応が済んでいる(FitomEmuIF `2d0e443`)。
-- **`fitom_hw.dll`(FitomHwIF)が`bin/`に無い**: `../FitomHwIF/build`は
-  `fitomhwif_example.exe`しかビルドせず、`setup.ps1`の`*.dll`コピーで届くのは
-  依存DLL(`ftdi1.dll`/`libusb-1.0.dll`)だけ。実機プロファイルは無いため実害は無いが、
-  実機を使うときはビルド構成の確認が必要。
 - **ADPCM-B抜粋バンクが未参照**(worklog 3.63): `wavs_y8950_adpcmb_excerpt`は
   通常のADPCM-Bプリセットとの割り当て方を検討中のため、意図的にどこからも参照して
   いない。ADPCM-Bは親チップが違っても1つのメモリイメージに束ねられるため、
