@@ -44,19 +44,20 @@ Program Change 0のドラムキットは、プロファイルごとに、その�
 | OPNB | 1 | 7,159,090Hz | YMFMEngine | ADPCM-A・ADPCM-B付き |
 | OPNBB | 1 | 7,159,090Hz | YMFMEngine | ADPCM-A・ADPCM-B付き |
 
-通常モードのバンク0とドラムキット0は空です。CC#32=1と、下の表のドラムキットを選んで
-使います。
+チップ構成と鳴るパッチバンク・ドラムキットは、OPNエミュプロファイルと同じです。
 
 **通常モード(CC#0=0)のパッチバンク:**
 
 | CC#32 | パッチバンク | 鳴る音色 |
 |---|---|---|
+| 0 | necopn GM (OPN single-layer) | 全128 |
 | 1 | necopn GM (OPN single-layer) | 全128 |
 
 **ドラムキット:**
 
 | prog | ドラムキット | 鳴るノート |
 |---|---|---|
+| 0 | PSS-480 GM Drum Kit (OPNB ADPCM-A) | 全18 |
 | 11 | OPNA Built-in Rhythm set | 全18 |
 | 16 | PSS-590 Power Kit (OPNB ADPCM-A) | 全19 |
 | 17 | PSS-590 GM Drum Kit (OPNB ADPCM-A) | 全19 |

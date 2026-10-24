@@ -17,7 +17,7 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 | ファイル | デバイス構成 | `bank_overrides` |
 |---|---|---|
-| `unified_preset` | auto: OPN2/OPNA/OPNB/OPNBB=YMFMEngine | なし |
+| `unified_preset` | auto: OPN2/OPNA/OPNB/OPNBB=YMFMEngine | あり |
 | `emu_opn` | auto: OPN2/OPNA/OPNB/OPNBB=YMFMEngine | あり |
 | `emu_fmgen_opn` | auto: OPN2/OPNA/OPNB/OPNBB=FmGenEngine | あり |
 | `emu_opn_stereo` | OPN2/OPNA/OPNB/OPNBB×2(ペア)=YMFMEngine | あり |
@@ -61,7 +61,7 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 この状態で全17プロファイルを`bin/fitom_cli.exe`で起動し、`Failed to create HWPort`・
 `unknown chip`が0件であることを確認した(**確認済み**、2026年10月24日)。出た警告は
-4節の既知の項目(`emu_msx`・`unified_preset`・`emu_psg_stereo`)だけ。
+4節の既知の項目(`emu_msx`・`emu_psg_stereo`)だけ。
 `fitom_hw.dll`(FitomHwIF)も配置されている。
 ## 3. ドキュメント
 
@@ -86,10 +86,10 @@ SF2(FitomSf2IF)デバイスを持つ。
   あることを確かめる(違えば`.\setup.ps1 -Pull -Build`)
 
 **プロファイルを問わないもの**
-- [ ] `bank_overrides`(worklog 3.33): `emu_psg_stereo`・`unified_preset`以外の15本で、
+- [ ] `bank_overrides`(worklog 3.33/3.77): `emu_psg_stereo`以外の16本で、
   通常モード(CC#0=0, CC#32=0)の音色と、ドラムchのprog 0のキットが鳴る。読み込まれる
-  ことは**確認済み**(2026年10月23日、起動ログの`Patch bank=0 prog=0 is empty`が
-  この15本では0件)
+  ことは**確認済み**(2026年10月24日、起動ログの`Patch bank=0 prog=0 is empty`が
+  この16本では0件)
 - [ ] SF2(worklog 3.31/3.36): MIDI ch15/16(0起算の14/15)がSF2で鳴る。全17本でSF2の
   HWPortが開くことは**確認済み**(2026年10月23日、起動ログ)。`sf2/`(配布対象外)の無い
   マシンでは`SF2 phdr parse: cannot open`の警告が出る。`unified_preset`/`emu_opm`/
@@ -172,10 +172,6 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 ### 構成・データの問題
 
-- **`unified_preset`が`bank_overrides`を持たない**: worklog 3.33ではSF2のみの
-  プロファイルとして対象外にしたが、現在はOPN系4チップを`auto_devices`で開く
-  (1節)。通常モードのbank 0が空のskeletonのままで、起動時に
-  `Patch bank=0 prog=0 is empty`が出る。OPN系のバンクを敷くか要判断。
 - **`emu_psg_stereo`が`bank_overrides`を持たない**(worklog 3.53): 通常モードの
   bank 0が空のskeletonのまま。演奏はCC#0=0x40(SSG共有バンク)の直接モードで行う
   前提。揃えるならPSG系向けのレイヤードpatchbankを新設して`bank_overrides`で
