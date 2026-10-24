@@ -38,6 +38,7 @@ docs/manuals/                   利用者向けリファレンス
 docs/instruments/               インストゥルメントリスト(生成物)
 docs/STATUS.md                  現在の状態・未解決事項
 docs/worklog/                   作業記録
+docs/plans/                     他のリポジトリへの作業の依頼文(request-<リポジトリ名>.md)
 bin/ roms/ wavs/ sf2/ logs/ dist/   git管理外
 ```
 
@@ -422,13 +423,16 @@ CC#0の値がそのままVoicePatchType(直接モード)になる。0は通常�
   見当たらない(**読解のみ**、`40298b9`)。Y8960emuEngineが定位レジスタとSSGEX/SCCEXを
   実装したら見直す。Y8960のOPMは拡張レジスタを持たない標準のYM2151で、`chip: "OPM"`で
   載せる(FITOM_Xの`docs/design/chip-notes.md`「Y8960 の拡張ブロック」)。
-- 音程テーブルは`chips[].clock`から作られるため、クロックはチップの実際の値を書く
-  (調律はどの値でも合う。PSG系のノイズ・エンベロープ、OPN/OPNAのリズムROMや
-  ADPCMの再生レートに効く)。
-  SSG=2000000、DCSG=3579545、SCC/SCCP=3579545、EPSG=2000000、SSGEX=1789772
-  (SSGブロックの動作クロックそのもの)、OPLL系/OPLLEX/OPL2EX/OPM(MSX)=3579545、
-  OPN=3993600・OPNA=7987200(PC-88/98)、SAA=8000000。
-- DSGは`1000000`(YM2163の標準クロック)。
+- エミュレーターは`chips[].clock`のクロックでチップを動かす。FITOM_Xがそのクロックを使うか
+  どうかはチップ族で違う(FITOM_X `b7c1e4c`を読んで確認。**読解のみ**):
+  - PSG系・DSG・SAA・ADPCM/PCM: FITOM_Xはプラグインが報告するクロック(`port->getClock()`)
+    から音程・再生レートを計算する。どの値を書いても音程は合い、値が変えるのはそのクロックで
+    動くチップの音(ノイズ・エンベロープ・リズムROM等)だけ。
+  - FM系: FITOM_Xは固定のマスタークロックでF-Number/KCを計算し、プロファイルの値を読まない
+    (OPL/OPL2/Y8950/OPLL系=3579545、OPL3=14318180、OPN=3993600、OPN2/OPNA/OPNB=8000000、
+    OPM/OPZ=3579545前提)。プロファイルの値がこれと違うと、その比の分だけ音程がずれる。
+    FITOM_Xのバグとして扱う(STATUS 4節)。直るまでは、FM系の音程の確認では
+    この食い違いを先に疑う。
 
 ### 変換スクリプト(`tools/voice_convert/`)
 - **MA-2 VMA**(`vma_convert.py`): グローバルバイトのALGは3bit(`byte3 & 7`)。

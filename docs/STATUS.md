@@ -201,9 +201,17 @@ SF2(FitomSf2IF)デバイスを持つ。
   67,76,77,83,88,92,97,100,108,109,110,111,119,120,121,126)は、`source`が挙げる
   8バンクのいずれとも`ALG`/`FB`/ops全フィールドが一致せず由来が特定できていない
   (worklog 3.44)。並び順・値解釈が正しいかの確認が必要。
-- `fmemuif_opl5.profile.json`/`fmemuif_opm_opz4.profile.json`/
-  `fmemuif_opll5.profile.json`のクロック値は一般的な標準値からの推測
-  (特にOPL4=33,868,800Hzは未検証)。
+- **FM系の音程がプロファイルのクロックを使っていない(FITOM_Xのバグ)**(worklog 3.84):
+  FITOM_X(`b7c1e4c`)のFM系ドライバは固定のマスタークロックでF-Number/KCを計算する
+  (`OPL_new.cpp`の`kMasterClock`、`OPLL_new.cpp`の`kOpllMasterClock`、`OPN2_new.cpp`の
+  `fnumMaster = 8000000`、`OPN_new.cpp`の`3993600`等。**読解のみ**)。エミュレーターは
+  サブプロファイルのクロックで動くため、値が違うとその比の分だけ音程がずれるはず
+  (**推測**: 補正している箇所は見つからなかった。鳴らしていない)。今の構成で食い違うのは、
+  OPN2/OPNA/OPNB/OPNBBを7,159,090Hzで載せる`emu_opn`/`emu_opn_stereo`/`emu_fmgen_opn`/
+  `unified_preset`/`fmall`(8,000,000Hzとの比で約190セント低い計算)と、OPNAを7,987,200Hzで
+  載せる`emu_pc88`/`emu_pc98`(約3セント)。OPL4のFM部はエンジン側の分周しだいで分からない。
+  FITOM_X側で、FM系もプラグインのクロックから計算するよう直してもらう(ユーザー判断)。
+  こちらのクロックは変えていない。依頼文: `docs/plans/request-FITOM_X.md`
 - OPLL GM128(`gm_layered_opll.patchbank.json`)はMA-2 Preset2OP由来が67/128と過半数。
   ソースを増やせる余地がないか要継続検討。
 - `GeneralUser GS v1.471.sf2`のGS variationバンク(sf2_bank 1-16, 120)は
