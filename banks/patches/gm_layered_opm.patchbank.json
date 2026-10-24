@@ -1,6 +1,6 @@
 {
   "name": "GM Standard Layered OPM",
-  "note": "DX/TX GM Standard(gm128_preset.hwbank.json)をベースに構築。voice_patch_type=OPZ(0x1a)固定。",
+  "note": "DX/TX GM Standard(gm128_preset.hwbank.json)をベースに構築。voice_patch_type=OPM(0x19)固定。OPZのみの構成でも、OPM向けの音色はOPZで鳴る(FITOM_Xのフォールバック)。",
   "patches": [
     {
       "prog": 0,
@@ -8,7 +8,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 0,
           "note_range_lo": 0,
@@ -24,7 +24,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 1,
           "note_range_lo": 0,
@@ -40,7 +40,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 2,
           "note_range_lo": 0,
@@ -56,7 +56,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 3,
           "note_range_lo": 0,
@@ -72,7 +72,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 4,
           "note_range_lo": 0,
@@ -88,7 +88,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 5,
           "note_range_lo": 0,
@@ -104,7 +104,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 6,
           "note_range_lo": 0,
@@ -120,7 +120,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 7,
           "note_range_lo": 0,
@@ -136,7 +136,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 8,
           "note_range_lo": 0,
@@ -152,7 +152,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 9,
           "note_range_lo": 0,
@@ -168,7 +168,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 10,
           "note_range_lo": 0,
@@ -184,7 +184,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 11,
           "note_range_lo": 0,
@@ -200,7 +200,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 12,
           "note_range_lo": 0,
@@ -216,7 +216,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 13,
           "note_range_lo": 0,
@@ -232,7 +232,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 14,
           "note_range_lo": 0,
@@ -248,7 +248,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 15,
           "note_range_lo": 0,
@@ -264,7 +264,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 16,
           "note_range_lo": 0,
@@ -280,7 +280,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 17,
           "note_range_lo": 0,
@@ -296,7 +296,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 18,
           "note_range_lo": 0,
@@ -312,7 +312,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 19,
           "note_range_lo": 0,
@@ -328,7 +328,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 20,
           "note_range_lo": 0,
@@ -344,7 +344,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 21,
           "note_range_lo": 0,
@@ -360,7 +360,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 22,
           "note_range_lo": 0,
@@ -376,7 +376,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 23,
           "note_range_lo": 0,
@@ -392,7 +392,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 24,
           "note_range_lo": 0,
@@ -408,7 +408,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 25,
           "note_range_lo": 0,
@@ -424,7 +424,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 26,
           "note_range_lo": 0,
@@ -440,7 +440,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 27,
           "note_range_lo": 0,
@@ -456,7 +456,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 28,
           "note_range_lo": 0,
@@ -472,7 +472,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 29,
           "note_range_lo": 0,
@@ -488,7 +488,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 30,
           "note_range_lo": 0,
@@ -504,7 +504,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 31,
           "note_range_lo": 0,
@@ -520,7 +520,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 32,
           "note_range_lo": 0,
@@ -536,7 +536,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 33,
           "note_range_lo": 0,
@@ -552,7 +552,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 34,
           "note_range_lo": 0,
@@ -568,7 +568,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 35,
           "note_range_lo": 0,
@@ -584,7 +584,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 36,
           "note_range_lo": 0,
@@ -600,7 +600,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 37,
           "note_range_lo": 0,
@@ -616,7 +616,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 38,
           "note_range_lo": 0,
@@ -632,7 +632,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 39,
           "note_range_lo": 0,
@@ -648,7 +648,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 40,
           "note_range_lo": 0,
@@ -664,7 +664,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 41,
           "note_range_lo": 0,
@@ -680,7 +680,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 42,
           "note_range_lo": 0,
@@ -696,7 +696,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 43,
           "note_range_lo": 0,
@@ -712,7 +712,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 44,
           "note_range_lo": 0,
@@ -728,7 +728,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 45,
           "note_range_lo": 0,
@@ -744,7 +744,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 46,
           "note_range_lo": 0,
@@ -760,7 +760,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 47,
           "note_range_lo": 0,
@@ -776,7 +776,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 48,
           "note_range_lo": 0,
@@ -792,7 +792,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 49,
           "note_range_lo": 0,
@@ -808,7 +808,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 50,
           "note_range_lo": 0,
@@ -824,7 +824,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 51,
           "note_range_lo": 0,
@@ -840,7 +840,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 52,
           "note_range_lo": 0,
@@ -856,7 +856,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 53,
           "note_range_lo": 0,
@@ -872,7 +872,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 54,
           "note_range_lo": 0,
@@ -888,7 +888,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 55,
           "note_range_lo": 0,
@@ -904,7 +904,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 56,
           "note_range_lo": 0,
@@ -920,7 +920,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 57,
           "note_range_lo": 0,
@@ -936,7 +936,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 58,
           "note_range_lo": 0,
@@ -952,7 +952,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 59,
           "note_range_lo": 0,
@@ -968,7 +968,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 60,
           "note_range_lo": 0,
@@ -984,7 +984,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 61,
           "note_range_lo": 0,
@@ -1000,7 +1000,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 62,
           "note_range_lo": 0,
@@ -1016,7 +1016,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 63,
           "note_range_lo": 0,
@@ -1032,7 +1032,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 64,
           "note_range_lo": 0,
@@ -1048,7 +1048,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 65,
           "note_range_lo": 0,
@@ -1064,7 +1064,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 66,
           "note_range_lo": 0,
@@ -1080,7 +1080,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 67,
           "note_range_lo": 0,
@@ -1096,7 +1096,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 68,
           "note_range_lo": 0,
@@ -1112,7 +1112,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 69,
           "note_range_lo": 0,
@@ -1128,7 +1128,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 70,
           "note_range_lo": 0,
@@ -1144,7 +1144,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 71,
           "note_range_lo": 0,
@@ -1160,7 +1160,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 72,
           "note_range_lo": 0,
@@ -1176,7 +1176,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 73,
           "note_range_lo": 0,
@@ -1192,7 +1192,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 74,
           "note_range_lo": 0,
@@ -1208,7 +1208,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 75,
           "note_range_lo": 0,
@@ -1224,7 +1224,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 76,
           "note_range_lo": 0,
@@ -1240,7 +1240,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 77,
           "note_range_lo": 0,
@@ -1256,7 +1256,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 78,
           "note_range_lo": 0,
@@ -1272,7 +1272,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 79,
           "note_range_lo": 0,
@@ -1288,7 +1288,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 80,
           "note_range_lo": 0,
@@ -1304,7 +1304,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 81,
           "note_range_lo": 0,
@@ -1320,7 +1320,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 82,
           "note_range_lo": 0,
@@ -1336,7 +1336,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 83,
           "note_range_lo": 0,
@@ -1352,7 +1352,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 84,
           "note_range_lo": 0,
@@ -1368,7 +1368,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 85,
           "note_range_lo": 0,
@@ -1384,7 +1384,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 86,
           "note_range_lo": 0,
@@ -1400,7 +1400,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 87,
           "note_range_lo": 0,
@@ -1416,7 +1416,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 88,
           "note_range_lo": 0,
@@ -1432,7 +1432,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 89,
           "note_range_lo": 0,
@@ -1448,7 +1448,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 90,
           "note_range_lo": 0,
@@ -1464,7 +1464,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 91,
           "note_range_lo": 0,
@@ -1480,7 +1480,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 92,
           "note_range_lo": 0,
@@ -1496,7 +1496,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 93,
           "note_range_lo": 0,
@@ -1512,7 +1512,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 94,
           "note_range_lo": 0,
@@ -1528,7 +1528,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 95,
           "note_range_lo": 0,
@@ -1544,7 +1544,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 96,
           "note_range_lo": 0,
@@ -1560,7 +1560,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 97,
           "note_range_lo": 0,
@@ -1576,7 +1576,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 98,
           "note_range_lo": 0,
@@ -1592,7 +1592,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 99,
           "note_range_lo": 0,
@@ -1608,7 +1608,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 100,
           "note_range_lo": 0,
@@ -1624,7 +1624,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 101,
           "note_range_lo": 0,
@@ -1640,7 +1640,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 102,
           "note_range_lo": 0,
@@ -1656,7 +1656,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 103,
           "note_range_lo": 0,
@@ -1672,7 +1672,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 104,
           "note_range_lo": 0,
@@ -1688,7 +1688,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 105,
           "note_range_lo": 0,
@@ -1704,7 +1704,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 106,
           "note_range_lo": 0,
@@ -1720,7 +1720,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 107,
           "note_range_lo": 0,
@@ -1736,7 +1736,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 108,
           "note_range_lo": 0,
@@ -1752,7 +1752,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 109,
           "note_range_lo": 0,
@@ -1768,7 +1768,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 110,
           "note_range_lo": 0,
@@ -1784,7 +1784,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 111,
           "note_range_lo": 0,
@@ -1800,7 +1800,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 112,
           "note_range_lo": 0,
@@ -1816,7 +1816,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 113,
           "note_range_lo": 0,
@@ -1832,7 +1832,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 114,
           "note_range_lo": 0,
@@ -1848,7 +1848,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 115,
           "note_range_lo": 0,
@@ -1864,7 +1864,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 116,
           "note_range_lo": 0,
@@ -1880,7 +1880,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 117,
           "note_range_lo": 0,
@@ -1896,7 +1896,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 118,
           "note_range_lo": 0,
@@ -1912,7 +1912,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 119,
           "note_range_lo": 0,
@@ -1928,7 +1928,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 120,
           "note_range_lo": 0,
@@ -1944,7 +1944,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 121,
           "note_range_lo": 0,
@@ -1960,7 +1960,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 122,
           "note_range_lo": 0,
@@ -1976,7 +1976,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 123,
           "note_range_lo": 0,
@@ -1992,7 +1992,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 124,
           "note_range_lo": 0,
@@ -2008,7 +2008,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 125,
           "note_range_lo": 0,
@@ -2024,7 +2024,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 126,
           "note_range_lo": 0,
@@ -2040,7 +2040,7 @@
       "poly": 0,
       "layers": [
         {
-          "voice_patch_type": 26,
+          "voice_patch_type": 25,
           "hw_bank": 0,
           "hw_prog": 127,
           "note_range_lo": 0,

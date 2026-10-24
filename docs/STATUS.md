@@ -61,7 +61,7 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 この状態で全17プロファイルを`bin/fitom_cli.exe`で起動し、`Failed to create HWPort`・
 `unknown chip`が0件であることを確認した(**確認済み**、2026年10月24日)。出た警告は
-4節の既知の項目(`emu_opm`・`emu_msx`・`unified_preset`・`emu_psg_stereo`)だけ。
+4節の既知の項目(`emu_msx`・`unified_preset`・`emu_psg_stereo`)だけ。
 `fitom_hw.dll`(FitomHwIF)も配置されている。
 ## 3. ドキュメント
 
@@ -112,6 +112,12 @@ SF2(FitomSf2IF)デバイスを持つ。
   ADPCM RAM/AWM ROMが正しくロードされることは未確認(JSON構文とパス実在性のみ確認済み)。
 - **ADPCM-Aバンクの機種入れ替え**(worklog 3.62): ロードはログで確認済み、
   割り当てた音が意図した音色で鳴るかは未確認。
+- **OPM/OPZのレイヤードバンク**(worklog 3.73): `gm_layered_opm`をOPM(`0x19`)向けに
+  替えた。起動時の解決は、`emu_opm`ではOPMに一致し、`emu_opz`ではOPZへフォールバック
+  している(**確認済み**: 起動ログ)。OPZの拡張(WS/REV/EGS)を使う12音色
+  (prog 0,19,20,28,30,43,50,65,66,94,98,105)は、OPMでは拡張が抜けた音で鳴るはず。
+  OPZでは拡張も効くはず(PatchManagerを読んだだけ。**未検証**)。ドラムキット
+  `opm_standard`のノート28,30,43,50,65,66も同じ12音色を指す。
 - **DSG**(worklog 3.54/3.55): ビルトイン音色・内蔵リズムキットとも聴感確認が未実施。
 - **全ドラムキットの無音プレースホルダ**(worklog 3.57): 聴感確認が未実施。
 - **機種別プロファイルとPSG系**(worklog 3.53/3.60): `emu_msx`/`emu_pc88`/`emu_pc98`/
@@ -119,13 +125,11 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 ### 構成・データの問題
 
-- **`emu_opm`のレイヤードバンクがOPZ向けのまま**: `emu_opm`はOPM×4構成だが、
-  `bank_overrides`で敷く`gm_layered_opm.patchbank.json`は128パッチ全てが
-  `voice_patch_type=26`(`0x1a`、OPZ)のレイヤーだけでできている(スクリプトで
-  数えて**確認済み**)。起動時に`resolve: layer=0 voicePatchType=0x1a — no matching
-  device (fallback exhausted)`の警告が75件出る(**確認済み**、2026年10月23日)。
-  通常モード(CC#0=0)では鳴らないと見込まれる(**未検証**: 発音させていない)。
-  プロファイルとバンクのどちらに合わせるか要判断。
+- **`docs/manuals/emu_profiles.md`の「OPMエミュプロファイル」節が古い**: チップ構成を
+  OPM×2/OPZ×2と書いているが、現在の`emu_opm`はOPM×4。`emu_opz`(OPZ×4)の節は無い。
+  ドラムキットの記述も`bank_overrides`のドラムキット0に触れていない。
+  `emu_opm`/`emu_opz`の`bank_overrides._comment`も、実際に敷いている
+  `opm_standard.drumkit.json`を`gm2_standard.drumkit.json`と書いている。
 - **`unified_preset`が`bank_overrides`を持たない**: worklog 3.33ではSF2のみの
   プロファイルとして対象外にしたが、現在はOPN系4チップを`auto_devices`で開く
   (1節)。通常モードのbank 0が空のskeletonのままで、起動時に

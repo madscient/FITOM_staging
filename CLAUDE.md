@@ -356,6 +356,10 @@ CC#0の値がそのままVoicePatchType(直接モード)になる。0は通常�
   「OPLL」選択で、標準OPLLのリズムが無い構成なら鳴る。
 - 同じVoicePatchTypeのチップを複数載せると`mergeSpannableDevices()`が1デバイスへ
   統合する。素のOPN(YM2203)はcomposite展開されずSSG部を持たない。
+- OPMとOPZの間のフォールバックは非対称。OPM向け(0x19)の音色は常にOPZで鳴る。
+  OPZ向け(0x1A)の音色がOPMで鳴るのは、OPZの拡張(`ops[].WS`/`REV`/`EGS`/`DT3`)を
+  1つも使っていないときだけ(`copmAcceptsFallback()`/`copzAcceptsFallback()`)。
+  OPMとOPZのどちらの構成でも使うレイヤードバンクは、レイヤーをOPM向けにする。
 - `sf2_banks`/`sf2_channel_windows`を持つプロファイルは`devices[]`に
   `{ "if": "HW", "chip": "SF2", "plugin": "FitomSf2IF" }`が必須(無いと起動時エラー)。
   `unified.bankset.json`が`sf2_banks`を持つため、これを参照する全プロファイルが該当する。
