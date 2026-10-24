@@ -39,8 +39,11 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 ## 2. `bin/`
 
-`bin/`はgit管理外。2026年10月23日に次のコミットでRelease版をビルドし、
-`setup.ps1`で配置した(worklog 3.64)。
+`bin/`はgit管理外で、マシンごとに中身が違う。下の表は、2026年10月23日に1台の
+マシンでRelease版をビルドし、`setup.ps1`で配置したときのコミット(worklog 3.64)。
+他のマシンの`bin/`がこの状態だとは限らない。起動確認の前に、そのマシンの`bin/`の
+更新日時と各リポジトリの`HEAD`を見る。2026年10月24日時点で、FITOM_Xはこの表から
+進んでいる(`b7c1e4c`)。
 
 | リポジトリ | コミット |
 |---|---|
@@ -225,10 +228,13 @@ SF2(FitomSf2IF)デバイスを持つ。
   (`ops[].EGS`に生値のみ格納)。`A_vol`は実機のマスターボリューム相当のため対象外。
 - `fb01`は KVSを持たないため全opで`VTL=80`のまま(モジュレータにもVTLが乗る)。
   FB-01の`VEL_TL`(3bit、op単位)を`VTL`へ換算できれば整理できるが、換算カーブが不明。
-- `docs/voice-parameter-reference.md`のOPM節は`hw.AMS`/`hw.PMS`を「実機レジスタ
-  直接対応」と書いているが、`COPM::updateVoice`はレジスタ`$38+ch`に常に0を書くため
-  参照されない(worklog 3.45)。本体側の記述を訂正するか、`hw.PMS`/`AMS`を実際に
-  反映させるかは要判断。
+- **OPM/OPZの`hw.PMS`/`hw.AMS`についての誤った前提が残っている**(worklog 3.68):
+  `tools/voice_convert/`の`vmem_convert.py`・`fb01_convert.py`・`tx81z_convert.py`・
+  `README.md`のコメントと、`banks/sw/`のDX/TX/FB-01由来swbank 6本の注記は、
+  「FITOM_XはHW LFOを使わず、`hw.PMS`/`hw.AMS`は参照されない」という前提で
+  書かれている。実際には、ノートオンのたびに`$38+ch`へ書かれ、CC#14/#15で駆動される
+  (FITOM_Xを読んで確認。**読解のみ**)。HW LFOの設定を`sw.*`へ流さないという
+  変換規則はそのまま成り立つ。直すのはコメントと注記の文面だけ。直すか要判断。
 - `docs/voice-parameter-reference.md`はFITOM_X側の原本由来だが、こちらで直した節
   (worklog 3.25/3.35/3.51)と「原本由来なので直さない」とした節(3.37/3.45)があり、
   バンクのパスは意図的に原本と変えている(3.35)。どこまでこちらで書き換えてよいかの

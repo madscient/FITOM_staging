@@ -169,9 +169,10 @@ CC#0の値がそのままVoicePatchType(直接モード)になる。0は通常�
 - OPM/OPN/OPZの`ops[]`はアルゴリズム図のチェーン順`[M1,C1,M2,C2]`
   (FITOM_Xの`COPM::kMap={0,2,1,3}`)。
 - OPLLの`hw.ALG`は常に0(音色ごとの接続切替が実機に無い)。
-- 音色(ボイスパラメータ)のHW LFO設定は使われない。OPM/OPZの`COPM`は`$38+ch`
-  (PMS/AMS)に常に0を書き、HW LFOはCC#1 Modulationとして別途駆動される。
-  `hw.PMS`/`hw.AMS`は変換元の情報として格納するが参照されない。
+- OPM/OPZの`hw.PMS`/`hw.AMS`は、ノートオンのたびに`$38+ch`へ書かれる(`COPM::enablePM`/
+  `enableAM`)。HW LFOの速さ・深さはチップ全体で1系統で、CC#14(Depth)/CC#15(Rate)で
+  決まり、既定は0(効かない)。CC#1 ModulationはHW LFOではなくソフトウェアのピッチ変調
+  (FITOM_X `b7c1e4c`の`OPM_new.cpp`・`MidiCh.cpp`を読んで確認。**読解のみ**)。
 
 ### PSG系・DSG
 - PSG系(SSG/EPSG/DCSG/SAA/SCC)は`voice_patch_type=0x40`固定の共有バンクを使い、
@@ -388,8 +389,7 @@ CC#0の値がそのままVoicePatchType(直接モード)になる。0は通常�
   ADPCMの再生レートに効く)。
   SSG=2000000、DCSG=3579545、SCC/SCCP=3579545、EPSG=2000000、SSGEX=1789772
   (SSGブロックの動作クロックそのもの)、OPLL系/OPLLEX/OPL2EX/OPM(MSX)=3579545、
-  OPN=3993600・OPNA=7987200(PC-88/98)。
-- SAAは`8000000`固定(`CSAA1099`が8MHz固定で、変えると音程がずれる)。
+  OPN=3993600・OPNA=7987200(PC-88/98)、SAA=8000000。
 - DSGは`1000000`(YM2163の標準クロック)。
 
 ### 変換スクリプト(`tools/voice_convert/`)
