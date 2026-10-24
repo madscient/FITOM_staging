@@ -33,6 +33,7 @@ pcm_image_catalog.json          PCMメモリイメージカタログ
 tools/voice_convert/            音色変換スクリプト
 tools/instrument_export/        インストゥルメントリスト生成
 tools/git_filters/              環境依存フィールドの正規化フィルタ
+tools/launch_check/             全プロファイルの起動確認
 docs/manuals/                   利用者向けリファレンス
 docs/instruments/               インストゥルメントリスト(生成物)
 docs/STATUS.md                  現在の状態・未解決事項
@@ -93,11 +94,15 @@ bin/ roms/ wavs/ sf2/ logs/ dist/   git管理外
 - `setup.sh`(Linux/macOS向け)は動作実績が無く、`setup.ps1`への変更に追従していない
   (ユーザーからの情報)。`-Pull`/`-Build`相当も無い。
 - 実起動の確認は、リポジトリルートで`bin/fitom_cli.exe config/profiles/<name>.profile.json`
-  を起動し`logs/fitom.log`を読む。`fitom_cli`はSIGINTで終了しないため、自動で
-  回すときはPowerShellの`Start-Process -PassThru`→`Stop-Process -Force`→
-  `WaitForExit()`で1本ずつ確実に止めてからログを読む(残ったプロセスがログを
-  掴んだまま次が起動するとログが混ざる)。`HWPort opened`・`Device added`・
-  `Failed to create HWPort`・`unknown chip`を見る。
+  を起動し`logs/fitom.log`を読む。複数のプロファイルをまとめて確かめるときは
+  `tools/launch_check/launch_all.ps1`(`-Name`で絞れる)を使う。1本ずつ起動して止め、
+  `HWPort opened`・`Device added`・`Failed to create HWPort`・`unknown chip`・エラー・
+  警告の件数と警告の種類を出し、ログを`logs/launch_check/`へ退避する。
+  `fitom_cli`はSIGINTで終了しないため、手で回すときは`Start-Process -PassThru`→
+  `Stop-Process -Force`→`WaitForExit()`で1本ずつ確実に止めてからログを読む(残った
+  プロセスがログを掴んだまま次が起動するとログが混ざる)。
+- 起動ログの警告は、変更の前後で件数と種類を比べる。既知の警告は`docs/STATUS.md`
+  4節に載っている。
 - 起動ログで分かるのはデバイスとバンクのロードまで。音が意図どおり鳴るかの
   聴感確認はユーザーが行う。
 
