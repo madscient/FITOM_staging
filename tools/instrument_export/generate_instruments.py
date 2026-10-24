@@ -401,6 +401,10 @@ def collect_melodic_entries(profile: dict, profile_dir: Path, warn) -> list[Entr
                                   p.get("name") or fallback_name("Patch", p["prog"])))
 
     for pb in banks.get("pcm_banks", []):
+        # offsets_onlyのバンクは特定チップ向けのオフセット表で、FITOM_Xは
+        # ここから音色を作らない(CC#32で選んでも鳴らない)ため載せない。
+        if pb.get("offsets_only"):
+            continue
         group = pb["group"]
         if group not in GROUP_CC0_PCM:
             warn(f"未知のpcm_banks group '{group}' (bank={pb.get('bank')}) をスキップしました")

@@ -140,9 +140,12 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 **`emu_msx2pp`(Y8960: OPLLEX[リズム]/OPL2EX/SSGEX/SCCEX、OPM)**
 - [ ] OPLLEX・OPL2EX・SSGEX・SCCEX・OPMが鳴り、OPLLEX/OPL2EX/SSGEX/SCCEXでMIDIの
-  パンポットがchごとの定位として効く(worklog 3.64/3.66)。OPL2EX内蔵のADPCM-Bは波形
-  イメージが未登録のため鳴らない(下の「構成・データの問題」)
+  パンポットがchごとの定位として効く(worklog 3.64/3.66)
 - [ ] SCCEXが鳴る(下の`emu_msx`のSCC+と同じ経緯)
+- [ ] OPL2EX内蔵のADPCM-B(CC#0=81・CC#32=0)が鳴る(worklog 3.79)。イメージはカタログの
+  `ADPCM-B`(OPNA向けと共有)をFitomEmuIFが渡し、FITOM_XはOPNA向けと同じオフセット表
+  (`pcm_banks`のbank 5)を使う。FitomEmuIF・DSAemuEngineがイメージを渡せたかはログに
+  出ないので、**読解のみ**。オフセット表の選択は起動ログで**確認済み**
 
 **`emu_msx`(OPLLEX[リズム]/Y8950[リズム]/SSG/SCC+、OPM)**
 - [ ] 各チップが鳴る(worklog 3.60。起動ログでの確認のみ)
@@ -180,10 +183,6 @@ SF2(FitomSf2IF)デバイスを持つ。
   bank 0が空のskeletonのまま。演奏はCC#0=0x40(SSG共有バンク)の直接モードで行う
   前提。揃えるならPSG系向けのレイヤードpatchbankを新設して`bank_overrides`で
   差し替える(ユーザー指示で作成していない)。
-- **OPL2EX内蔵ADPCM-Bの波形イメージが未登録**(worklog 3.58/3.64): `emu_msx2pp`で
-  `OPL2EX-ADPCMB`デバイスは生成されるが、`pcm_image_catalog.json`にOPL2EX向けの
-  エントリーが無いため発音しない。FitomEmuIF側はOPL2EXの`ADPCM_B`へPCMイメージを
-  渡す対応が済んでいる(FitomEmuIF `2d0e443`)。
 - **`setup.sh`が`setup.ps1`と食い違っている**(worklog 3.71): `setup.sh`は動作実績が無く、
   `setup.ps1`への変更に追従していないため、動作が相当食い違っているはず(ユーザーからの情報)。
   `-Pull`/`-Build`相当も無い。Linux/macOSで使うときに`setup.ps1`と突き合わせて直す。

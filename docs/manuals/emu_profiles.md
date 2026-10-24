@@ -394,7 +394,7 @@ Y8960カートリッジ1基分の構成です。OPLLEX/OPL2EX/SSGEX/SCCEXはチ�
 | チップ | 数 | クロック | エンジン | 備考 |
 |---|---|---|---|---|
 | OPLLEX | 1 | 3,579,545Hz | DSAemuEngine | Y8960のOPLL部、内蔵リズム有効 |
-| OPL2EX | 1 | 3,579,545Hz | DSAemuEngine | Y8960のOPL2部。内蔵ADPCM部は波形イメージが未登録のため発音しません |
+| OPL2EX | 1 | 3,579,545Hz | DSAemuEngine | Y8960のOPL2部、ADPCM-B付き |
 | SSGEX | 1 | 1,789,772Hz | DSAemuEngine | Y8960のSSG部(YM2149×2) |
 | SCCEX | 1 | 3,579,545Hz | DSAemuEngine | Y8960のSCC部 |
 | OPM | 1 | 3,579,545Hz | YMFMEngine | Y8960のOPM部 |

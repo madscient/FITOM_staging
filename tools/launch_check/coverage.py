@@ -122,9 +122,10 @@ class Profile:
                 continue
             patches = load(bank_file(e["file"])).get("patches", [])
             self.hw[(vpt, e["bank"])] = {p["prog"]: p for p in patches if "prog" in p}
+        # offsets_only のバンクはチップ向けのオフセット表で、FITOM_X は音色を作らない
         self.sample = {(GROUP_VPT[e["group"]], e["bank"])
                        for e in self.banks["hw_banks"] + self.banks["pcm_banks"]
-                       if GROUP_VPT[e["group"]] in SAMPLE_BASED}
+                       if GROUP_VPT[e["group"]] in SAMPLE_BASED and not e.get("offsets_only")}
         self.layered = {e["bank"]: {p["prog"]: p for p in load(bank_file(e["file"]))["patches"]}
                         for e in self.banks["patch_banks"]}
 

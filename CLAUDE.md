@@ -269,6 +269,14 @@ CC#0の値がそのままVoicePatchType(直接モード)になる。0は通常�
 - 同じカタログキーのイメージを使うチップ(OPNAとY8950の`ADPCM-B`等)は、1つの
   メモリイメージを共有する。`pcm_banks[].chip`を分けても別のイメージは載らないため、
   通常のプリセットとは排他になる(worklog 3.63、ユーザーからの情報)。
+- ADPCM-Bを持つチップには、`pcm_banks`に`chip`の一致するエントリを必ず置く(今は
+  OPNA=bank 0、OPNB/OPNBB=bank 2、Y8950=bank 4、OPL2EX=bank 5。Y8950とOPL2EXは
+  OPNA向けと同じ`*.pcmbank.json`を`offsets_only: true`で指す)。一致が無いと、FITOM_Xは
+  groupが同じバンクのうち`unordered_map`で最初に見つかったものを使うため、OPNB向けの
+  表が黙って選ばれうる。どの表が使われたかは起動ログの
+  `CAdPcmBase: PCM voice table registered, ... (bank N)`で分かる。
+- `offsets_only: true`のバンクから、FITOM_Xは音色を作らない(CC#32で選んでも鳴らない)。
+  インストゥルメントリストにも載せない。
 - `wavs/`はgit管理外、`banks/PCM/common/_fixed_source/`は管理下。`wavs/`の音が
   8bitで`_fixed_source/`に同じ音の16bit版があるときは、パック用レシピは
   `_fixed_source/`側を参照する。

@@ -955,6 +955,20 @@
       "group": "SSGS_ADPCM",
       "bank": 3,
       "file": "../../banks/PCM/common/wavs_ssgs_adpcm.pcmbank.json"
+    },
+    {
+      "group": "ADPCMB",
+      "bank": 4,
+      "chip": "Y8950",
+      "file": "../../banks/PCM/common/wavs_opna_adpcmb.pcmbank.json",
+      "offsets_only": true
+    },
+    {
+      "group": "ADPCMB",
+      "bank": 5,
+      "chip": "OPL2EX",
+      "file": "../../banks/PCM/common/wavs_opna_adpcmb.pcmbank.json",
+      "offsets_only": true
     }
   ]
 }
