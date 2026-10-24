@@ -56,10 +56,9 @@ VMEM構造 (128バイト/音色):
        LFO SYNC / LFO SPEED / LFO DELAY / PITCH MOD DEPTH / AMP MOD DEPTH /
        LFO WAVE、および P45 の PMS/AMS(チャンネル単位のHW LFO感度)は、いずれも
        DX/TX実機の**内蔵(ハードウェア)LFO**を駆動するパラメータである。
-       FITOM_XはHW LFOを使用せず(`COPM::updateVoice`がレジスタ$38+chに0を
-       書いてHW LFOを無効化する)、swbankの`sw.*`は別機構である**ソフトLFO**の
-       設定である(`swbank.schema.json`の`sw`説明: 「HW LFOはボイスパラメータから
-       切り離され、CC#1 Modulationとして別途実装されている」)。
+       FITOM_XのHW LFOは速さ・深さをボイスパラメータに持たず、演奏中のCC#14/#15で
+       与える(`swbank.schema.json`の`sw`説明)。swbankの`sw.*`は別機構である
+       **ソフトLFO**の設定である。PMS/AMSだけはhwbank側に格納する(下記)。
        さらに`sw.LFR>0`の音色はCC#1(モジュレーションホイール)が作用しなくなる
        仕様(`ISoundDevice.h`の`setCC1Modulation`)のため、HW LFO設定を`sw.*`へ
        流し込むと「常時ビブラートが掛かりモジュレーションが効かない」状態になる。
@@ -93,9 +92,8 @@ VMEM構造 (128バイト/音色):
   EG_BIAS_SENS(0-7,3bit) → hw.ext.EGS (下位3bitにそのまま格納する近似実装。
     OPZ実機レジスタ(0xC0+slot)の正確なビット割付が不明なため要検証。)
 
-注意: `hw.PMS`/`hw.AMS`は実機レジスタ値として忠実に格納するが、FITOM_Xの
-`COPM::updateVoice`はレジスタ$38+chに0を書く(HW LFO無効化)ため、OPM/OPZでは
-実際には参照されない。変換元の情報を保持する目的で出力している。
+注意: `hw.PMS`/`hw.AMS`は実機レジスタ値として忠実に格納する。FITOM_Xはノートオンの
+たびにこれをレジスタ$38+chへ書くので、CC#14(HW LFO Depth)を送るとLFOが掛かる。
 
 注意: VMEMのKEYBOARD SCALING LEVEL(0-99)は、OPMレジスタのKSR(Key Scale
 Rate, 0-3)とは全く別の概念(DX21/DX100固有のソフトウェア的スケーリング)で
@@ -316,8 +314,8 @@ def convert_syx(src_path, dst_hwbank_path, dst_swbank_path, bank_no=0):
                     "sw_bank/sw_progで対になるswbank(同名.swbank.json)を参照。"
                     "KEYBOARD SCALING LEVEL/KEY_VEL/PITCH_BEND_RANGEは対応"
                     "フィールドが存在しないため破棄。hw.PMS/AMSは実機レジスタ値"
-                    "として格納しているが、FITOM_XはHW LFOを無効化するため"
-                    "実際には参照されない。ext.EGSはEG_BIAS_SENSからの近似変換"
+                    "として格納(HW LFOの速さ・深さはCC#14/#15で与える)。"
+                    "ext.EGSはEG_BIAS_SENSからの近似変換"
                     "(実機の正確なビット割付は未検証)。",
         "patches": hw_patches,
     }
@@ -328,7 +326,8 @@ def convert_syx(src_path, dst_hwbank_path, dst_swbank_path, bank_no=0):
                 f"opsのVTLはキャリアが汎用デフォルト固定({CARRIER_VTL})、"
                 "モジュレータはVCEDのKVS(0-7)からの換算値。"
                 "VMEMのLFO SYNC/WAVE/SPEED/DELAY/PMD/AMDはDX実機の"
-                "ハードウェアLFO用パラメータであり、FITOM_XはHW LFOを使用せず、"
+                "ハードウェアLFO用パラメータであり、FITOM_XのHW LFOは速さ・深さを"
+                "演奏中のCC#14/#15で与えてボイスパラメータに持たず、"
                 "swbankのsw.*は別機構のソフトLFO設定であるため変換しない"
                 "(sw.LFR>0にするとCC#1モジュレーションが効かなくなる)。",
         "patches": sw_patches,

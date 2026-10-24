@@ -88,8 +88,8 @@ def parse_voice(vbytes):
     name = vbytes[:7].decode('ascii', errors='replace').rstrip()
 
     # $07(LFO speed) / $08(enable_lfo, AMD) / $09(sync_lfo, PMD) / $0E(LFO wave)
-    # はFB-01実機の内蔵(ハードウェア)LFOを駆動するパラメータ。FITOM_XはHW LFOを
-    # 使用せず(`COPM::updateVoice`がレジスタ$38+chに0を書いて無効化する)、swbankの
+    # はFB-01実機の内蔵(ハードウェア)LFOを駆動するパラメータ。FITOM_XのHW LFOは
+    # 速さ・深さをボイスパラメータに持たず演奏中のCC#14/#15で与え、swbankの
     # `sw.*`は別機構であるソフトLFOの設定であるため変換しない。さらに`sw.LFR>0`の
     # 音色はCC#1(モジュレーションホイール)が作用しなくなる仕様
     # (`ISoundDevice.h`の`setCC1Modulation`)のため、流し込むと「常時ビブラートが
@@ -98,8 +98,8 @@ def parse_voice(vbytes):
 
     fb          = (vbytes[12] >> 3) & 0x07
     alg         =  vbytes[12] & 0x07
-    # PMS/AMSは実機レジスタ$38+chのHW LFO感度。値は保持するがFITOM_Xが
-    # HW LFOを無効化するため実際には参照されない。
+    # PMS/AMSは実機レジスタ$38+chのHW LFO感度。FITOM_Xはノートオンのたびに
+    # これを$38+chへ書く。
     pms         = (vbytes[13] >> 4) & 0x07
     ams         = (vbytes[13] >> 2) & 0x03
     transpose   =  vbytes[15] if vbytes[15] < 128 else vbytes[15] - 256
@@ -180,8 +180,8 @@ def convert(src_path, dst_hwbank_path, dst_swbank_path, bank_no=0):
                     "(FB-01格納順OP#0-#3がこの順と一致するため並び替え無し)。"
                     "sw_bank/sw_progで対になるswbank(同名.swbank.json)を参照。"
                     "VEL_TL/VEL_AR/KLS_type/KLS_depth/TL_adjは対応フィールドが"
-                    "存在しないため破棄。hw.PMS/AMSは実機レジスタ値として格納して"
-                    "いるが、FITOM_XはHW LFOを無効化するため実際には参照されない。",
+                    "存在しないため破棄。hw.PMS/AMSは実機レジスタ値として格納"
+                    "(HW LFOの速さ・深さはCC#14/#15で与える)。",
         "patches": hw_patches,
     }
     sw_out = {
@@ -191,7 +191,8 @@ def convert(src_path, dst_hwbank_path, dst_swbank_path, bank_no=0):
                 f"opsのVTL={DEFAULT_VTL}はパフォーマンス情報を持たない変換元向けの"
                 "汎用デフォルト。"
                 "FB-01のLFO速度/AMD/PMD/LFO波形/LFO sync/LFO enableはFB-01実機の"
-                "ハードウェアLFO用パラメータであり、FITOM_XはHW LFOを使用せず、"
+                "ハードウェアLFO用パラメータであり、FITOM_XのHW LFOは速さ・深さを"
+                "演奏中のCC#14/#15で与えてボイスパラメータに持たず、"
                 "swbankのsw.*は別機構のソフトLFO設定であるため変換しない"
                 "(sw.LFR>0にするとCC#1モジュレーションが効かなくなる)。",
         "patches": sw_patches,

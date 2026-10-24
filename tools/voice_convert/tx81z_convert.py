@@ -210,8 +210,8 @@ def parse_voice(vbytes):
 
     # addr40 bit7(SY=LFO sync) / addr41(LFO speed) / addr42(LFO delay) /
     # addr43(PMD) / addr44(AMD) / addr45下位2bit(LFW=LFO波形)は、TX81Z実機の
-    # 内蔵(ハードウェア)LFOを駆動するパラメータ。FITOM_XはHW LFOを使用せず
-    # (`COPM::updateVoice`がレジスタ$38+chに0を書いて無効化する)、swbankの
+    # 内蔵(ハードウェア)LFOを駆動するパラメータ。FITOM_XのHW LFOは速さ・深さを
+    # ボイスパラメータに持たず演奏中のCC#14/#15で与え、swbankの
     # `sw.*`は別機構であるソフトLFOの設定であるため変換しない。さらに
     # `sw.LFR>0`の音色はCC#1(モジュレーションホイール)が作用しなくなる仕様
     # (`ISoundDevice.h`の`setCC1Modulation`)のため、流し込むと「常時ビブラートが
@@ -221,8 +221,8 @@ def parse_voice(vbytes):
         "hw": {
             "ALG": b40 & 7,
             "FB":  (b40 >> 3) & 7,
-            # PMS/AMSは実機レジスタ$38+chのHW LFO感度。値は保持するが
-            # FITOM_XがHW LFOを無効化するため実際には参照されない。
+            # PMS/AMSは実機レジスタ$38+chのHW LFO感度。FITOM_Xはノートオンの
+            # たびにこれを$38+chへ書く。
             "PMS": (b45 >> 4) & 7,
             "AMS": (b45 >> 2) & 3,
             "REV": vbytes[81],

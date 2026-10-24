@@ -207,10 +207,9 @@ OPL/OPL2/OPL3/OPLL 系（`vma_convert.py` / `alsa_convert.py` / `opll_convert.py
 対象は DX/TX81Z VMEM の LFO SYNC / LFO SPEED / LFO DELAY / PMD / AMD /
 LFO WAVE、FB-01 の LFO speed / AMD / PMD / LFO wave / LFO sync / LFO enable。
 
-FITOM_X は HW LFO を使用しない（`COPM::updateVoice` がレジスタ `$38+ch` に 0 を
-書いて無効化する）。swbank の `sw.*` はこれとは別機構の**ソフトLFO**の設定で、
-`swbank.schema.json` の `sw` 説明にも「HW LFO はボイスパラメータから切り離され、
-CC#1 Modulation として別途実装されている」と明記されている。さらに `sw.LFR>0` の
+FITOM_X の HW LFO は、速さ・深さをボイスパラメータに持たず、演奏中の CC#14/#15 で
+与える（`swbank.schema.json` の `sw` 説明）。swbank の `sw.*` はこれとは別機構の
+**ソフトLFO**の設定である。さらに `sw.LFR>0` の
 音色は **CC#1（モジュレーションホイール）が作用しなくなる**仕様
 （`ISoundDevice.h` の `setCC1Modulation`）。HW LFO 設定を `sw.*` に流し込むと
 「常時ビブラートが掛かり、かつモジュレーションが効かない」状態になる。
@@ -219,8 +218,9 @@ CC#1 Modulation として別途実装されている」と明記されている�
 `sw` オブジェクトを出力しないのが正しい。TRANSPOSE のような HW LFO と無関係の
 演奏パラメータ（→ `fine_transpose`）は従来どおり変換する。
 
-`hw.PMS`/`hw.AMS`（レジスタ `$38+ch` の HW LFO 感度）は変換元の情報を保つため
-値としては格納するが、上記の理由で OPM/OPZ では実際には参照されない。
+`hw.PMS`/`hw.AMS`（レジスタ `$38+ch` の HW LFO 感度）は実機の値のまま格納する。
+FITOM_X はノートオンのたびにこれを `$38+ch` へ書くので、CC#14（HW LFO Depth）を
+送ると OPM/OPZ で LFO が掛かる。
 
 ## 共通仕様: ベロシティ感度 (`ops[].VTL`)
 
