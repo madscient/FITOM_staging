@@ -241,7 +241,7 @@ Write-Host "     emu_opm.profile.json         : OPMエミュプロファイル (
 Write-Host "     emu_opll.profile.json        : OPLLエミュプロファイル (OPLL[rhythm]/OPLLP/VRC7/OPLLX)"
 Write-Host "     emu_psg_stereo.profile.json  : PSGエミュプロファイル (SSG/DCSG/SCC/EPSG/DSG 各2 リニアステレオ + SAA)"
 Write-Host "     fmall.profile.json           : FMALL (OPZ/OPNBB/OPL3+OPL4AWMをL/R2枚ずつ + OPLLEX)"
-Write-Host "     emu_msx.profile.json         : MSXプロファイル (OPLL[rhythm]/Y8950[rhythm]/SSG/SCC+/OPM)"
+Write-Host "     emu_msx.profile.json         : MSXプロファイル (OPLLEX[rhythm]/Y8950[rhythm]/SSG/SCC+/OPM)"
 Write-Host "     emu_msx2pp.profile.json      : MSX2++プロファイル (Y8960: OPLLEX[rhythm]/OPL2EX/SSGEX/SCCEX/OPM)"
 Write-Host "     emu_pc88.profile.json        : PC-88プロファイル (OPN/OPNA/OPM)"
 Write-Host "     emu_pc98.profile.json        : PC-98プロファイル (OPN/OPNA/OPL3/Y8950[rhythm])"

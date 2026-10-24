@@ -29,7 +29,7 @@ SF2(FitomSf2IF)デバイスを持つ。
 | `emu_opll_stereo` | OPLL[rhythm]/OPLLP/VRC7/OPLLX×2(ペア)=YMFMEngine、OPLLEX=DSAemuEngine | あり |
 | `fmall` | OPZ×2/OPNBB×2/OPL3+OPL4(ペア)=YMFMEngine、OPLLEX[rhythm]=DSAemuEngine | あり |
 | `emu_psg_stereo` | DCSG/SCC×2(ペア)=DSAemuEngine、EPSG×2(ペア)/SSGS/SSGS2/SSGS3=EPSGemuEngine、DSG×2(ペア)=DSGemuEngine、SAA=SAASoundEngine | なし |
-| `emu_msx` | OPLL[rhythm]/Y8950[rhythm]/SSG/SCCP=DSAemuEngine、OPM=YMFMEngine | あり |
+| `emu_msx` | OPLLEX[rhythm]/Y8950[rhythm]/SSG/SCCP=DSAemuEngine、OPM=YMFMEngine | あり |
 | `emu_msx2pp` | Y8960 1基: OPLLEX[rhythm]/OPL2EX/SSGEX/SCCEX=DSAemuEngine、OPM=YMFMEngine | あり |
 | `emu_pc88` | OPN/OPNA/OPM=YMFMEngine | あり |
 | `emu_pc98` | OPN/OPNA/OPL3/Y8950[rhythm]=YMFMEngine | あり |
@@ -61,7 +61,7 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 この状態で全17プロファイルを`bin/fitom_cli.exe`で起動し、`Failed to create HWPort`・
 `unknown chip`が0件であることを確認した(**確認済み**、2026年10月24日)。出た警告は
-4節の既知の項目(`emu_msx`・`emu_psg_stereo`)だけ。
+4節の既知の項目(`emu_psg_stereo`)だけ。
 `fitom_hw.dll`(FitomHwIF)も配置されている。
 ## 3. ドキュメント
 
@@ -144,8 +144,12 @@ SF2(FitomSf2IF)デバイスを持つ。
   イメージが未登録のため鳴らない(下の「構成・データの問題」)
 - [ ] SCCEXが鳴る(下の`emu_msx`のSCC+と同じ経緯)
 
-**`emu_msx`(OPLL[リズム]/Y8950[リズム]/SSG/SCC+、OPM)**
+**`emu_msx`(OPLLEX[リズム]/Y8950[リズム]/SSG/SCC+、OPM)**
 - [ ] 各チップが鳴る(worklog 3.60。起動ログでの確認のみ)
+- [ ] MSX-MUSICをOPLLからOPLLEXに替えた(worklog 3.78): レイヤードバンク0の128音色と
+  ドラムキット0の21ノートが、すべてOPLLEXで鳴る(解決できることは**確認済み**:
+  `coverage.py`)。それまでOPLLで鳴っていた104音色と内蔵リズムも、OPLLEXで鳴るように
+  なった
 - [ ] SCC+が鳴る。以前の無音の原因2件(DSAemuEngineがemu2212のレジスタ窓の外へ書いて
   いた件、FITOM_Xの`CSCC`のレジスタ配置が重複していた件)は、どちらもコード上は解消
   している(**読解のみ**、2026年10月23日)。DSAemuEngine(`46c2fbe`)は
@@ -176,14 +180,6 @@ SF2(FitomSf2IF)デバイスを持つ。
   bank 0が空のskeletonのまま。演奏はCC#0=0x40(SSG共有バンク)の直接モードで行う
   前提。揃えるならPSG系向けのレイヤードpatchbankを新設して`bank_overrides`で
   差し替える(ユーザー指示で作成していない)。
-- **`emu_msx`のROM音色**(worklog 3.60): OPLLが1枚だけのため、
-  `gm_layered_opll`のうちOPLL-P/OPLL-X/VRC7のROM音色を指す24パッチが発音しない
-  (標準OPLL系どうしではROM音色がフォールバックしない)。FITOM_X `b7c1e4c`の起動ログでは
-  `OPLL ROM voice: ... no matching device, and no OPLLEX to fall back to`の警告が
-  75件出る(**確認済み**、2026年10月24日)。`emu_msx2pp`はOPLLEXへ
-  フォールバックするため該当しない(FITOM_X `e528e23`の`resolveOpllRomVoice()`を
-  読んで確認。**読解のみ**。worklog 3.60の「37パッチが発音しない」はOPLLEXが
-  生成されなかった古いバイナリの時点の記述)。
 - **OPL2EX内蔵ADPCM-Bの波形イメージが未登録**(worklog 3.58/3.64): `emu_msx2pp`で
   `OPL2EX-ADPCMB`デバイスは生成されるが、`pcm_image_catalog.json`にOPL2EX向けの
   エントリーが無いため発音しない。FitomEmuIF側はOPL2EXの`ADPCM_B`へPCMイメージを
@@ -227,7 +223,8 @@ SF2(FitomSf2IF)デバイスを持つ。
   OPNBB」だがOPNは載っていない。`emu_opl`/`emu_opl_stereo`は「OPL[rhythm]/Y8950/OPL2/OPL3/
   OPL4」だが、OPLとOPL2は載っておらず、リズムはY8950。`emu_psg_stereo`は「SSG/DCSG/SCC/
   EPSG/DSG 各2」だが、SSGは載っておらず、SSGS/SSGS2/SSGS3が各1。`unified_preset`は
-  「全チップGM+専用バンク一式」だが、載っているのはOPN系4チップだけ。
+  「全チップGM+専用バンク一式」だが、載っているのはOPN系4チップだけ。`emu_msx`は
+  「OPLL[rhythm]/…」だが、OPLLはOPLLEXに替えた(worklog 3.78)。
 - **CC#0=127の二重の意味**(worklog 3.57): FITOM_X本体では`VOICE_PATCH_SILENCE`
   (無音バンク)だが、インストゥルメントリストではSF2バンクの表示に使っている。
   SF2直行パスは`sf2_channel_windows`で切り分けられCC#0を見ないため実害は無いが、

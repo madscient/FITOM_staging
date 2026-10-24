@@ -347,7 +347,7 @@ OPLLエミュプロファイルの通常モードパッチバンク
 
 | チップ | 数 | クロック | エンジン | 備考 |
 |---|---|---|---|---|
-| OPLL | 1 | 3,579,545Hz | DSAemuEngine | MSX-MUSIC、内蔵リズム有効 |
+| OPLLEX | 1 | 3,579,545Hz | DSAemuEngine | MSX-MUSIC(Y8960のOPLL部で代用)、内蔵リズム有効 |
 | Y8950 | 1 | 3,579,545Hz | DSAemuEngine | MSX-AUDIO、内蔵リズム有効、ADPCM-B付き |
 | SSG | 1 | 2,000,000Hz | DSAemuEngine | 本体内蔵PSG |
 | SCC+ | 1 | 3,579,545Hz | DSAemuEngine | SCC-I |
@@ -357,19 +357,20 @@ OPLLエミュプロファイルの通常モードパッチバンク
 
 | CC#32 | パッチバンク | 鳴る音色 |
 |---|---|---|
-| 0 | GM Standard Layered OPLL | 104/128 |
+| 0 | GM Standard Layered OPLL | 全128 |
 | 2 | GM Standard Layered OPL2 | 58/128 |
 | 4 | GM Standard Layered OPM | 全128 |
-| 5 | GM Standard Layered OPLL | 104/128 |
+| 5 | GM Standard Layered OPLL | 全128 |
 
-CC#32=0・5で鳴らない24音色は、OPLL-P/OPLL-X/VRC7のROM音色を使うものです。
+MSX-MUSICには、OPLL・OPLL-P・OPLL-X・VRC7の4種類のROM音色を内蔵したOPLLEXを使って
+います。このため、OPLL-P/OPLL-X/VRC7のROM音色を使う音色も鳴ります。
 CC#32=2はY8950で鳴り、Y8950で再現できない音色は鳴りません。
 
 **ドラムキット:**
 
 | prog | ドラムキット | 鳴るノート |
 |---|---|---|
-| 0 | OPLL Built-in Rhythm (COPLLRhythm, GM2 mapped) | 13/21 |
+| 0 | OPLL Built-in Rhythm (COPLLRhythm, GM2 mapped) | 全21 |
 | 2 | ALSA Preset 2OP set | 26/47 |
 | 4 | MA-2 Preset 2OP set | 27/79 |
 | 5 | MA-2 Basic 2OP set | 38/79 |
@@ -378,7 +379,7 @@ CC#32=2はY8950で鳴り、Y8950で再現できない音色は鳴りません。
 | 8 | MA-2 Digital 2OP set | 36/79 |
 | 9 | MA-2 Acid 2OP set | 28/79 |
 | 10 | MA-2 Variant 2OP set | 27/79 |
-| 12 | OPLL Built-in Rhythm (COPLLRhythm, GM2 mapped) | 13/21 |
+| 12 | OPLL Built-in Rhythm (COPLLRhythm, GM2 mapped) | 全21 |
 | 13 | OPL Built-in Rhythm (GM2 mapped) | 全21 |
 
 ### MSX2++プロファイル
