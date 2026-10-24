@@ -41,8 +41,8 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 `bin/`はgit管理外で、マシンごとに中身が違う。下の表は、最後にビルドしたマシンで
 2026年10月24日にRelease版をビルドし、`setup.ps1`で配置したときのコミット(worklog 3.70)。
-他のマシンの`bin/`がこの状態だとは限らない。起動確認の前に、そのマシンの`bin/`の
-更新日時と各リポジトリの`HEAD`を見る。
+他のマシンの`bin/`がこの状態だとは限らない。そのマシンの`bin/`の中身は
+`bin/build_info.json`で分かる(`setup.ps1`が書く)。
 
 | リポジトリ | コミット |
 |---|---|
@@ -151,6 +151,9 @@ SF2(FitomSf2IF)デバイスを持つ。
   `OPL2EX-ADPCMB`デバイスは生成されるが、`pcm_image_catalog.json`にOPL2EX向けの
   エントリーが無いため発音しない。FitomEmuIF側はOPL2EXの`ADPCM_B`へPCMイメージを
   渡す対応が済んでいる(FitomEmuIF `2d0e443`)。
+- **`setup.sh`が`setup.ps1`と食い違っている**(worklog 3.71): `setup.sh`は動作実績が無く、
+  `setup.ps1`への変更に追従していないため、動作が相当食い違っているはず(ユーザーからの情報)。
+  `-Pull`/`-Build`相当も無い。Linux/macOSで使うときに`setup.ps1`と突き合わせて直す。
 - **ADPCM-B抜粋バンクが未参照**(worklog 3.63): `wavs_y8950_adpcmb_excerpt`は
   通常のADPCM-Bプリセットとの割り当て方を検討中のため、意図的にどこからも参照して
   いない。ADPCM-Bは親チップが違っても1つのメモリイメージに束ねられるため、

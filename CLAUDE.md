@@ -80,10 +80,18 @@ bin/ roms/ wavs/ sf2/ logs/ dist/   git管理外
   `engines[].chips[]`のスロットと1:1で対応すること(欠落・二重オープン・
   未使用スロット)を確かめる。
 - 起動確認の前に、`bin/`が確認したい機能を含むFITOM_X(と各プラグイン・エンジン)で
-  ビルドされているかを確かめる(ビルドしたコミットは`docs/STATUS.md`)。古いバイナリ
-  だと`unknown chip`や`PatchBank 0 not found`が出て、プロファイル側の不備と
-  取り違える。`bin/`を更新するときは、各リポジトリの作業ツリーがcleanなことを
-  確かめてからoriginへ早送りし、既存の`build/`でReleaseビルド→`setup.ps1`の順にする。
+  ビルドされているかを確かめる。`bin/`はマシンごとに違うので、`docs/STATUS.md`の表では
+  なく、そのマシンの`bin/build_info.json`(`setup.ps1`が書く各リポジトリのコミット)を見る。
+  `built: false`なら、ビルドは`setup.ps1`の外で行われていて、コミットとバイナリが
+  一致する保証は無い。古いバイナリだと`unknown chip`や`PatchBank 0 not found`が出て、
+  プロファイル側の不備と取り違える。
+- `bin/`の更新は`.\setup.ps1 -Pull -Build`で行う。各リポジトリをupstreamへ早送りし、
+  既存のビルドディレクトリでビルドしてから配置する。早送りできないリポジトリ(追跡中の
+  ファイルの未コミットの変更・分岐・upstream無し)が1つでもあれば、どれも動かさずに
+  中止するので、そのリポジトリを手で片付けてから再実行する。`setup.ps1`は古い名前の
+  DLLを消さない。
+- `setup.sh`(Linux/macOS向け)は動作実績が無く、`setup.ps1`への変更に追従していない
+  (ユーザーからの情報)。`-Pull`/`-Build`相当も無い。
 - 実起動の確認は、リポジトリルートで`bin/fitom_cli.exe config/profiles/<name>.profile.json`
   を起動し`logs/fitom.log`を読む。`fitom_cli`はSIGINTで終了しないため、自動で
   回すときはPowerShellの`Start-Process -PassThru`→`Stop-Process -Force`→
