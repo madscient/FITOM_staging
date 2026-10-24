@@ -201,10 +201,6 @@ SF2(FitomSf2IF)デバイスを持つ。
   67,76,77,83,88,92,97,100,108,109,110,111,119,120,121,126)は、`source`が挙げる
   8バンクのいずれとも`ALG`/`FB`/ops全フィールドが一致せず由来が特定できていない
   (worklog 3.44)。並び順・値解釈が正しいかの確認が必要。
-- `banks/sw/necopn_gm.swbank.json`・`default_gm.swbank.json`・
-  `default_32.swbank.json`・`compat_zero.swbank.json`は、どのプロファイルの
-  `sw_banks[]`からも参照されていない旧形式(`LFO`/`LDM`/`LDL`/`SLF`等)の
-  ファイル(worklog 3.13/3.21)。削除するか現行スキーマへ追従させるか要判断。
 - `fmemuif_opl5.profile.json`/`fmemuif_opm_opz4.profile.json`/
   `fmemuif_opll5.profile.json`のクロック値は一般的な標準値からの推測
   (特にOPL4=33,868,800Hzは未検証)。
@@ -273,14 +269,9 @@ SF2(FitomSf2IF)デバイスを持つ。
   バンクのパスは意図的に原本と変えている(3.35)。どこまでこちらで書き換えてよいかの
   方針が決まっていない。原本がFITOM_X側で削除されたので、この写しを残すか、
   FITOM_X側の文書(`docs/manuals/hwpatch-reference.md`等)への参照に置き換えるかも
-  合わせて未決。
+  合わせて未決。「OPLL系」節(197行目付近)は「OPLLもキーオン/キーオフのたびにEGT/RRを
+  書き換える」としているが誤り(OPLL系は静的な変換。worklog 3.82)。方針が決まるまで
+  直していない。
 - `config_schema/profile.schema.json`の`devices[].engine`の`examples`が
   `["YMEngine", "AYEngine"]`のまま(現行の値は`"engines/YMFMEngine"`等)。FITOM_X側の
   原本のdriftで、写しは直さない方針のため本体側の更新を待つ。
-- `CLAUDE.md`3節「値の格納規約」は、FITOM_XがOPLLでもキーオン/キーオフのたびに
-  EGT/RRを書き換えるとしているが、FITOM_XのOPLL系は`updateVoice`での静的な変換
-  (`SR>0`ならEGT=0・RRレジスタ=`SR>>1`、`SR==0`ならEGT=1・RRレジスタ=`RR`)で、
-  動的に書き換えるのはOPL系だけ(FITOM_Xの`docs/design/chip-notes.md`「EGTとRRの
-  静的な変換」)。`tools/voice_convert/opll_convert.py`の冒頭コメントと
-  `docs/voice-parameter-reference.md`も同じ前提で書かれている。変換規則
-  (`apply_carrier_rr_floor()`を含む)への影響は確かめていない。

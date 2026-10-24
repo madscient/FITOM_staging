@@ -179,11 +179,18 @@ CC#0の値がそのままVoicePatchType(直接モード)になる。0は通常�
   シフトしない。
 - OPL/OPLL系のEGT/SR/RR: 実機EGTビット=1(持続)なら`SR=0`、EGTビット=0
   (減衰)なら`SR=変換元RR<<1`。`RR`はEGTビットに関わらず常に変換元RRレジスタ値
-  (シフトなし)。FITOM_XはOPL/OPL2/OPL3/OPLLとも、キーオン時はEGT=0で`SR`の値を、
-  キーオフ時はEGT=1で`RR`の値をRRレジスタへ書くため、`RR=0`のキャリアは`SR`が
-  何であってもキーオフで消音しない。変換時は`AR>0`のキャリアの`RR==0`を`RR=1`に
-  補正する(`apply_carrier_rr_floor()`)。`banks/OPL2`・`OPL3`・`OPLL`配下で、
-  `AR>0`のキャリアに`RR==0`は無い状態を保つ(`AR=0`の空パッチは対象外)。
+  (シフトなし)。
+  - OPL/OPL2/OPL3: FITOM_Xはキーオン時にEGT=0で`SR`の値を、キーオフ時にEGT=1で`RR`の値を
+    RRレジスタへ書く(動的な書き換え)。`RR=0`のキャリアは`SR`が何であってもキーオフで
+    消音しない。
+  - OPLL系: FITOM_XはEGT/RRを動的に書き換えない。音色を書くときに`SR>0`ならEGT=0・
+    RRレジスタ=`SR>>1`(キーオフ後もこのレートで減衰し、`RR`は使われない)、`SR==0`なら
+    EGT=1・RRレジスタ=`RR`(FITOM_Xの`docs/design/chip-notes.md`「EGTとRRの静的な変換」)。
+    上の変換規則なら、どちらでもRRレジスタに入る値は変換元RRと一致する。`SR==0`かつ
+    `RR=0`のキャリアはキーオフで消音しない。
+  - 変換時は`AR>0`のキャリアの`RR==0`を`RR=1`に補正する(`apply_carrier_rr_floor()`)。
+    `banks/OPL2`・`OPL3`・`OPLL`配下で、`AR>0`のキャリアに`RR==0`は無い状態を保つ
+    (`AR=0`の空パッチは対象外)。
 - `ops[i].EGT`はOPN専用(SSG-EG用)で、OPL系では常に0。
 - OPM/OPN/OPZの`ops[]`はアルゴリズム図のチェーン順`[M1,C1,M2,C2]`
   (FITOM_Xの`COPM::kMap={0,2,1,3}`)。

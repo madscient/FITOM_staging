@@ -5,11 +5,15 @@ SwBank は HwPatch（チップレジスタ直接値）に対するソフトウ�
 
 ## ファイル一覧
 
-| ファイル | 音色数 | VTL | 用途 |
+| ファイル | 音色数 | `unified.bankset.json`の`sw_bank` | 用途 |
 |---|---|---|---|
-| `default_gm.swbank.json` | 128 | 64 | GM配列バンク向けデフォルト |
-| `default_32.swbank.json` | 32  | 64 | 32音色バンク向けデフォルト |
-| `compat_zero.swbank.json` | 128 | 0  | 全パラメータ0・旧FITOM完全互換 |
+| `performance_presets.swbank.json` | 32 | 0 | 変換元にパフォーマンス情報が無いHwPatch向けの汎用パッチ |
+| `dx21.swbank.json` | 128 | 1 | DX21由来のOPM/OPZバンク専用 |
+| `dx100_1.swbank.json` | 128 | 2 | DX100由来(1)のOPM/OPZバンク専用 |
+| `dx100_2.swbank.json` | 128 | 3 | DX100由来(2)のOPM/OPZバンク専用 |
+| `dx11.swbank.json` | 128 | 4 | DX11由来のOPM/OPZバンク専用 |
+| `tx81z.swbank.json` | 128 | 5 | TX81Z由来のOPM/OPZバンク専用 |
+| `fb01.swbank.json` | 80 | 6 | FB-01由来のOPM/OPZバンク専用 |
 
 ## パラメータ
 
@@ -29,10 +33,10 @@ SwBank は HwPatch（チップレジスタ直接値）に対するソフトウ�
 ```json
 "banks": {
   "hw_banks": [
-    { "group": "OPM", "bank": 0, "file": "banks/OPM/dx27_dx100/dx100_1.hwbank.json" }
+    { "group": "OPM", "bank": 0, "file": "../../banks/OPM/dx27_dx100/dx100_1.hwbank.json" }
   ],
   "sw_banks": [
-    { "bank": 0, "file": "banks/sw/default_32.swbank.json" }
+    { "bank": 0, "file": "../../banks/sw/performance_presets.swbank.json" }
   ]
 }
 ```

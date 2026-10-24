@@ -1,7 +1,7 @@
 {
   "name": "necopn GM (OPN single-layer)",
   "bank": 0,
-  "note": "necopn_gm.hwbank.json の全128音色を OPN2 (voice_patch_type=0x11) 単一レイヤーで参照。 OPN系最上位チップとして宣言し、OPN/OPN2/OPNA/OPNB/OPNBBすべてでフォールバック再生される。SwPatch(banks/sw/necopn_gm.swbank.json)との対応は、hw_bank参照先(necopn_gm.hwbank.json)の各パッチ自身のsw_bank/sw_progで管理する(Patch直下のsw_bank/sw_progは2026年7月に廃止、PatchManager::loadPatchBankJsonはこの階層のsw_bank/sw_progを読まないため無意味だった)。",
+  "note": "necopn_gm.hwbank.json の全128音色を OPN2 (voice_patch_type=0x11) 単一レイヤーで参照する。OPN2/OPNA/OPNB/OPNBBでは一致して鳴り、OPN(YM2203)ではフォールバックで鳴る。SwPatchとの対応は、参照先 necopn_gm.hwbank.json の各パッチ自身の sw_bank/sw_prog で付ける(Patch直下の sw_bank/sw_prog は読まれない)。",
   "patches": [
     {
       "prog": 0,

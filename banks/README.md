@@ -113,7 +113,7 @@ adpcm_packer banks/PCM/common/params_ssgs_adpcm.json
       { "group": "OPL3_2", "bank": 112, "file": "../../banks/OPL2/alsa/alsa_drums.hwbank.json" }
     ],
     "sw_banks": [
-      { "bank": 0, "file": "../../banks/sw/default_32.swbank.json" }
+      { "bank": 0, "file": "../../banks/sw/performance_presets.swbank.json" }
     ],
     "drum_banks": [
       { "prog": 0, "file": "../../banks/drums/gm2_standard.drumkit.json" }
