@@ -172,14 +172,12 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 ### 構成・データの問題
 
-- **`docs/manuals/emu_profiles.md`が現在のプロファイルと食い違っている**(OPM/OPZの節は
-  worklog 3.74で直した): `emu_opn`/`emu_opl`のチップ構成が1節の表と違う。
-  `emu_opll`等のドラムキットの一覧に、そのプロファイルでは鳴らないキット(他チップを
-  直接指すもの)が載っている。`unified_preset`・ステレオ版・`emu_fmgen_opn`・`fmall`・
-  `emu_psg_stereo`の節が無い。
-- **`banks/drums/gm2_standard.drumkit.json`がどこからも参照されていない**: 中身は
-  `opm_standard.drumkit.json`と同一(**確認済み**: 全61ノートを比較)。`emu_opm`/`emu_opz`の
-  参照は`opm_standard`へ付け替わっている(`3b01768`)。消すか要判断。
+- **`profile_name`が実際の構成と食い違っている**(worklog 3.75): `emu_opn`/
+  `emu_opn_stereo`/`emu_fmgen_opn`は「OPN/OPN2/OPNA/OPNB/OPNBB」だがOPNは載っていない。
+  `emu_opl`/`emu_opl_stereo`は「OPL[rhythm]/Y8950/OPL2/OPL3/OPL4」だが、OPLとOPL2は
+  載っておらず、リズムはY8950。`emu_psg_stereo`は「SSG/DCSG/SCC/EPSG/DSG 各2」だが、
+  SSGは載っておらず、SSGS/SSGS2/SSGS3が各1。`unified_preset`は「全チップGM+専用バンク
+  一式」だが、載っているのはOPN系4チップだけ。直すか要判断。
 - **`unified_preset`が`bank_overrides`を持たない**: worklog 3.33ではSF2のみの
   プロファイルとして対象外にしたが、現在はOPN系4チップを`auto_devices`で開く
   (1節)。通常モードのbank 0が空のskeletonのままで、起動時に
