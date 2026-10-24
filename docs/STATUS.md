@@ -172,12 +172,6 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 ### 構成・データの問題
 
-- **`profile_name`が実際の構成と食い違っている**(worklog 3.75): `emu_opn`/
-  `emu_opn_stereo`/`emu_fmgen_opn`は「OPN/OPN2/OPNA/OPNB/OPNBB」だがOPNは載っていない。
-  `emu_opl`/`emu_opl_stereo`は「OPL[rhythm]/Y8950/OPL2/OPL3/OPL4」だが、OPLとOPL2は
-  載っておらず、リズムはY8950。`emu_psg_stereo`は「SSG/DCSG/SCC/EPSG/DSG 各2」だが、
-  SSGは載っておらず、SSGS/SSGS2/SSGS3が各1。`unified_preset`は「全チップGM+専用バンク
-  一式」だが、載っているのはOPN系4チップだけ。直すか要判断。
 - **`unified_preset`が`bank_overrides`を持たない**: worklog 3.33ではSF2のみの
   プロファイルとして対象外にしたが、現在はOPN系4チップを`auto_devices`で開く
   (1節)。通常モードのbank 0が空のskeletonのままで、起動時に
@@ -232,6 +226,12 @@ SF2(FitomSf2IF)デバイスを持つ。
 
 ### 判断待ち・保留
 
+- **【保留】`profile_name`が実際の構成と食い違っている**(worklog 3.75): 必要ならユーザーが
+  直す(ユーザー指示)。`emu_opn`/`emu_opn_stereo`/`emu_fmgen_opn`は「OPN/OPN2/OPNA/OPNB/
+  OPNBB」だがOPNは載っていない。`emu_opl`/`emu_opl_stereo`は「OPL[rhythm]/Y8950/OPL2/OPL3/
+  OPL4」だが、OPLとOPL2は載っておらず、リズムはY8950。`emu_psg_stereo`は「SSG/DCSG/SCC/
+  EPSG/DSG 各2」だが、SSGは載っておらず、SSGS/SSGS2/SSGS3が各1。`unified_preset`は
+  「全チップGM+専用バンク一式」だが、載っているのはOPN系4チップだけ。
 - **CC#0=127の二重の意味**(worklog 3.57): FITOM_X本体では`VOICE_PATCH_SILENCE`
   (無音バンク)だが、インストゥルメントリストではSF2バンクの表示に使っている。
   SF2直行パスは`sf2_channel_windows`で切り分けられCC#0を見ないため実害は無いが、

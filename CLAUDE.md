@@ -33,7 +33,7 @@ pcm_image_catalog.json          PCMメモリイメージカタログ
 tools/voice_convert/            音色変換スクリプト
 tools/instrument_export/        インストゥルメントリスト生成
 tools/git_filters/              環境依存フィールドの正規化フィルタ
-tools/launch_check/             全プロファイルの起動確認
+tools/launch_check/             全プロファイルの起動確認と、鳴るバンク・キットの集計
 docs/manuals/                   利用者向けリファレンス
 docs/instruments/               インストゥルメントリスト(生成物)
 docs/STATUS.md                  現在の状態・未解決事項
@@ -103,6 +103,12 @@ bin/ roms/ wavs/ sf2/ logs/ dist/   git管理外
   プロセスがログを掴んだまま次が起動するとログが混ざる)。
 - 起動ログの警告は、変更の前後で件数と種類を比べる。既知の警告は`docs/STATUS.md`
   4節に載っている。
+- `docs/manuals/emu_profiles.md`の「通常モードのパッチバンク」「ドラムキット」の表は、
+  `tools/launch_check/coverage.py --markdown`の出力をそのまま載せたもの。バンク・
+  プロファイルを変えたら、`launch_all.ps1`で起動ログを取り直してから作り直す。
+  `coverage.py`は、起動ログのデバイス一覧にFITOM_Xの解決規則(`resolveTriple()`・
+  `acceptsFallback()`等)の写しを当てて数える。音は確かめない。FITOM_X側でこれらの
+  規則が変わったら、`coverage.py`も合わせて直す。
 - 起動ログで分かるのはデバイスとバンクのロードまで。音が意図どおり鳴るかの
   聴感確認はユーザーが行う。
 
