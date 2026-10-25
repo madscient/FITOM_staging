@@ -158,9 +158,17 @@
     "__LOCAL__",
     "__LOCAL__"
   ],
+  "profile_name": "PSGエミュプロファイル (SSG/DCSG/SCC/EPSG/DSG 各2、リニアステレオ + SAA)",
   "sf2_channel_windows": [
-    { "mpu": 1, "ch": 14, "fluidsynth_chan": 0 },
-    { "mpu": 1, "ch": 15, "fluidsynth_chan": 1 }
-  ],
-  "profile_name": "PSGエミュプロファイル (SSG/DCSG/SCC/EPSG/DSG 各2、リニアステレオ + SAA)"
+    {
+      "ch": 14,
+      "fluidsynth_chan": 0,
+      "mpu": 1
+    },
+    {
+      "ch": 15,
+      "fluidsynth_chan": 1,
+      "mpu": 1
+    }
+  ]
 }

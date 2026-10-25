@@ -121,8 +121,8 @@
       "chip": "SF2",
       "if": "HW",
       "label": "SF2 (FluidSynth)",
-      "stereo_pair": true,
-      "plugin": "FitomSf2IF"
+      "plugin": "FitomSf2IF",
+      "stereo_pair": true
     }
   ],
   "hw_plugins": [
@@ -145,9 +145,17 @@
     "__LOCAL__",
     "__LOCAL__"
   ],
+  "profile_name": "OPLLエミュプロファイル・リニアステレオ(OPLL[rhythm]/OPLLP/VRC7/OPLLX/OPLLEX)",
   "sf2_channel_windows": [
-    { "mpu": 1, "ch": 14, "fluidsynth_chan": 0 },
-    { "mpu": 1, "ch": 15, "fluidsynth_chan": 1 }
-  ],
-  "profile_name": "OPLLエミュプロファイル・リニアステレオ(OPLL[rhythm]/OPLLP/VRC7/OPLLX/OPLLEX)"
+    {
+      "ch": 14,
+      "fluidsynth_chan": 0,
+      "mpu": 1
+    },
+    {
+      "ch": 15,
+      "fluidsynth_chan": 1,
+      "mpu": 1
+    }
+  ]
 }

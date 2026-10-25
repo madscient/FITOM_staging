@@ -34,6 +34,7 @@ tools/voice_convert/            音色変換スクリプト
 tools/instrument_export/        インストゥルメントリスト生成
 tools/git_filters/              環境依存フィールドの正規化フィルタ
 tools/launch_check/             全プロファイルの起動確認と、鳴るバンク・キットの集計
+tools/profile_format/           プロファイル本体をGUIの保存形式に揃える
 docs/manuals/                   利用者向けリファレンス
 docs/instruments/               インストゥルメントリスト(生成物)
 docs/STATUS.md                  現在の状態・未解決事項
@@ -78,6 +79,9 @@ bin/ roms/ wavs/ sf2/ logs/ dist/   git管理外
 - 変更後は該当するJSON Schemaで検証し、`hw_banks`/`patch_banks`/`drum_banks`/
   `sw_banks`等が参照するファイルの実在(欠落参照・孤立ファイル)を確かめてから
   コミットする。
+- プロファイル本体(`config/profiles/*.profile.json`)を手やスクリプトで書き換えたら、
+  `python tools/profile_format/format_profiles.py`でGUIの保存形式に揃える(`--check`は
+  揃っていないファイルを挙げて終了コード1を返す)。
 - プロファイルを変えたら、`devices[]`の(engine, chip, index)がサブプロファイルの
   `engines[].chips[]`のスロットと1:1で対応すること(欠落・二重オープン・
   未使用スロット)を確かめる。
@@ -394,6 +398,10 @@ CC#0の値がそのままVoicePatchType(直接モード)になる。0は通常�
   新しい種類の環境依存フィールドを足すときは`tools/git_filters/normalize_env_fields.py`
   に正規表現を足す。フィルタは正規表現によるテキスト置換に留める(JSONを読み込んで
   書き直すと、1行に詰めたオブジェクトが展開されて無関係な差分が出る)。
+- プロファイル本体は、FITOM_XのGUIが保存する形(キーを辞書順に並べ、インデント2、
+  1行に詰めない)で置く。GUIはMIDIポートを設定するたびにファイル全体をこの形で
+  書き直すため、別の形で置くと整形だけの差分が出る。サブプロファイル(`hw_plugins/`)は
+  GUIが保存するか確かめていないので、手書きの形のままにしている。
 - ADPCM/AWMを持つチップを載せるサブプロファイルには
   `"pcm_catalog": "../../../pcm_image_catalog.json"`を書く。カタログの`images`は
   種別名(`ADPCM-A`/`ADPCM-B`/`OPNB_ADPCM-B`/`OPNA_RHYTHM`/`OPL4AWM`/`SSGS_ADPCM`)を

@@ -1,54 +1,62 @@
 {
-  "profile_name": "統合プリセットプロファイル (全チップGM+専用バンク一式)",
   "_comment": [
     "preset_bank_profile.xlsxに基づく全チップ統合プロファイル。",
     "hw_plugins(実機/エミュ構成)は用途に応じて別途調整が必要。",
     "banks配下は本Excel通りの完全なマッピングを反映済み。"
   ],
-  "hw_plugins": [
-    {
-      "name": "FitomEmuIF",
-      "dll": "FitomEmuIF.dll",
-      "profile": "config/profiles/hw_plugins/fmemuif_opn_profile.json",
-      "auto_devices": true
-    },
-    {
-      "name": "FitomSf2IF",
-      "dll": "FitomSf2IF.dll",
-      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
-    }
-  ],
+  "bank_overrides": {
+    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)は空のため、このプロファイルに必ず存在するOPN系デバイス向けのバンクで上書きする。emu_opnと同じ割り当て。",
+    "drum_banks": [
+      {
+        "file": "../../banks/drums/pss480_opnb.drumkit.json",
+        "name": "PSS-480 GM Drum Kit (OPNB)",
+        "prog": 0
+      }
+    ],
+    "patch_banks": [
+      {
+        "bank": 0,
+        "file": "../../banks/patches/necopn_gm.patchbank.json"
+      }
+    ]
+  },
+  "banks": "unified.bankset.json",
   "devices": [
     {
+      "chip": "SF2",
       "if": "HW",
       "label": "SF2 (FluidSynth)",
-      "chip": "SF2",
       "plugin": "FitomSf2IF"
+    }
+  ],
+  "hw_plugins": [
+    {
+      "auto_devices": true,
+      "dll": "FitomEmuIF.dll",
+      "name": "FitomEmuIF",
+      "profile": "config/profiles/hw_plugins/fmemuif_opn_profile.json"
+    },
+    {
+      "dll": "FitomSf2IF.dll",
+      "name": "FitomSf2IF",
+      "profile": "config/profiles/hw_plugins/fitom_sf2if_profile.json"
     }
   ],
   "midi_inputs": [
     "__LOCAL__",
     "__LOCAL__"
   ],
+  "profile_name": "統合プリセットプロファイル (全チップGM+専用バンク一式)",
   "sf2_channel_windows": [
-    { "mpu": 0, "ch": 14, "fluidsynth_chan": 0 },
-    { "mpu": 0, "ch": 15, "fluidsynth_chan": 1 }
-  ],
-  "banks": "unified.bankset.json",
-  "bank_overrides": {
-    "_comment": "共有バンクセット(unified.bankset.json)のレイヤードバンク0(patch_banks)・ドラムキット0(drum_banks)は空のため、このプロファイルに必ず存在するOPN系デバイス向けのバンクで上書きする。emu_opnと同じ割り当て。",
-    "patch_banks": [
-      {
-        "bank": 0,
-        "file": "../../banks/patches/necopn_gm.patchbank.json"
-      }
-    ],
-    "drum_banks": [
-      {
-        "prog": 0,
-        "name": "PSS-480 GM Drum Kit (OPNB)",
-        "file": "../../banks/drums/pss480_opnb.drumkit.json"
-      }
-    ]
-  }
+    {
+      "ch": 14,
+      "fluidsynth_chan": 0,
+      "mpu": 0
+    },
+    {
+      "ch": 15,
+      "fluidsynth_chan": 1,
+      "mpu": 0
+    }
+  ]
 }
