@@ -6,7 +6,7 @@
     "https://github.com/plgDavid/misc/blob/master/OPLL%20Synth%20Patches/pss140_patches_names.txt",
     "https://github.com/plgDavid/misc/blob/master/OPLL%20Synth%20Patches/shs10_patches.txt"
   ],
-  "note": "PSS-140(100パッチ、prog 0-99) + SHS-10(25パッチ、prog 100-124)統合。実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに変換する際、OPLLはキーオフ時に常にRRレジスタへFITOMのRR値を直接書き込む(OPL系と異なりSR分岐に関わらずRRが常に参照される)ため、実機EGTビットの値に関わらず常にRR=変換元RRレジスタ値を格納する(SRのみ実機EGTビット=0/パーカッシブの場合に変換元RRレジスタ<<1、EGTビット=1/サステインなら0)。ops[i].EGTフィールド自体はOPL系では無関係のため常に0。Carrier TLはチャンネル音量レジスタ(R$30-R$38)で制御されるため0固定。変換元RRレジスタが0でキャリアがSR=0かつRR=0(消音しない状態)になる場合はRR=1へ補正(モジュレータ側は対象外)。",
+  "note": "PSS-140(100パッチ、prog 0-99) + SHS-10(25パッチ、prog 100-124)統合。実機EGTビット/RRレジスタをFITOMのSR/RRフィールドに変換する際、EGT=0の場合は元のRRをFITOMのSRにコピーし、FITOMのRRを7に固定する。EGT=1の場合はFITOMのSRを0に固定し、元のRRをFITOMのRRに設定する。",
   "patches": [
     {
       "prog": 0,
